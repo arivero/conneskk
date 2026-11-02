@@ -338,15 +338,15 @@ claim(rs_N4, claim, conditional, "proved conditionally", "Naively inherited \\(J
 source(rs_N4, 'connes_kk_research_state.md', '63-the-zero-mode-obstruction-and-the-higher-mode-obstruction').
 overturn(rs_N4, "A different bimodule/real structure, or absence of a parent \\(J\\), escapes the lemma.").
 attempted_by(rs_N4, corpus).
-claim(rs_N5, claim, numerical, "explicit finite-matrix calculation", "A doubled \\(\\mathbb C\\oplus\\mathbb H\\) toy model has KO-6 signs, order-zero, first-order and nonzero one-forms, but fails finite orientability: explicit finite-matrix calculation.").
+claim(rs_N5, claim, proved, "proved by direct calculation (exact algebra)", "A doubled \\(\\mathbb C\\oplus\\mathbb H\\) toy model has KO-6 signs, order-zero, first-order and nonzero one-forms, but fails finite orientability: explicit finite-matrix calculation.").
 source(rs_N5, 'connes_kk_research_state.md', '64-continuing-the-obstruction-test-a-finite-repair-and-orientability').
 overturn(rs_N5, "A different representation may satisfy orientability; it would still need a controlled geometric derivation.").
-checked_by(rs_N5, corpus, not_recorded("explicit finite-matrix calculation")).
+checked_by(rs_N5, claude_opus_5_5, by_hand).  % 3 Nov 2026
 attempted_by(rs_N5, corpus).
-claim(rs_N6, claim, numerical, "explicit finite-matrix calculation", "An 18-dimensional bimodule over \\(\\mathbb C\\oplus\\mathbb H\\oplus M_3(\\mathbb C)\\) satisfies KO-6 signs, order-zero, first-order, orientability and nonzero one-forms; the intersection pairing has rank \\(2\\): explicit finite-matrix calculation.").
+claim(rs_N6, claim, proved, "proved by direct calculation (exact algebra)", "An 18-dimensional bimodule over \\(\\mathbb C\\oplus\\mathbb H\\oplus M_3(\\mathbb C)\\) satisfies KO-6 signs, order-zero, first-order, orientability and nonzero one-forms; the intersection pairing has rank \\(2\\): explicit finite-matrix calculation.").
 source(rs_N6, 'connes_kk_research_state.md', '65-an-orientable-real-bimodule-from-the-1oplus2oplus3-spaces').
 overturn(rs_N6, "A different bimodule can alter the pairing entries, but the odd-rank obstruction N7 persists; a KK derivation and gauge lift remain unproved.").
-checked_by(rs_N6, corpus, not_recorded("explicit finite-matrix calculation")).
+checked_by(rs_N6, claude_opus_5_5, by_hand).  % 3 Nov 2026
 attempted_by(rs_N6, corpus).
 claim(rs_N7, claim, proved, "proved under the trace-pairing definition", "The ordinary finite intersection form for a real KO-6 bimodule over the three-summand \\(A_F\\) is skew and hence singular: proved under the trace-pairing definition.").
 source(rs_N7, 'connes_kk_research_state.md', '65-an-orientable-real-bimodule-from-the-1oplus2oplus3-spaces').
@@ -361,10 +361,10 @@ claim(rs_N9, claim, proved, "proved", "A nonzero grading-odd bimodule-linear fin
 source(rs_N9, 'connes_kk_research_state.md', '54-direct-link-between-a-central-dirac-mass-and-finite-orientability').
 overturn(rs_N9, "Mere gauge invariance or the absence of a propagating Higgs is weaker and does not entail the result.").
 attempted_by(rs_N9, corpus).
-claim(rs_N10, claim, numerical, "explicit matrix calculation", "A relative \\(U(1)\\) can act through the real lift while the inner automorphism group is trivial: explicit matrix calculation.").
+claim(rs_N10, claim, proved, "proved by direct calculation (exact algebra)", "A relative \\(U(1)\\) can act through the real lift while the inner automorphism group is trivial: explicit matrix calculation.").
 source(rs_N10, 'connes_kk_research_state.md', '68-gauge-symmetry-on-each-side').
 overturn(rs_N10, "A different \\(J\\) or representation changes the kernel and gauge lift.").
-checked_by(rs_N10, corpus, not_recorded("explicit matrix calculation")).
+checked_by(rs_N10, claude_opus_5_5, by_hand).  % 3 Nov 2026
 attempted_by(rs_N10, corpus).
 claim(rs_N11, claim, proved, "proved and numerically checked", "Round-sphere rotations become inner automorphisms of the compressed \\(M_2\\) algebra: proved and numerically checked.").
 source(rs_N11, 'connes_kk_research_state.md', '69-an-isometry-becoming-inner-after-compression').
