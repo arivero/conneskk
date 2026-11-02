@@ -3,3 +3,4 @@
 *.zip
 lemmas/.astra_*.log
 __pycache__/
+lemmas/.terra_*
