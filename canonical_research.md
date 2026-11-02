@@ -217,7 +217,7 @@ $$
 M_2(\mathbb H)\subset M_4(\mathbb C).
 $$
 
-This is a nested pair on one complex four-space, not two independent central summands. The independent $E,F$ module roles remain to be derived. Compression is not multiplicative: $Q(x_a)^2=I/25$ while $Q(x_a^2)=I/5$. The simplest scalar quantization of $\mathbb{CP}^2\times\mathbb{CP}^1$ instead generates $M_6(\mathbb C)$, not the Standard Model direct sum.
+This is a nested pair on one complex four-space, not two independent central summands. The independent $E,F$ module roles remain to be derived. Compression is not multiplicative: $Q(x_a)^2=I/25$ while $Q(x_a^2)=I/5$. The script checks cover the generation statements; the identities for $Q$ are proved in [lemmas/10](lemmas/10_toeplitz_twistor.md), Proposition 10.1. The simplest scalar quantization of $\mathbb{CP}^2\times\mathbb{CP}^1$ instead generates $M_6(\mathbb C)$, not the Standard Model direct sum.
 
 For a quaternionic line $L\subset\mathbb H^2$,
 
@@ -552,7 +552,7 @@ $$
 =\frac{k^3-k}{6}.
 $$
 
-This follows by integrating $e^{kh}(1-h^2/6)$ over $\mathbb{CP}^3$. The Kähler operator twisted by $\mathcal O(3)$ realizes the four holomorphic sections of $\mathcal O(1)$ and has index four. That twist cannot extend over any spin filling having this as its sole boundary: bordism invariance would force zero index. Nonextending gauge data, another boundary or a defect is therefore required. **Proved obstruction.**
+This follows by integrating $e^{kh}(1-h^2/6)$ over $\mathbb{CP}^3$. The spin Dirac operator twisted by $\mathcal O(3)$, which equals the Dolbeault operator on $\mathcal O(1)$ because $S=\Lambda^{0,*}\otimes\mathcal O(-2)$, realizes the four holomorphic sections of $\mathcal O(1)$ and has index four. That twist cannot extend over any spin filling having this as its sole boundary: bordism invariance would force zero index. Nonextending gauge data, another boundary or a defect is therefore required. **Proved obstruction.**
 
 ## 11.2 What an eleven-dimensional bulk can supply
 
@@ -654,7 +654,7 @@ Twist by the dual spinor bundle with its dual spin connection. The combined bund
 
 A nine-dimensional Dirac field gives one four-dimensional Dirac zero-mode sector. A gauge-invariant bulk mass supplies finite electron mass. Both chiralities have the same charge, so the photon couples vectorially. The dual spin connection and determinant character are deliberate extra data, not consequences of the metric alone.
 
-If gauge kinetic terms come only from the common Einstein-Hilbert reduction, with $\operatorname{tr}(T_aT_b)=\delta_{ab}/2$, the Killing-field integrals give
+If gauge kinetic terms come only from the common Einstein-Hilbert reduction, with $\operatorname{tr}(T_aT_b)=\delta_{ab}/2$ and $V=\operatorname{Vol}(S^5,g_\eta)$, the Killing-field integrals give
 
 $$
 I_3=VR^2\frac{\eta^2+3}{24},
@@ -668,7 +668,7 @@ $$
 =\frac{3(\eta^2+3)}{8\eta^2}.
 $$
 
-**Checked conditional normalization.** Extra kinetic terms or thresholds can change it. The round point has enhanced SO(6) isometry and extra vectors. Nonround metrics need supporting fields and stabilization; no such vacuum has been supplied.
+**Conditional normalization** (derived analytically in `research_limits/nine_dimensional_construction.md` from the sphere averages $\langle z^*T^2z\rangle=1/6$ and $\langle(z^*Tz)^2\rangle=1/24$; no script computes it; §13.2 uses a different charge generator and obtains $3(\eta^2+3)/(32\eta^2)$). Extra kinetic terms or thresholds can change it. The round point has enhanced SO(6) isometry and extra vectors. Nonround metrics need supporting fields and stabilization; no such vacuum has been supplied.
 
 ## 13.2 A singlet/triplet from the algebra pair
 

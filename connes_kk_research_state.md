@@ -78,7 +78,7 @@ The unit sphere bundle admits the explicit description
  \{(\ell,u)\in\mathbb{CP}^2\times S^5:u\perp\ell\}.
 \]
 The transitive \(SU(3)\) action has stabilizer
-\(\{\operatorname{diag}(z,1,z^{-1}):|z|=1\}\). With the usual weight convention this is \(N(1,0)\); permuting the last two coordinates gives the conjugate subgroup \(N(1,-1)\). See [Lehmann, Theorem C](https://people.maths.ox.ac.uk/lotay/Lehmann%20PhD%20Thesis.pdf).
+\(\{\operatorname{diag}(z,1,z^{-1}):|z|=1\}\) at the base point \((\mathbb Ce_1,e_2)\); at \((\mathbb Ce_1,e_3)\), the base point used in §6.12, it is \(\operatorname{diag}(z,z^{-1},1)\). With the usual weight convention this is \(N(1,0)\); permuting the last two coordinates gives the conjugate subgroup \(N(1,-1)\). See [Lehmann, Theorem C](https://people.maths.ox.ac.uk/lotay/Lehmann%20PhD%20Thesis.pdf).
 
 There are three smooth bundle projections:
 \[
@@ -129,7 +129,7 @@ For the flag manifold, \((ah+bu)^2=(a^2-b^2)h^2+(2ab-b^2)hu\), so no nonzero int
 \]
 whereas \(w_2(T(\mathbb{CP}^2\times\mathbb{CP}^1))=h\bmod2\). The flag is spin; the product is spin-\(c\) but not spin. The ordinary real spin Dirac triple on the six-dimensional flag has the KO-dimension-six signs \(J^2=+1\), \(JD=DJ\), \(J\gamma=-\gamma J\). This is an exact property of the smooth flag triple; a finite-mode projection need not preserve the real structure, grading, bimodule or orientation cycle. Both spaces remain candidates, with different global data.
 
-The [Kuiper–Massey quotient](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/seade.pdf) gives \(\mathbb{CP}^2/\mathrm{conj}\cong S^4\), branched over \(\mathbb{RP}^2\). Complex conjugation preserves the complex orientation in real dimension four, so the quotient map \(f:\mathbb{CP}^2\to S^4\) has degree \(2\). Pulling back the quaternionic Hopf principal \(SU(2)\) bundle gives \(c_2=\pm2h^2\), with the sign depending on orientation. This is distinct from \(S(Q)\), which has a \(U(2)\) structure group, \(c_1(Q)=h\) and \(c_2(Q)=h^2\). The pulled-back principal \(SU(2)\) bundle has \(H^4\cong\mathbb Z/2\) and is non-spin: the vertical tangent bundle is trivial and the pullback of \(w_2(\mathbb{CP}^2)\) remains nonzero. Also, every \(S^3\) bundle over \(\mathbb{CP}^2\) has \(\pi_2\cong\mathbb Z\), so no such total space is \(S^7\).
+The [Kuiper–Massey quotient](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/seade.pdf) (see also [Massey, *The quotient space of the complex projective plane under conjugation is a 4-sphere*, Geom. Dedicata 2 (1973)](https://www.maths.ed.ac.uk/~v1ranick/papers/massey5.pdf)) gives \(\mathbb{CP}^2/\mathrm{conj}\cong S^4\), branched over \(\mathbb{RP}^2\). Complex conjugation preserves the complex orientation in real dimension four, so the quotient map \(f:\mathbb{CP}^2\to S^4\) has degree \(2\). Pulling back the quaternionic Hopf principal \(SU(2)\) bundle gives \(c_2=\pm2h^2\), with the sign depending on orientation. This is distinct from \(S(Q)\), which has a \(U(2)\) structure group, \(c_1(Q)=h\) and \(c_2(Q)=h^2\). The pulled-back principal \(SU(2)\) bundle has \(H^4\cong\mathbb Z/2\) and is non-spin: the vertical tangent bundle is trivial and the pullback of \(w_2(\mathbb{CP}^2)\) remains nonzero. Also, every \(S^3\) bundle over \(\mathbb{CP}^2\) has \(\pi_2\cong\mathbb Z\), so no such total space is \(S^7\).
 
 ### 2.5 An exact torus quotient, with fixed points
 
@@ -411,7 +411,7 @@ then \(D_F\) would commute with every left and right action, hence with \(\gamma
 \]
 More generally, a nonzero grading-odd endomorphism commuting with both bimodule actions gives the same obstruction. Gauge invariance of a mass is weaker than bimodule-linearity, and the absence of a physical Higgs does not automatically imply \([D_F,A_F]=0\).
 
-The electrodynamics example of [van den Dungen and van Suijlekom](https://ems.press/content/serial-article-files/30538), §4, realizes the relevant assumptions. With
+The electrodynamics example of [van den Dungen and van Suijlekom](https://ems.press/content/serial-article-files/30538), §4 (reviewed in their [*Particle physics from almost-commutative spacetimes*, Rev. Math. Phys. 24 (2012)](https://arxiv.org/abs/1204.0328)), realizes the relevant assumptions. With
 \[
  A_F=\mathbb C\oplus\mathbb C,\quad
  \rho(a,b)=\operatorname{diag}(a,a,b,b),\quad
@@ -435,7 +435,7 @@ A generic Hopf-squashed metric on \(S^5\) has connected isometry group \(U(3)\),
 \]
 The conjugate chirality has conjugate weights. If the geometric Hopf \(U(1)\) is normalized so the defining vector representation has unit charge, spinor weights are half-integral; the \(U(3)\) isometry action must be lifted to the relevant double cover on spinors. These charges have the relative pattern of \(B-L\), but no electromagnetic charge assignment follows without a specified representation and lift.
 
-The round untwisted Dirac spectrum is
+The round untwisted Dirac spectrum ([Bär, *The Dirac operator on space forms of positive curvature*, J. Math. Soc. Japan 48 (1996)](https://doi.org/10.2969/jmsj/04810069)) is
 \[
  \lambda_\ell=\pm\frac{\ell+5/2}{R},\qquad \ell=0,1,\ldots.
 \]
@@ -628,7 +628,7 @@ Take any nonzero \(v:\mathbb C\to\mathbb C^2\) and define
  D(X,Y)=(D_vX,YD_v),\quad
  \gamma(X,Y)=(GX,-YG).
 \]
-Direct calculation, independently checked on all 24 real basis elements of the algebra, gives
+Left and right multiplication commute, giving order zero; after a first commutator the remaining action on the other side still commutes, giving first order; the KO signs follow from exchanging adjoints. Direct calculation, independently checked on all 24 real basis elements of the algebra, gives
 \[
  J^2=1,\quad JD=DJ,\quad J\gamma=-\gamma J,\quad
  \{D,\gamma\}=0,\quad
@@ -886,7 +886,7 @@ Let \(V=P\times_{SU(2)}\mathbb C^2\). The \(S^2\) family has a global vertical s
  =P\times_{SU(2)}\operatorname{Sym}^{n-1}\mathbb C^2,
  \qquad n=1,2,3.
 \]
-One concrete choice is \(\mathcal L_n=\pi_\ell^*\mathcal O_{\mathbb{CP}^2}(n)\) on \(N\). Thus \(\mathcal E_1=\mathbf1\), \(\mathcal E_2=V\), and \(\mathcal E_3=\operatorname{Sym}^2V\). The monopole spinor kernels follow from \(K_{\mathbb{CP}^1}^{1/2}=\mathcal O(-1)\); the choice of twist and connection is additional to the metric.
+One concrete choice is \(\mathcal L_n=\pi_\ell^*\mathcal O_{\mathbb{CP}^2}(n)\) on \(N\). Thus \(\mathcal E_1=\mathbf1\), \(\mathcal E_2=V\), and \(\mathcal E_3=\operatorname{Sym}^2V\). The monopole spinor kernels follow from \(K_{\mathbb{CP}^1}^{1/2}=\mathcal O(-1)\); for \(n>0\) there is no negative vertical kernel, and negative degree exchanges vertical chirality; the choice of twist and connection is additional to the metric.
 
 Write \(\rho:S^5\to\mathbb{CP}^2_{[u]}\) for the Hopf map. The quotient construction gives \(V\cong\rho^*Q\): the chosen unit vector \(u\) trivializes the pulled-back tautological line and hence \(\det V\). This supplies a global quaternionic structure. It is a nontrivial quaternionic line, and even as a complex rank-two bundle it is nontrivial, since \(\pi_4(U(2))=\mathbb Z_2\). The quaternionic structure is parallel for any \(SU(2)\)-compatible connection. Stabilizing as a quaternionic bundle preserves the nonzero class:
 \[
@@ -902,7 +902,7 @@ There is a sharper spectral consequence. Let \(D_{S^5,V}\) be the ordinary five-
 \[
  \boxed{\dim_{\mathbb C}\ker D_{S^5,V}\equiv1\pmod2.}
 \]
-The kernel is nonempty for every spin metric and every \(SU(2)\)-compatible connection. In dimension five the spinor charge conjugation and the quaternionic structure on \(V\) combine into an antiunitary real structure of square \(+1\), under which the self-adjoint Dirac operator changes sign; \(iD_{S^5,V}\) is real skew-adjoint. The parity is the [real mod-two index](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/as5.pdf). This does not say that the kernel has exactly one complex dimension.
+The kernel is nonempty for every spin metric and every \(SU(2)\)-compatible connection. In dimension five the spinor charge conjugation and the quaternionic structure on \(V\) combine into an antiunitary real structure of square \(+1\), under which the self-adjoint Dirac operator changes sign; \(iD_{S^5,V}\) is real skew-adjoint. The parity is the [real mod-two index](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/as5.pdf). This does not say that the kernel has exactly one complex dimension. The familiar index on this spin background is odd at isospin \(j=2k+1/2\), equivalently \(|n|\equiv2\pmod 4\); of the first three positive twists only degree two meets this condition ([Wang, Wen and Witten, *A new SU(2) anomaly*, J. Math. Phys. 60 (2019)](https://arxiv.org/abs/1810.00844)).
 
 For \(SU(3)\)-invariant metric and connection data there is also a direct check: at a base point,
 \[
@@ -933,14 +933,14 @@ using the round \(SU(2)\)-invariant fiber and an \(SU(2)\) connection on \(P\). 
  \qquad
  P_{\ker}D_{\mathrm{hor}}P_{\ker}=\pm D_{S^5,V}.
 \]
-The curvature term \(C_\Omega\) is bounded, reverses vertical chirality and has zero compression to the positive vertical kernel. A normalized lift of a zero mode of \(D_{S^5,V}\) is therefore an \(O(\varepsilon)\) quasimode, and compact self-adjointness implies
+The curvature term \(C_\Omega\) is bounded (it contains one vertical and two horizontal Clifford multiplications) and reverses vertical chirality. Horizontal transport acts by \(SU(2)\), intertwines the fibre Dirac operators and preserves the vertical kernel, so on the whole kernel \(D_{\mathrm{hor}}\) agrees, up to a grading convention, with \(D_{S^5,V}\). This preservation is needed: a vanishing compression of \(D_{\mathrm{hor}}\) would not alone imply that \(D_{\mathrm{hor}}\) kills a lifted zero mode. For a normalized lift \(s\) of a zero mode of \(D_{S^5,V}\) we get \(D_{N,\varepsilon}s=\varepsilon C_\Omega s\), and compact self-adjointness implies
 \[
  \operatorname{dist}(0,\operatorname{spec}D_{N,\varepsilon})
- \le C\varepsilon.
+ \le \varepsilon\|C_\Omega\|.
 \]
 Thus, for this explicitly specified geometric family, at least one seven-dimensional twisted Dirac eigenvalue tends to zero. The estimate alone does not assert an exact zero for \(\varepsilon>0\), a four-dimensional mass and charge assignment, or a solution of the higher-dimensional equations.
 
-There is an exact strengthening in the homogeneous subfamily. Choose an \(SU(3)\)-invariant base metric, the canonical homogeneous \(SU(2)\) connection, and the associated monopole connection. At the homogeneous base point the isotropy is \(H=\operatorname{diag}(z,z^{-1},1)\). The horizontal spin module has \(H\)-weights \(1,-1,0,0\), the vertical half-spin modules have weights \(\pm1\), and \(\mathcal L_2\) has weight \(-2\). The unique invariant tensor has weights
+There is an exact strengthening in the homogeneous subfamily. Choose an \(SU(3)\)-invariant base metric, the canonical homogeneous \(SU(2)\) connection, and the associated monopole connection. At the homogeneous base point the isotropy is \(H=\operatorname{diag}(z,z^{-1},1)\). The horizontal spin module has \(H\)-weights \(1,-1,0,0\), obtained by lifting the two tangent rotations with opposite angles; the vertical tangent to \(\mathbb{CP}^1\) has weight \(-2\), so the vertical half-spin modules have weights \(\pm1\); and \(\mathcal L_2\), the twist \((\mathbb Ce_1^*)^2\), has weight \(-2\). The unique invariant tensor has weights
 \[
  1_{\rm horizontal}+1_{\rm vertical}-2_{\mathcal L_2}=0.
 \]
@@ -1026,7 +1026,7 @@ The full flag provides an instructive contrast. The six Schubert cells of \(F_3\
  K_0(C(F_3))\cong K_0(C(\mathbb{CP}^2\times\mathbb{CP}^1))
  \cong\mathbb Z^6,\qquad K_1=0.
 \]
-All three algebras \(C(F_3)\), \(C(\mathbb{CP}^2\times\mathbb{CP}^1)\) and \(\mathbb C^6\) belong to the complex bootstrap class. The UCT has zero \(\operatorname{Ext}\) term because the relevant \(K\)-groups are free. Any graded group isomorphism and the inverse therefore lift, compatibly with Kasparov products, to inverse \(KK\)-classes:
+All three algebras \(C(F_3)\), \(C(\mathbb{CP}^2\times\mathbb{CP}^1)\) and \(\mathbb C^6\) belong to the complex bootstrap class. The UCT ([Rosenberg and Schochet, *The Künneth theorem and the universal coefficient theorem for Kasparov's generalized K-functor*, Duke Math. J. 55 (1987)](https://doi.org/10.1215/S0012-7094-87-05524-4)) has zero \(\operatorname{Ext}\) term because the relevant \(K\)-groups are free. Any graded group isomorphism and the inverse therefore lift, compatibly with Kasparov products, to inverse \(KK\)-classes:
 \[
  \boxed{C(F_3)\simeq_{KK_{\mathbb C}}
  C(\mathbb{CP}^2\times\mathbb{CP}^1)

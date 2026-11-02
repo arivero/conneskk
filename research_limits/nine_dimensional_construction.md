@@ -1,8 +1,6 @@
 # Constructing the nine-dimensional step
 
-**Archive status:** [canonical_research.md](../canonical_research.md) integrates these results with the Aloff–Wallach/flag and torus/Weyl analysis. It advances the spinor-bundle construction and adds the circle Wilson-line check. This file remains a derivation appendix.
-
-Research continuation, 2 November 2026. This note gives (i) a controlled operator and metric collapse from a six-dimensional internal space to a five-dimensional singular quotient, (ii) a compensated four-mode construction on that quotient, and (iii) a separate smooth nine-dimensional Kaluza–Klein comparison model with an electron. It does not identify these constructions as one physical vacuum. Terra checks were sequential; Astra supplied the compensation idea before its session became unavailable. All calculations reported below were checked independently.
+Derivation appendix (2 November 2026) to [../canonical_research.md](../canonical_research.md) §12-13. Terra checks were sequential; Astra supplied the compensation idea. Its three constructions stay separate (see §5).
 
 ## 1. An operator family that actually lowers dimension
 

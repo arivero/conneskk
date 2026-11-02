@@ -1,8 +1,6 @@
 # Heavy-mass limits, boundary geometry and the M-theory connection
 
-**Archive status:** read [canonical_research.md](../canonical_research.md) for the single current narrative, updated status labels and subsequent checks. This file is retained as a derivation appendix.
-
-Second-stage research addendum. Read with `research_note.md`. Results labeled as calculations below are elementary derivations or explicit matrix checks in this project; they are not claims of priority. Connections to a continuum Standard Model remain proposals. One Terra agent supplied sequential checks, with no parallel agents.
+Derivation appendix (second stage) to [../canonical_research.md](../canonical_research.md), read with [research_note.md](research_note.md). Results labelled as calculations are elementary derivations or explicit matrix checks; they claim no priority. One Terra agent checked them, sequentially.
 
 ## 1. What a theory of limits must retain
 
@@ -199,12 +197,6 @@ The spin Dirac index twisted by O(k) is an explicit further test. From c1(T CP3)
 Since the spin bundle is Lambda^{0,*} tensor O(-2), the four-dimensional holomorphic quantization space H0(CP3,O(1)) is realized in this Kähler description by the spin Dirac operator twisted with O(3), whose index is four. That twist cannot extend over any spin filling having CP3 as its sole boundary: an extending twist would have zero boundary index by bordism invariance. For the explicit disk bundle, even O(1), whose index happens to vanish, cannot extend because H2(Z;Z)=0.
 
 Thus a nonzero chiral index carried by this selected boundary sector needs nonextending gauge data, a defect, another boundary component or another changed hypothesis. Boundary K-homology alone does not provide anomaly inflow; a bulk action and its variation are additional data.
-
-### The vertical Dirac family exposes a rank mismatch
-
-In CP1→CP3→S4, the vertical Dolbeault family twisted by O(1) has a rank-two complex kernel bundle, the dual tautological quaternionic line over S4. Equivalently, the vertical spin Dirac operator needs twist O(2) for this index-two kernel. The untwisted vertical spin Dirac operator has no zero modes.
-
-This rank-two bundle is not E=H2, which has complex rank four. The global four-dimensional space H0(CP3,O(1)) supplies sections of the family bundle, not four-dimensional fibres. Consequently vertical reduction has not yet produced the independent E,F module roles or their 32-dimensional Hom module. This is a concrete target for a future correspondence construction, rather than a gap hidden by counting four holomorphic sections.
 
 ## 6. What M-theory supplies, and what it does not
 
