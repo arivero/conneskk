@@ -1,5 +1,7 @@
 # Connes dimension-limit research
 
+> **Note (2 Nov 2026):** the Python scripts named below were removed from this folder after their technical content was written up in [../research_checks_knowledge.md](../research_checks_knowledge.md). They remain in git history (commit 54445a4, under `unzipped/zip_B_1800/research_limits/`). The mobile PDF is in `../output/pdf/`.
+
 Start with **canonical_research.md**, the consolidated paper *Nine, Ten and Eleven Dimensions*. It integrates the finite limits, twistor, boundary, Aloff-Wallach/flag, torus/Weyl and nine-dimensional electron results. Claims are labeled proved, checked calculation, conditional or conjectural. The decisive calculation is the monopole kernel and Berry connection for N7 to S5.
 
 The same account is typeset for mobile reading in **../output/pdf/connes_9_10_11_mobile.pdf**: narrow single-column pages, 13-point body text, vector display equations, linked contents and PDF bookmarks. Tables become stacked comparisons without changing their content.
