@@ -362,7 +362,7 @@ $$
 F(X,Y)=-\operatorname{pr}_{\mathfrak{su}(2)}[X,Y].
 $$
 
-The brackets of the four off-diagonal horizontal $\mathfrak{su}(3)$ directions span all $\mathfrak{su}(2)$. This is independently checked in the script. Ambrose-Singer therefore gives full $SU(2)$ holonomy. The kernel bundles and connections are:
+The brackets of the four off-diagonal horizontal $\mathfrak{su}(3)$ directions span all $\mathfrak{su}(2)$. This is independently checked (research_checks_knowledge.md, section 4.1). Ambrose-Singer therefore gives full $SU(2)$ holonomy. The kernel bundles and connections are:
 
 | Flux | Kernel bundle | Topology/reality | Natural parallel complex endomorphisms |
 |---:|---|---|---|
@@ -445,7 +445,7 @@ $$
 
 **Conditional geometric calculation; checked phase arithmetic:** for the specified connection and spin lifts, all three coefficient lines retain a circle zero mode exactly when $\eta^2$ is an integer. For example $\eta^2=2$ is nonround, has $U(3)$ isometry on the smooth $S^5$ branch, and has a rank-three circle kernel. At $\eta^2=1/2$ only the third parent coefficient line survives the circle collapse. The determinant character shifts integer Lie weights by three but contributes no holonomy phase. This $\eta$ is the five-sphere metric parameter; it is independent of the lens-space $\xi$ used below.
 
-The relevant $U(3)$ stabilizer on N is $U(1)^2$. With the chosen character shifts its three coefficient characters are distinct, so the invariant correction along R is diagonal. The target Berry connection fixes that component; no extra invariant mixing can alter this check. Homogeneity makes the holonomy conjugacy class constant over F, and a fixed trivial-holonomy kernel has a uniform gap to other circle modes. The script checks the resulting finite-matrix phase arithmetic; it assumes the analytic connection and spin-endpoint formulas rather than deriving them independently. The integer condition is not universal for other equivariant backgrounds. This supplies an engineered example passing both the $S^2$ fibre-kernel test and the first circle Wilson-line test. It supplies no dynamical selection of $\eta^2$, and no calculation yet shows that the second, fixed-point circle quotient preserves the desired fermion content.
+The relevant $U(3)$ stabilizer on N is $U(1)^2$. With the chosen character shifts its three coefficient characters are distinct, so the invariant correction along R is diagonal. The target Berry connection fixes that component; no extra invariant mixing can alter this check. Homogeneity makes the holonomy conjugacy class constant over F, and a fixed trivial-holonomy kernel has a uniform gap to other circle modes. The recorded check (research_checks_knowledge.md, section 4.7) covers the resulting finite-matrix phase arithmetic; it assumes the analytic connection and spin-endpoint formulas rather than deriving them independently. The integer condition is not universal for other equivariant backgrounds. This supplies an engineered example passing both the $S^2$ fibre-kernel test and the first circle Wilson-line test. It supplies no dynamical selection of $\eta^2$, and no calculation yet shows that the second, fixed-point circle quotient preserves the desired fermion content.
 
 ## The analytic limit and its scope
 
@@ -520,7 +520,7 @@ $$
 
 is a corner of a finite-orbit quotient of the spin-twisted real crossed product. **Proved algebraic statement, checked by matrices.** It is not a result about the original untwisted complex crossed product. The corner has not been lifted to a global projection or obtained as a Dirac spectral band; choosing the two orbits and these projections remains input.
 
-There is an explicit real-triple obstruction: geometric $J_6$ commutes with spin lifts, so the proposed opposite of $U_h$ is $U_h^{-1}$. For noncommuting group elements, $[U_g,U_h^{-1}]$ is nonzero. The script checks this order-zero failure. A regular left/right crossed-product bimodule may repair it, but changes multiplicities and requires new Clifford, corner and grading checks. Neither the SM bimodule nor hypercharges have been derived by the finite-algebra identification.
+There is an explicit real-triple obstruction: geometric $J_6$ commutes with spin lifts, so the proposed opposite of $U_h$ is $U_h^{-1}$. For noncommuting group elements, $[U_g,U_h^{-1}]$ is nonzero. The recorded check (research_checks_knowledge.md, section 4.4) confirms this order-zero failure. A regular left/right crossed-product bimodule may repair it, but changes multiplicities and requires new Clifford, corner and grading checks. Neither the SM bimodule nor hypercharges have been derived by the finite-algebra identification.
 
 This makes the torus route more specific than an untwisted group-algebra analogy. It supplies real algebra types after explicit selections; the smooth product monopole route supplies simpler flat kernel bundles. Neither currently dominates the other as a complete spectral-triple derivation.
 
@@ -802,9 +802,9 @@ Here the corresponding discipline is to state the parameter, surviving observabl
 
 # Reproduction and provenance
 
-The research bundle includes four scripts with recorded JSON results. `checks.py` covers the initial finite triple, heat windows and twistor compression. `solidification_checks.py` covers centralizers, gauge dimensions, first-order failure, unimodularity, index and anomaly arithmetic. `nine_dimensional_checks.py` checks compensation, scalar counts and electromagnetic normalizations. `canonical_checks.py` checks curvature, parallel commutants, real-structure sensitivity, spin-lift algebra dimensions, the order-zero obstruction, Chern arithmetic and gauge traces.
+The finite checks and their recorded outputs are in [research_checks_knowledge.md](research_checks_knowledge.md): the initial finite triple, heat windows and twistor data (section 1); centralizers, gauge dimensions, first-order failure, unimodularity, index and anomaly arithmetic (section 2); compensation and scalar counts (section 3; the electromagnetic normalizations were never computed, see section 6, item 1); curvature, parallel commutants, real-structure sensitivity, spin-lift algebra dimensions, the order-zero obstruction, Chern arithmetic and gauge traces (section 4).
 
-These are finite checks of specified constructions, not PDE solvers or numerical evidence for a Standard Model vacuum. The Wilson script checks phase arithmetic after supplying analytic connection and lift formulas. The dual-spinor zero-mode result is Hodge theoretic. The heat plot illustrates a mechanism, not fitted particle physics.
+These are finite checks of specified constructions, not PDE solvers or numerical evidence for a Standard Model vacuum. The Wilson-line check covers phase arithmetic after supplying analytic connection and lift formulas. The dual-spinor zero-mode result is Hodge theoretic. The heat plot illustrates a mechanism, not fitted particle physics.
 
 The canonical Markdown is the paper source. The PDF builder and figure generator are included. Older notes retain detailed derivations but do not override the qualifications in this paper. No claim of priority, peer review or a completed compactification is made.
 

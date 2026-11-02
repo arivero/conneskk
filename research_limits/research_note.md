@@ -8,7 +8,7 @@ Research note, 1 November 2026. This records calculations and a conditional cons
 
 **Results obtained.** (i) Explicit heat-trace conditions distinguish dimension collapse from dimension emergence. (ii) A real finite matrix family has an emergent six-dimensional internal spectral window and fixed KO-degree six, with identifiable orientability and fermion-doubling limitations. (iii) A level-one twistor quantization naturally produces the quaternionic and complex algebras appearing in the Connes parent geometry. With stated additional module, flag, scalar-matching and unimodularity data, it reproduces the Standard Model algebra and one generation's charges. (iv) The Higgs representation occurs as a quaternionic tangent representation. (v) Restriction of the chiral fermion representation explains why the heavy-weak and massless-weak limits have different chirality constraints.
 
-The numerical checks, exact formulas and figures can be reproduced with `python3 checks.py` after installing numpy and matplotlib. The spacetime part of the plots uses a four-dimensional heat density, or the corresponding local window on a large compact spacetime. The plots are spectral diagnostics, not fitted particle-physics predictions.
+The numerical checks, exact formulas and figures are recorded in [../research_checks_knowledge.md](../research_checks_knowledge.md), section 1. The spacetime part of the plots uses a four-dimensional heat density, or the corresponding local window on a large compact spacetime. The plots are spectral diagnostics, not fitted particle-physics predictions.
 
 ## 1. Four objects that a limit must distinguish
 

@@ -2,7 +2,7 @@
 
 Source folder: `research_limits/` (scripts removed after this extraction; recover them with `git show 54445a4:unzipped/zip_B_1800/research_limits/<name>`). This file records the mathematics and the recorded results of
 `checks.py`, `solidification_checks.py`, `nine_dimensional_checks.py`, `canonical_checks.py`,
-`paper_assets/make_heat_figure.py` and their JSON outputs (folded into section 8), so that the scripts can be removed.
+`paper_assets/make_heat_figure.py` and their JSON outputs (folded into section 7), so that the scripts can be removed.
 The papers they support are `research_note.md` (first stage), `solidification.md` (second stage),
 `nine_dimensional_construction.md` and the consolidated `canonical_research.md`.
 
@@ -12,7 +12,7 @@ matplotlib 3.10.7. Every assertion passed. The regenerated `solidification_verif
 floating residuals (e.g. fuzzy `order_zero` for N=5,8 is 0.0 instead of about 2e-15; `order_one` differs at the
 1e-14 level). `nine_dimensional_verification.json` differs only in the last printed digit of three values.
 The zip_A copies of all four check scripts and JSON files are identical to zip_B, except for one comment in
-`canonical_checks.py` (section 4.10).
+`canonical_checks.py`, which relabels the Wilson-line block as phase arithmetic on supplied analytic inputs (see §6, item 4).
 
 ---
 
@@ -423,47 +423,26 @@ parent holonomy formula are inputs.
 "Finite curvature, representation and characteristic-class checks. No full SM spectral triple, adiabatic PDE spectrum,
 or vacuum dynamics is inferred."
 
-### 4.10 zip_A (13:00) versus zip_B (18:00) `canonical_checks.py`
-
-`diff` shows a single change at line 138: the comment "Hopf holonomy in the invariant engineered Berger connection"
-becomes "Phase arithmetic for the invariant engineered Berger connection. The analytic spin-connection generator,
-endpoint signs and parent holonomy formula are inputs here, not independently derived by this test." Code, asserted
-values and `canonical_verification.json` are identical. The zip_B README and paper (§9, Reproduction) carry the same
-re-labelling of the Wilson-line check as phase arithmetic with analytic inputs.
-
 ---
 
-## 5. `paper_assets/make_heat_figure.py` (figure in `canonical_research.md` §2.1)
+## 5. Heat-dimension staircase (figure in `canonical_research.md` §2.1)
 
 $E\in[0.1,3000]$ in units $1/a$ (1000 geometric points), $s=E^{-2}$; total dimension $9+d(s)+d(s/0.01^2)$, circle radii
 $a=1$, $b=0.01$. Circle dimension: for $x>0.04$, $d=2x\sum_{|n|\le M}n^2e^{-xn^2}/\sum_{|n|\le M}e^{-xn^2}$ with
 $M=\max(20,\lceil\sqrt{40/x}\rceil)$ (truncation below $e^{-40}$); for $x\le0.04$, $d=1$ (Poisson correction of order
 $e^{-\pi^2/x}\le e^{-246}$). Reference levels 9, 10, 11 (base+spacetime; one circle resolved; two circles resolved),
-transitions near $E\sim1$ and $E\sim100$. Outputs `heat_staircase.png` (240 dpi) and `.pdf`. The older
-`dimension_staircase.png` from `checks.py` uses $b/a=0.02$ instead.
-
-## 6. Typesetting tools
-
-`render_math.normalize` adapts TeX to matplotlib mathtext: collapses whitespace; braces single-token arguments of
-`\mathbb`, `\mathcal`, `\mathfrak`, `\bar`, `\widetilde`, `\sqrt`; `\hbox`→`\mathrm`; `\frac12`→`\frac{1}{2}`;
-`\xrightarrow{X}`→`\overset{X}{\longrightarrow}`; `\ge`→`\geq`; and strips `\boxed{}`/`\underline{}` wrappers, so
-the boxed Wilson-line holonomy appears unboxed in the PDF. `build_mobile_pdf.py` renders `canonical_research.md`
-(pandoc JSON AST) to a 378×612 pt ReportLab PDF (`../output/pdf/connes_9_10_11_mobile.pdf`): display math as vector
-glyphs, inline math as 360-dpi PNGs with trailing punctuation absorbed; long display equations split at top-level
-`\qquad`/`\quad`, else at the most central top-level `=`, with a hard failure below scale 0.88; tables become
-"header: value" cards; ReportLab's ToUnicode CMap is patched to UTF-16 surrogate pairs for non-BMP math glyphs.
-`paper_verification.json` records 60 pages, 68 display equations, 19 bookmarks, 65 links and SHA-256 hashes.
+transitions near $E\sim1$ and $E\sim100$. The older two-circle staircase of §1.3 uses $b/a=0.02$ instead.
 
 ---
 
-## 7. Inconsistencies and gaps between scripts, JSON and papers
+## 6. Inconsistencies and gaps between scripts, JSON and papers
 
 1. **Electromagnetic normalizations are unchecked.** `canonical_research.md` (Reproduction) says
    `nine_dimensional_checks.py` checks "electromagnetic normalizations". That script computes none. The sphere averages
    $\langle z^*T^2z\rangle=1/6$, $\langle(z^*Tz)^2\rangle=1/24$, $I_3$, $I_Q$ and $e^2/g_3^2=3(\eta^2+3)/(8\eta^2)$ or
    $3(\eta^2+3)/(32\eta^2)$ appear in no script. (`nine_dimensional_construction.md`'s own reproduction list omits them.)
 2. **Twistor quantization formulas are unchecked.** $Q(x_a)=\Gamma_a/5$ and $Q(x_a)^2=I/25$ vs $Q(x_a^2)=I/5$
-   (research_note §4; canonical §4 "Checked calculation") are never computed. `checks.py` checks the Clifford/$j$/Hopf
+   (research_note §4; canonical §4 "Checked calculation") are computed by no script; they are now proved in [lemmas/10](lemmas/10_toeplitz_twistor.md), Proposition 10.1. `checks.py` checks the Clifford/$j$/Hopf
    data and the 16-dimensional span; `nine_dimensional_checks.py` writes the second-moment identity in by hand, so its
    compression error tests block bookkeeping on the compensated kernel.
 3. **Literal JSON entries.** Typed-in values reported alongside computed ones: `checks.py` charge multiplets,
@@ -473,15 +452,13 @@ glyphs, inline math as 360-dpi PNGs with trailing punctuation absorbed; long dis
 4. **Wilson-line check** (canonical §9): the parent holonomy vector is a formula input, so the zero-mode ranks restate
    that formula. zip_B labels this correctly; zip_A's comment ("Hopf holonomy") and zip_A paper wording
    ("verifies ... the Berger Wilson phases") overstate it.
-5. `checks.py` `make_plot` comment says "the deliberately shifted vertical Dirac has a four-dimensional kernel", but the
-   plot uses shift 0, the unshifted operator with 4 zero modes per factor; shift 1 removes the kernel.
-6. canonical §8 says the brackets of "the four off-diagonal horizontal directions" span $\mathfrak{su}(2)$; the script uses
+5. canonical §8 says the brackets of "the four off-diagonal horizontal directions" span $\mathfrak{su}(2)$; the script uses
    five horizontal generators including $i\,\mathrm{diag}(1,1,-2)$, whose brackets project to zero, so the conclusion is the same.
-7. `nine_dimensional_verification.json` keys "10" and "40" are nearest grid energies 10.157 and 39.382.
-8. The Chern-class formula of §4.6 and the seesaw formula of §2.6 enter the scripts only as closed forms; their
+6. `nine_dimensional_verification.json` keys "10" and "40" are nearest grid energies 10.157 and 39.382.
+7. The Chern-class formula of §4.6 and the seesaw formula of §2.6 enter the scripts only as closed forms; their
    derivations (Chern roots, the 2×2 matrix) were verified by hand during this review.
 
-## 8. Recorded outputs of the checks (former JSON files)
+## 7. Recorded outputs of the checks (former JSON files)
 
 The JSON files written by the scripts were folded in here and removed (last present in commit 46d81b1, `research_limits/*.json`). Keys are flattened with dots; floats are rounded to 6 significant digits. Residuals and errors below 1e-12 are summarized in one line per file. `paper_verification.json` recorded only the build of the deleted mobile PDF; its one substantive entry, the markdown sha256 `7a6526f3...` of `canonical_research.md`, is quoted in DUPLICATES.md.
 

@@ -150,7 +150,7 @@ For quaternionic-Hermitian A, the original scalar symbol f_A is pulled back from
 M_2(\mathbb H)\subset M_4(\mathbb C)
 \]
 
-on the compensated invariant kernel. The script verifies the invariant dimension, quaternionic signs, symbol covariance, and compression, with errors below 2e-15.
+on the compensated invariant kernel. The recorded check (research_checks_knowledge.md, sections 3.1-3.3) verifies the invariant dimension, quaternionic signs, symbol covariance, and compression, with errors below 2e-15.
 
 There are three limits to this conclusion. First, Toeplitz compression is not multiplicative before taking the generated finite operator algebra. Second, the nested pair does not yet provide two independent central summands. Third, j_W is not the commuting opposite action of a real triple over the full matrix algebra. For example, a single left action of M2 on C2 fails order zero under the proposed coefficient conjugation. A Hilbert–Schmidt or correspondence bimodule must be constructed and its changed mode count checked. We therefore have a compensated spectral sector and compressed matrix correspondence, not a completed nine-dimensional real Standard Model triple.
 
@@ -274,7 +274,7 @@ In particular, setting tau proportional to v would be a chosen identification, n
 
 ## References and reproduction
 
-Run `python3 nine_dimensional_checks.py` with numpy and matplotlib. It checks the compensation, symbol covariance, finite algebra dimensions, the explicit order-zero obstruction and exact scalar harmonic counts, and regenerates the plot. The one-mode S5 conclusion is a Hodge-theoretic proof; the two-dimensional harmonic-sector check in the code is not a numerical solution of a PDE.
+The checks of the compensation, symbol covariance, finite algebra dimensions, the explicit order-zero obstruction and exact scalar harmonic counts are recorded in [../research_checks_knowledge.md](../research_checks_knowledge.md), section 3. The one-mode S5 conclusion is a Hodge-theoretic proof; the two-dimensional harmonic-sector check in the code is not a numerical solution of a PDE.
 
 1. P. Ramacher, *Singular equivariant asymptotics and Weyl's law*. https://arxiv.org/abs/1001.1515
 2. F. Torralbo and F. Urbano, *Index of compact minimal submanifolds of the Berger spheres*, geometric preliminaries on the U(n+1) action. https://arxiv.org/abs/2110.08027

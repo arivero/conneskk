@@ -73,7 +73,7 @@ For alpha<1/2 the surviving mass operator is A; for alpha=1/2 it is A-BC^{-1}B*.
 
 Writing F_t=tT+t^alpha V+S, bounded commutators for fixed a require both [T,a]=0 and [V,a]=0. Retaining a finite seesaw mass by scaling a Dirac coupling like the square root of the heavy Majorana mass can therefore shrink the retained algebra further. It is not automatically the same algebraic limit as a bounded Dirac coupling.
 
-The script checks the exact two-by-two light eigenvalue
+The recorded check (research_checks_knowledge.md, section 2.6) confirms the exact two-by-two light eigenvalue
 
 \[
 \lambda_-(t)=-\frac{2t^{2\alpha}}{t+\sqrt{t^2+4t^{2\alpha}}},
@@ -276,7 +276,7 @@ The unresolved checks are precise: derive the full real bimodule and its protect
 
 ## Verification and references
 
-`python3 checks.py` reproduces the first-stage finite triple, heat-trace and twistor checks. `python3 solidification_checks.py` verifies the centralizer and lifted gauge dimensions, J/grading relations, the parent first-order failure, the unimodularity trace change, the rational CP3 index and anomaly arithmetic, and the seesaw eigenvalues. These checks support the finite calculations; they are not numerical evidence for a continuum Standard Model vacuum.
+The first-stage finite triple, heat-trace and twistor checks are recorded in [../research_checks_knowledge.md](../research_checks_knowledge.md), section 1. Section 2 there records the checks of the centralizer and lifted gauge dimensions, J/grading relations, the parent first-order failure, the unimodularity trace change, the rational CP3 index and anomaly arithmetic, and the seesaw eigenvalues. These checks support the finite calculations; they are not numerical evidence for a continuum Standard Model vacuum.
 
 1. A. H. Chamseddine, A. Connes and W. D. van Suijlekom, *Beyond the Spectral Standard Model: Emergence of Pati–Salam Unification*. https://arxiv.org/abs/1304.8050
 2. I. Forsyth, M. Goffeng, B. Mesland and A. Rennie, *Boundaries, spectral triples and K-homology*. https://arxiv.org/abs/1607.07143

@@ -113,7 +113,7 @@ where f_I is the product of f_i over i in I.
 
 ## Numerical check (Claude)
 
-Scripts in the session scratchpad (`yukawa_check.py`, `yukawa_check2.py`).
+Method: roots of the secular equation are bracketed on fine grids and refined by Brent's method; the shooting check integrates the ODE from x = 0 with scipy `solve_ivp` (rtol 1e-12) and finds the zeros of the boundary-condition determinant at x = l.
 
 - **Secular equation against ODE shooting** (scipy `solve_ivp`, rtol 1e-12, real X). For one massless flavor and X = 0.3, 1 and 5, the shooting roots agree with (n pi +/- arctan X)/l to 6 digits. For three flavors with masses (-3, -1.5, 0.2) and (2.5, 1, -0.3), l = 1 and random X, both methods give 0.024689, 0.048653, 0.534569 and 2.03374.
 - **Theorem 12.6** (c^Q = (2, 1, 0), c^U = (1.5, 0.5, -0.5), X = 0.05 x Gaussian, lambda_* = 0.577). The eigenvalues in the window are 0.000576, 0.035602 and 0.061096, against sigma_k(Y_0) = 0.000576, 0.035632 and 0.061188. All three two-sided bounds hold.
