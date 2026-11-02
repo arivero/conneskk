@@ -58,7 +58,3 @@ H is falsifiable piece by piece, and each piece is a single-session theorem.
 - **T1:** no natural truncation gives an end-to-end distance proportional to l. Then 1/m measures only the tower scale, and the "sheets = interval ends" reading fails.
 - **T2:** the heavy-limit light triple admits no odd factorization compatible with J. Then 10 -> 9 needs an explicit treatment of the neutral sector before it holds in NCG terms.
 - **T3:** I_G is not the boundary index of any odd bulk with the required equivariance. Then the 10 -> 11 emergence needs a different mechanism than walls.
-
-## Protocol for Astra
-
-Jobs run one at a time through `codex exec -m gpt-6-astra --disable multi_agent --disable multi_agent_v2 --disable memories -s read-only`. Every result is classed **PROVED**, **DISPROVED** or **OPEN**. An OPEN result is filed as a conjecture with its strongest partial result and the list of models that attempted it (see `lemmas/README.md`).
