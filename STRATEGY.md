@@ -32,6 +32,15 @@ On the KK side this is dimensional deconstruction (Arkani-Hamed, Cohen and Georg
 
 H is falsifiable piece by piece, and each piece is a single-session theorem.
 
+### What job 05 settled (T1)
+
+**Theorem** ([lemmas/05](lemmas/05_deconstruction_interval.md)). Let I_l carry the Dirac operator with opposite chiral boundary conditions R(0) = 0 and L(l) = 0. Its minimal grading-preserving spectral truncation is unitarily equivalent to the Connes-Lott two-point space with abs(m) = pi/(2l), and the truncated end states lie at distance 2l/pi. An explicit N-site chain interpolates: its spectrum is +/- 2 h_N sin((2r-1) pi/(4N-2)), its site distances are abs(i-j)/h_N, it has a one-dimensional heat window, and it converges in Gromov-Hausdorff distance to I_l.
+
+The identification "the two sheets are a truncated interval, with length proportional to 1/m" therefore holds. Two refinements follow.
+
+- **Emergence needs the tower back.** At fixed rank, m -> 0 only separates the sheets. One heat dimension appears in a fixed energy window only when N m -> infinity, i.e. when the number of retained modes grows. The 10 -> 11 statement has to be phrased for the refined family, as the corpus no-go of canonical 2.1 already requires.
+- **The bare interval has no zero mode.** As m -> infinity the metric collapses to a point, but every fermion mode becomes heavy, so no light fermions survive at fixed energy. Light fermions in the 9-dimensional endpoint must come from another sector: a bulk Dirac mass with near-zero modes localized at the walls, whose masses can be far below the tower scale pi/(2l) ~ M_W. This moves the fermion question into T3 and leaves the gauge question (l ~ 1/M_W) to T4.
+
 ## Ranking rules
 
 1. **Critical path first:** a theorem must decide part of H, or of the user's 10 -> 11 / 10 -> 9 claims.
@@ -43,9 +52,9 @@ H is falsifiable piece by piece, and each piece is a single-session theorem.
 
 | rank | id | theorem to settle | decides | size |
 |---|---|---|---|---|
-| 1 | T1 | **Deconstruction.** N-site chiral chain to interval: spectrum, heat window, Connes distance between end sites as N -> infinity at fixed l. N = 2 equals Connes-Lott. Is the minimal truncation's distance proportional to l? | towerless = KK (P4); both limits of H | medium |
+| 1 | T1 | **Deconstruction.** Settled by job 05 (Theorem above): Connes-Lott is the minimal truncation of the chiral interval, l = pi/(2 abs(m)). | towerless = KK (P4); both limits of H | done |
 | 2 | T2 | **KO parity.** An even real finite triple is unitarily (A, J)-equivalent to odd (x) Clifford point iff it is vectorlike. Apply this to the heavy limit of F_SM: do nu_L or the Majorana block obstruct it? | 10 -> 9 inside NCG | small |
-| 3 | T3 | **Chiral endpoint as a boundary.** An equivariant Callias / domain-wall index on F x R (or F x interval) reproduces I_G = [V_L] - [V_R] as a boundary class. Identify the two-wall interval of H as the KK-theory boundary of an odd bulk. | 10 -> 11 inside NCG | medium |
+| 3 | T3 | **Chiral endpoint as a boundary, with light fermions.** Add a bulk Dirac mass M to the chiral interval of job 05: near-zero modes localized at the two walls, with masses well below pi/(2l). An equivariant Callias / domain-wall index reproduces I_G = [V_L] - [V_R] as a boundary class. Decide whether the light modes survive both limits l -> 0 and l -> infinity at fixed physical masses. | 10 -> 11 and the fermions of 10 -> 9 | medium |
 | 4 | T4 | **Gauge sector of the towerless interval.** Truncate a Higgsless interval gauge field to N = 2 and compare with Connes-Lott inner fluctuations: M_W ~ 1/l, rho = 1? | ties M_W to l | medium |
 | 5 | T5 | **Heavy-W scaling.** In the spectral-action family, M_W -> infinity iff the largest Yukawa -> infinity, with the light algebra the centralizer. Combine with job 03 (kinetic weights f(m^2/Lambda^2)). | 10 -> 9 normalization | small |
 | 6 | T6 | **Metric-compatible towerless limits.** Operator-system truncation (Connes-van Suijlekom) in place of the compressed algebra, fixing the S^2 mismatch of research_state 6.10. | general P4 | medium |
@@ -55,6 +64,6 @@ H is falsifiable piece by piece, and each piece is a single-session theorem.
 
 ## What would sink H
 
-- **T1:** no natural truncation gives an end-to-end distance proportional to l. Then 1/m measures only the tower scale, and the "sheets = interval ends" reading fails.
+- **T1:** settled in favour of H (job 05). Its no-go part says the bare interval loses all fermions in the collapse; T3 must supply them.
 - **T2:** the heavy-limit light triple admits no odd factorization compatible with J. Then 10 -> 9 needs an explicit treatment of the neutral sector before it holds in NCG terms.
 - **T3:** I_G is not the boundary index of any odd bulk with the required equivariance. Then the 10 -> 11 emergence needs a different mechanism than walls.
