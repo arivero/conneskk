@@ -1,6 +1,23 @@
 # Connes / Kaluza-Klein limits in 9, 10 and 11 dimensions: working folder
 
-The deep index of developments is [INDEX.md](INDEX.md).
+The deep index of developments is [INDEX.md](INDEX.md). The machine-readable ledger of claims, dependencies, checks and contradictions is [ledger.pl](ledger.pl).
+
+## Querying the ledger
+
+SWI-Prolog 9.2.9 (`swipl`; here a user-local install in `~/.local/opt/swipl`).
+
+```
+swipl -g run_tests -t halt ledger.pl            # consistency tests
+swipl ledger.pl
+?- falls_if_false(hyp(ccm_relation), C).        % what rests on a hypothesis or claim
+?- numerical_only(C).                            % claims backed only by a numerical check
+?- language_not_recorded(C).                     % computations whose tool the source omits
+?- self_checked_only(C).                         % checked only by their own author
+?- open_items(X).                                % conjectures, open strategy items, open contradictions
+?- show(l12_towerless).                          % statement, status and location
+```
+
+Facts: `claim/5`, `source/3`, `depends/2`, `hypothesis/2`, `attempted_by/2`, `checked_by/3`, `overturn/2`, `strategy/3`, `addresses/2`, `contradiction/5` (documented at the top of the file). The ledger is edited by hand; new lemmas add their facts there.
 
 ## Reading order
 
