@@ -111,8 +111,11 @@ def paren(s):
     return s if re.fullmatch(r'\w+', s) else '(' + s + ')'
 
 
-def script_groups(scripts, base, size):
-    """Turn script glyphs into rendered ^/_ groups, pairing stacked inline fractions."""
+def script_groups(scripts, base, size, base_x1=()):
+    """Turn script glyphs into rendered ^/_ groups, pairing stacked inline fractions.
+
+    A raised and a lowered group that start together right after a base glyph are
+    a combined sub/superscript (x_a^b), not a fraction."""
     groups = []
     for kind, gs in (('^', [g for g in scripts if g.base < base - 0.05 * size]),
                      ('_', [g for g in scripts if g.base >= base - 0.05 * size])):
@@ -130,6 +133,12 @@ def script_groups(scripts, base, size):
                 continue
             overlap = min(a['x1'], b['x1']) - max(a['x0'], b['x0'])
             if overlap > 0.5 * min(a['x1'] - a['x0'], b['x1'] - b['x0']) and b['shift'] < -0.28 * size and a['shift'] > 0.3 * size:
+                attached = any(-0.15 * size <= min(a['x0'], b['x0']) - x <= 0.08 * size for x in base_x1)
+                if attached and abs(a['x0'] - b['x0']) < 0.3 * size:
+                    out.append({'x0': min(a['x0'], b['x0']), 'x1': max(a['x1'], b['x1']), 'kind': '_',
+                                'text': '_' + wrap(b['text']) + '^' + wrap(a['text'])})
+                    used.update((i, j))
+                    continue
                 out.append({'x0': min(a['x0'], b['x0']), 'x1': max(a['x1'], b['x1']), 'kind': 'f',
                             'text': paren(a['text']) + '/' + paren(b['text'])})
                 used.update((i, j))
@@ -156,7 +165,15 @@ def render(glyphs, base, size):
             items.append({'x0': g.x0, 'x1': g.x1, 'kind': 'b', 'text': g.c})
         else:
             scripts.append(g)
-    items += script_groups(scripts, base, size)
+    # a \not overlay negates (or slashes) the base glyph it overlaps most
+    for ov in [it for it in items if it['text'] == NOT_OVERLAY]:
+        others = [it for it in items if it['text'] != NOT_OVERLAY]
+        if others:
+            tgt = max(others, key=lambda it: min(it['x1'], ov['x1']) - max(it['x0'], ov['x0']))
+            if min(tgt['x1'], ov['x1']) - max(tgt['x0'], ov['x0']) > 0:
+                tgt['text'] = NEGATE.get(tgt['text'], tgt['text'] + '\u0338')
+                items.remove(ov)
+    items += script_groups(scripts, base, size, [it['x1'] for it in items])
     # a subscript sorts before a superscript on the same base; an overlay after its relation
     order = {'b': 0, '_': 1, '^': 2, 'f': 0, 'c': 0}
     items.sort(key=lambda it: (round(it['x0'], 0), order[it['kind']], it['text'] == NOT_OVERLAY))
