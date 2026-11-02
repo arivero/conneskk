@@ -1,6 +1,6 @@
 # Dimension limits, chirality and a twistor route to the finite Standard Model
 
-**Archive status:** current conclusions and the integrated Aloff–Wallach/torus analysis are in [canonical_research.md](canonical_research.md). This file is retained as a derivation appendix.
+**Archive status:** current conclusions and the integrated Aloff–Wallach/torus analysis are in [canonical_research.md](../canonical_research.md). This file is retained as a derivation appendix.
 
 Research note, 1 November 2026. This records calculations and a conditional construction, not a completed derivation of the Standard Model from commutative Kaluza–Klein geometry. One Terra agent was used sequentially to check the constructions. No agents ran in parallel.
 

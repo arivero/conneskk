@@ -1,6 +1,6 @@
 # Heavy-mass limits, boundary geometry and the M-theory connection
 
-**Archive status:** read [canonical_research.md](canonical_research.md) for the single current narrative, updated status labels and subsequent checks. This file is retained as a derivation appendix.
+**Archive status:** read [canonical_research.md](../canonical_research.md) for the single current narrative, updated status labels and subsequent checks. This file is retained as a derivation appendix.
 
 Second-stage research addendum. Read with `research_note.md`. Results labeled as calculations below are elementary derivations or explicit matrix checks in this project; they are not claims of priority. Connections to a continuum Standard Model remain proposals. One Terra agent supplied sequential checks, with no parallel agents.
 

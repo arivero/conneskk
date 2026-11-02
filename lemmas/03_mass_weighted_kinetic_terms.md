@@ -471,7 +471,7 @@ exactly reproducing Part B's photon coefficient on the particle space.
 
 **Verdict on corpus claim.**
 
-[Item 1](../ascii/Review_Next_Steps_Sol.txt) states: “The centralizer and compressed resolvent do not determine the surviving gauge kinetic terms.” The calculation confirms that qualification.
+[Item 1](../transcripts/Review_Next_Steps_Sol.txt) states: “The centralizer and compressed resolvent do not determine the surviving gauge kinetic terms.” The calculation confirms that qualification.
 
 - **The full inherited kinetic form survives** the joint limit \(m_h\to\infty\), \(\Lambda\to\infty\), \(m_h/\Lambda\to0\).
 - **Finite nonzero ratios produce threshold weights.** When \(m_h/\Lambda\to\infty\), the residual kinetic form is the light-sector trace. For the specified up-quark removals, photon and gluon coefficients retain their ratio but acquire the common reductions \(1/2\) or \(5/6\).
