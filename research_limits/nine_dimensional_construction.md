@@ -98,7 +98,7 @@ The exponent extends to an equivariant Laplace-type operator on a finite-rank pr
 
 Taking a four-dimensional spin product gives spectral dimension ten for every finite tau and nine in the limit. The order of the high-energy and tau limits matters.
 
-![Scalar spectral check of the collapse](nine_dimensional_collapse.png)
+*Figure (scalar spectral check of the collapse, "A controlled 10 -> 9 spectral limit"; image removed, `git show 46d81b1:research_limits/nine_dimensional_collapse.png`).* Effective total heat dimension of the scalar CP^3 spectrum plus four spacetime dimensions, plotted against the resolution E = 1/sqrt(s) in Fubini-Study curvature units, from about 2 to 170, for tau = 0, 10, 80 and 1000. For tau = 0 and 10 the curves reach 10 by E of about 20. For tau = 80 the curve holds at 9 up to E of about 30 and climbs to 10 between E of about 40 and 70. For tau = 1000 it stays at 9 over the whole range. The figure uses the scalar spectrum only and makes no claim about fermions. Formulas: research_checks_knowledge.md, section 3.5.
 
 The figure uses exact scalar multiplicities for Delta+tau^2 L^2, plus a four-dimensional heat density. It illustrates the six-to-five mechanism; it is not a computed twisted fermion spectrum. The implementation checks all levels through k=700, with the cutoff well above the plotted window.
 

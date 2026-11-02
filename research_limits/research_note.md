@@ -127,7 +127,7 @@ Taking three standard real graded products gives KO-degree 2+2+2=6. In the commo
 \lim_{s\downarrow0}\lim_{N\to\infty}d_{\rm eff}=10.
 \]
 
-![Finite matrix dimension window](dimension_window.png)
+*Figure (finite matrix dimension window; image removed, `git show 46d81b1:research_limits/dimension_window.png`).* Effective total spectral dimension of spacetime times three finite real fuzzy factors, plotted against s/R^2 from 1e-8 to 1e2 for N = 12, 48 and 192. Each curve is 4 at small s, rises to a plateau at 10, falls back to 4 above s/R^2 of about 10, and has a shoulder near 7 around s/R^2 = 2. The plateau begins near s/R^2 = 2e-4 for N = 192 and near 3e-3 for N = 48. For N = 12 the curve peaks at about 9.7 near s/R^2 = 0.05 and has no plateau. Larger N extends the six-dimensional window toward high resolution. Formulas: research_checks_knowledge.md, section 1.2.
 
 **Limits of this construction.** Its spectrum is doubled relative to a minimal sphere spinor spectrum. Its grading cannot be represented by the usual Hochschild orientation cycle: algebra and opposite-algebra actions are copy-identity, and any even product of [D,a] is again copy-identity, whereas gamma is sigma_3 on that factor. Consequently even the doubled continuum comparison is not convergence to the canonical oriented sphere triple. The c=0 kernel is unprotected: the allowed perturbation c=1 removes it. The retained algebra under R→0 is scalar, since commuting with every L_i forces a to be scalar. Indeed compression onto the kernel gives (tr a/N)P, which is not a representation for arbitrary a. Three collapsed factors leave 64 scalar-coupled states, with equal grading multiplicities, and no Standard Model gauge content.
 
@@ -143,7 +143,7 @@ K_r(s)=\sum_{n\in\mathbb Z}e^{-sn^2/r^2},
 
 which behaves as sqrt(pi)r/sqrt(s) when s<<r^2, and as 1 when s>>r^2. Thus the external four dimensions plus the internal product exhibit dimensions eleven, ten and nine in successive resolution windows.
 
-![Two-circle dimension staircase](dimension_staircase.png)
+*Figure (two-circle dimension staircase; image removed, `git show 46d81b1:research_limits/dimension_staircase.png`).* Circle radii with b/a = 0.02. Plotted against s/a^2 from 1e-7 to 1e2, the effective total spectral dimension is 11 below s/a^2 of about 1e-3, drops to 10 there, stays at 10 up to s/a^2 of about 1, and reaches 9 by s/a^2 = 10. The figure is annotated: heat dimension alone does not supply a chiral projection. Formulas: research_checks_knowledge.md, section 1.3.
 
 This is a statement about heat dimension. A reduction retaining the complete eleven-dimensional spinor module does not automatically acquire the canonical ten-dimensional Weyl projection in the middle window. The spinorial multiplicities and Clifford data must also be reduced. With antiperiodic spin structure a collapsed circle has no zero modes at all.
 

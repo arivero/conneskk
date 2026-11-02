@@ -88,7 +88,7 @@ $$
 
 Resolving neither, one or both circles gives total heat dimensions nine, ten and eleven, provided the base and spacetime are resolved. An antiperiodic collapsed circle has no spinor zero mode. Keeping the full parent spinor does not automatically impose a ten-dimensional Weyl projection.
 
-![An illustrative heat-dimension staircase. The five-dimensional base and spacetime are assumed resolved throughout. Periodic circles of radii 1 and 0.01 supply the transitions. This is an exact heat-sum example, not a Standard Model prediction.](paper_assets/heat_staircase.png)
+*Figure (heat-dimension staircase; image removed, `git show 46d81b1:research_limits/paper_assets/heat_staircase.png`).* The five-dimensional base and spacetime are assumed resolved throughout. Periodic circles of radii 1 and 0.01 supply the transitions. Plotted against the resolution E from 0.1 to 3000 (units 1/a, s = E^-2), the effective dimension is 9 below E of about 0.4, rises to 10 by E = 1, stays at 10 up to E of about 40, and rises to 11 by E = 100. This is an exact heat-sum example, not a Standard Model prediction. Formula: research_checks_knowledge.md, section 5.
 
 ## 2.2 Heavy finite operators
 

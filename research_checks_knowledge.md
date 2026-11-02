@@ -2,7 +2,7 @@
 
 Source folder: `research_limits/` (scripts removed after this extraction; recover them with `git show 54445a4:unzipped/zip_B_1800/research_limits/<name>`). This file records the mathematics and the recorded results of
 `checks.py`, `solidification_checks.py`, `nine_dimensional_checks.py`, `canonical_checks.py`,
-`paper_assets/make_heat_figure.py` and their JSON outputs, so that the scripts can be removed.
+`paper_assets/make_heat_figure.py` and their JSON outputs (folded into section 8), so that the scripts can be removed.
 The papers they support are `research_note.md` (first stage), `solidification.md` (second stage),
 `nine_dimensional_construction.md` and the consolidated `canonical_research.md`.
 
@@ -480,3 +480,182 @@ glyphs, inline math as 360-dpi PNGs with trailing punctuation absorbed; long dis
 7. `nine_dimensional_verification.json` keys "10" and "40" are nearest grid energies 10.157 and 39.382.
 8. The Chern-class formula of §4.6 and the seesaw formula of §2.6 enter the scripts only as closed forms; their
    derivations (Chern roots, the 2×2 matrix) were verified by hand during this review.
+
+## 8. Recorded outputs of the checks (former JSON files)
+
+The JSON files written by the scripts were folded in here and removed (last present in commit 46d81b1, `research_limits/*.json`). Keys are flattened with dots; floats are rounded to 6 significant digits. Residuals and errors below 1e-12 are summarized in one line per file. `paper_verification.json` recorded only the build of the deleted mobile PDF; its one substantive entry, the markdown sha256 `7a6526f3...` of `canonical_research.md`, is quoted in DUPLICATES.md.
+
+### `verification.json`
+
+- `fuzzy.0.N` = 2
+- `fuzzy.0.shift` = 0
+- `fuzzy.0.dimension` = 16
+- `fuzzy.0.errors` = {hermitian_D: 0, grading: 0, J_squared_minus_one: 0, JD_equals_DJ: 0, Jgamma_equals_minus_gammaJ: 0, opposite_action: 0, order_zero: 0, order_one: 0}
+- `fuzzy.0.spectrum` = {-2: 2, -1: 4, 0: 4, 1: 4, 2: 2}
+- `fuzzy.1.N` = 2
+- `fuzzy.1.shift` = 1
+- `fuzzy.1.dimension` = 16
+- `fuzzy.1.errors` = {hermitian_D: 0, grading: 0, J_squared_minus_one: 0, JD_equals_DJ: 0, Jgamma_equals_minus_gammaJ: 0, opposite_action: 0, order_zero: 0, order_one: 0}
+- `fuzzy.1.spectrum` = {-2: 4, -1: 4, 1: 4, 2: 4}
+- `fuzzy.2.N` = 3
+- `fuzzy.2.shift` = 0
+- `fuzzy.2.dimension` = 36
+- `fuzzy.2.errors` = {hermitian_D: 0, grading: 0, J_squared_minus_one: 0, JD_equals_DJ: 0, Jgamma_equals_minus_gammaJ: 0, opposite_action: 0, order_zero: 0, order_one: 0}
+- `fuzzy.2.spectrum` = {-3: 4, -2: 8, -1: 4, 0: 4, 1: 4, 2: 8, 3: 4}
+- `fuzzy.3.N` = 3
+- `fuzzy.3.shift` = 1
+- `fuzzy.3.dimension` = 36
+- `fuzzy.3.errors` = {hermitian_D: 0, grading: 0, J_squared_minus_one: 0, JD_equals_DJ: 0, Jgamma_equals_minus_gammaJ: 0, opposite_action: 0, order_zero: 0, order_one: 3.24939e-15}
+- `fuzzy.3.spectrum` = {-3: 6, -2: 8, -1: 4, 1: 4, 2: 8, 3: 6}
+- `fuzzy.4.N` = 5
+- `fuzzy.4.shift` = 0
+- `fuzzy.4.dimension` = 100
+- `fuzzy.4.errors` = {hermitian_D: 0, grading: 0, J_squared_minus_one: 0, JD_equals_DJ: 0, Jgamma_equals_minus_gammaJ: 0, opposite_action: 0, order_zero: 2.05616e-15, order_one: 1.01466e-14}
+- `fuzzy.4.spectrum` = {-5: 8, -4: 16, -3: 12, -2: 8, -1: 4, 0: 4, 1: 4, 2: 8, 3: 12, 4: 16, 5: 8}
+- `fuzzy.5.N` = 5
+- `fuzzy.5.shift` = 1
+- `fuzzy.5.dimension` = 100
+- `fuzzy.5.errors` = {hermitian_D: 0, grading: 0, J_squared_minus_one: 0, JD_equals_DJ: 0, Jgamma_equals_minus_gammaJ: 0, opposite_action: 0, order_zero: 2.05616e-15, order_one: 1.36537e-14}
+- `fuzzy.5.spectrum` = {-5: 10, -4: 16, -3: 12, -2: 8, -1: 4, 1: 4, 2: 8, 3: 12, 4: 16, 5: 10}
+- `fuzzy.6.N` = 8
+- `fuzzy.6.shift` = 0
+- `fuzzy.6.dimension` = 256
+- `fuzzy.6.errors` = {hermitian_D: 0, grading: 0, J_squared_minus_one: 0, JD_equals_DJ: 0, Jgamma_equals_minus_gammaJ: 0, opposite_action: 0, order_zero: 1.80341e-15, order_one: 7.57495e-14}
+- `fuzzy.6.spectrum.-8` = 14
+- `fuzzy.6.spectrum.-7` = 28
+- `fuzzy.6.spectrum.-6` = 24
+- `fuzzy.6.spectrum.-5` = 20
+- `fuzzy.6.spectrum.-4` = 16
+- `fuzzy.6.spectrum.-3` = 12
+- `fuzzy.6.spectrum.-2` = 8
+- `fuzzy.6.spectrum.-1` = 4
+- `fuzzy.6.spectrum.0` = 4
+- `fuzzy.6.spectrum.1` = 4
+- `fuzzy.6.spectrum.2` = 8
+- `fuzzy.6.spectrum.3` = 12
+- `fuzzy.6.spectrum.4` = 16
+- `fuzzy.6.spectrum.5` = 20
+- `fuzzy.6.spectrum.6` = 24
+- `fuzzy.6.spectrum.7` = 28
+- `fuzzy.6.spectrum.8` = 14
+- `fuzzy.7.N` = 8
+- `fuzzy.7.shift` = 1
+- `fuzzy.7.dimension` = 256
+- `fuzzy.7.errors` = {hermitian_D: 0, grading: 0, J_squared_minus_one: 0, JD_equals_DJ: 0, Jgamma_equals_minus_gammaJ: 0, opposite_action: 0, order_zero: 1.80341e-15, order_one: 7.3696e-14}
+- `fuzzy.7.spectrum.-8` = 16
+- `fuzzy.7.spectrum.-7` = 28
+- `fuzzy.7.spectrum.-6` = 24
+- `fuzzy.7.spectrum.-5` = 20
+- `fuzzy.7.spectrum.-4` = 16
+- `fuzzy.7.spectrum.-3` = 12
+- `fuzzy.7.spectrum.-2` = 8
+- `fuzzy.7.spectrum.-1` = 4
+- `fuzzy.7.spectrum.1` = 4
+- `fuzzy.7.spectrum.2` = 8
+- `fuzzy.7.spectrum.3` = 12
+- `fuzzy.7.spectrum.4` = 16
+- `fuzzy.7.spectrum.5` = 20
+- `fuzzy.7.spectrum.6` = 24
+- `fuzzy.7.spectrum.7` = 28
+- `fuzzy.7.spectrum.8` = 16
+- `standard_model.charge_multiplets_left.0` = [3, 2/3]
+- `standard_model.charge_multiplets_left.1` = [3, -1/3]
+- `standard_model.charge_multiplets_left.2` = [1, 0]
+- `standard_model.charge_multiplets_left.3` = [1, -1]
+- `standard_model.charge_multiplets_right.0` = [3, 2/3]
+- `standard_model.charge_multiplets_right.1` = [3, -1/3]
+- `standard_model.charge_multiplets_right.2` = [1, 0]
+- `standard_model.charge_multiplets_right.3` = [1, -1]
+- `standard_model.mass_map_rank` = 8
+- `standard_model.gauge_mass_gram.0` = [0.37, 0, 0, 0]
+- `standard_model.gauge_mass_gram.1` = [0, 0.37, 0, 0]
+- `standard_model.gauge_mass_gram.2` = [0, 0, 0.37, -0.37]
+- `standard_model.gauge_mass_gram.3` = [0, 0, -0.37, 0.37]
+- `standard_model.gauge_mass_rank` = 3
+- `standard_model.anomaly_coefficients` = {leptons_SU2_squared_Y: -1/4, quarks_SU2_squared_Y: 1/4, leptons_Y_cubed: 3/4, quarks_Y_cubed: -3/4}
+- `twistor.quaternionic_real_algebra_dimension` = 16
+- `twistor.base_linear_image_dimension` = 6
+- `twistor.full_twistor_real_algebra_dimension` = 32
+- `twistor.matched_SM_algebra_real_dimension` = 24
+- `twistor.finite_Hilbert_dimension` = 32
+- `twistor.finite_triple_errors` = {J_squared_plus_one: 0, J_gamma_anticommutes: 0, D_hermitian: 0, JD_equals_DJ: 0, D_gamma_anticommutes: 0, grading_commutes_with_algebra: 0, order_zero: 0, order_one: 0}
+- `twistor.caveat` = Two module actions, scalar matching, unimodularity and Yukawas are inputs; orientability fails on the neutral R sector.
+- `heat_sample_total_dimensions.12` = {1e-08: 4, 0.0001: 4.04279, 0.01: 7.26871, 1: 7.43301, 100: 4}
+- `heat_sample_total_dimensions.48` = {1e-08: 4.00007, 0.0001: 4.66434, 0.01: 9.95043, 1: 7.43301, 100: 4}
+- `heat_sample_total_dimensions.192` = {1e-08: 4.00111, 0.0001: 9.43088, 0.01: 9.95043, 1: 7.43301, 100: 4}
+- 3 residual/error entries, all below 1e-12 (e.g. `standard_model.electromagnetic_intertwining_error`).
+
+### `solidification_verification.json`
+
+- `real_algebra_dimensions` = [40, 24, 20]
+- `connected_gauge_lie_dimensions` = [21, 12, 9]
+- `Majorana_rank` = 2
+- `top_rank` = 12
+- `strict_light_H_dimensions` = [32, 30, 18]
+- `parent_first_order_failure_Frobenius_norm` = 1.41421
+- `trace_coefficients_lambda_color_common_phase_full` = [4, 12]
+- `trace_coefficients_lambda_color_common_phase_after_neutrino_removal` = [2, 12]
+- `CP3_spin_twist_indices` = {-5: -20, -4: -10, -3: -4, -2: -1, -1: 0, 0: 0, 1: 0, 2: 1, 3: 4, 4: 10, 5: 20}
+- `CP3_local_anomaly_moments` = {cubic: 1, mixed: 1}
+- `SM_hypercharge_anomaly_moments_q_equals_6Y` = {linear: 0, cubic: 0}
+- `seesaw_light_eigenvalues.0` = {10: -0.0990195, 100: -0.009999, 10000: -0.0001}
+- `seesaw_light_eigenvalues.0.25` = {10: -0.306814, 100: -0.0999002, 10000: -0.00999999}
+- `seesaw_light_eigenvalues.0.5` = {10: -0.91608, 100: -0.990195, 10000: -0.9999}
+- `seesaw_light_eigenvalues.0.75` = {10: -2.52481, 100: -9.1608, 10000: -99.0195}
+- `scope` = Exact finite linear algebra plus exact topological arithmetic; no continuum SM vacuum or anomaly spectrum derivation.
+
+### `nine_dimensional_verification.json`
+
+- `compensated_kernel_dimension` = 4
+- `quaternionic_real_dimension` = 16
+- `complex_matrix_real_dimension` = 32
+- `single_left_coefficient_order_zero_failure` = 1
+- `scalar_cutoff_k` = 700
+- `exact_neutral_cumulative_count` = ((K+2)^5-(K+2))/30
+- `plot_heat_dimension_samples.0` = {10: 9.8449, 40: 9.98968, 160: 9.99937}
+- `plot_heat_dimension_samples.10` = {10: 9.80294, 40: 9.9874, 160: 9.99924}
+- `plot_heat_dimension_samples.80` = {10: 8.80148, 40: 9.24377, 160: 9.9992}
+- `plot_heat_dimension_samples.1000` = {10: 8.80148, 40: 8.98668, 160: 8.99919}
+- `S5_harmonic_Clifford_half_dimension` = 1
+- `scope` = Checks kernel compensation, symbols and exact scalar spectral arithmetic. Does not prove a full real SM triple or derive a 9D gauge vacuum.
+- 2 residual/error entries, all below 1e-12 (e.g. `compression_error`).
+
+### `canonical_verification.json`
+
+- `Berry_curvature_su2_span_dimension` = 3
+- `complex_parallel_endomorphism_dimensions_n_1_2_3` = [1, 1, 1]
+- `complex_commutant_dimension_flux_123` = 3
+- `complex_commutant_dimension_flux_112` = 5
+- `unitary_real_commutant_Lie_dimensions_for_J_squared` = {1: 3, -1: 1}
+- `spin_lift_real_algebra_dimensions_on_chiral_spinors` = {S3: 6, S3_times_Z2: 12, Z2_times_Z2: 4, selected_Klein_component: 2}
+- `binary_dihedral_doublet_FS_indicator` = -1
+- `binary_dihedral_complex_character_FS_indicator_real_part` = 0
+- `geometric_J_order_zero_failure_Frobenius_norm` = 3.4641
+- `finite_corner_SM_algebra_real_dimension` = 24
+- `flag_vertical_kernel_Chern_classes.1` = {rank: 1, c1_h: 0, c2_h_squared: 0}
+- `flag_vertical_kernel_Chern_classes.2` = {rank: 2, c1_h: -1, c2_h_squared: 1}
+- `flag_vertical_kernel_Chern_classes.3` = {rank: 3, c1_h: -3, c2_h_squared: 6}
+- `flag_square_zero_H2_small_integer_solutions.0` = [0, 0]
+- `engineered_Berger_Wilson_check.0.5.parent_circle_zero_mode_rank` = 1
+- `engineered_Berger_Wilson_check.0.5.parent_holonomy_phases_real_imag.0` = [-1, 1.22465e-16]
+- `engineered_Berger_Wilson_check.0.5.parent_holonomy_phases_real_imag.1` = [-1, -1.22465e-16]
+- `engineered_Berger_Wilson_check.0.5.parent_holonomy_phases_real_imag.2` = [1, 0]
+- `engineered_Berger_Wilson_check.1.parent_circle_zero_mode_rank` = 3
+- `engineered_Berger_Wilson_check.1.parent_holonomy_phases_real_imag.0` = [1, -2.44929e-16]
+- `engineered_Berger_Wilson_check.1.parent_holonomy_phases_real_imag.1` = [1, 2.44929e-16]
+- `engineered_Berger_Wilson_check.1.parent_holonomy_phases_real_imag.2` = [1, 0]
+- `engineered_Berger_Wilson_check.2.parent_circle_zero_mode_rank` = 3
+- `engineered_Berger_Wilson_check.2.parent_holonomy_phases_real_imag.0` = [1, -4.89859e-16]
+- `engineered_Berger_Wilson_check.2.parent_holonomy_phases_real_imag.1` = [1, 4.89859e-16]
+- `engineered_Berger_Wilson_check.2.parent_holonomy_phases_real_imag.2` = [1, 0]
+- `engineered_Berger_Wilson_check.3.parent_circle_zero_mode_rank` = 3
+- `engineered_Berger_Wilson_check.3.parent_holonomy_phases_real_imag.0` = [1, -7.34788e-16]
+- `engineered_Berger_Wilson_check.3.parent_holonomy_phases_real_imag.1` = [1, 7.34788e-16]
+- `engineered_Berger_Wilson_check.3.parent_holonomy_phases_real_imag.2` = [1, 0]
+- `SM_trace_KW` = 2
+- `SM_trace_KY` = 10/3
+- `SM_trace_ratio` = 5/3
+- `cos_squared_from_SM_trace` = 5/8
+- `Berger_xi_squared_required` = 5/2
+- `cos_squared_at_required_Berger_parameter` = 5/8
+- `scope` = Finite curvature, representation and characteristic-class checks. No full SM spectral triple, adiabatic PDE spectrum, or vacuum dynamics is inferred.
