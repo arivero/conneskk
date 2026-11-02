@@ -1,0 +1,72 @@
+{
+  "real_algebra_dimensions": [
+    40,
+    24,
+    20
+  ],
+  "connected_gauge_lie_dimensions": [
+    21,
+    12,
+    9
+  ],
+  "Majorana_rank": 2,
+  "top_rank": 12,
+  "strict_light_H_dimensions": [
+    32,
+    30,
+    18
+  ],
+  "parent_first_order_failure_Frobenius_norm": 1.4142135623730951,
+  "trace_coefficients_lambda_color_common_phase_full": [
+    4.0,
+    12.0
+  ],
+  "trace_coefficients_lambda_color_common_phase_after_neutrino_removal": [
+    2.0,
+    12.0
+  ],
+  "CP3_spin_twist_indices": {
+    "-5": "-20",
+    "-4": "-10",
+    "-3": "-4",
+    "-2": "-1",
+    "-1": "0",
+    "0": "0",
+    "1": "0",
+    "2": "1",
+    "3": "4",
+    "4": "10",
+    "5": "20"
+  },
+  "CP3_local_anomaly_moments": {
+    "cubic": "1",
+    "mixed": "1"
+  },
+  "SM_hypercharge_anomaly_moments_q_equals_6Y": {
+    "linear": 0,
+    "cubic": 0
+  },
+  "seesaw_light_eigenvalues": {
+    "0": {
+      "10": -0.09901951359278484,
+      "100": -0.009999000199950016,
+      "10000": -9.999999900000002e-05
+    },
+    "0.25": {
+      "10": -0.3068142665980293,
+      "100": -0.09990019950139582,
+      "10000": -0.009999990000019998
+    },
+    "0.5": {
+      "10": -0.9160797830996162,
+      "100": -0.9901951359278482,
+      "10000": -0.9999000199950014
+    },
+    "0.75": {
+      "10": -2.5248107352732663,
+      "100": -9.160797830996161,
+      "10000": -99.01951359278482
+    }
+  },
+  "scope": "Exact finite linear algebra plus exact topological arithmetic; no continuum SM vacuum or anomaly spectrum derivation."
+}

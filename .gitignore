@@ -1,0 +1,5 @@
+# binary sources kept out of version control
+*.pdf
+*.zip
+lemmas/.astra_*.log
+__pycache__/

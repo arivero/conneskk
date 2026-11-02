@@ -1,0 +1,303 @@
+\documentclass[11pt,oneside]{article}
+\usepackage[paperwidth=4.65in,paperheight=7.8in,left=.38in,right=.38in,top=.51in,bottom=.52in,headheight=13.6pt,headsep=.11in,footskip=.29in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,mathtools,xcolor,fancyhdr}
+\definecolor{ink}{HTML}{223E48}
+\definecolor{accent}{HTML}{186D70}
+\usepackage[colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,pdfauthor={},pdftitle={Kaluza--Klein Geometry and Finite Spectral Structures in Nine, Ten and Eleven Dimensions}]{hyperref}
+\hypersetup{pdfstartview=FitH,pdfdisplaydoctitle=true}
+\input glyphtounicode
+\pdfgentounicode=1
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small\color{ink}Geometry and finite spectral structures}\fancyfoot[C]{\small\color{ink}\thepage}
+\renewcommand{\headrulewidth}{.25pt}
+\setlength{\parindent}{1em}
+\setlength{\emergencystretch}{1.6em}
+\setcounter{tocdepth}{1}
+\setlength{\abovedisplayskip}{.6\baselineskip}
+\setlength{\belowdisplayskip}{.6\baselineskip}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\HH}{\mathbb H}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\su}{\mathfrak{su}}
+\newcommand{\unit}{\mathbf{1}}
+\newcommand{\U}{\mathrm U}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\KO}{\mathrm{KO}}
+\newcommand{\KSp}{\mathrm{KSp}}
+\newcommand{\KK}{\mathrm{KK}}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\paperlink}[2]{\href{#1}{#2}}
+\raggedbottom
+\brokenpenalty=10000
+\widowpenalty=10000
+\clubpenalty=10000
+\begin{document}
+\thispagestyle{plain}
+\noindent{\small\sffamily\color{accent} RESEARCH SYNTHESIS\hfill 2 NOVEMBER 2026}\par
+\vspace{.52cm}
+\noindent{\LARGE\bfseries\color{ink} Kaluza--Klein Geometry\\
+and Finite Spectral Structures\\
+in Nine, Ten and Eleven\\
+Dimensions\par}
+\vspace{.38cm}\noindent\rule{.22\linewidth}{1.2pt}\par
+\smallskip\noindent\textbf{Abstract.}
+A seven-dimensional spin manifold admits a circle quotient onto the full flag of three complex lines and a distinct sphere-fiber projection onto the five-sphere. The two projections give ordinary ten- and nine-dimensional geometries after adjoining four spacetime dimensions. They do not compose. A degree-two monopole on the sphere fibers yields a quaternionic doublet with an odd five-dimensional Dirac kernel. An isotropy calculation gives an exact seven-dimensional zero mode for homogeneous connection data. A separate six-dimensional projection generates complex matrix blocks of sizes one, two and three, with a chiral-index obstruction to the inherited real structure. In an electroweak model on a Berger lens space, squashing fixes a coupling ratio while an independent dimensional coefficient sets the Fermi scale. At the conventional unification angle the simplest common-metric mass model violates the custodial relation. These results specify geometric mechanisms and independent matching conditions. No single compactification satisfying the spectral, field-theoretic and dynamical requirements has been established.
+
+\clearpage
+\section{Dimensions and comparison}
+Consider a product of a four-dimensional spacetime with an internal manifold of dimension seven, six or five. The resulting dimensions are eleven, ten and nine. Three questions arise. Which lower-dimensional spaces occur as smooth projections or limits? Which degrees of freedom survive for a specified internal Dirac operator? Can the surviving fields realize a finite real spectral triple and the measured interactions of a four-dimensional theory? A positive answer to the first question supplies data for the second. Even an exact internal zero mode leaves the four-dimensional gauge charges and interaction strengths to be determined.
+
+Here \emph{Kaluza--Klein} refers to geometric reduction. The separate notation \(\KK\) denotes the bivariant theory of Kasparov. A spectral triple specifies an algebra represented on a Hilbert space and an operator measuring differential structure. A real even triple also specifies an antiunitary operator \(J\) and a grading \(\gamma\). Metric dimension is detected through spectral growth. Real or KO-dimension specifies signs for \(J,D,\gamma\). In particular, even finite matrices add no positive heat dimension, yet finite KO-dimension six imposes nontrivial conditions on the module. A change in the number of continuous coordinates alone fixes none of these signs.
+
+An elementary collapse illustrates the role of spin data. For a circle of radius \(R\) with spin and holonomy shift \(\alpha\), the vertical frequencies are \((n+\alpha)/R\), \(n\in\Z\). A periodic untwisted circle retains a constant mode. For antiperiodic spin structure every frequency diverges as \(R\) tends to zero. Expanding a field before choosing a spin lift or a twist can therefore give the wrong light space. The same distinction occurs on nontrivial circle bundles, where projectable and nonprojectable spin structures have different spectral limits \cite{ammann}.
+
+A product model makes the grading data explicit. With a doubled Clifford module one may write
+\[
+ D_{6,R}=D_5\otimes\sigma_1+
+ R^{-1}(-i\partial_\theta+\alpha)\otimes\sigma_2 .
+\]
+A periodic zero mode can retain the two-component Clifford multiplicity. In a seven-dimensional ambient spin geometry, Clifford multiplication by a chosen unit normal can similarly induce a tangential grading on an oriented six-dimensional hypersurface. Restriction, boundary conditions and any adiabatic projection must still preserve a real structure with the required signs. The ordinary spin Dirac triple on the smooth six-dimensional flag already has the KO-six signs. Transporting such data to a finite effective module is the unresolved step.
+
+\section{An eleven-dimensional spin parent}
+Let \(h=c_1(\OO_{\CP^2}(1))\) and let \(Q\) be the rank-two quotient of the trivial rank-three complex bundle over \(\CP^2\) by \(\OO(-1)\). Then \(c_1(Q)=h\) and \(c_2(Q)=h^2\). In a Hermitian realization the sphere bundle has the form
+\[
+ N=S(Q)=\{(\ell,u): u\in S^5,\ \ell\perp u\}.
+\]
+The group \(\SU(3)\) acts transitively. After choosing the line \(\ell=\C e_1\) and the vector \(u=e_3\), the stabilizer is \(H=\{\operatorname{diag}(z,z^{-1},1)\}\). This identifies \(N\) with an Aloff--Wallach space \cite{lehmann}. The projection to \(\ell\) has sphere fiber \(S^3\). The tangent bundle identity for a unit sphere bundle gives
+\[
+ TN\oplus\R\simeq\pi^*(T\CP^2\oplus Q_{\R}).
+\]
+Consequently \(w_2(TN)=\pi^*(h+h)=0\) modulo two. The Euler class of the underlying rank-four bundle is \(h^2\), and the Gysin sequence gives \(H^4(N;\Z)=0\). An external spin spacetime can thus be combined with \(N\) without a spin obstruction from the internal factor.
+
+Two other projections change dimension in different ways. Dividing the phase of \(u\) gives a circle bundle \(q:N\to F_3=P_{\rm lines}(Q)\), the full flag manifold. Holding the unit vector fixed and varying \(\ell\) in \(u^\perp\) gives a sphere bundle \(r:N\to S^5\) with fiber \(\CP^1\). The image under \(r\) of a circle fiber of \(q\) is a Hopf circle, not a point. Hence no factorization \(r=s\circ q\) exists. The picture of two quotients from one parent is exact. A trajectory from the flag to the sphere would require a separate construction.
+
+A different eleven-dimensional candidate has internal space \(\CP^2\times L(p,q)\). Here \(L(p,q)\) is the quotient of the unit sphere in \(\C^2\) by \((z_1,z_2)\mapsto (\zeta z_1,\zeta^qz_2)\), where \(\zeta=e^{2\pi i/p}\) and \(p,q\) are coprime. In contrast to \(N\), this product is nonspin because \(w_2(T\CP^2)=h\bmod 2\) survives pullback. A spinor model on the product needs additional structure, such as a spin-c twist. Real fermions then require another check. For \(q=1\) the free central Hopf circle gives the smooth quotient \(\CP^2\times\CP^1\). The residual circle gauge field carries bundle curvature of degree \(\pm p\). A quotient with a nonzero Chern number is different from setting the circle connection equal to zero.
+
+There is a distinct relation to the quaternionic Hopf fibration \(S^3\to S^7\to S^4\). Complex conjugation gives a twofold branched quotient \(\CP^2\to S^4\), with branch locus \(\mathbb{RP}^2\) \cite{massey}. Pulling the principal \(\SU(2)\) Hopf bundle back to \(\CP^2\) gives second Chern number \(\pm2\), rather than \(c_2(Q)=h^2\). The pulled-back total space is nonspin and has \(H^4\cong\Z_2\), while \(N\) is spin and has \(H^4=0\). The two sphere bundles over \(\CP^2\) are different. Both have \(\pi_2\cong\Z\), so neither total space is \(S^7\).
+
+\section{Three ten-dimensional geometries}
+The projective product, the flag and a family of regular lens slices all have six internal dimensions. On the lens sphere write \((|z_1|,|z_2|)=(\cos\chi,\sin\chi)\). For \(0<\chi<\pi/2\) the two angular variables give a torus. At either endpoint a circle remains. Multiplication by \(\CP^2\) gives six-dimensional torus slices and five-dimensional singular orbits. This statement concerns orbit type inside a fixed ambient space. Restriction of the ambient Dirac operator, quotient by a free circle and an adiabatic limit are three different operations. Near a contractible angular circle the bounding spin lift can suppress a naively expected constant fermion mode.
+
+The flag and the projective product can be distinguished already by integral cohomology. Set \(u=c_1(\OO_{F_3}(1))\) in the lines convention and let \(v\) denote the positive class on \(\CP^1\). In both rings \(h^3=0\). The further relations are
+\[
+ u^2+hu+h^2=0\quad(F_3),\qquad
+ v^2=0\quad(\CP^2\times\CP^1).
+\]
+In the flag, the square of \(ah+bu\) has coefficients \(a^2-b^2\) and \(2ab-b^2\) on the basis \(h^2,hu\). Both vanish over the integers only when \(a=b=0\). In the product the class \(v\) is a nonzero counterexample. The vertical tangent of the flag fibration over \(\CP^2\) has first Chern class \(h+2u\). Thus the flag is spin, whereas the product admits the canonical complex spin-c structure and has nonzero second Stiefel--Whitney class.
+
+Neither projective six-manifold admits a smooth submersion onto a closed five-manifold. Each has Euler characteristic six. A proper submersion would give a locally trivial bundle with compact one-dimensional fibers. Every such fiber has Euler characteristic zero, forcing zero Euler characteristic for the total space. The same argument bears on unspecified metric limits. Under uniform two-sided sectional curvature bounds, Gromov--Hausdorff collapse to a fixed smooth compact five-sphere would imply a smooth fibration for sufficiently late members of the sequence \cite{fukaya}. Thus a proposed limit on the fixed flag or product with smooth target \(S^5\) must leave that bounded-curvature regime. Singular orbits, topology change and collapse to a singular target remain separate possibilities.
+
+\section{The nine-dimensional endpoint}
+Principal circle bundles over \(\CP^2\) are labeled by \(kh\). For \(k=0\) the total space is \(\CP^2\times S^1\), for \(|k|=1\) the total space is \(S^5\), and higher absolute values give lens quotients of \(S^5\). Since the vertical tangent line is trivial, the second Stiefel--Whitney class is the pullback of \(h\bmod2\). The mod-two Gysin sequence makes that class zero precisely for odd \(k\). The five-sphere is therefore a spin endpoint with global properties different from the product orbit.
+
+A generic Hopf-squashed metric on \(S^5\) has connected isometry group \(\U(3)\). The Lie algebra contains \(\su(3)\) and a central abelian generator. The fundamental spin representation of \(\Spin(6)\) on the round sphere branches as \(\mathbf 3_{1}\oplus\mathbf 1_{-3}\) in an integral weight convention. Under a unit geometric Hopf rotation the actual spin lift has half-integral weights. A color algebra and a circle direction are kinematically present, but the identification of color triplets and electric charges requires a lift acting on a specified fermion bundle. The untwisted round Dirac eigenvalues are \(\pm(\ell+5/2)/R\), with \(\ell\geq 0\) and radius \(R\) \cite{bar}. Positive scalar curvature rules out an untwisted harmonic spinor. A separate twisted mechanism is needed even to obtain a zero mode.
+
+For the alternative endpoint \(\CP^2\times S^1\), the product Fubini--Study metric gives connected isometry group \(\mathrm{PSU}(3)\times\U(1)\). On the circle orbit \(z_1=0\), the lens-space generator \(Q_{\rm em}=T_3+Y\), with \(T_3=\sigma_3/2\) and \(Y=I/2\), has zero tangential action. The two separate generators restrict to opposite rotations of the remaining circle. A photon represented by the original combination would require additional normal-bundle or field data. The unbroken Lie algebra should therefore be identified on the actual endpoint and on the surviving module.
+
+A complex Dirac spinor in Lorentzian dimension \(1+8\) has sixteen complex components and has no Weyl grading. On a product with a five-dimensional internal spin space, the complex representation restricts to a four-dimensional Dirac spinor tensored with a four-component internal spinor. A sixteen-real-component pseudo-Majorana spinor is also available. In signature \(1+8\) the scalar charge-conjugation matrix obeys \(C^T=C\). Grassmann statistics then give \(\psi^TC\chi=-\chi^TC\psi\). A scalar mass for one such real spinor vanishes. Multiple real fields with a gauge-compatible antisymmetric mass matrix can form massive pairs \cite{nishino}. The statement concerns a nine-dimensional Lorentz scalar. Internal eigenvalues, background fields and a four-dimensional mass linking left and right states in the same surviving gauge representation are different mechanisms.
+
+For example, take a complex spin-c field of bulk mass \(M_9\) on \(\CP^2\times S^1_R\). For product geometry and a flat circle holonomy, separation of variables gives
+\[
+ m_{j,n}^2=M_9^2+\kappa_j^2+(n+\alpha)^2/R^2 .
+\]
+Here \(\kappa_j\) is a spin-c Dirac eigenvalue on \(\CP^2\). A common zero in the three terms gives a massless four-dimensional mode. A nonzero circle shift can remove that mode; a finite uncanceled internal eigenvalue can provide an effective mass. This calculation permits Dirac masses and also shows why dimension counting cannot fix a mass spectrum.
+
+\section{A twisted sphere family}
+Write \(P=\SU(3)\to S^5=\SU(3)/\SU(2)\). The associated sphere bundle \(P\times_{\SU(2)}\CP^1\) is precisely \(r:N\to S^5\). The principal bundle is the nonzero element in \(\pi_4(\SU(2))=\Z_2\): a trivial bundle would give \(\pi_4(\SU(3))\cong\Z_2\), whereas that homotopy group vanishes. Let \(V=P\times_{\SU(2)}\C^2\). If \(\rho:S^5\to\CP^2\) is the Hopf projection, then \(V\simeq\rho^*Q\). The chosen unit vector trivializes the pulled-back tautological line, and the determinant of \(V\) becomes trivial. The defining doublet thus carries a quaternionic structure parallel for an \(\SU(2)\) connection.
+
+Use the round sphere fiber with the spin Dirac operator twisted by an equivariant line \(\mathcal L_n\) of degree \(n\). For \(n>0\) the positive kernel is the space of holomorphic sections of \(\OO(n-1)\), because the spin half-canonical line is \(\OO(-1)\). There is no negative kernel. The kernel bundle over the base is
+\[
+ \mathcal E_n=P\times_{\SU(2)}\Sym^{n-1}\C^2 .
+\]
+For flux one, two and three the fibers are a singlet, a doublet and a spin-one triplet. Negative degree exchanges vertical chirality. A choice of three fluxes is additional field content. The rank-three space is an isospin-one representation; no color action follows from the rank.
+
+The doublet has nonzero reduced quaternionic class in
+\[
+ \widetilde{\KSp}^{0}(S^5)=\KO^{-9}(\mathrm{pt})=\Z_2.
+\]
+As a complex rank-two bundle \(V\) remains nontrivial before stabilization. In stable complex theory, however, \(\widetilde K^0(S^5)=0\). The spin pushforward of the reduced quaternionic generator is the nonzero element of \(\KO^{-9}(\mathrm{pt})\), by real Bott periodicity on an open five-ball. The trivial quaternionic line contributes zero. The five-dimensional spin conjugation and the doublet conjugation combine into a real structure under which the self-adjoint Dirac operator changes sign. The resulting real skew-adjoint operator has mod-two index
+\[
+ \dim_{\C}\ker D_{S^5,V}=1\pmod 2 .
+\]
+This parity survives every spin metric and compatible \(\SU(2)\) connection by the real mod-two index theorem \cite{atiyahsinger}. Witten already identified the homogeneous five-sphere zero mode in footnote 2 of the original global-anomaly paper \cite{witten}. The familiar index on this spin background is odd at isospin \(j=2k+1/2\), equivalently \(|n|=2\bmod4\). Of the first three positive twists, only degree two meets this condition \cite{www}. A five-dimensional index on the selected bundle does not establish a four-dimensional anomaly without an actual chiral spectrum.
+
+\subsection*{A controlled adiabatic estimate}
+Equip \(N\) with the connection metric \(g_\varepsilon=r^*g_{S^5}+\varepsilon^2g_{S^2}\), using the horizontal distribution of the principal connection. Equip \(\mathcal L_2\) with the associated connection combining this horizontal transport with the invariant vertical monopole. The round fibers are totally geodesic. After unitary identification of the scaled Hilbert spaces the spin-submersion formula takes the form \cite{kaad}
+\[
+ D_\varepsilon=\varepsilon^{-1}D_v+D_h+\varepsilon C_\Omega .
+\]
+The bounded curvature correction contains one vertical and two horizontal Clifford multiplications. Horizontal transport acts by \(\SU(2)\), intertwines the fiber Dirac operators and preserves the vertical kernel. On that whole kernel, \(D_h\) therefore agrees, up to a grading convention, with \(D_{S^5,V}\). This preservation is needed: a vanishing compression of \(D_h\) would not alone imply that \(D_h\) kills a lifted zero mode.
+
+For a normalized lift \(s\) of a base zero mode, \(D_\varepsilon s=\varepsilon C_\Omega s\). Self-adjointness and compact resolvent give
+\[
+ \operatorname{dist}(0,\operatorname{spec}D_\varepsilon)
+ \leq \varepsilon\|C_\Omega\| .
+\]
+Thus for the associated connection family at least one eigenvalue approaches zero. The estimate by itself does not determine an exact zero at finite radius or the charge of a four-dimensional particle.
+
+\subsection*{The homogeneous exact mode}
+Impose \(\SU(3)\)-invariance on the base metric and principal connection. The restriction of the horizontal spin representation to \(\SU(2)\) is \(\mathbf 2\oplus\mathbf 1\oplus\mathbf 1\). Tensoring with \(V\) gives exactly one invariant section on the base. The antiunitary symmetry preserves that line and reverses the eigenvalue, which must therefore vanish. The mode is an \(\SU(3)\) singlet. In the real Hopf lift, a full phase rotation acts by minus one on the doublet and by minus one on the spinor. The combined action is an honest circle action on a real line, hence trivial. Other lifts and other modes can carry different weights.
+
+On the seven-dimensional space the exact result follows by counting the isotropy weights, with no appeal to small \(\varepsilon\). At \(H=\operatorname{diag}(z,z^{-1},1)\) the horizontal spin weights are \((1,-1,0,0)\), obtained by lifting the two tangent rotations with opposite angles. The vertical tangent to \(\CP^1\) has weight \(-2\), so the two half-spin weights are \(\pm1\). The twist \((\C e_1^*)^2\) has weight \(-2\). Exactly one sum is zero, namely \(1+1-2\). In particular, the space of invariant twisted sections is one-dimensional, and lies entirely in one vertical chirality. The lifted five-dimensional singlet spans this space. The curvature correction is equivariant and reverses vertical chirality. Acting on the singlet, that correction would give an invariant section in the opposite chirality; none exists. Thus \(C_\Omega s=0\) and \(D_\varepsilon s=0\) for every \(\varepsilon>0\) in this homogeneous associated family. This last step is a deduction for the specified seven-dimensional operator. The five-dimensional precedent and the finite-radius deduction have different hypotheses.
+
+The connection matters even when the line bundle is fixed. In the homogeneous model, pullback of the Fubini--Study connection on \(\OO_{\CP^2}(2)\) along the line projection differs from the associated monopole connection by \(i r^*\eta\), for a compatible sign convention. The invariant Hopf contact form is normalized by \(\eta(iu)=1\). Along the lifted rotation \(\operatorname{diag}(e^{-it/2},e^{-it/2},e^{it})\), the line \(\C e_1\) is fixed while the frame of the dual square picks up \(e^{it}\). The projected connection gains the central term \(i\eta I\). This breaks quaternionic compatibility and shifts the homogeneous base singlet by \(\pm|\eta|\). Other accidental zero modes are not excluded. Similarly, doubling the degree-two line with the conjugate sector to construct a real eleven-dimensional field can pair the protected modes once mixing is allowed.
+
+The spectral estimates have no automatic gravitational counterpart. Vertical curvature is \(\varepsilon^{-2}\) for a round unit fiber scaled by \(\varepsilon\). Nonzero quantized flux gives \(|F|=O(\varepsilon^{-2})\) and integrated fiber energy of order \(\varepsilon^{-2}\) for a conventional Yang--Mills term with fixed coupling. A gravity solution must accommodate this stress, select the radius and control fluctuations. No field equation or stability test is supplied by a vanishing eigenvalue.
+
+\section{Gauge normalization and the Fermi scale}
+Fix the convention \(Q_{\rm em}=T_3+Y\), with covariant derivative containing \(-ig_2W^aT_a-ig_Y B Y\), and set \(\cos^2\theta_W=g_2^2/(g_2^2+g_Y^2)\). All angle comparisons below refer to a common matching scale and charge convention. Renormalization, threshold corrections and the subsequent symmetry breaking must be analyzed before comparing a high-scale ratio to a low-energy measurement. Rescaling an abelian generator without also transforming the coupling and the represented charges changes the question.
+
+With angular coordinates measured in turns, the effective torus lattice on \(L(p,q)\) is
+\[
+ \Lambda_{p,q}=\Z^2+\Z(1,q)/p.
+\]
+Primitive lattice vectors identify globally closed circle subgroups. This constrains periods and possible representations, but it does not determine a metric.
+
+On \(L(p,1)\) consider the Berger metric \(a^2g_\perp+b^2\eta^2\), with unit round metric \(g_\perp+\eta^2\) and \(\xi=b/a\). The connected non-round isometry group for \(p\geq3\) is \(\U(2)/\mu_p\). A generic noncentral lens action need not preserve this group. In the unwarped Einstein--Hilbert ansatz the inverse squared couplings are proportional to the integrals of inner products of the corresponding Killing fields. For \(T_i=\sigma_i/2\) and \(Y=I/2\), write \(g_2^{-2}=\mathcal N A\) and \(g_Y^{-2}=\mathcal N B\). The common positive factor includes volume and gravitational normalization. Normalized internal averages give
+\[
+ A=(2a^2+b^2)/12,\qquad B=b^2/4.
+\]
+For example, the squared norm of the third generator contains the average of \(\cos^2(2\chi)\), equal to \(1/3\). The mixed term integrates to zero. The quotient volume factor \(1/p\) cancels in the ratio. Canonical field normalization thus gives
+\[
+ \frac{g_Y^2}{g_2^2}=\frac{2+\xi^2}{3\xi^2},
+ \qquad \cos^2\theta_W=\frac{3\xi^2}{4\xi^2+2}.
+\]
+On the same \(L(5,1)\), the round metric gives \(1/2\), whereas \(\xi^2=5/2\) gives \(5/8\). A quotient therefore cannot determine the angle from the integers \((p,q)\) alone in this model.
+
+An extra circle-selection rule can reproduce the integer five. Suppose the neutral direction \(T_3-(g_Y^2/g_2^2)Y\) generates a closed covering-space circle of primitive weights \((u,-v)\), with positive \(u<v\), and intersects the scalar center in exactly the deck group. Then \(p=u+v\) and \(g_Y^2/g_2^2=(v-u)/(v+u)\). Positivity of \(\xi^2\) requires \(3u<p\). For \(p=5\) the only such pair is \((1,4)\), giving \(5/8\). A gauge-boson mass eigenvector need not generate a closed subgroup, and the exact intersection condition has no derivation from the metric action. The quotient by this weighted circle has an orbifold point of order four; it is distinct from the smooth central Hopf quotient. The angle calculation above uses integration over the parent lens space.
+
+A different normalization comes from the spectral action \cite{spectral}. For one conventional generation of Standard Model Weyl particles, including color multiplicity and using \(Q_{\rm em}=T_3+Y\), the representation traces are
+\[
+ \tr(T_3^2)=2,\qquad \tr(Y^2)=10/3 .
+\]
+With a universal coefficient, canonical normalization gives \(g_2^2/g_Y^2=5/3\), hence \(\cos^2\theta_W=5/8\). The two numerical ratios agree at \(\xi^2=5/2\) under the stated conventions. The lens calculation uses Killing-field lengths, whereas the spectral calculation uses represented matter charges. Neither calculation derives the input of the other. In particular, the color kinetic coefficient, global gauge quotient and surviving matter representation must still agree on the same background.
+
+To test the mass relation, couple the symmetry to a point-orbit sigma field with term \(\kappa g(Dz,Dz)/2\). Use the same Berger metric for this term and for the kinetic integrals. At a vacuum fixed by \(Q_{\rm em}\), the charged generators are horizontal and the broken neutral direction is vertical. The mass matrix has rank three and
+\begin{align*}
+ M_W^2&=\kappa a^2g_2^2/4,\\
+ M_Z^2&=\kappa b^2(g_2^2+g_Y^2)/4,\\
+ \rho_{\rm EW}&=\frac{M_W^2}{M_Z^2\cos^2\theta_W}
+              =\xi^{-2}.
+\end{align*}
+At the \(5/8\) angle this gives \(\rho_{\rm EW}=2/5\). Conversely, the custodial value \(\rho_{\rm EW}=1\) forces the round metric and angle \(1/2\). This counterexample excludes simultaneous matching within the same-metric, single-orbit class. It leaves open a different symmetry-breaking sector with independently derived mass geometry. Pure metric isometries alone yield massless vectors.
+
+At tree level with a single charged vector mediating the low-energy weak current, one obtains
+\[
+ \frac{G_F}{\sqrt 2}=\frac{g_2^2}{8M_W^2},\qquad
+ G_F=\frac{1}{\sqrt2\,\kappa a^2}.
+\]
+The shape selects a dimensionless ratio. The product \(\kappa a^2\) is a dimensional input. Holding the shape fixed cannot explain the scale of beta decay. A finite, heavy \(W\) gives a local four-fermion operator at energies much lower than \(M_W\), so integrating out a propagating vector preserves a finite decay amplitude. In the strict limit \(M_W\to\infty\) at fixed \(g_2\), the coefficient vanishes. With no other charged-current operators, neutron beta decay and muon decay disappear. In the elementary one-doublet parametrization,
+\[
+ M_W=g_2v/2,\quad m_f=y_fv/\sqrt2,\quad
+ G_F=1/(\sqrt2\,v^2).
+\]
+Keeping a finite nonzero light mass as \(v\to\infty\) requires \(y_f\propto v^{-1}\) or an independent mass mechanism. A top Yukawa coupling held nonzero instead gives a divergent top mass. If phase space, hadronic data and other low-energy couplings stay fixed, the beta-decay rate scales as \(v^{-4}\). Maintaining a nonzero Fermi coefficient by increasing \(g_2\) with \(M_W\) is a different strong-coupling limit. Likewise, a uniform pure-metric collapse at fixed four-dimensional Planck mass gives \(g_a^{-2}\sim M_{\rm Pl,4}^2R^2\) for normalized isometries. A weakly coupled limit needs a prescription for the other scales and kinetic terms.
+
+\section{How finite matrices can arise}
+Let \(P\) project onto a finite set of internal modes, and let \(Q_P=1-P\). Even when scalar multiplication operators \(a,b\) commute, the commutator of the compressions is \(PbQ_PaP-PaQ_PbP\). Equivalently, matrix multiplication after projection discards intermediate states. A projected operator system, the algebra generated by that system, and an exact quotient by an ideal are three distinct constructions \cite{trunc}. Equivariant dimensional reduction on \(M\times\CP^1\) with monopoles, Yukawa interactions, calculated spectra and finite fuzzy-sphere truncations already has explicit realizations \cite{dolan}. Such models give a precedent for a geometric route to matrices. Identification with the particular real finite Standard Model triple requires further representation and operator data.
+
+On a round sphere take the spin-c Dolbeault operator twisted by \(\OO(1)\) and retain \(H^0(\OO(1))\), the two-dimensional kernel. The spin-Dirac convention for the same holomorphic kernel uses monopole degree two. Let \(n_i\) denote unit coordinate functions. In an oriented basis the coherent-state projector is \(p(n)=(I+n_i\sigma_i)/2\). The rotation-invariant integral of \(n_i n_j\) equals \(\delta_{ij}/3\) for normalized measure. It follows that
+\[
+ Pn_iP=\sigma_i/3,\qquad
+ Pn_3^2P=I/3,\qquad (Pn_3P)^2=I/9 .
+\]
+The matrices generate \(M_2(\C)\) and rotations act by inner conjugation. The second-moment identity directly demonstrates the failure of multiplicativity. The dimensionful coordinates \(Rn_i\) have compressed norms tending to zero with \(R\), while the scalar harmonics \(n_i\) have Laplace eigenvalue \(2/R^2\). The matrices act on retained spinors, but the functions do not themselves become light scalar fields. A finite triple with vanishing internal Dirac operator also fails to reproduce the spectral metric of a shrinking connected sphere.
+
+For a larger example, choose the product \(X=\CP^2\times\CP^1\), with canonical spin-c structure and specified twisting bundle
+\[
+ E=\OO(0,0)\oplus\OO(0,1)\oplus\OO(1,0).
+\]
+The Dolbeault Dirac kernel consists of holomorphic sections of these bundles, of dimensions one, two and three. On \(\CP^d\) the functions \(z_i\bar z_j/\|z\|^2-\delta_{ij}/(d+1)\) compress on \(H^0(\OO(1))\) to
+\[
+ \frac{1}{d+2}\left(E_{ij}-\frac{\delta_{ij}}{d+1}I\right)
+\]
+up to a transpose convention. Independent functions from the two projective factors span the traceless parts of both matrix blocks. The normalized trace of each compressed block equals the same scalar average of the input function, by homogeneity. Thus the linear operator system has complex dimension \(1+3+8=12\). Products generate the independent block identities, giving complex dimension \(1+4+9=14\) and algebra
+\[
+ \mathcal B=\C\oplus M_2(\C)\oplus M_3(\C).
+\]
+These dimensions measure different objects. All modes are of positive degree-zero form chirality and \(PD_EP=0\). Nonzero Dirac eigenvalues pair opposite chiralities, so every symmetric finite spectral cutoff containing the kernel still has grading trace six. A grade-exchanging antiunitary is impossible without extra opposite-index states. On the six kernel states the represented algebra also has abelian commutant, excluding a faithful commuting right copy. Serre duality with the added bundle \(K_X\otimes E^*\) cancels the chiral imbalance but does not create a nonzero projected Dirac operator.
+
+There is also a global compatibility test on the lens model. For \(p=5\), degree-one homogeneous polynomials on the covering \(S^3\) transform by \(\zeta\) under the scalar deck action. Hence the projective doublet on the base does not descend from untwisted scalar functions on the lens space. The first positive holomorphic degree compatible with scalar deck invariance is five, giving a six-dimensional space on \(\CP^1\). Appropriate bundle characters can change the selection rule and must be specified. Varying the Hopf radius at fixed base metric leaves the displayed base projection intact but changes the Berger angle. This separates the two constructions even when the smooth quotient is the projective product.
+
+\subsection*{The flag and the quaternionic block}
+For the flag fibration over \(\CP^2\), twist the vertical spin-c Dolbeault problem by \(\OO_F(k)\) for \(k=0,1,2\). Fiberwise projective cohomology gives kernel bundles \(\unit,Q^*,\Sym^2Q^*\), of ranks one, two and three. The endomorphisms form bundles over \(\CP^2\). For example, \(c_2(\End Q^*)=3h^2\), so a matrix algebra in each fiber does not give a constant global block. Since \(c_1(Q^*)=-h\), no global antilinear automorphism of \(Q^*\) exists. Nevertheless
+\[
+ \R I\oplus\su(Q^*)\subset\End(Q^*)
+\]
+is a real quaternion algebra bundle. Transition functions act through quaternionic automorphisms. The underlying real three-plane has \(w_2=h\bmod2\) and \(p_1=-3h^2\). This construction gives a genuine quaternion algebra in every fiber, with a nontrivial global twisting. On the sphere endpoint \(V\) instead carries a global quaternionic structure, illustrating the difference between the two projections from \(N\).
+
+For the homogeneous quotient connection the holonomy on \(Q\) is \(\U(2)\). The three displayed representations are irreducible and inequivalent, so the parallel endomorphisms are just scalar in each block. If endomorphism masses are governed by a connection Laplacian, integration by parts identifies the zero modes with those parallel sections. Under these assumptions a further base reduction retains \(\C^3\). Gauge fields arising from metric isometries obey a different equation. Neither rank three nor the existence of a quaternion algebra bundle suffices to identify a physical color or weak multiplet.
+
+\subsection*{An exact quotient at special orbits}
+An elliptic curve \(E_0\) gives another construction. Set \(A=\{(z_1,z_2,z_3)\in E_0^3:\sum z_i=0\}\simeq E_0^2\). The quotient by permutations parametrizes degree-three effective divisors with fixed sum, hence \(A/S_3\simeq\CP^2\) \cite{symcurve}. Together with \(E_0/\{\pm1\}\simeq\CP^1\), this gives the projective product as a coarse quotient of a six-torus by \(G=S_3\times\Z_2\). The action has fixed points; the coarse complex variety, the quotient metric and the crossed product carry different information.
+
+In \(C(A\times E_0)\rtimes G\), evaluation at the origin gives the group algebra \(\C^4\oplus M_2(\C)^2\). Select one scalar and one doublet. At \(((z,z,-2z),0)\) with \(3z\ne0\), the orbit has three points. Functions distinguish the points and group elements permute them; diagonal cutdowns of permutation operators give all matrix units on the orbit. Separating the two orbits by an invariant function makes the combined image exactly \(\mathcal B\). This is a finite quotient selected at special orbits. The three-dimensional permutation representation of \(S_3\) splits into a singlet and a doublet, while the full crossed-product representation is irreducible. The matrix block therefore has no immediate interpretation as a color fundamental.
+
+On the ordinary nonatomic volume Hilbert space, a finite-rank orthogonal compression cannot yield this multiplicative quotient. Indeed the multiplicative defect of \(M_f\), multiplication by a continuous function, satisfies
+\[
+ PM_{|f|^2}P-|PM_fP|^2=(Q_PM_fP)^*(Q_PM_fP).
+\]
+Vanishing for all \(f\) would force a finite-dimensional invariant subspace for all multiplication operators. Such a representation is a sum of point evaluations, which require support on point atoms. Smooth volume has none. Distributional point evaluation or a different Hilbert module is a different construction. The explicit quotient and the compression example therefore support distinct types of finite algebra.
+
+\section{Real triples and KK theory}
+For a real finite Standard Model algebra take \(A_F=\C\oplus\HH\oplus M_3(\C)\) over \(\R\). At KO-dimension six the real even signs are \(J^2=1\), \(JD=DJ\) and \(J\gamma=-\gamma J\). Define \(b^\circ=J\rho(b)^*J^{-1}\). Order zero and first order require \([\rho(a),b^\circ]=0\) and \([[D,\rho(a)],b^\circ]=0\). A finite orientability axiom expresses \(\gamma\) as a sum of left and right algebra products. These conditions test the actual represented module. In particular, if a projection preserves a commutative parent real structure with trivial opposite action on functions, the inherited opposite compression equals left compression. Order zero then fails whenever the compressed functions cease to commute.
+
+A finite algebraic construction isolates the missing data. Put \(V_0=\C\oplus\C^2\), \(W=\C^3\) and take the Hilbert space \(\operatorname{Hom}(W,V_0)\oplus\operatorname{Hom}(V_0,W)\). The dimension is eighteen. For \(a=(\lambda,q,m)\) set \(L=\operatorname{diag}(\lambda,q)\) and use
+\[
+ \rho(a)(X,Y)=(LX,mY),\quad J(X,Y)=(Y^*,X^*).
+\]
+Take \(G_0=\operatorname{diag}(1,-I_2)\), and choose \(D_v\) on \(V_0\) with off-diagonal entries \(v,v^*\) for a nonzero doublet \(v\). Set \(D(X,Y)=(D_vX,YD_v)\) and \(\gamma(X,Y)=(G_0X,-YG_0)\). Left and right multiplication commute, giving order zero; after a first commutator the remaining action on the other side still commutes, giving first order. The KO signs follow directly from exchanging adjoints. For central block projections \(e_i\), orientability follows from
+\[
+ \gamma=(e_1-e_2)e_3^\circ-e_3(e_1^\circ-e_2^\circ).
+\]
+The intersection pairing on three minimal block classes has rank two, so the example fails nondegenerate finite Poincar\'e duality if imposed. Both the enlarged module and the mixing doublet were chosen. The exercise shows which requirements can coexist algebraically while leaving the geometric derivation open.
+
+The lifted unitary acting on matter is \(\rho(u)J\rho(u)J^{-1}\). A central unitary acting trivially by inner automorphisms on the algebra can act nontrivially on the Hilbert space. The kernel of the lift, the charge normalization and any unimodularity constraint have to be calculated on the specified representation \cite{almost}. For instance, a dominant top entry mapping into one component of a weak doublet imposes \(q(1,0)^T=\lambda(1,0)^T\). This forces \(q=\operatorname{diag}(\lambda,\bar\lambda)\) and leaves a centralizer \(\C\oplus M_3(\C)\) when the top entry is color diagonal and identical across colors. Algebra centralization, projection onto the light kernel and stabilization of a background under the lifted gauge action are separate operations.
+
+A Higgs-free finite mass sharpens the orientation question. If \(D_F\) commutes with both bimodule actions, then \(D_F\) commutes with every finite orientation sum. It also anticommutes with the grading. Thus orientability would force \(D_F=0\). A nonzero grading-odd, bimodule-linear mass entails failure of this finite orientation condition. The almost-commutative electrodynamics model gives a charged Dirac mass commuting with the finite algebra; the finite inner one-forms vanish, while the photon arises from the continuous spacetime operator \cite{almost}. Mere gauge invariance of a mass is weaker than bimodule-linearity. This distinction prevents an unjustified extension of the orientation result to every effective massive fermion.
+
+\subsection*{What an invertible comparison preserves}
+The flag and projective product each have six even cells. The complex groups of both function algebras are \(K_0=\Z^6\) and \(K_1=0\). For these bootstrap algebras the universal coefficient theorem has vanishing extension term because the groups are free \cite{uct}. A graded group isomorphism and the inverse lift to inverse complex Kasparov classes. Both spaces are therefore complex \(\KK\)-equivalent to six points. The equivalences are noncanonical and impose no equality of Dirac spectra, ring products or metric structure.
+
+The usual real-valued function algebras can be distinguished. In degree one of the real Atiyah--Hirzebruch spectral sequence the only possible term is \(H^2(X;\Z_2)\), with outgoing differential \(Sq^2\). The incoming differential from constants vanishes, and the possible later differential into torsion-free top cohomology vanishes. On degree-two classes \(Sq^2\) is the square. Modulo two the flag classes \(h^2,u^2=h^2+hu\) are independent, whereas the product has \(v^2=0\). Hence \(\KO^1(F_3)=0\) and \(\KO^1(\CP^2\times\CP^1)=\Z_2\) \cite{zib}. An invertible real Kasparov class would preserve these groups. Complexification of \(A_F\) has five simple blocks, because each real complex-type summand splits into two and the quaternionic block gives \(M_2(\C)\). Rank five excludes an invertible comparison with either projective function algebra of rank six. The selected complex quotient \(\mathcal B\) has rank three.
+
+A geometric correspondence nevertheless exists for the spin submersion \(r\). Including the line twist in the vertical cycle gives the complex factorization \cite{kaad}
+\begin{align*}
+ [D_{N,\mathcal L_2}]&=[D_{v,\mathcal L_2}]
+    \otimes_{C(S^5)}[D_{S^5}]\\
+ &\hspace{1em}\in\KK^1(C(N),\C).
+\end{align*}
+The bounded curvature term affects the unbounded operator and can matter spectrally, yet leaves the bounded Kasparov class unchanged. The complex family index detects the rank of \(V\) on \(S^5\). The torsion responsible for the odd kernel requires quaternionic structure. Thus a genuine geometric correspondence can coexist with an obstruction to invertible equivalence with the proposed finite algebra.
+
+\section{Compactification conditions}
+The spin parent supplies smooth alternative projections, and the homogeneous sphere branch supplies a calculable flux-selected zero mode. A different ten-dimensional base yields explicit noncommuting finite matrices, and a finite bimodule can realize several real-triple axioms after additional choices. None of these replacements transports a finite chirality, a real charge-conjugation operator and a physically normalized gauge lift along both projections. The obstructions have different premises. The Euler obstruction concerns smooth circle fibrations, the index imbalance concerns a particular twisted cutoff, and the custodial failure concerns a particular common-metric mass model.
+
+A candidate solution would need a single higher-dimensional action with a stable metric, quantized fields and a specified fermion module. On that background a spectral calculation must select light fields, control the gap to discarded states and derive the finite operator, including possible mixing. The projected left and right actions must give the intended gauge charges and survive the relevant global quotients. Finally, kinetic terms, vector masses, the four-fermion coefficient and finite charged-fermion masses must be matched at compatible scales. The calculations above provide tests for each step, including explicit ways for individual steps to fail. A simultaneous realization remains open.
+
+\begin{thebibliography}{99}\small
+\bibitem{ammann} B. Ammann, \emph{The Dirac operator on collapsing \(S^1\)-bundles}, S\'eminaire de th\'eorie spectrale et g\'eom\'etrie 16 (1997--98). \paperlink{https://arxiv.org/abs/math/9812116}{arXiv:math/9812116}.
+\bibitem{lehmann} F. Lehmann, \emph{Families of complete non-compact Spin(7) holonomy manifolds}, doctoral thesis (2020). \paperlink{https://people.maths.ox.ac.uk/lotay/Lehmann\%20PhD\%20Thesis.pdf}{Full text}.
+\bibitem{massey} W. S. Massey, \emph{The quotient space of the complex projective plane under conjugation is a 4-sphere}, Geom. Dedicata 2 (1973), 371--374. \paperlink{https://www.maths.ed.ac.uk/~v1ranick/papers/massey5.pdf}{Full text}.
+\bibitem{fukaya} K. Fukaya, \emph{Collapsing Riemannian manifolds to ones of lower dimensions}, J. Differential Geom. 25 (1987), 139--156. \paperlink{https://doi.org/10.4310/jdg/1214440728}{DOI}.
+\bibitem{bar} C. B\"ar, \emph{The Dirac operator on space forms of positive curvature}, J. Math. Soc. Japan 48 (1996), 69--83. \paperlink{https://doi.org/10.2969/jmsj/04810069}{DOI}.
+\bibitem{nishino} H. Nishino and S. Rajpoot, \emph{Massive interacting Yang--Mills multiplets in nine and five dimensions} (2017), Appendix B. \paperlink{https://arxiv.org/abs/1703.05397}{arXiv:1703.05397}.
+\bibitem{witten} E. Witten, \emph{An SU(2) anomaly}, Phys. Lett. B 117 (1982), 324--328. \paperlink{https://doi.org/10.1016/0370-2693(82)90728-6}{DOI}.
+\bibitem{atiyahsinger} M. F. Atiyah and I. M. Singer, \emph{The index of elliptic operators: V}, Ann. of Math. 93 (1971), 139--149. \paperlink{https://webhomes.maths.ed.ac.uk/~v1ranick/papers/as5.pdf}{Full text}.
+\bibitem{www} J. Wang, X.-G. Wen and E. Witten, \emph{A new SU(2) anomaly}, J. Math. Phys. 60 (2019), 052301. \paperlink{https://arxiv.org/abs/1810.00844}{arXiv:1810.00844}.
+\bibitem{kaad} J. Kaad and W. D. van Suijlekom, \emph{Riemannian submersions and factorization of Dirac operators}, J. Noncommut. Geom. 12 (2018), 1133--1159. \paperlink{https://arxiv.org/abs/1610.02873}{arXiv:1610.02873}.
+\bibitem{spectral} A. H. Chamseddine and A. Connes, \emph{The spectral action principle}, Commun. Math. Phys. 186 (1997), 731--750. \paperlink{https://doi.org/10.1007/s002200050126}{DOI}.
+\bibitem{trunc} A. Connes and W. D. van Suijlekom, \emph{Spectral truncations in noncommutative geometry and operator systems} (2020). \paperlink{https://arxiv.org/abs/2004.14115}{arXiv:2004.14115}.
+\bibitem{dolan} B. P. Dolan and R. J. Szabo, \emph{Dimensional reduction, monopoles and dynamical symmetry breaking}, JHEP 03 (2009), 059. \paperlink{https://arxiv.org/abs/0901.2491}{arXiv:0901.2491}.
+\bibitem{symcurve} X. Hu and A. Dauser, \emph{The symmetric power as a projective bundle over the Jacobian}, notes. \paperlink{https://people.math.ethz.ch/~rahul/Projective_bundle_over_Jacobian.pdf}{Full text}.
+\bibitem{almost} K. van den Dungen and W. D. van Suijlekom, \emph{Particle physics from almost-commutative spacetimes}, Rev. Math. Phys. 24 (2012), 1230004. \paperlink{https://arxiv.org/abs/1204.0328}{arXiv:1204.0328}.
+\bibitem{uct} J. Rosenberg and C. Schochet, \emph{The K\"unneth theorem and the universal coefficient theorem for Kasparov KK-theory}, Duke Math. J. 55 (1987), 431--474. \paperlink{https://doi.org/10.1215/S0012-7094-87-05524-4}{DOI}.
+\bibitem{zib} M. Zibrowius, \emph{Witt groups of complex cellular varieties}, Doc. Math. 16 (2011), 465--511. \paperlink{https://arxiv.org/abs/1011.3757}{arXiv:1011.3757}.
+\end{thebibliography}
+\end{document}
