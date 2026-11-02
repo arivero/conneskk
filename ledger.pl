@@ -202,6 +202,10 @@ checked_by(l07_reflection, astra6, by_hand).  % job 08
 claim_amended(l07_real, l08_ce_reality).
 claim_amended(l07_reflection, l08_product).
 
+checked_by(l09_index, terra_6_1, by_hand).  % referee, 3 Nov 2026
+checked_by(l09_lightpair, terra_6_1, by_hand).  % referee, 3 Nov 2026
+checked_by(l09_limits, terra_6_1, by_hand).  % referee, 3 Nov 2026
+
 hypothesis(ccm_relation, "Chamseddine-Connes-Marcolli normalization at the matching scale: 8 M_W^2 = sum of N_f m_f^2 over Dirac masses.").
 hypothesis(positive_rank, "The twisting bundle has positive rank, with the equivariant self-adjoint realization.").
 hypothesis(heat_kernel_spectral_action, "Heat-kernel cutoff spectral action with a vectorial gauge background commuting with the mass matrix.").

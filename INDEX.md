@@ -328,6 +328,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
   - [Gauge fields on the interval (scale lemma for T4)](lemmas/09_massive_chiral_interval.md#gauge-fields-on-the-interval-scale-lemma-for-t4)
   - [Remark: fermion mass as internal momentum](lemmas/09_massive_chiral_interval.md#remark-fermion-mass-as-internal-momentum)
   - [Numerical check (Claude)](lemmas/09_massive_chiral_interval.md#numerical-check-claude)
+  - [Referee report (gpt-6.1-terra, effort max, 3 Nov 2026)](lemmas/09_massive_chiral_interval.md#referee-report-gpt-61-terra-effort-max-3-nov-2026)
 - [10: Toeplitz compression of the twistor coordinates on CP^3](lemmas/10_toeplitz_twistor.md)
 - [11: Heavy W in the spectral-action family forces a heavy fermion](lemmas/11_spectral_action_heavy_w.md)
 - [12: Boundary Yukawa matrices on the interval: from chiral to vectorlike boundary conditions, and towerless textures](lemmas/12_boundary_yukawa_interval.md)
