@@ -34,7 +34,7 @@ What "towerless" can mean; the controlled six-to-five operator limit; Connes-Lot
 
 Change of KO-degree at a boundary, pseudoreality, odd factorizations (KO-5 times point, KO-7 times point), the interval and the J versus J-gamma choice.
 
-[paper §11.1](canonical_research.md#111-a-genuine-change-of-ko-degree) · [paper §8, Real structures cannot be inferred from pseudoreality](canonical_research.md#real-structures-cannot-be-inferred-from-pseudoreality) · [solidification §5](research_limits/solidification.md#5-a-canonical-seven-to-six-change-of-ko-degree) · [notes §2.2](connes_kk_research_state.md#22-metric-dimension-chirality-and-ko-dimension) · [notes §6.3](connes_kk_research_state.md#63-the-zero-mode-obstruction-and-the-higher-mode-obstruction) · [notes §6.4](connes_kk_research_state.md#64-continuing-the-obstruction-test-a-finite-repair-and-orientability) · [notes §6.5](connes_kk_research_state.md#65-an-orientable-real-bimodule-from-the-1oplus2oplus3-spaces) · [notes §6.6](connes_kk_research_state.md#66-orientation-loss-under-a-heavy-centralizer-and-spectral-projection) · [notes §6.7](connes_kk_research_state.md#67-which-orientation-information-is-lost) · [lemma 06](lemmas/06_vectorlike_odd_factorization.md) · [lemma 07](lemmas/07_interval_selects_ko.md) · [lemma RE](lemmas/README.md)
+[paper §11.1](canonical_research.md#111-a-genuine-change-of-ko-degree) · [paper §8, Real structures cannot be inferred from pseudoreality](canonical_research.md#real-structures-cannot-be-inferred-from-pseudoreality) · [solidification §5](research_limits/solidification.md#5-a-canonical-seven-to-six-change-of-ko-degree) · [notes §2.2](connes_kk_research_state.md#22-metric-dimension-chirality-and-ko-dimension) · [notes §6.3](connes_kk_research_state.md#63-the-zero-mode-obstruction-and-the-higher-mode-obstruction) · [notes §6.4](connes_kk_research_state.md#64-continuing-the-obstruction-test-a-finite-repair-and-orientability) · [notes §6.5](connes_kk_research_state.md#65-an-orientable-real-bimodule-from-the-1oplus2oplus3-spaces) · [notes §6.6](connes_kk_research_state.md#66-orientation-loss-under-a-heavy-centralizer-and-spectral-projection) · [notes §6.7](connes_kk_research_state.md#67-which-orientation-information-is-lost) · [lemma 06](lemmas/06_vectorlike_odd_factorization.md) · [lemma 07](lemmas/07_interval_selects_ko.md) · [lemma 08](lemmas/08_product_selects_ko.md) · [lemma RE](lemmas/README.md)
 
 ### 1.6 Chirality and index
 
@@ -106,7 +106,7 @@ Quantized internal momentum, bulk masses in quadrature, exponential hierarchies 
 
 Claim ledgers, the consolidated result, the theorem queue, lemma results and conjectures, contradictions.
 
-[notes §8](connes_kk_research_state.md#8-claim-ledger-status-dependencies-and-tests) · [paper §15](canonical_research.md#15-consolidated-result-and-the-next-test) · [strategy, Ranked list](STRATEGY.md#ranked-list) · [strategy, What would sink H](STRATEGY.md#what-would-sink-h) · [lemma RE](lemmas/README.md) · [DUPLICATES.md](DUPLICATES.md#5-contradictions-found-and-their-resolution)
+[notes §8](connes_kk_research_state.md#8-claim-ledger-status-dependencies-and-tests) · [paper §15](canonical_research.md#15-consolidated-result-and-the-next-test) · [strategy, Ranked list](STRATEGY.md#ranked-list) · [ledger.pl](ledger.pl) · [strategy, What would sink H](STRATEGY.md#what-would-sink-h) · [lemma RE](lemmas/README.md) · [DUPLICATES.md](DUPLICATES.md#5-contradictions-found-and-their-resolution)
 
 ## Part 2. Documents
 
@@ -317,6 +317,9 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
   - [Consequence for the 10 -> 9 claim](lemmas/06_vectorlike_odd_factorization.md#consequence-for-the-10---9-claim)
   - [Independent numerical check (Claude, 2 Nov 2026)](lemmas/06_vectorlike_odd_factorization.md#independent-numerical-check-claude-2-nov-2026)
 - [07: Does the chiral interval select 9 or 11?](lemmas/07_interval_selects_ko.md)
+  - [Amendments from job 08](lemmas/07_interval_selects_ko.md#amendments-from-job-08)
+- [08: Product real structures and the choice between 9 and 11](lemmas/08_product_selects_ko.md)
+  - [Independent numerical check (Claude, 3 Nov 2026)](lemmas/08_product_selects_ko.md#independent-numerical-check-claude-3-nov-2026)
 - [09: The chiral interval with a bulk mass: chirality, light pairs and both limits](lemmas/09_massive_chiral_interval.md)
   - [Setting](lemmas/09_massive_chiral_interval.md#setting)
   - [Chirality lives in the boundary conditions](lemmas/09_massive_chiral_interval.md#chirality-lives-in-the-boundary-conditions)

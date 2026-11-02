@@ -16,6 +16,8 @@
 %% strategy(T, Status, Text)           Status: settled | partial | open
 %% addresses(T, Id)                    strategy item T is addressed by claim Id
 %% contradiction(N, Where, Finding, Resolution, State)    State: resolved | open | compatible
+%% refuted_by(Claim, Counterexample)
+%% claim_amended(Claim, By): Claim stands, with an amendment proved in By
 
 :- discontiguous claim/5, source/3, depends/2, hypothesis/2, attempted_by/2, checked_by/3, overturn/2.
 :- use_module(library(lists)).
@@ -83,7 +85,7 @@ depends(l07_reflection, l07_real).
 depends(l07_reflection, l06_factorization).
 attempted_by(l07_reflection, claude_opus_5_5).
 checked_by(l07_reflection, claude_opus_5_5, by_hand).
-claim(conj07_4, conjecture, open, "Conjecture 07.4", "For F_0 x (collapsing chiral interval), U = 1 x sigma has UJ = sJU with s fixed by eps' and the product grading twist; 9 versus 11 is decided by whether J_M or J_M gamma_5 is physical charge conjugation.").
+claim(conj07_4, conjecture, refuted, "Conjecture 07.4 (false as stated)", "For F_0 x (collapsing chiral interval), U = 1 x sigma has UJ = sJU with s fixed by eps' and the product grading twist; 9 versus 11 is decided by whether J_M or J_M gamma_5 is physical charge conjugation.").
 source(conj07_4, 'lemmas/07_interval_selects_ko.md', '').
 depends(conj07_4, l07_reflection).
 depends(conj07_4, l06_factorization).
@@ -145,7 +147,60 @@ source(l12_mixing, 'lemmas/12_boundary_yukawa_interval.md', 'hierarchies-from-lo
 depends(l12_mixing, l12_graded).
 attempted_by(l12_mixing, claude_opus_5_5).
 checked_by(l12_mixing, claude_opus_5_5, python("500 anarchic samples")).
-attempted_by(conj07_4, astra6).  % job 07 cut off by the usage limit; job 08 queued
+attempted_by(conj07_4, astra6).  % job 07 cut off by the usage limit; job 08 answered it
+refuted_by(conj07_4, l08_both_signs).
+
+%% ---------------------------------------------------------------- lemma 08 (Astra job 08)
+claim(l08_ce_reality, counterexample, proved, "Counterexample 4", "Without pointwise reality, J_ref = sigma_1 R_l K has KO-6 signs on the chiral interval; the compressed two-point data with the diagonal algebra fail first order.").
+source(l08_ce_reality, 'lemmas/08_product_selects_ko.md', '').
+depends(l08_ce_reality, l07_real).
+attempted_by(l08_ce_reality, astra6).
+checked_by(l08_ce_reality, claude_opus_5_5, by_hand).
+claim(l08_product, theorem, proved, "Theorem 5", "In the internal-first KO-6 product F_0 x interval, the KO-6 conditions force a = 0 and t(-1)^b = -1; the bare reflection 1 x sigma has s = -1 (formally 9).").
+source(l08_product, 'lemmas/08_product_selects_ko.md', '').
+depends(l08_product, l07_reflection).
+depends(l08_product, l06_factorization).
+attempted_by(l08_product, astra6).
+checked_by(l08_product, claude_opus_5_5, python("numpy; scratch check job08_check")).
+claim(l08_lift, proposition, proved, "Proposition 6", "Twisting the reflection by Gamma_0 flips s but commutes with D_F only if D_0 = 0; equivalent product conventions preserve s.").
+source(l08_lift, 'lemmas/08_product_selects_ko.md', '').
+depends(l08_lift, l08_product).
+attempted_by(l08_lift, astra6).
+checked_by(l08_lift, claude_opus_5_5, python("numpy; scratch check job08_check")).
+claim(l08_reconcile, theorem, proved, "Theorem 7", "The scalar-algebra truncated product is exactly T_5(m) x P_1 with d_5 = D_0 + m Gamma_0 and j_5 = J_0 Gamma_0.").
+source(l08_reconcile, 'lemmas/08_product_selects_ko.md', '').
+depends(l08_reconcile, l08_product).
+depends(l08_reconcile, l06_factorization).
+attempted_by(l08_reconcile, astra6).
+checked_by(l08_reconcile, claude_opus_5_5, python("numpy; scratch check job08_check")).
+claim(l08_nogo, no_go, proved, "No-go theorem 8", "Literal collapse of the massless chiral interval in the product leaves no light sector: |D_F| >= pi/(2l).").
+source(l08_nogo, 'lemmas/08_product_selects_ko.md', '').
+depends(l08_nogo, l05_limits).
+attempted_by(l08_nogo, astra6).
+checked_by(l08_nogo, claude_opus_5_5, python("numpy; scratch check job08_check")).
+claim(l08_spacetime, proposition, proved, "Proposition 9", "Spacetime grading twists (J_M versus J_M gamma) do not select the finite involution; both reductions use the same J_M.").
+source(l08_spacetime, 'lemmas/08_product_selects_ko.md', '').
+depends(l08_spacetime, l06_factorization).
+attempted_by(l08_spacetime, astra6).
+checked_by(l08_spacetime, claude_opus_5_5, by_hand).
+claim(l08_chargeconj, proposition, proved, "Proposition 10", "Euclidean J_M is the charge conjugation in the CCM and van den Dungen-van Suijlekom conventions; Lorentzian C_L is neither J_M nor J_M gamma_5.").
+source(l08_chargeconj, 'lemmas/08_product_selects_ko.md', '').
+attempted_by(l08_chargeconj, astra6).
+checked_by(l08_chargeconj, claude_opus_5_5, by_hand).
+claim(l08_both_signs, counterexample, proved, "Counterexample 11", "A scalar-interval product with fixed D_F, J_F, Gamma_F, Q admits particle-preserving involutions U_- and U_+ = Q U_- of opposite signs.").
+source(l08_both_signs, 'lemmas/08_product_selects_ko.md', '').
+depends(l08_both_signs, l08_product).
+attempted_by(l08_both_signs, astra6).
+checked_by(l08_both_signs, claude_opus_5_5, python("numpy; scratch check job08_check")).
+claim(l08_pairing, theorem, proved, "Theorem 12", "If [Q, D] = 0 and QJ = -JQ, particle-preserving doubling involutions come in pairs of opposite sign; an unpaired nu_L obstructs particle-preserving doubling.").
+source(l08_pairing, 'lemmas/08_product_selects_ko.md', '').
+depends(l08_pairing, l08_both_signs).
+attempted_by(l08_pairing, astra6).
+checked_by(l08_pairing, claude_opus_5_5, by_hand).
+checked_by(l07_real, astra6, by_hand).  % job 08, under pointwise reality
+checked_by(l07_reflection, astra6, by_hand).  % job 08
+claim_amended(l07_real, l08_ce_reality).
+claim_amended(l07_reflection, l08_product).
 
 hypothesis(ccm_relation, "Chamseddine-Connes-Marcolli normalization at the matching scale: 8 M_W^2 = sum of N_f m_f^2 over Dirac masses.").
 hypothesis(positive_rank, "The twisting bundle has positive rank, with the equivariant self-adjoint realization.").
@@ -489,7 +544,8 @@ checked_by(paper_14_3_1, corpus, python("see research_checks_knowledge.md")).
 %% ---------------------------------------------------------------- STRATEGY.md
 strategy(t1, settled, "Deconstruction: Connes-Lott is the minimal truncation of the chiral interval.").
 strategy(t2, settled, "KO parity: grading-reversing involution U with UJ = sJU; s = -1 gives 9, s = +1 gives 11; J alone does not decide.").
-strategy(t2b, partial, "Geometric selection of the sign s by the interval.").
+strategy(t2b, settled, "Selection of s by the interval: the bare reflection gives 9 in the standard product; J_M and particle number do not select the sign.").
+strategy(t2c, open, "With a Majorana mass for nu_R, does a unique admissible sign of the reduction remain, and which?").
 strategy(t3, settled, "Chirality from boundary conditions; the boundary Yukawa interpolates (a)+(b) to (c)+(c) at constant index.").
 strategy(t4, open, "Gauge sector of the towerless interval versus Connes-Lott inner fluctuations.").
 strategy(t5, settled, "Heavy W forces a heavy Dirac fermion (conditional on the CCM relation).").
@@ -498,7 +554,8 @@ strategy(t7, open, "Towerless S^2, CP^2 to H, M_3(C) with the right real structu
 strategy(t8, partial, "Fermion masses as internal momenta: towerless Yukawa textures; mixing pattern numerical only.").
 addresses(t1, l05_truncation).  addresses(t1, l05_limits).
 addresses(t2, l06_factorization).  addresses(t2, l06_counterexample).  addresses(t2, l06_nuL).
-addresses(t2b, l07_reflection).  addresses(t2b, conj07_4).
+addresses(t2b, l07_reflection).  addresses(t2b, conj07_4).  addresses(t2b, l08_product).  addresses(t2b, l08_both_signs).  addresses(t2b, l08_pairing).
+addresses(t2c, l08_pairing).  addresses(t2c, l06_nuL).
 addresses(t3, l09_index).  addresses(t3, l09_lightpair).  addresses(t3, l09_limits).  addresses(t3, l12_index).  addresses(t3, l12_secular).
 addresses(t5, l11_bounds).  addresses(t5, l11_nogo).  addresses(t5, l11_top).
 addresses(t7, l02_invariant).
@@ -544,6 +601,9 @@ open_items(claim(C)) :- claim(C, _, S, _, _), memberchk(S, [open, conjectural]).
 open_items(strategy(T)) :- strategy(T, S, _), S \== settled.
 open_items(contradiction(N)) :- contradiction(N, _, _, _, open).
 
+%% refuted(-C, -By): claims shown false, with the counterexample.
+refuted(C, By) :- refuted_by(C, By).
+
 where(C) :- source(C, F, A), (A == '' -> format("~w~n", [F]) ; format("~w#~w~n", [F, A])).
 show(C) :- claim(C, K, S, L, T), format("~w  [~w, ~w: ~w]~n  ~w~n", [C, K, S, L, T]), where(C).
 
@@ -553,6 +613,8 @@ test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(
 test(sources_exist) :- forall(source(_, F, _), exists_file(F)).
 test(dependencies_resolve) :- forall(depends(_, D), (D = hyp(H) -> hypothesis(H, _) ; claim(D, _, _, _, _))).
 test(no_circular_dependency) :- \+ rests_on(C, C).
+test(refutations_resolve) :- forall(refuted_by(C, B), (claim(C, _, refuted, _, _), claim(B, counterexample, _, _, _))).
+test(amendments_resolve) :- forall(claim_amended(C, B), (claim(C, _, _, _, _), claim(B, _, _, _, _))).
 test(addresses_resolve) :- forall(addresses(T, C), (strategy(T, _, _), claim(C, _, _, _, _))).
 :- end_tests(ledger).
 
