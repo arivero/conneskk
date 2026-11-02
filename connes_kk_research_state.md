@@ -205,7 +205,7 @@ Canonical normalization gives \(g_2^{-2}=\mathcal N A\) and \(g_Y^{-2}=\mathcal 
  \cos^2\theta_W=\frac{3\xi^2}{4\xi^2+2}.}
 \]
 
-**Proved for this ansatz and embedding; independently checked by numerical quadrature.** For example, \(\xi^2=1\) gives \(1/2\), and \(\xi^2=5/2\) gives \(5/8\). These are two metrics on the same \(L(5,1)\). Thus the quotient and the lattice by themselves do not determine the angle. The relationship between squashing and a weak-angle ratio has earlier precedents, including [Hu and Shen (1986)](https://digitalcommons.usu.edu/physics_facpub/1912/); the normalization and formula above are derived here.
+**Proved** for this ansatz and embedding. A numerical quadrature check is reported; its language was not recorded. For example, \(\xi^2=1\) gives \(1/2\), and \(\xi^2=5/2\) gives \(5/8\). These are two metrics on the same \(L(5,1)\). Thus the quotient and the lattice by themselves do not determine the angle. The relationship between squashing and a weak-angle ratio has earlier precedents, including [Hu and Shen (1986)](https://digitalcommons.usu.edu/physics_facpub/1912/); the normalization and formula above are derived here.
 
 In the actual effective torus lattice for \(q=1\), a primitive basis is \(e_1=(1,0)=Q\) and \(c=(1/p,1/p)\). Since \(Y=(p/2)c\), the neutral kinetic matrix in that integral basis is
 

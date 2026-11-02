@@ -4,7 +4,7 @@ The deep index of developments is [INDEX.md](INDEX.md).
 
 ## Reading order
 
-1. `canonical_research.md`: the consolidated paper *Nine, Ten and Eleven Dimensions* (2 Nov 2026). Claims are labelled Proved / Checked calculation / Conditional / Conjectural.
+1. `canonical_research.md`: the consolidated paper *Nine, Ten and Eleven Dimensions* (2 Nov 2026). Claims are labelled Proved, Conditional or Conjectural; numerical checks name their language (Python) and the section of `research_checks_knowledge.md` that records them.
 2. `research_limits/`: its derivation appendices (`research_note.md`, `solidification.md`, `nine_dimensional_construction.md`).
 3. `research_checks_knowledge.md`: the finite checks behind the paper (constructions, formulas, recorded outputs).
 4. `connes_kk_research_state.md`: the parallel line on lens lattices, the Fermi scale and KK theory (state-of-research notes; the LaTeX paper condensing them was merged into them).

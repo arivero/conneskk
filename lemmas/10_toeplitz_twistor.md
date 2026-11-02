@@ -1,6 +1,6 @@
 # Toeplitz compression of the twistor coordinates on CP^3
 
-This answers Part A of parked job 04 (research_note 4 and canonical 4, which label the result "Checked calculation", although no script computes it). Proved by Claude Opus 5.5 without Astra or Fable; Monte Carlo check with 2 x 10^6 samples.
+This answers Part A of parked job 04 (research_note 4 and canonical 4, which labelled the result "Checked calculation", although no script computes it). Proved by Claude Opus 5.5 without Astra or Fable; Monte Carlo check with 2 x 10^6 samples.
 
 Let Gamma_1, ..., Gamma_5 be Hermitian generators of Cl(5) on C^4, so that Gamma_a Gamma_b + Gamma_b Gamma_a = 2 delta_ab. For [w] in CP^3 put x_a([w]) = w* Gamma_a w / w* w, and define the level-one Berezin-Toeplitz compression
 

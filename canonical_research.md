@@ -19,7 +19,7 @@ No single construction yet derives the full real Standard Model triple, its chir
 
 This is the single canonical research narrative. Earlier working notes remain derivation appendices. The mobile PDF and this Markdown have the same research content. The dimensions in the title do not designate an experimentally established compactification.
 
-**Proved** means an argument is supplied or an identified theorem applies with stated hypotheses; it is not a claim of priority. **Checked calculation** means an explicit finite, spectral or characteristic-class calculation, with the scope of numerical checks specified. **Conditional** identifies additional geometric, analytic or representation assumptions. **Conjectural** identifies a missing physical derivation.
+**Proved** means a proof is given here or in the cited appendix, or a cited theorem applies with the stated hypotheses; it claims no priority. **Conditional** means proved under the additional geometric, analytic or representation hypotheses stated. **Conjectural** marks a missing derivation. A numerical or exact-arithmetic check names its language (Python, with numpy or exact fractions) and the section of research_checks_knowledge.md that records it.
 
 The paper begins with limit operations and the finite algebra chain, develops the seven-dimensional geometry and its decisive monopole calculation, and finishes with boundary mechanisms, the nine-dimensional electron models and the two electroweak limits. A subscript “triv” denotes a trivial bundle. The bibliography uses numbered references; the reproduction section distinguishes finite checks from continuum proofs.
 
@@ -69,7 +69,7 @@ $$
 
 For noncompact factors use a trace density. A $q$-dimensional internal window requires a controlled range in which the trace behaves as $Cs^{-q/2}$. An unbounded number of modes is necessary for that window to extend to arbitrarily high energy. Making finitely many particles light does not create a continuum dimension.
 
-**Checked example.** A doubled matrix approximation to a two-sphere, with matrix size $N$ and $x=s/R^2$, has the exact heat trace
+**Example** (proved: the spectrum is derived in `research_limits/research_note.md` §2; checked numerically in Python, research_checks_knowledge.md §1.1-1.2). A doubled matrix approximation to a two-sphere, with matrix size $N$ and $x=s/R^2$, has the exact heat trace
 
 $$
 K_N(x)=4+8\sum_{k=1}^{N-1}k e^{-xk^2}
@@ -163,7 +163,7 @@ T_R=|\xi_0\rangle\langle J\xi_0|
 +|J\xi_0\rangle\langle\xi_0|.
 $$
 
-**Proved; checked by matrices.** Its algebra commutant requires
+**Proved; checked numerically in Python** (research_checks_knowledge.md §2). Its algebra commutant requires
 
 $$
 a=\operatorname{diag}(\lambda,\bar\lambda,q),
@@ -211,7 +211,7 @@ $$
 
 Chamseddine and Connes pointed to it in discussing the quaternionic/complex parent pair [8]. At holomorphic level one, $H^0(\mathbb{CP}^3,\mathcal O(1))$ has complex dimension four. Normalized coherent quantization sends five twistor-base coordinates to $Q(x_a)=\Gamma_a/5$, for five Clifford matrices commuting with a quaternionic antiunitary $j$, $j^2=-1$.
 
-**Checked calculation.** Compressed real base functions generate $M_2(\mathbb H)$; real functions on the total projective space generate $M_4(\mathbb C)$. Thus one obtains
+**Proved** in `research_limits/research_note.md` §4; checked numerically in Python (research_checks_knowledge.md §1.5). Compressed real base functions generate $M_2(\mathbb H)$; real functions on the total projective space generate $M_4(\mathbb C)$. Thus one obtains
 
 $$
 M_2(\mathbb H)\subset M_4(\mathbb C).
@@ -295,9 +295,12 @@ Write $X_a=\mathbb{CP}^2\times\mathbb{CP}^1$ and $X_b=F=P(Q)$. Let $x=c_1(m^*)$ 
 |---|---|---|---|
 | Integral ring | $\mathbb Z[h,y]/(h^3,y^2)$ | $\mathbb Z[h,x]/(h^3,x^2+hx+h^2)$ | Proved |
 | Betti numbers in degrees 0,2,4,6 | 1,2,2,1 | 1,2,2,1 | Proved |
-| $c_1$ for the indicated complex structure | $3h+2y$ | $4h+2x$ | Checked calculation |
+| $c_1$ for the indicated complex structure | $3h+2y$ | $4h+2x$ | Proved (below) |
 | $w_2$ | h mod 2 | 0 | Proved |
-| $p_1$ | $3h^2$ | 0 | Checked calculation |
+| $p_1$ | $3h^2$ | 0 | Proved (below) |
+
+*Proof of the $c_1$ and $p_1$ rows.* For $X_a$, $c_1=3h+2y$ and $p_1=p_1(\mathbb{CP}^2)=3h^2$. For $X_b$, the relation $x^2+hx+h^2=0$ gives $c_1(Q)=h$, $c_2(Q)=h^2$ (so $Q\cong T\mathbb{CP}^2\otimes\mathcal O(-1)$), and $TF=\pi^*T\mathbb{CP}^2\oplus\operatorname{Hom}(m,\pi^*Q/m)$ gives $c_1=3h+(h+2x)=4h+2x$. Since $F=SU(3)/T$, the bundle $TF\oplus(F\times\mathfrak t)\cong F\times\mathfrak{su}(3)$ is trivial, so $p_1(F)=0$.
+
 
 The flag has no nonzero square-zero degree-two integral class: $(ah+bx)^2=0$ requires $a^2-b^2=2ab-b^2=0$, hence $a=b=0$. The product has $y^2=0$. They are not diffeomorphic and their commutative C-star algebras are not strongly Morita equivalent.
 
@@ -362,7 +365,7 @@ $$
 F(X,Y)=-\operatorname{pr}_{\mathfrak{su}(2)}[X,Y].
 $$
 
-The brackets of the four off-diagonal horizontal $\mathfrak{su}(3)$ directions span all $\mathfrak{su}(2)$. This is independently checked (research_checks_knowledge.md, section 4.1). Ambrose-Singer therefore gives full $SU(2)$ holonomy. The kernel bundles and connections are:
+The brackets of the four off-diagonal horizontal $\mathfrak{su}(3)$ directions span all $\mathfrak{su}(2)$. This is checked numerically in Python (research_checks_knowledge.md, section 4.1). Ambrose-Singer therefore gives full $SU(2)$ holonomy. The kernel bundles and connections are:
 
 | Flux | Kernel bundle | Topology/reality | Natural parallel complex endomorphisms |
 |---:|---|---|---|
@@ -387,7 +390,7 @@ With multiplicities $r_n$ of each irreducible kernel, the complex parallel algeb
 
 For one positive flux sector, real scalar functions compress to Hermitian matrices. At $n=2$ their generated algebra is $M_2(\mathbb C)$; the Pauli matrices do not commute with the pseudoreality operator j. The real quaternion algebra is generated by i times those Pauli matrices, or selected by an additional symplectic-real condition. It is not the unqualified real scalar Toeplitz algebra.
 
-Charge conjugation reverses flux and chirality. On W plus its conjugate, merely choosing a conjugate exchange with $J^2=+1$ or $-1$ changes the real commutant. The finite check gives unitary commutant Lie dimension three for the first choice and one for the second. The actual vertical KO-two charge conjugation has $J^2=-1$. Moreover the opposite action of a real spectral triple is not the same thing as demanding that its left algebra commute with J. **Checked calculation:** this prevents a pseudoreal dimension-two representation from being accepted as a derived H summand or a complete KO-six triple.
+Charge conjugation reverses flux and chirality. On W plus its conjugate, merely choosing a conjugate exchange with $J^2=+1$ or $-1$ changes the real commutant. The finite check gives unitary commutant Lie dimension three for the first choice and one for the second. The actual vertical KO-two charge conjugation has $J^2=-1$. Moreover the opposite action of a real spectral triple is not the same thing as demanding that its left algebra commute with J. **Proved** (the sign is also checked numerically in Python, research_checks_knowledge.md §4.3): this prevents a pseudoreal dimension-two representation from being accepted as a derived H summand or a complete KO-six triple.
 
 # 9. Constructing a surviving spinor bundle
 
@@ -443,9 +446,9 @@ $$
 =\operatorname{diag}(e^{2\pi i\eta^2},e^{-2\pi i\eta^2},1).}
 $$
 
-**Conditional geometric calculation; checked phase arithmetic:** for the specified connection and spin lifts, all three coefficient lines retain a circle zero mode exactly when $\eta^2$ is an integer. For example $\eta^2=2$ is nonround, has $U(3)$ isometry on the smooth $S^5$ branch, and has a rank-three circle kernel. At $\eta^2=1/2$ only the third parent coefficient line survives the circle collapse. The determinant character shifts integer Lie weights by three but contributes no holonomy phase. This $\eta$ is the five-sphere metric parameter; it is independent of the lens-space $\xi$ used below.
+**Conditional** on the analytic connection and spin-lift formulas (the phase arithmetic is checked in Python, research_checks_knowledge.md §4.7): for the specified connection and spin lifts, all three coefficient lines retain a circle zero mode exactly when $\eta^2$ is an integer. For example $\eta^2=2$ is nonround, has $U(3)$ isometry on the smooth $S^5$ branch, and has a rank-three circle kernel. At $\eta^2=1/2$ only the third parent coefficient line survives the circle collapse. The determinant character shifts integer Lie weights by three but contributes no holonomy phase. This $\eta$ is the five-sphere metric parameter; it is independent of the lens-space $\xi$ used below.
 
-The relevant $U(3)$ stabilizer on N is $U(1)^2$. With the chosen character shifts its three coefficient characters are distinct, so the invariant correction along R is diagonal. The target Berry connection fixes that component; no extra invariant mixing can alter this check. Homogeneity makes the holonomy conjugacy class constant over F, and a fixed trivial-holonomy kernel has a uniform gap to other circle modes. The recorded check (research_checks_knowledge.md, section 4.7) covers the resulting finite-matrix phase arithmetic; it assumes the analytic connection and spin-endpoint formulas rather than deriving them independently. The integer condition is not universal for other equivariant backgrounds. This supplies an engineered example passing both the $S^2$ fibre-kernel test and the first circle Wilson-line test. It supplies no dynamical selection of $\eta^2$, and no calculation yet shows that the second, fixed-point circle quotient preserves the desired fermion content.
+The relevant $U(3)$ stabilizer on N is $U(1)^2$. With the chosen character shifts its three coefficient characters are distinct, so the invariant correction along R is diagonal. The target Berry connection fixes that component; no extra invariant mixing can alter this check. Homogeneity makes the holonomy conjugacy class constant over F, and a fixed trivial-holonomy kernel has a uniform gap to other circle modes. A Python check (research_checks_knowledge.md, section 4.7) covers the resulting finite-matrix phase arithmetic; it assumes the analytic connection and spin-endpoint formulas rather than deriving them independently. The integer condition is not universal for other equivariant backgrounds. This supplies an engineered example passing both the $S^2$ fibre-kernel test and the first circle Wilson-line test. It supplies no dynamical selection of $\eta^2$, and no calculation yet shows that the second, fixed-point circle quotient preserves the desired fermion content.
 
 ## The analytic limit and its scope
 
@@ -484,7 +487,7 @@ $$
 
 For an untwisted real group algebra, $S_3$ has real-type irreducibles of dimensions 1,1,2. The resulting real blocks do not include H. Matrix blocks of size three can nevertheless occur through a three-point orbit, rather than a three-dimensional $S_3$ irrep.
 
-## A checked real-algebra improvement
+## A real-algebra improvement
 
 Use the periodic torus spin structure and the actual linear action on its tangent $\mathbb R^6$. A transposition rotates one real two-plane by $\pi$; its spin lift S has $S^2=z=-1$. A three-cycle has a lift R with $R^3=1$ and $SRS^{-1}=R^{-1}$. Their preimage is the binary dihedral group Dic(3). In its spin sector,
 
@@ -494,7 +497,7 @@ $$
 \qquad e_-=(1-z)/2.
 $$
 
-The Frobenius-Schur indicators are zero for the conjugate one-dimensional characters and minus one for the doublet. Explicit six-dimensional Clifford matrices verify the representation and its faithfulness on a chiral spinor module. **Checked calculation.**
+The Frobenius-Schur indicators are zero for the conjugate one-dimensional characters and minus one for the doublet. Explicit six-dimensional Clifford matrices verify the representation and its faithfulness on a chiral spinor module. **Numerical check in Python** (research_checks_knowledge.md §4.4-4.5).
 
 The extra E inversion has a commuting lift T with $T^2=z$. At full fixed isotropy the real algebra becomes
 
@@ -518,9 +521,9 @@ $$
 A_F=\mathbb C\oplus\mathbb H\oplus M_3(\mathbb C)
 $$
 
-is a corner of a finite-orbit quotient of the spin-twisted real crossed product. **Proved algebraic statement, checked by matrices.** It is not a result about the original untwisted complex crossed product. The corner has not been lifted to a global projection or obtained as a Dirac spectral band; choosing the two orbits and these projections remains input.
+is a corner of a finite-orbit quotient of the spin-twisted real crossed product. **Proved** algebraic statement; checked numerically in Python (research_checks_knowledge.md §4.4). It is not a result about the original untwisted complex crossed product. The corner has not been lifted to a global projection or obtained as a Dirac spectral band; choosing the two orbits and these projections remains input.
 
-There is an explicit real-triple obstruction: geometric $J_6$ commutes with spin lifts, so the proposed opposite of $U_h$ is $U_h^{-1}$. For noncommuting group elements, $[U_g,U_h^{-1}]$ is nonzero. The recorded check (research_checks_knowledge.md, section 4.4) confirms this order-zero failure. A regular left/right crossed-product bimodule may repair it, but changes multiplicities and requires new Clifford, corner and grading checks. Neither the SM bimodule nor hypercharges have been derived by the finite-algebra identification.
+There is an explicit real-triple obstruction: geometric $J_6$ commutes with spin lifts, so the proposed opposite of $U_h$ is $U_h^{-1}$. For noncommuting group elements, $[U_g,U_h^{-1}]$ is nonzero. A Python check (research_checks_knowledge.md, section 4.4) confirms this order-zero failure. A regular left/right crossed-product bimodule may repair it, but changes multiplicities and requires new Clifford, corner and grading checks. Neither the SM bimodule nor hypercharges have been derived by the finite-algebra identification.
 
 This makes the torus route more specific than an untwisted group-algebra analogy. It supplies real algebra types after explicit selections; the smooth product monopole route supplies simpler flat kernel bundles. Neither currently dominates the other as a complete spectral-triple derivation.
 
@@ -630,7 +633,7 @@ The spacetime product therefore changes from spectral dimension ten to nine in t
 
 ## 12.2 Compensation preserves defect information
 
-The four $\mathcal O(3)$-twisted zero modes split into two circle-weight pairs. A trivial coefficient doublet with characters $-1,+1$ compensates them and retains four invariant modes. Invariant matrix-valued symbols recover the compressed pair $M_2(\mathbb H)\subset M_4(\mathbb C)$. This is a checked construction with the coefficient doublet supplied as input.
+The four $\mathcal O(3)$-twisted zero modes split into two circle-weight pairs. A trivial coefficient doublet with characters $-1,+1$ compensates them and retains four invariant modes. Invariant matrix-valued symbols recover the compressed pair $M_2(\mathbb H)\subset M_4(\mathbb C)$. The construction is checked numerically in Python (research_checks_knowledge.md §3.1-3.3), with the coefficient doublet supplied as input.
 
 It does not descend to an ordinary untwisted bundle on smooth $S^5$. A line bundle on $S^5$ has zero degree-two class, while $\mathcal O(3)$ does not. Fixed-stratum isotropy weights survive and must enter the invariant domain. The proposed antiunitary also fails to give a commuting opposite action for the full matrix algebra on the small module.
 
@@ -762,7 +765,7 @@ $$
 \cos^2\theta_W=\frac{3\xi^2}{4\xi^2+2}.
 $$
 
-The lens order $p$ cancels in the common volume factor. The value $5/8$ requires $\xi^2=5/2$; the unsourced Einstein condition selects the round $\xi=1$, giving $1/2$. Topology can constrain a charge lattice, but it does not force this kinetic ratio. The proposal that $p=5$ determines $5/8$ fails this test. **Checked calculation.**
+The lens order $p$ cancels in the common volume factor. The value $5/8$ requires $\xi^2=5/2$; the unsourced Einstein condition selects the round $\xi=1$, giving $1/2$. Topology can constrain a charge lattice, but it does not force this kinetic ratio. The proposal that $p=5$ determines $5/8$ fails this test. **Proved** for the Einstein-Hilbert Kaluza-Klein ansatz and the stated embedding: the derivation is in [connes_kk_research_state.md §3.2](connes_kk_research_state.md#32-one-precise-berger-calculation), where $p=5\to5/8$ appears only as a resonance conditional on an added postulate (§4.2); the value $5/8$ at $\xi^2=5/2$ is checked in exact rational arithmetic in Python (research_checks_knowledge.md §4.8).
 
 The finite Standard Model trace instead gives, per generation and with $Q=T_3+Y$,
 
@@ -802,7 +805,7 @@ Here the corresponding discipline is to state the parameter, surviving observabl
 
 # Reproduction and provenance
 
-The finite checks and their recorded outputs are in [research_checks_knowledge.md](research_checks_knowledge.md): the initial finite triple, heat windows and twistor data (section 1); centralizers, gauge dimensions, first-order failure, unimodularity, index and anomaly arithmetic (section 2); compensation and scalar counts (section 3; the electromagnetic normalizations were never computed, see section 6, item 1); curvature, parallel commutants, real-structure sensitivity, spin-lift algebra dimensions, the order-zero obstruction, Chern arithmetic and gauge traces (section 4).
+The finite checks were run in Python (numpy; exact fractions where stated), and they and their recorded outputs are in [research_checks_knowledge.md](research_checks_knowledge.md): the initial finite triple, heat windows and twistor data (section 1); centralizers, gauge dimensions, first-order failure, unimodularity, index and anomaly arithmetic (section 2); compensation and scalar counts (section 3; the electromagnetic normalizations were never computed, see section 6, item 1); curvature, parallel commutants, real-structure sensitivity, spin-lift algebra dimensions, the order-zero obstruction, Chern arithmetic and gauge traces (section 4).
 
 These are finite checks of specified constructions, not PDE solvers or numerical evidence for a Standard Model vacuum. The Wilson-line check covers phase arithmetic after supplying analytic connection and lift formulas. The dual-spinor zero-mode result is Hodge theoretic. The heat plot illustrates a mechanism, not fitted particle physics.
 

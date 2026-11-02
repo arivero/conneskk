@@ -35,7 +35,7 @@ The zip_A copies of all four check scripts and JSON files are identical to zip_B
 
 ## 1. `checks.py` → `verification.json`
 
-Supports `research_note.md` §§2–7 and `canonical_research.md` §2.1 (checked example), §3 (hypercharges), §4
+Supports `research_note.md` §§2–7 and `canonical_research.md` §2.1 (example), §3 (hypercharges), §4
 (twistor), §14.2 (lepton anomalies). Produces `dimension_window.png` and `dimension_staircase.png`.
 
 ### 1.1 Real fuzzy-sphere family (`fuzzy(N, shift)`)

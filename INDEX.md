@@ -133,7 +133,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
   - [A concrete Wilson-line compatibility test](canonical_research.md#a-concrete-wilson-line-compatibility-test)
   - [The analytic limit and its scope](canonical_research.md#the-analytic-limit-and-its-scope)
 - [10. Torus/Weyl quotients and what the spin lift changes](canonical_research.md#10-torusweyl-quotients-and-what-the-spin-lift-changes)
-  - [A checked real-algebra improvement](canonical_research.md#a-checked-real-algebra-improvement)
+  - [A real-algebra improvement](canonical_research.md#a-real-algebra-improvement)
 - [11. Boundaries, defects and the M-theory connection](canonical_research.md#11-boundaries-defects-and-the-m-theory-connection)
   - [11.1 A genuine change of KO-degree](canonical_research.md#111-a-genuine-change-of-ko-degree)
   - [11.2 What an eleven-dimensional bulk can supply](canonical_research.md#112-what-an-eleven-dimensional-bulk-can-supply)

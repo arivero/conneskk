@@ -71,7 +71,7 @@ For alpha<1/2 the surviving mass operator is A; for alpha=1/2 it is A-BC^{-1}B*.
 
 Writing F_t=tT+t^alpha V+S, bounded commutators for fixed a require both [T,a]=0 and [V,a]=0. Retaining a finite seesaw mass by scaling a Dirac coupling like the square root of the heavy Majorana mass can therefore shrink the retained algebra further. It is not automatically the same algebraic limit as a bounded Dirac coupling.
 
-The recorded check (research_checks_knowledge.md, section 2.6) confirms the exact two-by-two light eigenvalue
+A Python check (research_checks_knowledge.md, section 2.6) confirms the exact two-by-two light eigenvalue
 
 \[
 \lambda_-(t)=-\frac{2t^{2\alpha}}{t+\sqrt{t^2+4t^{2\alpha}}},

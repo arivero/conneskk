@@ -148,7 +148,7 @@ For quaternionic-Hermitian A, the original scalar symbol f_A is pulled back from
 M_2(\mathbb H)\subset M_4(\mathbb C)
 \]
 
-on the compensated invariant kernel. The recorded check (research_checks_knowledge.md, sections 3.1-3.3) verifies the invariant dimension, quaternionic signs, symbol covariance, and compression, with errors below 2e-15.
+on the compensated invariant kernel. A Python check (research_checks_knowledge.md, sections 3.1-3.3) verifies the invariant dimension, quaternionic signs, symbol covariance, and compression, with errors below 2e-15.
 
 There are three limits to this conclusion. First, Toeplitz compression is not multiplicative before taking the generated finite operator algebra. Second, the nested pair does not yet provide two independent central summands. Third, j_W is not the commuting opposite action of a real triple over the full matrix algebra. For example, a single left action of M2 on C2 fails order zero under the proposed coefficient conjugation. A Hilbert–Schmidt or correspondence bimodule must be constructed and its changed mode count checked. We therefore have a compensated spectral sector and compressed matrix correspondence, not a completed nine-dimensional real Standard Model triple.
 
