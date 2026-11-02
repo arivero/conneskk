@@ -53,7 +53,8 @@ The identification "the two sheets are a truncated interval, with length proport
 | rank | id | theorem to settle | decides | size |
 |---|---|---|---|---|
 | 1 | T1 | **Deconstruction.** Settled by job 05 (Theorem above): Connes-Lott is the minimal truncation of the chiral interval, l = pi/(2 abs(m)). | towerless = KK (P4); both limits of H | done |
-| 2 | T2 | **KO parity.** An even real finite triple is unitarily (A, J)-equivalent to odd (x) Clifford point iff it is vectorlike. Apply this to the heavy limit of F_SM: do nu_L or the Majorana block obstruct it? | 10 -> 9 inside NCG | small |
+| 2 | T2 | **KO parity.** Settled by job 06: the criterion is a grading-reversing involution U with UJ = sJU, and s = -1 gives 9 while s = +1 gives 11. J alone does not choose: electrodynamics admits both. The strict heavy limit with an unpaired nu_L gives only 11. No doubling exists while H stays in the algebra. | 10 -> 9 inside NCG | done |
+| 2b | T2b | **Selection of s by the interval.** As the interval of job 05 collapses, its reflection x -> l - x becomes a canonical U. Its sign against the interval's real structure may fix 9 versus 11 (job 07). | 9 versus 11 | small |
 | 3 | T3 | **Chiral endpoint as a boundary, with light fermions.** Add a bulk Dirac mass M to the chiral interval of job 05: near-zero modes localized at the two walls, with masses well below pi/(2l). An equivariant Callias / domain-wall index reproduces I_G = [V_L] - [V_R] as a boundary class. Decide whether the light modes survive both limits l -> 0 and l -> infinity at fixed physical masses. | 10 -> 11 and the fermions of 10 -> 9 | medium |
 | 4 | T4 | **Gauge sector of the towerless interval.** Truncate a Higgsless interval gauge field to N = 2 and compare with Connes-Lott inner fluctuations: M_W ~ 1/l, rho = 1? | ties M_W to l | medium |
 | 5 | T5 | **Heavy-W scaling.** In the spectral-action family, M_W -> infinity iff the largest Yukawa -> infinity, with the light algebra the centralizer. Combine with job 03 (kinetic weights f(m^2/Lambda^2)). | 10 -> 9 normalization | small |
@@ -65,5 +66,5 @@ The identification "the two sheets are a truncated interval, with length proport
 ## What would sink H
 
 - **T1:** settled in favour of H (job 05). Its no-go part says the bare interval loses all fermions in the collapse; T3 must supply them.
-- **T2:** the heavy-limit light triple admits no odd factorization compatible with J. Then 10 -> 9 needs an explicit treatment of the neutral sector before it holds in NCG terms.
+- **T2:** answered by job 06. Factorizations exist, but J does not select 9 over 11, and an unpaired nu_L forces 11. The 10 -> 9 claim therefore needs either a geometric selection of s (T2b) or a neutral sector with nu_R and Dirac masses together with that selection.
 - **T3:** I_G is not the boundary index of any odd bulk with the required equivariance. Then the 10 -> 11 emergence needs a different mechanism than walls.
