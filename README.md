@@ -9,6 +9,7 @@
 5. `ascii/`: readable text of the PDF printouts (ChatGPT transcript "Connes Electrodynamics Model" and the Astra / Sol / Terra next-step reviews). `ascii/utf8/` keeps the math symbols.
 6. `lemmas/`: short proofs obtained from Astra 6 (`gpt-6-astra` via codex, run one at a time), with their prompts in `lemmas/prompts/`.
 7. `DUPLICATES.md`: which files and sections duplicate each other, and what was removed.
+8. `STRATEGY.md`: which theorems to prove first (11/10/9 limits, towerless KK), and why.
 
 ## Not in git
 
