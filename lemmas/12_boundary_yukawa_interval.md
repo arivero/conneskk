@@ -108,7 +108,7 @@ by dividing the bounds of Lemma 12.8 for p and p - 1. Indexing generations by k 
 
     m_k / m_{k+1} ~ e^{-(c_k^Q - c_{k+1}^Q) - (c_k^U - c_{k+1}^U)}   up to factors of order one. ∎
 
-**Remark 12.10 (mixing; numerical, not proved here).** For an up sector and a down sector sharing Phi_Q, we drew 500 anarchic complex samples with c^Q = (3, 2, 0.5). The medians of abs(V_ij)/(phi(c_i^Q)/phi(c_j^Q)) were 1.02, 0.92 and 1.09 for (ij) = (12), (23) and (13). So the left mixing follows the doublet localization alone, abs(V_ij) ~ phi(c_i^Q)/phi(c_j^Q), as in the split-fermion and warped-flavor literature (Huber-Shafi 2001; Agashe-Perez-Soni 2005; Casagrande et al. 2008). We have not proved a bound with explicit constants.
+**Remark 12.10 (mixing; numerical, not proved here).** For an up sector and a down sector sharing Phi_Q, we drew 500 anarchic complex samples with c^Q = (3, 2, 0.5). The medians of abs(V_ij)/(phi(c_i^Q)/phi(c_j^Q)) were 1.02, 0.92 and 1.09 for (ij) = (12), (23) and (13). So the left mixing follows the doublet localization alone, abs(V_ij) ~ phi(c_i^Q)/phi(c_j^Q), as in the split-fermion and warped-flavor literature (Huber-Shafi 2001; Agashe-Perez-Soni 2005; Casagrande et al. 2008). An upper bound with explicit constants, |V_ij| <= 3 K_u K_d f_i/f_j for i < j, is proved in the referee report appended below, which also notes that there is no universal lower bound.
 
 ## Consequences for STRATEGY
 
