@@ -1,6 +1,6 @@
 # The separate role of the top: removal identities and counting
 
-Prompted by the observation that the top has a separate role, which matters more than the loss of an electroweak partner for b_L. Proposition 21.1 and the counts below are exact calculations by Claude Opus 5.5, in Python with exact fractions. The readings in the last section are proposals, and nothing there is derived. Referee pending.
+Prompted by the observation that the top has a separate role, which matters more than the loss of an electroweak partner for b_L. Proposition 21.1 and the counts below are exact calculations by Claude Opus 5.5, in Python with exact fractions. The readings in the last section are proposals, and nothing there is derived. Refereed by Terra 6.1 (effort max, 3 Nov 2026; [report](../reviews/2026-11-03_terra_check_20_21.md)): one error, in Proposition 21.2, and several amendments, incorporated below.
 
 **Outcome.** The spectral action detects the top: in the exact quadratic action of [lemma 18](18_heavy_limit_near_cutoff.md), among single charged species only an up-type quark can be removed while keeping both the neutral-current value cos^2 theta_NC = 5/8 and the ratio 8/3 of the photon and gluon coefficients. Removing it leaves 84 of the 96 states of the finite Hilbert space. Those 84 are the seed of an SO(30), inside SO(32), whose adjoint contains the charged scalar counts of three generations, and 84 is also the number of on-shell components of the three-form of eleven-dimensional supergravity.
 
@@ -30,11 +30,11 @@ So among single charged species only an up-type quark preserves both values. For
 
 *Proof.* Arithmetic with the Standard Model charges, Y = Q - T_3. The last statement is direct addition. ∎
 
-The scope is that of lemma 18: classical bosonic trace, with these definitions of the coefficients and of the angle. Other definitions of the weak angle do not stay at 5/8 (Proposition 6 there).
+The scope is that of lemma 18: classical bosonic trace, with these definitions of the coefficients and of the angle, three generations, and the other species with the mass assignments of that calculation. Other definitions of the weak angle do not stay at 5/8 (Proposition 6 there). At the endpoint where the neutral mass vanishes, the massive neutral direction is no longer distinguished, so its angle is read as the limit from finite mass, as lemma 18 states.
 
 ## The state count in the action
 
-**Proposition 21.2.** With three generations and nu_R, dim H_F = 96 (Chamseddine-Connes-Marcolli). With only an up-type Dirac mass m and no Majorana mass, the constant-background density of lemma 18 has finite trace Tr exp(-V_0^2/Lambda^2) = 84 + 12 e^{-x} for the heat cutoff. So the coefficient of the vacuum density moves from 96 to 84 along the radial direction, with no finite stationary point (No-go theorem 9 and Proposition 11 of lemma 18, whose escapes apply).
+**Proposition 21.2.** With three generations and nu_R, dim H_F = 96 (Chamseddine-Connes-Marcolli). With only an up-type Dirac mass m and no Majorana mass, the constant-background density of lemma 18 has finite trace Tr exp(-V_0^2/Lambda^2) = 84 + 12 e^{-x} for the heat cutoff. So the coefficient of the vacuum density moves from 96 to 84 along the radial direction, with no finite nonzero stationary point on this free radial ray (No-go theorem 9 and Proposition 11 of lemma 18). This concerns the literal flat-space action with no added potential or constraint. Compact support can give a plateau; sign-changing cutoffs, additional terms, constraints and paths with an additional fixed noncommuting mass lie outside it. At m = 0 the derivative is zero.
 
 *Proof.* The top block has 3 colours, 2 chiralities and charge conjugates, so 12 states, each with V_0^2 = m^2. ∎
 
@@ -46,7 +46,7 @@ Let the five quarks other than the top, in three colours, with their conjugates,
 
     Lambda^2(30) = (24, 8) + (24, 1) + (1, 8) + (1, 1) + (10, 6) + (15, 3-bar) + conjugates of the last two.
 
-With Q = 2/3 for u, c and Q = -1/3 for d, s, b, the charges are:
+With Q = 2/3 for u, c and Q = -1/3 for d, s, b, that is, Q = diag(3/5, 3/5, -2/5, -2/5, -2/5) + (1/15) I_5, which includes the U(1) commuting with SU(5), the charges are:
 
 | representation | charge: number |
 |---|---|
@@ -54,7 +54,7 @@ With Q = 2/3 for u, c and Q = -1/3 for d, s, b, the charges are:
 | (10, 6) | -2/3: 3;   +1/3: 6;   +4/3: 1 |
 | (24, 1) + (1, 1) | +1: 6;   -1: 6;   0: 13 |
 
-Three generations of scalar partners in a supersymmetric Standard Model with nu_R need, for antisquarks in the 3-bar, 6 of charge -2/3 and 6 of charge +1/3, and for sleptons 6 of charge +1, 6 of charge -1 and 12 neutral real states. So (15, 3-bar) and (24, 1) + (1, 1) contain exactly the charged counts. What is left over in them is three triplets of charge +4/3 and one neutral state. The counting of 15 diquarks and 25 mesons, with the charge +4/3 states, and the remark that the top is unable to form them, go back to an early preprint (hep-ph/0512065), which finds neither SO(30) nor a role for SO(32). What SO(30) adds is one group whose adjoint contains both families. It also sits in SO(32), with 32 = 30 + 2 and adjoint 496 = 435 + 1 + 2 x 30, which hints at a role for SO(32); we have not explored this.
+Three generations of scalar partners in a supersymmetric Standard Model with nu_R need, for antisquarks in the 3-bar, 6 of charge -2/3 and 6 of charge +1/3, and for sleptons 6 of charge +1, 6 of charge -1 and 12 neutral real states. So (15, 3-bar) and (24, 1) + (1, 1) contain exactly the charged counts. What is left over in them is three triplets of charge +4/3 and one neutral state. The counting of 15 diquarks and 25 mesons, with the charge +4/3 states, and the remark that the top is unable to form them, go back to an early preprint (hep-ph/0512065), which finds neither SO(30) nor a role for SO(32). What SO(30) adds is one group whose adjoint contains both families. It also sits in SO(32), with 496 -> (435, 1) + (1, 1) + (30, 2) under SO(30) x SO(2), which hints at a role for SO(32); we have not explored this. These are representation and charge counts: identifying the entries with physical scalar partners needs a field construction, spin and chirality assignments, interactions and dynamics.
 
 ## The two families of 84
 
@@ -63,15 +63,15 @@ Three generations of scalar partners in a supersymmetric Standard Model with nu_
     96 = 84 + 12:   five quarks and all leptons (60 + 12 + 12), and the top (12);
     96 = 84 + 12:   all electrically charged fermions (72 + 12), and the neutrinos (12).
 
-The two families of 84 overlap in 72 states, and each is the other with the top and the neutrinos exchanged. Without nu_R, the first family has 78 states and the second stays at 84. In eleven dimensions, the three-form C_3 has C(9, 3) = 84 on-shell components, and its dual C_6 has C(9, 6) = 84.
+The two families of 84 overlap in 72 states, and each is the other with the top and the neutrinos exchanged. Without nu_R, the first family has 78 states and the second stays at 84. In eleven dimensions, the three-form C_3 has C(9, 3) = 84 on-shell components, and its dual C_6 has C(9, 6) = 84. The 84 in H_F is a complex finite-Hilbert-space dimension, and the three-form count is a real bosonic polarization count, so an identification needs a map of representations and degrees of freedom.
 
 ## Readings, as proposals
 
 These are proposals to test, with no derivation behind them.
 
-1. **Seiberg duality.** For SU(3) with five flavours, N_f = 5 lies in the conformal window 3 N_c/2 < N_f < 3 N_c, and the magnetic dual is SU(N_f - N_c) = SU(2) with five flavours and a meson of 25 components (standard facts about supersymmetric QCD, quoted from memory). The removal of the top is what gives N_f = 5, and SU(2) is the magnetic group there. Using this requires supersymmetry, for example an emergent one, which is not established here.
-2. **Branes.** The first family of 84 could relate to C_3 or to an M2 or M5 brane, and the second family to the dual object. The exchange of the top and the neutrinos would then be the content of the duality on the Standard Model side. The counts match, while a fermionic 84 against a bosonic 84 needs an explanation: the pairing of item 1 is one candidate. The first family also needs Dirac neutrinos for its 84, and the second does not.
-3. **Relation to the odd labels.** The removal of the top leaves the five quarks and the leptons, on which SU(3) x U(1)_em acts with b_L paired with b_R. So the loss of the electroweak partner of b_L has no role at the label 9, where SU(2) is absent.
+1. **Seiberg duality.** For SU(3) with five flavours, N_f = 5 lies in the conformal window 3 N_c/2 < N_f < 3 N_c, and the magnetic dual is SU(N_f - N_c) = SU(2) with five flavours and a 5 x 5 gauge-singlet meson chiral superfield coupled by W = M q q-tilde (N. Seiberg, Nucl. Phys. B 435 (1995) 129, arXiv:hep-th/9411149, checked by the referee). The removal of the top is what gives N_f = 5, and SU(2) is the magnetic group there. To become a statement this needs an N = 1 supersymmetric theory with the required massless matter and dynamics, for example an emergent one, with an operator and anomaly map. Five-flavour ordinary QCD alone does not supply the duality, and the magnetic SU(2) needs a separate identification with any electroweak group.
+2. **Branes.** The first family of 84 could relate to C_3 or to an M2 or M5 brane, and the second family to the dual object. The exchange of the top and the neutrinos would then be the content of the duality on the Standard Model side. The counts match, and equality of the number is insufficient: a representation and dynamics must relate the finite fermionic states to the bosonic form or brane degrees of freedom. The pairing of item 1 is one candidate. The first family also needs Dirac neutrinos for its 84, and the second does not.
+3. **Relation to the odd labels.** The removal of the top leaves the five quarks and the leptons, on which SU(3) x U(1)_em acts with b_L paired with b_R. So the loss of the electroweak partner of b_L has no role at the label 9, where SU(2) is absent. A statement here needs the required involution on this finite sector, including its action on D, J, the algebra and its opposite; the vectorlike charges alone do not establish it, and the neutral states still need treatment.
 
 ## Numerical check
 

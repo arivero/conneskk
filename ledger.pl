@@ -881,7 +881,7 @@ depends(l19_parent, l19_gauge).
 depends(l19_parent, l13_compression).
 attempted_by(l19_parent, claude_opus_5_5).
 addresses(t0b, l19_fluct).  addresses(t0b, l19_parent).
-%% Lemma 20 (T0b, T11). Astra 6; referee pending.
+%% Lemma 20 (T0b, T11). Astra 6; referee: reviews/2026-11-03_terra_check_20_21.md
 claim(l20_blocks, theorem, proved, "Theorem 20.1", "A block T : E -> E* added to a sheet-diagonal D_F keeps the signs iff T = tau(T), h T + T g = 0, and has order one on B iff T pi_1(a) - pi_2(a) T intertwines the opposite actions; the maximal B are the maximal A(R) over odd R with T = R + tau(R).").
 source(l20_blocks, 'lemmas/20_connecting_operator.md', '').
 attempted_by(l20_blocks, astra6).
@@ -913,7 +913,7 @@ addresses(t11, l20_hw).
 checked_by(l11_nogo, astra6, by_hand).
 checked_by(l16_standard_nogo, astra6, by_hand).
 checked_by(l16_grading_not_even, astra6, by_hand).
-%% Lemma 21 (T12). Referee pending.
+%% Lemma 21 (T12). Referee: reviews/2026-11-03_terra_check_20_21.md
 claim(l21_removal, proposition, proved, "Proposition 21.1", "Among single charged species, only an up-type quark can be removed while keeping cos^2 theta_NC = 5/8 and the photon/gluon ratio 8/3; a down-type gives 59/92 and 46/15, a charged lepton 17/28 and 7/3; d + e together contribute as u.").
 source(l21_removal, 'lemmas/21_top_counting.md', 'removal-identities').
 depends(l21_removal, l18_angles).
@@ -927,7 +927,7 @@ claim(l21_so30, claim, proved, "SO(30) branching", "The adjoint of SO(30) with 3
 source(l21_so30, 'lemmas/21_top_counting.md', 'so30').
 attempted_by(l21_so30, claude_opus_5_5).
 checked_by(l21_so30, claude_opus_5_5, python("exact counting")).
-prior_work(l21_so30, partial, "hep-ph/0512065, an early preprint: the 15 diquarks and 25 mesons, the 4/3 states, and the top unable to form them; neither SO(30) nor a role for SO(32)").
+prior_work(l21_so30, partial, "hep-ph/0512065, Tables 1-2, an early preprint: the 15 diquarks and 25 mesons, the 4/3 states, and the top unable to form them; neither SO(30) nor a role for SO(32)").
 addresses(t12, l21_removal).  addresses(t12, l21_counts).  addresses(t12, l21_so30).
 checked_by(l19_fluct, terra_6_1, by_hand).
 checked_by(l19_gauge, terra_6_1, by_hand).
@@ -937,6 +937,15 @@ checked_by(l06_nuL, terra_6_1, by_hand).
 checked_by(l06_factorization, terra_6_1, by_hand).
 checked_by(l06_counterexample, terra_6_1, by_hand).
 checked_by(l06_neutral, terra_6_1, by_hand).
+checked_by(l20_blocks, terra_6_1, by_hand).
+checked_by(l20_rank_one, terra_6_1, by_hand).
+checked_by(l20_gluing_fails, terra_6_1, by_hand).
+checked_by(l20_parent, terra_6_1, by_hand).
+checked_by(l20_no_selection, terra_6_1, by_hand).
+checked_by(l20_hw, terra_6_1, by_hand).
+checked_by(l21_removal, terra_6_1, by_hand).
+checked_by(l21_counts, terra_6_1, by_hand).
+checked_by(l21_so30, terra_6_1, by_hand).
 %% Lemma 17 (T10, routine part). Referee: reviews/2026-11-03_terra_check_17.md
 claim(l17_action, theorem, proved, "Theorem 17.1", "The fermion action of M x F on the Gamma = +1 subspace equals (1/2) <jj psi, (D_M + gamma_5 d) psi> on an unconstrained spinor, with jj = J_M (x) j for s = +1 and gamma_5 J_M (x) j for s = -1.").
 source(l17_action, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').
