@@ -25,6 +25,7 @@ part "R6 (referee report, no-go results and lemma 19)" reviews/2026-11-03_terra_
 part "R7 (referee report, lemmas 20 and 21, Proposition I)" reviews/2026-11-03_terra_check_20_21.md
 part "R8 (referee report, lemma 22)" reviews/2026-11-03_terra_check_22.md
 part "R9 (referee report, lemma 23)" reviews/2026-11-03_terra_check_23.md
+part "R10 (referee report, lemma 25)" reviews/2026-11-03_terra_check_25.md
 # unicode-math needs braces around font commands in sub- and superscripts
 perl -i -pe 's/([\^_])\\(mathcal|mathbb|mathrm|mathsf|mathfrak|mathbf|operatorname|text)(\{[^{}]*\}| *[A-Za-z])/$1\{\\$2$3\}/g' "$OUT"
 HDR=paper/.supp_header.tex

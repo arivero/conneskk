@@ -966,13 +966,13 @@ source(l23_theta, 'lemmas/23_two_gradings_interval.md', 'the-spectral-action-on-
 attempted_by(l23_theta, claude_opus_5_5).
 checked_by(l23_theta, claude_opus_5_5, python("Poisson and triple product identities")).
 addresses(t0b, l23_aligned).  addresses(t13, l23_gradings).  addresses(t13, l23_radial).  addresses(t5b, l23_wz).  addresses(t5b, l23_theta).
-%% Lemma 25 (T5b, T13, T1). Claude; referee pending.
+%% Lemma 25 (T5b, T13, T1). Claude; referee: reviews/2026-11-03_terra_check_25.md
 claim(l25_unfold, proposition, proved, "Proposition 25.1", "Unfolded, the parent is -i d/dx (x) 1 + 1 (x) D_F on a circle of length 2l; the tower is D_F shifted by n pi/l; an even constant generator is 1 (x) T.").
 source(l25_unfold, 'lemmas/25_sum_rule_effective_dimension.md', 'unfolding').
 depends(l25_unfold, l22_window).
 attempted_by(l25_unfold, claude_opus_5_5).
 checked_by(l25_unfold, claude_opus_5_5, python("level blocks of the interval against the shifted spectrum")).
-claim(l25_mass, theorem, proved, "Theorem 25.2", "The kernel of lemma 18 over the tower; for the heat cutoff and small masses, M^2 = ((3 - d_eff)/2) ||[D_F, T]||^2/||T||^2, with d_eff the spectral dimension of the interval at the cutoff.").
+claim(l25_mass, theorem, proved, "Theorem 25.2", "The kernel of lemma 18 over the tower; for the heat cutoff, at leading order in small masses, for a vector of constant profile in the transported frame, M^2 = ((3 - d_eff)/2) ||[D_F, T]||^2/||T||^2, with d_eff the spectral dimension of the unfolded circle at the cutoff.").
 source(l25_mass, 'lemmas/25_sum_rule_effective_dimension.md', 'the-kernel-over-the-tower').
 depends(l25_mass, l25_unfold).
 attempted_by(l25_mass, claude_opus_5_5).
@@ -1051,6 +1051,10 @@ source(l23_potential, 'lemmas/23_two_gradings_interval.md', 'the-one-loop-potent
 attempted_by(l23_potential, claude_opus_5_5).
 attempted_by(l23_potential, terra_6_1).
 checked_by(l23_potential, claude_opus_5_5, python("grids and quadrature")).
+checked_by(l25_unfold, terra_6_1, by_hand).
+checked_by(l25_mass, terra_6_1, by_hand).
+checked_by(l25_sum_rule, terra_6_1, by_hand).
+prior_work(l25_sum_rule, partial, "m_t = 2 M_W in flat gauge-Higgs models with suitable representations: hep-ph/0510366, section 5; arXiv:1804.06012, Eq. (3.23). Coefficient (3 - d_eff)/24 and crossover not found in the records inspected.").
 %% Lemma 17 (T10, routine part). Referee: reviews/2026-11-03_terra_check_17.md
 claim(l17_action, theorem, proved, "Theorem 17.1", "The fermion action of M x F on the Gamma = +1 subspace equals (1/2) <jj psi, (D_M + gamma_5 d) psi> on an unconstrained spinor, with jj = J_M (x) j for s = +1 and gamma_5 J_M (x) j for s = -1.").
 source(l17_action, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').

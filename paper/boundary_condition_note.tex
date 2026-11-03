@@ -25,7 +25,7 @@
 \date{Draft, 3 November 2026}
 
 \begin{abstract}
-Every finite Dirac operator $D_F$ with the signs of KO-dimension six is exactly the lowest spectral window of the pure derivative on an interval of length $l$, for $l\|D_F\|<\pi/2$, with no mass term. The boundary data are a grading at each wall, and $D_F=(2l)^{-1}\Gamma_0\log(\Gamma_1\Gamma_0)$, so the singular values of $D_F$ are principal angles over $l$ and the masses are quantized momenta. Preserving the domain restricts the observables at a wall to the commutant of its grading. Order one holds in this parent for any finite data with order zero. The compression of an observable is its average under $e^{ixD_F}$, $|x|\le l$, which tends to the finite representation with rate $l^2$. Aligned walls compress a bulk prealgebra stable under the grading to its even part, with the grading inherited. Even scalar fluctuations are pure gauge, and on a moving window they reproduce the quadratic term of Chamseddine-Connes-van Suijlekom. Odd ones change the angles; for $M_2(\H)$ their field space is $S^4$. In a Yang-Mills parent with a wall connector the $W$ and $Z$ masses are exact, with the constants $2$ and $16/5$ at small angle. Unfolded, the parent is $-i\,d/dx+D_F$ on a circle, and the sum rule of the spectral action becomes $M_W^2=\frac{3-d}{24}\sum N_fm_f^2$, with $d$ the spectral dimension of the interval at the cutoff, so that $m_t/M_W$ goes from $\sqrt{8/3}$ at $d=0$ to $2$ at $d=1$. All finite data are inputs and the parent algebra is matrix-valued, so the selection of the finite algebra is untouched.
+Every finite Dirac operator $D_F$ with the signs of KO-dimension six is exactly the lowest spectral window of the pure derivative on an interval of length $l$, for $l\|D_F\|<\pi/2$, with no mass term. The boundary data are a grading at each wall, and $D_F=(2l)^{-1}\Gamma_0\log(\Gamma_1\Gamma_0)$, so the singular values of $D_F$ are principal angles over $l$ and the masses are quantized momenta. Preserving the domain restricts the observables at a wall to the commutant of its grading. Order one holds in this parent for any finite data with order zero. The compression of an observable is its average under $e^{ixD_F}$, $|x|\le l$, which tends to the finite representation with rate $l^2$. Aligned walls compress a bulk prealgebra stable under the grading to its even part, with the grading inherited. Even scalar fluctuations are pure gauge, and on a moving window they reproduce the quadratic term of Chamseddine-Connes-van Suijlekom. Odd ones change the angles; for $M_2(\H)$ their field space is $S^4$. In a Yang-Mills parent with a wall connector the $W$ and $Z$ masses are exact, with the constants $2$ and $16/5$ at small angle. Unfolded, the parent is $-i\,d/dx+D_F$ on a circle, and at leading order in small masses, for a vector of constant profile in the transported frame, the sum rule of the spectral action becomes $M_W^2=\frac{3-d}{24}\sum N_fm_f^2$, with $d$ the spectral dimension of the circle at the cutoff, so that $m_t/M_W$ goes from $\sqrt{8/3}$ at $d=0$ to $2$ at $d=1$. All finite data are inputs and the parent algebra is matrix-valued, so the selection of the finite algebra is untouched.
 \end{abstract}
 
 \maketitle
@@ -152,29 +152,29 @@ The radial no-go of the finite action \cite{towerlesspaper} concerns finite data
 
 \section{The sum rule and the effective dimension}
 
-Unfolding gives a sharper statement. For $x\in[-l,l]$, put $\Psi_Q(x)=Q_L(|x|)+i\,\mathrm{sgn}(x)Q_R(|x|)$ and $\Psi_U(x)=U_R(|x|)-i\,\mathrm{sgn}(x)U_L(|x|)$. This carries $R^*D_XR=D_0+E\Gamma_FD_F$ to
+Unfolding gives a sharper statement. For $x\in[-l,l]$, put $\Psi_Q(x)=Q_L(|x|)+i\,\mathrm{sgn}(x)Q_R(|x|)$ and $\Psi_U(x)=U_R(|x|)-i\,\mathrm{sgn}(x)U_L(|x|)$. Up to the factor $1/\sqrt2$, this is unitary, and it carries $R^*D_XR=D_0+E\Gamma_FD_F$ to
 \begin{equation}
 -i\frac{d}{dx}\otimes1+1\otimes D_F
 \end{equation}
-on the circle of length $2l$. So the tower is $D_F$ shifted by $k_n=n\pi/l$, $n\in\mathbb Z$, and an even constant generator $T$ becomes $1\otimes T$. The exact quadratic kernel of the spectral action \cite{towerlesspaper} then applies termwise.
+on the circle of length $2l$. So the tower is $D_F$ shifted by $k_n=n\pi/l$, $n\in\mathbb Z$, and an even generator $T$ constant in this transported frame becomes $1\otimes T$. In the original frame it is $RTR^*$, generally with an odd bulk component, so it needs an enlarged gauge algebra, such as the prealgebra above. The exact quadratic kernel of the spectral action \cite{towerlesspaper} then applies block by block, with Gaussian convergence.
 
 \begin{theorem}\label{thm:deff}
-For the heat cutoff, with $s=l\Lambda$ and small masses, the Taylor mass of a constant-profile vector is
+For the heat cutoff, with $s=l\Lambda$, the Taylor mass of a vector of constant profile in the transported frame is, at fixed $s$ and for fixed nonzero $T$,
 \begin{equation}
-M^2=\frac{3-d}2\,\frac{\|[D_F,T]\|^2}{\|T\|^2},
+M^2=\frac{3-d}2\,\frac{\|[D_F,T]\|^2}{\|T\|^2}+O\!\left(\frac{\|D_F\|^4}{\Lambda^2}\right),
 \end{equation}
-in Hilbert-Schmidt norms, where $d=d\log S/d\log s$ and $S(s)=\sum_{n\in\mathbb Z}e^{-n^2\pi^2/s^2}$. Here $S$ is the heat trace of the circle at $t=\Lambda^{-2}$, so $d$ is its spectral dimension at the cutoff, with $d\to0$ for $s\ll1$ and $d\to1$ for $s\gg1$. For the three-generation Standard Model representation,
+in Hilbert-Schmidt norms, where $d=d\log S/d\log s$ and $S(s)=\sum_{n\in\mathbb Z}e^{-n^2\pi^2/s^2}$. Here $S$ is the heat trace of the unshifted circle at $t=\Lambda^{-2}$, so $d$ is its spectral dimension at the cutoff, with $d\to0$ for $s\ll1$ and $d\to1$ for $s\gg1$. For the three-generation Standard Model representation, at this order,
 \begin{equation}
 M_W^2=\frac{3-d}{24}\sum_fN_fm_f^2,
 \end{equation}
-so for the top alone $m_t/M_W=\sqrt{8/(3-d)}$, and $M_W^2/M_Z^2=5/8$ throughout.
+so for the top alone $m_t/M_W=\sqrt{8/(3-d)}$, and $M_W^2/M_Z^2=5/8$ at all $s$.
 \end{theorem}
 
 \begin{proof}[Structure of the proof]
-With $a_i=(k+\mu_i)^2$ and $d_{ij}=\mu_i-\mu_j$, the kernel at $q=0$ expands to second order in $\mu$ as $d_{ij}^2e^{-k^2}(1-\tfrac23k^2)$, and at order $q^2$ as $\tfrac23e^{-k^2}$. Summing over $n$ gives the factor $\tfrac32-\langle k^2\rangle$, and $\langle k^2\rangle=\tfrac12d\log S/d\log s$.
+With $a_i=(k+\mu_i)^2$ and $d_{ij}=\mu_i-\mu_j$, the kernel at $q=0$ expands to second order in $\mu$ as $d_{ij}^2e^{-k^2}(1-\tfrac23k^2)$, and at order $q^2$ as $\tfrac23e^{-k^2}$. Terms odd in $k$ cancel between $n$ and $-n$. Summing over $n$ gives the factor $\tfrac32-\langle k^2\rangle$, and $\langle k^2\rangle=\tfrac12d\log S/d\log s$.
 \end{proof}
 
-At $d=0$ this is the relation $8M_W^2=\sum N_fm_f^2$ of the asymptotic spectral action. At $d=1$ it is $12M_W^2=\sum N_fm_f^2$, which five-dimensional covariance requires: $V$ is the fifth component of a Dirac operator with constant $A_5=D_F$, and $F_{5\mu}^2$ and $F_{\mu\nu}^2$ have one coefficient. So the factor $3/2$ between the spectral-action mass and the Yang-Mills commutator norm is the ratio of the two ends of one function, crossing at $l\Lambda\approx2$. In terms of couplings, $y_t=2g/\sqrt3$ at $d=0$ and $y_t=\sqrt2g$ at $d=1$. This holds at the matching scale, for flat profiles and no running, and comparison with measured values needs the running, which here would be a power law above $1/l$.
+At $d=0$ this is the relation $8M_W^2=\sum N_fm_f^2$ of the asymptotic spectral action. At $d=1$ it is $12M_W^2=\sum N_fm_f^2$, which covariance requires on the unfolded circle: the fifth component of the Dirac operator is a constant $A_5=D_F$, and $F_{5\mu}^2$ and $F_{\mu\nu}^2$ have one coefficient. So the factor $3/2$ between the finite spectral-action coefficient and the Yang-Mills commutator quotient is, in this constant-profile calculation, the ratio of the two ends of one function, crossing at $l\Lambda\approx2$. In terms of couplings, $y_t=2g/\sqrt3$ at $d=0$ and $y_t=\sqrt2g$ at $d=1$. The endpoint $m_t=2M_W$ is known in flat gauge-Higgs models with suitable representations \cite{CCP2006}; we did not find the coefficient $(3-d)/24$ or the crossover, and a wider search is open. These are leading-order statements about a prescribed background: the towerless top-only expansion already has the correction $-\tfrac{23}{128}m_t^4/\Lambda^2$. They hold at a matching scale, for flat profiles and no running. With bulk masses for the light fields the kinetic coefficient must be recomputed. Comparison with measured values needs a specified effective theory with thresholds and running.
 
 \section{Status}
 
@@ -182,7 +182,7 @@ As mathematics, the one-flavor formula and the gauge boundary conditions are kno
 
 \section*{Provenance}
 
-This note has no listed authors. The results were proved by Claude Opus 5.5, and refereed by Terra 6.1 (gpt-6.1-terra, effort max), whose reports led to corrections, with Python (numpy, scipy) checks of the identities and the numerical statements. Parts of the Status section rest on results by Astra 6. Details are in the Supplemental Material of \cite{towerlesspaper}, parts 22 to 25, with the referee reports. Parts 24 and 25, and the section on the sum rule, have no referee yet.
+This note has no listed authors. The results were proved by Claude Opus 5.5, and refereed by Terra 6.1 (gpt-6.1-terra, effort max), whose reports led to corrections, with Python (numpy, scipy) checks of the identities and the numerical statements. Parts of the Status section rest on results by Astra 6. Details are in the Supplemental Material of \cite{towerlesspaper}, parts 22 to 25, with the referee reports. Part 24 has no referee yet.
 
 \bibliography{towerless_intervals}
 
