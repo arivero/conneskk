@@ -114,12 +114,12 @@ source(l11_bounds, 'lemmas/11_spectral_action_heavy_w.md', '').
 depends(l11_bounds, hyp(ccm_relation)).
 attempted_by(l11_bounds, claude_opus_5_5).
 checked_by(l11_bounds, claude_opus_5_5, by_hand).
-claim(l11_nogo, no_go, conditional, "Corollary 11.2", "The heavy-W limit with all fermion masses fixed (canonical 14.1) is impossible in the spectral-action family.").
+claim(l11_nogo, no_go, conditional, "Corollary 11.2", "The heavy-W limit with all fermion masses fixed (canonical 14.1) is impossible in the spectral-action family; M_W -> infinity forces m_max -> infinity.").
 source(l11_nogo, 'lemmas/11_spectral_action_heavy_w.md', '').
 depends(l11_nogo, l11_bounds).
 attempted_by(l11_nogo, claude_opus_5_5).
 checked_by(l11_nogo, claude_opus_5_5, by_hand).
-claim(l11_top, corollary, conditional, "Corollary 11.3", "With only the top heavy, m_t/M_W -> sqrt(8/3).").
+claim(l11_top, corollary, conditional, "Corollary 11.3", "If the top is the only diverging Dirac mass (a hypothesis), m_t/M_W -> sqrt(8/3).").
 source(l11_top, 'lemmas/11_spectral_action_heavy_w.md', '').
 depends(l11_top, l11_bounds).
 attempted_by(l11_top, claude_opus_5_5).
@@ -301,6 +301,11 @@ source(l14_normalizations, 'lemmas/14_gauge_covariant_reduction.md', '').
 depends(l14_normalizations, l14_sum_rule).
 attempted_by(l14_normalizations, astra6).
 addresses(t4b, l14_sum_rule).  addresses(t4b, l14_tuned).  addresses(t4b, l14_nogo_collapse).
+
+checked_by(l10_toeplitz, terra_6_1, by_hand).  % referee, 3 Nov 2026
+checked_by(l11_bounds, terra_6_1, by_hand).  % referee, 3 Nov 2026
+checked_by(l11_nogo, terra_6_1, by_hand).  % referee, 3 Nov 2026
+checked_by(l11_top, terra_6_1, by_hand).  % referee, 3 Nov 2026
 
 hypothesis(ccm_relation, "Chamseddine-Connes-Marcolli normalization at the matching scale: 8 M_W^2 = sum of N_f m_f^2 over Dirac masses.").
 hypothesis(positive_rank, "The twisting bundle has positive rank, with the equivariant self-adjoint realization.").

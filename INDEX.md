@@ -359,6 +359,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
   - [Referee report (gpt-6.1-terra, effort max, 3 Nov 2026)](lemmas/09_massive_chiral_interval.md#referee-report-gpt-61-terra-effort-max-3-nov-2026)
 - [10: Toeplitz compression of the twistor coordinates on CP^3](lemmas/10_toeplitz_twistor.md)
 - [11: Heavy W in the spectral-action family forces a heavy fermion](lemmas/11_spectral_action_heavy_w.md)
+  - [Referee report on lemmas 10 and 11 (gpt-6.1-terra, effort max, 3 Nov 2026)](lemmas/11_spectral_action_heavy_w.md#referee-report-on-lemmas-10-and-11-gpt-61-terra-effort-max-3-nov-2026)
 - [12: Boundary Yukawa matrices on the interval: from chiral to vectorlike boundary conditions, and towerless textures](lemmas/12_boundary_yukawa_interval.md)
   - [Setting](lemmas/12_boundary_yukawa_interval.md#setting)
   - [Kernel, index and symmetry breaking](lemmas/12_boundary_yukawa_interval.md#kernel-index-and-symmetry-breaking)

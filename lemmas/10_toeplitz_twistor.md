@@ -1,6 +1,6 @@
 # Toeplitz compression of the twistor coordinates on CP^3
 
-This answers Part A of parked job 04 (research_note 4 and canonical 4, which labelled the result "Checked calculation", although no script computes it). Proved by Claude Opus 5.5 without Astra or Fable; Monte Carlo check with 2 x 10^6 samples.
+Refereed by Terra 6.1 (gpt-6.1-terra, effort max, 3 Nov 2026): the three identities are correct; the displayed fourth moment had an index error (pairing two barred indices), corrected below. This answers Part A of parked job 04 (research_note 4 and canonical 4, which labelled the result "Checked calculation", although no script computes it). Proved by Claude Opus 5.5 without Astra or Fable; Monte Carlo check with 2 x 10^6 samples.
 
 Let Gamma_1, ..., Gamma_5 be Hermitian generators of Cl(5) on C^4, so that Gamma_a Gamma_b + Gamma_b Gamma_a = 2 delta_ab. For [w] in CP^3 put x_a([w]) = w* Gamma_a w / w* w, and define the level-one Berezin-Toeplitz compression
 
@@ -16,7 +16,7 @@ In particular Q is not multiplicative.
 
 *Proof.* Lift to w uniform on S^7 in C^4. For n = 4, writing w = g/abs(g) with g a standard complex Gaussian (abs(g) and g/abs(g) are independent), Wick's theorem gives
 
-    E[w_j w_k conj(w_i) conj(w_l)] = (delta_ij delta_kl + delta_il delta_kj) / (n(n+1)),
+    E[w_j w_k conj(w_i) conj(w_l)] = (delta_ij delta_kl + delta_jl delta_ki) / (n(n+1)),
 
 and the sixth moment is the sum over the six matchings of unbarred with barred indices, divided by n(n+1)(n+2) = 120.
 

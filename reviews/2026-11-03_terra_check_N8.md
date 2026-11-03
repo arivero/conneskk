@@ -36,7 +36,7 @@ on the parent and on the reduced space.
 
 **First order — Correct with amendment.** Put \(L(a)=\operatorname{diag}(\lambda,q)\). On \(H_{18}\), writing \(X\in\operatorname{Hom}(V_3,V_1\oplus V_2)\) and \(Y\in\operatorname{Hom}(V_1\oplus V_2,V_3)\), we have
 \[
-[D_0,\rho(a)](X,Y)=\bigl([D_v,L(a)]X,\,0\bigr).
+[D_0,\rho(a)]\,(X,Y)=\bigl([D_v,L(a)]X,\,0\bigr).
 \]
 The nonzero component is a left multiplication and commutes with the right \(M_3(\mathbb C)\)-action.
 
