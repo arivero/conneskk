@@ -1264,15 +1264,15 @@ depends(l28_core, l28_twist).
 attempted_by(l28_core, claude_opus_5_5).
 checked_by(l28_core, claude_opus_5_5, python("the ratios on the radial modes")).
 checked_by(l28_core, astra6, by_hand).  % job 28
-claim(l28_window, conjecture, conjectural, "Conjecture 28.6", "For Theorem 28.9, with the pull-back connection or the collar connection preserving the line summands: for large mass, D-hat has exactly eight small eigenvalues (one copy of the 4 at S^4 and one at CP^3) with a gap uniform in the mass and on all representations of Sp(2), exponentially small in l; the compression tends to (Q_B, Q_Y), with fibre part w(rho) times the level-one value, or the level-one value for the collar connection. M_2(H) + M_4(C) is then the algebra of the limit map.").
+claim(l28_window, conjecture, conjectural, "Conjecture 28.6", "For Theorem 28.9, with the pull-back connection or the collar connection preserving the line summands: for large mass, D-hat has exactly eight small eigenvalues (one copy of the 4 at S^4 and one at CP^3) with a gap uniform in the mass and on all representations of Sp(2), and for a family with a uniform decay rate the off-diagonal block is exponentially small in l; the compression maps tend to (Q_B, Q_Y), with fibre part w(rho) times the level-one value, or the level-one value for the collar connection. M_2(H) + M_4(C) is then the algebra of the limit map.").
 source(l28_window, 'lemmas/28_two_walls_connected_parent.md', 'setting').
 depends(l28_window, l28_core).
 attempted_by(l28_window, claude_opus_5_5).
-claim(l28_numerics, claim, numerical, "Result 28.5", "Radial system, with the corrected spin connection (the first version had the wrong sign, and all its numbers are replaced): lowest singular value on the 4 falling with the constant-coefficient exponent, next value 1.86 at rho = 1; on the 16, 20, 40 the core values sqrt 5, sqrt 8, sqrt 12 and wall values above 1.9; both modes with Q(x_a) = -Gamma_a/5; boundary fibre part converging to -w(rho), and -1 for the collar connection; core block with a nonzero density of order lambda^2 at finite mass, so that it generates M_4(C) at the masses computed.").
+claim(l28_numerics, claim, numerical, "Result 28.5", "Radial system, h = 1, with the corrected spin connection (the singular values and fibre parts of the first version had the wrong sign of the spin connection and are withdrawn): lowest singular value on the 4 falling with the constant-coefficient exponent, next value 1.86 at rho = 1; on the 16, 20, 40 the core values near sqrt 5, sqrt 8, sqrt 12 and wall values above 1.9; both modes with Q(x_a) = -Gamma_a/5; boundary fibre part approaching -w(rho), and -1 for the collar connection; at resolved sample points the core mode has a nonzero density breaking the quaternionic structure, integrated value empirically of order lambda^2.").
 source(l28_numerics, 'lemmas/28_two_walls_connected_parent.md', 'setting').
 attempted_by(l28_numerics, claude_opus_5_5).
 checked_by(l28_numerics, claude_opus_5_5, python("tools/lemma28_radial.py: P1 form of T^* T on a graded grid; exact tests against Casimir and Kodaira spectra")).
-referee_pending(l28_numerics).
+checked_by(l28_numerics, terra_6_1, python("reran the tables; separate test of A_2")).
 claim(l28_endpoints, proposition, proved, "Proposition 28.8", "Restriction of smooth functions on X to S^4 and CP^3 is surjective, with a(y, v) = a(y, 0) + O(|v|).").
 source(l28_endpoints, 'lemmas/28_two_walls_connected_parent.md', '').
 attempted_by(l28_endpoints, astra6).
@@ -1293,12 +1293,12 @@ claim(l28_mixing, lemma, proved, "Lemma 28.12", "Stable boundary profiles overla
 source(l28_mixing, 'lemmas/28_two_walls_connected_parent.md', '').
 attempted_by(l28_mixing, astra6).
 checked_by(l28_mixing, claude_opus_5_5, python("the closed form of Proposition 28.13 against the radial system")).
-claim(l28_wall, proposition, proved, "Proposition 28.13", "On the 4 the compressed boundary operator has a one-dimensional kernel with tr(B Gamma_5)/tr B = -1 and tr(B t-hat)/tr B = -w(rho), w = 2(rho^2+2)^2/(9+2(rho^2+2)^2); with the line connection w = 1. The kernel and traces are exact for the finite block; convergence of T_M to it is numerical.").
+claim(l28_wall, proposition, proved, "Proposition 28.13", "On the 4, for the sign of Phi with right singular vector at the zero section, the compressed boundary operator on the left singular vector has a one-dimensional kernel with tr(B Gamma_5)/tr B = -1 and tr(B t-hat)/tr B = -w(rho), w = 2(rho^2+2)^2/(9+2(rho^2+2)^2), and +w for the opposite sign; with the line connection w = 1. Scope: the kernel and traces are exact for the finite block, the leading formal wall operator; convergence from T_M is numerical.").
 source(l28_wall, 'lemmas/28_two_walls_connected_parent.md', '').
 depends(l28_wall, l28_mixing).
 attempted_by(l28_wall, claude_opus_5_5).
 checked_by(l28_wall, claude_opus_5_5, python("matrix elements, kernel to ten digits")).
-referee_pending(l28_wall).
+checked_by(l28_wall, terra_6_1, by_hand).
 claim(l28_criterion, lemma, proved, "Lemma 28.14", "An eight-dimensional trial space with small defect and a uniform coercive estimate on its complement gives exactly eight small eigenvalues.").
 source(l28_criterion, 'lemmas/28_two_walls_connected_parent.md', '').
 attempted_by(l28_criterion, astra6).
@@ -1333,6 +1333,22 @@ claim(l28_prescribed, theorem, proved, "Theorem 28.21", "Explicit prescribed ran
 source(l28_prescribed, 'lemmas/28_two_walls_connected_parent.md', '').
 attempted_by(l28_prescribed, astra6).
 checked_by(l28_prescribed, claude_opus_5_5, by_hand).
+referee_report('lemmas/28_two_walls_connected_parent.md', 'reviews/2026-11-03_terra_check_28.md').
+outside_referee(l28_twist, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_core, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_endpoints, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_operator, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_slices, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_normal, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_mixing, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_criterion, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_compression, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_symmetry, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_generation, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_conjugation, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_tunnelling, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_doubled, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_prescribed, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
 addresses(t0, l28_prescribed).  addresses(t0b, l28_prescribed).
 addresses(t0, l28_window).  addresses(t0b, l28_window).
 

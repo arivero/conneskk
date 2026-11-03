@@ -10,7 +10,9 @@ the pull-back connection, s = 1 for the connection preserving the line summands)
 
 Convention: Clifford generators are Hermitian, c^2 = +1, so nabla = E - (1/4) Gamma_ijk c_j c_k. The
 first version of this computation had the opposite sign of the spin connection; test (c) below fails
-with that sign. Usage: lemma28_radial.py          runs the tests;
+with that sign. With sign = -1 and the wall condition of Theorem 28.9 (bc = +1 in solve) the right
+singular vector is at the zero section, and its partner at the wall is the right singular vector of
+the adjoint problem, sign = +1 with bc = -1. Usage: lemma28_radial.py          runs the tests;
                        lemma28_radial.py tables   also prints the tables of Result 28.5.
 """
 import sys
@@ -179,7 +181,7 @@ GP, GW = np.array([-np.sqrt(3 / 5), 0, np.sqrt(3 / 5)]), np.array([5 / 9, 8 / 9,
 
 
 def solve(S, l, rfun, phifun, sign, bc, sfun=lambda x: 0.0, k=2, Nx=4000):
-    """P1 quadratic form of T^* T with u(0) = 0, and u(l) in Z < 0 (bc > 0) or Z > 0 (bc < 0). Rayleigh quotients bound the singular values from above."""
+    """P1 quadratic form of T^* T with u(0) = 0, and u(l) in Z < 0 (bc > 0) or Z > 0 (bc < 0). Rayleigh quotients of the exact form bound the singular values from above; with three-point quadrature they approximate those bounds."""
     n = S.n
     xs = l * 0.5 * (1 - np.cos(np.pi * np.linspace(0, 1, Nx + 1)))
     iZ = 1j * S.Z
@@ -233,7 +235,7 @@ def solve(S, l, rfun, phifun, sign, bc, sfun=lambda x: 0.0, k=2, Nx=4000):
 
 
 def mode(S, vec, xs):
-    """Position, the ratio in Q(x_a) = ratio Gamma_a/5, the fibre part tr(B t-hat)/tr B and its supremum (representation 4 only)."""
+    """Position, the ratio in Q(x_a) = ratio Gamma_a/5, the integrated fibre part tr(B t-hat)/tr B, the ratio of the maxima of |tr(B t-hat)| and tr B, and the supremum of the pointwise ratio (representation 4 only)."""
     u = vec.reshape(xs.size, S.n)
     dx = np.gradient(xs)
     that = 2j * GEN[6]
@@ -244,22 +246,35 @@ def mode(S, vec, xs):
         bn[j], b5[j], bt[j] = np.trace(B).real, np.trace(B @ GAM[4]).real, np.trace(B @ that).real
     I = lambda f: np.sum(f * dx)
     d = np.sum(np.abs(u) ** 2, axis=1)
-    return dict(pos=I(xs * d) / I(d), q5=I(b5) / I(bn), t=I(bt) / I(bn), sup=np.max(np.abs(bt)) / np.max(bn))
+    keep = bn > 1e-30 * np.max(bn)
+    return dict(pos=I(xs * d) / I(d), q5=I(b5) / I(bn), t=I(bt) / I(bn), ratio_of_maxima=np.max(np.abs(bt)) / np.max(bn),
+                sup_pointwise=np.max(np.abs(bt[keep]) / bn[keep]))
+
+
+CASIMIR = {'4': [0.0, 4.0], '16': [5.0, 9.0], '20': [0.0, 8.0], '40': [12.0, 16.0]}
+KODAIRA = {'4': 0.0, '16': 5.0, '20': 5.0, '40': 12.0}   # j(j+4) at j = 0, 1, 1, 2
 
 
 def tests(R):
-    print('(a) structure: {A0,Z}, [A0,tau], {A1,Z}=0; (b) A0^2 is the Casimir formula on S^4: Cas_G + 3/2 - Cas_K(twist)')
+    print('(a) {A0,Z} = 0, [A0,tau] = 0; (b) A0^2 is the Casimir formula on S^4: Cas_G + 3/2 - Cas_K(twist); (c) {A0,A1} = 0; A2 is its curvature contraction')
     for name in ('4', '16', '20', '40'):
         S = System(R[name])
         assert np.linalg.norm(S.A0 @ S.Z + S.Z @ S.A0) < 1e-9 and np.linalg.norm(S.A0 @ S.T - S.T @ S.A0) < 1e-9
         print('  rep %s n=%d: A0^2 eigenvalues %s; (c) |{A0,A1}| = %.1e' % (name, S.n, sorted(set(np.round(np.linalg.eigvalsh(S.A0 @ S.A0), 4))), np.linalg.norm(S.A0 @ S.A1 + S.A1 @ S.A0)))
         assert np.linalg.norm(S.A0 @ S.A1 + S.A1 @ S.A0) < 1e-9
+        assert sorted(set(np.round(np.linalg.eigvalsh(S.A0 @ S.A0) + 0.0, 6))) == CASIMIR[name]
+        # A2 from the curvature contraction: A2 = -(i/8) sum_{a,b in m, alpha in p} C[a,b,alpha] c_a c_b c_alpha
+        L = sum(-1j / 8 * C[a, b, al] * cW[a] @ cW[b] @ cW[al] for a in range(4) for b in range(4) for al in (4, 5))
+        A2c = np.array([[np.sum(g.conj() * (L @ f)) for f in S.F] for g in S.F])
+        assert np.linalg.norm(A2c - S.A2) < 1e-9
     print('(d) rho = 1, s = 1 (Fubini-Study, line summands): D^2 on tau = -3/2, against j(j+4) = 0, 5, 12 on (0,0)-forms in O(1)')
     for name in ('4', '16', '20', '40'):
         S = System(R[name])
         idx = [i for i in range(S.n) if abs(S.tv[i] + 1.5) < 1e-6]
         B = S.U[:, idx].conj().T @ S.D(1.0, 1.0) @ S.U[:, idx]
-        print('  rep %s: %s' % (name, sorted(set(np.round(np.linalg.eigvalsh(B) ** 2, 5)))))
+        vals = sorted(set(np.round(np.linalg.eigvalsh(B) ** 2, 5)))
+        print('  rep %s: %s' % (name, vals))
+        assert KODAIRA[name] in vals
     print('(e) wall operator on 4: fibre part against -2(rho^2+2)^2/(9+2(rho^2+2)^2)')
     S = System(R['4'])
     for r in (0.5, 1.0, 2.0):
@@ -292,7 +307,7 @@ def tables(R):
         for Nx in (2500, 5000, 10000):
             a = solve(S, l, tr(1.), pf(phi0), -1., 1, Nx=Nx)
             m = mode(S, a[1][:, 0], a[2])
-            print('  phi0=%.0f l=%.0f Nx=%d lambda=%.5f t=%.4e sup=%.4e t/lambda^2=%.3f' % (phi0, l, Nx, a[0][0], m['t'], m['sup'], m['t'] / a[0][0] ** 2), flush=True)
+            print('  phi0=%.0f l=%.0f Nx=%d lambda=%.5f t=%.4e ratio of maxima=%.4e sup pointwise=%.4f t/lambda^2=%.3f' % (phi0, l, Nx, a[0][0], m['t'], m['ratio_of_maxima'], m['sup_pointwise'], m['t'] / a[0][0] ** 2), flush=True)
 
 
 if __name__ == '__main__':

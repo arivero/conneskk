@@ -211,7 +211,7 @@ Not found by that search: the classification with n_c, and the pair (M_KK, mu_*)
 - M. Verhoeven, *Spectral truncations of SU(2) and the spectral localizer*, [arXiv:2610.19791](https://arxiv.org/abs/2610.19791): full matrix envelopes in a recent truncation example.
 - K. Uno and T. Inagaki, *Construction and geometric properties of the fuzzy CP^3 onion*, [arXiv:2610.17807](https://arxiv.org/abs/2610.17807): radially coupled fuzzy CP^3 layers.
 - C. Bär and W. Ballmann, [arXiv:1307.3021](https://arxiv.org/abs/1307.3021): the boundary criterion of Theorem 28.9. C. Kottke, [arXiv:0909.5661](https://arxiv.org/abs/0909.5661): the Callias index in families, for Proposition 28.11.
-- M. Maridakis, [arXiv:1510.07004](https://arxiv.org/abs/1510.07004), [arXiv:2110.11654](https://arxiv.org/abs/2110.11654): concentration of low modes of D + s A at the zero set of A on closed manifolds, after Prokhorenkov and Richardson; read at the abstract level only, for the direction in lemma 28.
+- I. Prokhorenkov and K. Richardson, *Perturbations of Dirac operators*, J. Geom. Phys. 57 (2006) 297-321, [arXiv:math/0307251](https://arxiv.org/abs/math/0307251); M. Maridakis, [arXiv:1510.07004](https://arxiv.org/abs/1510.07004), Definition 2.1 and Lemma 2.2, and [arXiv:2110.11654](https://arxiv.org/abs/2110.11654), section 2: concentration of low modes of D + s A at the zero set of A on closed manifolds. Read by Terra 6.1 in arXiv HTML ([report](reviews/2026-11-03_terra_check_28.md)): the operator of lemma 28 is a concentrating pair, and Assumption 3 of the spectral separation theorem fails for the spin-3/2 mass.
 
 ## Items not verified in this session
 
