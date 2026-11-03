@@ -393,6 +393,7 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 - [21: The separate role of the top: removal identities and counting](lemmas/21_top_counting.md)
 - [22: The finite Dirac operator as a boundary condition on an interval](lemmas/22_dirac_operator_as_boundary_condition.md)
 - [23: Two gradings on an interval: masses as principal angles, the Higgs modulus, and exact W and Z masses](lemmas/23_two_gradings_interval.md)
+- [24: Commutative cylinders, spectral walls, and the two-stage compression](lemmas/24_commutative_parent.md)
 - [25: The weak-boson sum rule and the effective dimension of the interval](lemmas/25_sum_rule_effective_dimension.md)
 
 ### Background note: the current Connes et al. framework: [current_framework.md](current_framework.md)

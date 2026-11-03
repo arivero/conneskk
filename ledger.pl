@@ -983,6 +983,25 @@ depends(l25_sum_rule, l25_mass).
 attempted_by(l25_sum_rule, claude_opus_5_5).
 checked_by(l25_sum_rule, claude_opus_5_5, python("top-only family and neutral direction")).
 addresses(t5b, l25_mass).  addresses(t5b, l25_sum_rule).  addresses(t13, l25_sum_rule).
+%% Lemma 24 (T0, T0b). Astra 6; referee pending.
+claim(l24_spectral, theorem, proved, "Theorem 24.1", "On CP^3 x I, spectral walls with finite gradings on the level-one kernel give an exact reduction to the two-gradings operator, with the other modes above Delta_K/r.").
+source(l24_spectral, 'lemmas/24_commutative_parent.md', '').
+attempted_by(l24_spectral, astra6).
+claim(l24_walls, proposition, proved, "Propositions 24.2, 24.3", "Local walls under an ellipticity condition preserve all scalar functions; spectral walls only constants at the wall; a local grading whose compression to the level-one window is a grading compresses to +-1.").
+source(l24_walls, 'lemmas/24_commutative_parent.md', '').
+attempted_by(l24_walls, astra6).
+checked_by(l24_walls, claude_opus_5_5, python("trace of the auxiliary field")).
+claim(l24_two_stage, theorem, proved, "Theorem 24.4", "Direct aligned compression of real functions on S^4 generates R + R, against H + H with an intermediate matrix algebra.").
+source(l24_two_stage, 'lemmas/24_commutative_parent.md', '').
+attempted_by(l24_two_stage, astra6).
+checked_by(l24_two_stage, claude_opus_5_5, python("conditional expectation of the Clifford generators")).
+claim(l24_no_minimum, no_go, proved, "Theorem 24.9", "Flat massless one-loop potential, frequency-one fermions, the stated gauge towers, no wall terms: theta = pi/2 is the unique global minimum; strictly decreasing for n_f >= 54/5; for smaller n_f exactly one interior stationary point, a strict maximum. Escapes: frequency-two fermions, warping or other form factors, bulk-mass sectors, wall potentials and wall terms.").
+source(l24_no_minimum, 'lemmas/24_commutative_parent.md', '').
+attempted_by(l24_no_minimum, astra6).
+checked_by(l24_no_minimum, claude_opus_5_5, python("monotonicity of H and e on grids")).
+addresses(t0, l24_spectral).  addresses(t0b, l24_two_stage).  addresses(t13, l24_no_minimum).
+checked_by(l22_no_radial, astra6, by_hand).
+checked_by(l23_potential, astra6, by_hand).
 %% Lemma 21 (T12). Referee: reviews/2026-11-03_terra_check_20_21.md
 claim(l21_removal, proposition, proved, "Proposition 21.1", "Among single charged species, only an up-type quark can be removed while keeping cos^2 theta_NC = 5/8 and the photon/gluon ratio 8/3; a down-type gives 59/92 and 46/15, a charged lepton 17/28 and 7/3; d + e together contribute as u.").
 source(l21_removal, 'lemmas/21_top_counting.md', 'removal-identities').
