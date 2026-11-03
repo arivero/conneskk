@@ -389,6 +389,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
 - [17: Explicit masses in the reduced triple, the chiral limit and the set of reductions](lemmas/17_explicit_masses_chiral_limit.md)
   - [The reduced action](lemmas/17_explicit_masses_chiral_limit.md#the-reduced-action)
   - [The chiral limit](lemmas/17_explicit_masses_chiral_limit.md#the-chiral-limit)
+  - [Spacetime-dependent Sigma](lemmas/17_explicit_masses_chiral_limit.md#spacetime-dependent-sigma)
   - [What the spectral data say about the condensate](lemmas/17_explicit_masses_chiral_limit.md#what-the-spectral-data-say-about-the-condensate)
   - [The chiral limit on the interval](lemmas/17_explicit_masses_chiral_limit.md#the-chiral-limit-on-the-interval)
   - [Consequence for T10](lemmas/17_explicit_masses_chiral_limit.md#consequence-for-t10)
@@ -401,6 +402,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
 - [Terra check of N8](reviews/2026-11-03_terra_check_N8.md)
 - [Terra referee report on lemmas 15 and 16](reviews/2026-11-03_terra_check_15_16.md)
 - [Terra referee report on lemmas 08, 13 and 14](reviews/2026-11-03_terra_check_08_13_14.md)
+- [Terra referee report on lemma 17](reviews/2026-11-03_terra_check_17.md)
 
 ### Transcript: [transcripts/Connes_Electrodynamics_ModelMd.txt](transcripts/Connes_Electrodynamics_ModelMd.txt)
 
