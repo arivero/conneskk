@@ -819,7 +819,7 @@ C_W(y)=\frac{\Lambda^2}{4\pi^2}
 \]
 For finitely many doublets, if \(P>0\) and all \(x_i\to\infty\), the Taylor mass tends to zero. If \(P=0\) and all \(x_i=x\), then \(M_{W,\mathrm{Taylor}}^2\sim m^4/(2\Lambda^2)\), the form factor has a unique positive pole with \(M_{W,\mathrm{pole}}^2\sim m^2/2\), and the whole unnormalized kernel tends to zero at every fixed Euclidean momentum. The divergent Taylor and pole scales differ, and neither alone establishes a healthy limiting gauge theory. \(\square\)
 
-**14. Proposition (the fully massive family; referee).** Give both members of every Standard Model doublet the same Dirac mass \(m\), with no Majorana masses, and let \(z_W,z_Z\) be the charged and massive neutral poles in units of \(\Lambda^2\). The charged form factor is proportional to \(e^{-x}[g(y)+2xH(y)]\), and
+**14. Proposition (the fully massive family; referee; a complete proof by Astra 6 is in the [validation](../reviews/2026-11-03_astra_validation_corrections.md), item 11).** Give both members of every Standard Model doublet the same Dirac mass \(m\), with no Majorana masses, and let \(z_W,z_Z\) be the charged and massive neutral poles in units of \(\Lambda^2\). The charged form factor is proportional to \(e^{-x}[g(y)+2xH(y)]\), and
 \[
 2x<z_W<2x+2,\qquad \tfrac{16}{5}x<z_Z<\tfrac{16}{5}x+2.
 \]

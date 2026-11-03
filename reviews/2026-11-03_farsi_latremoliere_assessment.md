@@ -2,7 +2,7 @@
 
 **Paper.** C. Farsi and F. Latrémolière, arXiv:2404.00240: v1 30 Mar 2024, v2 13 Oct 2025, v3 15 Oct 2025. Published as J. London Math. Soc. (2) 114 (2026), no. 1, e70628, 54 pp. (journal reference on the arXiv record).
 
-**What was read.** The LaTeX sources of v1 and v3, in full. The v2 and v3 sources are byte-identical. The journal page (doi:10.1112/jlms.70628) returned HTTP 403, so we have not seen the published text. Theorem numbers below are those of v3, with v1 numbers in brackets. Read by Claude Opus 5.5 on 3 Nov 2026 for [lemma 09](../lemmas/09_massive_chiral_interval.md) (Theorems 9.8-9.10) and [STRATEGY](../STRATEGY.md) T0.
+**What was read.** The LaTeX sources of v1 and v3, in full. The v2 and v3 sources are byte-identical. The journal page (doi:10.1112/jlms.70628) returned HTTP 403, so we have not seen the published text. Theorem numbers below are those of v3, with v1 numbers in brackets. Read by Claude Opus 5.5 on 3 Nov 2026 for [lemma 09](../lemmas/09_massive_chiral_interval.md) (Theorems 9.8-9.10) and [STRATEGY](../STRATEGY.md) T0. **Update (3 Nov 2026):** the published text was read later that day, from the journal HTML supplied by the user; see Section 3.6.
 
 **Summary.**
 - The convergence notion is Latrémolière's spectral propinquity on metric spectral triples (A, H, D). These carry no grading and no real structure.
@@ -120,14 +120,14 @@ Corollary 3.5 follows from Theorem 3.4 through Latrémolière's published contin
 
 The second inequality needs ||(1/eps) D_v xi|| <= ||D_eps xi||, which is neither assumed nor proved. For xi = e_n at eps = eps_n, the left-hand side is 1 while the right-hand side is 4 sqrt(2 eps_n)(1 + x) -> 0.
 
-**Repair.** Add the hypothesis that D_h and D_v anticommute on a common core. Then ||D_eps xi||^2 = ||D_h xi||^2 + eps^{-2} ||D_v xi||^2. A relative bound ||D_v xi|| <= C eps (||xi|| + ||D_eps xi||) also suffices. With either one, the spectral theorem gives ||xi - p xi|| <= ||D_v xi||/delta <= (eps/delta) ||D_eps xi||. This makes the Fourier Lemma 3.3 unnecessary and improves the rate from O(sqrt(eps)) to O(eps).
+**Repair.** Add the hypothesis that D_h and D_v anticommute on a common core. Then ||D_eps xi||^2 = ||D_h xi||^2 + eps^{-2} ||D_v xi||^2. A relative bound ||D_v xi|| <= C eps (||xi|| + ||D_eps xi||) also suffices. With anticommutation, the spectral theorem gives ||xi - p xi|| <= ||D_v xi||/delta <= (eps/delta) ||D_eps xi||; with the relative bound it gives ||xi - p xi|| <= (C eps/delta)(||xi|| + ||D_eps xi||). (The estimate for the relative bound is corrected on 3 Nov 2026, as Astra 6 noted.) Either one makes the Fourier Lemma 3.3 unnecessary and improves the rate from O(sqrt(eps)) to O(eps).
 
-All applications in Section 1.4 satisfy anticommutation, so they are not affected by this defect. Theorem 3.4 itself, as printed in both arXiv versions, may not be cited without the extra hypothesis.
+All applications in Section 1.4 satisfy anticommutation, so they are not affected by this defect. Theorem 3.4 itself, as printed in both arXiv versions and in the journal (Section 3.6), may not be cited without the extra hypothesis.
 
 ### 3.2 Other points in Section 3
 
 - **Lemma 3.1** [2.1]. v3 added the hypothesis "D and D + S both have discrete spectra". The lemma is applied with D = D_h, and the paper itself says D_h has no compact resolvent in Section 5. The conclusion holds without discreteness: pH reduces both operators, and D_eps p = D_h p. So the proof is fixable and the statement is fine.
-- **Inner Leibniz.** Definition 2.13 is ill-typed: it applies L to the non-self-adjoint inner product and names L_A where L_B is meant. Latrémolière's own definition (arXiv:1811.10843) bounds the real and imaginary parts. Noticed by the referee of lemma 15; the proofs are unaffected.
+- **Inner Leibniz.** Definition 2.13 is ill-typed: it applies L to the non-self-adjoint inner product and names L_A where L_B is meant (the journal text corrects L_A to L_B and keeps the rest). Latrémolière's own definition (arXiv:1811.10843) bounds the real and imaginary parts. Noticed by the referee of lemma 15; the proofs are unaffected.
 - **Time window.** The proof concludes with separation over 0 <= t <= M_eps where 1/M_eps is meant. The estimate is uniform in t, so this is harmless. "1/t-covariant reach" is leftover terminology from Latrémolière 2022.
 - **Hypotheses that are strong or hard to verify in examples.**
   - (4) requires D_h to preserve ker D_v exactly. A mass or Yukawa term that mixes zero modes with excited modes violates it.
@@ -149,7 +149,7 @@ All applications in Section 1.4 satisfy anticommutation, so they are not affecte
   - (b) The verification of the hypotheses is sketched and contains errors. Item (0) checks that 0 is isolated in Sp(D_eps) instead of Sp(D_v), and argues self-adjointness from "one of them being bounded", although both summands are unbounded. Item (1) cites the Fourier Lemma 3.3, which is irrelevant, and then Proposition 3.6, whose hypotheses (constant anticommuting unitaries commuting with the D_j) do not literally cover local Clifford frames. Item (2) "proves" [D_v, b] = 0 by displaying [D'_{h,k}, b] = 0, which is false for nonconstant b (it is Clifford multiplication by grad b). Item (3) cites an unrefereed web note (Orduz). Item (5) is delegated ("Verified in the same way as in the proof of Theorem 5.5"), and its displayed inequalities swap D_h and D_v.
   - The conclusions are correct classically, by pointwise Clifford anticommutation and fibre averaging, but the written proof does not establish them.
   - (c) Odd dim N is asserted "mutatis mutandi", and non-constant fibre length is left "to the interested reader".
-- **Asserted examples.** The introduction and abstract of both versions list "homogeneous spaces of compact Lie groups". The corresponding passage is commented out in both sources, so no such result is proved.
+- **Asserted examples.** The introduction of v1, of v3 and of the journal text lists "homogeneous spaces of compact Lie groups" (the abstract does not; an earlier version of this line said it did). The corresponding passage is commented out in both sources, so no such result is proved.
 
 ### 3.4 Dependencies
 
@@ -189,6 +189,8 @@ v2 and v3 have identical sources. The arXiv comment says: restructured, introduc
 ### 3.6 Published version
 
 The arXiv record carries the journal reference, and an announcement page lists the paper as accepted. v2/v3 (Oct 2025) is therefore probably the accepted text. We could not see the journal version, so whether the hypothesis missing from Theorem 3.4 was added in print is unknown.
+
+**Update (3 Nov 2026).** The journal text (J. London Math. Soc. (2) 114 (2026) e70628, first published 3 July 2026) has now been read, and the hypothesis was not added. We compared its prose word by word with the v3 source (Python) and read the following statements directly: Theorem 3.4, the step (main-eq-1), the constant K_eps, Corollaries 3.5 and 4.1, and the remark after 4.1. In those statements and in the prose, the differences are copy-editing: macros written out, step headings in the proof of Theorem 3.4, and L_A corrected to L_B in Definition 2.13. Astra 6 compared the main statements of Sections 3 to 6 and found no further change ([validation](2026-11-03_astra_validation_corrections.md), item 4); other equations were not compared. The printed Theorem 3.4 has the same six hypotheses and the same typo "0 is isolated in Sp(D)". The step of Section 3.1 is printed as equation (3.11). So Counterexample R1 applies to the printed statement, and the conclusions above on v3 carry over to the statements compared. Anticommutation and the relative bound are sufficient repairs, as Terra 6.1 and Astra 6 both note; the anticommuting applications avoid this defect. Astra 6 also notes that Theorem 4.6 and Corollary 4.7 need a nonzero vertical kernel for the displayed target to be a spectral triple, in v3 and in print.
 
 ## 4. Relevance to lemma 09 and STRATEGY T0
 
@@ -289,6 +291,6 @@ For spectral continuity we should cite Latrémolière, Math. Ann. 389 (2024), di
 - the actual Dirac operator of the shrunk U(1)-bundle metric.
 
 **Open doubts.**
-- We have not seen the published version, which may have repaired Theorem 3.4.
+- We have not seen the published version, which may have repaired Theorem 3.4. *(Answered on 3 Nov 2026: the published version keeps it; see Section 3.6.)*
 - Lemma R2 (tuned interval -> (C, C^2, m_f sigma_1), at distance at least 1/(2 m_f) - 2l from Connes-Lott) and Lemma R3 (commutative limits are commutative) are our sketches. Both are short, and both bear directly on lemma 09 and on T0, so they should be written out and refereed before use.
 - The G-invariance step in Lemma 5.2 for nonabelian G is unverified.

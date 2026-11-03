@@ -7,11 +7,16 @@
 %%    Kind:   theorem | lemma | proposition | corollary | counterexample | no_go | conjecture | example | claim
 %%    Status: proved | conditional | reference | numerical | conjectural | open | reported | not_reconstructed | refuted | example | other
 %%    Label:  the status wording used in the source document
+%%    not_reconstructed: a reported value whose derivation is missing from the records. It is a missing record, with no verdict on the value; open_items/1 lists it.
 %% source(Id, File, Anchor)            Anchor: markdown heading anchor ('' for the file itself)
 %% depends(Id, Dep)                    Dep: a claim Id or hyp(Name)
 %% hypothesis(Name, Statement)
 %% attempted_by(Id, Agent)             Agent: astra6 | claude_opus_5_5 | terra | sol | chatgpt | corpus
 %% checked_by(Id, Agent, Method)       Method: by_hand | python(Description) | not_recorded(Description)
+%%    Each checked_by row stands in the block of its claim, so that the block reads as the whole record.
+%% referee_report(File, Report)        the referee of File by Terra 6.1 is in Report (the lemma table records it)
+%%    The test on these rows checks bookkeeping: a Terra checker, Terra authorship or an exception. It reads neither the statement nor the verdict of the report.
+%% outside_referee(Claim, Why)         a proved or conditional claim of a refereed File that its Report did not cover
 %% overturn(Id, Text)                  what would overturn applicability (research-state ledger)
 %% strategy(T, Status, Text)           Status: settled | partial | open
 %% addresses(T, Id)                    strategy item T is addressed by claim Id
@@ -23,7 +28,9 @@
 :- discontiguous refuted_by/2.
 :- discontiguous prior_work/3.
 :- discontiguous claim/5, source/3, depends/2, hypothesis/2, attempted_by/2, checked_by/3, overturn/2, addresses/2, strategy/3.
+:- discontiguous referee_report/2, outside_referee/2.
 :- use_module(library(lists)).
+:- use_module(library(readutil)).
 
 %% ---------------------------------------------------------------- lemmas
 claim(l01_count, theorem, proved, "Lemma 1", "Exact scalar count on CP^3 (invariant sector): N_0(K) = ((K+2)^5-(K+2))/30 and N_0(K-|r|) <= N_r(K) <= N_0(K).").
@@ -54,40 +61,47 @@ source(l03_weights, 'lemmas/03_mass_weighted_kinetic_terms.md', '').
 depends(l03_weights, hyp(heat_kernel_spectral_action)).
 attempted_by(l03_weights, astra6).
 checked_by(l03_weights, claude_opus_5_5, python("by hand and quadrature")).
-claim(l05_truncation, theorem, proved, "Theorem", "Connes-Lott two-point space = minimal grading-preserving spectral truncation of the chiral interval, |m| = pi/(2l); truncated distance 2l/pi.").
+claim(l05_truncation, theorem, proved, "Theorem", "The minimal grading-preserving spectral truncation of the chiral interval gives compressed complex two-point data with |m| = pi/(2l); the two states of the compressed operator system have distance 2l/pi, and their pullbacks are smeared measures. The full diagonal algebra with the inherited J fails first order.").
 source(l05_truncation, 'lemmas/05_deconstruction_interval.md', 'part-3-minimal-spectral-truncation').
 attempted_by(l05_truncation, astra6).
 checked_by(l05_truncation, claude_opus_5_5, python("spectra, commutator norms, distances, truncation")).
+checked_by(l05_truncation, terra_6_1, by_hand).  % as Theorem A of the paper, report 08_13_14
 claim(l05_limits, no_go, proved, "Proposition", "At fixed N: m -> 0 gives no heat dimension; m -> infinity leaves no light fermions (bare interval has no zero mode).").
 source(l05_limits, 'lemmas/05_deconstruction_interval.md', 'part-4-the-two-limits').
 depends(l05_limits, l05_truncation).
 attempted_by(l05_limits, astra6).
 checked_by(l05_limits, claude_opus_5_5, python("spectra")).
+checked_by(l05_limits, terra_6_1, by_hand).
 claim(l06_factorization, theorem, proved, "Theorem", "A KO-6 triple factors as (KO-7) x P_7 or (KO-5) x P_1 iff there is a grading-reversing involution U commuting with a, a°, D and UJ = sJU (s = +1: 11, s = -1: 9).").
 source(l06_factorization, 'lemmas/06_vectorlike_odd_factorization.md', '').
 attempted_by(l06_factorization, astra6).
 checked_by(l06_factorization, claude_opus_5_5, python("both involutions on the electrodynamics triple")).
+checked_by(l06_factorization, terra_6_1, by_hand).
 claim(l06_counterexample, counterexample, proved, "Counterexample", "Electrodynamics admits both U_+ and U_-: J alone does not select 9 versus 11.").
 source(l06_counterexample, 'lemmas/06_vectorlike_odd_factorization.md', '').
 depends(l06_counterexample, l06_factorization).
 attempted_by(l06_counterexample, astra6).
 checked_by(l06_counterexample, claude_opus_5_5, python("both involutions on the electrodynamics triple")).
+checked_by(l06_counterexample, terra_6_1, by_hand).
 claim(l06_nuL, no_go, proved, "No-go", "The strict light spectrum of the Standard Model representation with one or three unpaired nu_L and no Majorana term admits only the KO-7 factorization (odd multiplicity in the neutral criterion); no factorization while H is in the algebra. A statement about that finite triple, not about a parent manifold.").
 source(l06_nuL, 'lemmas/06_vectorlike_odd_factorization.md', 'consequence-for-the-10---9-claim').
 depends(l06_nuL, l06_factorization).
 attempted_by(l06_nuL, astra6).
 checked_by(l06_nuL, claude_opus_5_5, by_hand).
-claim(l07_real, lemma, proved, "Lemma 1", "Real structures on the chiral interval are diag(alpha,beta)K with eps = eps'' = +1 and alpha = eps' beta (KO-0).").
+checked_by(l06_nuL, terra_6_1, by_hand).
+claim(l07_real, lemma, proved, "Lemma 1", "Under pointwise reality, real structures on the chiral interval are diag(alpha,beta)K with eps = eps'' = +1 and alpha = eps' beta. Only eps' = +1 has standard KO-0 signs; the other sign uses the extended convention.").
 source(l07_real, 'lemmas/07_interval_selects_ko.md', '').
 depends(l07_real, l05_truncation).
 attempted_by(l07_real, claude_opus_5_5).
 checked_by(l07_real, claude_opus_5_5, by_hand).
-claim(l07_reflection, lemma, proved, "Lemma 3", "The reflection sigma gives s = eps': 9 versus 11 is the choice J versus J gamma.").
+checked_by(l07_real, astra6, by_hand).  % job 08, under pointwise reality
+claim(l07_reflection, lemma, proved, "Lemma 3", "For the bare interval, the reflection sign equals eps'. This calculation does not select a physical odd factorization of a fixed product triple.").
 source(l07_reflection, 'lemmas/07_interval_selects_ko.md', '').
 depends(l07_reflection, l07_real).
 depends(l07_reflection, l06_factorization).
 attempted_by(l07_reflection, claude_opus_5_5).
 checked_by(l07_reflection, claude_opus_5_5, by_hand).
+checked_by(l07_reflection, astra6, by_hand).  % job 08
 claim(conj07_4, conjecture, refuted, "Conjecture 07.4 (false as stated)", "For F_0 x (collapsing chiral interval), U = 1 x sigma has UJ = sJU with s fixed by eps' and the product grading twist; 9 versus 11 is decided by whether J_M or J_M gamma_5 is physical charge conjugation.").
 source(conj07_4, 'lemmas/07_interval_selects_ko.md', '').
 depends(conj07_4, l07_reflection).
@@ -97,59 +111,76 @@ claim(l09_index, theorem, proved, "Theorem 9.2, Corollary 9.3", "Index +1, -1, 0
 source(l09_index, 'lemmas/09_massive_chiral_interval.md', 'chirality-lives-in-the-boundary-conditions').
 attempted_by(l09_index, claude_opus_5_5).
 checked_by(l09_index, claude_opus_5_5, python("first-order discretization, N = 4000")).
-claim(l09_lightpair, theorem, proved, "Theorems 9.4, 9.6", "Bulk mass -mu, mu l > 1: one light pair lambda_0 = mu sech(kappa_0 l) ~ 2 mu e^(-mu l); its truncation is Connes-Lott with distance 1/lambda_0.").
+checked_by(l09_index, terra_6_1, by_hand).  % referee, 3 Nov 2026
+claim(l09_lightpair, theorem, proved, "Theorems 9.4, 9.6", "Bulk mass -mu, mu l > 1: one light pair lambda_0 = mu sech(kappa_0 l) ~ 2 mu e^(-mu l); its compressed complex two-point data have mass lambda_0 and distance 1/lambda_0. The full diagonal algebra with the inherited real structure fails first order.").
 source(l09_lightpair, 'lemmas/09_massive_chiral_interval.md', 'spectrum-of-the-mixed-condition-with-a-bulk-mass').
 depends(l09_lightpair, l05_truncation).
 attempted_by(l09_lightpair, claude_opus_5_5).
 checked_by(l09_lightpair, claude_opus_5_5, python("first-order discretization, N = 4000")).
-claim(l09_limits, theorem, proved, "Theorems 9.8, 9.9", "l -> infinity: chiral walls and a 1D Weyl law above mu (10 -> 11); l -> 0 at fixed light mass: unique mu(l), interval collapses with the light pair kept (10 -> 9).").
+checked_by(l09_lightpair, terra_6_1, by_hand).  % referee, 3 Nov 2026
+claim(l09_limits, theorem, proved, "Theorems 9.8, 9.9", "l -> infinity at fixed mu: chiral walls, and a 1D Weyl law above the bulk threshold mu; l -> 0 at fixed light mass: unique mu(l), and the interval collapses with the light pair kept. The readings 10 -> 11 and 10 -> 9 are proposed interpretations; compatibility with the KO factorizations is not established.").
 source(l09_limits, 'lemmas/09_massive_chiral_interval.md', 'the-two-limits').
 depends(l09_limits, l09_lightpair).
 attempted_by(l09_limits, claude_opus_5_5).
 checked_by(l09_limits, claude_opus_5_5, python("secular equation, collapse table")).
+checked_by(l09_limits, terra_6_1, by_hand).  % referee, 3 Nov 2026
 claim(l10_toeplitz, proposition, proved, "Proposition 10.1", "Q(x_a) = Gamma_a/5, Q(x_a)^2 = I/25, Q(x_a^2) = I/5 on CP^3.").
 source(l10_toeplitz, 'lemmas/10_toeplitz_twistor.md', '').
 attempted_by(l10_toeplitz, claude_opus_5_5).
 checked_by(l10_toeplitz, claude_opus_5_5, python("Monte Carlo, 2e6 samples")).
+checked_by(l10_toeplitz, terra_6_1, by_hand).  % referee, 3 Nov 2026
 claim(l11_bounds, proposition, conditional, "Proposition 11.1", "m_max/(2 sqrt 2) <= M_W <= sqrt(N_g) m_max.").
 source(l11_bounds, 'lemmas/11_spectral_action_heavy_w.md', '').
 depends(l11_bounds, hyp(ccm_relation)).
 attempted_by(l11_bounds, claude_opus_5_5).
 checked_by(l11_bounds, claude_opus_5_5, by_hand).
+checked_by(l11_bounds, terra_6_1, by_hand).  % referee, 3 Nov 2026
 claim(l11_nogo, no_go, conditional, "Corollary 11.2", "The heavy-W limit with all fermion masses fixed (canonical 14.1) is impossible in the spectral-action family; M_W -> infinity forces m_max -> infinity.").
 source(l11_nogo, 'lemmas/11_spectral_action_heavy_w.md', '').
 depends(l11_nogo, l11_bounds).
 attempted_by(l11_nogo, claude_opus_5_5).
 checked_by(l11_nogo, claude_opus_5_5, by_hand).
+checked_by(l11_nogo, terra_6_1, by_hand).  % referee, 3 Nov 2026
+checked_by(l11_nogo, astra6, by_hand).
 claim(l11_top, corollary, conditional, "Corollary 11.3", "If the top is the only diverging Dirac mass (a hypothesis), m_t/M_W -> sqrt(8/3).").
 source(l11_top, 'lemmas/11_spectral_action_heavy_w.md', '').
 depends(l11_top, l11_bounds).
 attempted_by(l11_top, claude_opus_5_5).
 checked_by(l11_top, claude_opus_5_5, by_hand).
-claim(l12_index, theorem, proved, "Theorem 12.2, Corollary 12.3", "Boundary Yukawa X: ind = N_Q - N_U for all X; zero modes all lift only for a vectorlike residual theory; without nu_R a massless nu_L is forced.").
+checked_by(l11_top, terra_6_1, by_hand).  % referee, 3 Nov 2026
+claim(l12_index, theorem, proved, "Theorem 12.2, Corollary 12.3", "Boundary Yukawa X: ind = N_Q - N_U for all X; zero modes all lift only for a vectorlike residual theory; without nu_R a massless nu_L is forced for every X preserving electromagnetic symmetry.").
 source(l12_index, 'lemmas/12_boundary_yukawa_interval.md', 'kernel-index-and-symmetry-breaking').
 depends(l12_index, l09_index).
 attempted_by(l12_index, claude_opus_5_5).
 checked_by(l12_index, claude_opus_5_5, by_hand).
-claim(l12_secular, theorem, proved, "Theorem 12.4, Example 12.5", "Exact secular equation det(lambda^2 - A X B X^dagger) = 0; one massless flavor: (n pi +- arctan|X|)/l, interpolating from (a)+(b) to (c)+(c).").
+checked_by(l12_index, terra_6_1, by_hand).  % referee, 3 Nov 2026
+claim(l12_secular, theorem, proved, "Theorem 12.4, Example 12.5", "Exact secular equation det(lambda^2 - A X B X^dagger) = 0, with the unique-zero claim on each field's first-pole window; one massless flavor: (n pi +- arctan|X|)/l, interpolating from (a)+(b) to (c)+(c), with zero of multiplicity two at X = 0 and arctan|X| = pi/2 as a limit.").
 source(l12_secular, 'lemmas/12_boundary_yukawa_interval.md', 'exact-secular-equation').
 depends(l12_secular, l09_lightpair).
 attempted_by(l12_secular, claude_opus_5_5).
 checked_by(l12_secular, claude_opus_5_5, python("scipy solve_ivp shooting")).
-claim(l12_towerless, theorem, proved, "Theorems 12.6, 12.7", "Light eigenvalues are fixed points lambda = sigma_k(A^1/2 X B^1/2) with two-sided bounds; towerless limit: D_F Yukawa block Phi_Q Y_hat Phi_U.").
+checked_by(l12_secular, terra_6_1, by_hand).  % referee, 3 Nov 2026
+claim(l12_towerless, theorem, proved, "Theorems 12.6, 12.7", "Light eigenvalues are fixed points lambda = sigma_k(A^1/2 X B^1/2) with two-sided bounds. Towerless limit: in a fixed spectral window whose boundary avoids the limiting spectrum, precisely the eigenvalues of D_F in that window are retained; the full Yukawa block Phi_Q Y_hat Phi_U is retained when E > ||D_F||; the exterior gap is in absolute value. A statement on spectral triples needs a specified algebra and representation.").
 source(l12_towerless, 'lemmas/12_boundary_yukawa_interval.md', 'light-spectrum-and-towerless-limit').
 depends(l12_towerless, l12_secular).
 attempted_by(l12_towerless, claude_opus_5_5).
 checked_by(l12_towerless, claude_opus_5_5, python("secular roots, random samples")).
-claim(l12_graded, lemma, proved, "Lemma 12.8, Corollary 12.9", "Graded singular values via compound matrices: masses ~ phi(c_k^Q) phi(c_k^U), exponential hierarchies.").
+checked_by(l12_towerless, terra_6_1, by_hand).  % referee, 3 Nov 2026
+claim(l12_graded, lemma, proved, "Lemma 12.8, Corollary 12.9", "Graded singular values via compound matrices; with nonzero trailing minors and small separation parameters, masses ~ phi(c_k^Q) phi(c_k^U), exponential hierarchies.").
 source(l12_graded, 'lemmas/12_boundary_yukawa_interval.md', 'hierarchies-from-localization').
 attempted_by(l12_graded, claude_opus_5_5).
 checked_by(l12_graded, claude_opus_5_5, python("2000 random complex 3x3 cases")).
-claim(l12_mixing, claim, numerical, "Remark 12.10", "Left mixing follows doublet localization: |V_ij| ~ phi(c_i^Q)/phi(c_j^Q).").
+checked_by(l12_graded, terra_6_1, by_hand).  % referee, 3 Nov 2026
+claim(l12_mixing, claim, numerical, "Remark 12.10", "In 500 anarchic samples the medians of |V_ij|/(phi(c_i^Q)/phi(c_j^Q)) are 1.02, 0.92, 1.09: left mixing follows doublet localization. The rigorous statement is the upper bound l12_mixing_bound; there is no universal lower bound.").
 source(l12_mixing, 'lemmas/12_boundary_yukawa_interval.md', 'hierarchies-from-localization').
 depends(l12_mixing, l12_graded).
 attempted_by(l12_mixing, claude_opus_5_5).
 checked_by(l12_mixing, claude_opus_5_5, python("500 anarchic samples")).
+claim(l12_mixing_bound, proposition, proved, "Remark 12.10, bound", "For M_s = F X_s G_s with X_s invertible and nonzero trailing minors, |V_ij| <= 3 K_u K_d f_i/f_j for i < j, independent of the right-hand profiles; identical sectors give V = 1, so there is no universal lower bound.").
+source(l12_mixing_bound, 'lemmas/12_boundary_yukawa_interval.md', 'hierarchies-from-localization').
+attempted_by(l12_mixing_bound, terra_6_1).  % in the referee report on lemma 12
+checked_by(l12_mixing_bound, claude_opus_5_5, python("numpy: 60000 inequalities on 20000 random complex 3x3 pairs, no violation; a numerical check of the bound, the proof is the referee's")).
+checked_by(l12_mixing_bound, astra6, by_hand).  % Astra validation, 3 Nov 2026, item 10: proof with the cofactor step
 attempted_by(conj07_4, astra6).  % job 07 cut off by the usage limit; job 08 answered it
 refuted_by(conj07_4, l08_both_signs).
 
@@ -159,55 +190,59 @@ source(l08_ce_reality, 'lemmas/08_product_selects_ko.md', '').
 depends(l08_ce_reality, l07_real).
 attempted_by(l08_ce_reality, astra6).
 checked_by(l08_ce_reality, claude_opus_5_5, by_hand).
+checked_by(l08_ce_reality, terra_6_1, by_hand).
 claim(l08_product, theorem, proved, "Theorem 5", "In the internal-first KO-6 product F_0 x interval, the KO-6 conditions force a = 0 and t(-1)^b = -1; the bare reflection 1 x sigma has s = -1 (formally 9).").
 source(l08_product, 'lemmas/08_product_selects_ko.md', '').
 depends(l08_product, l07_reflection).
 depends(l08_product, l06_factorization).
 attempted_by(l08_product, astra6).
 checked_by(l08_product, claude_opus_5_5, python("numpy; scratch check job08_check")).
+checked_by(l08_product, terra_6_1, by_hand).
 claim(l08_lift, proposition, proved, "Proposition 6", "Twisting the reflection by Gamma_0 flips s but commutes with D_F only if D_0 = 0; equivalent product conventions preserve s.").
 source(l08_lift, 'lemmas/08_product_selects_ko.md', '').
 depends(l08_lift, l08_product).
 attempted_by(l08_lift, astra6).
 checked_by(l08_lift, claude_opus_5_5, python("numpy; scratch check job08_check")).
+checked_by(l08_lift, terra_6_1, by_hand).
 claim(l08_reconcile, theorem, proved, "Theorem 7", "The scalar-algebra truncated product is exactly T_5(m) x P_1 with d_5 = D_0 + m Gamma_0 and j_5 = J_0 Gamma_0.").
 source(l08_reconcile, 'lemmas/08_product_selects_ko.md', '').
 depends(l08_reconcile, l08_product).
 depends(l08_reconcile, l06_factorization).
 attempted_by(l08_reconcile, astra6).
 checked_by(l08_reconcile, claude_opus_5_5, python("numpy; scratch check job08_check")).
+checked_by(l08_reconcile, terra_6_1, by_hand).
 claim(l08_nogo, no_go, proved, "No-go theorem 8", "Literal collapse of the massless chiral interval in the product leaves no light sector: |D_F| >= pi/(2l).").
 source(l08_nogo, 'lemmas/08_product_selects_ko.md', '').
 depends(l08_nogo, l05_limits).
 attempted_by(l08_nogo, astra6).
 checked_by(l08_nogo, claude_opus_5_5, python("numpy; scratch check job08_check")).
+checked_by(l08_nogo, terra_6_1, by_hand).
 claim(l08_spacetime, proposition, proved, "Proposition 9", "Spacetime grading twists (J_M versus J_M gamma) do not select the finite involution; both reductions use the same J_M.").
 source(l08_spacetime, 'lemmas/08_product_selects_ko.md', '').
 depends(l08_spacetime, l06_factorization).
 attempted_by(l08_spacetime, astra6).
 checked_by(l08_spacetime, claude_opus_5_5, by_hand).
+checked_by(l08_spacetime, terra_6_1, by_hand).
 claim(l08_chargeconj, proposition, proved, "Proposition 10", "Euclidean J_M is the charge conjugation in the CCM and van den Dungen-van Suijlekom conventions; Lorentzian C_L is neither J_M nor J_M gamma_5.").
 source(l08_chargeconj, 'lemmas/08_product_selects_ko.md', '').
 attempted_by(l08_chargeconj, astra6).
 checked_by(l08_chargeconj, claude_opus_5_5, by_hand).
+checked_by(l08_chargeconj, terra_6_1, by_hand).
 claim(l08_both_signs, counterexample, proved, "Counterexample 11", "A scalar-interval product with fixed D_F, J_F, Gamma_F, Q admits particle-preserving involutions U_- and U_+ = Q U_- of opposite signs.").
 source(l08_both_signs, 'lemmas/08_product_selects_ko.md', '').
 depends(l08_both_signs, l08_product).
 attempted_by(l08_both_signs, astra6).
 checked_by(l08_both_signs, claude_opus_5_5, python("numpy; scratch check job08_check")).
-claim(l08_pairing, theorem, proved, "Theorem 12", "If [Q, D] = 0 and QJ = -JQ, particle-preserving doubling involutions come in pairs of opposite sign; an unpaired nu_L obstructs particle-preserving doubling.").
+checked_by(l08_both_signs, terra_6_1, by_hand).
+claim(l08_pairing, theorem, proved, "Theorem 12", "Let Q be a self-adjoint involution commuting with Gamma, A, A° and D and anticommuting with J, and let the admissible U commute with Q. Then particle-preserving doubling involutions come in pairs of opposite sign; in the specified particle bimodules, an unpaired nu_L obstructs particle-preserving doubling.").
 source(l08_pairing, 'lemmas/08_product_selects_ko.md', '').
 depends(l08_pairing, l08_both_signs).
 attempted_by(l08_pairing, astra6).
 checked_by(l08_pairing, claude_opus_5_5, by_hand).
-checked_by(l07_real, astra6, by_hand).  % job 08, under pointwise reality
-checked_by(l07_reflection, astra6, by_hand).  % job 08
+checked_by(l08_pairing, terra_6_1, by_hand).
 claim_amended(l07_real, l08_ce_reality).
 claim_amended(l07_reflection, l08_product).
 
-checked_by(l09_index, terra_6_1, by_hand).  % referee, 3 Nov 2026
-checked_by(l09_lightpair, terra_6_1, by_hand).  % referee, 3 Nov 2026
-checked_by(l09_limits, terra_6_1, by_hand).  % referee, 3 Nov 2026
 
 %% ---------------------------------------------------------------- lemma 13 (Astra job 13, T4)
 claim(l13_compression, theorem, proved, "Theorem 2", "Exact compression of the fluctuated product to the lowest pair: weighted sheet connections and link phi = m + iB; image phi + phi* = 2m.").
@@ -215,34 +250,41 @@ source(l13_compression, 'lemmas/13_gauge_sector_truncation.md', '').
 depends(l13_compression, l05_truncation).
 attempted_by(l13_compression, astra6).
 checked_by(l13_compression, claude_opus_5_5, by_hand).
+checked_by(l13_compression, terra_6_1, by_hand).
 claim(l13_not_covariant, no_go, proved, "No-go theorem 3", "Fixed compression is not gauge covariant: a gauge-trivial A_5 with trivial Wilson line changes the compressed spectrum.").
 source(l13_not_covariant, 'lemmas/13_gauge_sector_truncation.md', '').
 depends(l13_not_covariant, l13_compression).
 attempted_by(l13_not_covariant, astra6).
 checked_by(l13_not_covariant, claude_opus_5_5, by_hand).
+checked_by(l13_not_covariant, terra_6_1, by_hand).
 claim(l13_kk_mass, lemma, proved, "Lemma 4", "The continuum vector mass pi/(2l) requires Neumann-Dirichlet gauge boundary conditions.").
 source(l13_kk_mass, 'lemmas/13_gauge_sector_truncation.md', '').
 attempted_by(l13_kk_mass, astra6).
 checked_by(l13_kk_mass, claude_opus_5_5, by_hand).
+checked_by(l13_kk_mass, terra_6_1, by_hand).
 claim(l13_mass_formula, proposition, proved, "Proposition 5", "Spectral-action vector masses: M^2 = (3/2) Q^{-1/2} K Q^{-1/2}.").
 source(l13_mass_formula, 'lemmas/13_gauge_sector_truncation.md', '').
 attempted_by(l13_mass_formula, astra6).
 checked_by(l13_mass_formula, claude_opus_5_5, by_hand).
+checked_by(l13_mass_formula, terra_6_1, by_hand).
 claim(l13_sqrt6, counterexample, proved, "Counterexample 6", "The minimal two-sheet spectral action gives the relative vector mass sqrt(6) m, against the tower mass m.").
 source(l13_sqrt6, 'lemmas/13_gauge_sector_truncation.md', '').
 depends(l13_sqrt6, l13_mass_formula).
 depends(l13_sqrt6, l13_kk_mass).
 attempted_by(l13_sqrt6, astra6).
 checked_by(l13_sqrt6, claude_opus_5_5, by_hand).
+checked_by(l13_sqrt6, terra_6_1, by_hand).
 claim(l13_ccm, corollary, proved, "Corollary 7", "With the CCM Standard Model trace and one massive colour triplet of mass m, M_W = sqrt(3/8) m.").
 source(l13_ccm, 'lemmas/13_gauge_sector_truncation.md', '').
 depends(l13_ccm, l13_mass_formula).
 depends(l13_ccm, hyp(ccm_relation)).
 attempted_by(l13_ccm, astra6).
+checked_by(l13_ccm, terra_6_1, by_hand).
 claim(l13_rho, proposition, proved, "Proposition 8", "With a Higgs doublet, rho = 1 and M_W/M_Z = sqrt(5/8) at the CCM matching scale.").
 source(l13_rho, 'lemmas/13_gauge_sector_truncation.md', '').
 depends(l13_rho, l13_mass_formula).
 attempted_by(l13_rho, astra6).
+checked_by(l13_rho, terra_6_1, by_hand).
 addresses(t4, l13_compression).  addresses(t4, l13_not_covariant).  addresses(t4, l13_sqrt6).  addresses(t4, l13_ccm).  addresses(t4b, l13_not_covariant).
 
 claim(l06_neutral, theorem, proved, "Lemma 4, Proposition 7", "Neutral-sector criterion: KO-7 always exists; KO-5 exists iff every singular value of the neutral mass matrix has even multiplicity; generic Majorana masses exclude KO-5.").
@@ -250,11 +292,8 @@ source(l06_neutral, 'lemmas/06_vectorlike_odd_factorization.md', '').
 depends(l06_neutral, l06_factorization).
 attempted_by(l06_neutral, astra6).
 checked_by(l06_neutral, claude_opus_5_5, by_hand).
+checked_by(l06_neutral, terra_6_1, by_hand).
 
-checked_by(l12_index, terra_6_1, by_hand).  % referee, 3 Nov 2026
-checked_by(l12_secular, terra_6_1, by_hand).  % referee, 3 Nov 2026
-checked_by(l12_towerless, terra_6_1, by_hand).  % referee, 3 Nov 2026
-checked_by(l12_graded, terra_6_1, by_hand).  % referee, 3 Nov 2026
 
 %% ---------------------------------------------------------------- prior work (LITERATURE.md, 3 Nov 2026)
 prior_work(l05_truncation, partial, "Connes-Lott 1991 sections I, III; Viet-Wali 1996; Dimakis-Muller-Hoissen 1994 section VII; truncation theorem not found").
@@ -271,94 +310,111 @@ claim(l14_covariant, theorem, proved, "Theorems 1-2", "The gapped spectral proje
 source(l14_covariant, 'lemmas/14_gauge_covariant_reduction.md', '').
 depends(l14_covariant, l13_not_covariant).
 attempted_by(l14_covariant, astra6).
+checked_by(l14_covariant, terra_6_1, by_hand).
 claim(l14_image, theorem, proved, "Theorem 3", "For the mixed interval with gauge-invariant bulk mass the induced finite link has fixed singular values and does not supply the full two-sheet fluctuation space.").
 source(l14_image, 'lemmas/14_gauge_covariant_reduction.md', '').
 depends(l14_image, l14_covariant).
 attempted_by(l14_image, astra6).
+checked_by(l14_image, terra_6_1, by_hand).
 claim(l14_sum_rule, theorem, proved, "Theorem 5", "At leading spectral-action order, M_spec = M_KK iff an explicit trace-and-overlap sum rule holds (M_spec^2 = (3/2) Q^-1/2 K Q^-1/2, M_KK^2 = G^-1/2 H G^-1/2).").
 source(l14_sum_rule, 'lemmas/14_gauge_covariant_reduction.md', '').
 depends(l14_sum_rule, l13_mass_formula).
 depends(l14_sum_rule, l14_covariant).
 attempted_by(l14_sum_rule, astra6).
 checked_by(l14_sum_rule, claude_opus_5_5, by_hand).
+checked_by(l14_sum_rule, terra_6_1, by_hand).
 claim(l14_three_fifths, counterexample, proved, "Counterexample 6", "The covariant lowest-mode reduction at zero bulk mass gives M_spec^2 = (3/5) M_KK^2.").
 source(l14_three_fifths, 'lemmas/14_gauge_covariant_reduction.md', '').
 depends(l14_three_fifths, l14_sum_rule).
 attempted_by(l14_three_fifths, astra6).
 checked_by(l14_three_fifths, claude_opus_5_5, by_hand).
+checked_by(l14_three_fifths, terra_6_1, by_hand).
 claim(l14_tuned, proposition, proved, "Proposition 7", "Equality holds for some bulk mass 0 < M_* < 3 pi/(4l); the matched fermion sits at the tower scale.").
 source(l14_tuned, 'lemmas/14_gauge_covariant_reduction.md', '').
 depends(l14_tuned, l14_sum_rule).
 depends(l14_tuned, l09_lightpair).
 attempted_by(l14_tuned, astra6).
 checked_by(l14_tuned, claude_opus_5_5, by_hand).
+checked_by(l14_tuned, terra_6_1, by_hand).
 claim(l14_nogo_collapse, no_go, proved, "No-go theorem 8", "Bounded light fermions give M_spec^2 <= 6 C^2 and cannot match the collapsing Neumann-Dirichlet tower pi/(2l).").
 source(l14_nogo_collapse, 'lemmas/14_gauge_covariant_reduction.md', '').
 depends(l14_nogo_collapse, l14_sum_rule).
 depends(l14_nogo_collapse, l13_kk_mass).
 attempted_by(l14_nogo_collapse, astra6).
 checked_by(l14_nogo_collapse, claude_opus_5_5, by_hand).
+checked_by(l14_nogo_collapse, terra_6_1, by_hand).
 claim(l14_normalizations, proposition, proved, "Proposition 9", "Matching one vector mass does not fix relative gauge couplings or all scalar kinetic coefficients.").
 source(l14_normalizations, 'lemmas/14_gauge_covariant_reduction.md', '').
 depends(l14_normalizations, l14_sum_rule).
 attempted_by(l14_normalizations, astra6).
+checked_by(l14_normalizations, terra_6_1, by_hand).
 addresses(t4b, l14_sum_rule).  addresses(t4b, l14_tuned).  addresses(t4b, l14_nogo_collapse).
 
-checked_by(l10_toeplitz, terra_6_1, by_hand).  % referee, 3 Nov 2026
-checked_by(l11_bounds, terra_6_1, by_hand).  % referee, 3 Nov 2026
-checked_by(l11_nogo, terra_6_1, by_hand).  % referee, 3 Nov 2026
-checked_by(l11_top, terra_6_1, by_hand).  % referee, 3 Nov 2026
 
-claim(fl_R1, counterexample, proved, "Counterexample R1", "Theorem 3.4 of Farsi-Latremoliere (arXiv v1-v3) needs anticommutation of D_h and D_v or a relative bound: a scalar-algebra family meets its six hypotheses and contradicts Corollary 3.5.").
+claim(fl_R1, counterexample, proved, "Counterexample R1", "Theorem 2.5 of arXiv v1 of Farsi-Latremoliere, Theorem 3.4 in v3 and in J. London Math. Soc. 114 (2026) e70628, with the same six hypotheses and the step printed as (3.11): the printed hypotheses are insufficient, since a scalar-algebra family meets them and contradicts Corollary 3.5. Anticommutation of D_h and D_v, or the stated uniform relative bound, supplies a sufficient additional hypothesis; the anticommuting applications avoid this defect.").
 source(fl_R1, 'reviews/2026-11-03_farsi_latremoliere_assessment.md', '31-theorem-34-is-missing-a-hypothesis').
 attempted_by(fl_R1, claude_subagent).
 checked_by(fl_R1, claude_opus_5_5, by_hand).
-claim(fl_R2, corollary, proved, "Corollary 15.5 (Lemma R2)", "The tuned interval of Theorem 9.9 converges in spectral propinquity to (C, C^2, m_f sigma_1), with l/2 <= Lambda_spec <= l/2 + l^2/(pi^2 + c^2), at distance at least min(sqrt(2)/2, (1/m_f - l)/2) from the Connes-Lott triple.").
+checked_by(fl_R1, terra_6_1, by_hand).  % report paper_note, item 49, on arXiv v3
+checked_by(fl_R1, astra6, by_hand).  % Astra validation, 3 Nov 2026, item 4: against the journal text
+claim(fl_R2, corollary, proved, "Corollary 15.5 (Lemma R2)", "The tuned interval of Theorem 9.9 converges in spectral propinquity to (C, C^2, m_f sigma_1), with min(sqrt(2)/2, l/2) <= Lambda_spec <= l/2 + l^2/(pi^2 + c^2), at distance at least min(sqrt(2)/2, (1/m_f - l)/2) from the Connes-Lott triple.").
 source(fl_R2, 'lemmas/15_propinquity_collapse.md', 'the-gap-criterion-lemma-r2').
 depends(fl_R2, l09_limits).
 depends(fl_R2, l15_gap).
 attempted_by(fl_R2, claude_subagent).
 attempted_by(fl_R2, claude_opus_5_5).
+checked_by(fl_R2, terra_6_1, by_hand).
 claim(fl_R3, theorem, proved, "Theorem 15.2 (Lemma R3)", "Propinquity limits of commutative quantum compact metric spaces are commutative, and the number of connected components does not increase in the limit.").
 source(fl_R3, 'lemmas/15_propinquity_collapse.md', 'limits-of-commutative-spaces-lemma-r3').
 attempted_by(fl_R3, claude_subagent).
 attempted_by(fl_R3, claude_opus_5_5).
+checked_by(fl_R3, terra_6_1, by_hand).
 claim(l15_gap, theorem, proved, "Theorem 15.3", "A metric triple with a finite spectral block and gap g has min(sqrt(2)/2, delta/2) <= Lambda_spec(T, (C, C^N, D_F)) <= 1/g^2 + max(delta/2, Delta) + Delta + sqrt(Delta); no anticommutation hypothesis.").
 source(l15_gap, 'lemmas/15_propinquity_collapse.md', 'the-gap-criterion-lemma-r2').
 attempted_by(l15_gap, claude_opus_5_5).
+checked_by(l15_gap, terra_6_1, by_hand).
 claim(l15_yukawa, corollary, proved, "Corollary 15.6", "The towerless Yukawa family of Theorem 12.7 converges at rate O(l) to (C, C^(N_Q+N_U), D_F) with D_F the Yukawa block Phi_Q Y_hat Phi_U.").
 source(l15_yukawa, 'lemmas/15_propinquity_collapse.md', 'the-gap-criterion-lemma-r2').
 depends(l15_yukawa, l15_gap).
 attempted_by(l15_yukawa, claude_opus_5_5).
-claim(l15_converse, theorem, proved, "Theorem 15.7", "Convergence to (C, C^N, D_F) in Lambda_spec holds iff the diameter tends to 0, the gap to infinity and the light block to D_F with multiplicities.").
+checked_by(l15_yukawa, terra_6_1, by_hand).
+claim(l15_converse, theorem, proved, "Theorem 15.7", "Convergence to (C, C^N, D_F) in Lambda_spec holds iff the diameter tends to 0 and there exist light projections and identifying unitaries with light-block error tending to 0 and exterior gap tending to infinity.").
 source(l15_converse, 'lemmas/15_propinquity_collapse.md', 'the-converse').
 depends(l15_converse, l15_gap).
 attempted_by(l15_converse, claude_opus_5_5).
+checked_by(l15_converse, terra_6_1, by_hand).
 claim(l15_finite_limits, corollary, proved, "Corollary 15.8", "The finite limits in Lambda_spec of connected commutative metric triples are exactly (C, C^N, D_F), with every Hermitian D_F arising. A statement about this metric only.").
 source(l15_finite_limits, 'lemmas/15_propinquity_collapse.md', 'the-converse').
 depends(l15_finite_limits, fl_R3).
 depends(l15_finite_limits, l15_converse).
 attempted_by(l15_finite_limits, claude_opus_5_5).
-claim(l15_grading, proposition, proved, "Proposition 15.9", "For a symmetric spectral block, gamma and J descend exactly with their signs, and the tunnels of Theorem 15.3 control them.").
+checked_by(l15_finite_limits, terra_6_1, by_hand).
+claim(l15_grading, proposition, proved, "Proposition 15.9", "For a symmetric spectral block, the signs and Dirac relations of gamma and J descend exactly for the compressed operator D_B. Relative to an independently chosen D_F, the Dirac-relation defects are at most 2 Delta; control of J requires the stated extension to antilinear functionals.").
 source(l15_grading, 'lemmas/15_propinquity_collapse.md', 'grading-and-real-structure').
 depends(l15_grading, l15_gap).
 attempted_by(l15_grading, claude_opus_5_5).
+checked_by(l15_grading, terra_6_1, by_hand).
 claim(l16_interval_algebra, claim, proved, "Example 16(b)", "The compression of C([0,l]) to the second spectral level of the chiral interval is a 4-dimensional operator system generating M_2(C) + M_2(C), at fixed truncation.").
 source(l16_interval_algebra, 'lemmas/16_coarse_truncation.md', 'setting').
 attempted_by(l16_interval_algebra, claude_opus_5_5).
 checked_by(l16_interval_algebra, claude_opus_5_5, python("numpy quadrature: dimensions 4 and 8, the two displayed compressions")).
+checked_by(l16_interval_algebra, terra_6_1, by_hand).
 claim(l16_standard_nogo, no_go, proved, "Proposition 16.1", "With pointwise reality J a J^-1 = a*, the compressed data with inherited J satisfy order zero iff the generated algebra is commutative.").
 source(l16_standard_nogo, 'lemmas/16_coarse_truncation.md', 'the-standard-correspondence').
 attempted_by(l16_standard_nogo, claude_opus_5_5).
+checked_by(l16_standard_nogo, terra_6_1, by_hand).
+checked_by(l16_standard_nogo, astra6, by_hand).
 claim(l16_coarse, theorem, proved, "Theorem 16.2", "On H_0 (x) conj(H_0), with the graded flip J and DD = D_0 (x) 1 + gamma_0 (x) D^c, A_0 acting on the left gives a real even triple with signs (+,+,+), order zero and order one.").
 source(l16_coarse, 'lemmas/16_coarse_truncation.md', 'the-coarse-correspondence').
 attempted_by(l16_coarse, claude_opus_5_5).
 checked_by(l16_coarse, claude_opus_5_5, python("numpy on random finite data: all signs, order zero, order one")).
+checked_by(l16_coarse, terra_6_1, by_hand).
 claim(l16_truncation, corollary, proved, "Corollaries 16.3 and 16.4", "The truncation of the doubled parent is a finite real even triple with order zero and order one for every generated algebra, noncommutative or not; a Clifford point gives the KO-6 signs and dim H = 2 k^2.").
 source(l16_truncation, 'lemmas/16_coarse_truncation.md', 'the-coarse-correspondence').
 depends(l16_truncation, l16_coarse).
 attempted_by(l16_truncation, claude_opus_5_5).
 checked_by(l16_truncation, claude_opus_5_5, python("numpy on random finite data: KO-6 signs")).
+checked_by(l16_truncation, terra_6_1, by_hand).
 claim(t0_note_overread, claim, refuted, "Earlier T0 note", "A noncommutative A_F must come from compressions, operator systems or a noncommutative parent, and compressions being operator systems forces the algebra to be produced by a limit.").
 source(t0_note_overread, 'reviews/2026-11-03_t0_note_assessment.md', 'claim-by-claim').
 attempted_by(t0_note_overread, claude_opus_5_5).
@@ -366,14 +422,9 @@ claim(l10_generates_m4, counterexample, proved, "Proposition 10.1 and example 16
 source(l10_generates_m4, 'lemmas/16_coarse_truncation.md', 'setting').
 depends(l10_generates_m4, l10_toeplitz).
 attempted_by(l10_generates_m4, claude_opus_5_5).
+checked_by(l10_generates_m4, terra_6_1, by_hand).  % report 15_16, under Proposition 10.1 and example (c)
 refuted_by(t0_note_overread, l10_generates_m4).
 %% Referee of lemmas 15 and 16 (Terra 6.1, 3 Nov 2026): reviews/2026-11-03_terra_check_15_16.md
-checked_by(fl_R2, terra_6_1, by_hand).  checked_by(fl_R3, terra_6_1, by_hand).
-checked_by(l15_gap, terra_6_1, by_hand).  checked_by(l15_yukawa, terra_6_1, by_hand).
-checked_by(l15_converse, terra_6_1, by_hand).  checked_by(l15_finite_limits, terra_6_1, by_hand).
-checked_by(l15_grading, terra_6_1, by_hand).  checked_by(l16_interval_algebra, terra_6_1, by_hand).
-checked_by(l16_standard_nogo, terra_6_1, by_hand).  checked_by(l16_coarse, terra_6_1, by_hand).
-checked_by(l16_truncation, terra_6_1, by_hand).
 claim(l15_first_order, proposition, proved, "Proposition 15.10", "In a finite real triple with order zero and order one, if D commutes with u J u J^-1 then [D, u] = 0; in a metric such triple, u is scalar.").
 source(l15_first_order, 'lemmas/15_propinquity_collapse.md', 'unbroken-symmetry-and-the-metric-class').
 attempted_by(l15_first_order, terra_6_1).
@@ -419,6 +470,7 @@ claim(rs_G3, claim, proved, "proved in the displayed KK ansatz; quadrature verif
 source(rs_G3, 'connes_kk_research_state.md', '32-one-precise-berger-calculation').
 overturn(rs_G3, "Extra action terms, changed gauge embedding, broken \\(U(2)\\) isometry or thresholds invalidate direct physical use.").
 attempted_by(rs_G3, corpus).
+checked_by(rs_G3, corpus, not_recorded("numerical quadrature reported in section 3.2; language not recorded")).
 claim(rs_G4, claim, proved, "proved by two metrics on the same \\(L(5,1)\\)", "Quotient topology alone fixes no angle: proved by two metrics on the same \\(L(5,1)\\).").
 source(rs_G4, 'connes_kk_research_state.md', '').
 depends(rs_G4, rs_G2).
@@ -504,11 +556,13 @@ claim(rs_N1, claim, proved, "proved; finite-matrix checked", "The compressed ope
 source(rs_N1, 'connes_kk_research_state.md', '62-an-exact-1oplus2oplus3-construction').
 overturn(rs_N1, "A different bundle, projection or demand that compression itself be a homomorphism changes the claim.").
 attempted_by(rs_N1, corpus).
+checked_by(rs_N1, corpus, not_recorded("finite-matrix computation of the complex dimension, section 6.2")).
 claim(rs_N1a, claim, proved, "proved; finite-matrix checked", "At \\(p=5\\), the degree-one projective doublet is not an untwisted scalar Hopf mode; the first positive compatible degree gives a six-dimensional holomorphic sector: proved; finite-matrix checked.").
 source(rs_N1a, 'connes_kk_research_state.md', '62-an-exact-1oplus2oplus3-construction').
 depends(rs_N1a, rs_G2a).
 overturn(rs_N1a, "A flat deck-character twist, different field bundle or another spectral sector changes the selection rule.").
 attempted_by(rs_N1a, corpus).
+checked_by(rs_N1a, corpus, not_recorded("finite-matrix rank calculation, section 6.2")).
 claim(rs_N1b, claim, proved, "proved within the two displayed constructions", "At fixed projective base and bundle, changing the Hopf radius varies the Berger angle while leaving that base zero-mode algebra fixed: proved within the two displayed constructions.").
 source(rs_N1b, 'connes_kk_research_state.md', '62-an-exact-1oplus2oplus3-construction').
 depends(rs_N1b, rs_G2a).
@@ -563,6 +617,7 @@ claim(rs_N11, claim, proved, "proved and numerically checked", "Round-sphere rot
 source(rs_N11, 'connes_kk_research_state.md', '69-an-isometry-becoming-inner-after-compression').
 overturn(rs_N11, "Other projections or backgrounds can break equivariance or alter the resulting algebra.").
 attempted_by(rs_N11, corpus).
+checked_by(rs_N11, corpus, not_recorded("numerical check reported in section 6.9")).
 claim(rs_N12, claim, proved, "proved under the bounded-perturbation assumptions", "A gapped Dirac family has a finite low-energy sector with the stated \\(O(R)\\) Feshbach correction: proved under the bounded-perturbation assumptions.").
 source(rs_N12, 'connes_kk_research_state.md', '610-what-towerless-can-mean').
 overturn(rs_N12, "Missing zero modes, closing gap, or unbounded \\(R\\)-dependent couplings require a new estimate.").
@@ -594,6 +649,7 @@ claim(rs_N18, claim, proved, "proved; exact finite-matrix checked", "The stated 
 source(rs_N18, 'connes_kk_research_state.md', '613-torus-crossed-product-finite-quotient-versus-mode-compression').
 overturn(rs_N18, "Another group action, a required real structure or an actual spectral cutoff demands additional work.").
 attempted_by(rs_N18, corpus).
+checked_by(rs_N18, corpus, not_recorded("exact finite-matrix check reported in section 6.13")).
 claim(rs_N19, claim, proved, "proved", "A nonzero finite-rank compression of all scalar multipliers on a nonatomic space cannot be multiplicative: proved.").
 source(rs_N19, 'connes_kk_research_state.md', '613-torus-crossed-product-finite-quotient-versus-mode-compression').
 overturn(rs_N19, "Atomic measures, approximate or nonmultiplicative compression, and abstract quotient representations are outside the statement.").
@@ -739,29 +795,6 @@ source(paper_14_3_1, 'canonical_research.md', '143-the-angle-test').
 attempted_by(paper_14_3_1, corpus).
 checked_by(paper_14_3_1, corpus, python("see research_checks_knowledge.md")).
 %% Referee of lemmas 08, 13 and 14 (Terra 6.1, 3 Nov 2026): reviews/2026-11-03_terra_check_08_13_14.md
-checked_by(l08_both_signs, terra_6_1, by_hand).
-checked_by(l08_ce_reality, terra_6_1, by_hand).
-checked_by(l08_chargeconj, terra_6_1, by_hand).
-checked_by(l08_lift, terra_6_1, by_hand).
-checked_by(l08_nogo, terra_6_1, by_hand).
-checked_by(l08_pairing, terra_6_1, by_hand).
-checked_by(l08_product, terra_6_1, by_hand).
-checked_by(l08_reconcile, terra_6_1, by_hand).
-checked_by(l08_spacetime, terra_6_1, by_hand).
-checked_by(l13_ccm, terra_6_1, by_hand).
-checked_by(l13_compression, terra_6_1, by_hand).
-checked_by(l13_kk_mass, terra_6_1, by_hand).
-checked_by(l13_mass_formula, terra_6_1, by_hand).
-checked_by(l13_not_covariant, terra_6_1, by_hand).
-checked_by(l13_rho, terra_6_1, by_hand).
-checked_by(l13_sqrt6, terra_6_1, by_hand).
-checked_by(l14_covariant, terra_6_1, by_hand).
-checked_by(l14_image, terra_6_1, by_hand).
-checked_by(l14_nogo_collapse, terra_6_1, by_hand).
-checked_by(l14_normalizations, terra_6_1, by_hand).
-checked_by(l14_sum_rule, terra_6_1, by_hand).
-checked_by(l14_three_fifths, terra_6_1, by_hand).
-checked_by(l14_tuned, terra_6_1, by_hand).
 claim(terra_two_neutral_pairs, counterexample, proved, "Referee's counterexample to the unqualified D.2", "H = C^2 (x) C^2, A = C, D = 0, Gamma = 1 (x) sigma_3, J = (1 (x) sigma_1) K: two unpaired neutral states, no Majorana term, with involutions 1 (x) sigma_1 and sigma_2 (x) sigma_1 of opposite signs.").
 source(terra_two_neutral_pairs, 'reviews/2026-11-03_terra_check_08_13_14.md', 'section-6-theorem-d').
 attempted_by(terra_two_neutral_pairs, terra_6_1).
@@ -780,12 +813,14 @@ source(l16_two_sheets, 'lemmas/16_coarse_truncation.md', 'two-sheets-the-form-of
 depends(l16_two_sheets, l16_coarse).
 attempted_by(l16_two_sheets, claude_opus_5_5).
 checked_by(l16_two_sheets, claude_opus_5_5, python("numpy on random finite data: signs, order zero, order one, orientability")).
+checked_by(l16_two_sheets, terra_6_1, by_hand).
 claim(l16_twistor, claim, proved, "Example 16.9", "At twistor level one on two sheets, real functions on S^4 and on CP^3 generate M_2(H) + M_4(C) on E (-) E* of dimension 32 with J(x, y) = (y*, x*). The second sheet, the base-function restriction and the window are inputs; the grading is added after truncation (abstract finite data, not an even truncation of the parent); no operator connects the two pieces.").
 source(l16_twistor, 'lemmas/16_coarse_truncation.md', 'two-sheets-the-form-of-the-classification').
 depends(l16_twistor, l16_two_sheets).
 depends(l16_twistor, l10_toeplitz).
 attempted_by(l16_twistor, claude_opus_5_5).
 checked_by(l16_twistor, claude_opus_5_5, python("numpy: real dimensions 16 and 32, j, the structure on k = 4")).
+checked_by(l16_twistor, terra_6_1, by_hand).
 addresses(t0b, l16_two_sheets).  addresses(t0b, l16_twistor).
 %% Astra job 18 (T5b). Referee: reviews/2026-11-03_terra_check_18_16b.md
 claim(l18_kernel, theorem, proved, "Theorem 1, Lemma 2, Corollary 3", "Exact quadratic kernel of the spectral action for a transverse vector about constant V_0, for f a Laplace transform of a positive measure with moment conditions; gauge invariance through the Goldstone orbit; the asymptotic expansion reproduces Proposition 13.5 and the CCM relation.").
@@ -793,49 +828,57 @@ source(l18_kernel, 'lemmas/18_heavy_limit_near_cutoff.md', '').
 depends(l18_kernel, l03_weights).
 attempted_by(l18_kernel, astra6).
 checked_by(l18_kernel, claude_opus_5_5, python("direct heat traces at zero and nonzero momentum, independent of the kernel")).
-claim(l18_taylor, proposition, proved, "Proposition 4, Theorem 5", "Top-only Standard Model family at fixed Lambda: M_W^2 -> 3 m^2/8 at small m/Lambda, M_W^2 ~ Lambda^4/m^2 at large m/Lambda, for the Taylor and pole masses, with M_W^2 <= Lambda^2/e (pole for the heat cutoff; Taylor for the whole class).").
+checked_by(l18_kernel, terra_6_1, by_hand).
+claim(l18_taylor, proposition, proved, "Proposition 4, Theorem 5", "Top-only Standard Model family at fixed Lambda. For the heat cutoff: M_W^2 -> 3 m^2/8 at small m/Lambda, M_W^2 ~ Lambda^4/m^2 at large m/Lambda, for the Taylor and pole masses, with M_W^2 <= Lambda^2/e for both. For the positive Laplace class, the Taylor mass at large m/Lambda is M_W^2 ~ (int s^-2 d nu(s)/f(0)) Lambda^4/m^2, so the constant 1/e is specific to the heat cutoff.").
 source(l18_taylor, 'lemmas/18_heavy_limit_near_cutoff.md', '').
 depends(l18_taylor, l18_kernel).
 attempted_by(l18_taylor, astra6).
 checked_by(l18_taylor, claude_opus_5_5, python("closed forms, limits, bound, root of the pole equation")).
+checked_by(l18_taylor, terra_6_1, by_hand).
 claim(l18_angles, proposition, proved, "Proposition 6", "In the same family kappa_em/kappa_s = 8/3 and the neutral-current cos^2 theta = 5/8 for all m/Lambda; the matching angle tends to 103/157; M_Z^2 ~ (2/3) x exp(-x) Lambda^2.").
 source(l18_angles, 'lemmas/18_heavy_limit_near_cutoff.md', '').
 depends(l18_angles, l18_kernel).
 attempted_by(l18_angles, astra6).
 checked_by(l18_angles, claude_opus_5_5, python("neutral matrix recomputed from Standard Model charges")).
+checked_by(l18_angles, terra_6_1, by_hand).
 claim(l18_wrong_sign, counterexample, proved, "Counterexample 7", "For V_0 = m sigma_3, T = sigma_1, the Taylor kinetic coefficient is negative for m^2 > Lambda^2 (heat cutoff; negative somewhere for all f in the class), while the full form has a unique positive pole with M^2 ~ 4 m^2.").
 source(l18_wrong_sign, 'lemmas/18_heavy_limit_near_cutoff.md', '').
 depends(l18_wrong_sign, l18_kernel).
 attempted_by(l18_wrong_sign, astra6).
 checked_by(l18_wrong_sign, claude_opus_5_5, python("direct heat trace at nonzero momentum against the kernel")).
+checked_by(l18_wrong_sign, terra_6_1, by_hand).
 claim(l18_no_centralizer, counterexample, proved, "Counterexample 8", "As m_t -> infinity at fixed Lambda, the broken vectors keep a finite nonzero kinetic form and a vanishing mass: heavy fermions do not select the centralizer by mass decoupling. Restricting the connection to the centralizer from the outset does give decoupling of the heavy block.").
 source(l18_no_centralizer, 'lemmas/18_heavy_limit_near_cutoff.md', '').
 depends(l18_no_centralizer, l18_taylor).
 attempted_by(l18_no_centralizer, astra6).
-claim(l18_radial, no_go, proved, "No-go theorem 9", "For f in the positive Laplace class, without an added potential or constraint, no finite c > 0 is stationary along V = c V_*: the constant-background density decreases monotonically.").
+checked_by(l18_no_centralizer, terra_6_1, by_hand).
+claim(l18_radial, no_go, proved, "No-go theorem 9", "For f in the positive Laplace class and V_* != 0, without an added potential or constraint, no finite c > 0 is stationary along V = c V_*: the constant-background density decreases monotonically.").
 source(l18_radial, 'lemmas/18_heavy_limit_near_cutoff.md', '').
 attempted_by(l18_radial, astra6).
 checked_by(l18_radial, claude_opus_5_5, by_hand).
-claim(l18_joint, corollary, proved, "Corollary 10", "The limit m_t/M_W -> sqrt(8/3) with all scales diverging needs Lambda -> infinity with m_t/Lambda -> 0; at fixed m_t/Lambda > 0, masses scale with Lambda and the ratio is a function of m_t/Lambda.").
+checked_by(l18_radial, terra_6_1, by_hand).
+claim(l18_joint, corollary, proved, "Corollary 10", "In the top-only heat-cutoff Taylor family, the limit m_t/M_W -> sqrt(8/3) with all scales diverging needs Lambda -> infinity with m_t/Lambda -> 0; at fixed m_t/Lambda > 0, masses scale with Lambda and the ratio is a function of m_t/Lambda. Other finite data and mass definitions need their own argument.").
 source(l18_joint, 'lemmas/18_heavy_limit_near_cutoff.md', '').
 depends(l18_joint, l18_taylor).
 attempted_by(l18_joint, astra6).
+checked_by(l18_joint, terra_6_1, by_hand).
 addresses(t5b, l18_taylor).  addresses(t5b, l18_no_centralizer).  addresses(t5b, l18_radial).  addresses(t5b, l18_joint).
-claim(l18_radial_general, proposition, proved, "Proposition 11", "On flat R^4, U'(c) = -(c Lambda^2/2 pi^2) sum lambda_j^2 int f over the tail; for nonnegative f of unbounded support there is no finite stationary point, and compact support gives a plateau.").
+claim(l18_radial_general, proposition, proved, "Proposition 11", "On flat R^4, with V_* != 0, U'(c) = -(c Lambda^2/2 pi^2) sum lambda_j^2 int f over the tail; for nonnegative f of unbounded support there is no finite stationary point, and compact support gives a plateau.").
 source(l18_radial_general, 'lemmas/18_heavy_limit_near_cutoff.md', '').
 attempted_by(l18_radial_general, terra_6_1).
 checked_by(l18_radial_general, claude_opus_5_5, python("numerical derivative against the formula for a compact bump")).
-claim(l18_several, proposition, proved, "Propositions 12 and 13", "The top-only Taylor result holds for nonnegative compactly supported f; with several heavy doublets and P > 0 the Taylor mass tends to 0, and with P = 0 it scales as m^4/(2 Lambda^2) with pole m^2/2.").
+claim(l18_several, proposition, proved, "Propositions 12 and 13", "The top-only Taylor result holds for nonnegative compactly supported f. For the heat cutoff and finitely many doublets, each with one massive and one massless member: with several heavy doublets and P > 0 the Taylor mass tends to 0; with P = 0 and all massive members of the same m, it scales as m^4/(2 Lambda^2) with pole m^2/2.").
 source(l18_several, 'lemmas/18_heavy_limit_near_cutoff.md', '').
 depends(l18_several, l18_taylor).
 attempted_by(l18_several, terra_6_1).
 checked_by(l18_several, claude_opus_5_5, python("Taylor ratio and pole root at large x")).
-claim(l18_fully_massive, proposition, proved, "Proposition 14", "With both members of every doublet of equal mass and no Majorana masses, the pole masses diverge at fixed cutoff (2x < z_W < 2x + 2, 16x/5 < z_Z < 16x/5 + 2), M_W^2/M_Z^2 -> 5/8 for x -> 0 and x -> infinity, the kernel vanishes at fixed momentum and the Taylor kinetic term has the wrong sign for x > 2. No light fermions.").
+claim(l18_fully_massive, proposition, proved, "Proposition 14", "For the heat cutoff, with one common Dirac mass m > 0 for all species, including neutrinos, and no Majorana masses: the pole masses diverge at fixed cutoff (2x < z_W < 2x + 2, 16x/5 < z_Z < 16x/5 + 2), M_W^2/M_Z^2 -> 5/8 for x -> 0 and x -> infinity, the kernel vanishes at fixed momentum and the charged Taylor kinetic coefficient has the wrong sign for x > 2. No light fermions.").
 source(l18_fully_massive, 'lemmas/18_heavy_limit_near_cutoff.md', '').
 depends(l18_fully_massive, l18_kernel).
 attempted_by(l18_fully_massive, terra_6_1).
 attempted_by(l18_fully_massive, claude_opus_5_5).
 checked_by(l18_fully_massive, claude_opus_5_5, python("direct doublet kernel from equation (1), pole equations, the ratio")).
+checked_by(l18_fully_massive, astra6, by_hand).  % Astra validation, 3 Nov 2026, item 11: complete proof
 claim(l18_not_unbroken, claim, proved, "Remark 15", "In the top-only limit the compressed generators on b_L do not satisfy the SU(2) relations, and the limiting coefficients have K_W != K_33 and K_3Y != 0; vanishing vector masses do not show unbroken SU(2) x U(1) on the light space.").
 source(l18_not_unbroken, 'lemmas/18_heavy_limit_near_cutoff.md', '').
 depends(l18_not_unbroken, l18_angles).
@@ -849,99 +892,105 @@ claim(l16_grading_not_even, no_go, proved, "Example 16.9, grading", "An even par
 source(l16_grading_not_even, 'lemmas/16_coarse_truncation.md', 'two-sheets-the-form-of-the-classification').
 attempted_by(l16_grading_not_even, terra_6_1).
 checked_by(l16_grading_not_even, claude_opus_5_5, by_hand).
-checked_by(l18_kernel, terra_6_1, by_hand).
-checked_by(l18_taylor, terra_6_1, by_hand).
-checked_by(l18_angles, terra_6_1, by_hand).
-checked_by(l18_wrong_sign, terra_6_1, by_hand).
-checked_by(l18_no_centralizer, terra_6_1, by_hand).
-checked_by(l18_radial, terra_6_1, by_hand).
-checked_by(l18_joint, terra_6_1, by_hand).
-checked_by(l16_two_sheets, terra_6_1, by_hand).
-checked_by(l16_twistor, terra_6_1, by_hand).
+checked_by(l16_grading_not_even, astra6, by_hand).
 addresses(t5b, l18_fully_massive).  addresses(t5b, l18_not_unbroken).  addresses(t0b, l16_grading_not_even).
-claim(l18_sum_rule, claim, proved, "Remark 16", "For doublets with one massive member at the heat cutoff, 8 kappa M_W^2 = sum N_f m_f^2 rho(m_f^2/Lambda^2), with rho, kappa -> 1 as x -> 0: the CCM relation is the small-mass form of this sum.").
+claim(l18_sum_rule, claim, proved, "Remark 16", "For the heat cutoff and the specified mass-compatible doublet decomposition, 8 kappa M_W,Taylor^2 = sum_i N_i m_i^2 rho(x_i), where rho(x) = 2[1 - (1 + x) exp(-x)]/x^2, kappa = (P + sum_i d_i w(x_i))/6, N_i = 2 d_i, P + sum_i d_i = 6 and w(x) = 3 int_0^1 u^2 exp(-x u) du. The CCM relation follows to leading order when every x_i -> 0.").
 source(l18_sum_rule, 'lemmas/18_heavy_limit_near_cutoff.md', '').
 depends(l18_sum_rule, l18_several).
 attempted_by(l18_sum_rule, claude_opus_5_5).
 checked_by(l18_sum_rule, claude_opus_5_5, python("agreement with equation (18) to rounding, for x from 1e-3 to 1e3")).
+checked_by(l18_sum_rule, terra_6_1, by_hand).  % report paper_note, items 13 to 15
 addresses(t5b, l18_sum_rule).
 %% Lemma 19 (T0b, step 1). Referee: reviews/2026-11-03_terra_check_nogo_19.md
 claim(l19_fluct, theorem, proved, "Theorem 19.1", "On the two-point data the inner fluctuation of arXiv:1304.7583 factorizes: m |Phi|^2 sigma_1 with pointwise J, and link m Phi^2 with the reflection J (KO-6 signs).").
 source(l19_fluct, 'lemmas/19_fluctuations_without_order_one.md', 'the-fluctuated-operator').
 attempted_by(l19_fluct, claude_opus_5_5).
 checked_by(l19_fluct, claude_opus_5_5, python("numpy on random data: both factorizations, gauge covariance")).
+checked_by(l19_fluct, terra_6_1, by_hand).
 claim(l19_gauge, corollary, proved, "Corollary 19.2", "U = 1 for pointwise J, with a neutral real radial field; charge 2 for the reflection J, with image all of C; along a gauge orbit the quadratic term keeps the modulus of the link fixed.").
 source(l19_gauge, 'lemmas/19_fluctuations_without_order_one.md', 'the-fluctuated-operator').
 depends(l19_gauge, l19_fluct).
 attempted_by(l19_gauge, claude_opus_5_5).
 checked_by(l19_gauge, claude_opus_5_5, python("numpy: orbit and covariance")).
+checked_by(l19_gauge, terra_6_1, by_hand).
 claim(l19_parent, proposition, proved, "Proposition 19.3", "Compared with the parent: with pointwise reality the truncated data have a radial field with no parent scalar behind it; with the reflection J, the modulus along a gauge orbit behaves as for the covariant projection with the quadratic term, and as for the fixed compression without it. A parallel, no identification.").
 source(l19_parent, 'lemmas/19_fluctuations_without_order_one.md', 'comparison-with-the-parent').
 depends(l19_parent, l19_gauge).
 depends(l19_parent, l13_compression).
 attempted_by(l19_parent, claude_opus_5_5).
+checked_by(l19_parent, terra_6_1, by_hand).
 addresses(t0b, l19_fluct).  addresses(t0b, l19_parent).
 %% Lemma 20 (T0b, T11). Astra 6; referee: reviews/2026-11-03_terra_check_20_21.md
 claim(l20_blocks, theorem, proved, "Theorem 20.1", "A block T : E -> E* added to a sheet-diagonal D_F keeps the signs iff T = tau(T), h T + T g = 0, and has order one on B iff T pi_1(a) - pi_2(a) T intertwines the opposite actions; the maximal B are the maximal A(R) over odd R with T = R + tau(R).").
 source(l20_blocks, 'lemmas/20_connecting_operator.md', '').
 attempted_by(l20_blocks, astra6).
 checked_by(l20_blocks, claude_opus_5_5, python("the example with T different from R; the averaging proof by hand")).
-claim(l20_rank_one, theorem, proved, "Theorem 20.2", "T x = kappa K x K with K = v w* has complex rank one and A(T) = C + H + M_3(C), of real dimension 24, unique up to automorphism at maximal dimension; a block of rank two gives 16.").
+checked_by(l20_blocks, terra_6_1, by_hand).
+claim(l20_rank_one, theorem, proved, "Theorem 20.2", "For kappa != 0 and nonzero decomposable K = v w*, T x = kappa K x K has complex rank one and A(T) = C + H + M_3(C), of real dimension 24, unique up to automorphism at maximal dimension; a block of rank two gives 16. At kappa = 0 the block has rank zero and the admissible algebra has dimension 40.").
 source(l20_rank_one, 'lemmas/20_connecting_operator.md', '').
 depends(l20_rank_one, l20_blocks).
 attempted_by(l20_rank_one, astra6).
 checked_by(l20_rank_one, claude_opus_5_5, python("real dimensions 24 and 16 by linear algebra; signs and order conditions on random elements")).
+checked_by(l20_rank_one, terra_6_1, by_hand).
 claim(l20_gluing_fails, counterexample, proved, "Counterexample 20.4", "Full scalar gluing on the one-flavor interval: the parent has signs (+,+,-), order zero and order one; the lowest window gives C + C, m sigma_1, sigma_1 K, which fails order one.").
 source(l20_gluing_fails, 'lemmas/20_connecting_operator.md', '').
 attempted_by(l20_gluing_fails, astra6).
 checked_by(l20_gluing_fails, claude_opus_5_5, python("eigenvectors and J by hand; the compression by quadrature")).
+checked_by(l20_gluing_fails, terra_6_1, by_hand).
 claim(l20_parent, theorem, proved, "Theorem 20.5", "Two massless interval fields valued in E, E* with wall coupling X = t S*, and constant multipliers B = A(S), give in the lowest window finite data with connecting block m S, m = arctan(t)/l, signs (+,+,-), order zero and order one; X(l) = tan(m l) keeps m and decouples the tower; the transport exp(m x F) gives a constant connection.").
 source(l20_parent, 'lemmas/20_connecting_operator.md', '').
 depends(l20_parent, l20_rank_one).
 attempted_by(l20_parent, astra6).
 checked_by(l20_parent, claude_opus_5_5, by_hand).
-claim(l20_no_selection, no_go, proved, "Proposition 20.7", "For separate compressions in unchanged windows, scalar gluing on closed sets with empty interior leaves the image unchanged, including the level-one twistor windows. Escapes: a coupled window, boundary degrees of freedom, matrix multipliers.").
+checked_by(l20_parent, terra_6_1, by_hand).
+claim(l20_no_selection, no_go, proved, "Proposition 20.7", "For separate compressions in unchanged windows, scalar gluing on closed sets with empty interior leaves the image unchanged, including the level-one twistor windows, where the image of the glued subset in S^4 must have empty interior. Escapes: a coupled window, boundary degrees of freedom, matrix multipliers.").
 source(l20_no_selection, 'lemmas/20_connecting_operator.md', '').
 attempted_by(l20_no_selection, astra6).
 checked_by(l20_no_selection, claude_opus_5_5, by_hand).
+checked_by(l20_no_selection, terra_6_1, by_hand).
 claim(l20_hw, proposition, proved, "Proposition 20.8", "The same-chirality analogue of the Horava-Witten walls is type (a) at both ends, with opposite localization masses; unbroken E_8 x E_8 allows no bilinear connector between (248,1) and (1,248).").
 source(l20_hw, 'lemmas/20_connecting_operator.md', '').
 attempted_by(l20_hw, astra6).
+checked_by(l20_hw, terra_6_1, by_hand).
 addresses(t0b, l20_blocks).  addresses(t0b, l20_rank_one).  addresses(t0b, l20_parent).  addresses(t0b, l20_no_selection).
 addresses(t11, l20_hw).
 %% Consensus checks by Astra 6 in lemma 20, Results 9 to 11.
-checked_by(l11_nogo, astra6, by_hand).
-checked_by(l16_standard_nogo, astra6, by_hand).
-checked_by(l16_grading_not_even, astra6, by_hand).
 %% Lemma 22 (T0, T0b, T10, T13). Claude; referee: reviews/2026-11-03_terra_check_22.md
 claim(l22_window, theorem, proved, "Theorem 22.1", "Finite data of signs (+,+,-) with l ||D_F|| < pi/2 are exactly the lowest window of the derivative on an interval with coupling tan(l D_F); D, J and Gamma all exact; next level at least (pi - l ||D_F||)/l.").
 source(l22_window, 'lemmas/22_dirac_operator_as_boundary_condition.md', 'the-window').
 attempted_by(l22_window, claude_opus_5_5).
 checked_by(l22_window, claude_opus_5_5, python("eigenvectors, boundary conditions, J, norm on random symmetric M")).
+checked_by(l22_window, terra_6_1, by_hand).
 claim(l22_parent, theorem, proved, "Theorem 22.3", "The parent with A_l = {f : f(l) in C_F} is a real even spectral triple with order zero and order one; order one needs only finite order zero; preservation of the domain is equivalent to f(l) in C_F.").
 source(l22_parent, 'lemmas/22_dirac_operator_as_boundary_condition.md', 'the-parent-as-a-real-spectral-triple').
 depends(l22_parent, l22_window).
 attempted_by(l22_parent, claude_opus_5_5).
 checked_by(l22_parent, claude_opus_5_5, by_hand).
+checked_by(l22_parent, terra_6_1, by_hand).
 claim(l22_compression, theorem, proved, "Theorem 22.4", "Q_l(a) = sinc(l ad_D)(a), the average of e^{ixD} a e^{-ixD} over abs(x) <= l; Q_l(E T) = -l^-1 int sin(x ad_D)(T); order defects O(l^2) with explicit constants.").
 source(l22_compression, 'lemmas/22_dirac_operator_as_boundary_condition.md', 'the-compression').
 depends(l22_compression, l22_window).
 attempted_by(l22_compression, claude_opus_5_5).
 checked_by(l22_compression, claude_opus_5_5, python("quadrature against the Schur form; one-generation Standard Model data")).
+checked_by(l22_compression, terra_6_1, by_hand).
 claim(l22_transport, theorem, proved, "Theorem 22.5, Corollary 22.6", "Self-adjoint scalar one-forms act on the window by the gauge orbit through the transport along the interval, reproducing D + A_(1) + A~_(1) + A_(2) of arXiv:1304.7583 on the orbit.").
 source(l22_transport, 'lemmas/22_dirac_operator_as_boundary_condition.md', 'scalar-fluctuations').
 depends(l22_transport, l22_parent).
 attempted_by(l22_transport, claude_opus_5_5).
 checked_by(l22_transport, claude_opus_5_5, python("the quadratic-term identity on two-point data")).
-claim(l22_no_radial, no_go, proved, "No-go theorem 22.7", "One interval, fixed X, no bulk masses, even scalar inner fluctuations: singular values fixed, so no radial Higgs mode. Escapes: X as a wall field, odd connections, noncommuting bulk masses, two or more internal dimensions, quantum effective action, finite-only fluctuation.").
+checked_by(l22_transport, terra_6_1, by_hand).
+claim(l22_no_radial, no_go, proved, "No-go theorem 22.7", "One interval, fixed X, no bulk masses, even scalar inner fluctuations, moving spectral window: singular values fixed, so no radial Higgs mode; a fixed compression can change singular values at second order. Escapes: X as a wall field, odd connections, noncommuting bulk masses, two or more internal dimensions, quantum effective action, finite-only fluctuation.").
 source(l22_no_radial, 'lemmas/22_dirac_operator_as_boundary_condition.md', 'scalar-fluctuations').
 depends(l22_no_radial, l22_transport).
 attempted_by(l22_no_radial, claude_opus_5_5).
 checked_by(l22_no_radial, claude_opus_5_5, by_hand).
-claim(l22_family, corollary, proved, "Corollary 22.9", "The 10 -> 9 family: light couplings vanish as m l at fixed mass; W, Z at pi/(2l), top at Theta/l; massless gauge sector C_F, under an assumed five-dimensional Yang-Mills action; m_t/M_W < 1 and M_W = M_Z in this family.").
+checked_by(l22_no_radial, astra6, by_hand).
+checked_by(l22_no_radial, terra_6_1, by_hand).
+claim(l22_family, corollary, proved, "Corollary 22.9", "The 10 -> 9 family: light couplings vanish as m l at fixed mass; W, Z at pi/(2l), top at Theta/l; massless gauge sector the physical real gauge representation of C_F, with its kernel and any unimodularity condition (u(C_F) itself has an extra abelian direction before that restriction), under an assumed five-dimensional Yang-Mills action; m_t/M_W < 1 and M_W = M_Z in this family.").
 source(l22_family, 'lemmas/22_dirac_operator_as_boundary_condition.md', 'the-gauge-sector-and-the-10---9-family').
 depends(l22_family, l22_window).
 attempted_by(l22_family, claude_opus_5_5).
+checked_by(l22_family, terra_6_1, by_hand).
 addresses(t10, l22_family).  addresses(t0b, l22_transport).  addresses(t13, l22_window).  addresses(t13, l22_family).
 %% Lemma 23 (T0b, T5b, T10, T13). Claude; referee: reviews/2026-11-03_terra_check_23.md
 claim(l23_gradings, theorem, proved, "Theorem 23.1", "The derivative on an interval with a grading at each wall has D_F = (1/2l) Gamma_0 log(Gamma_1 Gamma_0), with singular values the principal angles over l; real structure from an antiunitary J_1, J_1^2 = -1, anticommuting with both gradings.").
@@ -949,22 +998,27 @@ source(l23_gradings, 'lemmas/23_two_gradings_interval.md', 'two-gradings').
 depends(l23_gradings, l22_window).
 attempted_by(l23_gradings, claude_opus_5_5).
 checked_by(l23_gradings, claude_opus_5_5, python("random symmetric M: log formula and principal angles")).
-claim(l23_aligned, theorem, proved, "Theorem 23.2", "A bulk prealgebra with gradings at the walls: domain preserved iff commuting at each wall; aligned walls give Q(a) = even part of a, with the grading inherited from spin chirality.").
+checked_by(l23_gradings, terra_6_1, by_hand).
+claim(l23_aligned, theorem, proved, "Theorem 23.2", "A bulk prealgebra with gradings at the walls: domain preserved iff commuting at each wall; aligned walls give Q(a) = E_0(a) for constant ambient multipliers, with image E_0(P), equal to the even part of P when Gamma_0 P Gamma_0 = P, and the grading inherited from spin chirality.").
 source(l23_aligned, 'lemmas/23_two_gradings_interval.md', 'the-bulk-prealgebra').
 attempted_by(l23_aligned, claude_opus_5_5).
 checked_by(l23_aligned, claude_opus_5_5, by_hand).
+checked_by(l23_aligned, terra_6_1, by_hand).
 claim(l23_radial, theorem, proved, "Theorem 23.4, Example 23.5", "Scalar fluctuations move the second grading along its orbit; odd ones change the principal angles; for M_2(H) the field space is S^4 and the Higgs modulus is half the geodesic distance.").
 source(l23_radial, 'lemmas/23_two_gradings_interval.md', 'odd-fluctuations-and-the-radial-mode').
 attempted_by(l23_radial, claude_opus_5_5).
 checked_by(l23_radial, claude_opus_5_5, python("universal connection on E + E*, signs and J_1")).
-claim(l23_wz, theorem, conditional, "Theorem 23.6", "With a connector at one wall and an assumed five-dimensional Yang-Mills field of one coupling: tan^2(M_W l) = sin^2(2 theta)/(1 + cos^2(2 theta)), tan^2(M_Z l) = 4 sin^2(2 theta)/(1 + 4 cos^2(2 theta)); nine massless modes; constants 2 and 16/5 at small theta.").
+checked_by(l23_radial, terra_6_1, by_hand).
+claim(l23_wz, theorem, conditional, "Theorem 23.6", "With a connector at one wall and an assumed five-dimensional Yang-Mills field of one coupling: tan^2(M_W l) = sin^2(2 theta)/(1 + cos^2(2 theta)), tan^2(M_Z l) = 4 sin^2(2 theta)/(1 + 4 cos^2(2 theta)); nine massless modes for 0 < theta < pi/2, with larger symmetry at the endpoints; constants 2 and 16/5 at small theta.").
 source(l23_wz, 'lemmas/23_two_gradings_interval.md', 'the-weak-bosons').
 attempted_by(l23_wz, claude_opus_5_5).
 checked_by(l23_wz, claude_opus_5_5, python("boundary problem on Sp(2) x SU(4) solved as a linear system")).
+checked_by(l23_wz, terra_6_1, by_hand).
 claim(l23_theta, proposition, proved, "Proposition 23.7", "For the heat cutoff the channel trace is a Jacobi theta function of theta, decreasing on [0, pi/2], stationary at theta = pi/2, with towerless limit 2 exp(-x).").
 source(l23_theta, 'lemmas/23_two_gradings_interval.md', 'the-spectral-action-on-the-interval').
 attempted_by(l23_theta, claude_opus_5_5).
 checked_by(l23_theta, claude_opus_5_5, python("Poisson and triple product identities")).
+checked_by(l23_theta, terra_6_1, by_hand).
 addresses(t0b, l23_aligned).  addresses(t13, l23_gradings).  addresses(t13, l23_radial).  addresses(t5b, l23_wz).  addresses(t5b, l23_theta).
 %% Lemma 25 (T5b, T13, T1). Claude; referee: reviews/2026-11-03_terra_check_25.md
 claim(l25_unfold, proposition, proved, "Proposition 25.1", "Unfolded, the parent is -i d/dx (x) 1 + 1 (x) D_F on a circle of length 2l; the tower is D_F shifted by n pi/l; an even constant generator is 1 (x) T.").
@@ -972,129 +1026,107 @@ source(l25_unfold, 'lemmas/25_sum_rule_effective_dimension.md', 'unfolding').
 depends(l25_unfold, l22_window).
 attempted_by(l25_unfold, claude_opus_5_5).
 checked_by(l25_unfold, claude_opus_5_5, python("level blocks of the interval against the shifted spectrum")).
-claim(l25_mass, theorem, proved, "Theorem 25.2", "The kernel of lemma 18 over the tower; for the heat cutoff, at leading order in small masses, for a vector of constant profile in the transported frame, M^2 = ((3 - d_eff)/2) ||[D_F, T]||^2/||T||^2, with d_eff the spectral dimension of the unfolded circle at the cutoff.").
+checked_by(l25_unfold, terra_6_1, by_hand).
+claim(l25_mass, theorem, proved, "Theorem 25.2", "The kernel of lemma 18 over the tower; for the heat cutoff, at leading order in small masses, the leading Taylor quotient for the specified constant transported profile is M^2 = ((3 - d_eff)/2) ||[D_F, T]||^2/||T||^2, with d_eff the spectral dimension of the unfolded circle at the cutoff, from the unshifted heat trace. A lowest physical gauge branch needs the additional admissibility, positivity and isolation hypotheses.").
 source(l25_mass, 'lemmas/25_sum_rule_effective_dimension.md', 'the-kernel-over-the-tower').
 depends(l25_mass, l25_unfold).
 attempted_by(l25_mass, claude_opus_5_5).
 checked_by(l25_mass, claude_opus_5_5, python("random matrices, six digits, s from 0.3 to 10")).
-claim(l25_sum_rule, corollary, proved, "Corollary 25.3", "M_W^2 = ((3 - d_eff)/24) sum N_f m_f^2; for the top alone m_t/M_W = (8/(3 - d_eff))^{1/2}, from sqrt(8/3) to 2; M_W^2/M_Z^2 = 5/8 at all s; flat profiles, matching scale, no running.").
+checked_by(l25_mass, terra_6_1, by_hand).
+claim(l25_sum_rule, corollary, proved, "Corollary 25.3", "To leading order, as Taylor quotients for the constant transported profile: M_W^2 = ((3 - d_eff)/24) sum N_f m_f^2; for the top alone m_t/M_W = (8/(3 - d_eff))^{1/2}, from sqrt(8/3) to 2; M_W^2/M_Z^2 = 5/8 at all s; flat profiles, matching scale, no running.").
 source(l25_sum_rule, 'lemmas/25_sum_rule_effective_dimension.md', 'the-kernel-over-the-tower').
 depends(l25_sum_rule, l25_mass).
 attempted_by(l25_sum_rule, claude_opus_5_5).
 checked_by(l25_sum_rule, claude_opus_5_5, python("top-only family and neutral direction")).
+checked_by(l25_sum_rule, terra_6_1, by_hand).
 addresses(t5b, l25_mass).  addresses(t5b, l25_sum_rule).  addresses(t13, l25_sum_rule).
 %% Lemma 24 (T0, T0b). Astra 6; referee: reviews/2026-11-03_terra_check_24.md
 claim(l24_spectral, theorem, proved, "Theorem 24.1", "On CP^3 x I, spectral walls with finite gradings on the level-one kernel give an exact reduction to the two-gradings operator, with the other modes above Delta_K/r.").
 source(l24_spectral, 'lemmas/24_commutative_parent.md', '').
 attempted_by(l24_spectral, astra6).
+checked_by(l24_spectral, terra_6_1, by_hand).
 claim(l24_walls, proposition, proved, "Propositions 24.2, 24.3", "Local walls under an ellipticity condition preserve all scalar functions; spectral walls only constants at the wall; a local grading whose compression to the level-one window is a grading compresses to +-1.").
 source(l24_walls, 'lemmas/24_commutative_parent.md', '').
 attempted_by(l24_walls, astra6).
 checked_by(l24_walls, claude_opus_5_5, python("trace of the auxiliary field")).
+checked_by(l24_walls, terra_6_1, by_hand).
 claim(l24_two_stage, theorem, proved, "Theorem 24.4", "Direct aligned compression of real functions on S^4 generates R + R, against H + H with an intermediate matrix algebra.").
 source(l24_two_stage, 'lemmas/24_commutative_parent.md', '').
 attempted_by(l24_two_stage, astra6).
 checked_by(l24_two_stage, claude_opus_5_5, python("conditional expectation of the Clifford generators")).
+checked_by(l24_two_stage, terra_6_1, by_hand).
 claim(l24_no_minimum, no_go, proved, "Theorem 24.9", "Flat massless one-loop potential, frequency-one fermions, the stated gauge towers, no wall terms: theta = pi/2 is the unique global minimum; strictly decreasing for n_f >= 54/5; for smaller n_f exactly one interior stationary point, a strict maximum. Escapes: frequency-two fermions, warping or other form factors, bulk-mass sectors, wall potentials and wall terms.").
 source(l24_no_minimum, 'lemmas/24_commutative_parent.md', '').
 attempted_by(l24_no_minimum, astra6).
 checked_by(l24_no_minimum, claude_opus_5_5, python("monotonicity of H and e on grids")).
+checked_by(l24_no_minimum, terra_6_1, by_hand).
 addresses(t0, l24_spectral).  addresses(t0b, l24_two_stage).  addresses(t13, l24_no_minimum).
-checked_by(l22_no_radial, astra6, by_hand).
-checked_by(l23_potential, astra6, by_hand).
 %% Lemma 21 (T12). Referee: reviews/2026-11-03_terra_check_20_21.md
 claim(l21_removal, proposition, proved, "Proposition 21.1", "Among single charged species, only an up-type quark can be removed while keeping cos^2 theta_NC = 5/8 and the photon/gluon ratio 8/3; a down-type gives 59/92 and 46/15, a charged lepton 17/28 and 7/3; d + e together contribute as u.").
 source(l21_removal, 'lemmas/21_top_counting.md', 'removal-identities').
 depends(l21_removal, l18_angles).
 attempted_by(l21_removal, claude_opus_5_5).
 checked_by(l21_removal, claude_opus_5_5, python("exact fractions")).
+checked_by(l21_removal, terra_6_1, by_hand).
 claim(l21_counts, claim, proved, "Propositions 21.2 and 21.3", "The finite trace with a top mass is 84 + 12 exp(-x). 96 = 84 + 12 in two ways: five quarks and all leptons plus the top; charged fermions plus the neutrinos, the first with Dirac neutrinos. C_3 and C_6 have 84 on-shell components.").
 source(l21_counts, 'lemmas/21_top_counting.md', 'the-two-families-of-84').
 attempted_by(l21_counts, claude_opus_5_5).
 checked_by(l21_counts, claude_opus_5_5, python("exact counting")).
+checked_by(l21_counts, terra_6_1, by_hand).
 claim(l21_so30, claim, proved, "SO(30) branching", "The adjoint of SO(30) with 30 = (5,3) + conjugate contains (15,3bar) and (25,1), with the charged scalar counts of three generations, plus three triplets of charge 4/3 and one neutral state.").
 source(l21_so30, 'lemmas/21_top_counting.md', 'so30').
 attempted_by(l21_so30, claude_opus_5_5).
 checked_by(l21_so30, claude_opus_5_5, python("exact counting")).
 prior_work(l21_so30, partial, "hep-ph/0512065, Tables 1-2, an early preprint: the 15 diquarks and 25 mesons, the 4/3 states, and the top unable to form them; neither SO(30) nor a role for SO(32)").
 addresses(t12, l21_removal).  addresses(t12, l21_counts).  addresses(t12, l21_so30).
-checked_by(l19_fluct, terra_6_1, by_hand).
-checked_by(l19_gauge, terra_6_1, by_hand).
-checked_by(l19_parent, terra_6_1, by_hand).
-checked_by(l05_limits, terra_6_1, by_hand).
-checked_by(l06_nuL, terra_6_1, by_hand).
-checked_by(l06_factorization, terra_6_1, by_hand).
-checked_by(l06_counterexample, terra_6_1, by_hand).
-checked_by(l06_neutral, terra_6_1, by_hand).
-checked_by(l20_blocks, terra_6_1, by_hand).
-checked_by(l20_rank_one, terra_6_1, by_hand).
-checked_by(l20_gluing_fails, terra_6_1, by_hand).
-checked_by(l20_parent, terra_6_1, by_hand).
-checked_by(l20_no_selection, terra_6_1, by_hand).
-checked_by(l20_hw, terra_6_1, by_hand).
-checked_by(l21_removal, terra_6_1, by_hand).
-checked_by(l21_counts, terra_6_1, by_hand).
 checked_by(l21_so30, terra_6_1, by_hand).
-checked_by(l22_window, terra_6_1, by_hand).
-checked_by(l22_parent, terra_6_1, by_hand).
-checked_by(l22_compression, terra_6_1, by_hand).
-checked_by(l22_transport, terra_6_1, by_hand).
-checked_by(l22_no_radial, terra_6_1, by_hand).
-checked_by(l22_family, terra_6_1, by_hand).
-checked_by(l23_gradings, terra_6_1, by_hand).
-checked_by(l23_aligned, terra_6_1, by_hand).
-checked_by(l23_radial, terra_6_1, by_hand).
-checked_by(l23_wz, terra_6_1, by_hand).
-checked_by(l23_theta, terra_6_1, by_hand).
 claim(l23_potential, no_go, proved, "Proposition 23.8", "Flat massless family, this gauge content, fermions of frequency 1, one loop: theta = pi/2 is the unique global minimum for n_f > 0, and V is strictly decreasing for n_f >= 10.8; for smaller n_f, no interior minimum on grids (Python). Escapes: general bulk masses with a completion, warping, wall scalar with a potential, wall terms, fermions of frequency 2.").
 source(l23_potential, 'lemmas/23_two_gradings_interval.md', 'the-one-loop-potential-in-the-same-family').
 attempted_by(l23_potential, claude_opus_5_5).
 attempted_by(l23_potential, terra_6_1).
 checked_by(l23_potential, claude_opus_5_5, python("grids and quadrature")).
-checked_by(l25_unfold, terra_6_1, by_hand).
-checked_by(l25_mass, terra_6_1, by_hand).
-checked_by(l25_sum_rule, terra_6_1, by_hand).
+checked_by(l23_potential, astra6, by_hand).
 prior_work(l25_sum_rule, partial, "m_t = 2 M_W in flat gauge-Higgs models with suitable representations: hep-ph/0510366, section 5; arXiv:1804.06012, Eq. (3.23). Coefficient (3 - d_eff)/24 and crossover not found in the records inspected.").
-checked_by(l24_spectral, terra_6_1, by_hand).
-checked_by(l24_walls, terra_6_1, by_hand).
-checked_by(l24_two_stage, terra_6_1, by_hand).
-checked_by(l24_no_minimum, terra_6_1, by_hand).
 %% Lemma 17 (T10, routine part). Referee: reviews/2026-11-03_terra_check_17.md
 claim(l17_action, theorem, proved, "Theorem 17.1", "The fermion action of M x F on the Gamma = +1 subspace equals (1/2) <jj psi, (D_M + gamma_5 d) psi> on an unconstrained spinor, with jj = J_M (x) j for s = +1 and gamma_5 J_M (x) j for s = -1.").
 source(l17_action, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').
 depends(l17_action, l08_reconcile).
 attempted_by(l17_action, claude_opus_5_5).
 checked_by(l17_action, claude_opus_5_5, python("numpy on a random finite model: the bilinear forms agree to 1e-14 for both signs")).
+checked_by(l17_action, terra_6_1, by_hand).
 claim(l17_one_dirac, corollary, proved, "Corollary 17.2", "Both reductions of a paired Dirac sector give one Dirac action of explicit mass m, up to an invertible change of Grassmann variables; an unpaired reduction has a Majorana-type action. The rotation exp(i pi gamma_5/4) sends D_M + gamma_5 m to D_M + i m, formally.").
 source(l17_one_dirac, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').
 depends(l17_one_dirac, l17_action).
 attempted_by(l17_one_dirac, claude_opus_5_5).
+checked_by(l17_one_dirac, terra_6_1, by_hand).
 claim(l17_no_higgs, proposition, proved, "Proposition 17.3 and Corollary 17.4", "On a subalgebra commuting with D_F and U, inner fluctuations have no scalar part and d stays constant: the Yukawa block is an explicit mass.").
 source(l17_no_higgs, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').
 depends(l17_no_higgs, l17_action).
 attempted_by(l17_no_higgs, claude_opus_5_5).
+checked_by(l17_no_higgs, terra_6_1, by_hand).
 claim(l17_symmetry, proposition, proved, "Proposition 17.5", "On the quark sector, G(M) = {(V_L, V_R) : V_L M = M V_R}, with G(0) = U(N_f) x U(N_f).").
 source(l17_symmetry, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-chiral-limit').
 attempted_by(l17_symmetry, claude_opus_5_5).
+checked_by(l17_symmetry, terra_6_1, by_hand).
 claim(l17_reductions, theorem, proved, "Theorem 17.6", "Admissible involutions of each sign on the colour-only quark sector correspond to Sigma in U(N_f) with Sigma* M Hermitian, the stationary points of Re tr(M Sigma*), including saddles and maxima; at M = 0 they form a homogeneous space of U(N_f) x U(N_f). No energy selects among them.").
 source(l17_reductions, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-chiral-limit').
 attempted_by(l17_reductions, claude_opus_5_5).
 checked_by(l17_reductions, claude_opus_5_5, python("numpy: involution conditions, the formula for d, finite-difference criticality")).
-claim(l17_condensate, proposition, proved, "Proposition 17.8", "At finite volume and fixed background the regularized function has no limit beyond the zero-mode term; the Banks-Casher form needs a measure, infinite volume, the order of limits and uniform control, stated as hypotheses.").
+checked_by(l17_reductions, terra_6_1, by_hand).
+claim(l17_condensate, proposition, proved, "Proposition 17.8", "At finite volume and fixed background, with a pairing-compatible O(m) subtraction, c_V = n_0/(V m) + O(m): it tends to 0 when n_0 = 0 and has the displayed pole when n_0 > 0. The Banks-Casher form needs a measure, infinite volume, the order of limits and uniform control, stated as hypotheses.").
 source(l17_condensate, 'lemmas/17_explicit_masses_chiral_limit.md', 'what-the-spectral-data-say-about-the-condensate').
 attempted_by(l17_condensate, claude_opus_5_5).
+checked_by(l17_condensate, terra_6_1, by_hand).
 claim(l17_interval, proposition, proved, "Proposition 17.9", "On the interval the chiral limit has two routes: exponentially small residual mass by localization, at fixed mu or under a scaling hypothesis, and exact zero modes at X = 0, where X is a spurion on the wall; M_F is proportional to X only in the towerless limit.").
 source(l17_interval, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-chiral-limit-on-the-interval').
 depends(l17_interval, l09_limits).
 attempted_by(l17_interval, claude_opus_5_5).
-claim(l17_no_kinetic, proposition, proved, "Proposition 17.10", "A spacetime-dependent reduction of the fixed operator gives a non-self-adjoint operator and leaves the spectral action unchanged; a kinetic term needs a new operator with m != 0, whose coefficient is N_c f(0) m^2/(4 pi^2), or a quantum effective action.").
+checked_by(l17_interval, terra_6_1, by_hand).
+claim(l17_no_kinetic, proposition, proved, "Proposition 17.10", "A spacetime-dependent reduction of the fixed operator generally gives a non-self-adjoint reduced operator and leaves the spectral action unchanged; a kinetic term needs a new operator with m != 0, whose coefficient is N_c f(0) m^2/(4 pi^2), or a quantum effective action.").
 source(l17_no_kinetic, 'lemmas/17_explicit_masses_chiral_limit.md', 'spacetime-dependent-sigma').
 depends(l17_no_kinetic, l17_action).
 attempted_by(l17_no_kinetic, terra_6_1).
 checked_by(l17_no_kinetic, claude_opus_5_5, by_hand).
-checked_by(l17_action, terra_6_1, by_hand).  checked_by(l17_one_dirac, terra_6_1, by_hand).  checked_by(l17_no_higgs, terra_6_1, by_hand).
-checked_by(l17_symmetry, terra_6_1, by_hand).  checked_by(l17_reductions, terra_6_1, by_hand).  checked_by(l17_condensate, terra_6_1, by_hand).
-checked_by(l17_interval, terra_6_1, by_hand).
 addresses(t10, l17_no_kinetic).  addresses(t10, l17_action).  addresses(t10, l17_symmetry).  addresses(t10, l17_reductions).  addresses(t10, l17_condensate).
 %% ---------------------------------------------------------------- STRATEGY.md
 strategy(t0, open, "Founding problem: finite real triples (in general, not specifically the Standard Model) from commutative Kaluza-Klein data, with specified spectral, operator-algebraic, K-theoretic or truncation convergence.").
@@ -1135,7 +1167,51 @@ contradiction(6, "research_state 6.12", "O(eps) quasimode derived from compressi
 contradiction(7, "research_state 2.3", "stabilizer given without base point", "base points named", resolved).
 contradiction(8, "canonical 14.3 vs research_state 3.2, 4.2", "Berger angle: Checked calculation versus Proved; p = 5 -> 5/8 unconditional versus conditional", "paper relabelled Proved with the derivation in research_state 3.2", resolved).
 contradiction(9, "canonical 8 vs research_state 6.12", "no parity restriction on n versus odd index only for |n| = 2 mod 4", "different operators; both hold", compatible).
-contradiction(10, "canonical 2.2 and 3", "alpha used for two quantities; staircase b/a = 0.02 versus 0.01", "notation only", open).
+contradiction(10, "canonical 2.2 and 3", "alpha used for two quantities; staircase b/a = 0.02 versus 0.01", "the hypercharge phase is now varphi; the two staircases are separate figures, each stating its own radii, and no result depends on the value", resolved).
+
+%% ---------------------------------------------------------------- steer note, items 9 and 11
+claim(steer_tower_coefficients, proposition, proved, "Steer note, item 9", "One Kaluza-Klein level of all Standard Model fields in the bulk has one-loop coefficients (81/10, 7/6, -5/2): a massive vector (-7/2 C_2), two Weyl fermions for each Standard Model Weyl fermion, and one complex Higgs doublet.").
+source(steer_tower_coefficients, 'd9_masses_fermi_qcd_steer.md', '').
+attempted_by(steer_tower_coefficients, claude_opus_5_5).
+checked_by(steer_tower_coefficients, claude_opus_5_5, python("exact fractions, from the field content")).
+checked_by(steer_tower_coefficients, astra6, by_hand).  % Astra validation, 3 Nov 2026, item 5
+prior_work(steer_tower_coefficients, known, "Bhattacharyya, Datta, Majee, Raychaudhuri, arXiv:hep-ph/0608208, the equation for b-tilde").
+claim(steer_item9, claim, numerical, "Steer note, item 9", "One-loop running with a universal tower: for M_KK from 235 GeV to 10 TeV the pairwise crossings lie at 21 to 34 M_KK with step thresholds, and at 23 to 36 M_KK with the count S - 1; the three couplings do not meet at one point.").
+source(steer_item9, 'd9_masses_fermi_qcd_steer.md', '').
+depends(steer_item9, steer_tower_coefficients).
+attempted_by(steer_item9, claude_opus_5_5).
+checked_by(steer_item9, claude_opus_5_5, python("closed-form running, recomputed from the equations of the source")).
+checked_by(steer_item9, astra6, python("independent closed-form running, step and S - 1 counts")).  % Astra validation, 3 Nov 2026, item 7
+claim(steer_item11, claim, numerical, "Steer note, item 11", "Universal bulk fields at one loop, with a lower endpoint M_KK = 235 GeV that is illustrative: for M_KK up to 100 TeV, y_t/g_2 is 0.20 to 0.37 where g_2 = g_3 and 0.33 to 0.56 where g_1 = g_2; the matching conditions y_t = sqrt(2) g_2 and y_t = 2 g_2/sqrt(3) give m_t from 205 to 231 GeV. At the scanned scales, boundary ratios from 1 to 5 change m_t by at most 26 GeV, along an infrared quasi-fixed trajectory; smaller ratios spread it. A flat interior Yang-Mills scan needs M_KK >= 4 M_W.").
+source(steer_item11, 'd9_masses_fermi_qcd_steer.md', '').
+depends(steer_item11, steer_tower_coefficients).
+attempted_by(steer_item11, claude_opus_5_5).
+checked_by(steer_item11, claude_opus_5_5, python("scipy LSODA integration of the gauge and top Yukawa equations of the source")).
+checked_by(steer_item11, astra6, python("independent integration of the linear equation for 1/y^2, with controls")).  % Astra validation, 3 Nov 2026, items 7 and 8
+
+%% ---------------------------------------------------------------- referees
+referee_report('lemmas/05_deconstruction_interval.md', 'reviews/2026-11-03_terra_check_nogo_19.md').
+referee_report('lemmas/05_deconstruction_interval.md', 'reviews/2026-11-03_terra_check_08_13_14.md').
+referee_report('lemmas/06_vectorlike_odd_factorization.md', 'reviews/2026-11-03_terra_check_nogo_19.md').
+referee_report('lemmas/08_product_selects_ko.md', 'reviews/2026-11-03_terra_check_08_13_14.md').
+referee_report('lemmas/09_massive_chiral_interval.md', 'lemmas/09_massive_chiral_interval.md').
+referee_report('lemmas/10_toeplitz_twistor.md', 'lemmas/10_toeplitz_twistor.md').
+referee_report('lemmas/11_spectral_action_heavy_w.md', 'lemmas/11_spectral_action_heavy_w.md').
+referee_report('lemmas/12_boundary_yukawa_interval.md', 'lemmas/12_boundary_yukawa_interval.md').
+referee_report('lemmas/13_gauge_sector_truncation.md', 'reviews/2026-11-03_terra_check_08_13_14.md').
+referee_report('lemmas/14_gauge_covariant_reduction.md', 'reviews/2026-11-03_terra_check_08_13_14.md').
+referee_report('lemmas/15_propinquity_collapse.md', 'reviews/2026-11-03_terra_check_15_16.md').
+referee_report('lemmas/16_coarse_truncation.md', 'reviews/2026-11-03_terra_check_15_16.md').
+referee_report('lemmas/16_coarse_truncation.md', 'reviews/2026-11-03_terra_check_18_16b.md').
+referee_report('lemmas/17_explicit_masses_chiral_limit.md', 'reviews/2026-11-03_terra_check_17.md').
+referee_report('lemmas/18_heavy_limit_near_cutoff.md', 'reviews/2026-11-03_terra_check_18_16b.md').
+referee_report('lemmas/19_fluctuations_without_order_one.md', 'reviews/2026-11-03_terra_check_nogo_19.md').
+referee_report('lemmas/20_connecting_operator.md', 'reviews/2026-11-03_terra_check_20_21.md').
+referee_report('lemmas/21_top_counting.md', 'reviews/2026-11-03_terra_check_20_21.md').
+referee_report('lemmas/22_dirac_operator_as_boundary_condition.md', 'reviews/2026-11-03_terra_check_22.md').
+referee_report('lemmas/23_two_gradings_interval.md', 'reviews/2026-11-03_terra_check_23.md').
+referee_report('lemmas/24_commutative_parent.md', 'reviews/2026-11-03_terra_check_24.md').
+referee_report('lemmas/25_sum_rule_effective_dimension.md', 'reviews/2026-11-03_terra_check_25.md').
 
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
@@ -1151,21 +1227,22 @@ numerical_only(C) :- claim(C, _, numerical, _, _).
 %% language_not_recorded(-C): a computation whose language/tool the source does not name.
 language_not_recorded(C) :- checked_by(C, _, not_recorded(_)).
 
-%% self_checked_only(-C): every recorded checker is also an author of the claim.
+%% self_checked_only(-C): every recorded checker is also an author of the claim (numerical claims included).
 self_checked_only(C) :-
-    claim(C, _, S, _, _), memberchk(S, [proved, conditional]),
+    claim(C, _, S, _, _), memberchk(S, [proved, conditional, numerical]),
     findall(A, checked_by(C, A, _), Cs), Cs \== [],
     forall(member(A, Cs), attempted_by(C, A)).
 
 %% unchecked(-C): proved or conditional, with no recorded checker (corpus claims included).
 unchecked(C) :- claim(C, _, S, _, _), memberchk(S, [proved, conditional]), \+ checked_by(C, _, _).
 
-%% open_items(-X): conjectures, open claims, open strategy items and open contradictions.
+%% open_items(-X): conjectures, open claims, open strategy items, open contradictions and missing records.
 open_items(claim(C)) :- claim(C, _, S, _, _), memberchk(S, [open, conjectural]).
 open_items(strategy(T)) :- strategy(T, S, _), S \== settled.
 open_items(contradiction(N)) :- contradiction(N, _, _, _, open).
+open_items(missing_record(C)) :- claim(C, _, not_reconstructed, _, _).
 
-%% nogo_models(-C, -Models): the distinct models behind a no-go result.
+%% nogo_models(-C, -Models): the distinct agent identifiers recorded as authors or checkers of a no-go result. It counts identifiers, and it does not establish independence.
 %% A no-go is a guide to where to go next, and needs consensus among models.
 nogo_models(C, Models) :-
     claim(C, no_go, _, _, _),
@@ -1174,7 +1251,7 @@ nogo_models(C, Models) :-
     append(As, Bs, All),
     sort(All, Models).
 
-%% nogo_below_consensus(-C, -Models): fewer than the three models Astra, Claude and Terra.
+%% nogo_below_consensus(-C, -Models): fewer than three recorded agent identifiers, such as Astra, Claude and Terra.
 nogo_below_consensus(C, Models) :- nogo_models(C, Models), length(Models, N), N < 3.
 
 %% refuted(-C, -By): claims shown false, with the counterexample.
@@ -1197,5 +1274,20 @@ test(amendments_resolve) :- forall(claim_amended(C, B), (claim(C, _, _, _, _), c
 test(prior_work_resolves) :- forall(prior_work(C, V, _), (claim(C, _, _, _, _), memberchk(V, [known, partial, not_found]))).
 test(every_nogo_has_two_models) :- forall(nogo_models(_, Ms), (length(Ms, N), N >= 2)).
 test(addresses_resolve) :- forall(addresses(T, C), (strategy(T, _, _), claim(C, _, _, _, _))).
+test(referee_reports_exist) :- forall(referee_report(F, R), (exists_file(F), exists_file(R))).
+test(refereed_claims_have_review_bookkeeping) :-
+    forall(( referee_report(F, _), source(C, F, _), claim(C, _, S, _, _), memberchk(S, [proved, conditional]) ),
+           ( checked_by(C, terra_6_1, _) ; attempted_by(C, terra_6_1) ; outside_referee(C, _) )).
+test(claims_outside_the_corpus_have_a_checker) :-
+    forall(( claim(C, _, S, _, _), memberchk(S, [proved, conditional]), \+ attempted_by(C, corpus) ), checked_by(C, _, _)).
+test(self_checks_are_corpus_only) :-
+    forall(( self_checked_only(C), \+ claim(C, _, numerical, _, _) ), attempted_by(C, corpus)).
+%% Checks only that each ledger number has a row in DUPLICATES.md ending in its state.
+test(contradictions_match_duplicates) :-
+    read_file_to_string('DUPLICATES.md', Text, []),
+    split_string(Text, "\n", "", Lines),
+    forall(contradiction(N, _, _, _, State),
+           ( format(string(P), "| ~d |", [N]), format(string(Q), "| ~w |", [State]),
+             member(L, Lines), string_concat(P, _, L), string_concat(_, Q, L) -> true )).
 :- end_tests(ledger).
 

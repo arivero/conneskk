@@ -406,6 +406,7 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 
 - [Assessment of the T0 note](reviews/2026-11-03_t0_note_assessment.md)
 - [Farsi-Latrémolière assessment](reviews/2026-11-03_farsi_latremoliere_assessment.md)
+- [Astra validation of the corrections](reviews/2026-11-03_astra_validation_corrections.md)
 - [Review of the evaluation](reviews/2026-11-03_review_of_evaluation.md)
 - [Terra check of N8](reviews/2026-11-03_terra_check_N8.md)
 - [Terra referee report on lemmas 15 and 16](reviews/2026-11-03_terra_check_15_16.md)

@@ -188,11 +188,11 @@ The last reduction removes the up-type sector and retains charged down-quark/ele
 The particle lift is $\xi\mapsto b\xi a^*$. Retain the parent condition $\lambda\det m=1$, with
 
 $$
-\lambda=e^{-i\alpha/2},\qquad
-m=e^{i\alpha/6}s,\quad s\in SU(3).
+\lambda=e^{-i\varphi/2},\qquad
+m=e^{i\varphi/6}s,\quad s\in SU(3).
 $$
 
-In the convention $Q=T_3+Y$, this yields the usual hypercharges: left quarks $1/6$, left leptons $-1/2$, right up quarks $2/3$, right down quarks $-1/3$, right electron $-1$, and right neutrino zero. After weak reduction, both electron chiralities transform by $\lambda^2=e^{-i\alpha}$. Their photon coupling is vectorial, with charge $-1$. This does not fix the numerical value of $e$.
+In the convention $Q=T_3+Y$, this yields the usual hypercharges: left quarks $1/6$, left leptons $-1/2$, right up quarks $2/3$, right down quarks $-1/3$, right electron $-1$, and right neutrino zero. After weak reduction, both electron chiralities transform by $\lambda^2=e^{-i\varphi}$. Their photon coupling is vectorial, with charge $-1$. This does not fix the numerical value of $e$.
 
 Unimodularity must be inherited. Removing the neutral Majorana pair changes the represented determinant from $(\lambda\det m)^4$ to $\lambda^2(\det m)^4$. Reimposing a new determinant-one condition on the smaller module would change hypercharge.
 

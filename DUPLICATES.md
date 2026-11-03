@@ -39,18 +39,20 @@ A section-by-section comparison (2-3 Nov 2026) classified every section of the c
 
 ## 5. Contradictions found, and their resolution
 
-| # | where | finding | resolution |
-|---|---|---|---|
-| 1 | canonical §11.1 | the CP^3 index statement named "the Kähler operator twisted by O(3)"; the operator with index four is the spin Dirac operator twisted by O(3), i.e. the Dolbeault operator on O(1), since S = Lambda^{0,*} (x) O(-2) | corrected in the paper |
-| 2 | canonical §13.1 | e^2/g_3^2 = 3(eta^2+3)/(8 eta^2) was labelled "Checked", but no script computes it | relabelled Conditional, with a pointer to its derivation. The value 3(eta^2+3)/(32 eta^2) of §13.2 belongs to a different charge generator, so the two formulas are consistent |
-| 3 | canonical §4 | "Checked calculation" covered Q(x_a) = Gamma_a/5 and Q(x_a)^2 = I/25 vs Q(x_a^2) = I/5, which no script computes | note added; proved in [lemmas/10](lemmas/10_toeplitz_twistor.md) |
-| 4 | research_note §5, §8 | labels older than the paper (scalar matching and unimodularity as inputs; collapse estimate "conditional") | listed in the appendix header |
-| 5 | canonical §13.1 | V undefined | defined as Vol(S^5, g_eta) |
-| 6 | research_state §6.12 | the O(eps) quasimode was derived from compressions alone | replaced by the kernel-preservation argument of the tex |
-| 7 | research_state §2.3 | stabilizer diag(z,1,z^-1) given without base point (§6.12 uses diag(z,z^-1,1)) | base points (C e_1, e_2) and (C e_1, e_3) named |
-| 8 | canonical §14.3 vs research_state §3.2, §4.2 | cos^2 theta_W = 3 xi^2/(4 xi^2+2) is labelled "Checked calculation" in the paper and "Proved; quadrature verified" in the notes. The paper says the proposal that p = 5 determines 5/8 fails; the notes record p = 5 -> 5/8 as a resonance conditional on an added closed-neutral-circle postulate. The two statements are compatible (unconditional versus conditional) | open: the labels differ |
-| 9 | canonical §8 vs research_state §6.12 | "no parity restriction on n" (vertical kernels) versus "odd index only for abs(n) = 2 mod 4" (the 5D base index) | different operators; both hold |
-| 10 | canonical §2.2 and §3 | alpha denotes both the scaling exponent and the hypercharge phase; the two staircase figures use b/a = 0.02 (research_note) and 0.01 (paper) | notation only, left as is |
+The state column matches `contradiction/5` in [ledger.pl](ledger.pl); `swipl -g run_tests -t halt ledger.pl` tests the match.
+
+| # | where | finding | resolution | state |
+|---|---|---|---|---|
+| 1 | canonical §11.1 | the CP^3 index statement named "the Kähler operator twisted by O(3)"; the operator with index four is the spin Dirac operator twisted by O(3), i.e. the Dolbeault operator on O(1), since S = Lambda^{0,*} (x) O(-2) | corrected in the paper | resolved |
+| 2 | canonical §13.1 | e^2/g_3^2 = 3(eta^2+3)/(8 eta^2) was labelled "Checked", but no script computes it | relabelled Conditional, with a pointer to its derivation. The value 3(eta^2+3)/(32 eta^2) of §13.2 belongs to a different charge generator, so the two formulas are consistent | resolved |
+| 3 | canonical §4 | "Checked calculation" covered Q(x_a) = Gamma_a/5 and Q(x_a)^2 = I/25 vs Q(x_a^2) = I/5, which no script computes | note added; proved in [lemmas/10](lemmas/10_toeplitz_twistor.md) | resolved |
+| 4 | research_note §5, §8 | labels older than the paper (scalar matching and unimodularity as inputs; collapse estimate "conditional") | listed in the appendix header | resolved |
+| 5 | canonical §13.1 | V undefined | defined as Vol(S^5, g_eta) | resolved |
+| 6 | research_state §6.12 | the O(eps) quasimode was derived from compressions alone | replaced by the kernel-preservation argument of the tex | resolved |
+| 7 | research_state §2.3 | stabilizer diag(z,1,z^-1) given without base point (§6.12 uses diag(z,z^-1,1)) | base points (C e_1, e_2) and (C e_1, e_3) named | resolved |
+| 8 | canonical §14.3 vs research_state §3.2, §4.2 | cos^2 theta_W = 3 xi^2/(4 xi^2+2) was labelled "Checked calculation" in the paper and "Proved; quadrature verified" in the notes. The paper says the proposal that p = 5 determines 5/8 fails; the notes record p = 5 -> 5/8 as a resonance conditional on an added closed-neutral-circle postulate. The two statements are compatible (unconditional versus conditional) | the paper now reads **Proved** for the Einstein-Hilbert ansatz and the stated embedding, with the derivation in research_state §3.2 and the resonance conditional on the added postulate (§4.2) | resolved |
+| 9 | canonical §8 vs research_state §6.12 | "no parity restriction on n" (vertical kernels) versus "odd index only for abs(n) = 2 mod 4" (the 5D base index) | different operators; both hold | compatible |
+| 10 | canonical §2.2 and §3 | alpha denoted both the scaling exponent and the hypercharge phase; the two staircase figures use b/a = 0.02 (research_note) and 0.01 (paper) | the hypercharge phase in §3 is now varphi. The staircases are separate figures, each stating its own radii, as research_checks_knowledge records; no result depends on the value | resolved |
 
 ## 6. Repeats inside a single document
 

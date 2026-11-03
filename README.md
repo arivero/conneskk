@@ -12,8 +12,9 @@ swipl ledger.pl
 ?- falls_if_false(hyp(ccm_relation), C).        % what rests on a hypothesis or claim
 ?- numerical_only(C).                            % claims backed only by a numerical check
 ?- language_not_recorded(C).                     % computations whose tool the source omits
-?- self_checked_only(C).                         % checked only by their own author
-?- open_items(X).                                % conjectures, open strategy items, open contradictions
+?- self_checked_only(C).                         % every recorded checker is also an author
+?- unchecked(C).                                  % proved or conditional with no recorded checker
+?- open_items(X).                                % conjectures, open strategy items, open contradictions, missing records
 ?- show(l12_towerless).                          % statement, status and location
 ```
 

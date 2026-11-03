@@ -15,7 +15,6 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{proposition}{Proposition}
 \newtheorem{corollary}{Corollary}
-\newcommand{\pending}[1]{\textsf{[to check: #1]}}
 \newcommand{\C}{\mathbb C}
 \renewcommand{\H}{\mathbb H}
 
@@ -101,7 +100,7 @@ This points to a nonzero $m$ with a new operator, for instance the Higgs-type in
 \section{The condensate}
 
 \begin{proposition}
-Let $D_M(A)$ have eigenvalues $\lambda_n$, with $n_0$ zero modes, on volume $V$, and let $c_V(m;A)=V^{-1}\sum_nm/(\lambda_n^2+m^2)$, for $m>0$, regularized compatibly with the pairing $\pm\lambda$ by a subtraction whose finite remainder is $O(m)$, for example odd and analytic in $m$. At fixed $A$ on compact $M$, $c_V=n_0/(Vm)+O(m)$ as $m\to0$. If $\rho_m(\lambda)=\lim_V\langle V^{-1}\sum_n\delta(\lambda-\lambda_n)\rangle_m$ is equicontinuous at $0$ with $\rho_m(0)\to\rho_0(0)$, with tails and subtraction controlled uniformly in $m$ and the infinite-volume limit taken inside the integral, then $\lim_{m\to0}\lim_V\langle c_V\rangle=\pi\rho_0(0)$, the form of the Banks-Casher relation \cite{BC1980} \pending{the relation against the source}; the hypotheses here are ours, and the sign and flavour normalization of a condensate depend on convention.
+Let $D_M(A)$ have eigenvalues $\lambda_n$, with $n_0$ zero modes, on volume $V$, and let $c_V(m;A)=V^{-1}\sum_nm/(\lambda_n^2+m^2)$, for $m>0$, regularized compatibly with the pairing $\pm\lambda$ by a subtraction whose finite remainder is $O(m)$, for example odd and analytic in $m$. At fixed $A$ on compact $M$, $c_V=n_0/(Vm)+O(m)$ as $m\to0$. If $\rho_m(\lambda)=\lim_V\langle V^{-1}\sum_n\delta(\lambda-\lambda_n)\rangle_m$ is equicontinuous at $0$ with $\rho_m(0)\to\rho_0(0)$, with tails and subtraction controlled uniformly in $m$ and the infinite-volume limit taken inside the integral, then $\lim_{m\to0}\lim_V\langle c_V\rangle=\pi\rho_0(0)$, the form of the Banks-Casher relation \cite{BC1980} as stated in \cite{GL2009}, Section 2; the hypotheses here are ours, and the sign and flavour normalization of a condensate depend on convention.
 \end{proposition}
 
 So the spectral triple supplies the operator $D_M+\gamma_5m$, the density of each fixed operator, and the continuity of that operator and its square in $m$ at fixed background; the regularized function itself has the zero-mode pole above. The averaged density, the regulated determinant or Pfaffian measure, the sequence of volumes and the order of limits need further input. A proof of existence of QCD with fermions would supply a measure, and would not by itself give $\rho_0(0)>0$. With the anti-self-adjoint $\tilde D=-iD_M$, $\det(\tilde D+m)=m^{n_0}\prod_{\lambda>0}(\lambda^2+m^2)>0$ with a compatible regulator, which is part of the method of \cite{VW1984}.
