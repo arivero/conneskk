@@ -97,7 +97,7 @@ from b_6 = 7, b_5 = 23/3 and 1/alpha(mu_*) = (8/3)/alpha_3(mu_*). So a nonzero l
 3. The value of x at the physical point, in terms of the moments of the cutoff and the quadratic term.
 4. The conditional formula for Lambda_5/v evaluated at finite parameters, with the physical thresholds, and the value of kappa it requires.
 5. The reduction from D = 9 to D = 4 with several flavors: whether internal data can give m_u < m_d, which the one-circle model cannot.
-6. The anomaly as a theorem on the reduced action of lemma 17, and the discrete term of the pion sigma model against the S^5 index.
+6. The anomaly as a theorem on the reduced action of lemma 17, and the discrete term of the pion sigma model against the S^5 index. [Lemma 27](lemmas/27_anomaly_reduced_action.md), referee pending, gives both, on a fixed background: the anomaly with its coefficient, and the shared Z_2. The relation between the internal S^5 and the auxiliary one stays open.
 
 ## Transcript
 

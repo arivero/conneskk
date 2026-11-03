@@ -1201,6 +1201,24 @@ attempted_by(l26_top, claude_opus_5_5).
 checked_by(l26_top, claude_opus_5_5, python("scipy integration of the one-loop top Yukawa equation")).
 addresses(t13, l26_classification).  addresses(t13, l26_lr).  addresses(t13, l26_meeting).  addresses(t13, l26_top).  addresses(t5b, l26_spectrum).  addresses(t12, l26_plane).
 
+%% ---------------------------------------------------------------- lemma 27
+claim(l27_trace, theorem, proved, "Theorem 27.1, Proposition 27.3", "On D_M(A) + gamma_5 d with T, d and A commuting: Tr(gamma_5 T f(DD^2/Lambda^2)) = sum_f tau_f f(m_f^2/Lambda^2) ind_f at every Lambda, and the regulated mass term equals it.").
+source(l27_trace, 'lemmas/27_anomaly_reduced_action.md', 'the-axial-trace').
+depends(l27_trace, l17_action).
+attempted_by(l27_trace, claude_opus_5_5).
+checked_by(l27_trace, claude_opus_5_5, python("Landau spectra on T^2 x T^2, to 15 digits")).
+claim(l27_anomaly, corollary, proved, "Corollary 27.2, Proposition 27.4", "As Lambda -> infinity, on the commuting subalgebra, the anomaly of T^3 has coefficient 2 N_c tr(T^3 Q^2) = 1 with no gluonic or gravitational term. At fixed cutoff a heavy t leaves the coefficient of the incomplete doublet, -1/3 for the heat cutoff.").
+source(l27_anomaly, 'lemmas/27_anomaly_reduced_action.md', 'the-axial-trace').
+depends(l27_anomaly, l27_trace).
+attempted_by(l27_anomaly, claude_opus_5_5).
+checked_by(l27_anomaly, claude_opus_5_5, python("exact fractions")).
+claim(l27_discrete, proposition, proved, "Proposition 27.5", "For N_f = 2, M = 0, colour background zero on the round S^4, the reduction frame of Proposition 17.10 for Sigma in the nontrivial class of pi_4(SU(2)) multiplies the quark integral by (-1)^{N_c}; the classical action and the spectral action do not change. Uses eq. (6) of Witten 1982.").
+source(l27_discrete, 'lemmas/27_anomaly_reduced_action.md', 'the-two-flavour-discrete-term').
+depends(l27_discrete, l17_no_kinetic).
+attempted_by(l27_discrete, claude_opus_5_5).
+checked_by(l27_discrete, claude_opus_5_5, by_hand).
+addresses(t10, l27_trace).  addresses(t10, l27_anomaly).  addresses(t10, l27_discrete).  addresses(t13, l27_discrete).
+
 %% ---------------------------------------------------------------- steer note, items 9 and 11
 claim(steer_tower_coefficients, proposition, proved, "Steer note, item 9", "One Kaluza-Klein level of all Standard Model fields in the bulk has one-loop coefficients (81/10, 7/6, -5/2): a massive vector (-7/2 C_2), two Weyl fermions for each Standard Model Weyl fermion, and one complex Higgs doublet.").
 source(steer_tower_coefficients, 'd9_masses_fermi_qcd_steer.md', '').
