@@ -2,7 +2,7 @@
 
 Prompted by the observation that the top has a separate role, which matters more than the loss of an electroweak partner for b_L. Proposition 21.1 and the counts below are exact calculations by Claude Opus 5.5, in Python with exact fractions. The readings in the last section are proposals, and nothing there is derived. Referee pending.
 
-**Outcome.** The spectral action detects the top: in the exact quadratic action of [lemma 18](18_heavy_limit_near_cutoff.md), among single charged species only an up-type quark can be removed while keeping both the neutral-current value cos^2 theta_NC = 5/8 and the ratio 8/3 of the photon and gluon coefficients. Removing it leaves 84 of the 96 states of the finite Hilbert space. Those 84 are the seed of an SO(30) whose adjoint contains the scalars counted in hadronic supersymmetry (hep-ph/0512065), and 84 is also the number of on-shell components of the three-form of eleven-dimensional supergravity.
+**Outcome.** The spectral action detects the top: in the exact quadratic action of [lemma 18](18_heavy_limit_near_cutoff.md), among single charged species only an up-type quark can be removed while keeping both the neutral-current value cos^2 theta_NC = 5/8 and the ratio 8/3 of the photon and gluon coefficients. Removing it leaves 84 of the 96 states of the finite Hilbert space. Those 84 are the seed of an SO(30), inside SO(32), whose adjoint contains the charged scalar counts of three generations, and 84 is also the number of on-shell components of the three-form of eleven-dimensional supergravity.
 
 ## Removal identities
 
@@ -54,7 +54,7 @@ With Q = 2/3 for u, c and Q = -1/3 for d, s, b, the charges are:
 | (10, 6) | -2/3: 3;   +1/3: 6;   +4/3: 1 |
 | (24, 1) + (1, 1) | +1: 6;   -1: 6;   0: 13 |
 
-Three generations of scalar partners in a supersymmetric Standard Model with nu_R need, for antisquarks in the 3-bar, 6 of charge -2/3 and 6 of charge +1/3, and for sleptons 6 of charge +1, 6 of charge -1 and 12 neutral real states. So (15, 3-bar) and (24, 1) + (1, 1) contain exactly the charged counts. What is left over in them is three triplets of charge +4/3 and one neutral state. These counts are those of hep-ph/0512065, which also notes that the top is unable to form mesons or diquarks; what SO(30) adds is one group whose adjoint contains both families.
+Three generations of scalar partners in a supersymmetric Standard Model with nu_R need, for antisquarks in the 3-bar, 6 of charge -2/3 and 6 of charge +1/3, and for sleptons 6 of charge +1, 6 of charge -1 and 12 neutral real states. So (15, 3-bar) and (24, 1) + (1, 1) contain exactly the charged counts. What is left over in them is three triplets of charge +4/3 and one neutral state. The counting of 15 diquarks and 25 mesons, with the charge +4/3 states, and the remark that the top is unable to form them, go back to an early preprint (hep-ph/0512065), which finds neither SO(30) nor a role for SO(32). What SO(30) adds is one group whose adjoint contains both families. It also sits in SO(32), with 32 = 30 + 2 and adjoint 496 = 435 + 1 + 2 x 30, which hints at a role for SO(32); we have not explored this.
 
 ## The two families of 84
 

@@ -21,6 +21,7 @@
 %% claim_amended(Claim, By): Claim stands, with an amendment proved in By
 
 :- discontiguous refuted_by/2.
+:- discontiguous prior_work/3.
 :- discontiguous claim/5, source/3, depends/2, hypothesis/2, attempted_by/2, checked_by/3, overturn/2, addresses/2, strategy/3.
 :- use_module(library(lists)).
 
@@ -894,7 +895,7 @@ claim(l21_so30, claim, proved, "SO(30) branching", "The adjoint of SO(30) with 3
 source(l21_so30, 'lemmas/21_top_counting.md', 'so30').
 attempted_by(l21_so30, claude_opus_5_5).
 checked_by(l21_so30, claude_opus_5_5, python("exact counting")).
-prior_work(l21_so30, partial, "hep-ph/0512065: the 15 diquarks and 25 mesons, the 4/3 states, and the top unable to form them; SO(30) not there").
+prior_work(l21_so30, partial, "hep-ph/0512065, an early preprint: the 15 diquarks and 25 mesons, the 4/3 states, and the top unable to form them; neither SO(30) nor a role for SO(32)").
 addresses(t12, l21_removal).  addresses(t12, l21_counts).  addresses(t12, l21_so30).
 checked_by(l19_fluct, terra_6_1, by_hand).
 checked_by(l19_gauge, terra_6_1, by_hand).
@@ -954,7 +955,7 @@ strategy(t3, settled, "Chirality from boundary conditions; the boundary Yukawa i
 strategy(t4, open, "Gauge sector of the towerless interval: fixed compression is not gauge covariant and the finite spectral action does not reproduce the tower mass.").
 strategy(t4b, open, "Gauge-covariant reduction: matching with the tower only via a sum rule (tuned bulk mass, tower-scale fermion); impossible with bounded light fermions in the collapse.").
 strategy(t5, settled, "Heavy W forces a heavy Dirac fermion (conditional on the CCM relation).").
-strategy(t12, open, "The separate role of the top: removal identities, SO(30) from the five other quarks, Seiberg duality with emergent supersymmetry, and the two families of 84 states against C_3, M2 and M5.").
+strategy(t12, open, "The separate role of the top: removal identities, SO(30) from the five other quarks, inside SO(32), Seiberg duality with emergent supersymmetry, and the two families of 84 states against C_3, M2 and M5.").
 strategy(t11, open, "Horava-Witten as a two-sheet geometry: walls as sheets, wall algebras as summands, bulk as connecting operator; compare the chiralities of the walls first.").
 strategy(t6, open, "Metric-compatible towerless limits (operator-system truncations).").
 strategy(t7, open, "Towerless S^2, CP^2 to H, M_3(C) with the right real structure.").
