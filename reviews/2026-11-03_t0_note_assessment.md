@@ -4,6 +4,8 @@ Written by Claude Opus 5.5 on 3 Nov 2026, after the user suggested that the note
 
 **Verdict.** The user is right. The theorem behind the note is correct, and the conclusion drawn from it was too strong. The note turned a property of one metric, on one class of triples, into a requirement on the founding problem, and a sentence from before that note was contradicted by results already in the repo. T0 and T0b are open, with no obstruction known.
 
+**Referee.** Terra 6.1 ([report](2026-11-03_terra_check_15_16.md)) agrees that the note was wrong to infer an obstruction from one metric. It also found two of the arguments below invalid as first written, on unbroken symmetry and on Morita equivalence, and asked that "concrete origin" keep its qualifications. Reasons 3 and 4 and the sections after them are corrected accordingly.
+
 ## What was claimed
 
 The T0 row of STRATEGY said:
@@ -28,13 +30,13 @@ Section 4.5 of the [Farsi-Latrémolière assessment](2026-11-03_farsi_latremolie
 
 2. **The note confused two limits of one family.** Along Theorem 9.9 the whole triple converges to (C, C^2, m_f sigma_1) (Corollary 15.5), while the compression at each l is exactly Connes-Lott. Both hold. The propinquity follows the state space of C(I_l), of diameter l. The Connes-Lott distance 1/m_f belongs to the compression, which is not a quantum isometry. The towerless idea is the truncation, so a metric built to compare whole algebras was the wrong tool to rule on it.
 
-3. **The domain of the metric excludes the main target.** A metric spectral triple has ker L = R 1. Any triple with a nonscalar element commuting with D lies outside: unbroken inner gauge symmetry is excluded by definition. The Standard Model finite triple, where M_3(C) commutes with D_F, is not in the class, and neither is its product with spacetime. So nothing in this metric can pronounce on how A_F of that type arises.
+3. **The class of the metric excludes the main target.** A metric spectral triple has ker L = R 1, so no nonscalar element of A commutes with D. The Standard Model finite triple is outside the class, since D_F commutes with the nonscalar C_F = {(lambda, lambda, 0)} (Chamseddine-Connes-Marcolli 2007, section 2.6), and so is its product with spacetime. So this metric does not compare that triple with anything, and its limits say nothing direct about it. My first statement, that unbroken symmetry is excluded by definition, was too broad: it holds among finite real first-order triples (Proposition 15.10) and fails without order one (Counterexample 15.11).
 
-4. **Commutativity is the wrong invariant.** C(K) and C(K, M_n) are Morita equivalent, and matrix-valued functions are the ordinary setting of a gauge field on K. "Noncommutative parent" sounded like giving up the premise, whereas it includes this standard case, and T0 already carries a bundle E_l in its data. Farsi-Latrémolière Theorem 4.6 gives noncommutative metric finite limits in this form. The count that the metric does constrain is the number of connected components (Theorem 15.2, item 2).
+4. **The note presented a change of data as a dead end.** Replacing the represented scalar algebra C(K) by End(E) is a possible enlargement of T0. It is a change of data, since a bundle E can carry matrix-valued connections while C(K) acts by scalars. My first version argued from Morita equivalence that the distinction hardly matters; that argument is invalid (see the referee's item (ii)). Morita equivalent algebras are not isomorphic and have different limits, so Theorem 15.2 remains a real restriction on the scalar algebra. In the enlargement, Farsi-Latrémolière Theorem 4.6 gives noncommutative metric finite limits, with the finite algebra put in by hand.
 
 5. **The repo already held the counter-evidence.** Proposition 10.1 compresses functions on connected CP^3 to Gamma_a/5, which generate M_4(C). Lemma 05 records that the lowest truncation of the interval is the algebra C + C. Neither was consulted when the note was written.
 
-6. **The real obstruction was misplaced.** Noncommutativity from a commutative parent is easy. The actual constraint is order zero with inherited reality: with J a J^-1 = a\*, a noncommutative compressed algebra fails order zero (Proposition 16.1). That is a statement about the standard correspondence, and the doubled parent removes it (Theorem 16.2, Corollary 16.3).
+6. **The real obstruction was misplaced.** Noncommutativity from compressing commutative functions is easy. The actual constraint is order zero with inherited reality: with J a J^-1 = a\*, a noncommutative compressed algebra fails order zero (Proposition 16.1). That is a statement about the standard correspondence. The doubled parent removes it (Theorem 16.2, Corollary 16.3), though formally: the same tensor square works for any finite even representation (Remark 16.5).
 
 ## What survives
 
@@ -45,10 +47,10 @@ Section 4.5 of the [Farsi-Latrémolière assessment](2026-11-03_farsi_latremolie
 ## What changes
 
 - **T0:** "limit" widened to include truncation at a fixed spectral window. The note now states the metric result with its scope and records that no obstruction is known.
-- **T0b:** the bimodule, order zero and order one have a concrete origin (lemma 16). The classification, beyond-first-order and twisted frameworks remain to be tested, and the background note remains the first step.
+- **T0b:** lemma 16 gives examples with the requested signs and first-order relations, within the restricted parent described there. The desired algebra and representation, orientability, the classification, and the beyond-first-order and twisted frameworks remain to be tested, and the background note remains the next step.
 - **Paper, section 8:** the sentence on what the results do not give is rewritten, and the out-of-date open problems are replaced.
 - **Farsi-Latrémolière assessment, section 4.5:** a dated correction points here. The original text is kept as a record.
 
 ## Caution in the other direction
 
-Lemma 16 should be read as narrowly as the note it corrects. It is short and elementary, and the doubling may be known. It selects no particular algebra; its KO-6 sign comes from a Clifford point that is an input; its parent is a choice with no dynamical motivation, whose Weyl exponent is twice its metric dimension; its finite triples are usually not metric; and its spectrum adds in quadrature, so the mass relations would have to be redone. The count dim H_F = 32 at k = 4 is a count. Lemma 16 shows that the note's obstruction was overstated. It does not show that the Connes et al. finite geometry comes from a Kaluza-Klein limit.
+Lemma 16 should be read as narrowly as the note it corrects. It is short and elementary, and the doubling may be known, though the referee named no source. Its order conditions are formal. It selects no particular algebra; its KO-6 sign comes from a Clifford point that is an input and fails finite orientability; its parent restricts the algebra of X x X, uses a J covering the flip and adds algebra generation, with no dynamical motivation, and its Weyl exponent is twice its metric dimension; its finite triples are usually not metric; and its spectrum adds in quadrature, so the mass relations would have to be redone. The count dim H_F = 32 at k = 4 is a count. Lemma 16 shows that the note's obstruction was overstated. It does not show that the Connes et al. finite geometry comes from a Kaluza-Klein limit.

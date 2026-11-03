@@ -127,6 +127,7 @@ All applications in Section 1.4 satisfy anticommutation, so they are not affecte
 ### 3.2 Other points in Section 3
 
 - **Lemma 3.1** [2.1]. v3 added the hypothesis "D and D + S both have discrete spectra". The lemma is applied with D = D_h, and the paper itself says D_h has no compact resolvent in Section 5. The conclusion holds without discreteness: pH reduces both operators, and D_eps p = D_h p. So the proof is fixable and the statement is fine.
+- **Inner Leibniz.** Definition 2.13 is ill-typed: it applies L to the non-self-adjoint inner product and names L_A where L_B is meant. Latrémolière's own definition (arXiv:1811.10843) bounds the real and imaginary parts. Noticed by the referee of lemma 15; the proofs are unaffected.
 - **Time window.** The proof concludes with separation over 0 <= t <= M_eps where 1/M_eps is meant. The estimate is uniform in t, so this is harmless. "1/t-covariant reach" is leftover terminology from Latrémolière 2022.
 - **Hypotheses that are strong or hard to verify in examples.**
   - (4) requires D_h to preserve ker D_v exactly. A mass or Yukawa term that mixes zero modes with excited modes violates it.

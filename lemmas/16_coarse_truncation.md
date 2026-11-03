@@ -1,8 +1,8 @@
 # Noncommutative finite real triples from commutative data: truncating the coarse correspondence
 
-Proved by Claude Opus 5.5 without Astra or Fable, in response to the challenge that the T0 note overread [lemma 15](15_propinquity_collapse.md) and the Farsi-Latrémolière limits. Signs and the level-two algebra were checked with numpy on random data (section "Numerical check"). The term "coarse correspondence" and the form D = Delta + J Delta J^-1 are quoted from memory (Connes; Krajewski; Paschke-Sitarz) and await the literature check.
+Proved by Claude Opus 5.5 without Astra or Fable, in response to the challenge that the T0 note overread [lemma 15](15_propinquity_collapse.md) and the Farsi-Latrémolière limits. Signs and the level-two algebra were checked with numpy on random data (section "Numerical check"). The term "coarse correspondence" and the form D = Delta + J Delta J^-1 are quoted from memory (Connes; Krajewski; Paschke-Sitarz) and await the literature check. Refereed by Terra 6.1 (gpt-6.1-terra, effort max, 3 Nov 2026; [report](../reviews/2026-11-03_terra_check_15_16.md)): the examples and Corollary 16.4 are correct; amendments to Proposition 16.1, Theorem 16.2, Corollary 16.3 and the caveats are incorporated below; Remark 16.5 and Example 16.6 come from the referee's assessment of what the lemma achieves.
 
-**Outcome.** Compressing functions on a connected commutative space to a fixed spectral window produces a noncommutative finite algebra with no limit taken. With the standard reality J a J^-1 = a\*, the inherited structure fails order zero exactly when that algebra is noncommutative (Proposition 16.1). With the parent Hilbert space doubled to H_0 (x) conj(H_0), order zero and order one hold for every such algebra (Theorem 16.2, Corollary 16.3). The KO-6 signs and the count dim H_F = 2 k^2 are reached by a product with a Clifford point, which is an input (Corollary 16.4). This selects no particular algebra and gives no dynamics.
+**Outcome.** Compressing functions on a connected commutative space to a fixed spectral window produces a noncommutative finite algebra with no limit taken. With the standard reality J a J^-1 = a\*, the inherited structure fails order zero exactly when that algebra is noncommutative (Proposition 16.1). With the parent Hilbert space doubled to H_0 (x) conj(H_0), order zero and order one hold for every such algebra (Theorem 16.2, Corollary 16.3); these two conditions are formal consequences of the tensor square, available for any finite even representation (Remark 16.5). The KO-6 signs and the count dim H_F = 2 k^2 are reached by a product with a Clifford point, which is an input and fails finite orientability (Corollary 16.4). This selects no particular algebra and gives no dynamics.
 
 ## Setting
 
@@ -30,7 +30,7 @@ M_2(C) is simple, so multiplying Q(f_1) and Q(f_2) by elements of A_F gives M_2(
 
 ## The standard correspondence
 
-**Proposition 16.1 (order zero fails with inherited reality).** Let J_0 be antiunitary on H_0 with J_0 a J_0^-1 = a\* for all a in A_0 and J_0 D_0 = eps' D_0 J_0, and let J_F = J_0 restricted to V. Then J_F Q(a)\* J_F^-1 = Q(a), and the data (A_F, V, d, J_F) satisfy order zero if and only if A_F is commutative. The same holds for a product with a fixed finite real factor, with the product real structure.
+**Proposition 16.1 (order zero fails with inherited reality).** Let J_0 be a real structure on H_0 (antiunitary, J_0^2 = +/-1, with the grading sign), with J_0 a J_0^-1 = a\* for all a in A_0 and J_0 D_0 = eps' D_0 J_0, and let J_F = J_0 restricted to V. Then J_F Q(a)\* J_F^-1 = Q(a), and the data (A_F, V, d, J_F) satisfy order zero if and only if A_F is commutative. The same holds for a product with a fixed finite factor that itself satisfies order zero, with the compatible product real structure.
 
 *Proof.* J_0 preserves V because Sigma = -Sigma. Then J_0 P_0 a\* P_0 J_0^-1 = P_0 a P_0. Order zero would make Q(a) commute with Q(b)° = Q(b) for all a, b, so O_F and hence A_F would be commutative; the converse is immediate, since J_F A_F J_F^-1 = A_F. For the product, take the unit in the finite factor: [1 (x) Q(a), 1 (x) Q(b)] = 1 (x) [Q(a), Q(b)]. ∎
 
@@ -49,18 +49,18 @@ Let conj(H_0) be the conjugate Hilbert space, with canonical antiunitary xi -> x
 
     a° := J pi(a)\* J^-1 = 1 (x) (a\*)^c,     [pi(a), b°] = 0,     [[DD, pi(a)], b°] = 0,
 
-and norm([DD, pi(a)]) = norm([D_0, a]). So if the original triple is metric, the new triple is metric with the same Connes distance on A_0, and its Weyl exponent is doubled.
+and norm([DD, pi(a)]) = norm([D_0, a]). So if the original triple is metric, the new triple is metric with the same Connes distance on A_0. If the Weyl exponent p = lim log N_0(R)/log R of D_0 exists, that of DD is 2 p, since N_0(R/sqrt(2))^2 <= N_DD(R) <= N_0(R)^2.
 
 *Proof.* J is antilinear, and J^2 = 1 because the sign is applied twice with the degrees exchanged. Gamma has eigenvalue (-1)^{|xi| + |eta|}, symmetric under the exchange. For the Dirac operator,
 
     J DD (xi (x) eta^c) = (-1)^{(|xi| + 1) |eta|} eta (x) (D_0 xi)^c + (-1)^{|xi|} (-1)^{|xi| (|eta| + 1)} D_0 eta (x) xi^c
                         = (-1)^{|xi| |eta|} [D_0 eta (x) xi^c + (-1)^{|eta|} eta (x) (D_0 xi)^c] = DD J (xi (x) eta^c).
 
-For even a, a\* preserves degree, so J pi(a)\* J^-1 (eta (x) xi^c) = eta (x) (a\* xi)^c, which gives the formula for a° and order zero. Since a is even, [DD, pi(a)] = [D_0, a] (x) 1, which commutes with 1 (x) (b\*)^c. Finally DD^2 = D_0^2 (x) 1 + 1 (x) (D^c)^2, because gamma_0 anticommutes with D_0. Hence DD is self-adjoint on the closure of the algebraic tensor product, with compact resolvent, and the spectrum is +/- (lambda_i^2 + lambda_j^2)^{1/2}. ∎
+For even a, a\* preserves degree, so J pi(a)\* J^-1 (eta (x) xi^c) = eta (x) (a\* xi)^c, which gives the formula for a° and order zero. Since a is even, [DD, pi(a)] = [D_0, a] (x) 1, which commutes with 1 (x) (b\*)^c. Finally DD^2 = D_0^2 (x) 1 + 1 (x) (D^c)^2, because gamma_0 anticommutes with D_0. An eigenbasis of D_0 decomposes DD into finite-dimensional invariant blocks, so DD is essentially self-adjoint on the algebraic tensor product, with compact resolvent, and the spectrum is +/- (lambda_i^2 + lambda_j^2)^{1/2}. ∎
 
-Geometrically, when H_0 = L^2(S_X) on an even-dimensional spin manifold X, a charge conjugation commuting with D_X identifies conj(H_0) with H_0, H is L^2(S_{X x X}) and DD is the ordinary product Dirac operator. The data are thus an ordinary commutative Kaluza-Klein manifold X x X, with the algebra restricted to C(X) (x) 1 and J covering the flip of the two factors. Restricting the algebra is essential: on all of C(X x X), the compressions give A_F (x) A_F, and order zero fails again.
+Geometrically, when H_0 = L^2(S_X) on an even-dimensional spin manifold X, a charge conjugation commuting with D_X identifies conj(H_0) with H_0, H is L^2(S_{X x X}) and DD is the ordinary product Dirac operator. (The grading may acquire an overall sign under this identification.) So the data are a product-manifold Dirac operator on X x X with a restricted observable algebra C(X) (x) 1, and a J covering the flip of the two factors, which differs from the pointwise spin real structure. They count as commutative Kaluza-Klein data only with that restriction and that J: they are neither the ordinary spin triple of X x X with its full function algebra nor a finite-rank twist over X. The restriction is essential: on all of C(X x X), the compressions generate A_F (x) conj(A_F), and order zero generally fails again.
 
-**Corollary 16.3 (truncation).** Let P = P_0 (x) conj(P_0). It commutes with DD, Gamma and J. The compression is the finite real even triple
+**Corollary 16.3 (truncation).** Let P = P_0 (x) conj(P_0). It commutes with DD, Gamma and J. It is a joint cutoff in the two factors, and need not be a spectral projection of DD: for absolute eigenvalues 1, 5, 7, sqrt(73) of D_0 with P_0 selecting the first three, the selected pair (5, 7) and the excluded pair (1, sqrt(73)) both give DD^2 = 74. The compression of pi(A_0) is O_F (x) 1; passing to the generated algebra gives the finite real even triple
 
     T_F = (A_F, V (x) conj(V), D_F, J_F, Gamma_F),     D_F = d (x) 1 + gamma_V (x) d^c = Delta + J_F Delta J_F^-1,     Delta = d (x) 1,
 
@@ -68,7 +68,7 @@ with A_F acting on the left. It has KO-dimension 0, and satisfies order zero and
 
 *Proof.* The proof of Theorem 16.2 applies verbatim on V with arbitrary even a, b in B(V), since it uses only the grading and the tensor structure. For J_F Delta J_F^-1, apply J to (d (x) 1) J (xi (x) eta^c): the signs combine to (-1)^{|xi|}, giving gamma_V (x) d^c. ∎
 
-So H_F is the bimodule of Connes' finite geometries, with A_F on the left and its opposite on the right, and D_F has the first-order form of Krajewski and Paschke-Sitarz.
+So H_F has the bimodule form of Connes' finite geometries, with A_F on the left and its opposite on the right, and D_F has the first-order form of Krajewski and Paschke-Sitarz.
 
 Example (a) gives (C + C, C^2 (x) C^2, m (sigma_1 (x) 1 + sigma_3 (x) sigma_1)). There [[D_F, e], e°] = 0 for e = diag(1, 0), which repairs the first-order failure of Counterexample 08.4 at the price of doubling. Example (b) gives (M_2(C) + M_2(C), C^16, D_F).
 
@@ -76,9 +76,13 @@ Example (a) gives (C + C, C^2 (x) C^2, m (sigma_1 (x) 1 + sigma_3 (x) sigma_1)).
 
     (A_F, V (x) conj(V) (x) C^2, D_F (x) 1, J_F (x) sigma_1 K, Gamma_F (x) sigma_3),
 
-with signs (+, +, -), order zero, order one and dim H = 2 k^2.
+with signs (+, +, -), order zero, order one and dim H = 2 k^2. It fails the usual zero-dimensional orientability axiom: every zero-cycle built from the left and opposite actions acts as T (x) 1_2, while the grading is Gamma_F (x) sigma_3.
 
 *Proof.* (sigma_1 K)^2 = 1 and sigma_1 K sigma_3 = -sigma_3 sigma_1 K, while the D term is untouched. a° is a° of T_F tensored with 1. ∎
+
+**Remark 16.5 (the order conditions are formal).** For every finite even representation (A, V, d, gamma), the map V -> V (x) conj(V), d -> d (x) 1 + gamma (x) d^c gives a real bimodule with order zero and order one, using no prior finite real structure. So these two conditions follow from choosing the tensor square, and say nothing specific about A_F. The construction does not recover an arbitrary prescribed finite (H, D, J). What is specific to T0 is that A_F is generated by compressed functions, that the tensor square is itself the truncation of a commutative parent in the restricted sense above, and families such as the following.
+
+**Example 16.6 (a tower-decoupling family, from the referee).** Let D_0 be the Dolbeault-Dirac operator on CP^3 twisted by O(1), with V = ker D_0 = C^4, and let DD_l = DD/l on the doubled parent. Its kernel is V (x) conj(V), and its gap grows like 1/l. Here P is a spectral projection. Compression followed by algebra generation gives the constant finite data A_F = M_4(C), dim H_F = 16, D_F = 0, and the Clifford point gives dim H = 32 with the KO-6 signs. Order one is automatic, since D_F = 0. The whole triple converges to (C, C^16, 0) by Theorem 15.3, consistently with lemma 15: the two statements concern the whole algebra and the truncation.
 
 ## Caveats
 
@@ -86,13 +90,13 @@ These results should be read as narrowly as the note they correct.
 
 1. **Metric.** T_F is usually not a metric spectral triple. For A_F = B(V_+) + B(V_-) with V_+ of dimension at least 2 and d odd, the commutant of d in A_F contains the pairs (x, B^-1 x B) with x commuting with B B\*, when B is the invertible block of d. In example (b), (diag(1, 0), diag(1, 0)) has L = 0, so d leaves a residual U(1) x U(1) of U(2) x U(2) unbroken. The Standard Model finite triple has the same feature, through M_3(C).
 2. **Spectrum.** The eigenvalues of D_F are +/- (lambda_i^2 + lambda_j^2)^{1/2}. In example (a) they are +/- sqrt(2) m with Connes distance 1/m, so the doubled spectrum differs from the masses in d, and the mass relations of Theorem 9.6 and lemma 11 would have to be redone.
-3. **Parent.** The doubled parent is a choice. Its algebra sees one factor of X x X, and its J covers the flip, which is outside the spin real structure of X x X. We have no dynamical reason for it. Its Weyl exponent is 2 dim X with metric dimension dim X, which bears on the counting of 9, 10 and 11 and has not been analyzed.
-4. **KO-6.** The Clifford point is an input, as F_0 is in Theorem D. Whether the sign can come from the parent is open. The internal grading-reversing structure of lemma 08 is the natural candidate.
-5. **Count.** For k = 4, dim H = 32, the value in the classification of Chamseddine-Connes, and k = 4 occurs in examples (b) and (c). This is a count and nothing more: the classification's algebra is M_2(H) + M_4(C), acting differently, and neither example produces it.
+3. **Parent.** The doubled parent is a choice. Its algebra sees one factor of X x X, its J covers the flip, which is outside the spin real structure of X x X, and generating A_F from O_F is an additional operation. We have no dynamical reason for it. For an ordinary compact spin X of dimension n, its Weyl exponent is 2 n with metric dimension n, which bears on the counting of 9, 10 and 11 and has not been analyzed.
+4. **KO-6.** The Clifford point is an input, as F_0 is in Theorem D, and it fails finite orientability. The documents checked here establish neither a construction of the sign from the parent nor a no-go theorem. The grading-reversing structure of lemma 08 is a candidate we have not tested.
+5. **Count.** For k = 4, dim H = 32, the value in the classification of Chamseddine-Connes, and k = 4 occurs in examples (b) and (c). This is a count and nothing more: the classification's algebra is M_2(H) + M_4(C), acting differently, and neither example produces it. The algebras generated here are complex, and a quaternionic real summand would need additional real-algebra data.
 
 ## Consequence for T0 and T0b
 
-T0 asks for finite real triples from commutative Kaluza-Klein data under specified notions of convergence. Under truncation at a fixed spectral window, noncommutativity, real structure, order zero and order one are all attained from commutative data, with the bimodule doubling as the mechanism. What remains open is the selection of A_F, the KO-6 sign from the parent, a physical origin for the doubled parent and a metric refinement. Of the items listed in T0b, the classification and the beyond-first-order and twisted frameworks are still untested; the bimodule, order zero and order one now have a concrete origin.
+T0 asks for finite real triples from commutative Kaluza-Klein data under specified notions of convergence. For one specified truncation procedure (compression, then generation, on the doubled parent with restricted algebra and flip J), this lemma gives a noncommutative finite algebra with an explicit bimodule, and a family with the tower decoupled (Example 16.6). It does not establish the target under every meaning of ordinary Kaluza-Klein data. For T0b, it gives examples with the requested signs and first-order relations, and leaves open the desired algebra and representation, orientability, nonzero mass data in the kernel family, the classification, and the beyond-first-order and twisted frameworks.
 
 ## Numerical check
 

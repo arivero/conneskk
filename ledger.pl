@@ -366,6 +366,35 @@ source(l10_generates_m4, 'lemmas/16_coarse_truncation.md', 'setting').
 depends(l10_generates_m4, l10_toeplitz).
 attempted_by(l10_generates_m4, claude_opus_5_5).
 refuted_by(t0_note_overread, l10_generates_m4).
+%% Referee of lemmas 15 and 16 (Terra 6.1, 3 Nov 2026): reviews/2026-11-03_terra_check_15_16.md
+checked_by(fl_R2, terra_6_1, by_hand).  checked_by(fl_R3, terra_6_1, by_hand).
+checked_by(l15_gap, terra_6_1, by_hand).  checked_by(l15_yukawa, terra_6_1, by_hand).
+checked_by(l15_converse, terra_6_1, by_hand).  checked_by(l15_finite_limits, terra_6_1, by_hand).
+checked_by(l15_grading, terra_6_1, by_hand).  checked_by(l16_interval_algebra, terra_6_1, by_hand).
+checked_by(l16_standard_nogo, terra_6_1, by_hand).  checked_by(l16_coarse, terra_6_1, by_hand).
+checked_by(l16_truncation, terra_6_1, by_hand).
+claim(l15_first_order, proposition, proved, "Proposition 15.10", "In a finite real triple with order zero and order one, if D commutes with u J u J^-1 then [D, u] = 0; in a metric such triple, u is scalar.").
+source(l15_first_order, 'lemmas/15_propinquity_collapse.md', 'unbroken-symmetry-and-the-metric-class').
+attempted_by(l15_first_order, terra_6_1).
+checked_by(l15_first_order, claude_opus_5_5, by_hand).
+claim(l15_symmetry_ce, counterexample, proved, "Counterexample 15.11", "A metric triple on M_2(C) with D the traceless projection has every conjugation commuting with D; it fails order one.").
+source(l15_symmetry_ce, 'lemmas/15_propinquity_collapse.md', 'unbroken-symmetry-and-the-metric-class').
+attempted_by(l15_symmetry_ce, terra_6_1).
+checked_by(l15_symmetry_ce, claude_opus_5_5, by_hand).
+claim(t0_unbroken_unrestricted, claim, refuted, "First version of the T0 section of lemma 15", "A metric spectral triple excludes every unbroken inner gauge symmetry.").
+source(t0_unbroken_unrestricted, 'reviews/2026-11-03_terra_check_15_16.md', 'i-unbroken-symmetry-and-the-standard-model').
+attempted_by(t0_unbroken_unrestricted, claude_opus_5_5).
+refuted_by(t0_unbroken_unrestricted, l15_symmetry_ce).
+claim(l16_formal, claim, proved, "Remark 16.5", "Order zero and order one on the tensor square hold for every finite even representation, so they are formal and carry nothing specific about A_F.").
+source(l16_formal, 'lemmas/16_coarse_truncation.md', 'the-coarse-correspondence').
+attempted_by(l16_formal, terra_6_1).
+checked_by(l16_formal, claude_opus_5_5, by_hand).
+claim(l16_family, claim, proved, "Example 16.6", "On the doubled parent of twisted CP^3, DD/l has kernel C^4 (x) C^4 and gap of order 1/l; compression then generation gives constant A_F = M_4(C), while the whole triple converges to (C, C^16, 0).").
+source(l16_family, 'lemmas/16_coarse_truncation.md', 'the-coarse-correspondence').
+depends(l16_family, l16_truncation).
+depends(l16_family, l15_gap).
+attempted_by(l16_family, terra_6_1).
+checked_by(l16_family, claude_opus_5_5, by_hand).
 addresses(t0, fl_R3).  addresses(t0, l15_finite_limits).  addresses(t0, l16_truncation).  addresses(t0b, l16_truncation).
 
 hypothesis(ccm_relation, "Chamseddine-Connes-Marcolli normalization at the matching scale: 8 M_W^2 = sum of N_f m_f^2 over Dirac masses.").

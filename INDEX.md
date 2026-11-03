@@ -120,7 +120,8 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
 - [5. Boundary Yukawa matrices and towerless textures](paper/towerless_intervals.md#5-boundary-yukawa-matrices-and-towerless-textures)
 - [6. Real structures: the choice between 9 and 11](paper/towerless_intervals.md#6-real-structures-the-choice-between-9-and-11)
 - [7. Spectral action: heavy fermions and the gauge sector](paper/towerless_intervals.md#7-spectral-action-heavy-fermions-and-the-gauge-sector)
-- [8. Discussion](paper/towerless_intervals.md#8-discussion)
+- [8. Whole triples and truncations](paper/towerless_intervals.md#8-whole-triples-and-truncations)
+- [9. Discussion](paper/towerless_intervals.md#9-discussion)
 - [Provenance](paper/towerless_intervals.md#provenance)
 - [References](paper/towerless_intervals.md#references)
 
@@ -377,6 +378,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
   - [The gap criterion (Lemma R2)](lemmas/15_propinquity_collapse.md#the-gap-criterion-lemma-r2)
   - [The converse](lemmas/15_propinquity_collapse.md#the-converse)
   - [Grading and real structure](lemmas/15_propinquity_collapse.md#grading-and-real-structure)
+  - [Unbroken symmetry and the metric class](lemmas/15_propinquity_collapse.md#unbroken-symmetry-and-the-metric-class)
   - [What this says about T0](lemmas/15_propinquity_collapse.md#what-this-says-about-t0)
 - [16: Noncommutative finite real triples from commutative data: truncating the coarse correspondence](lemmas/16_coarse_truncation.md)
   - [Setting](lemmas/16_coarse_truncation.md#setting)
@@ -391,6 +393,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
 - [Farsi-Latrémolière assessment](reviews/2026-11-03_farsi_latremoliere_assessment.md)
 - [Review of the evaluation](reviews/2026-11-03_review_of_evaluation.md)
 - [Terra check of N8](reviews/2026-11-03_terra_check_N8.md)
+- [Terra referee report on lemmas 15 and 16](reviews/2026-11-03_terra_check_15_16.md)
 
 ### Transcript: [transcripts/Connes_Electrodynamics_ModelMd.txt](transcripts/Connes_Electrodynamics_ModelMd.txt)
 
