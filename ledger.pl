@@ -1169,6 +1169,38 @@ contradiction(8, "canonical 14.3 vs research_state 3.2, 4.2", "Berger angle: Che
 contradiction(9, "canonical 8 vs research_state 6.12", "no parity restriction on n versus odd index only for |n| = 2 mod 4", "different operators; both hold", compatible).
 contradiction(10, "canonical 2.2 and 3", "alpha used for two quantities; staircase b/a = 0.02 versus 0.01", "the hypercharge phase is now varphi; the two staircases are separate figures, each stating its own radii, and no result depends on the value", resolved).
 
+%% ---------------------------------------------------------------- lemma 26
+claim(l26_classification, theorem, proved, "Theorem 26.2", "Flat family with fermions of frequency 1 and 2 at one loop, no wall terms. With n_c = 2.8855: for n_1 = 0, theta = pi/4 is the unique global minimum iff n_2 >= n_c; for 27/10 < n_2 < n_c two symmetric minima; for n_2 <= 27/10 the endpoints. For n_1 > 0 and n_2 >= n_c, with n_* = (4/3)(4 n_2 - 54/5): one interior minimum in (pi/4, pi/2) iff n_1 < n_*, otherwise theta = pi/2. Escapes: other gauge content, wall terms, warping, bulk-mass sectors.").
+source(l26_classification, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-classification').
+depends(l26_classification, l24_no_minimum).
+attempted_by(l26_classification, claude_opus_5_5).
+checked_by(l26_classification, claude_opus_5_5, python("11600 pairs on a grid of 20001 angles, no failure")).
+claim(l26_spectrum, corollary, proved, "Corollary 26.3", "At theta = pi/4: M_KK = 4 M_W, m_1 = M_W, m_2 = 2 M_W, M_W^2/M_Z^2 = 0.5032; on [pi/4, pi/2), m_2 <= 2 M_W, m_1/M_W increases to infinity, M_KK >= 4 M_W. For a pure frequency-2 channel, one coupling.").
+source(l26_spectrum, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-classification').
+depends(l26_spectrum, l26_classification).
+depends(l26_spectrum, l23_wz).
+attempted_by(l26_spectrum, claude_opus_5_5).
+checked_by(l26_spectrum, claude_opus_5_5, by_hand).
+claim(l26_plane, proposition, proved, "Proposition 26.3b", "In the (10, 6) the plane of the left-handed top contains the right-handed top with weight 1/sqrt(2). Keeping both triplet components gives a pure frequency-2 channel and a massless coloured exotic; removing the exotic at a wall gives the W boundary problem and m_t = M_W at every theta.").
+source(l26_plane, 'lemmas/26_interior_vacuum_matching_scale.md', 'where-frequency-2-lives').
+depends(l26_plane, l23_wz).
+attempted_by(l26_plane, claude_opus_5_5).
+checked_by(l26_plane, claude_opus_5_5, by_hand).
+claim(l26_lr, proposition, proved, "Propositions 26.4 and 26.5", "In the parent tower the differences of the inverse couplings do not depend on universal bulk matter, and alpha_R^-1 - alpha_2^-1 has no power of S: it closes near 2 x 10^24 GeV at M_KK = 321 GeV, one loop.").
+source(l26_lr, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-tower-of-the-parent').
+attempted_by(l26_lr, claude_opus_5_5).
+checked_by(l26_lr, claude_opus_5_5, python("exact fractions for the coefficients; equation (4) against equation (3) to 13 digits")).
+claim(l26_meeting, claim, numerical, "Result 26.6", "One-loop, parent tower, Standard Model below M_KK: alpha_1 = alpha_2 = alpha_3 at mu_* = 2.2 x 10^14 GeV with M_KK = 3.1 x 10^13 GeV, S = 7.0.").
+source(l26_meeting, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-tower-of-the-parent').
+depends(l26_meeting, l26_lr).
+attempted_by(l26_meeting, claude_opus_5_5).
+checked_by(l26_meeting, claude_opus_5_5, python("nested root finding, with input shifts")).
+claim(l26_top, claim, numerical, "Result 26.7", "Tree-level matching y = r g_2 at M_KK, Standard Model below: running m_t = 164 GeV for r = sqrt(2) at 321 GeV, 87 GeV for r = 1/sqrt(2) at 321 GeV, 172 GeV for r = 1 at 3.1 x 10^13 GeV.").
+source(l26_top, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-top-against-the-matching-scale').
+attempted_by(l26_top, claude_opus_5_5).
+checked_by(l26_top, claude_opus_5_5, python("scipy integration of the one-loop top Yukawa equation")).
+addresses(t13, l26_classification).  addresses(t13, l26_lr).  addresses(t13, l26_meeting).  addresses(t13, l26_top).  addresses(t5b, l26_spectrum).  addresses(t12, l26_plane).
+
 %% ---------------------------------------------------------------- steer note, items 9 and 11
 claim(steer_tower_coefficients, proposition, proved, "Steer note, item 9", "One Kaluza-Klein level of all Standard Model fields in the bulk has one-loop coefficients (81/10, 7/6, -5/2): a massive vector (-7/2 C_2), two Weyl fermions for each Standard Model Weyl fermion, and one complex Higgs doublet.").
 source(steer_tower_coefficients, 'd9_masses_fermi_qcd_steer.md', '').
