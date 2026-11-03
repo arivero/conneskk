@@ -595,6 +595,7 @@ checked_by(paper_14_3_1, corpus, python("see research_checks_knowledge.md")).
 %% ---------------------------------------------------------------- STRATEGY.md
 strategy(t0, open, "Founding problem: finite real triples (in general, not specifically the Standard Model) as limits of commutative Kaluza-Klein data, with specified spectral, operator-algebraic and K-theoretic convergence.").
 strategy(t0b, open, "Reach the current Connes et al. framework (KO-6, order one, doubling, classification, beyond first order, twisted triples) beyond the Connes-Lott layer.").
+strategy(t10, open, "Yukawa couplings as explicit mass terms in the D = 9 action (d_5 = D_0 + m Gamma_0) and the chiral limit m_u = m_d = 0.").
 strategy(t5b, open, "Heavy-W limit at fixed cutoff with the mass-weighted spectral action of lemma 03.").
 strategy(t1, settled, "Deconstruction: Connes-Lott is the minimal truncation of the chiral interval.").
 strategy(t2, settled, "KO parity: grading-reversing involution U with UJ = sJU; s = -1 gives 9, s = +1 gives 11; J alone does not decide.").
@@ -612,7 +613,7 @@ addresses(t2, l06_factorization).  addresses(t2, l06_counterexample).  addresses
 addresses(t2b, l07_reflection).  addresses(t2b, conj07_4).  addresses(t2b, l08_product).  addresses(t2b, l08_both_signs).  addresses(t2b, l08_pairing).
 addresses(t2c, l08_pairing).  addresses(t2c, l06_nuL).  addresses(t2c, l06_neutral).
 addresses(t3, l09_index).  addresses(t3, l09_lightpair).  addresses(t3, l09_limits).  addresses(t3, l12_index).  addresses(t3, l12_secular).
-addresses(t5b, l03_weights).  addresses(t0, l05_truncation).  addresses(t0, l13_not_covariant).
+addresses(t5b, l03_weights).  addresses(t10, l08_reconcile).  addresses(t10, l06_factorization).  addresses(t0, l05_truncation).  addresses(t0, l13_not_covariant).
 addresses(t5, l11_bounds).  addresses(t5, l11_nogo).  addresses(t5, l11_top).
 addresses(t7, l02_invariant).
 addresses(t8, l12_towerless).  addresses(t8, l12_graded).  addresses(t8, l12_mixing).
