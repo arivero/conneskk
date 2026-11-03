@@ -943,7 +943,7 @@ source(l22_family, 'lemmas/22_dirac_operator_as_boundary_condition.md', 'the-gau
 depends(l22_family, l22_window).
 attempted_by(l22_family, claude_opus_5_5).
 addresses(t10, l22_family).  addresses(t0b, l22_transport).  addresses(t13, l22_window).  addresses(t13, l22_family).
-%% Lemma 23 (T0b, T5b, T10, T13). Claude; referee pending.
+%% Lemma 23 (T0b, T5b, T10, T13). Claude; referee: reviews/2026-11-03_terra_check_23.md
 claim(l23_gradings, theorem, proved, "Theorem 23.1", "The derivative on an interval with a grading at each wall has D_F = (1/2l) Gamma_0 log(Gamma_1 Gamma_0), with singular values the principal angles over l; real structure from an antiunitary J_1, J_1^2 = -1, anticommuting with both gradings.").
 source(l23_gradings, 'lemmas/23_two_gradings_interval.md', 'two-gradings').
 depends(l23_gradings, l22_window).
@@ -1005,6 +1005,16 @@ checked_by(l22_compression, terra_6_1, by_hand).
 checked_by(l22_transport, terra_6_1, by_hand).
 checked_by(l22_no_radial, terra_6_1, by_hand).
 checked_by(l22_family, terra_6_1, by_hand).
+checked_by(l23_gradings, terra_6_1, by_hand).
+checked_by(l23_aligned, terra_6_1, by_hand).
+checked_by(l23_radial, terra_6_1, by_hand).
+checked_by(l23_wz, terra_6_1, by_hand).
+checked_by(l23_theta, terra_6_1, by_hand).
+claim(l23_potential, no_go, proved, "Proposition 23.8", "Flat massless family, this gauge content, fermions of frequency 1, one loop: theta = pi/2 is the unique global minimum for n_f > 0, and V is strictly decreasing for n_f >= 10.8; for smaller n_f, no interior minimum on grids (Python). Escapes: general bulk masses with a completion, warping, wall scalar with a potential, wall terms, fermions of frequency 2.").
+source(l23_potential, 'lemmas/23_two_gradings_interval.md', 'the-one-loop-potential-in-the-same-family').
+attempted_by(l23_potential, claude_opus_5_5).
+attempted_by(l23_potential, terra_6_1).
+checked_by(l23_potential, claude_opus_5_5, python("grids and quadrature")).
 %% Lemma 17 (T10, routine part). Referee: reviews/2026-11-03_terra_check_17.md
 claim(l17_action, theorem, proved, "Theorem 17.1", "The fermion action of M x F on the Gamma = +1 subspace equals (1/2) <jj psi, (D_M + gamma_5 d) psi> on an unconstrained spinor, with jj = J_M (x) j for s = +1 and gamma_5 J_M (x) j for s = -1.").
 source(l17_action, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').
