@@ -913,7 +913,7 @@ addresses(t11, l20_hw).
 checked_by(l11_nogo, astra6, by_hand).
 checked_by(l16_standard_nogo, astra6, by_hand).
 checked_by(l16_grading_not_even, astra6, by_hand).
-%% Lemma 22 (T0, T0b, T10, T13). Claude; referee pending.
+%% Lemma 22 (T0, T0b, T10, T13). Claude; referee: reviews/2026-11-03_terra_check_22.md
 claim(l22_window, theorem, proved, "Theorem 22.1", "Finite data of signs (+,+,-) with l ||D_F|| < pi/2 are exactly the lowest window of the derivative on an interval with coupling tan(l D_F); D, J and Gamma all exact; next level at least (pi - l ||D_F||)/l.").
 source(l22_window, 'lemmas/22_dirac_operator_as_boundary_condition.md', 'the-window').
 attempted_by(l22_window, claude_opus_5_5).
@@ -999,6 +999,12 @@ checked_by(l20_hw, terra_6_1, by_hand).
 checked_by(l21_removal, terra_6_1, by_hand).
 checked_by(l21_counts, terra_6_1, by_hand).
 checked_by(l21_so30, terra_6_1, by_hand).
+checked_by(l22_window, terra_6_1, by_hand).
+checked_by(l22_parent, terra_6_1, by_hand).
+checked_by(l22_compression, terra_6_1, by_hand).
+checked_by(l22_transport, terra_6_1, by_hand).
+checked_by(l22_no_radial, terra_6_1, by_hand).
+checked_by(l22_family, terra_6_1, by_hand).
 %% Lemma 17 (T10, routine part). Referee: reviews/2026-11-03_terra_check_17.md
 claim(l17_action, theorem, proved, "Theorem 17.1", "The fermion action of M x F on the Gamma = +1 subspace equals (1/2) <jj psi, (D_M + gamma_5 d) psi> on an unconstrained spinor, with jj = J_M (x) j for s = +1 and gamma_5 J_M (x) j for s = -1.").
 source(l17_action, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').

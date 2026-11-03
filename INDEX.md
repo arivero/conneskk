@@ -413,6 +413,7 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 - [Terra referee report on the main draft and the note](reviews/2026-11-03_terra_check_paper_note.md)
 - [Terra referee report on the two-model no-go results and lemma 19](reviews/2026-11-03_terra_check_nogo_19.md)
 - [Terra referee report on lemmas 20 and 21, the steer comparison and Proposition I](reviews/2026-11-03_terra_check_20_21.md)
+- [Terra referee report on lemma 22](reviews/2026-11-03_terra_check_22.md)
 
 ### Transcript: [transcripts/Connes_Electrodynamics_ModelMd.txt](transcripts/Connes_Electrodynamics_ModelMd.txt)
 

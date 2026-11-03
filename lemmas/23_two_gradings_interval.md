@@ -73,7 +73,7 @@ So scalar fluctuations move the second grading along its orbit under the unitary
 
 *Proof.* u\* D u = D + E u\* u', and u\* E h u = E u\* h u, so the connection cancels. Since u(0) = 1, the wall at 0 is unchanged. At l, psi = u phi gives the stated grading for phi. ∎
 
-This is the second escape of No-go theorem 22.7: the even connection gives a w commuting with Gamma_0, and when Gamma_1 is built from D_F the angles are kept, while an odd connection changes them.
+This is an escape from No-go theorem 22.7: an even connection gives a w commuting with Gamma_0, and the angles are kept, while an odd connection changes them. The invariant is the double coset: the connection is gauge equivalent to zero under the allowed endpoint group, with u(0) commuting with Gamma_0 and u(l) with Gamma_1, exactly when w lies in Stab(Gamma_0) Stab(Gamma_1). So the scalar moduli of the parent are the double cosets Stab(Gamma_0) \ U(P) / Stab(Gamma_1), that is, the relative position of the two gradings. This is with the moving window, as in lemma 22.
 
 **Example 23.5 (M_2(H) and S^4).** Let W = H^2 = C^4, with the Clifford generators Gamma_a of lemma 16, and for a unit vector p in R^5 put Gamma_p = p_a Gamma_a. Each grading of W with quaternionic eigenspaces is such a Gamma_p, so these gradings form S^4 = Sp(2)/(Sp(1) x Sp(1)), the quaternionic projective line. For two points, Gamma_q Gamma_p = p . q + (p wedge q), with eigenvalues e^{+-i d}, where d is the geodesic distance; so all the principal angles equal theta = d/2.
 
@@ -150,7 +150,7 @@ This is a numerical negative result in an exact scope: one interval, no bulk mas
 
 ## Comparison with measured values in the flat toy
 
-These are numerical comparisons (Python), with no running and no bulk masses, in lowest levels. The ratio m_t/M_W reaches sqrt(8/3) at theta = 1.0589 and the measured 2.147 at theta = 1.1625, where M_W l = 0.54, so 1/l is about 150 GeV. There, M_W^2/M_Z^2 = 0.58, against the measured 0.777. The wall-scalar family of lemma 22 covers [0.625, 1], and this family covers [0.503, 0.625]. So neither flat family fits on its own, the tower is far too light, and the flat one-loop potential above does not select an interior point. The directions are bulk masses for the light fermions, warping, running of the couplings, and families combining a Wilson line with a wall scalar. These negative statements hold in the flat tree-level toy only.
+These are numerical comparisons (Python), with no running and no bulk masses, in lowest levels. The ratio m_t/M_W reaches sqrt(8/3) at theta = 1.0589 and the measured 2.147 at theta = 1.1625, where M_W l = 0.54, so 1/l is about 150 GeV. There, M_W^2/M_Z^2 = 0.58, against the measured 0.777. The wall-scalar model of lemma 22 covers [0.625, 1], and this family covers [0.503, 0.625]. So neither flat family fits both ratios on its own, and the flat one-loop potential above does not select an interior point. Whether a tower at 1/l of this size is allowed would need the couplings and an applicable experimental limit, which we have not analyzed. The directions are bulk masses for the light fermions, warping, running of the couplings, and families combining a Wilson line with a wall scalar. These negative statements hold in the flat tree-level toy only.
 
 ## Open questions
 
