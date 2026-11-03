@@ -17,6 +17,7 @@
 %% referee_report(File, Report)        the referee of File by Terra 6.1 is in Report (the lemma table records it)
 %%    The test on these rows checks bookkeeping: a Terra checker, Terra authorship or an exception. It reads neither the statement nor the verdict of the report.
 %% outside_referee(Claim, Why)         a proved or conditional claim of a refereed File that its Report did not cover
+%% referee_pending(Claim)              a new claim checked only by its author, with a referee queued
 %% overturn(Id, Text)                  what would overturn applicability (research-state ledger)
 %% strategy(T, Status, Text)           Status: settled | partial | open
 %% addresses(T, Id)                    strategy item T is addressed by claim Id
@@ -28,7 +29,7 @@
 :- discontiguous refuted_by/2.
 :- discontiguous prior_work/3.
 :- discontiguous claim/5, source/3, depends/2, hypothesis/2, attempted_by/2, checked_by/3, overturn/2, addresses/2, strategy/3.
-:- discontiguous referee_report/2, outside_referee/2.
+:- discontiguous referee_report/2, outside_referee/2, referee_pending/1.
 :- use_module(library(lists)).
 :- use_module(library(readutil)).
 
@@ -1251,6 +1252,28 @@ checked_by(l27_discrete, claude_opus_5_5, by_hand).
 checked_by(l27_discrete, terra_6_1, by_hand).  % report 27, items 5 and 6
 addresses(t10, l27_trace).  addresses(t10, l27_anomaly).  addresses(t10, l27_discrete).  addresses(t13, l27_discrete).
 
+%% ---------------------------------------------------------------- lemma 28
+claim(l28_twist, proposition, proved, "Propositions 28.1, 28.2", "O(k) does not extend over the disc bundle X of Lambda^2_- over S^4; E = S^3(S) restricts to O(3) + O(1) + O(-1) + O(-3), with a hedgehog on E vanishing exactly on S^4; the multiplicities of the representation 4 are 5 + 5, and 1 + 0 on O(3), so H^0(O(1)) is in the kernel for every invariant metric on the slice.").
+source(l28_twist, 'lemmas/28_two_walls_connected_parent.md', 'setting').
+attempted_by(l28_twist, claude_opus_5_5).
+checked_by(l28_twist, claude_opus_5_5, python("structure constants, multiplicities, slice operator")).
+referee_pending(l28_twist).
+claim(l28_core, proposition, proved, "Propositions 28.3, 28.4", "At the zero section the modes in the representation 4 are the twistor spinors, through the Dirac operator on S^4 twisted by (1, 3); and Q(x_a) = (tr(B Gamma_5)/tr B) Gamma_a/5, so the zero section gives +-Gamma_a/5 and nothing for fibre-dependent functions.").
+source(l28_core, 'lemmas/28_two_walls_connected_parent.md', 'setting').
+depends(l28_core, l28_twist).
+attempted_by(l28_core, claude_opus_5_5).
+checked_by(l28_core, claude_opus_5_5, python("the ratios on the radial modes")).
+referee_pending(l28_core).
+claim(l28_window, conjecture, conjectural, "Conjecture 28.6", "In the representation 4, T has exactly one small singular value, exponentially small in l, with right vector at S^4 and left vector at CP^3, with a uniform gap; the compression tends to (Q_S(a|S^4), Q_R(a|CP^3)), which generate M_2(H) and M_4(C), from one connected commutative algebra.").
+source(l28_window, 'lemmas/28_two_walls_connected_parent.md', 'setting').
+depends(l28_window, l28_core).
+attempted_by(l28_window, claude_opus_5_5).
+claim(l28_numerics, claim, numerical, "Result 28.5", "The radial system: lowest singular value in the representation 4 falling exponentially with l (rate about 2 at phi_0 = 8), next value near 1.04; representation 16 at 1.35; zero-section mode with Q(x_a) = -Gamma_a/5 and zero fibre part; boundary mode with Q(x_a) = -Gamma_a/5 and a fibre part tending to the level-one value as the fibre grows.").
+source(l28_numerics, 'lemmas/28_two_walls_connected_parent.md', 'setting').
+attempted_by(l28_numerics, claude_opus_5_5).
+checked_by(l28_numerics, claude_opus_5_5, python("P1 form of T^* T on a graded grid; adjoint problem to four digits")).
+addresses(t0, l28_window).  addresses(t0b, l28_window).
+
 %% ---------------------------------------------------------------- steer note, items 9 and 11
 claim(steer_tower_coefficients, proposition, proved, "Steer note, item 9", "One Kaluza-Klein level of all Standard Model fields in the bulk has one-loop coefficients (81/10, 7/6, -5/2): a massive vector (-7/2 C_2), two Weyl fermions for each Standard Model Weyl fermion, and one complex Higgs doublet.").
 source(steer_tower_coefficients, 'd9_masses_fermi_qcd_steer.md', '').
@@ -1363,7 +1386,7 @@ test(refereed_claims_have_review_bookkeeping) :-
 test(claims_outside_the_corpus_have_a_checker) :-
     forall(( claim(C, _, S, _, _), memberchk(S, [proved, conditional]), \+ attempted_by(C, corpus) ), checked_by(C, _, _)).
 test(self_checks_are_corpus_only) :-
-    forall(( self_checked_only(C), \+ claim(C, _, numerical, _, _) ), attempted_by(C, corpus)).
+    forall(( self_checked_only(C), \+ claim(C, _, numerical, _, _), \+ referee_pending(C) ), attempted_by(C, corpus)).
 %% Checks only that each ledger number has a row in DUPLICATES.md ending in its state.
 test(contradictions_match_duplicates) :-
     read_file_to_string('DUPLICATES.md', Text, []),

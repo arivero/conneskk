@@ -397,6 +397,7 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 - [25: The weak-boson sum rule and the effective dimension of the interval](lemmas/25_sum_rule_effective_dimension.md)
 - [26: The interior vacuum and the matching scale in the flat parent](lemmas/26_interior_vacuum_matching_scale.md)
 - [27: The axial anomaly on the reduced action, and the two-flavour discrete term](lemmas/27_anomaly_reduced_action.md)
+- [28: Two sheets as the two ends of one connected commutative parent](lemmas/28_two_walls_connected_parent.md)
 
 ### Background note: the current Connes et al. framework: [current_framework.md](current_framework.md)
 
