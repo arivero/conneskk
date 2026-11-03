@@ -448,10 +448,11 @@ claim(rs_N7, claim, proved, "proved under the trace-pairing definition", "The or
 source(rs_N7, 'connes_kk_research_state.md', '65-an-orientable-real-bimodule-from-the-1oplus2oplus3-spaces').
 overturn(rs_N7, "A different real Kasparov duality or multi-class construction is not decided by this matrix.").
 attempted_by(rs_N7, corpus).
-claim(rs_N8, claim, numerical, "explicit 32D finite-matrix model", "An orientable four-summand parent can reduce to a nonorientable, faithful three-summand finite triple with nonzero one-forms, while preserving first-order throughout: explicit 32D finite-matrix model.").
+claim(rs_N8, claim, proved, "proved for the colour-preserving bridge exchange (Terra 6.1 referee)", "An orientable four-summand parent can reduce to a nonorientable, faithful three-summand finite triple with nonzero one-forms, while preserving first-order throughout: explicit 32D finite-matrix model.").
 source(rs_N8, 'connes_kk_research_state.md', '66-orientation-loss-under-a-heavy-centralizer-and-spectral-projection').
 overturn(rs_N8, "Projection alone preserves orientability and makes the two scalar states infinitely distant; the algebra restriction and the geometric justification remain independent requirements.").
-checked_by(rs_N8, corpus, not_recorded("explicit 32D finite-matrix model")).
+checked_by(rs_N8, terra_6_1, by_hand).  % referee, 3 Nov 2026
+%% rs_N8 amended in place: the bridge exchange is the colour-preserving swap (section 6.6).
 attempted_by(rs_N8, corpus).
 claim(rs_N9, claim, proved, "proved", "A nonzero grading-odd bimodule-linear finite mass forbids the usual finite orientability cycle: proved, with the published QED triple as a concrete example.").
 source(rs_N9, 'connes_kk_research_state.md', '54-direct-link-between-a-central-dirac-mass-and-finite-orientability').
