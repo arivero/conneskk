@@ -774,19 +774,19 @@ source(terra_winding, 'reviews/2026-11-03_terra_check_08_13_14.md', 'lemma-14').
 attempted_by(terra_winding, terra_6_1).
 checked_by(terra_winding, claude_opus_5_5, by_hand).
 
-claim(l16_two_sheets, theorem, proved, "Theorem 16.7 and Corollary 16.8", "A two-sheet coarse parent gives KO-6 signs, order zero and order one; its truncation has dim 2 k_X k_Y, orientability when the gradings lie in the algebras, and for full algebras the Chamseddine-Connes pair with centre C + C. D_F commutes with the centre.").
+claim(l16_two_sheets, theorem, proved, "Theorem 16.7 and Corollary 16.8", "A two-sheet coarse parent gives KO-6 signs, order zero and order one; its truncation has dim 2 k_X k_Y, real orientability when the gradings lie in the algebras, and for equal dimensions and full algebras the Chamseddine-Connes pair with centre C + C. D_F commutes with the two sheet projections, not necessarily with the whole centre.").
 source(l16_two_sheets, 'lemmas/16_coarse_truncation.md', 'two-sheets-the-form-of-the-classification').
 depends(l16_two_sheets, l16_coarse).
 attempted_by(l16_two_sheets, claude_opus_5_5).
 checked_by(l16_two_sheets, claude_opus_5_5, python("numpy on random finite data: signs, order zero, order one, orientability")).
-claim(l16_twistor, claim, proved, "Example 16.9", "At twistor level one on two sheets, real functions on S^4 and on CP^3 generate M_2(H) + M_4(C) on E (-) E* of dimension 32 with J(x, y) = (y*, x*); the axis of the grading, the two sheets and k = 4 are chosen by hand, and no operator connects the two pieces.").
+claim(l16_twistor, claim, proved, "Example 16.9", "At twistor level one on two sheets, real functions on S^4 and on CP^3 generate M_2(H) + M_4(C) on E (-) E* of dimension 32 with J(x, y) = (y*, x*). The second sheet, the base-function restriction and the window are inputs; the grading is added after truncation (abstract finite data, not an even truncation of the parent); no operator connects the two pieces.").
 source(l16_twistor, 'lemmas/16_coarse_truncation.md', 'two-sheets-the-form-of-the-classification').
 depends(l16_twistor, l16_two_sheets).
 depends(l16_twistor, l10_toeplitz).
 attempted_by(l16_twistor, claude_opus_5_5).
 checked_by(l16_twistor, claude_opus_5_5, python("numpy: real dimensions 16 and 32, j, the structure on k = 4")).
 addresses(t0b, l16_two_sheets).  addresses(t0b, l16_twistor).
-%% Astra job 18 (T5b). Referee pending.
+%% Astra job 18 (T5b). Referee: reviews/2026-11-03_terra_check_18_16b.md
 claim(l18_kernel, theorem, proved, "Theorem 1, Lemma 2, Corollary 3", "Exact quadratic kernel of the spectral action for a transverse vector about constant V_0, for f a Laplace transform of a positive measure with moment conditions; gauge invariance through the Goldstone orbit; the asymptotic expansion reproduces Proposition 13.5 and the CCM relation.").
 source(l18_kernel, 'lemmas/18_heavy_limit_near_cutoff.md', '').
 depends(l18_kernel, l03_weights).
@@ -820,6 +820,44 @@ source(l18_joint, 'lemmas/18_heavy_limit_near_cutoff.md', '').
 depends(l18_joint, l18_taylor).
 attempted_by(l18_joint, astra6).
 addresses(t5b, l18_taylor).  addresses(t5b, l18_no_centralizer).  addresses(t5b, l18_radial).  addresses(t5b, l18_joint).
+claim(l18_radial_general, proposition, proved, "Proposition 11", "On flat R^4, U'(c) = -(c Lambda^2/2 pi^2) sum lambda_j^2 int f over the tail; for nonnegative f of unbounded support there is no finite stationary point, and compact support gives a plateau.").
+source(l18_radial_general, 'lemmas/18_heavy_limit_near_cutoff.md', '').
+attempted_by(l18_radial_general, terra_6_1).
+checked_by(l18_radial_general, claude_opus_5_5, python("numerical derivative against the formula for a compact bump")).
+claim(l18_several, proposition, proved, "Propositions 12 and 13", "The top-only Taylor result holds for nonnegative compactly supported f; with several heavy doublets and P > 0 the Taylor mass tends to 0, and with P = 0 it scales as m^4/(2 Lambda^2) with pole m^2/2.").
+source(l18_several, 'lemmas/18_heavy_limit_near_cutoff.md', '').
+depends(l18_several, l18_taylor).
+attempted_by(l18_several, terra_6_1).
+checked_by(l18_several, claude_opus_5_5, python("Taylor ratio and pole root at large x")).
+claim(l18_fully_massive, proposition, proved, "Proposition 14", "With both members of every doublet of equal mass and no Majorana masses, the pole masses diverge at fixed cutoff (2x < z_W < 2x + 2, 16x/5 < z_Z < 16x/5 + 2), M_W^2/M_Z^2 -> 5/8 for x -> 0 and x -> infinity, the kernel vanishes at fixed momentum and the Taylor kinetic term has the wrong sign for x > 2. No light fermions.").
+source(l18_fully_massive, 'lemmas/18_heavy_limit_near_cutoff.md', '').
+depends(l18_fully_massive, l18_kernel).
+attempted_by(l18_fully_massive, terra_6_1).
+attempted_by(l18_fully_massive, claude_opus_5_5).
+checked_by(l18_fully_massive, claude_opus_5_5, python("direct doublet kernel from equation (1), pole equations, the ratio")).
+claim(l18_not_unbroken, claim, proved, "Remark 15", "In the top-only limit the compressed generators on b_L do not satisfy the SU(2) relations, and the limiting coefficients have K_W != K_33 and K_3Y != 0; vanishing vector masses do not show unbroken SU(2) x U(1) on the light space.").
+source(l18_not_unbroken, 'lemmas/18_heavy_limit_near_cutoff.md', '').
+depends(l18_not_unbroken, l18_angles).
+attempted_by(l18_not_unbroken, terra_6_1).
+checked_by(l18_not_unbroken, claude_opus_5_5, by_hand).
+claim(l16_ce_centre, counterexample, proved, "Referee's counterexample in Corollary 16.8", "V_X = C^2, gamma_X = sigma_3, d_X = sigma_1, A_X = C + C and V_Y = C: the central (diag(1, 0), 0) does not commute with D_F.").
+source(l16_ce_centre, 'lemmas/16_coarse_truncation.md', 'two-sheets-the-form-of-the-classification').
+attempted_by(l16_ce_centre, terra_6_1).
+checked_by(l16_ce_centre, claude_opus_5_5, by_hand).
+claim(l16_grading_not_even, no_go, proved, "Example 16.9, grading", "An even parent has [P gamma P, P a P] = 0 for compressed functions, while Gamma_5 = 5 Q(x_5) anticommutes with Q(x_1); so the grading of the classification cannot come from the stated even parent.").
+source(l16_grading_not_even, 'lemmas/16_coarse_truncation.md', 'two-sheets-the-form-of-the-classification').
+attempted_by(l16_grading_not_even, terra_6_1).
+checked_by(l16_grading_not_even, claude_opus_5_5, by_hand).
+checked_by(l18_kernel, terra_6_1, by_hand).
+checked_by(l18_taylor, terra_6_1, by_hand).
+checked_by(l18_angles, terra_6_1, by_hand).
+checked_by(l18_wrong_sign, terra_6_1, by_hand).
+checked_by(l18_no_centralizer, terra_6_1, by_hand).
+checked_by(l18_radial, terra_6_1, by_hand).
+checked_by(l18_joint, terra_6_1, by_hand).
+checked_by(l16_two_sheets, terra_6_1, by_hand).
+checked_by(l16_twistor, terra_6_1, by_hand).
+addresses(t5b, l18_fully_massive).  addresses(t5b, l18_not_unbroken).  addresses(t0b, l16_grading_not_even).
 %% Lemma 17 (T10, routine part). Referee: reviews/2026-11-03_terra_check_17.md
 claim(l17_action, theorem, proved, "Theorem 17.1", "The fermion action of M x F on the Gamma = +1 subspace equals (1/2) <jj psi, (D_M + gamma_5 d) psi> on an unconstrained spinor, with jj = J_M (x) j for s = +1 and gamma_5 J_M (x) j for s = -1.").
 source(l17_action, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').
@@ -861,7 +899,7 @@ addresses(t10, l17_no_kinetic).  addresses(t10, l17_action).  addresses(t10, l17
 strategy(t0, open, "Founding problem: finite real triples (in general, not specifically the Standard Model) from commutative Kaluza-Klein data, with specified spectral, operator-algebraic, K-theoretic or truncation convergence.").
 strategy(t0b, open, "Reach the current Connes et al. framework (KO-6, order one, doubling, classification, beyond first order, twisted triples) beyond the Connes-Lott layer.").
 strategy(t10, open, "Yukawa couplings as explicit mass terms in the D = 9 action (d_5 = D_0 + m Gamma_0) and the chiral limit m_u = m_d = 0.").
-strategy(t5b, settled, "Heavy-W limit at fixed cutoff: in the top-only family, M_W and M_Z tend to 0 as m_t -> infinity; a heavy limit exists only jointly with Lambda -> infinity (lemma 18; classical, bosonic; referee pending).").
+strategy(t5b, settled, "Heavy-W limit at fixed cutoff: in the top-only family, M_W and M_Z tend to 0 as m_t -> infinity, with a heavy limit jointly with Lambda -> infinity; with every doublet heavy and no light fermions the pole masses diverge (lemma 18; classical, bosonic).").
 strategy(t1, settled, "Deconstruction: Connes-Lott is the minimal truncation of the chiral interval.").
 strategy(t2, settled, "KO parity: grading-reversing involution U with UJ = sJU; s = -1 gives 9, s = +1 gives 11; J alone does not decide.").
 strategy(t2b, settled, "Selection of s by the interval: the bare reflection gives 9 in the standard product; J_M and particle number do not select the sign.").

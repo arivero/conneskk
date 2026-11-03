@@ -1,6 +1,8 @@
 # T5b: vector masses in the spectral action at fixed cutoff
 
-Prompt: [prompts/18](prompts/18_heavy_limit_near_cutoff.md) (STRATEGY T5b). Attempted by gpt-6-astra (codex 0.164, xhigh, 3 Nov 2026), working alone. Checked by Claude Opus 5.5 with Python (numpy, scipy), by computations independent of the kernel derived here: a direct heat trace with constant a reproduces equation (2) for five choices of (m_1, m_2), to about 0.03%; a direct heat trace on Fourier modes with a_2(x_1) = a cos(q x_1), including the F_{12} and [T, V] vertices, reproduces the kernel (37) at three values of (m, q), to 0.1-0.3%, the size of the discretization error. The closed forms (16)-(19), the bound (28), the limits (27), the neutral matrix (30) recomputed from Standard Model charges, and the identities behind (31) also check. The largest value of the Taylor mass is M_W^2 = 0.275 Lambda^2, at m_t^2 = 2.02 Lambda^2. Referee pending.
+Prompt: [prompts/18](prompts/18_heavy_limit_near_cutoff.md) (STRATEGY T5b). Attempted by gpt-6-astra (codex 0.164, xhigh, 3 Nov 2026), working alone. Checked by Claude Opus 5.5 with Python (numpy, scipy), by computations independent of the kernel derived here: a direct heat trace with constant a reproduces equation (2) for five choices of (m_1, m_2), to about 0.03%; a direct heat trace on Fourier modes with a_2(x_1) = a cos(q x_1), including the F_{12} and [T, V] vertices, reproduces the kernel (37) at three values of (m, q), to 0.1-0.3%, the size of the discretization error. The closed forms (16)-(19), the bound (28), the limits (27), the neutral matrix (30) recomputed from Standard Model charges, and the identities behind (31) also check. The largest value of the Taylor mass is M_W^2 = 0.275 Lambda^2, at m_t^2 = 2.02 Lambda^2. Refereed by Terra 6.1 (gpt-6.1-terra, effort max, 3 Nov 2026; [report](../reviews/2026-11-03_terra_check_18_16b.md)): all ten numbered results are correct, with small amendments incorporated below. The referee added Propositions 11 to 14 and Remark 15, which widen the scope in both directions; the ratio in Proposition 14 was added by Claude.
+
+**Scope.** Within the three-generation, zero-Majorana, top-only family at fixed cutoff, these results refute an infinitely heavy W, Z, t limit for the stated quadratic mass definitions. They do not rule out other finite data (Proposition 14), a different action or constraint, a joint limit with Lambda -> infinity, or a quantum effective theory. They do not show unbroken SU(2) x U(1) on the light space (Remark 15).
 
 For the heat cutoff, on \(\mathbb R^4\), we obtain the exact quadratic vector form without expanding in \(m/\Lambda\). In the three-generation Standard Model finite representation with only the top Dirac mass nonzero, both the mass defined by the \(q^0/q^2\) Taylor ratio and the unique positive timelike pole mass satisfy \(M_W\sim\Lambda^2/m_t\) as \(m_t/\Lambda\to\infty\) at fixed \(\Lambda\). The broken vectors consequently do not decouple by becoming heavy, although the heavy fermion contribution disappears from the gauge coefficients. These statements concern the classical bosonic quadratic action about a prescribed constant background; moreover, the positive Laplace class considered below does not itself select a finite nonzero stationary background when radial variations of that background are allowed.
 
@@ -12,7 +14,7 @@ D_A=-i\gamma^\mu(\partial_\mu+iA_\mu)+\gamma_5V,
 \qquad V=V_0=V_0^\dagger,
 \]
 on \(\mathbb R^4\), with Hermitian Euclidean gamma matrices,
-\(\{\gamma^\mu,\gamma^\nu\}=2\delta^{\mu\nu}\), \(\gamma_5^2=1\), and four spin components. Let the finite trace be the literal trace on \(H_F\), including every stated multiplicity, without a subsequent projection.
+\(\{\gamma^\mu,\gamma^\nu\}=2\delta^{\mu\nu}\), \(\gamma_5^2=1\), and four spin components. Let the finite trace be the literal trace on \(H_F\), including every stated multiplicity, without a subsequent projection; this agrees with the bosonic trace of Chamseddine-Connes-Marcolli, which counts particles, antiparticles and four spin components. Take \(A\) smooth and compactly supported.
 
 We use the vacuum-subtracted action, or equivalently its quadratic variation, since the constant-background trace on \(\mathbb R^4\) has infinite volume. Write
 \[
@@ -231,7 +233,7 @@ If \(V_0\) is not stationary, a Cartesian scalar Hessian alone need not annihila
 
 **3. Corollary (the asymptotic normalization).**
 
-Let all finite eigenvalues be small relative to \(\Lambda\), and let \(f\) satisfy (4). Define
+Let all finite eigenvalues be small relative to \(\Lambda\), let \(f\) satisfy (4), and let \(Q\) below be positive definite on the chosen generator space (otherwise pass to the quotient by its null space). Define
 \[
 Q_{ab}=\operatorname{Re}\operatorname{Tr}(T_aT_b),
 \qquad
@@ -607,7 +609,7 @@ The neutral mass also tends to zero. More precisely,
 }
 \tag{34}
 \]
-There is likewise one positive massive neutral pole, besides the photon pole. To prove this, put \(B=B_\infty+rU\). The exact neutral kernel, apart from the common factor \(\Lambda^2/(4\pi^2)\), is
+For \(x>0\) there is likewise one positive massive neutral pole, besides the photon pole. To prove this, put \(B=B_\infty+rU\). The exact neutral kernel, apart from the common factor \(\Lambda^2/(4\pi^2)\), is
 \[
 B\,g(y)+\frac32xr\,H(y)vv^T.
 \tag{35}
@@ -785,6 +787,55 @@ m_t/M_W\to\sqrt{8/3}.
 
 Accordingly, the obstruction has three distinct scopes. The CCM identity cannot be extrapolated to \(\mu\to\infty\) at fixed cutoff because it belongs to the asymptotic truncation. The exact top-only quadratic action obstructs a fixed-cutoff heavy-\(W\) limit for the heat cutoff under both mass definitions, and for class (4) under the Taylor definition. A family of actual nonzero stationary vacua of the unmodified positive-Laplace action encounters the separate obstruction (41). Counterexample 7 excludes extending the first of these exact mass conclusions to arbitrary finite representations.
 
+**11. Proposition (the radial derivative for general \(f\); referee).** On flat \(\mathbb R^4\), for a sufficiently integrable real cutoff \(f\), with \(\lambda_j^2\) the eigenvalues of \(V_*^2\),
+\[
+\mathcal U'(c)=
+-\frac{c\Lambda^2}{2\pi^2}
+\sum_j\lambda_j^2
+\int_{c^2\lambda_j^2/\Lambda^2}^{\infty}f(z)\,dz. \tag{43}
+\]
+For nonnegative \(f\), a finite \(c>0\) is stationary exactly when every tail associated with a nonzero \(\lambda_j\) vanishes. So if \(f\) has nonzero support arbitrarily far out, there is no finite stationary point on this ray; if \(f\) has compact support ending at \(R\), there is a stationary plateau once every nonzero \(c^2\lambda_j^2/\Lambda^2\geq R\). Sign-changing cutoffs can have cancellations. A nonconstant cutoff flat near zero lies outside (4), since a nonzero positive measure gives \(f'(0)<0\); (43) covers the nonnegative ones. A radial path with an additional fixed noncommuting mass matrix need not have the form \(cV_*\). \(\square\)
+
+**12. Proposition (the top-only Taylor mass for general \(f\); referee).** For nonnegative smooth compactly supported \(f\) with \(f(0)>0\), the formulas of Proposition 4 hold with
+\[
+A_f(x)=\frac2x\int_0^x zf(z)\,dz,\qquad
+w_f(x)=\frac3{x^3}\int_0^x z^2f(z)\,dz,
+\]
+by approximating \(f\) with its derivatives by real combinations of \(e^{-nz}\). Hence
+\[
+\frac{M_{W,\mathrm{Taylor}}^2}{\Lambda^2}
+\sim\frac{\int_0^\infty zf(z)\,dz}{f(0)\,x}.
+\]
+This includes cutoffs flat near zero. For a nonanalytic cutoff there need be no analytic continuation defining the pole. \(\square\)
+
+**13. Proposition (several heavy doublets; referee).** For the heat cutoff, let \(P\) be the total particle-trace weight of complete massless doublets, and let heavy doublet \(i\), of weight \(d_i>0\), have one Dirac member of mass \(m_i\) and one massless member. Then
+\[
+C_W(y)=\frac{\Lambda^2}{4\pi^2}
+ \Bigl(Pg(y)+\sum_i d_i h_{x_i}(y)\Bigr),\qquad
+\frac{M_{W,\mathrm{Taylor}}^2}{\Lambda^2}
+=\frac{3}{2}\,
+\frac{\sum_i d_i A(x_i)}
+     {P+\sum_i d_i w(x_i)}.
+\]
+For finitely many doublets, if \(P>0\) and all \(x_i\to\infty\), the Taylor mass tends to zero. If \(P=0\) and all \(x_i=x\), then \(M_{W,\mathrm{Taylor}}^2\sim m^4/(2\Lambda^2)\), the form factor has a unique positive pole with \(M_{W,\mathrm{pole}}^2\sim m^2/2\), and the whole unnormalized kernel tends to zero at every fixed Euclidean momentum. The divergent Taylor and pole scales differ, and neither alone establishes a healthy limiting gauge theory. \(\square\)
+
+**14. Proposition (the fully massive family; referee).** Give both members of every Standard Model doublet the same Dirac mass \(m\), with no Majorana masses, and let \(z_W,z_Z\) be the charged and massive neutral poles in units of \(\Lambda^2\). The charged form factor is proportional to \(e^{-x}[g(y)+2xH(y)]\), and
+\[
+2x<z_W<2x+2,\qquad \tfrac{16}{5}x<z_Z<\tfrac{16}{5}x+2.
+\]
+So both pole masses diverge with \(m\) at fixed cutoff, and
+\[
+\frac{M_{W,\mathrm{pole}}^2}{M_{Z,\mathrm{pole}}^2}\longrightarrow\frac58
+\qquad(x\to\infty),
+\]
+as also for \(x\to0\), where \(z_W\sim3x\) and \(z_Z\sim\frac{24}{5}x\). In between the ratio differs, reaching about \(0.66\) near \(x=3\) (Python, solving the pole equations). The kernel tends to zero at every fixed Euclidean momentum, and the charged Taylor kinetic coefficient is proportional to \(e^{-x}(1-x/2)\), negative for \(x>2\).
+
+*Proof.* The species with equal mass have eigenvalues \(\pm m\). The charged generator connects them with \(d^2=0\) and \(d^2=4m^2\) in equal weights, which gives the charged form. For the neutral generators the diagonal charge has \(d=0\) and the off-diagonal charge \((q_L-q_R)/2=T_3v/2\) has \(d^2=4m^2\); on the particle trace the kernel is \(e^{-x}[\operatorname{diag}(6,10)g+12xHvv^T]\), so \(\beta=12x\,v^T\operatorname{diag}(6,10)^{-1}v=\frac{16}{5}x\), and for the charged direction \(\beta=2x\). Equation (36) gives the bounds, since \(H(-z)>1\). \(\square\)
+
+This is a counterexample to any general no-go for diverging pole locations at fixed cutoff. It has no light fermions, and the physical quality of that limit is open.
+
+**15. Remark (the light space does not carry unbroken \(SU(2)\times U(1)\); referee).** In the top-only limit the broken masses vanish, but this does not restore the electroweak group on the whole light space. The light space retains \(b_L\) after removing \(t_L\). If \(P_{\rm light}\) projects off the top mass block, then on \(b_L\) we have \(P_{\rm light}T_1P_{\rm light}=P_{\rm light}T_2P_{\rm light}=0\) and \(P_{\rm light}T_3P_{\rm light}=-\frac12\), which do not obey the \(SU(2)\) relations. Correspondingly \(K_W=9/2\), \(K_{33}=21/4\), \(K_{3Y}=-1/4\) in the limit, while a linearly realized unbroken action would have equal weak coefficients and no mixing. The remaining complete massless doublets carry the ordinary representation, and their contribution is gauge invariant. If both members of every removed doublet are heavy, the retained light space can be invariant under the full group; a full limiting theory still needs control of the remaining fields, normalizations, interactions and vacuum. "The heavy fermion leaves the loop" is shorthand for the suppression in this classical trace.
+
 As algebraic checks, we used **Python 3 with SymPy** to verify the integration-by-parts identities, the displayed small-\(x\) Taylor series, and \(v^TB_\infty^{-1}v=8/27\). The arguments above provide the proofs; these computations introduce no fitted constants.
 
-**Consequence for T5b.** At fixed cutoff, the specified top-only Standard Model spectral action does not realize an infinitely heavy \(W,Z,t\) family: the top grows while both vector masses tend to zero, for the heat cutoff and the stated quadratic mass definitions. A joint limit with \(\Lambda\to\infty\) permits all three background mass scales to diverge, but neither centralizer-only decoupling nor a stationary Higgs vacuum follows from that scaling. These conclusions concern the classical bosonic action and contain no quantum corrections or claims about the physical Standard Model at those scales.
+**Consequence for T5b.** At fixed cutoff, the specified top-only Standard Model spectral action does not realize an infinitely heavy \(W,Z,t\) family: the top grows while both vector masses tend to zero, for the heat cutoff and the stated quadratic mass definitions. A joint limit with \(\Lambda\to\infty\) permits all three background mass scales to diverge, but neither centralizer-only decoupling nor a stationary Higgs vacuum follows from that scaling. These conclusions concern the classical bosonic action and contain no quantum corrections or claims about the physical Standard Model at those scales. Other finite data behave differently: with every doublet heavy and no light fermions, the pole masses diverge at fixed cutoff with M_W^2/M_Z^2 -> 5/8 (Proposition 14). With a massless complete doublet retained, the Taylor mass tends to zero (Proposition 13). So within this action, a heavy W and Z at fixed cutoff comes with no light charged doublet.
