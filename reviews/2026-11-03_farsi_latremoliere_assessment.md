@@ -241,6 +241,8 @@ Here D_l = (1/l)(D_0 - c(l) sigma_1) with c(l) = mu(l) l -> infinity. In the pap
 
 ### 4.5 As the convergence notion for T0
 
+**Correction (3 Nov 2026).** The conclusions of this subsection on what T0 "needs" overread the metric; see [the assessment of the T0 note](2026-11-03_t0_note_assessment.md). Lemmas R2 and R3 are written out in [lemma 15](../lemmas/15_propinquity_collapse.md), which also corrects the lower bound of R2 (the cap sqrt(2)/2 of the metric was omitted, and the bound improves to (1/m_f - l)/2). The original text follows as a record.
+
 **What it offers.**
 - A genuine metric on metric spectral triples, with distance zero exactly at unitary equivalence.
 - Convergence of the bounded functional calculus, and Kuratowski convergence of spectra.

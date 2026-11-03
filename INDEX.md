@@ -28,13 +28,13 @@ Product collapse lemma, growth rates, the algebra chain 40/24/20 and gauge dimen
 
 What "towerless" can mean; the controlled six-to-five operator limit; Connes-Lott as the truncated chiral interval; resolvent collapse; towerless Yukawa textures.
 
-[notes §6.1](connes_kk_research_state.md#61-what-compression-does) · [notes §6.9](connes_kk_research_state.md#69-an-isometry-becoming-inner-after-compression) · [notes §6.10](connes_kk_research_state.md#610-what-towerless-can-mean) · [paper §12](canonical_research.md#12-a-controlled-six-to-five-operator-limit) · [paper §12.2](canonical_research.md#122-compensation-preserves-defect-information) · [nine-dim §1](research_limits/nine_dimensional_construction.md#1-an-operator-family-that-actually-lowers-dimension) · [nine-dim §3](research_limits/nine_dimensional_construction.md#3-preserve-the-four-twistor-modes-by-compensation) · [lemma 01, Lemma 3 — Resolvent collapse](lemmas/01_invariant_weyl_growth.md#lemma-3--resolvent-collapse) · [lemma 05](lemmas/05_deconstruction_interval.md) · [lemma 09](lemmas/09_massive_chiral_interval.md) · [lemma 12, Light spectrum and towerless limit](lemmas/12_boundary_yukawa_interval.md#light-spectrum-and-towerless-limit) · [strategy, What job 05 settled (T1)](STRATEGY.md#what-job-05-settled-t1)
+[notes §6.1](connes_kk_research_state.md#61-what-compression-does) · [notes §6.9](connes_kk_research_state.md#69-an-isometry-becoming-inner-after-compression) · [notes §6.10](connes_kk_research_state.md#610-what-towerless-can-mean) · [paper §12](canonical_research.md#12-a-controlled-six-to-five-operator-limit) · [paper §12.2](canonical_research.md#122-compensation-preserves-defect-information) · [nine-dim §1](research_limits/nine_dimensional_construction.md#1-an-operator-family-that-actually-lowers-dimension) · [nine-dim §3](research_limits/nine_dimensional_construction.md#3-preserve-the-four-twistor-modes-by-compensation) · [lemma 01, Lemma 3 — Resolvent collapse](lemmas/01_invariant_weyl_growth.md#lemma-3--resolvent-collapse) · [lemma 05](lemmas/05_deconstruction_interval.md) · [lemma 09](lemmas/09_massive_chiral_interval.md) · [lemma 12, Light spectrum and towerless limit](lemmas/12_boundary_yukawa_interval.md#light-spectrum-and-towerless-limit) · [strategy, What job 05 settled (T1)](STRATEGY.md#what-job-05-settled-t1) · [lemma 15](lemmas/15_propinquity_collapse.md) · [lemma 16, truncation](lemmas/16_coarse_truncation.md#setting) · [T0 note assessment](reviews/2026-11-03_t0_note_assessment.md)
 
 ### 1.5 Real structures, KO-dimension and the choice between 9 and 11
 
 Change of KO-degree at a boundary, pseudoreality, odd factorizations (KO-5 times point, KO-7 times point), the interval and the J versus J-gamma choice.
 
-[paper §11.1](canonical_research.md#111-a-genuine-change-of-ko-degree) · [paper §8, Real structures cannot be inferred from pseudoreality](canonical_research.md#real-structures-cannot-be-inferred-from-pseudoreality) · [solidification §5](research_limits/solidification.md#5-a-canonical-seven-to-six-change-of-ko-degree) · [notes §2.2](connes_kk_research_state.md#22-metric-dimension-chirality-and-ko-dimension) · [notes §6.3](connes_kk_research_state.md#63-the-zero-mode-obstruction-and-the-higher-mode-obstruction) · [notes §6.4](connes_kk_research_state.md#64-continuing-the-obstruction-test-a-finite-repair-and-orientability) · [notes §6.5](connes_kk_research_state.md#65-an-orientable-real-bimodule-from-the-1oplus2oplus3-spaces) · [notes §6.6](connes_kk_research_state.md#66-orientation-loss-under-a-heavy-centralizer-and-spectral-projection) · [notes §6.7](connes_kk_research_state.md#67-which-orientation-information-is-lost) · [lemma 06](lemmas/06_vectorlike_odd_factorization.md) · [lemma 07](lemmas/07_interval_selects_ko.md) · [lemma 08](lemmas/08_product_selects_ko.md) · [lemma RE](lemmas/README.md)
+[paper §11.1](canonical_research.md#111-a-genuine-change-of-ko-degree) · [paper §8, Real structures cannot be inferred from pseudoreality](canonical_research.md#real-structures-cannot-be-inferred-from-pseudoreality) · [solidification §5](research_limits/solidification.md#5-a-canonical-seven-to-six-change-of-ko-degree) · [notes §2.2](connes_kk_research_state.md#22-metric-dimension-chirality-and-ko-dimension) · [notes §6.3](connes_kk_research_state.md#63-the-zero-mode-obstruction-and-the-higher-mode-obstruction) · [notes §6.4](connes_kk_research_state.md#64-continuing-the-obstruction-test-a-finite-repair-and-orientability) · [notes §6.5](connes_kk_research_state.md#65-an-orientable-real-bimodule-from-the-1oplus2oplus3-spaces) · [notes §6.6](connes_kk_research_state.md#66-orientation-loss-under-a-heavy-centralizer-and-spectral-projection) · [notes §6.7](connes_kk_research_state.md#67-which-orientation-information-is-lost) · [lemma 06](lemmas/06_vectorlike_odd_factorization.md) · [lemma 07](lemmas/07_interval_selects_ko.md) · [lemma 08](lemmas/08_product_selects_ko.md) · [lemma RE](lemmas/README.md) · [lemma 16, order zero and order one](lemmas/16_coarse_truncation.md#the-coarse-correspondence)
 
 ### 1.6 Chirality and index
 
@@ -372,6 +372,25 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
 - [13: T4: gauge fluctuations of the chiral interval](lemmas/13_gauge_sector_truncation.md)
 - [14: T4b: gauge-covariant projection and conditional bosonic matching](lemmas/14_gauge_covariant_reduction.md)
   - [Consequence for T4b and hypothesis H](lemmas/14_gauge_covariant_reduction.md#consequence-for-t4b-and-hypothesis-h)
+- [15: Collapse in the spectral propinquity: a gap criterion and limits of commutative spaces](lemmas/15_propinquity_collapse.md)
+  - [Limits of commutative spaces (Lemma R3)](lemmas/15_propinquity_collapse.md#limits-of-commutative-spaces-lemma-r3)
+  - [The gap criterion (Lemma R2)](lemmas/15_propinquity_collapse.md#the-gap-criterion-lemma-r2)
+  - [The converse](lemmas/15_propinquity_collapse.md#the-converse)
+  - [Grading and real structure](lemmas/15_propinquity_collapse.md#grading-and-real-structure)
+  - [What this says about T0](lemmas/15_propinquity_collapse.md#what-this-says-about-t0)
+- [16: Noncommutative finite real triples from commutative data: truncating the coarse correspondence](lemmas/16_coarse_truncation.md)
+  - [Setting](lemmas/16_coarse_truncation.md#setting)
+  - [The standard correspondence](lemmas/16_coarse_truncation.md#the-standard-correspondence)
+  - [The coarse correspondence](lemmas/16_coarse_truncation.md#the-coarse-correspondence)
+  - [Caveats](lemmas/16_coarse_truncation.md#caveats)
+  - [Consequence for T0 and T0b](lemmas/16_coarse_truncation.md#consequence-for-t0-and-t0b)
+
+### Reviews and assessments
+
+- [Assessment of the T0 note](reviews/2026-11-03_t0_note_assessment.md)
+- [Farsi-Latrémolière assessment](reviews/2026-11-03_farsi_latremoliere_assessment.md)
+- [Review of the evaluation](reviews/2026-11-03_review_of_evaluation.md)
+- [Terra check of N8](reviews/2026-11-03_terra_check_N8.md)
 
 ### Transcript: [transcripts/Connes_Electrodynamics_ModelMd.txt](transcripts/Connes_Electrodynamics_ModelMd.txt)
 

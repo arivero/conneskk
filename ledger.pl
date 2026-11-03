@@ -20,6 +20,7 @@
 %% prior_work(Claim, Verdict, Reference)   Verdict: known | partial | not_found  (from LITERATURE.md)
 %% claim_amended(Claim, By): Claim stands, with an amendment proved in By
 
+:- discontiguous refuted_by/2.
 :- discontiguous claim/5, source/3, depends/2, hypothesis/2, attempted_by/2, checked_by/3, overturn/2, addresses/2, strategy/3.
 :- use_module(library(lists)).
 
@@ -311,14 +312,61 @@ claim(fl_R1, counterexample, proved, "Counterexample R1", "Theorem 3.4 of Farsi-
 source(fl_R1, 'reviews/2026-11-03_farsi_latremoliere_assessment.md', '31-theorem-34-is-missing-a-hypothesis').
 attempted_by(fl_R1, claude_subagent).
 checked_by(fl_R1, claude_opus_5_5, by_hand).
-claim(fl_R2, lemma, open, "Lemma R2 (proof sketch, unrefereed)", "The tuned interval of Theorem 9.9 converges in spectral propinquity to (C, C^2, m_f sigma_1), at distance at least 1/(2 m_f) - 2l from the Connes-Lott triple.").
-source(fl_R2, 'reviews/2026-11-03_farsi_latremoliere_assessment.md', '43-theorem-99-mul-tuned-l---0').
+claim(fl_R2, corollary, proved, "Corollary 15.5 (Lemma R2)", "The tuned interval of Theorem 9.9 converges in spectral propinquity to (C, C^2, m_f sigma_1), with l/2 <= Lambda_spec <= l/2 + l^2/(pi^2 + c^2), at distance at least min(sqrt(2)/2, (1/m_f - l)/2) from the Connes-Lott triple.").
+source(fl_R2, 'lemmas/15_propinquity_collapse.md', 'the-gap-criterion-lemma-r2').
 depends(fl_R2, l09_limits).
+depends(fl_R2, l15_gap).
 attempted_by(fl_R2, claude_subagent).
-claim(fl_R3, lemma, open, "Lemma R3 (proof sketch, unrefereed)", "Propinquity limits of commutative quantum compact metric spaces (Leibniz tunnels) are commutative.").
-source(fl_R3, 'reviews/2026-11-03_farsi_latremoliere_assessment.md', '45-as-the-convergence-notion-for-t0').
+attempted_by(fl_R2, claude_opus_5_5).
+claim(fl_R3, theorem, proved, "Theorem 15.2 (Lemma R3)", "Propinquity limits of commutative quantum compact metric spaces are commutative, and the number of connected components does not increase in the limit.").
+source(fl_R3, 'lemmas/15_propinquity_collapse.md', 'limits-of-commutative-spaces-lemma-r3').
 attempted_by(fl_R3, claude_subagent).
-addresses(t0, fl_R3).
+attempted_by(fl_R3, claude_opus_5_5).
+claim(l15_gap, theorem, proved, "Theorem 15.3", "A metric triple with a finite spectral block and gap g has min(sqrt(2)/2, delta/2) <= Lambda_spec(T, (C, C^N, D_F)) <= 1/g^2 + max(delta/2, Delta) + Delta + sqrt(Delta); no anticommutation hypothesis.").
+source(l15_gap, 'lemmas/15_propinquity_collapse.md', 'the-gap-criterion-lemma-r2').
+attempted_by(l15_gap, claude_opus_5_5).
+claim(l15_yukawa, corollary, proved, "Corollary 15.6", "The towerless Yukawa family of Theorem 12.7 converges at rate O(l) to (C, C^(N_Q+N_U), D_F) with D_F the Yukawa block Phi_Q Y_hat Phi_U.").
+source(l15_yukawa, 'lemmas/15_propinquity_collapse.md', 'the-gap-criterion-lemma-r2').
+depends(l15_yukawa, l15_gap).
+attempted_by(l15_yukawa, claude_opus_5_5).
+claim(l15_converse, theorem, proved, "Theorem 15.7", "Convergence to (C, C^N, D_F) in Lambda_spec holds iff the diameter tends to 0, the gap to infinity and the light block to D_F with multiplicities.").
+source(l15_converse, 'lemmas/15_propinquity_collapse.md', 'the-converse').
+depends(l15_converse, l15_gap).
+attempted_by(l15_converse, claude_opus_5_5).
+claim(l15_finite_limits, corollary, proved, "Corollary 15.8", "The finite limits in Lambda_spec of connected commutative metric triples are exactly (C, C^N, D_F), with every Hermitian D_F arising. A statement about this metric only.").
+source(l15_finite_limits, 'lemmas/15_propinquity_collapse.md', 'the-converse').
+depends(l15_finite_limits, fl_R3).
+depends(l15_finite_limits, l15_converse).
+attempted_by(l15_finite_limits, claude_opus_5_5).
+claim(l15_grading, proposition, proved, "Proposition 15.9", "For a symmetric spectral block, gamma and J descend exactly with their signs, and the tunnels of Theorem 15.3 control them.").
+source(l15_grading, 'lemmas/15_propinquity_collapse.md', 'grading-and-real-structure').
+depends(l15_grading, l15_gap).
+attempted_by(l15_grading, claude_opus_5_5).
+claim(l16_interval_algebra, claim, proved, "Example 16(b)", "The compression of C([0,l]) to the second spectral level of the chiral interval is a 4-dimensional operator system generating M_2(C) + M_2(C), at fixed truncation.").
+source(l16_interval_algebra, 'lemmas/16_coarse_truncation.md', 'setting').
+attempted_by(l16_interval_algebra, claude_opus_5_5).
+checked_by(l16_interval_algebra, claude_opus_5_5, python("numpy quadrature: dimensions 4 and 8, the two displayed compressions")).
+claim(l16_standard_nogo, no_go, proved, "Proposition 16.1", "With pointwise reality J a J^-1 = a*, the compressed data with inherited J satisfy order zero iff the generated algebra is commutative.").
+source(l16_standard_nogo, 'lemmas/16_coarse_truncation.md', 'the-standard-correspondence').
+attempted_by(l16_standard_nogo, claude_opus_5_5).
+claim(l16_coarse, theorem, proved, "Theorem 16.2", "On H_0 (x) conj(H_0), with the graded flip J and DD = D_0 (x) 1 + gamma_0 (x) D^c, A_0 acting on the left gives a real even triple with signs (+,+,+), order zero and order one.").
+source(l16_coarse, 'lemmas/16_coarse_truncation.md', 'the-coarse-correspondence').
+attempted_by(l16_coarse, claude_opus_5_5).
+checked_by(l16_coarse, claude_opus_5_5, python("numpy on random finite data: all signs, order zero, order one")).
+claim(l16_truncation, corollary, proved, "Corollaries 16.3 and 16.4", "The truncation of the doubled parent is a finite real even triple with order zero and order one for every generated algebra, noncommutative or not; a Clifford point gives the KO-6 signs and dim H = 2 k^2.").
+source(l16_truncation, 'lemmas/16_coarse_truncation.md', 'the-coarse-correspondence').
+depends(l16_truncation, l16_coarse).
+attempted_by(l16_truncation, claude_opus_5_5).
+checked_by(l16_truncation, claude_opus_5_5, python("numpy on random finite data: KO-6 signs")).
+claim(t0_note_overread, claim, refuted, "Earlier T0 note", "A noncommutative A_F must come from compressions, operator systems or a noncommutative parent, and compressions being operator systems forces the algebra to be produced by a limit.").
+source(t0_note_overread, 'reviews/2026-11-03_t0_note_assessment.md', 'claim-by-claim').
+attempted_by(t0_note_overread, claude_opus_5_5).
+claim(l10_generates_m4, counterexample, proved, "Proposition 10.1 and example 16(c)", "Compression of functions on connected CP^3 generates M_4(C) with no limit, against the earlier T0 note.").
+source(l10_generates_m4, 'lemmas/16_coarse_truncation.md', 'setting').
+depends(l10_generates_m4, l10_toeplitz).
+attempted_by(l10_generates_m4, claude_opus_5_5).
+refuted_by(t0_note_overread, l10_generates_m4).
+addresses(t0, fl_R3).  addresses(t0, l15_finite_limits).  addresses(t0, l16_truncation).  addresses(t0b, l16_truncation).
 
 hypothesis(ccm_relation, "Chamseddine-Connes-Marcolli normalization at the matching scale: 8 M_W^2 = sum of N_f m_f^2 over Dirac masses.").
 hypothesis(positive_rank, "The twisting bundle has positive rank, with the equivariant self-adjoint realization.").
@@ -661,7 +709,7 @@ source(paper_14_3_1, 'canonical_research.md', '143-the-angle-test').
 attempted_by(paper_14_3_1, corpus).
 checked_by(paper_14_3_1, corpus, python("see research_checks_knowledge.md")).
 %% ---------------------------------------------------------------- STRATEGY.md
-strategy(t0, open, "Founding problem: finite real triples (in general, not specifically the Standard Model) as limits of commutative Kaluza-Klein data, with specified spectral, operator-algebraic and K-theoretic convergence.").
+strategy(t0, open, "Founding problem: finite real triples (in general, not specifically the Standard Model) from commutative Kaluza-Klein data, with specified spectral, operator-algebraic, K-theoretic or truncation convergence.").
 strategy(t0b, open, "Reach the current Connes et al. framework (KO-6, order one, doubling, classification, beyond first order, twisted triples) beyond the Connes-Lott layer.").
 strategy(t10, open, "Yukawa couplings as explicit mass terms in the D = 9 action (d_5 = D_0 + m Gamma_0) and the chiral limit m_u = m_d = 0.").
 strategy(t5b, open, "Heavy-W limit at fixed cutoff with the mass-weighted spectral action of lemma 03.").
