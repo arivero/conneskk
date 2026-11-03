@@ -35,7 +35,7 @@ So KO-6 forces centre C + C: the finite space is disconnected, with two pieces e
 
 | structure | result here | scope and what is missing |
 |---|---|---|
-| noncommutative finite algebra | Example 16(b): M_2 + M_2 from the interval. Proposition 10.1: M_4 from CP^3 | algebra generation is an added operation |
+| noncommutative finite algebra | Example 16(b): M_2 + M_2 from the interval. Proposition 10.1: M_4 from CP^3 | compression is standard; generation is an added operation, and Connes-van Suijlekom note that the result is in many examples a noninformative full matrix algebra; the information lies in the symmetries of the window |
 | order zero with inherited pointwise reality | fails exactly when the algebra is noncommutative (Proposition 16.1) | a no-go for the standard correspondence only |
 | order zero and order one, dim k^2 | Corollary 16.3 on the doubled parent | formal for any finite even representation (Remark 16.5); parent algebra restricted, J covers a flip; centre C only when A_F is simple |
 | KO-6 signs | Corollary 16.4 by a Clifford point; Theorem 16.7 by two sheets | the Clifford point gives a reducible pair and fails orientability; the two sheets are an input |

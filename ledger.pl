@@ -858,6 +858,12 @@ checked_by(l18_joint, terra_6_1, by_hand).
 checked_by(l16_two_sheets, terra_6_1, by_hand).
 checked_by(l16_twistor, terra_6_1, by_hand).
 addresses(t5b, l18_fully_massive).  addresses(t5b, l18_not_unbroken).  addresses(t0b, l16_grading_not_even).
+claim(l18_sum_rule, claim, proved, "Remark 16", "For doublets with one massive member at the heat cutoff, 8 kappa M_W^2 = sum N_f m_f^2 rho(m_f^2/Lambda^2), with rho, kappa -> 1 as x -> 0: the CCM relation is the small-mass form of this sum.").
+source(l18_sum_rule, 'lemmas/18_heavy_limit_near_cutoff.md', '').
+depends(l18_sum_rule, l18_several).
+attempted_by(l18_sum_rule, claude_opus_5_5).
+checked_by(l18_sum_rule, claude_opus_5_5, python("agreement with equation (18) to rounding, for x from 1e-3 to 1e3")).
+addresses(t5b, l18_sum_rule).
 %% Lemma 17 (T10, routine part). Referee: reviews/2026-11-03_terra_check_17.md
 claim(l17_action, theorem, proved, "Theorem 17.1", "The fermion action of M x F on the Gamma = +1 subspace equals (1/2) <jj psi, (D_M + gamma_5 d) psi> on an unconstrained spinor, with jj = J_M (x) j for s = +1 and gamma_5 J_M (x) j for s = -1.").
 source(l17_action, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').
@@ -899,14 +905,14 @@ addresses(t10, l17_no_kinetic).  addresses(t10, l17_action).  addresses(t10, l17
 strategy(t0, open, "Founding problem: finite real triples (in general, not specifically the Standard Model) from commutative Kaluza-Klein data, with specified spectral, operator-algebraic, K-theoretic or truncation convergence.").
 strategy(t0b, open, "Reach the current Connes et al. framework (KO-6, order one, doubling, classification, beyond first order, twisted triples) beyond the Connes-Lott layer.").
 strategy(t10, open, "Yukawa couplings as explicit mass terms in the D = 9 action (d_5 = D_0 + m Gamma_0) and the chiral limit m_u = m_d = 0.").
-strategy(t5b, settled, "Heavy-W limit at fixed cutoff: in the top-only family, M_W and M_Z tend to 0 as m_t -> infinity, with a heavy limit jointly with Lambda -> infinity; with every doublet heavy and no light fermions the pole masses diverge (lemma 18; classical, bosonic).").
+strategy(t5b, open, "Heavy-W limit at fixed cutoff: in the top-only family, M_W and M_Z tend to 0 as m_t -> infinity, with a heavy limit jointly with Lambda -> infinity; with every doublet heavy and no light fermions the pole masses diverge (lemma 18; classical, bosonic).").
 strategy(t1, settled, "Deconstruction: Connes-Lott is the minimal truncation of the chiral interval.").
 strategy(t2, settled, "KO parity: grading-reversing involution U with UJ = sJU; s = -1 gives 9, s = +1 gives 11; J alone does not decide.").
 strategy(t2b, settled, "Selection of s by the interval: the bare reflection gives 9 in the standard product; J_M and particle number do not select the sign.").
 strategy(t2c, settled, "With a generic Majorana mass for nu_R the reduced triple admits only the KO-7 factorization (lemma 06, Lemma 4 and Proposition 7).").
 strategy(t3, settled, "Chirality from boundary conditions; the boundary Yukawa interpolates (a)+(b) to (c)+(c) at constant index.").
-strategy(t4, settled, "Gauge sector of the towerless interval: fixed compression is not gauge covariant and the finite spectral action does not reproduce the tower mass.").
-strategy(t4b, settled, "Gauge-covariant reduction: matching with the tower only via a sum rule (tuned bulk mass, tower-scale fermion); impossible with bounded light fermions in the collapse.").
+strategy(t4, open, "Gauge sector of the towerless interval: fixed compression is not gauge covariant and the finite spectral action does not reproduce the tower mass.").
+strategy(t4b, open, "Gauge-covariant reduction: matching with the tower only via a sum rule (tuned bulk mass, tower-scale fermion); impossible with bounded light fermions in the collapse.").
 strategy(t5, settled, "Heavy W forces a heavy Dirac fermion (conditional on the CCM relation).").
 strategy(t6, open, "Metric-compatible towerless limits (operator-system truncations).").
 strategy(t7, open, "Towerless S^2, CP^2 to H, M_3(C) with the right real structure.").
@@ -961,6 +967,18 @@ open_items(claim(C)) :- claim(C, _, S, _, _), memberchk(S, [open, conjectural]).
 open_items(strategy(T)) :- strategy(T, S, _), S \== settled.
 open_items(contradiction(N)) :- contradiction(N, _, _, _, open).
 
+%% nogo_models(-C, -Models): the distinct models behind a no-go result.
+%% A no-go is a guide to where to go next, and needs consensus among models.
+nogo_models(C, Models) :-
+    claim(C, no_go, _, _, _),
+    findall(A, attempted_by(C, A), As),
+    findall(B, checked_by(C, B, _), Bs),
+    append(As, Bs, All),
+    sort(All, Models).
+
+%% nogo_below_consensus(-C, -Models): fewer than the three models Astra, Claude and Terra.
+nogo_below_consensus(C, Models) :- nogo_models(C, Models), length(Models, N), N < 3.
+
 %% refuted(-C, -By): claims shown false, with the counterexample.
 refuted(C, By) :- refuted_by(C, By).
 
@@ -979,6 +997,7 @@ test(no_circular_dependency) :- \+ rests_on(C, C).
 test(refutations_resolve) :- forall(refuted_by(C, B), (claim(C, _, refuted, _, _), claim(B, counterexample, _, _, _))).
 test(amendments_resolve) :- forall(claim_amended(C, B), (claim(C, _, _, _, _), claim(B, _, _, _, _))).
 test(prior_work_resolves) :- forall(prior_work(C, V, _), (claim(C, _, _, _, _), memberchk(V, [known, partial, not_found]))).
+test(every_nogo_has_two_models) :- forall(nogo_models(_, Ms), (length(Ms, N), N >= 2)).
 test(addresses_resolve) :- forall(addresses(T, C), (strategy(T, _, _), claim(C, _, _, _, _))).
 :- end_tests(ledger).
 

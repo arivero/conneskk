@@ -1,0 +1,327 @@
+% Finite spectral triples as towerless intervals.
+% Phys Rev two-column:  make towerless_intervals.pdf
+% One column of the same width, for phones: make towerless_intervals_mobile.pdf
+\ifdefined\mobile
+\documentclass[aps,prd,reprint,onecolumn,nofootinbib,amsmath,amssymb,floatfix]{revtex4-2}
+\usepackage[paperwidth=270pt,paperheight=585pt,textwidth=246pt,textheight=545pt,top=18pt,left=12pt,headheight=0pt,headsep=0pt,footskip=14pt]{geometry}
+\else
+\documentclass[aps,prd,reprint,nofootinbib,amsmath,amssymb,floatfix]{revtex4-2}
+\fi
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsthm}
+\emergencystretch=1.5em
+\ifdefined\mobile\makeatletter\def\frontmatter@abstractwidth{246\p@}\makeatother\fi
+\usepackage[hidelinks]{hyperref}
+
+\theoremstyle{plain}
+\newcommand{\resultname}{}
+\newtheorem*{resultenv}{\resultname}
+\newenvironment{result}[1]{\renewcommand{\resultname}{#1}\begin{resultenv}}{\end{resultenv}}
+\newcommand{\supp}[1]{Supplemental Material, part~#1}
+\newcommand{\pending}[1]{\textsf{[to check: #1]}}
+\newcommand{\Lspec}{\Lambda_{\rm spec}}
+\newcommand{\C}{\mathbb C}
+\renewcommand{\H}{\mathbb H}
+
+\begin{document}
+
+\title{Finite spectral triples as towerless intervals}
+\date{Draft, 3 November 2026}
+
+\begin{abstract}
+We test the reading of the finite factor of almost-commutative spectral triples as the remnant of a fifth dimension with its Kaluza-Klein tower removed. The Connes-Lott two-point space is exactly the minimal spectral truncation of a chiral interval of length $l$, with mass $\pi/(2l)$, and with a bulk mass the interval carries a light pair that truncates to Connes-Lott at any length. The two limits suggested by the Kaluza-Klein picture behave differently. A dimension opens as $l\to\infty$ only with the tower restored, through chiral wall modes and a one-dimensional Weyl law. The interval collapses as $l\to0$ with a light sector at fixed mass only along a tuned bulk mass, and boundary Yukawa matrices then give the Yukawa block $\Phi_Q\hat Y\Phi_U$ of the finite Dirac operator. The counts 9 and 11 are KO-degrees of the two odd factorizations of a KO-6 triple: the real structure, charge conjugation and particle number do not select between them, charged paired sectors admit both, and the Standard Model light spectrum with one or three unpaired neutrinos admits only KO-degree 7. The relation $8M_W^2=\sum N_fm_f^2$ of the asymptotic spectral action, under which a heavy W forces a heavy Dirac fermion, is the small-mass form of a weighted sum rule in the exact quadratic action: a fermion far above a fixed cutoff drops out, so a top alone gives $M_W\sim\Lambda^2/m_t\to0$, and the heavy limit with the relation intact needs $\Lambda\to\infty$ with $m_t/\Lambda\to0$. Matching the finite spectral action to the tower requires a tower-scale fermion. Whole triples converge in the spectral propinquity only to points carrying a finite Dirac block, while compressions at fixed truncation generate finite algebras whose structure is set by the symmetries of the spectral window. A two-sheet parent reproduces the bimodule and real structure of the Chamseddine-Connes classification, with its inputs stated.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+The finite space of the noncommutative Standard Model has KO-dimension 6, so that its product with four-dimensional spacetime has total KO-dimension $10\equiv2\pmod 8$ \cite{Connes2006,Barrett2007,CCM2007}. Its simplest relative, the Connes-Lott two-point space, has algebra $\C\oplus\C$ and Dirac operator $m\sigma_1$, and its two points lie at Connes distance $1/|m|$ \cite{ConnesLott1991}. It is often read as a discrete fifth dimension, already by Connes and Lott. It is also the oldest layer of the theory: the current framework adds a real structure, a KO-dimension and a first-order condition \cite{Connes2006,CCM2007,CC2008}.
+
+KO-dimension and metric dimension differ: the finite space has metric dimension 0 and KO-dimension 6. So the numbers 9, 10 and 11 below are KO-degrees of factorizations, while the emergence or loss of metric dimension is measured by Weyl laws and requires a singular limit. We make the discrete-dimension reading precise and test it in two limits that a Kaluza-Klein picture suggests: massless weak bosons, where a dimension should open (10 to 11), and infinitely heavy weak bosons and top, where a dimension should close (10 to 9).
+
+Our model of the fifth dimension is the chiral interval $I_l=[0,l]$, with boundary conditions that place the two chiralities at opposite ends. Table~\ref{tab:results} summarizes what the picture gives. The full proofs are in the Supplemental Material; the main text gives their structure.
+
+\begin{table}[t]
+\caption{\label{tab:results}Results, by question.}
+\begin{ruledtabular}
+\begin{tabular}{p{62pt}p{170pt}}
+Two-point space & The minimal spectral truncation of the chiral interval, with $|m|=\pi/(2l)$ (Theorem A).\\
+10 to 11 & A dimension opens only with the tower restored: $l\to\infty$ at fixed bulk mass, chiral wall modes, one-dimensional Weyl law (Theorem B).\\
+10 to 9 & A light sector survives collapse only along a tuned bulk mass. The truncation stays Connes-Lott, and the whole triple converges to a point carrying a Dirac block (Theorem B, Proposition G).\\
+Yukawa block & $D_F$ is the towerless limit of boundary Yukawa data, $\Phi_Q\hat Y\Phi_U$ (Theorem C).\\
+9 and 11 & KO-degrees of two factorizations of one even triple. $J$, charge conjugation and particle number do not select. Charged paired sectors admit both; one or three unpaired neutrinos admit only 11 (Theorem D).\\
+Heavy W & For $m\ll\Lambda$: needs a heavy Dirac fermion, with $m_t/M_W\to\sqrt{8/3}$ as $\Lambda\to\infty$ faster than $m_t$ (Proposition E). The relation is the small-mass form of a weighted sum: above a fixed cutoff a top drops out and $M_W\to0$ (Proposition E.1).\\
+W against the tower & The fixed truncation is not gauge covariant; matching needs a sum rule and a tower-scale fermion (Proposition F).\\
+Finite algebra & Compressed functions generate it at fixed truncation, with structure set by the symmetries of the window. A two-sheet parent gives the classified bimodule, with stated inputs (Proposition H).
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\section{Setting and conventions}
+
+Let $H=L^2(I_l;\C^2)$ with $\psi=(L,R)$, grading $\Gamma=\mathrm{diag}(1,-1)$, and for a real bulk mass $M$
+\begin{equation}
+(D_M\psi)_L=R'+MR,\qquad (D_M\psi)_R=-L'+ML.
+\end{equation}
+We use three boundary types: (a) $R(0)=R(l)=0$; (b) $L(0)=L(l)=0$; (c) $R(0)=0$, $L(l)=0$. Each defines a self-adjoint operator with compact resolvent anticommuting with $\Gamma$.
+
+A real structure is an antiunitary $J$ with $J^2=\epsilon$, $JD=\epsilon'DJ$, $J\Gamma=\epsilon''\Gamma J$; KO-dimension 6 means $(\epsilon,\epsilon',\epsilon'')=(+,+,-)$.
+
+A spectral truncation of $(A,H,D)$ to a spectral subspace $PH$ is $(PAP,PH,PDP)$. The map $a\mapsto PaP$ is the compression. For functions it is the classical Toeplitz compression, and its use for truncating spectral triples is due to \cite{DLM2014,CvS2021}. The image $PAP$ is an operator system, in general not an algebra.
+
+\section{The two-point space is a truncated interval}
+
+\begin{result}{Theorem A}
+Take $M=0$ and type (c). The spectrum of $D_0$ is $\pm(r-\tfrac12)\pi/l$, $r\ge1$. The lowest spectral subspace is spanned by $u_L=\sqrt{2/l}\,(\cos(\pi x/2l),0)$ and $u_R=\sqrt{2/l}\,(0,\sin(\pi x/2l))$; on it $PD_0P=m\sigma_1$ with $m=\pi/(2l)$, $P\Gamma P=\sigma_3$, and the compression of $C(I_l)$ has range the diagonal algebra $\C\oplus\C$. Hence the truncation is the Connes-Lott two-point space with $|m|=\pi/(2l)$, and the Connes distance between the two states of the compressed operator system is $2l/\pi$.
+\end{result}
+
+\begin{proof}[Structure of the proof]
+The spectrum follows by separation. Pointwise orthogonality of the $L$ and $R$ components makes $PfP$ diagonal, with entries $\int f|u_L|^2$ and $\int f|u_R|^2$, and $f=1$, $f=x$ span the diagonal algebra (\supp{05}).
+\end{proof}
+
+The two states pull back to the smeared measures $|u_L|^2dx$ and $|u_R|^2dx$ on $I_l$, which differ from endpoint evaluations. With the inherited real structure, the full diagonal algebra fails the first-order condition: for $e=\mathrm{diag}(1,0)$ one has $e^\circ=e$ and $[[m\sigma_1,e],e^\circ]=m\sigma_1$ (\supp{08}).
+
+The discrete version is a staggered chain on
+\begin{equation}
+H_N=\mathrm{span}\{L_1,\dots,L_{N-1},R_2,\dots,R_N\}
+\end{equation}
+with $B_N=h_N(I-S)$, whose spectrum $2h_N\sin((2r-1)\pi/(4N-2))$ converges to that of $D_0$ and whose sites lie at distance $|i-j|/h_N$; the two-point space is its $N=2$ case, as in dimensional deconstruction \cite{AHCG2001}.
+
+\begin{result}{Proposition A.1 (bare limits)}
+At fixed truncation, $m\to0$ produces no heat dimension, and $m\to\infty$ leaves no light fermions. In the product with any finite KO-6 triple,
+\begin{equation}
+D_F^2=D_0^2\otimes1+1\otimes D_I^2\ge\frac{\pi^2}{4l^2},
+\end{equation}
+so the literal collapse $l\to0$ of the massless interval has an empty light sector at every fixed cutoff.
+\end{result}
+
+\section{Bulk mass: the light pair and both limits}
+
+\begin{result}{Theorem B}
+\begin{enumerate}
+\item \emph{Chirality from boundary conditions.} For every $M$ and $l$, $\ker D_M$ is $\C(e^{Mx},0)$ for type (a), $\C(0,e^{-Mx})$ for type (b) and $0$ for type (c), with indices $+1,-1,0$. For a finite sum of representations $V_\rho$ of a compact group with types $\tau(\rho)$, the equivariant index is $\sum_{\tau=a}[V_\rho]-\sum_{\tau=b}[V_\rho]$, which realizes $[V_L]-[V_R]$.
+\item \emph{Light pair.} For type (c), $M=-\mu<0$ and $\mu l>1$, there is exactly one positive eigenvalue below $\mu$,
+\begin{equation}
+\lambda_0=\mu\,\mathrm{sech}(\kappa_0l),\qquad \tanh(\kappa_0l)=\frac{\kappa_0}{\mu},
+\end{equation}
+with $\lambda_0=2\mu e^{-\mu l}(1+o(1))$, and the others are $(\mu^2+k_n^2)^{1/2}$ with $k_n\in(n\pi/l,(n+\tfrac12)\pi/l)$. The profiles satisfy $R_0(x)=L_0(l-x)=\sinh(\kappa_0x)$ up to normalization.
+\item \emph{Truncation.} The light pair truncates to Connes-Lott with $D=\lambda_0\sigma_1$, and the Connes distance between its states is $1/\lambda_0$.
+\item \emph{Decompactification} ($l\to\infty$, fixed $\mu$). $\lambda_0\to0$; the normalized profiles converge, uniformly on compacta and in $L^2$, to $\sqrt{2\mu}\,e^{-\mu y}$ at the two walls, exact chiral zero modes of the half-line operators; and $\#\{n:\lambda_n\le E\}=(l/\pi)\sqrt{E^2-\mu^2}+O(1)$ for $E>\mu$.
+\item \emph{Collapse at fixed light mass.} For $m_f>0$ and $l<1/m_f$ there is a unique $\mu(l)$ with $\lambda_0=m_f$. As $l\to0$, with $c=\mu(l)l$ and $L=\log(2/(m_fl))$,
+\begin{equation}
+c=-W_{-1}\!\left(-\frac{m_fl}{2}\right)+o(1)=L+\log L+o(1),
+\end{equation}
+a statement about this localization model. The next eigenvalue exceeds $(\mu^2+\pi^2/l^2)^{1/2}$, and the truncation stays Connes-Lott with mass $m_f$ at each $l$. At fixed $\mu$ instead, every eigenvalue eventually has $|\lambda|>\mu$, and the smallest is $(\pi/2l)(1+o(1))$.
+\end{enumerate}
+\end{result}
+
+\begin{proof}[Structure of the proof]
+Eliminating $R$ reduces type (c) to $-L''+M^2L=\lambda^2L$ with $L(l)=0$, $L'(0)=ML(0)$; root counting for $\tanh t=t/c$ and $\tan t=t/c$ gives item 2. Item 3 is the computation $Du_L=\lambda_0u_R$ with orthogonal chiral supports. Item 5 uses that $F(c)=c^2\mathrm{sech}^2s(c)$, with $s=c\tanh s$, decreases strictly from 1 to 0 on $(1,\infty)$ (\supp{09}).
+\end{proof}
+
+So the dimension emerges only with the tower restored (item 4), and the collapse keeps a finite light sector only along the curve $\mu(l)$ (item 5). The finite Dirac operator records the light mass, a quantized internal momentum combined in quadrature with the bulk mass, $\lambda_n^2=\mu^2+k_n^2$.
+
+\section{Boundary Yukawa matrices and towerless textures}
+
+Let $Q\in L^2(I_l;\C^2)\otimes\C^{N_Q}$ and $U\in L^2(I_l;\C^2)\otimes\C^{N_U}$ carry diagonal bulk masses, and for a matrix $X$ impose $Q_R(0)=0$, $U_L(0)=0$, $Q_R(l)=XU_R(l)$, $U_L(l)=-X^\dagger Q_L(l)$. This defines a self-adjoint $D_X$ anticommuting with $\Gamma$. Write $c^Q_i=-m^Q_il$, $c^U_j=m^U_jl$ (positive $c$ localizes a field away from the Yukawa wall) and $\phi(c)^2=2c/(e^{2c}-1)$.
+
+\begin{result}{Theorem C}
+\begin{enumerate}
+\item \emph{Index and symmetry breaking.} $\ker D_X\cong\ker X^\dagger\oplus\ker X$ in the two chiralities, so $\mathrm{ind}\,D_X=N_Q-N_U$ for all $X$. If a compact group acts, the domain is invariant under the stabilizer $H_X$ of $X$, and $\mathrm{ind}_{H_X}D_X=[\rho_Q]-[\rho_U]$ restricted to $H_X$. All zero modes lift iff $X$ is invertible, which requires $\rho_Q\cong\rho_U$ as $H_X$-representations; for $SU(3)\times U(1)_{\rm em}$ and leptons without $\nu_R$, a massless $\nu_L$ is forced for every $X$.
+\item \emph{Interpolation.} For one massless flavor the positive spectrum is $\theta/l$ and $(n\pi\pm\theta)/l$, $\theta=\arctan|X|$: the light pair moves from the chiral zero modes of types (a)$\oplus$(b) at $X=0$ to the Connes-Lott mass $\pi/(2l)$ of two copies of type (c) as $|X|\to\infty$.
+\item \emph{Light spectrum.} With $A,B$ the diagonal matrices of $\omega\coth(\omega l)\pm m$, $\omega^2=m^2-\lambda^2$, the light eigenvalues are the fixed points $\lambda=\sigma_k(A(\lambda)^{1/2}XB(\lambda)^{1/2})$, and with $Y_0=F_QXF_U$,
+\begin{equation}
+\sigma_k(Y_0)\Bigl(1-\frac{\lambda_k^2}{\Lambda_Q^2}-\frac{\lambda_k^2}{\Lambda_U^2}\Bigr)\le\lambda_k\le\sigma_k(Y_0),
+\end{equation}
+where $F$ are the zero-mode values at the wall and $\Lambda$ the type-(c) thresholds.
+\item \emph{Towerless limit.} As $l\to0$ with the $c$'s and $\hat Y=X/l$ fixed, the spectrum in $[-E,E]$ converges to $0$, with multiplicity $N_Q+N_U-2\,\mathrm{rank}\,\hat Y$, and to the $\pm\sigma_k(M_F)$ with $\sigma_k(M_F)\le E$, where
+\begin{equation}
+M_F=\Phi_Q\hat Y\Phi_U,\qquad D_F=\begin{pmatrix}0&M_F\\ M_F^\dagger&0\end{pmatrix}
+\end{equation}
+is the Yukawa block of the Chamseddine-Connes finite Dirac operator. All other eigenvalues diverge.
+\item \emph{Hierarchies.} For graded $F=\mathrm{diag}(f_1\le\dots\le f_N)$, $G$ likewise, and nonzero trailing minors $\Delta_p$ of $X$, the product $\sigma_1\cdots\sigma_p(FXG)$ lies between $f_{T_p}g_{T_p}\Delta_p$ and
+\begin{equation}
+f_{T_p}g_{T_p}\bigl[\Delta_p+D_p\bigl((1+K_p\epsilon^F_p)(1+K_p\epsilon^G_p)-1\bigr)\bigr].
+\end{equation}
+With an order-one $\hat Y$ the masses follow $\phi(c^Q_k)\phi(c^U_k)\approx2\sqrt{c^Q_kc^U_k}\,e^{-c^Q_k-c^U_k}$: order-one differences of localization give exponential hierarchies \cite{AHS2000,GP2000,GN2000}.
+\end{enumerate}
+\end{result}
+
+\begin{proof}[Structure of the proof]
+Solving the constant-coefficient equations and imposing the wall conditions gives the secular equation $\det(\lambda^2-A(\lambda)XB(\lambda)X^\dagger)=0$. The functions $\alpha_i,\beta_j$ are decreasing and concave in $\lambda^2$, which gives the bounds of item 3 and, with $\hat Y$ fixed, item 4. Item 5 uses compound matrices (\supp{12}).
+\end{proof}
+
+The mixing pattern $|V_{ij}|\sim\phi(c^Q_i)/\phi(c^Q_j)$ holds in numerical samples (Python) and is known in the extra-dimensional flavor literature \cite{HS2001,APS2005}; we have no proof with explicit constants.
+
+\section{Real structures: the choice between 9 and 11}
+
+We call the factorization of a KO-6 triple as an odd triple times a point a doubling; this usage is unrelated to fermion doubling.
+
+\begin{result}{Theorem D}
+\begin{enumerate}
+\item \emph{Factorization criterion.} A KO-6 triple $T$ factors as $T_n\times P_k$ with $(s,n,k)=(+1,7,7)$ or $(-1,5,1)$ iff there is a unitary $U$ with $U^2=1$, $U\Gamma=-\Gamma U$, $[U,a]=[U,a^\circ]=[U,D]=0$ and $UJ=sJU$.
+\item \emph{The real structure does not select $s$.} The almost-commutative electrodynamics triple admits involutions of both signs. In a neutral sector with scalar algebra character, the KO-7 factorization always exists, and the KO-5 factorization exists exactly when every singular value of the Majorana block, including zero, has even multiplicity. So the strict light spectrum of the Standard Model representation, with one or three unpaired left-handed neutrinos and no Majorana term, admits only $s=+1$; two unpaired neutral pairs with $D=0$ admit both signs; and while the full algebra keeps $\H$, neither factorization exists.
+\item \emph{The interval reflection.} On the chiral interval with pointwise reality ($JfJ^{-1}=\bar f$), the real structures are $\mathrm{diag}(\alpha,\beta)K$ with $\alpha=\epsilon'\beta$, of KO-dimension 0 for $\epsilon'=+1$ and an extended sign convention for $\epsilon'=-1$, and the reflection $x\mapsto l-x$ exchanging $L$ and $R$ has sign $\epsilon'$ against $J$. In the internal-first KO-6 product $F_0\times I_l$, the KO-6 conditions force the grading twist $J_F=J_0\otimes J_I\Gamma_I^b$ with $\epsilon'(-1)^b=-1$, and the bare reflection $1\otimes\sigma$ has $s=-1$ for either interval convention.
+\item \emph{Exact reconciliation.} For the truncated interval with scalar algebra, $F_0\times I_l\cong T_5(m)\times P_1$ with $d_5=D_0+m\Gamma_0$ and $j_5=J_0\Gamma_0$: the interval mass enters the odd Dirac operator, and the interval's two states become the doubling space. With the full compressed two-sheet algebra, the inherited data fail first order and the reflection does not commute with that algebra.
+\item \emph{No physical selection.} Spacetime grading twists ($J_M$ versus $J_M\gamma_5$) do not select the finite involution. A product with fixed $D_F,J_F,\Gamma_F$ and particle number $Q$ admits particle-preserving involutions of both signs. More generally, if $Q$ is a self-adjoint involution commuting with $D$, $\Gamma$, the algebra and its opposite, with $QJ=-JQ$, then particle-preserving involutions come in pairs $U$, $QU$ of opposite sign.
+\end{enumerate}
+\end{result}
+
+\begin{proof}[Structure of the proof]
+Given $U$, put $d=UD$ and $j=UJ$ on $\{\Gamma=+1\}$; then $j^2=s$, $jd=sdj$, and $(x,y)\mapsto x+Uy$ exhibits the product. For item 2, Takagi factorization reduces the Majorana block to singular values; $j^2=-1$ commuting with $d^2$ forces even multiplicities, and pairing equal entries with $\sigma_2$ gives the converse. Items 3 to 5 are direct computations with the stated operators, with $(QU)J=-sJ(QU)$ for the pairing (\supp{06}, \supp{07} and \supp{08}).
+\end{proof}
+
+The values 9 and 11 are therefore the KO-degrees, shifted by 4, of the two odd factorizations of one even triple. Replacing $J$ by $J\Gamma$ only changes signs inside the even classification \cite{DD2011}, and identifying either factorization with the dimension of a parent geometry would need a change of parity in K-homology that these results do not supply.
+
+The two labels differ by sector. Each charged paired sector of the reduced representation is invariant under the algebra, its opposite, $D$ and $J$, and admits both signs, so the formal label 9 is available for the charged fermions sector by sector. The obstruction to $s=-1$ for the whole triple sits in the neutral sector: with one or three neutrinos and no $\nu_R$, only $s=+1$ occurs there. With $\nu_R$ and Dirac masses both signs occur, and a Majorana mass breaks $[Q,D]=0$ and the pairing of item 5, so that for a generic Majorana block only $s=+1$ remains.
+
+\section{Spectral action: heavy fermions and the gauge sector}
+
+\begin{result}{Proposition E}
+Assume the Chamseddine-Connes-Marcolli relation $8M_W^2=\sum N_fm_f^2$ over Dirac masses at the matching scale, with $N_g$ generations, and let $m_{\max}$ be the largest Dirac mass. Then
+\begin{equation}
+\frac{m_{\max}}{2\sqrt2}\le M_W\le\sqrt{N_g}\,m_{\max}.
+\end{equation}
+Hence a heavy-W limit at fixed fermion masses is incompatible with the relation, and if only the up-type mass of one generation diverges, $m_t/M_W\to\sqrt{8/3}$, the top-mass relation of \cite{CCM2007}.
+\end{result}
+
+\begin{proof}
+The weights over one generation sum to 8, and the largest mass has weight at least 1 (\supp{11}).
+\end{proof}
+
+The relation belongs to the truncated heat-kernel expansion, with its coefficient $\mathrm{Tr}\,Y^\dagger Y$ polynomial in the masses and higher terms in $m^2/\Lambda^2$ dropped. It is therefore a statement for $m\ll\Lambda$, and the limit with $M_W$ and $m_t$ diverging together has $\Lambda\to\infty$ faster than $m_t$. The case of fixed cutoff is the following.
+
+\begin{result}{Proposition E.1}
+Let $S=\mathrm{Tr}\,f(D_A^2/\Lambda^2)$ on $\mathbb R^4$ with a constant vacuum $V_0$ with eigenvalues $m_i$, and let $a_\mu(q)T$ be a transverse vector. For $f(z)=e^{-tz\Lambda^2}$ the quadratic action is exact, $\int_q|a|^2C(q^2)$, with $d_{ij}=m_i-m_j$ and
+\begin{equation}
+\begin{split}
+C(q^2)=\frac1{8\pi^2}\sum_{ij}|T_{ij}|^2\Bigl[&\bigl(\tfrac2t+d_{ij}^2+q^2\bigr)I_{ij}\\
+&-\tfrac1t\bigl(e^{-tm_i^2}+e^{-tm_j^2}\bigr)\Bigr],
+\end{split}
+\end{equation}
+where $I_{ij}=\int_0^1e^{-t[(1-u)m_i^2+um_j^2+u(1-u)q^2]}du$. Its small-mass expansion gives the mass formula of Proposition F and the CCM relation. In the three-generation Standard Model data with only one up-type Dirac mass $m$, $f(z)=e^{-z}$ and $x=m^2/\Lambda^2$:
+\begin{enumerate}
+\item the Taylor mass is
+\begin{equation}
+\frac{M_W^2}{\Lambda^2}=\frac{3[1-(1+x)e^{-x}]}{x[3+w(x)]},
+\end{equation}
+with $w(x)=3[2-(x^2+2x+2)e^{-x}]/x^3$, so that $M_W^2\sim\tfrac38m^2$ for $x\to0$ and $M_W^2\sim\Lambda^4/m^2$ for $x\to\infty$; a unique positive timelike pole has the same limits, and both obey $M_W^2\le\Lambda^2/e$;
+\item $M_Z^2\sim\tfrac23xe^{-x}\Lambda^2$ for $x\to\infty$, so that $M_W^2/M_Z^2$ does not stay at $5/8$, while the neutral-current angle stays at $\cos^2\theta_{\rm NC}=5/8$ and the ratio of the photon and gluon coefficients stays at $8/3$ for all $x$;
+\item the broken vectors keep a positive kinetic form, so that they do not decouple by becoming heavy, and the limit does not carry unbroken $SU(2)\times U(1)$ on the light space, since $b_L$ has lost its partner.
+\end{enumerate}
+\end{result}
+
+\begin{proof}[Structure of the proof]
+The Duhamel expansion of the heat trace to second order has the vertices $(2p+q)\cdot a$, $\gamma^{\mu\nu}q_\mu a_\nu$ and $d_{ij}\gamma^\mu\gamma_5a_\mu$, and a quadratic vertex. The heavy Dirac block has eigenvalues $\pm m$ and connects to massless partners with $d^2=m^2$, while the other doublets contribute a massless kinetic term, which gives the limits (\supp{18}).
+\end{proof}
+
+For doublets with one massive member, item 1 is the CCM relation with a form factor. With $\rho(x)=2[1-(1+x)e^{-x}]/x^2$ and the normalization $\kappa$ of the kinetic term ($\kappa=(3+w)/4$ for the top alone),
+\begin{equation}
+8\kappa M_W^2=\sum_fN_fm_f^2\,\rho(m_f^2/\Lambda^2),
+\end{equation}
+and $\rho,\kappa\to1$ as $x\to0$. For the top alone, $m_t/M_W$ departs from $\sqrt{8/3}$ by 5\% at $m\approx0.45\Lambda$, $M_W$ peaks at about $0.52\Lambda$ at $m\approx1.42\Lambda$, and then it falls (Python). A fermion far above a fixed cutoff is exponentially suppressed in $\mathrm{Tr}\,f(D^2/\Lambda^2)$, and in a loop with a massless partner $\rho\sim2/x^2$. With no other mass in the vacuum, the W mass then has no source. This regime lies beyond the range of the expansion, and whether the classical action is meaningful for $m>\Lambda$ is a separate question.
+
+The Taylor statement holds for nonnegative cutoffs, including those flat near $0$. With a complete massless doublet retained, the Taylor mass tends to $0$ for any finite set of heavy doublets. With every doublet of equal mass and no light fermions, the poles satisfy $2x<M_W^2/\Lambda^2<2x+2$ and $\tfrac{16}{5}x<M_Z^2/\Lambda^2<\tfrac{16}{5}x+2$, so they diverge at fixed cutoff with $M_W^2/M_Z^2\to5/8$; there the kernel vanishes at fixed momentum and the Taylor kinetic term has the wrong sign for $x>2$. A limit with $m_t/M_W\to\sqrt{8/3}$ and all scales diverging exists jointly with $\Lambda\to\infty$ and $m/\Lambda\to0$. For nonnegative $f$ of unbounded support, no finite $c>0$ is stationary along $V=cV_*$, so these are masses about a prescribed background. All of this is classical and bosonic. So in the families treated, a heavy W and Z at fixed cutoff is found only without a massless complete doublet.
+
+\begin{result}{Proposition F}
+Fluctuate the product of spacetime with the chiral interval by a five-dimensional gauge field $(A_\mu,A_5)$ and compress to the light pair. Then:
+\begin{enumerate}
+\item the sheet connections are the weighted averages $A_{L,R}=\int w_{L,R}A_\mu$ and the link is $\phi=m+iB$ with $B=\int_0^ll^{-1}\sin(\pi x/l)A_5\,dx$, so the image is $\{\phi+\phi^*=2m\}$ and not every Connes-Lott fluctuation arises;
+\item the fixed compression is not gauge covariant: $A_5=a\cos(2\pi x/l)$ has trivial Wilson line and changes the compressed spectrum;
+\item at leading order, in the stated trace and vacuum, the spectral action gives the vector mass matrix $\mathcal M^2=\tfrac32Q^{-1/2}KQ^{-1/2}$. For the minimal two-sheet model its eigenvalues are $0$ and $6m^2$: a massless diagonal vector and a vector of mass $\sqrt6\,m$. With the CCM three-generation trace and one massive colour triplet, $M_W^2=\tfrac38m^2$. Neumann-Dirichlet conditions, which are separate input, give the tower mass $m=\pi/(2l)$.
+\end{enumerate}
+\end{result}
+
+\begin{proof}[Structure of the proof]
+Items 1 and 2 are direct integrals with the profiles of Theorem A. Item 3 is the $a_4$ coefficient $\eta\,\mathrm{Tr}F^2+3\eta\,\mathrm{Tr}(D_\mu V)^2$ with $\eta=f_0/(24\pi^2)$ (\supp{13}).
+\end{proof}
+
+So in these cases the finite spectral action and the interval tower disagree on the vector mass, and the value depends on the whole fermion trace. With the gauge-covariant projection onto the light pair of the fluctuated operator, the covariance defect disappears, and on a common profile space equality of the two masses becomes an explicit trace-and-overlap sum rule (\supp{14}). In the one-fermion Abelian mixed-boundary reduction, it fails at zero bulk mass, where $\mathcal M_{\rm spec}^2=\tfrac35\mathcal M_{\rm KK}^2$, and holds at some tuned bulk mass $0<M_*<3\pi/(4l)$, at which the matched fermion has a mass of the order of the tower scale. At leading spectral-action order, if all fermion masses retained in the finite trace are uniformly bounded, then $\mathcal M_{\rm spec}^2\le6\|V_0\|^2$, so no matching is possible in the collapse. Equality of one mass does not establish equality of the full gauge or scalar actions. In these results the gauge sector ties the W to a fermion at the tower scale, in line with Proposition E.
+
+\section{Whole triples and truncations}
+
+The results above concern compressions at each $l$. For the limit of the whole triple we use the spectral propinquity $\Lspec$ of Latr\'emoli\`ere \cite{Lat2022}, a metric on metric spectral triples, that is, those whose Lipschitz seminorm $\|[D,a]\|$ has kernel $\mathbb R1$ and induces the weak* topology on states.
+
+\begin{result}{Proposition G}
+Let $T=(A,H,D)$ be a metric spectral triple of diameter $\delta$. Let $\Sigma\subset\mathbb R$ be finite with $P=1_\Sigma(D)$ of rank $N$, let $|\lambda|\ge g$ on the rest of the spectrum, let $W:PH\to\C^N$ be unitary and $\Delta=\|WDW^*-D_F\|$. Then
+\begin{equation}
+\begin{split}
+\min\bigl(\tfrac{\sqrt2}{2},\tfrac\delta2\bigr)&\le\Lspec\bigl(T,(\C,\C^N,D_F)\bigr)\\
+&\le g^{-2}+\max\bigl(\tfrac\delta2,\Delta\bigr)+\Delta+\sqrt\Delta,
+\end{split}
+\end{equation}
+with no anticommutation hypothesis. Conversely, a sequence converges to $(\C,\C^N,D_F)$ iff $\delta_n\to0$, $g_n\to\infty$ and $\Delta_n\to0$. Moreover:
+\begin{enumerate}
+\item the tuned interval of Theorem B satisfies
+\begin{equation}
+\frac l2\le\Lspec\bigl(T_l,(\C,\C^2,m_f\sigma_1)\bigr)\le\frac l2+\frac{l^2}{\pi^2+c^2},
+\end{equation}
+and stays at distance at least $\min(\sqrt2/2,(1/m_f-l)/2)$ from the Connes-Lott triple;
+\item the Yukawa family of Theorem C converges at rate $O(l)$ to $(\C,\C^{N_Q+N_U},D_F)$;
+\item propinquity limits of commutative spaces are commutative, and the number of connected components does not increase, so the finite limits of connected commutative triples are exactly the triples $(\C,\C^N,D_F)$;
+\item for a symmetric block, the grading and real structure descend to the block with their signs.
+\end{enumerate}
+\end{result}
+
+\begin{proof}[Structure of the proof]
+The tunnel on $A\oplus\C$ has seminorm $\max\{L(a),\|a-z\|/\rho\}$, and on $H\oplus\C^N$ the D-norm is $\max\{\mathrm{DN}(\xi),\mathrm{DN}_F(\eta),\|W\xi-\eta\|/\rho\}$; the Leibniz inequalities hold because the limit algebra acts by scalars, and $\|(1-P)\xi\|\le\|D\xi\|/g$ bounds the rest. The converse uses the inner Leibniz inequality for the rank and the separation for concentration of spectral measures. Item 3 applies a comparison of norms along a tunnel to Lie products and to polynomials in one element (\supp{15}).
+\end{proof}
+
+So one family has two limiting descriptions, and both hold: the whole triple converges to a point carrying a Dirac block, while the compression at each $l$ is Connes-Lott with distance $1/m_f$. The metric compares whole algebras, and the compression is not a quantum isometry. Item 3 is a statement about this metric on scalar function algebras. The class of metric triples also excludes the Standard Model finite triple, where $D_F$ commutes with the nonscalar subalgebra $\{(\lambda,\lambda,0)\}$ [\onlinecite{CCM2007}, Sec.~2.6].
+
+\begin{result}{Proposition H}
+Let $P_0$ be a finite-rank spectral projection, for a symmetric set, of an even triple $(A_0,H_0,D_0,\gamma_0)$, with $V=P_0H_0$, $d=D_0|_V$, $Q(a)=P_0aP_0$, and let $A_F$ be the C*-algebra generated by $Q(A_0)$.
+\begin{enumerate}
+\item $A_F$ is the bicommutant of $Q(A_0)$, so its structure is set by the operators commuting with all compressed functions. For the chiral interval with the two lowest levels, $Q(C(I_l))$ is a four-dimensional operator system and the grading splits $A_F=M_2(\C)\oplus M_2(\C)$; on $\mathbb{CP}^3$ at level one, $A_F=M_4(\C)$.
+\item With a real structure satisfying $J_0aJ_0^{-1}=a^*$, the inherited data satisfy order zero iff $A_F$ is commutative.
+\item On $H_0\otimes\overline{H_0}$, with $A_0$ acting on the left, $\mathcal D=D_0\otimes1+\gamma_0\otimes\overline{D_0}$ and $J$ the graded flip, one has a real even triple of signs $(+,+,+)$, with the same Connes distance on $A_0$, and its truncation $(A_F,V\otimes\overline V,d\otimes1+\gamma_V\otimes\bar d,J_F,\Gamma_F)$ satisfies order zero and order one. A product with a Clifford point gives the KO-6 signs and $\dim H=2k^2$, with $k=\dim V$.
+\item KO-6 is reached in the irreducible form by a parent with two sheets, on $(H_X\otimes\overline{H_Y})\oplus(H_Y\otimes\overline{H_X})$ with $J$ exchanging the summands. For equal dimensions and full matrix algebras, the truncation is the pair $M_k(\C)\oplus M_k(\C)$, $J(x,y)=(y^*,x^*)$, of the classification \cite{CC2008}. At twistor level one, real functions on $S^4$ and on $\mathbb{CP}^3$ generate the real algebras $M_2(\H)$ and $M_4(\C)$, giving that algebra with its bimodule of dimension 32.
+\end{enumerate}
+\end{result}
+
+\begin{proof}[Structure of the proof]
+Item 1: the algebra is unital and finite-dimensional. On the interval, explicit test functions give $(\begin{smallmatrix}1&1\\1&1\end{smallmatrix},0)$ and $(0,\begin{smallmatrix}1&-1\\-1&1\end{smallmatrix})$. Item 2: $J_FQ(a)^*J_F^{-1}=Q(a)$. Items 3 and 4: the graded flip satisfies $J\mathcal D=\mathcal DJ$ by direct computation, $a^\circ$ acts on the other tensor factor, and $[\mathcal D,\pi(a)]=[D_0,a]\otimes1$. The twistor case uses $Q(x_a)=\Gamma_a/5$, the quaternionic structure $j$ commuting with $\Gamma_a$, and $Q(w^*Bw/w^*w)=(B+\mathrm{tr}(B)1)/5$ (\supp{10} and \supp{16}).
+\end{proof}
+
+Connes and van Suijlekom observe that the C*-algebra generated by $PAP$ is, in many examples, a noninformative full matrix algebra \cite{CvS2021}. That is the case here apart from the symmetries of the window: the grading gives the block structure on the interval, and $j$ gives the quaternionic real form on $S^4$. So item 1 is modest, and the information sits in those symmetries.
+
+The order conditions in items 3 and 4 are formal: the same tensor square works for any finite even representation, and the two-sheet bimodule is already in [\onlinecite{CC2008}, Remark 2.9]. What is specific here is that the tensor square arises from a commutative parent, namely the product Dirac operator on $X\times X$, with algebra restricted to $C(X)\otimes1$ and $J$ covering the flip. The Clifford point is an input and fails finite orientability. In item 4 the second sheet, the base-function restriction and the window are inputs. The nontrivial grading of the classification is added after truncation as abstract data, since an even parent cannot give a grading anticommuting with compressed functions. The two sheets are not connected, so the selection of $\C\oplus\H\oplus M_3(\C)$ is not reached. The triples are usually not metric, and the eigenvalues of the doubled operator add in quadrature.
+
+\section{Discussion}
+
+\emph{What the towerless picture gives.} The finite Dirac operator of an almost-commutative geometry behaves as the remnant of internal momentum on an interval: its masses are quantized momenta combined with bulk masses, its texture is localization data, and its chirality is carried by boundary conditions with an index that is stable under boundary Yukawa couplings and changes only through symmetry breaking. The emergence limit needs the tower, and the collapse limit keeps a finite light sector along a tuned curve of bulk masses. The labels 9 and 11 attach to sectors: charged paired sectors carry both, and an odd number of unpaired neutrinos carries only 11.
+
+\emph{What remains open.} The results are spectral and kinematic. The length, the bulk masses and the boundary data are free, and chirality is an input through boundary conditions, as in orbifold constructions. The results reach the Connes-Lott layer and the Yukawa block as compressions. Beyond that layer, Proposition H gives finite algebras at fixed truncation, with order zero and order one on a restricted doubled parent. An operator connecting the two sheets, the selection of a particular finite algebra, the KO-6 sign and the grading from a parent, and any dynamical origin remain open. Proposition G decides the whole-triple limit in one metric. Proposition E.1 concerns one classical action at quadratic order about a prescribed background. It shows that the heavy limit of the 10 to 9 proposal keeps $M_W\propto m_t$ only for $m_t\ll\Lambda$, hence jointly with $\Lambda\to\infty$; at fixed cutoff, with a light sector retained, the vectors end up light in the families treated.
+
+\emph{Reading the negative results.} Each negative statement above holds in a stated family, at a stated order, and we read each as a guide to where to go next. The bare limits of Proposition A.1 point to the bulk mass. The failure of gauge covariance of the fixed compression points to the covariant projection. The bound for bounded fermions in the collapse points to a tower-scale fermion, or to a change of action or order. The failure of order zero with inherited reality points to the doubled parent. The fixed-cutoff behavior of Proposition E.1 points to the joint limit with $\Lambda\to\infty$, and the absence of a finite radial vacuum to a potential or constraint for the radial mode. The commutative limits of Proposition G point to truncation in place of whole-algebra convergence. None of them closes the question it bears on.
+
+\emph{Relation to the literature.} Theorem A: the Kaluza-Klein reading of the two-point space is in Connes-Lott \cite{ConnesLott1991}, the two points as points of a fifth dimension in \cite{VW1996}, the two-point model as an approximation of a manifold in \cite{DMH1994}, and a discrete Kaluza-Klein reading in \cite{MW2002}; compression and spectral truncation are standard \cite{DLM2014,CvS2021}. We did not find their application to the chiral interval, with $|m|=\pi/(2l)$ and $PC(I_l)P=\C\oplus\C$. Theorem B: wall modes with exponentially small mixing are classical \cite{JR1976,Kaplan1992,Shamir1993}, and collapse of spectral triples to a point is treated in \cite{FL2026}, Corollary 4.1; the tuned collapse $\mu(l)$ lies outside their hypotheses, and we did not find it elsewhere. Theorem C: the one-flavor spectrum is in \cite{Csaki2004}, Eq.~(5.6), and warped multiflavor textures are in \cite{Cas2008}; we did not find a derivation of $D_F$ from localization in noncommutative geometry. Theorem D: products of real triples and the choice $J$ versus $J\Gamma$ are in \cite{DD2011,VdSS2012}; we did not find the factorization criterion or the results on 9 and 11. Proposition E restates \cite{CCM2007}, Eqs.~(4.16) and (5.27). Proposition G: the method follows \cite{FL2026}, whose general Theorem 3.4 needs an extra hypothesis, anticommutation of $D_h$ and $D_v$ or a relative bound, as a scalar example shows. Proposition H: the first-order form $D=\Delta+J\Delta J^{-1}$ on bimodules appears in the classification of finite triples \cite{Krajewski1998,PS1998} \pending{the form and the term ``coarse correspondence'' against the sources}. Inner fluctuations without order one \cite{CCvS2013a,CCvS2013b} apply to the two-point data with inherited $J$, and we have not computed them. As mathematics, most ingredients are known; what may be new is their combination in one limiting construction.
+
+\emph{Open problems.} (0) A family of commutative Kaluza-Klein data $(C^\infty(K_l),L^2(S_{K_l}\otimes E_l),D_l,J_l,\gamma_l)$ and notions of spectral, operator-algebraic, K-theoretic or truncation convergence under which it yields a finite real triple $(A_F,H_F,D_F,J_F,\gamma_F)$ with the structures of the current framework. (i) Which symmetries of a spectral window can select the finite algebra, and a physical origin for the doubled parent. (ii) The two sheets and the grading from a parent, and an operator connecting the sheets. (iii) Metric-compatible truncations for curved internal spaces. (iv) A proof of the mixing bound. (v) The bosonic matching beyond the sum rule, and heavy limits beyond the families treated.
+
+\section*{Provenance and Supplemental Material}
+
+This paper has no listed authors. The results were produced by language models, and the part numbers below are those of the Supplemental Material, which contains the full proofs and the referee reports. Numerical checks name their language.
+
+\begin{table}[h]
+\begin{ruledtabular}
+\begin{tabular}{p{42pt}p{20pt}p{50pt}p{114pt}}
+Result & Part & Proved by & Checked by\\ \hline
+A, A.1 & 05, 08 & Astra 6 & Claude (Python); Terra 6.1\\
+B & 09 & Claude & Claude (Python); Terra 6.1 (two errors corrected)\\
+C & 12 & Claude & Claude (Python); Terra 6.1 (three errors corrected)\\
+D & 06, 07, 08 & Astra 6; Claude & Claude (by hand, Python); Astra 6; Terra 6.1 (one summary corrected)\\
+E & 11 & Claude & Claude; Terra 6.1 (corrections applied)\\
+E.1 & 18 & Astra 6; Terra 6.1 & Claude (Python, direct heat traces); Terra 6.1\\
+F & 13, 14 & Astra 6 & Claude (by hand); Terra 6.1 (one error, four amendments)\\
+G & 15 & Claude & Terra 6.1 (corrections applied)\\
+H & 10, 16 & Claude & Python; Terra 6.1 (two errors corrected)
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\bibliography{towerless_intervals}
+
+\end{document}

@@ -18,6 +18,14 @@ Avoid the "X is not Y; it is Z" pattern and its relatives ("This is not merely..
 
 Use plain descriptive headings. Avoid motivational or slogan-like headings and asides, and cute section titles.
 
+## Negative results
+
+A no-go result is a guide to where to go next, and it leaves the question open. These results are tempting because they come cheaply, and treating them as closing an issue has misled physics before.
+
+- State each negative result in its exact scope: the family, the order, the definition and the action.
+- Require consensus among multiple models before relying on one in general, with an independent check by a model other than its author as the minimum.
+- Say which direction the result points to. Close an item only with a positive theorem.
+
 ## Mathematical writing
 
 Use the standard mathematical "we" and "Let ...", in research documents and in prompts asking for proofs.

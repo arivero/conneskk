@@ -106,24 +106,13 @@ Quantized internal momentum, bulk masses in quadrature, exponential hierarchies 
 
 Claim ledgers, the consolidated result, the theorem queue, lemma results and conjectures, contradictions.
 
-[notes §8](connes_kk_research_state.md#8-claim-ledger-status-dependencies-and-tests) · [paper §15](canonical_research.md#15-consolidated-result-and-the-next-test) · [strategy, Ranked list](STRATEGY.md#ranked-list) · [ledger.pl](ledger.pl) · [strategy, What would sink H](STRATEGY.md#what-would-sink-h) · [lemma RE](lemmas/README.md) · [DUPLICATES.md](DUPLICATES.md#5-contradictions-found-and-their-resolution)
+[notes §8](connes_kk_research_state.md#8-claim-ledger-status-dependencies-and-tests) · [paper §15](canonical_research.md#15-consolidated-result-and-the-next-test) · [strategy, Ranked list](STRATEGY.md#ranked-list) · [ledger.pl](ledger.pl) · [strategy, What would count against H](STRATEGY.md#what-would-count-against-h) · [lemma RE](lemmas/README.md) · [DUPLICATES.md](DUPLICATES.md#5-contradictions-found-and-their-resolution)
 
 ## Part 2. Documents
 
-### Draft paper: *Finite spectral triples as towerless intervals*: [paper/towerless_intervals.md](paper/towerless_intervals.md)
+### Draft paper: *Finite spectral triples as towerless intervals*: [paper/towerless_intervals.tex](paper/towerless_intervals.tex)
 
-- [Abstract](paper/towerless_intervals.md#abstract)
-- [1. Introduction](paper/towerless_intervals.md#1-introduction)
-- [2. Setting and conventions](paper/towerless_intervals.md#2-setting-and-conventions)
-- [3. The two-point space is a truncated interval](paper/towerless_intervals.md#3-the-two-point-space-is-a-truncated-interval)
-- [4. Bulk mass: the light pair and both limits](paper/towerless_intervals.md#4-bulk-mass-the-light-pair-and-both-limits)
-- [5. Boundary Yukawa matrices and towerless textures](paper/towerless_intervals.md#5-boundary-yukawa-matrices-and-towerless-textures)
-- [6. Real structures: the choice between 9 and 11](paper/towerless_intervals.md#6-real-structures-the-choice-between-9-and-11)
-- [7. Spectral action: heavy fermions and the gauge sector](paper/towerless_intervals.md#7-spectral-action-heavy-fermions-and-the-gauge-sector)
-- [8. Whole triples and truncations](paper/towerless_intervals.md#8-whole-triples-and-truncations)
-- [9. Discussion](paper/towerless_intervals.md#9-discussion)
-- [Provenance](paper/towerless_intervals.md#provenance)
-- [References](paper/towerless_intervals.md#references)
+REVTeX source, built with `make` in `paper/` in two forms: Phys Rev two-column, and one column of the same width for phones. Sections: Introduction; Setting and conventions; The two-point space is a truncated interval; Bulk mass: the light pair and both limits; Boundary Yukawa matrices and towerless textures; Real structures: the choice between 9 and 11; Spectral action: heavy fermions and the gauge sector; Whole triples and truncations; Discussion; Provenance and Supplemental Material.
 
 ### Paper: *Nine, Ten and Eleven Dimensions*: [canonical_research.md](canonical_research.md)
 
@@ -307,7 +296,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
   - [What job 05 settled (T1)](STRATEGY.md#what-job-05-settled-t1)
 - [Ranking rules](STRATEGY.md#ranking-rules)
 - [Ranked list](STRATEGY.md#ranked-list)
-- [What would sink H](STRATEGY.md#what-would-sink-h)
+- [What would count against H](STRATEGY.md#what-would-count-against-h)
 
 ### Literature check of claims A-I: [LITERATURE.md](LITERATURE.md)
 

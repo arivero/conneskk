@@ -4,3 +4,9 @@
 lemmas/.astra_*
 __pycache__/
 lemmas/.terra_*
+paper/*.aux
+paper/*.log
+paper/*.bbl
+paper/*.blg
+paper/*.out
+paper/*Notes.bib
