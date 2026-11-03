@@ -12,6 +12,8 @@ The two sheets of Theorem 16.7 are not connected: D_F commutes with the sheet pr
 
 4. Hořava-Witten comparison (arXiv:hep-th/9603142), as a scoping question: on the interval with chiral walls, the walls of lemma 09 carry opposite chiralities and the two boundaries of Hořava-Witten theory carry multiplets of one chirality each. Which boundary types of lemma 09 and lemma 12 model the latter? Does a wall-to-wall connecting operator have a meaning there? A short answer with a clear conclusion is enough.
 
-Allow failure. A negative result is to be stated in its exact scope, with the direction it points to, and does not close the question. If a statement cannot be proved, say so and state the strongest result you can prove, or a Conjecture with the evidence.
+5. Consensus check. A no-go result here needs agreement among several models. Independently check these three, which Astra has not seen, and give for each the verdict, the exact hypotheses and the known escapes: Corollary 11.2 of lemmas/11_spectral_action_heavy_w.md; Proposition 16.1 of lemmas/16_coarse_truncation.md; and the statement in Example 16.9 that an even parent cannot give the grading Gamma_5 = 5 Q(x_5).
+
+Allow failure. A negative result is to be stated in its exact scope, with its hypotheses and known escapes, and does not close the question. If a statement cannot be proved, say so and state the strongest result you can prove, or a Conjecture with the evidence.
 
 Output format (Markdown): a title line and a one-paragraph outcome; numbered results labelled Theorem, Lemma, Proposition, Corollary, Counterexample, No-go theorem or Conjecture, each with hypotheses (all conventions explicit) and proof; the authorial "we" and "Let"; no status classes, no motivational phrasing. End with "Consequence for T0b and T11": two to four sentences.

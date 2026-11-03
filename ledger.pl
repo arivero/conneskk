@@ -864,7 +864,7 @@ depends(l18_sum_rule, l18_several).
 attempted_by(l18_sum_rule, claude_opus_5_5).
 checked_by(l18_sum_rule, claude_opus_5_5, python("agreement with equation (18) to rounding, for x from 1e-3 to 1e3")).
 addresses(t5b, l18_sum_rule).
-%% Lemma 19 (T0b, step 1). Referee pending.
+%% Lemma 19 (T0b, step 1). Referee: reviews/2026-11-03_terra_check_nogo_19.md
 claim(l19_fluct, theorem, proved, "Theorem 19.1", "On the two-point data the inner fluctuation of arXiv:1304.7583 factorizes: m |Phi|^2 sigma_1 with pointwise J, and link m Phi^2 with the reflection J (KO-6 signs).").
 source(l19_fluct, 'lemmas/19_fluctuations_without_order_one.md', 'the-fluctuated-operator').
 attempted_by(l19_fluct, claude_opus_5_5).
@@ -896,6 +896,14 @@ attempted_by(l21_so30, claude_opus_5_5).
 checked_by(l21_so30, claude_opus_5_5, python("exact counting")).
 prior_work(l21_so30, partial, "hep-ph/0512065: the 15 diquarks and 25 mesons, the 4/3 states, and the top unable to form them; SO(30) not there").
 addresses(t12, l21_removal).  addresses(t12, l21_counts).  addresses(t12, l21_so30).
+checked_by(l19_fluct, terra_6_1, by_hand).
+checked_by(l19_gauge, terra_6_1, by_hand).
+checked_by(l19_parent, terra_6_1, by_hand).
+checked_by(l05_limits, terra_6_1, by_hand).
+checked_by(l06_nuL, terra_6_1, by_hand).
+checked_by(l06_factorization, terra_6_1, by_hand).
+checked_by(l06_counterexample, terra_6_1, by_hand).
+checked_by(l06_neutral, terra_6_1, by_hand).
 %% Lemma 17 (T10, routine part). Referee: reviews/2026-11-03_terra_check_17.md
 claim(l17_action, theorem, proved, "Theorem 17.1", "The fermion action of M x F on the Gamma = +1 subspace equals (1/2) <jj psi, (D_M + gamma_5 d) psi> on an unconstrained spinor, with jj = J_M (x) j for s = +1 and gamma_5 J_M (x) j for s = -1.").
 source(l17_action, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').

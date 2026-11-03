@@ -361,6 +361,8 @@ The equality follows by integration by parts and is attained by \(f=-x\). Equati
 
 ## Part 4. The two limits
 
+*Amendment (Terra 6.1, 3 Nov 2026; [report](../reviews/2026-11-03_terra_check_nogo_19.md)).* The statements of this part are correct for the stated bare chain, with one precision: the condition N/l -> infinity gives uniform convergence of the dispersion on bounded energy windows and of normalized heat traces and counting densities, and does not by itself give convergence of the unnormalized difference of heat traces (for N = floor(l^(5/4)) it diverges). Escapes for the empty light sector: a tuned bulk mass or a scaled boundary coupling.
+
 **Statement.** At fixed finite rank, \(m\to0\) produces infinitely separated finite geometry, not an additional heat dimension. A resolved interval requires a growing tower. As \(m\to\infty\), the metric collapses, but the light Hilbert space is zero.
 
 **Hypotheses.** Identify
