@@ -8,10 +8,13 @@ OUT=paper/supplemental.md
 : > "$OUT"
 part() { printf '\n\n# Part %s\n\n' "$1" >> "$OUT"; sed -E 's/^(#{1,5}) /#\1 /' "$2" >> "$OUT"; }
 for n in 03 05 06 07 08 09 10 11 12 13 14 15 16 18; do part "$n" lemmas/${n}_*.md; done
+part 19 lemmas/19_*.md
+part "L (literature check and record of searches)" LITERATURE.md
 part "R1 (assessment of Farsi-Latremoliere, with the counterexample to their Theorem 3.4)" reviews/2026-11-03_farsi_latremoliere_assessment.md
 part "R2 (referee report, lemmas 08, 13, 14)" reviews/2026-11-03_terra_check_08_13_14.md
 part "R3 (referee report, lemmas 15, 16)" reviews/2026-11-03_terra_check_15_16.md
 part "R4 (referee report, lemma 18, two sheets, framework note)" reviews/2026-11-03_terra_check_18_16b.md
+part "R5 (referee report, main draft and note)" reviews/2026-11-03_terra_check_paper_note.md
 # unicode-math needs braces around font commands in sub- and superscripts
 perl -i -pe 's/([\^_])\\(mathcal|mathbb|mathrm|mathsf|mathfrak|mathbf|operatorname|text)(\{[^{}]*\}| *[A-Za-z])/$1\{\\$2$3\}/g' "$OUT"
 HDR=paper/.supp_header.tex

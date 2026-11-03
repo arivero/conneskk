@@ -406,6 +406,7 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 - [Terra referee report on lemmas 08, 13 and 14](reviews/2026-11-03_terra_check_08_13_14.md)
 - [Terra referee report on lemma 17](reviews/2026-11-03_terra_check_17.md)
 - [Terra referee report on lemma 18, the two-sheet section and the note](reviews/2026-11-03_terra_check_18_16b.md)
+- [Terra referee report on the main draft and the note](reviews/2026-11-03_terra_check_paper_note.md)
 
 ### Transcript: [transcripts/Connes_Electrodynamics_ModelMd.txt](transcripts/Connes_Electrodynamics_ModelMd.txt)
 
