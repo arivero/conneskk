@@ -8,7 +8,7 @@ P_k=(\mathbb C,\mathbb C,0,K),\qquad k=1\ \text{or}\ 7,
 \]
 together with the auxiliary `C^2` introduced by the odd-times-odd product. For real algebras, use the point algebra `R`, so that the product algebra remains `A`.
 
-We use the following products, with the standard antilinear tensor product of real structures.
+I use the following products, with the standard antilinear tensor product of real structures.
 
 For even × even,
 \[

@@ -217,7 +217,7 @@ reproducing the conventions in [section 14.3](../canonical_research.md).
 
 **Part C. Statement.**
 
-For broken generators, a mass-dependent “\(F^2\) coefficient” requires a prescription for separating gauge and Higgs derivative terms. We use the **integrated quadratic transverse kinetic coefficient**: expand about zero gauge field with \(D_F\) held constant, remove the gauge-field mass term, and extract the coefficient of \(q^2|a_T(q)|^2\). Since
+For broken generators, a mass-dependent “\(F^2\) coefficient” requires a prescription for separating gauge and Higgs derivative terms. I use the **integrated quadratic transverse kinetic coefficient**: expand about zero gauge field with \(D_F\) held constant, remove the gauge-field mass term, and extract the coefficient of \(q^2|a_T(q)|^2\). Since
 \[
 F_{\mu\nu}(q)^*F_{\mu\nu}(q)=2q^2|a_T(q)|^2,
 \]

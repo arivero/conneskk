@@ -1,8 +1,27 @@
 # Instructions for agents
 
-## Writing: neutral attribution
+These rules apply to every agent working here, in general conversation, in prompts and in files.
 
-Use neutral wording in messages and in files.
+## Neutral wording
 
-- Name proposals, hypotheses and results impersonally. Write "the 10->9 proposal", not "your proposal".
-- State errors and results neutrally. Write "we had two errors" or "there was an error in Corollary 16.8", not "I had two errors" or "my error".
+Keep wording neutral throughout, with "we" or an impersonal form in place of the first person singular and of possessives.
+
+- Write "the 10->9 proposal", not "your proposal".
+- Write "we had two errors" or "there was an error in Corollary 16.8", not "I had two errors" or "my error".
+- Write "we will check this next" or "this is checked next", not "I will check this".
+
+Provenance fields (attempted by, checked by) still name the specific model or agent. Past outputs of agents stay verbatim as records.
+
+## Direct statements
+
+Avoid the "X is not Y; it is Z" pattern and its relatives ("This is not merely...", "not because A but because B", "It is not X. It is Y.", "...is no accident", openers like "This is not idle speculation"). Write the direct statement instead: say what the thing is, with the evidence. A contrast is allowed only when the negated alternative is itself load-bearing and the sentence is short (for example, "bounds, not discovery"), at most once per page.
+
+Use plain descriptive headings. Avoid motivational or slogan-like headings and asides, and cute section titles.
+
+## Mathematical writing
+
+Use the standard mathematical "we" and "Let ...", in research documents and in prompts asking for proofs.
+
+Use the established vocabulary for outcomes: Theorem, Lemma, Proposition (proved); Counterexample (for a refuted claim); No-go theorem; Conjecture (open); "conditional on X" or "assuming X" for a proof that depends on a hypothesis; "gap" or "error in the proof" for a flawed argument. Avoid status classes such as "DISPROVED lemma".
+
+Label each result by how it stands: if it is proved, it is a theorem with proof; if it is proved elsewhere, it is a reference; if it is a numerical check, name the language used.
