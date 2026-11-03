@@ -1257,21 +1257,83 @@ claim(l28_twist, proposition, proved, "Propositions 28.1, 28.2", "O(k) does not 
 source(l28_twist, 'lemmas/28_two_walls_connected_parent.md', 'setting').
 attempted_by(l28_twist, claude_opus_5_5).
 checked_by(l28_twist, claude_opus_5_5, python("structure constants, multiplicities, slice operator")).
-referee_pending(l28_twist).
+checked_by(l28_twist, astra6, by_hand).  % job 28: the 5 + 5 count and the limit on its consequence
 claim(l28_core, proposition, proved, "Propositions 28.3, 28.4", "At the zero section the modes in the representation 4 are the twistor spinors, through the Dirac operator on S^4 twisted by (1, 3); and Q(x_a) = (tr(B Gamma_5)/tr B) Gamma_a/5, so the zero section gives +-Gamma_a/5 and nothing for fibre-dependent functions.").
 source(l28_core, 'lemmas/28_two_walls_connected_parent.md', 'setting').
 depends(l28_core, l28_twist).
 attempted_by(l28_core, claude_opus_5_5).
 checked_by(l28_core, claude_opus_5_5, python("the ratios on the radial modes")).
-referee_pending(l28_core).
-claim(l28_window, conjecture, conjectural, "Conjecture 28.6", "In the representation 4, T has exactly one small singular value, exponentially small in l, with right vector at S^4 and left vector at CP^3, with a uniform gap; the compression tends to (Q_S(a|S^4), Q_R(a|CP^3)), which generate M_2(H) and M_4(C), from one connected commutative algebra.").
+checked_by(l28_core, astra6, by_hand).  % job 28
+claim(l28_window, conjecture, conjectural, "Conjecture 28.6", "For Theorem 28.9, with the pull-back connection or the collar connection preserving the line summands: for large mass, D-hat has exactly eight small eigenvalues (one copy of the 4 at S^4 and one at CP^3) with a gap uniform in the mass and on all representations of Sp(2), exponentially small in l; the compression tends to (Q_B, Q_Y), with fibre part w(rho) times the level-one value, or the level-one value for the collar connection. M_2(H) + M_4(C) is then the algebra of the limit map.").
 source(l28_window, 'lemmas/28_two_walls_connected_parent.md', 'setting').
 depends(l28_window, l28_core).
 attempted_by(l28_window, claude_opus_5_5).
-claim(l28_numerics, claim, numerical, "Result 28.5", "The radial system: lowest singular value in the representation 4 falling exponentially with l (rate about 2 at phi_0 = 8), next value near 1.04; representation 16 at 1.35; zero-section mode with Q(x_a) = -Gamma_a/5 and zero fibre part; boundary mode with Q(x_a) = -Gamma_a/5 and a fibre part tending to the level-one value as the fibre grows.").
+claim(l28_numerics, claim, numerical, "Result 28.5", "Radial system, with the corrected spin connection (the first version had the wrong sign, and all its numbers are replaced): lowest singular value on the 4 falling with the constant-coefficient exponent, next value 1.86 at rho = 1; on the 16, 20, 40 the core values sqrt 5, sqrt 8, sqrt 12 and wall values above 1.9; both modes with Q(x_a) = -Gamma_a/5; boundary fibre part converging to -w(rho), and -1 for the collar connection; core block with a nonzero density of order lambda^2 at finite mass, so that it generates M_4(C) at the masses computed.").
 source(l28_numerics, 'lemmas/28_two_walls_connected_parent.md', 'setting').
 attempted_by(l28_numerics, claude_opus_5_5).
-checked_by(l28_numerics, claude_opus_5_5, python("P1 form of T^* T on a graded grid; adjoint problem to four digits")).
+checked_by(l28_numerics, claude_opus_5_5, python("tools/lemma28_radial.py: P1 form of T^* T on a graded grid; exact tests against Casimir and Kodaira spectra")).
+referee_pending(l28_numerics).
+claim(l28_endpoints, proposition, proved, "Proposition 28.8", "Restriction of smooth functions on X to S^4 and CP^3 is surjective, with a(y, v) = a(y, 0) + O(|v|).").
+source(l28_endpoints, 'lemmas/28_two_walls_connected_parent.md', '').
+attempted_by(l28_endpoints, astra6).
+checked_by(l28_endpoints, claude_opus_5_5, by_hand).
+claim(l28_operator, theorem, proved, "Theorem 28.9", "T_M = D_X^E + i Phi_M, doubled, with chirality condition at the wall, is self-adjoint and elliptic with compact resolvent, preserved by all smooth scalar functions, with no extension parameter at the zero section.").
+source(l28_operator, 'lemmas/28_two_walls_connected_parent.md', '').
+attempted_by(l28_operator, astra6).
+checked_by(l28_operator, claude_opus_5_5, by_hand).
+claim(l28_slices, proposition, proved, "Proposition 28.10", "The Dolbeault kernel on O(1) is C^4 for every Hermitian metric; the Levi-Civita operator with the separate line connection on O(3) vanishes on the 4 for every invariant squashing; with the full pull-back connection on E the slice operator is invertible for small fibres.").
+source(l28_slices, 'lemmas/28_two_walls_connected_parent.md', '').
+attempted_by(l28_slices, astra6).
+checked_by(l28_slices, claude_opus_5_5, python("smallest eigenvalue against rho")).
+claim(l28_normal, proposition, proved, "Proposition 28.11", "The linear normal operator has ker Q = 0, ker Q^* = 3 + 1 with a gap; over S^4 this gives exactly four zero modes of the operator twisted by S^2(S), which are twistor spinors as sections of S.").
+source(l28_normal, 'lemmas/28_two_walls_connected_parent.md', '').
+attempted_by(l28_normal, astra6).
+checked_by(l28_normal, claude_opus_5_5, python("oscillator basis: kernel, total spin, gap")).
+claim(l28_mixing, lemma, proved, "Lemma 28.12", "Stable boundary profiles overlap by 2 sqrt(q_i q_j)/(q_i + q_j), independent of the mass, so tangential mixing survives large mass.").
+source(l28_mixing, 'lemmas/28_two_walls_connected_parent.md', '').
+attempted_by(l28_mixing, astra6).
+checked_by(l28_mixing, claude_opus_5_5, python("the closed form of Proposition 28.13 against the radial system")).
+claim(l28_wall, proposition, proved, "Proposition 28.13", "On the 4 the compressed boundary operator has a one-dimensional kernel with tr(B Gamma_5)/tr B = -1 and tr(B t-hat)/tr B = -w(rho), w = 2(rho^2+2)^2/(9+2(rho^2+2)^2); with the line connection w = 1. The kernel and traces are exact for the finite block; convergence of T_M to it is numerical.").
+source(l28_wall, 'lemmas/28_two_walls_connected_parent.md', '').
+depends(l28_wall, l28_mixing).
+attempted_by(l28_wall, claude_opus_5_5).
+checked_by(l28_wall, claude_opus_5_5, python("matrix elements, kernel to ten digits")).
+referee_pending(l28_wall).
+claim(l28_criterion, lemma, proved, "Lemma 28.14", "An eight-dimensional trial space with small defect and a uniform coercive estimate on its complement gives exactly eight small eigenvalues.").
+source(l28_criterion, 'lemmas/28_two_walls_connected_parent.md', '').
+attempted_by(l28_criterion, astra6).
+checked_by(l28_criterion, claude_opus_5_5, by_hand).
+claim(l28_compression, theorem, conditional, "Theorem 28.15", "Assuming the window and localization, compression is block diagonal with an explicit rate to (Q_B, Q_Y); just inside a spectral wall a fixed smooth function with constant wall value compresses to that constant.").
+source(l28_compression, 'lemmas/28_two_walls_connected_parent.md', '').
+depends(l28_compression, l28_endpoints).
+attempted_by(l28_compression, astra6).
+checked_by(l28_compression, claude_opus_5_5, by_hand).
+claim(l28_symmetry, proposition, proved, "Proposition 28.16", "The compressed real functions commute with j if and only if b_+ = b_- almost everywhere; the block generates M_2(H) under that condition and M_4(C) if the 10 component is nonzero; a vanishing integral does not decide it.").
+source(l28_symmetry, 'lemmas/28_two_walls_connected_parent.md', '').
+attempted_by(l28_symmetry, astra6).
+checked_by(l28_symmetry, claude_opus_5_5, python("the density at finite mass")).
+claim(l28_generation, counterexample, proved, "Counterexample 28.17", "Unital completely positive maps converging in norm whose generated real algebras are M_4(C) along the family and M_2(H) at the limit.").
+source(l28_generation, 'lemmas/28_two_walls_connected_parent.md', '').
+depends(l28_generation, l28_symmetry).
+attempted_by(l28_generation, astra6).
+checked_by(l28_generation, claude_opus_5_5, by_hand).
+claim(l28_conjugation, proposition, proved, "Proposition 28.18", "C = C_7 (x) j_E has C^2 = -1, commutes with T_M and reverses Z, so it exchanges the two local wall conditions; a parent antiunitary preserving a window excludes a generated full M_4(C) on it.").
+source(l28_conjugation, 'lemmas/28_two_walls_connected_parent.md', '').
+attempted_by(l28_conjugation, astra6).
+checked_by(l28_conjugation, claude_opus_5_5, python("exchange of the wall condition on the modes")).
+claim(l28_tunnelling, proposition, proved, "Proposition 28.19", "On one copy of the 4 in each degree, d is lambda times the identity; the inherited grading labels the ends and leaves the four core states in one degree.").
+source(l28_tunnelling, 'lemmas/28_two_walls_connected_parent.md', '').
+attempted_by(l28_tunnelling, astra6).
+checked_by(l28_tunnelling, claude_opus_5_5, by_hand).
+claim(l28_doubled, proposition, proved, "Proposition 28.20", "The odd part of the 64-dimensional doubling is Hom(V, W) + Hom(W, V) with the desired actions and exact order conditions on the whole, and is not reducing for lambda != 0; the tunnelling map does not give the connector of lemma 20.").
+source(l28_doubled, 'lemmas/28_two_walls_connected_parent.md', '').
+attempted_by(l28_doubled, astra6).
+checked_by(l28_doubled, claude_opus_5_5, by_hand).
+claim(l28_prescribed, theorem, proved, "Theorem 28.21", "Explicit prescribed rank-eight windows on X whose real compressed functions generate M_2(H) + M_4(C) at every localization scale, with the endpoint limit at rate eps.").
+source(l28_prescribed, 'lemmas/28_two_walls_connected_parent.md', '').
+attempted_by(l28_prescribed, astra6).
+checked_by(l28_prescribed, claude_opus_5_5, by_hand).
+addresses(t0, l28_prescribed).  addresses(t0b, l28_prescribed).
 addresses(t0, l28_window).  addresses(t0b, l28_window).
 
 %% ---------------------------------------------------------------- steer note, items 9 and 11

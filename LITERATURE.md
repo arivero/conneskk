@@ -201,6 +201,18 @@ The corpus treats Connes-Lott 1990 as the obsolete layer. The following define t
 
 Not found by that search: the classification with n_c, and the pair (M_KK, mu_*). Priority for those exact statements stays open.
 
+## K. Fibre collapse in a mapping cylinder and compression (lemma 28)
+
+**Claim.** [Lemma 28](lemmas/28_two_walls_connected_parent.md): a connected commutative algebra on a mapping cylinder gives a direct sum of two matrix algebras by compression to the two ends. **Verdict: NOT LOCATED.** Found by Astra 6 in a bounded search ([report](reviews/2026-11-03_astra_job_28.md)); novelty stays unestablished, and author-by-author citation searches were not done. Identifiers, authors and titles below were confirmed on arXiv by Claude Opus 5.5; the located passages are as reported by Astra 6.
+
+- F. D'Andrea, F. Lizzi and P. Martinetti, *Spectral geometry with a cut-off*, [arXiv:1305.2605](https://arxiv.org/abs/1305.2605), section 3.1 and 6: compression of commutative geometries.
+- A. Connes and W. D. van Suijlekom, [arXiv:2004.14115](https://arxiv.org/abs/2004.14115), section 1 and Proposition 4.2: operator systems from spectral truncation, with the warning on non-informative full matrix algebras, relevant to Counterexample 28.17.
+- J. Medina, I. Huet, D. O'Connor and B. Dolan, [arXiv:1208.0348](https://arxiv.org/abs/1208.0348): squashed fuzzy CP^3 as a fuzzy S^2 bundle over fuzzy S^4, with suppression of the fibre modes.
+- M. Verhoeven, *Spectral truncations of SU(2) and the spectral localizer*, [arXiv:2610.19791](https://arxiv.org/abs/2610.19791): full matrix envelopes in a recent truncation example.
+- K. Uno and T. Inagaki, *Construction and geometric properties of the fuzzy CP^3 onion*, [arXiv:2610.17807](https://arxiv.org/abs/2610.17807): radially coupled fuzzy CP^3 layers.
+- C. Bär and W. Ballmann, [arXiv:1307.3021](https://arxiv.org/abs/1307.3021): the boundary criterion of Theorem 28.9. C. Kottke, [arXiv:0909.5661](https://arxiv.org/abs/0909.5661): the Callias index in families, for Proposition 28.11.
+- M. Maridakis, [arXiv:1510.07004](https://arxiv.org/abs/1510.07004), [arXiv:2110.11654](https://arxiv.org/abs/2110.11654): concentration of low modes of D + s A at the zero set of A on closed manifolds, after Prokhorenkov and Richardson; read at the abstract level only, for the direction in lemma 28.
+
 ## Items not verified in this session
 
 - Castellani-D'Auria-Fré 1984 (section F): equation-level content not read.
