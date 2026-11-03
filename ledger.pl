@@ -864,6 +864,22 @@ depends(l18_sum_rule, l18_several).
 attempted_by(l18_sum_rule, claude_opus_5_5).
 checked_by(l18_sum_rule, claude_opus_5_5, python("agreement with equation (18) to rounding, for x from 1e-3 to 1e3")).
 addresses(t5b, l18_sum_rule).
+%% Lemma 19 (T0b, step 1). Referee pending.
+claim(l19_fluct, theorem, proved, "Theorem 19.1", "On the two-point data the inner fluctuation of arXiv:1304.7583 factorizes: m |Phi|^2 sigma_1 with pointwise J, and link m Phi^2 with the reflection J (KO-6 signs).").
+source(l19_fluct, 'lemmas/19_fluctuations_without_order_one.md', 'the-fluctuated-operator').
+attempted_by(l19_fluct, claude_opus_5_5).
+checked_by(l19_fluct, claude_opus_5_5, python("numpy on random data: both factorizations, gauge covariance")).
+claim(l19_gauge, corollary, proved, "Corollary 19.2", "U = 1 for pointwise J, with a neutral real radial field; charge 2 for the reflection J, with image all of C; along a gauge orbit the quadratic term keeps the modulus of the link fixed.").
+source(l19_gauge, 'lemmas/19_fluctuations_without_order_one.md', 'the-fluctuated-operator').
+depends(l19_gauge, l19_fluct).
+attempted_by(l19_gauge, claude_opus_5_5).
+checked_by(l19_gauge, claude_opus_5_5, python("numpy: orbit and covariance")).
+claim(l19_parent, proposition, proved, "Proposition 19.3", "Compared with the parent: with pointwise reality the truncated data have a radial field with no parent scalar behind it; with the reflection J, the modulus along a gauge orbit behaves as for the covariant projection with the quadratic term, and as for the fixed compression without it. A parallel, no identification.").
+source(l19_parent, 'lemmas/19_fluctuations_without_order_one.md', 'comparison-with-the-parent').
+depends(l19_parent, l19_gauge).
+depends(l19_parent, l13_compression).
+attempted_by(l19_parent, claude_opus_5_5).
+addresses(t0b, l19_fluct).  addresses(t0b, l19_parent).
 %% Lemma 17 (T10, routine part). Referee: reviews/2026-11-03_terra_check_17.md
 claim(l17_action, theorem, proved, "Theorem 17.1", "The fermion action of M x F on the Gamma = +1 subspace equals (1/2) <jj psi, (D_M + gamma_5 d) psi> on an unconstrained spinor, with jj = J_M (x) j for s = +1 and gamma_5 J_M (x) j for s = -1.").
 source(l17_action, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').

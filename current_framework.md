@@ -46,7 +46,7 @@ So KO-6 forces centre C + C: the finite space is disconnected, with two pieces e
 | Yukawa block of D_F | Theorem C: Phi_Q Y_hat Phi_U on the interval, in a towerless limit | up to grading-preserving unitaries; an algebra and representation must be specified; not embedded in the twistor example |
 | [D_F, C_F] = 0 | Proposition 17.3 gives its consequence when a chosen subalgebra commutes with D_F | the common action on paired blocks is additional data; outside the metric class of lemma 15 |
 | bosonic action | Propositions E and F at leading order; lemma 18 exact at quadratic order and fixed cutoff | classical; top-only family has M_W -> 0 as m_t -> infinity; fully massive family has diverging pole masses and no light fermions |
-| beyond first order | first-order failure of the two-point data with inherited J (Counterexample 08.4) is the setting for arXiv:1304.7583 | not computed; order-zero failure at higher level is untouched, since that framework keeps order zero |
+| beyond first order | [lemma 19](lemmas/19_fluctuations_without_order_one.md): on the two-point data the fluctuation factorizes, m abs(Phi)^2 sigma_1 with inherited J (neutral radial field) and link m Phi^2 with the reflection J (charge 2); the quadratic term keeps the modulus fixed along a gauge orbit | referee pending; a parallel with the covariant projection, no identification; order-zero failure at higher level is untouched, since that framework keeps order zero |
 | quanta of geometry | same five gammas as Proposition 10.1 | see below; no result yet |
 | twisted triples, grand symmetry | none | untested |
 
@@ -54,7 +54,7 @@ So KO-6 forces centre C + C: the finite space is disconnected, with two pieces e
 
 ## Next steps, in order of size
 
-1. **Inner fluctuations of the two-point data without order one.** With inherited J the compressed C + C satisfies order zero and fails order one. Compute the quadratic term of arXiv:1304.7583 and compare with the link image phi = m + i B of lemma 13. This is a small calculation.
+1. **Inner fluctuations of the two-point data without order one.** Done in lemma 19. Next: an exact statement relating a fluctuated parent to its truncation, and the matrix case.
 2. **A centre-connecting D.** Find a term in a two-sheet parent coupling the sheets, with J D = D J and order one. Without it, the classification's selection of A_F does not apply. This is the main missing structure.
 3. **The grading of W and nonzero d.** Example 16.9 adds both after truncation. An even parent cannot give a grading that anticommutes with compressed functions, so a different parent or a different window is needed, or a reason why the prealgebra rather than the even algebra is compressed.
 4. **Metric refinement.** Ask which convergence notion suits truncated triples with unbroken symmetry, since the metric of lemma 15 excludes them.
