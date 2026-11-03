@@ -943,6 +943,29 @@ source(l22_family, 'lemmas/22_dirac_operator_as_boundary_condition.md', 'the-gau
 depends(l22_family, l22_window).
 attempted_by(l22_family, claude_opus_5_5).
 addresses(t10, l22_family).  addresses(t0b, l22_transport).  addresses(t13, l22_window).  addresses(t13, l22_family).
+%% Lemma 23 (T0b, T5b, T10, T13). Claude; referee pending.
+claim(l23_gradings, theorem, proved, "Theorem 23.1", "The derivative on an interval with a grading at each wall has D_F = (1/2l) Gamma_0 log(Gamma_1 Gamma_0), with singular values the principal angles over l; real structure from an antiunitary J_1, J_1^2 = -1, anticommuting with both gradings.").
+source(l23_gradings, 'lemmas/23_two_gradings_interval.md', 'two-gradings').
+depends(l23_gradings, l22_window).
+attempted_by(l23_gradings, claude_opus_5_5).
+checked_by(l23_gradings, claude_opus_5_5, python("random symmetric M: log formula and principal angles")).
+claim(l23_aligned, theorem, proved, "Theorem 23.2", "A bulk prealgebra with gradings at the walls: domain preserved iff commuting at each wall; aligned walls give Q(a) = even part of a, with the grading inherited from spin chirality.").
+source(l23_aligned, 'lemmas/23_two_gradings_interval.md', 'the-bulk-prealgebra').
+attempted_by(l23_aligned, claude_opus_5_5).
+checked_by(l23_aligned, claude_opus_5_5, by_hand).
+claim(l23_radial, theorem, proved, "Theorem 23.4, Example 23.5", "Scalar fluctuations move the second grading along its orbit; odd ones change the principal angles; for M_2(H) the field space is S^4 and the Higgs modulus is half the geodesic distance.").
+source(l23_radial, 'lemmas/23_two_gradings_interval.md', 'odd-fluctuations-and-the-radial-mode').
+attempted_by(l23_radial, claude_opus_5_5).
+checked_by(l23_radial, claude_opus_5_5, python("universal connection on E + E*, signs and J_1")).
+claim(l23_wz, theorem, conditional, "Theorem 23.6", "With a connector at one wall and an assumed five-dimensional Yang-Mills field of one coupling: tan^2(M_W l) = sin^2(2 theta)/(1 + cos^2(2 theta)), tan^2(M_Z l) = 4 sin^2(2 theta)/(1 + 4 cos^2(2 theta)); nine massless modes; constants 2 and 16/5 at small theta.").
+source(l23_wz, 'lemmas/23_two_gradings_interval.md', 'the-weak-bosons').
+attempted_by(l23_wz, claude_opus_5_5).
+checked_by(l23_wz, claude_opus_5_5, python("boundary problem on Sp(2) x SU(4) solved as a linear system")).
+claim(l23_theta, proposition, proved, "Proposition 23.7", "For the heat cutoff the channel trace is a Jacobi theta function of theta, decreasing on [0, pi/2], stationary at theta = pi/2, with towerless limit 2 exp(-x).").
+source(l23_theta, 'lemmas/23_two_gradings_interval.md', 'the-spectral-action-on-the-interval').
+attempted_by(l23_theta, claude_opus_5_5).
+checked_by(l23_theta, claude_opus_5_5, python("Poisson and triple product identities")).
+addresses(t0b, l23_aligned).  addresses(t13, l23_gradings).  addresses(t13, l23_radial).  addresses(t5b, l23_wz).  addresses(t5b, l23_theta).
 %% Lemma 21 (T12). Referee: reviews/2026-11-03_terra_check_20_21.md
 claim(l21_removal, proposition, proved, "Proposition 21.1", "Among single charged species, only an up-type quark can be removed while keeping cos^2 theta_NC = 5/8 and the photon/gluon ratio 8/3; a down-type gives 59/92 and 46/15, a charged lepton 17/28 and 7/3; d + e together contribute as u.").
 source(l21_removal, 'lemmas/21_top_counting.md', 'removal-identities').

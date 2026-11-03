@@ -64,6 +64,8 @@ from b_6 = 7, b_5 = 23/3 and 1/alpha(mu_*) = (8/3)/alpha_3(mu_*). So a nonzero l
 
 **7. A positive result on the third question.** [Lemma 22](lemmas/22_dirac_operator_as_boundary_condition.md) (referee pending) extends item 1 to the whole finite Dirac operator: D_F is exactly the lowest window of the pure derivative on the interval, with boundary coupling tan(l D_F), so all its eigenvalues are quantized momenta. The family of item 2 becomes Corollary 22.9 there, with W, Z and top at the tower scale, massless photon and gluons, and light couplings vanishing at fixed mass.
 
+**8. Principal angles.** [Lemma 23](lemmas/23_two_gradings_interval.md) (referee pending) states this in terms of two gradings at the walls: masses are principal angles over l, odd fluctuations supply the radial mode, and the weak-boson masses are exact in a Yang-Mills parent. The classical action is a theta function with its minimum at m = pi/(2l), so an interior vacuum would need the gauge-boson loops, as in the Hosotani mechanism.
+
 ## Open questions for the next paper
 
 1. An interval or parent family in which one set of data fixes the light masses, the gauge kinetic terms and the weak scale, so that a relation between the Fermi and QCD scales becomes a prediction. The closing answer names this as the missing step.
