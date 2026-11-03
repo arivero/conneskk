@@ -737,6 +737,35 @@ claim(paper_14_3_1, claim, proved, "Proved", "The lens order $p$ cancels in the 
 source(paper_14_3_1, 'canonical_research.md', '143-the-angle-test').
 attempted_by(paper_14_3_1, corpus).
 checked_by(paper_14_3_1, corpus, python("see research_checks_knowledge.md")).
+%% Lemma 17 (T10, routine part). Referee pending.
+claim(l17_action, theorem, proved, "Theorem 17.1", "The fermion action of M x F on the Gamma = +1 subspace equals (1/2) <jj psi, (D_M + gamma_5 d) psi> on an unconstrained spinor, with jj = J_M (x) j for s = +1 and gamma_5 J_M (x) j for s = -1.").
+source(l17_action, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').
+depends(l17_action, l08_reconcile).
+attempted_by(l17_action, claude_opus_5_5).
+checked_by(l17_action, claude_opus_5_5, python("numpy on a random finite model: the bilinear forms agree to 1e-14 for both signs")).
+claim(l17_one_dirac, corollary, proved, "Corollary 17.2", "Both reductions of a Dirac sector give one Dirac action of explicit mass m; the rotation exp(i pi gamma_5/4) sends D_M + gamma_5 m to D_M + i m.").
+source(l17_one_dirac, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').
+depends(l17_one_dirac, l17_action).
+attempted_by(l17_one_dirac, claude_opus_5_5).
+claim(l17_no_higgs, proposition, proved, "Proposition 17.3 and Corollary 17.4", "On a subalgebra commuting with D_F and U, inner fluctuations have no scalar part and d stays constant: the Yukawa block is an explicit mass.").
+source(l17_no_higgs, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').
+depends(l17_no_higgs, l17_action).
+attempted_by(l17_no_higgs, claude_opus_5_5).
+claim(l17_symmetry, proposition, proved, "Proposition 17.5", "On the quark sector, G(M) = {(V_L, V_R) : V_L M = M V_R}, with G(0) = U(N_f) x U(N_f).").
+source(l17_symmetry, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-chiral-limit').
+attempted_by(l17_symmetry, claude_opus_5_5).
+claim(l17_reductions, theorem, proved, "Theorem 17.6", "Admissible involutions of each sign on the colour-only quark sector correspond to Sigma in U(N_f) with Sigma* M Hermitian, the critical points of Re tr(M Sigma*); at M = 0 they fill the chiral coset.").
+source(l17_reductions, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-chiral-limit').
+attempted_by(l17_reductions, claude_opus_5_5).
+checked_by(l17_reductions, claude_opus_5_5, python("numpy: involution conditions, the formula for d, finite-difference criticality")).
+claim(l17_condensate, proposition, proved, "Proposition 17.8", "At finite volume and fixed background the regularized condensate function has no limit beyond the zero-mode term; the Banks-Casher value needs a measure, infinite volume and the order of limits.").
+source(l17_condensate, 'lemmas/17_explicit_masses_chiral_limit.md', 'what-the-spectral-data-say-about-the-condensate').
+attempted_by(l17_condensate, claude_opus_5_5).
+claim(l17_interval, proposition, proved, "Proposition 17.9", "On the interval the chiral limit has two routes: exponentially small residual mass by localization, and exact zero modes at X = 0, where X is a spurion on the wall.").
+source(l17_interval, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-chiral-limit-on-the-interval').
+depends(l17_interval, l09_limits).
+attempted_by(l17_interval, claude_opus_5_5).
+addresses(t10, l17_action).  addresses(t10, l17_symmetry).  addresses(t10, l17_reductions).  addresses(t10, l17_condensate).
 %% ---------------------------------------------------------------- STRATEGY.md
 strategy(t0, open, "Founding problem: finite real triples (in general, not specifically the Standard Model) from commutative Kaluza-Klein data, with specified spectral, operator-algebraic, K-theoretic or truncation convergence.").
 strategy(t0b, open, "Reach the current Connes et al. framework (KO-6, order one, doubling, classification, beyond first order, twisted triples) beyond the Connes-Lott layer.").

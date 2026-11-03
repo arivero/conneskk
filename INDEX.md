@@ -100,7 +100,7 @@ The K-theory obstruction and its scope, the 7-to-5 Kasparov factorization, the h
 
 Quantized internal momentum, bulk masses in quadrature, exponential hierarchies from localization, the towerless D_F texture.
 
-[lemma 09, Remark: fermion mass as internal momentum](lemmas/09_massive_chiral_interval.md#remark-fermion-mass-as-internal-momentum) · [lemma 12, Hierarchies from localization](lemmas/12_boundary_yukawa_interval.md#hierarchies-from-localization) · [strategy, Ranked list](STRATEGY.md#ranked-list)
+[lemma 09, Remark: fermion mass as internal momentum](lemmas/09_massive_chiral_interval.md#remark-fermion-mass-as-internal-momentum) · [lemma 12, Hierarchies from localization](lemmas/12_boundary_yukawa_interval.md#hierarchies-from-localization) · [strategy, Ranked list](STRATEGY.md#ranked-list) · [lemma 17, explicit masses and chiral limit](lemmas/17_explicit_masses_chiral_limit.md)
 
 ### 1.17 Status, ledgers and open problems
 
@@ -386,6 +386,12 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
   - [The coarse correspondence](lemmas/16_coarse_truncation.md#the-coarse-correspondence)
   - [Caveats](lemmas/16_coarse_truncation.md#caveats)
   - [Consequence for T0 and T0b](lemmas/16_coarse_truncation.md#consequence-for-t0-and-t0b)
+- [17: Explicit masses in the reduced triple, the chiral limit and the set of reductions](lemmas/17_explicit_masses_chiral_limit.md)
+  - [The reduced action](lemmas/17_explicit_masses_chiral_limit.md#the-reduced-action)
+  - [The chiral limit](lemmas/17_explicit_masses_chiral_limit.md#the-chiral-limit)
+  - [What the spectral data say about the condensate](lemmas/17_explicit_masses_chiral_limit.md#what-the-spectral-data-say-about-the-condensate)
+  - [The chiral limit on the interval](lemmas/17_explicit_masses_chiral_limit.md#the-chiral-limit-on-the-interval)
+  - [Consequence for T10](lemmas/17_explicit_masses_chiral_limit.md#consequence-for-t10)
 
 ### Reviews and assessments
 
