@@ -12,7 +12,7 @@ The T0 row of STRATEGY said:
 
 > compressions P a P are operator systems, so the algebra must be produced by the limit [...] In the spectral propinquity (Latremoliere), limits of commutative spaces are commutative [...] so a noncommutative A_F cannot arise there as a limit of commutative data: it must come from compressions or operator systems, or from a noncommutative parent; gamma and J are not part of that metric.
 
-Section 4.5 of the [Farsi-Latrémolière assessment](2026-11-03_farsi_latremoliere_assessment.md) said that producing the finite algebra "needs another mechanism", and section 8 of the paper said "such an algebra would have to come from the limit itself". My report to the user said the finite algebra "has to come from" those sources and that this "sharpens T0".
+Section 4.5 of the [Farsi-Latrémolière assessment](2026-11-03_farsi_latremoliere_assessment.md) said that producing the finite algebra "needs another mechanism", and section 8 of the paper said "such an algebra would have to come from the limit itself". A report in this session said the finite algebra "has to come from" those sources and that this "sharpens T0".
 
 ## Claim by claim
 

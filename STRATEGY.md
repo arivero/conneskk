@@ -43,7 +43,7 @@ The identification "the two sheets are a truncated interval, with length proport
 
 ## Ranking rules
 
-1. **Critical path first:** a theorem must decide part of H, or of the user's 10 -> 11 / 10 -> 9 claims.
+1. **Critical path first:** a theorem must decide part of H, or of the 10 -> 11 / 10 -> 9 claims.
 2. **One session:** finite-dimensional or classical analysis, decidable by one Astra run.
 3. **Fail fast:** prefer results whose negation would kill or reshape H.
 4. **Cite known theorems:** circle collapse (Ammann), adiabatic limits (Bismut-Cheeger, Dai), spectral truncations (Connes-van Suijlekom 2021), fuzzy KO types (Barrett 2015) and QED as NCG (van den Dungen-van Suijlekom 2013) are cited instead of re-proved.
