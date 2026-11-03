@@ -31,6 +31,7 @@ Facts: `claim/5`, `source/3`, `depends/2`, `hypothesis/2`, `attempted_by/2`, `ch
 8. `DUPLICATES.md`: which files and sections duplicated each other, and what was removed.
 9. `paper/towerless_intervals.md`: draft paper on finite spectral triples as towerless intervals.
 10. `LITERATURE.md`: prior work for each claim, with verdicts known / partial / not found.
+    `current_framework.md`: background note on the current Connes et al. framework, and what truncation reaches (STRATEGY T0b).
 11. `evaluation2026-11-03.md` and `reviews/`: the dated evaluation of the project and the external review of it, with our response.
 
 ## Removed sources

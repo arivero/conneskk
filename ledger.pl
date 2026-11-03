@@ -774,6 +774,18 @@ source(terra_winding, 'reviews/2026-11-03_terra_check_08_13_14.md', 'lemma-14').
 attempted_by(terra_winding, terra_6_1).
 checked_by(terra_winding, claude_opus_5_5, by_hand).
 
+claim(l16_two_sheets, theorem, proved, "Theorem 16.7 and Corollary 16.8", "A two-sheet coarse parent gives KO-6 signs, order zero and order one; its truncation has dim 2 k_X k_Y, orientability when the gradings lie in the algebras, and for full algebras the Chamseddine-Connes pair with centre C + C. D_F commutes with the centre.").
+source(l16_two_sheets, 'lemmas/16_coarse_truncation.md', 'two-sheets-the-form-of-the-classification').
+depends(l16_two_sheets, l16_coarse).
+attempted_by(l16_two_sheets, claude_opus_5_5).
+checked_by(l16_two_sheets, claude_opus_5_5, python("numpy on random finite data: signs, order zero, order one, orientability")).
+claim(l16_twistor, claim, proved, "Example 16.9", "At twistor level one on two sheets, real functions on S^4 and on CP^3 generate M_2(H) + M_4(C) on E (-) E* of dimension 32 with J(x, y) = (y*, x*); the axis of the grading, the two sheets and k = 4 are chosen by hand, and no operator connects the two pieces.").
+source(l16_twistor, 'lemmas/16_coarse_truncation.md', 'two-sheets-the-form-of-the-classification').
+depends(l16_twistor, l16_two_sheets).
+depends(l16_twistor, l10_toeplitz).
+attempted_by(l16_twistor, claude_opus_5_5).
+checked_by(l16_twistor, claude_opus_5_5, python("numpy: real dimensions 16 and 32, j, the structure on k = 4")).
+addresses(t0b, l16_two_sheets).  addresses(t0b, l16_twistor).
 %% Lemma 17 (T10, routine part). Referee: reviews/2026-11-03_terra_check_17.md
 claim(l17_action, theorem, proved, "Theorem 17.1", "The fermion action of M x F on the Gamma = +1 subspace equals (1/2) <jj psi, (D_M + gamma_5 d) psi> on an unconstrained spinor, with jj = J_M (x) j for s = +1 and gamma_5 J_M (x) j for s = -1.").
 source(l17_action, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').

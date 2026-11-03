@@ -46,7 +46,7 @@ The equivariant index I_G and the two SM limits; boundary conditions carry chira
 
 Level-one quantization, M_2(H) inside M_4(C), the flag and the finite SM data, the Higgs representation, the CP^3-to-S^5 quotient.
 
-[paper §4](canonical_research.md#4-the-six-dimensional-twistor-geometry-and-the-higgs) · [note §4](research_limits/research_note.md#4-a-more-targeted-six-dimensional-candidate-the-twistor-fibration) · [note §5](research_limits/research_note.md#5-from-a-twistor-flag-to-the-finite-standard-model-data-with-inputs-exposed) · [note §6](research_limits/research_note.md#6-where-the-higgs-representation-appears) · [checks §1.4](research_checks_knowledge.md#14-standard-model-finite-mass-map-sm_checks) · [checks §1.5](research_checks_knowledge.md#15-twistor-checks-twistor_checks) · [lemma 10](lemmas/10_toeplitz_twistor.md) · [solidification §7](research_limits/solidification.md#7-an-actual-cp3-to-s5-quotient-with-defects-retained)
+[paper §4](canonical_research.md#4-the-six-dimensional-twistor-geometry-and-the-higgs) · [note §4](research_limits/research_note.md#4-a-more-targeted-six-dimensional-candidate-the-twistor-fibration) · [note §5](research_limits/research_note.md#5-from-a-twistor-flag-to-the-finite-standard-model-data-with-inputs-exposed) · [note §6](research_limits/research_note.md#6-where-the-higgs-representation-appears) · [checks §1.4](research_checks_knowledge.md#14-standard-model-finite-mass-map-sm_checks) · [checks §1.5](research_checks_knowledge.md#15-twistor-checks-twistor_checks) · [lemma 10](lemmas/10_toeplitz_twistor.md) · [solidification §7](research_limits/solidification.md#7-an-actual-cp3-to-s5-quotient-with-defects-retained) · [lemma 16, twistor level one on two sheets](lemmas/16_coarse_truncation.md#two-sheets-the-form-of-the-classification) · [background note](current_framework.md#what-truncation-reaches)
 
 ### 1.8 Seven-dimensional geometry: fibrations, flag and product candidates
 
@@ -384,6 +384,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
   - [Setting](lemmas/16_coarse_truncation.md#setting)
   - [The standard correspondence](lemmas/16_coarse_truncation.md#the-standard-correspondence)
   - [The coarse correspondence](lemmas/16_coarse_truncation.md#the-coarse-correspondence)
+  - [Two sheets: the form of the classification](lemmas/16_coarse_truncation.md#two-sheets-the-form-of-the-classification)
   - [Caveats](lemmas/16_coarse_truncation.md#caveats)
   - [Consequence for T0 and T0b](lemmas/16_coarse_truncation.md#consequence-for-t0-and-t0b)
 - [17: Explicit masses in the reduced triple, the chiral limit and the set of reductions](lemmas/17_explicit_masses_chiral_limit.md)
@@ -393,6 +394,12 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
   - [What the spectral data say about the condensate](lemmas/17_explicit_masses_chiral_limit.md#what-the-spectral-data-say-about-the-condensate)
   - [The chiral limit on the interval](lemmas/17_explicit_masses_chiral_limit.md#the-chiral-limit-on-the-interval)
   - [Consequence for T10](lemmas/17_explicit_masses_chiral_limit.md#consequence-for-t10)
+
+### Background note: the current Connes et al. framework: [current_framework.md](current_framework.md)
+
+- [The framework](current_framework.md#the-framework)
+- [What truncation reaches](current_framework.md#what-truncation-reaches)
+- [Next steps, in order of size](current_framework.md#next-steps-in-order-of-size)
 
 ### Reviews and assessments
 
