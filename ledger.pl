@@ -1170,36 +1170,62 @@ contradiction(9, "canonical 8 vs research_state 6.12", "no parity restriction on
 contradiction(10, "canonical 2.2 and 3", "alpha used for two quantities; staircase b/a = 0.02 versus 0.01", "the hypercharge phase is now varphi; the two staircases are separate figures, each stating its own radii, and no result depends on the value", resolved).
 
 %% ---------------------------------------------------------------- lemma 26
-claim(l26_classification, theorem, proved, "Theorem 26.2", "Flat family with fermions of frequency 1 and 2 at one loop, no wall terms. With n_c = 2.8855: for n_1 = 0, theta = pi/4 is the unique global minimum iff n_2 >= n_c; for 27/10 < n_2 < n_c two symmetric minima; for n_2 <= 27/10 the endpoints. For n_1 > 0 and n_2 >= n_c, with n_* = (4/3)(4 n_2 - 54/5): one interior minimum in (pi/4, pi/2) iff n_1 < n_*, otherwise theta = pi/2. Escapes: other gauge content, wall terms, warping, bulk-mass sectors.").
+claim(l26_classification, theorem, proved, "Theorem 26.2", "Flat family with pure channels of frequency 1 and 2 at one loop, no wall terms, n_1, n_2 >= 0. With n_c = 2.8855: for n_1 = 0, theta = pi/4 is the unique global minimum iff n_2 >= n_c; for 27/10 < n_2 < n_c two symmetric minima; for n_2 <= 27/10 the endpoints. For n_1 > 0 and n_2 >= n_c, with n_* = (4/3)(4 n_2 - 54/5): one interior minimum in (pi/4, pi/2) iff n_1 < n_*, otherwise theta = pi/2. The range n_1 > 0, n_2 < n_c is not classified. Escapes: other towers, wall terms, warping, bulk-mass sectors.").
 source(l26_classification, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-classification').
 depends(l26_classification, l24_no_minimum).
 attempted_by(l26_classification, claude_opus_5_5).
 checked_by(l26_classification, claude_opus_5_5, python("11600 pairs on a grid of 20001 angles, no failure")).
-claim(l26_spectrum, corollary, proved, "Corollary 26.3", "At theta = pi/4: M_KK = 4 M_W, m_1 = M_W, m_2 = 2 M_W, M_W^2/M_Z^2 = 0.5032; on [pi/4, pi/2), m_2 <= 2 M_W, m_1/M_W increases to infinity, M_KK >= 4 M_W. For a pure frequency-2 channel, one coupling.").
+checked_by(l26_classification, terra_6_1, by_hand).  % report 26, item 1
+claim(l26_spectrum, corollary, proved, "Corollary 26.3", "At the minimum theta = pi/4 (n_1 = 0, n_2 >= n_c): M_KK = 4 M_W, m_1 = M_W, m_2 = 2 M_W, M_W^2/M_Z^2 = 0.5032. On [pi/4, pi/2), m_2 <= 2 M_W for pure channels and m_1/M_W increases to infinity; M_KK >= 4 M_W for theta in (0, pi/2). One coupling.").
 source(l26_spectrum, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-classification').
 depends(l26_spectrum, l26_classification).
 depends(l26_spectrum, l23_wz).
 attempted_by(l26_spectrum, claude_opus_5_5).
 checked_by(l26_spectrum, claude_opus_5_5, by_hand).
-claim(l26_plane, proposition, proved, "Proposition 26.3b", "In the (10, 6) the plane of the left-handed top contains the right-handed top with weight 1/sqrt(2). Keeping both triplet components gives a pure frequency-2 channel and a massless coloured exotic; removing the exotic at a wall gives the W boundary problem and m_t = M_W at every theta.").
+checked_by(l26_spectrum, terra_6_1, python("independent roots and table rows")).  % report 26, item 2
+claim(l26_plane, proposition, proved, "Proposition 26.3b", "In the (10, 6) the plane of the left-handed top contains the right-handed top with weight 1/sqrt(2). Conditions keeping both triplet components give a pure frequency-2 channel and an exact massless coloured exotic; conditions removing the exotic give determinant cos(a)(2 sin^2 a - sin^2(2 theta)), so m_t = M_W at every theta. These concern the displayed channel; complete wall multiplets and other modes are not included.").
 source(l26_plane, 'lemmas/26_interior_vacuum_matching_scale.md', 'where-frequency-2-lives').
 depends(l26_plane, l23_wz).
 attempted_by(l26_plane, claude_opus_5_5).
 checked_by(l26_plane, claude_opus_5_5, by_hand).
-claim(l26_lr, proposition, proved, "Propositions 26.4 and 26.5", "In the parent tower the differences of the inverse couplings do not depend on universal bulk matter, and alpha_R^-1 - alpha_2^-1 has no power of S: it closes near 2 x 10^24 GeV at M_KK = 321 GeV, one loop.").
+checked_by(l26_plane, terra_6_1, by_hand).  % report 26, item 3
+claim(l26_lr, proposition, proved, "Propositions 26.4 and 26.5", "In the step-threshold model (4), differences of the inverse couplings do not depend on a common F, and alpha_R^-1 - alpha_2^-1 has no power of S: 61.69 at S = 1 for M_KK = 321 GeV, closing near 2 x 10^24 GeV, one loop. The model omits frequency-2 multiplets and boundary counterterms.").
 source(l26_lr, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-tower-of-the-parent').
 attempted_by(l26_lr, claude_opus_5_5).
 checked_by(l26_lr, claude_opus_5_5, python("exact fractions for the coefficients; equation (4) against equation (3) to 13 digits")).
-claim(l26_meeting, claim, numerical, "Result 26.6", "One-loop, parent tower, Standard Model below M_KK: alpha_1 = alpha_2 = alpha_3 at mu_* = 2.2 x 10^14 GeV with M_KK = 3.1 x 10^13 GeV, S = 7.0.").
+checked_by(l26_lr, terra_6_1, by_hand).  % report 26, item 4
+claim(l26_meeting, claim, numerical, "Result 26.6", "One-loop model (4), Standard Model below M_KK, without frequency-2 multiplets: alpha_1 = alpha_2 = alpha_3 at mu_* = 2.21 x 10^14 GeV with M_KK = 3.15 x 10^13 GeV, S = 7.04, the only solution with S >= 1. Conditional on the spectrum and the matching prescription.").
 source(l26_meeting, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-tower-of-the-parent').
 depends(l26_meeting, l26_lr).
 attempted_by(l26_meeting, claude_opus_5_5).
 checked_by(l26_meeting, claude_opus_5_5, python("nested root finding, with input shifts")).
-claim(l26_top, claim, numerical, "Result 26.7", "Tree-level matching y = r g_2 at M_KK, Standard Model below: running m_t = 164 GeV for r = sqrt(2) at 321 GeV, 87 GeV for r = 1/sqrt(2) at 321 GeV, 172 GeV for r = 1 at 3.1 x 10^13 GeV.").
+checked_by(l26_meeting, terra_6_1, python("root finding; uniqueness for S >= 1 by hand")).  % report 26, item 5
+claim(l26_top, claim, numerical, "Result 26.7", "Illustration: boundary value y = r g_2 at M_KK, Standard Model running below: running m_t = 164 GeV for r = sqrt(2) at 321 GeV, 87 GeV for r = 1/sqrt(2) at 321 GeV, 172 GeV for r = 1 at 3.1 x 10^13 GeV. A prediction of no spectrum; at finite angle a mass ratio does not give the Higgs coupling.").
 source(l26_top, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-top-against-the-matching-scale').
 attempted_by(l26_top, claude_opus_5_5).
 checked_by(l26_top, claude_opus_5_5, python("scipy integration of the one-loop top Yukawa equation")).
+checked_by(l26_top, terra_6_1, python("integration, checked by quadrature in 1/y^2")).  % report 26, item 5
 addresses(t13, l26_classification).  addresses(t13, l26_lr).  addresses(t13, l26_meeting).  addresses(t13, l26_top).  addresses(t5b, l26_spectrum).  addresses(t12, l26_plane).
+
+claim(l26_no_small, proposition, proved, "Proposition 26.2b", "For n_1 > 0, V(1 - t) < V(t) for 0 < t < 1/2, so no angle in (0, pi/4) is a global minimum of (1); with Theorem 26.2 this covers integer counts. Metastable minima in the cases left to scans are not excluded.").
+source(l26_no_small, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-classification').
+attempted_by(l26_no_small, terra_6_1).
+checked_by(l26_no_small, claude_opus_5_5, by_hand).
+claim(l26_wall_mass, proposition, proved, "Proposition 26.3c", "With a wall mass omega for the exotic of the frequency-2 channel, the eigenvalues solve 2 a Delta sin a = omega cos a (Delta + sin^2 a); for all theta in (0, pi/2) and omega in (0, infinity) there is a coloured state with 0 < m < M_W. So in the (10, 6) and (5, 15) a top at 2 M_W always has a lighter partner. Other multiplets, brane mixing and non-flat profiles lie outside this.").
+source(l26_wall_mass, 'lemmas/26_interior_vacuum_matching_scale.md', 'where-frequency-2-lives').
+depends(l26_wall_mass, l26_plane).
+attempted_by(l26_wall_mass, claude_opus_5_5).
+checked_by(l26_wall_mass, claude_opus_5_5, python("against a direct 3 x 3 determinant of the boundary conditions")).
+claim(l26_neutral, claim, numerical, "Result 26.8", "Separate bulk couplings and a hypercharge wall term fixed by alpha_Y: M_W^2/M_Z^2 = 0.629 at theta = pi/4, 0.709 at theta = 1.1377, tree level, against about 0.76 in four dimensions at M_KK; the shift falls below 0.006 only above about 1.2 TeV. An estimate at finite angle.").
+source(l26_neutral, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-top-against-the-matching-scale').
+attempted_by(l26_neutral, claude_opus_5_5).
+checked_by(l26_neutral, claude_opus_5_5, python("4 x 4 determinant, limit r = 0 against Theorem 23.6")).
+addresses(t13, l26_wall_mass).  addresses(t13, l26_neutral).  addresses(t13, l26_no_small).
+prior_work(l26_lr, partial, "Nomura-Smith-Weiner hep-ph/0104041 (differential running); Carena-Tait-Wagner hep-ph/0207056 (boundary terms)").
+prior_work(l26_meeting, partial, "Abe-Goto-Kawamura PTEP 2018 103B01 (interval Pati-Salam near 10^13 GeV, other content)").
+prior_work(l26_wall_mass, partial, "Cacciapaglia-Csaki-Park hep-ph/0510366; Adachi-Maru 1804.06012; Hosotani-Oda-Ohnuma-Sakamura 0806.0480").
+referee_report('lemmas/26_interior_vacuum_matching_scale.md', 'reviews/2026-11-03_terra_check_26.md').
+outside_referee(l26_wall_mass, "added after report 26; in the second referee job").
 
 %% ---------------------------------------------------------------- lemma 27
 claim(l27_trace, theorem, proved, "Theorem 27.1, Proposition 27.3", "On D_M(A) + gamma_5 d with T, d and A commuting: Tr(gamma_5 T f(DD^2/Lambda^2)) = sum_f tau_f f(m_f^2/Lambda^2) ind_f at every Lambda, and the regulated mass term equals it.").

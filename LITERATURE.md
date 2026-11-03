@@ -189,6 +189,18 @@ The corpus treats Connes-Lott 1990 as the obsolete layer. The following define t
 
 ---
 
+## J. Matching in the flat parent (lemma 26)
+
+**Claim.** [Lemma 26](lemmas/26_interior_vacuum_matching_scale.md): one-loop vacuum with frequency-2 channels; the left-right difference of the couplings; the meeting point; the limit on a top in low multiplets. **Verdict: PARTIAL.** Found by the referee of lemma 26 ([report](reviews/2026-11-03_terra_check_26.md), item 9), with forward citation chains incomplete. We have read none of these beyond what that report quotes.
+
+- Y. Nomura, D. Smith and N. Weiner, *GUT breaking on the brane*, [arXiv:hep-ph/0104041](https://arxiv.org/abs/hep-ph/0104041): differential logarithmic running, integer versus half-integer towers. M. Carena, T. Tait and C. Wagner, [arXiv:hep-ph/0207056](https://arxiv.org/abs/hep-ph/0207056): boundary kinetic terms.
+- Abe, Goto and Kawamura, PTEP 2018, 103B01: an interval Pati-Salam model with a compactification threshold of order 10^13 GeV, with other intermediate group and matter.
+- G. Cacciapaglia, C. Csaki and S. C. Park, [arXiv:hep-ph/0510366](https://arxiv.org/abs/hep-ph/0510366), section 5: representation-dependent enhancement, including a tree-level m_t = 2 M_W limit. Adachi and Maru, [arXiv:1804.06012](https://arxiv.org/abs/1804.06012), Eq. (3.23): a limit approaching 2 M_W with brane mixing, and massless exotics.
+- R. Contino, L. Da Rold and A. Pomarol, [arXiv:hep-ph/0612048](https://arxiv.org/abs/hep-ph/0612048): 5 and 10 embeddings and coloured custodians. Y. Hosotani, S. Oda, T. Ohnuma and Y. Sakamura, [arXiv:0806.0480](https://arxiv.org/abs/0806.0480): massless exotics, their lifting by wall masses, and theta_H = pi/2 in a warped model.
+- C. S. Lim and N. Maru, [arXiv:0904.0304](https://arxiv.org/abs/0904.0304): a finite one-loop violation of gauge-Yukawa universality.
+
+Not found by that search: the classification with n_c, and the pair (M_KK, mu_*). Priority for those exact statements stays open.
+
 ## Items not verified in this session
 
 - Castellani-D'Auria-Fré 1984 (section F): equation-level content not read.
