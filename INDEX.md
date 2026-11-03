@@ -110,6 +110,20 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
 
 ## Part 2. Documents
 
+### Draft paper: *Finite spectral triples as towerless intervals*: [paper/towerless_intervals.md](paper/towerless_intervals.md)
+
+- [Abstract](paper/towerless_intervals.md#abstract)
+- [1. Introduction](paper/towerless_intervals.md#1-introduction)
+- [2. Setting and conventions](paper/towerless_intervals.md#2-setting-and-conventions)
+- [3. The two-point space is a truncated interval](paper/towerless_intervals.md#3-the-two-point-space-is-a-truncated-interval)
+- [4. Bulk mass: the light pair and both limits](paper/towerless_intervals.md#4-bulk-mass-the-light-pair-and-both-limits)
+- [5. Boundary Yukawa matrices and towerless textures](paper/towerless_intervals.md#5-boundary-yukawa-matrices-and-towerless-textures)
+- [6. Real structures: the choice between 9 and 11](paper/towerless_intervals.md#6-real-structures-the-choice-between-9-and-11)
+- [7. Spectral action: heavy fermions and the gauge sector](paper/towerless_intervals.md#7-spectral-action-heavy-fermions-and-the-gauge-sector)
+- [8. Discussion](paper/towerless_intervals.md#8-discussion)
+- [Provenance](paper/towerless_intervals.md#provenance)
+- [References](paper/towerless_intervals.md#references)
+
 ### Paper: *Nine, Ten and Eleven Dimensions*: [canonical_research.md](canonical_research.md)
 
 - [Abstract](canonical_research.md#abstract)
@@ -339,6 +353,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
   - [Hierarchies from localization](lemmas/12_boundary_yukawa_interval.md#hierarchies-from-localization)
   - [Consequences for STRATEGY](lemmas/12_boundary_yukawa_interval.md#consequences-for-strategy)
   - [Numerical check (Claude)](lemmas/12_boundary_yukawa_interval.md#numerical-check-claude)
+- [13: T4: gauge fluctuations of the chiral interval](lemmas/13_gauge_sector_truncation.md)
 
 ### Transcript: [transcripts/Connes_Electrodynamics_ModelMd.txt](transcripts/Connes_Electrodynamics_ModelMd.txt)
 

@@ -19,7 +19,7 @@
 %% refuted_by(Claim, Counterexample)
 %% claim_amended(Claim, By): Claim stands, with an amendment proved in By
 
-:- discontiguous claim/5, source/3, depends/2, hypothesis/2, attempted_by/2, checked_by/3, overturn/2.
+:- discontiguous claim/5, source/3, depends/2, hypothesis/2, attempted_by/2, checked_by/3, overturn/2, addresses/2, strategy/3.
 :- use_module(library(lists)).
 
 %% ---------------------------------------------------------------- lemmas
@@ -205,6 +205,42 @@ claim_amended(l07_reflection, l08_product).
 checked_by(l09_index, terra_6_1, by_hand).  % referee, 3 Nov 2026
 checked_by(l09_lightpair, terra_6_1, by_hand).  % referee, 3 Nov 2026
 checked_by(l09_limits, terra_6_1, by_hand).  % referee, 3 Nov 2026
+
+%% ---------------------------------------------------------------- lemma 13 (Astra job 13, T4)
+claim(l13_compression, theorem, proved, "Theorem 2", "Exact compression of the fluctuated product to the lowest pair: weighted sheet connections and link phi = m + iB; image phi + phi* = 2m.").
+source(l13_compression, 'lemmas/13_gauge_sector_truncation.md', '').
+depends(l13_compression, l05_truncation).
+attempted_by(l13_compression, astra6).
+checked_by(l13_compression, claude_opus_5_5, by_hand).
+claim(l13_not_covariant, no_go, proved, "No-go theorem 3", "Fixed compression is not gauge covariant: a gauge-trivial A_5 with trivial Wilson line changes the compressed spectrum.").
+source(l13_not_covariant, 'lemmas/13_gauge_sector_truncation.md', '').
+depends(l13_not_covariant, l13_compression).
+attempted_by(l13_not_covariant, astra6).
+checked_by(l13_not_covariant, claude_opus_5_5, by_hand).
+claim(l13_kk_mass, lemma, proved, "Lemma 4", "The continuum vector mass pi/(2l) requires Neumann-Dirichlet gauge boundary conditions.").
+source(l13_kk_mass, 'lemmas/13_gauge_sector_truncation.md', '').
+attempted_by(l13_kk_mass, astra6).
+checked_by(l13_kk_mass, claude_opus_5_5, by_hand).
+claim(l13_mass_formula, proposition, proved, "Proposition 5", "Spectral-action vector masses: M^2 = (3/2) Q^{-1/2} K Q^{-1/2}.").
+source(l13_mass_formula, 'lemmas/13_gauge_sector_truncation.md', '').
+attempted_by(l13_mass_formula, astra6).
+checked_by(l13_mass_formula, claude_opus_5_5, by_hand).
+claim(l13_sqrt6, counterexample, proved, "Counterexample 6", "The minimal two-sheet spectral action gives the relative vector mass sqrt(6) m, against the tower mass m.").
+source(l13_sqrt6, 'lemmas/13_gauge_sector_truncation.md', '').
+depends(l13_sqrt6, l13_mass_formula).
+depends(l13_sqrt6, l13_kk_mass).
+attempted_by(l13_sqrt6, astra6).
+checked_by(l13_sqrt6, claude_opus_5_5, by_hand).
+claim(l13_ccm, corollary, proved, "Corollary 7", "With the CCM Standard Model trace and one massive colour triplet of mass m, M_W = sqrt(3/8) m.").
+source(l13_ccm, 'lemmas/13_gauge_sector_truncation.md', '').
+depends(l13_ccm, l13_mass_formula).
+depends(l13_ccm, hyp(ccm_relation)).
+attempted_by(l13_ccm, astra6).
+claim(l13_rho, proposition, proved, "Proposition 8", "With a Higgs doublet, rho = 1 and M_W/M_Z = sqrt(5/8) at the CCM matching scale.").
+source(l13_rho, 'lemmas/13_gauge_sector_truncation.md', '').
+depends(l13_rho, l13_mass_formula).
+attempted_by(l13_rho, astra6).
+addresses(t4, l13_compression).  addresses(t4, l13_not_covariant).  addresses(t4, l13_sqrt6).  addresses(t4, l13_ccm).  addresses(t4b, l13_not_covariant).
 
 hypothesis(ccm_relation, "Chamseddine-Connes-Marcolli normalization at the matching scale: 8 M_W^2 = sum of N_f m_f^2 over Dirac masses.").
 hypothesis(positive_rank, "The twisting bundle has positive rank, with the equivariant self-adjoint realization.").
@@ -551,7 +587,8 @@ strategy(t2, settled, "KO parity: grading-reversing involution U with UJ = sJU; 
 strategy(t2b, settled, "Selection of s by the interval: the bare reflection gives 9 in the standard product; J_M and particle number do not select the sign.").
 strategy(t2c, open, "With a Majorana mass for nu_R, does a unique admissible sign of the reduction remain, and which?").
 strategy(t3, settled, "Chirality from boundary conditions; the boundary Yukawa interpolates (a)+(b) to (c)+(c) at constant index.").
-strategy(t4, open, "Gauge sector of the towerless interval versus Connes-Lott inner fluctuations.").
+strategy(t4, settled, "Gauge sector of the towerless interval: fixed compression is not gauge covariant and the finite spectral action does not reproduce the tower mass.").
+strategy(t4b, open, "Gauge-covariant reduction (projection of the fluctuated operator) and matching with the interval tower.").
 strategy(t5, settled, "Heavy W forces a heavy Dirac fermion (conditional on the CCM relation).").
 strategy(t6, open, "Metric-compatible towerless limits (operator-system truncations).").
 strategy(t7, open, "Towerless S^2, CP^2 to H, M_3(C) with the right real structure.").
