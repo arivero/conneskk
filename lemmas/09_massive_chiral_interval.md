@@ -93,7 +93,7 @@ a one-dimensional Weyl law (for the positive spectrum; both signs double the lea
 
 **Theorem 9.9 (collapse at fixed light mass).** Fix m_f > 0. For each l in (0, 1/m_f) there is a unique mu(l) > 1/l with lambda_0 = m_f. As l -> 0:
 
-- c(l) = mu(l) l -> infinity, with c = log(2c/(m_f l)) + o(1);
+- c(l) = mu(l) l -> infinity, with c = log(2c/(m_f l)) + o(1); equivalently c = -W_{-1}(-m_f l/2) + o(1) (Lambert W, lower branch), so c = L + log L + o(1) with L = log(2/(m_f l)): the leading scaling log(1/(m_f l))/l carries a log log correction, and it is specific to this localization model;
 - the next eigenvalue exceeds sqrt(mu(l)^2 + (pi/l)^2) -> infinity;
 - the light pair stays Connes-Lott with mass m_f (Theorem 9.6), while the interval collapses to a point in Gromov-Hausdorff distance.
 

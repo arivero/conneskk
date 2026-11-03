@@ -69,7 +69,7 @@ source(l06_counterexample, 'lemmas/06_vectorlike_odd_factorization.md', '').
 depends(l06_counterexample, l06_factorization).
 attempted_by(l06_counterexample, astra6).
 checked_by(l06_counterexample, claude_opus_5_5, python("both involutions on the electrodynamics triple")).
-claim(l06_nuL, no_go, proved, "No-go", "An unpaired nu_L allows only KO-7 (formally 11); no factorization while H is in the algebra.").
+claim(l06_nuL, no_go, proved, "No-go", "A finite triple with an unpaired nu_L (and no Majorana term) admits only the KO-7 factorization; no factorization while H is in the algebra. A statement about the finite triple, not about a parent manifold.").
 source(l06_nuL, 'lemmas/06_vectorlike_odd_factorization.md', 'consequence-for-the-10---9-claim').
 depends(l06_nuL, l06_factorization).
 attempted_by(l06_nuL, astra6).
@@ -582,6 +582,9 @@ source(paper_14_3_1, 'canonical_research.md', '143-the-angle-test').
 attempted_by(paper_14_3_1, corpus).
 checked_by(paper_14_3_1, corpus, python("see research_checks_knowledge.md")).
 %% ---------------------------------------------------------------- STRATEGY.md
+strategy(t0, open, "Founding problem: finite real triples (in general, not specifically the Standard Model) as limits of commutative Kaluza-Klein data, with specified spectral, operator-algebraic and K-theoretic convergence.").
+strategy(t0b, open, "Reach the current Connes et al. framework (KO-6, order one, doubling, classification, beyond first order, twisted triples) beyond the Connes-Lott layer.").
+strategy(t5b, open, "Heavy-W limit at fixed cutoff with the mass-weighted spectral action of lemma 03.").
 strategy(t1, settled, "Deconstruction: Connes-Lott is the minimal truncation of the chiral interval.").
 strategy(t2, settled, "KO parity: grading-reversing involution U with UJ = sJU; s = -1 gives 9, s = +1 gives 11; J alone does not decide.").
 strategy(t2b, settled, "Selection of s by the interval: the bare reflection gives 9 in the standard product; J_M and particle number do not select the sign.").
@@ -598,6 +601,7 @@ addresses(t2, l06_factorization).  addresses(t2, l06_counterexample).  addresses
 addresses(t2b, l07_reflection).  addresses(t2b, conj07_4).  addresses(t2b, l08_product).  addresses(t2b, l08_both_signs).  addresses(t2b, l08_pairing).
 addresses(t2c, l08_pairing).  addresses(t2c, l06_nuL).
 addresses(t3, l09_index).  addresses(t3, l09_lightpair).  addresses(t3, l09_limits).  addresses(t3, l12_index).  addresses(t3, l12_secular).
+addresses(t5b, l03_weights).  addresses(t0, l05_truncation).  addresses(t0, l13_not_covariant).
 addresses(t5, l11_bounds).  addresses(t5, l11_nogo).  addresses(t5, l11_top).
 addresses(t7, l02_invariant).
 addresses(t8, l12_towerless).  addresses(t8, l12_graded).  addresses(t8, l12_mixing).
