@@ -1,5 +1,6 @@
 # Each paper in two forms: Phys Rev two-column, and one column of the same width for phones.
 PAPERS = towerless_intervals chiral_limit_note
+.PHONY: all supplement docs clean
 all: $(PAPERS:%=%.pdf) $(PAPERS:%=%_mobile.pdf)
 
 define build
@@ -14,6 +15,14 @@ endef
 
 %.pdf: %.tex towerless_intervals.bib
 	$(call build,$*,,$*)
+
+# Rebuild the Supplemental Material in both forms; run from the repository root by the script.
+supplement:
+	cd .. && sh paper/build_supplement.sh && sh paper/build_supplement.sh mobile
+
+# Copy all PDFs to the folder served by GitHub Pages. Run at milestones, since PDFs are binaries in git.
+docs: all supplement
+	cp $(PAPERS:%=%.pdf) $(PAPERS:%=%_mobile.pdf) supplemental.pdf supplemental_mobile.pdf ../docs/
 
 clean:
 	rm -f *.aux *.log *.bbl *.blg *.out *Notes.bib

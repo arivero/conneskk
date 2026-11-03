@@ -36,7 +36,7 @@ Facts: `claim/5`, `source/3`, `depends/2`, `hypothesis/2`, `attempted_by/2`, `ch
 
 ## Removed sources
 
-The folder holds text only. Binaries, code and duplicated developments were removed after their content was written out (details and recovery commits in [DUPLICATES.md](DUPLICATES.md)):
+The folder holds text only, apart from the built PDFs in [docs/](docs/index.html), which GitHub Pages serves (`make docs` in `paper/`, run at milestones). Binaries, code and duplicated developments were removed after their content was written out (details and recovery commits in [DUPLICATES.md](DUPLICATES.md)):
 
 - zips: unpacked; zip A tree in commit 54445a4, zip B tree in `research_limits/`;
 - chat PDFs: `transcripts/`, checked against the PDFs (see the header of each transcript);

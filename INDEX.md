@@ -389,6 +389,7 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
   - [Consequence for T10](lemmas/17_explicit_masses_chiral_limit.md#consequence-for-t10)
 - [18: T5b: vector masses in the spectral action at fixed cutoff](lemmas/18_heavy_limit_near_cutoff.md)
 - [19: Inner fluctuations of the two-point data without order one](lemmas/19_fluctuations_without_order_one.md)
+- [20: Sheet-connecting operators and boundary gluing](lemmas/20_connecting_operator.md)
 - [21: The separate role of the top: removal identities and counting](lemmas/21_top_counting.md)
 
 ### Background note: the current Connes et al. framework: [current_framework.md](current_framework.md)

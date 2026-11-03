@@ -881,6 +881,38 @@ depends(l19_parent, l19_gauge).
 depends(l19_parent, l13_compression).
 attempted_by(l19_parent, claude_opus_5_5).
 addresses(t0b, l19_fluct).  addresses(t0b, l19_parent).
+%% Lemma 20 (T0b, T11). Astra 6; referee pending.
+claim(l20_blocks, theorem, proved, "Theorem 20.1", "A block T : E -> E* added to a sheet-diagonal D_F keeps the signs iff T = tau(T), h T + T g = 0, and has order one on B iff T pi_1(a) - pi_2(a) T intertwines the opposite actions; the maximal B are the maximal A(R) over odd R with T = R + tau(R).").
+source(l20_blocks, 'lemmas/20_connecting_operator.md', '').
+attempted_by(l20_blocks, astra6).
+checked_by(l20_blocks, claude_opus_5_5, python("the example with T different from R; the averaging proof by hand")).
+claim(l20_rank_one, theorem, proved, "Theorem 20.2", "T x = kappa K x K with K = v w* has complex rank one and A(T) = C + H + M_3(C), of real dimension 24, unique up to automorphism at maximal dimension; a block of rank two gives 16.").
+source(l20_rank_one, 'lemmas/20_connecting_operator.md', '').
+depends(l20_rank_one, l20_blocks).
+attempted_by(l20_rank_one, astra6).
+checked_by(l20_rank_one, claude_opus_5_5, python("real dimensions 24 and 16 by linear algebra; signs and order conditions on random elements")).
+claim(l20_gluing_fails, counterexample, proved, "Counterexample 20.4", "Full scalar gluing on the one-flavor interval: the parent has signs (+,+,-), order zero and order one; the lowest window gives C + C, m sigma_1, sigma_1 K, which fails order one.").
+source(l20_gluing_fails, 'lemmas/20_connecting_operator.md', '').
+attempted_by(l20_gluing_fails, astra6).
+checked_by(l20_gluing_fails, claude_opus_5_5, python("eigenvectors and J by hand; the compression by quadrature")).
+claim(l20_parent, theorem, proved, "Theorem 20.5", "Two massless interval fields valued in E, E* with wall coupling X = t S*, and constant multipliers B = A(S), give in the lowest window finite data with connecting block m S, m = arctan(t)/l, signs (+,+,-), order zero and order one; X(l) = tan(m l) keeps m and decouples the tower; the transport exp(m x F) gives a constant connection.").
+source(l20_parent, 'lemmas/20_connecting_operator.md', '').
+depends(l20_parent, l20_rank_one).
+attempted_by(l20_parent, astra6).
+checked_by(l20_parent, claude_opus_5_5, by_hand).
+claim(l20_no_selection, no_go, proved, "Proposition 20.7", "For separate compressions in unchanged windows, scalar gluing on closed sets with empty interior leaves the image unchanged, including the level-one twistor windows. Escapes: a coupled window, boundary degrees of freedom, matrix multipliers.").
+source(l20_no_selection, 'lemmas/20_connecting_operator.md', '').
+attempted_by(l20_no_selection, astra6).
+checked_by(l20_no_selection, claude_opus_5_5, by_hand).
+claim(l20_hw, proposition, proved, "Proposition 20.8", "The same-chirality analogue of the Horava-Witten walls is type (a) at both ends, with opposite localization masses; unbroken E_8 x E_8 allows no bilinear connector between (248,1) and (1,248).").
+source(l20_hw, 'lemmas/20_connecting_operator.md', '').
+attempted_by(l20_hw, astra6).
+addresses(t0b, l20_blocks).  addresses(t0b, l20_rank_one).  addresses(t0b, l20_parent).  addresses(t0b, l20_no_selection).
+addresses(t11, l20_hw).
+%% Consensus checks by Astra 6 in lemma 20, Results 9 to 11.
+checked_by(l11_nogo, astra6, by_hand).
+checked_by(l16_standard_nogo, astra6, by_hand).
+checked_by(l16_grading_not_even, astra6, by_hand).
 %% Lemma 21 (T12). Referee pending.
 claim(l21_removal, proposition, proved, "Proposition 21.1", "Among single charged species, only an up-type quark can be removed while keeping cos^2 theta_NC = 5/8 and the photon/gluon ratio 8/3; a down-type gives 59/92 and 46/15, a charged lepton 17/28 and 7/3; d + e together contribute as u.").
 source(l21_removal, 'lemmas/21_top_counting.md', 'removal-identities').
