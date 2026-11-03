@@ -105,13 +105,33 @@ Let $D_M(A)$ have eigenvalues $\lambda_n$, with $n_0$ zero modes, on volume $V$,
 
 So the spectral triple supplies the operator $D_M+\gamma_5m$, the density of each fixed operator, and the continuity of that operator and its square in $m$ at fixed background; the regularized function itself has the zero-mode pole above. The averaged density, the regulated determinant or Pfaffian measure, the sequence of volumes and the order of limits need further input. A proof of existence of QCD with fermions would supply a measure, and would not by itself give $\rho_0(0)>0$. With the anti-self-adjoint $\tilde D=-iD_M$, $\det(\tilde D+m)=m^{n_0}\prod_{\lambda>0}(\lambda^2+m^2)>0$ with a compatible regulator, which is part of the method of \cite{VW1984}.
 
+\section{The anomaly on the reduced action}
+
+On the commuting subalgebra, let $d=\mathrm{diag}(m_f)$ and let $T$ be a Hermitian flavour matrix with eigenvalues $\tau_f$, commuting with $d$ and with the connection. Then $\mathcal D^2=D_M^2+d^2$.
+
+\begin{proposition}
+Let $f(\mathcal D^2/\Lambda^2)$ be trace class, with $\gamma_5=+1$ on $S^+$ and $\mathrm{ind}_f$ the index on the block of flavour $f$. At every $\Lambda$,
+\begin{equation}
+\mathrm{Tr}\,\gamma_5Tf(\mathcal D^2/\Lambda^2)=\sum_f\tau_ff(m_f^2/\Lambda^2)\,\mathrm{ind}_f,
+\end{equation}
+and for $m_f>0$ the mass insertion with the same regulator equals it. If $\mathrm{tr}\,T=0$, $f$ is continuous at $0$ and $f(0)=1$, then as $\Lambda\to\infty$ twice this trace tends to $2N_c\mathrm{tr}(TQ^2)(e^2/8\pi^2)\int F\wedge F$, with no gluonic or gravitational term. For $T=T^3$ on $(u,d)$ the coefficient is $2N_c\mathrm{tr}(T^3Q^2)=1$.
+\end{proposition}
+
+The nonzero modes pair between chiralities, so only the zero modes survive, with their signed count, where the scalar density above has the unsigned count. The identity is a Ward identity under the common regularization; the weights at finite $\Lambda$ depend on the regulator.
+
+\begin{proposition}
+Let $N_f=2$, $M=0$, with colour background zero on the round $S^4$, and let $\Sigma:S^4\to SU(2)$ generate $\pi_4(SU(2))=\mathbb Z_2$. In independent quark and antiquark variables, the operator of the previous section has the pure-gauge connection $B$ on one chirality. The Weyl Pfaffian of $N_c$ doublets, transported along $A_t=tB$, has the relative sign $(-1)^{N_c}$ \cite{Witten1982}. The spectral action does not depend on $\Sigma$.
+\end{proposition}
+
+This is a relative sign for that transport and endpoint identification; the pullback of the measure through $R_\Sigma$ keeps the value of the integral. It is the sign of the two-flavour discrete term $(-1)^{N_c[\sigma]}$ \cite{LOT2021}, and matching a pion field needs a sigma model and its anomaly-matching assumptions. By footnote~2 of \cite{Witten1982}, the sign is the parity of the zero modes of a five-dimensional Dirac operator on the nontrivial $SU(2)$ bundle on $S^5$.
+
 \section{The chiral limit on an interval}
 
 In the scalar-algebra realization on a chiral interval, $\mathcal D=D_M+\gamma_5(D_0+m\Gamma_0)$. The limit $m\to0$ has two routes. With a bulk mass $-\mu$, $\mu l>1$ and $\tanh(\kappa_0l)=\kappa_0/\mu$, the mass $m=\mu\,\mathrm{sech}(\kappa_0l)$ is positive at finite parameters, with $m\sim2\mu e^{-\mu l}$ for $\mu l\to\infty$, and at fixed $\mu$ it tends to $0$ as $l\to\infty$: an exponentially small residue, with the localization and overlap mechanism of domain-wall fermions \cite{Kaplan1992,Shamir1993}. With a boundary Yukawa matrix, $X=0$ gives exact zero modes, and for flavour-degenerate bulk masses $X$ preserves exactly $\{(V_Q,V_U):V_QX=XV_U\}$, so that $X$ is a spurion on the wall and the symmetry is exact at finite $l$ when $X=0$. This boundary-coupled operator is a different construction from the tensor-product truncation above, and identifying them at finite $l$ would need a proof.
 
 \section*{Provenance}
 
-This note has no listed authors. The results were proved by Claude Opus 5.5, with the proposition on spacetime-dependent $\Sigma$ by Terra 6.1, and refereed by Terra 6.1, whose reports led to corrections of five items and several amendments. Python on finite models checked the reduced action for both signs, the involution conditions, the formula for the reduced mass, stationarity at sample points and the rotation $R_5$. The full proofs are in the project file \texttt{lemmas/17\_explicit\_\allowbreak masses\_chiral\_limit.md}.
+This note has no listed authors. The results were proved by Claude Opus 5.5, with the proposition on spacetime-dependent $\Sigma$ by Terra 6.1, and refereed by Terra 6.1, whose reports led to corrections of five items and several amendments. Python on finite models checked the reduced action for both signs, the involution conditions, the formula for the reduced mass, stationarity at sample points and the rotation $R_5$. The full proofs are in the project files \texttt{lemmas/17\_explicit\_\allowbreak masses\_chiral\_limit.md} and \texttt{lemmas/27\_anomaly\_\allowbreak reduced\_action.md}.
 
 \bibliography{towerless_intervals}
 

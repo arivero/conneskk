@@ -15,6 +15,8 @@ part 22 lemmas/22_*.md
 part 23 lemmas/23_*.md
 part 24 lemmas/24_*.md
 part 25 lemmas/25_*.md
+part 26 lemmas/26_*.md
+part 27 lemmas/27_*.md
 part "L (literature check and record of searches)" LITERATURE.md
 part "R1 (assessment of Farsi-Latremoliere, with the counterexample to their Theorem 3.4)" reviews/2026-11-03_farsi_latremoliere_assessment.md
 part "R2 (referee report, lemmas 08, 13, 14)" reviews/2026-11-03_terra_check_08_13_14.md
@@ -27,6 +29,9 @@ part "R8 (referee report, lemma 22)" reviews/2026-11-03_terra_check_22.md
 part "R9 (referee report, lemma 23)" reviews/2026-11-03_terra_check_23.md
 part "R10 (referee report, lemma 25)" reviews/2026-11-03_terra_check_25.md
 part "R11 (referee report, lemma 24)" reviews/2026-11-03_terra_check_24.md
+part "R12 (referee report, lemma 26)" reviews/2026-11-03_terra_check_26.md
+part "R13 (referee report, lemma 27 and additions to lemma 26)" reviews/2026-11-03_terra_check_27.md
+part "R14 (Astra validation of the ledger, citations and steer note)" reviews/2026-11-03_astra_validation_corrections.md
 # unicode-math needs braces around font commands in sub- and superscripts
 perl -i -pe 's/([\^_])\\(mathcal|mathbb|mathrm|mathsf|mathfrak|mathbf|operatorname|text)(\{[^{}]*\}| *[A-Za-z])/$1\{\\$2$3\}/g' "$OUT"
 HDR=paper/.supp_header.tex

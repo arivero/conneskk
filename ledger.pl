@@ -1211,38 +1211,44 @@ claim(l26_no_small, proposition, proved, "Proposition 26.2b", "For n_1 > 0, V(1 
 source(l26_no_small, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-classification').
 attempted_by(l26_no_small, terra_6_1).
 checked_by(l26_no_small, claude_opus_5_5, by_hand).
-claim(l26_wall_mass, proposition, proved, "Proposition 26.3c", "With a wall mass omega for the exotic of the frequency-2 channel, the eigenvalues solve 2 a Delta sin a = omega cos a (Delta + sin^2 a); for all theta in (0, pi/2) and omega in (0, infinity) there is a coloured state with 0 < m < M_W. So in the (10, 6) and (5, 15) a top at 2 M_W always has a lighter partner. Other multiplets, brane mixing and non-flat profiles lie outside this.").
+claim(l26_wall_mass, proposition, proved, "Proposition 26.3c", "With a wall mass omega for the exotic of the frequency-2 channel, the nonzero eigenvalues solve 2 a Delta sin a = omega cos a (Delta + sin^2 a), Delta = sin^2 a - sin^2(2 theta); for all theta in (0, pi/2) and finite omega > 0 there is a coloured state of charge 2/3 with 0 < m < M_W, in the displayed channel of the (10, 6) and (5, 15). A higher state at 2 M_W exists for a tuned omega, with that lighter partner. Complete wall multiplets and other mixings are outside this.").
 source(l26_wall_mass, 'lemmas/26_interior_vacuum_matching_scale.md', 'where-frequency-2-lives').
 depends(l26_wall_mass, l26_plane).
 attempted_by(l26_wall_mass, claude_opus_5_5).
 checked_by(l26_wall_mass, claude_opus_5_5, python("against a direct 3 x 3 determinant of the boundary conditions")).
-claim(l26_neutral, claim, numerical, "Result 26.8", "Separate bulk couplings and a hypercharge wall term fixed by alpha_Y: M_W^2/M_Z^2 = 0.629 at theta = pi/4, 0.709 at theta = 1.1377, tree level, against about 0.76 in four dimensions at M_KK; the shift falls below 0.006 only above about 1.2 TeV. An estimate at finite angle.").
+checked_by(l26_wall_mass, terra_6_1, by_hand).  % report 27, item 7, with sympy on the determinant
+claim(l26_neutral, claim, numerical, "Result 26.8", "Separate bulk couplings and a hypercharge wall term fixed by alpha_Y: M_W^2/M_Z^2 = 0.629 at theta = pi/4, 0.709 at theta = 1.1377, tree level, against about 0.76 in four dimensions at M_KK within this matching prescription; in the rows computed, the shift falls below 0.006 from about 1.2 TeV.").
 source(l26_neutral, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-top-against-the-matching-scale').
 attempted_by(l26_neutral, claude_opus_5_5).
 checked_by(l26_neutral, claude_opus_5_5, python("4 x 4 determinant, limit r = 0 against Theorem 23.6")).
+checked_by(l26_neutral, terra_6_1, python("two rows recomputed, closed form for the root")).  % report 27, item 8
 addresses(t13, l26_wall_mass).  addresses(t13, l26_neutral).  addresses(t13, l26_no_small).
 prior_work(l26_lr, partial, "Nomura-Smith-Weiner hep-ph/0104041 (differential running); Carena-Tait-Wagner hep-ph/0207056 (boundary terms)").
 prior_work(l26_meeting, partial, "Abe-Goto-Kawamura PTEP 2018 103B01 (interval Pati-Salam near 10^13 GeV, other content)").
 prior_work(l26_wall_mass, partial, "Cacciapaglia-Csaki-Park hep-ph/0510366; Adachi-Maru 1804.06012; Hosotani-Oda-Ohnuma-Sakamura 0806.0480").
 referee_report('lemmas/26_interior_vacuum_matching_scale.md', 'reviews/2026-11-03_terra_check_26.md').
-outside_referee(l26_wall_mass, "added after report 26; in the second referee job").
+referee_report('lemmas/26_interior_vacuum_matching_scale.md', 'reviews/2026-11-03_terra_check_27.md').
+referee_report('lemmas/27_anomaly_reduced_action.md', 'reviews/2026-11-03_terra_check_27.md').
 
 %% ---------------------------------------------------------------- lemma 27
-claim(l27_trace, theorem, proved, "Theorem 27.1, Proposition 27.3", "On D_M(A) + gamma_5 d with T, d and A commuting: Tr(gamma_5 T f(DD^2/Lambda^2)) = sum_f tau_f f(m_f^2/Lambda^2) ind_f at every Lambda, and the regulated mass term equals it.").
+claim(l27_trace, theorem, proved, "Theorem 27.1, Proposition 27.3", "On D_M(A) + gamma_5 d with T, d and A commuting, gamma_5 = +1 on S^+: Tr(gamma_5 T f(DD^2/Lambda^2)) = sum_f tau_f f(m_f^2/Lambda^2) ind_f at every Lambda, and the mass insertion with the same regularization equals it; a Ward identity under that common regularization.").
 source(l27_trace, 'lemmas/27_anomaly_reduced_action.md', 'the-axial-trace').
 depends(l27_trace, l17_action).
 attempted_by(l27_trace, claude_opus_5_5).
 checked_by(l27_trace, claude_opus_5_5, python("Landau spectra on T^2 x T^2, to 15 digits")).
-claim(l27_anomaly, corollary, proved, "Corollary 27.2, Proposition 27.4", "As Lambda -> infinity, on the commuting subalgebra, the anomaly of T^3 has coefficient 2 N_c tr(T^3 Q^2) = 1 with no gluonic or gravitational term. At fixed cutoff a heavy t leaves the coefficient of the incomplete doublet, -1/3 for the heat cutoff.").
+checked_by(l27_trace, terra_6_1, by_hand).  % report 27, items 1 and 3
+claim(l27_anomaly, corollary, proved, "Corollary 27.2, Proposition 27.4", "As Lambda -> infinity, f continuous at 0, on the commuting subalgebra, the anomaly of T^3 has coefficient 2 N_c tr(T^3 Q^2) = 1 with no gluonic or gravitational term. At fixed cutoff the regulated coefficient for a heavy t is (4 exp(-x) - 1)/3 for the heat cutoff, a property of the regulator; a Wess-Zumino term needs a separate matching prescription.").
 source(l27_anomaly, 'lemmas/27_anomaly_reduced_action.md', 'the-axial-trace').
 depends(l27_anomaly, l27_trace).
 attempted_by(l27_anomaly, claude_opus_5_5).
 checked_by(l27_anomaly, claude_opus_5_5, python("exact fractions")).
-claim(l27_discrete, proposition, proved, "Proposition 27.5", "For N_f = 2, M = 0, colour background zero on the round S^4, the reduction frame of Proposition 17.10 for Sigma in the nontrivial class of pi_4(SU(2)) multiplies the quark integral by (-1)^{N_c}; the classical action and the spectral action do not change. Uses eq. (6) of Witten 1982.").
+checked_by(l27_anomaly, terra_6_1, by_hand).  % report 27, items 2 and 4
+claim(l27_discrete, proposition, proved, "Proposition 27.5", "For N_f = 2, M = 0, colour background zero on the round S^4, and Sigma in the nontrivial class of pi_4(SU(2)): in the operator of Proposition 17.10, the Weyl Pfaffian of N_c doublets transported along A_t = t B has the relative sign (-1)^{N_c}, by eq. (6) of Witten 1982. The spectral action does not change; the pulled-back measure keeps the value of the integral. Matching a pion field needs a sigma model.").
 source(l27_discrete, 'lemmas/27_anomaly_reduced_action.md', 'the-two-flavour-discrete-term').
 depends(l27_discrete, l17_no_kinetic).
 attempted_by(l27_discrete, claude_opus_5_5).
 checked_by(l27_discrete, claude_opus_5_5, by_hand).
+checked_by(l27_discrete, terra_6_1, by_hand).  % report 27, items 5 and 6
 addresses(t10, l27_trace).  addresses(t10, l27_anomaly).  addresses(t10, l27_discrete).  addresses(t13, l27_discrete).
 
 %% ---------------------------------------------------------------- steer note, items 9 and 11

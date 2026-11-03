@@ -395,6 +395,8 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 - [23: Two gradings on an interval: masses as principal angles, the Higgs modulus, and exact W and Z masses](lemmas/23_two_gradings_interval.md)
 - [24: Commutative cylinders, spectral walls, and the two-stage compression](lemmas/24_commutative_parent.md)
 - [25: The weak-boson sum rule and the effective dimension of the interval](lemmas/25_sum_rule_effective_dimension.md)
+- [26: The interior vacuum and the matching scale in the flat parent](lemmas/26_interior_vacuum_matching_scale.md)
+- [27: The axial anomaly on the reduced action, and the two-flavour discrete term](lemmas/27_anomaly_reduced_action.md)
 
 ### Background note: the current Connes et al. framework: [current_framework.md](current_framework.md)
 
@@ -407,6 +409,8 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 - [Assessment of the T0 note](reviews/2026-11-03_t0_note_assessment.md)
 - [Farsi-Latrémolière assessment](reviews/2026-11-03_farsi_latremoliere_assessment.md)
 - [Astra validation of the corrections](reviews/2026-11-03_astra_validation_corrections.md)
+- [Referee report on lemma 26](reviews/2026-11-03_terra_check_26.md)
+- [Referee report on lemma 27 and the additions to lemma 26](reviews/2026-11-03_terra_check_27.md)
 - [Review of the evaluation](reviews/2026-11-03_review_of_evaluation.md)
 - [Terra check of N8](reviews/2026-11-03_terra_check_N8.md)
 - [Terra referee report on lemmas 15 and 16](reviews/2026-11-03_terra_check_15_16.md)
