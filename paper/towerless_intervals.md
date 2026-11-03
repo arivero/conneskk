@@ -101,7 +101,7 @@ Hence a heavy-W limit at fixed fermion masses is incompatible with the relation,
 
 **Proposition F** [lemma 13]. Fluctuate the product of spacetime with the chiral interval by a five-dimensional gauge field $(A_\mu,A_5)$ and compress to the light pair. Then (i) the sheet connections are the weighted averages $A_{L,R}=\int w_{L,R}A_\mu$ and the link is $\phi=m+iB$ with $B=\int_0^l l^{-1}\sin(\pi x/l)A_5\,dx$, so the image is $\{\phi+\phi^*=2m\}$ and not every Connes-Lott fluctuation arises; (ii) the fixed compression is not gauge covariant: $A_5=a\cos(2\pi x/l)$ has trivial Wilson line and changes the compressed spectrum; (iii) the spectral action gives vector masses $\mathcal M^2=\tfrac32Q^{-1/2}KQ^{-1/2}$, which equal $\sqrt6\,m$ for the minimal two-sheet model and $\sqrt{3/8}\,m$ with the CCM Standard Model trace and one massive colour triplet, while the Neumann-Dirichlet tower gives $m=\pi/(2l)$.
 
-So the finite spectral action and the interval tower disagree on the vector mass, and the disagreement depends on the whole fermion trace. Matching them requires a gauge-covariant reduction, a projection onto the low spectral subspace of the fluctuated operator, together with the gauge boundary conditions as data.
+So the finite spectral action and the interval tower disagree on the vector mass, and the disagreement depends on the whole fermion trace. With the gauge-covariant projection onto the light pair of the fluctuated operator [lemma 14], the covariance defect disappears, and equality of the two masses becomes an explicit trace-and-overlap sum rule. It fails at zero bulk mass, where $\mathcal M_{\rm spec}^2=\tfrac35\mathcal M_{\rm KK}^2$, and holds for a tuned bulk mass $0<M_*<3\pi/(4l)$, at which the matched fermion has a mass of the order of the tower scale; with bounded light fermions, $\mathcal M_{\rm spec}^2\le6\|V_0\|^2$, so no matching is possible in the collapse. The gauge sector thus ties the W to a fermion at the tower scale, in line with Proposition E.
 
 ## 8. Discussion
 
@@ -122,7 +122,7 @@ So the finite spectral action and the interval tower disagree on the vector mass
 | Theorem C | Claude (lemma 12) | Claude (ODE shooting and random samples, Python); Terra 6.1 (referee; three errors corrected) |
 | Theorem D | Astra 6 (lemmas 06, 08); Claude (lemma 07) | Claude (by hand; Python for 06 and 08); Astra 6 (lemma 07) |
 | Proposition E | Claude (lemma 11) | Claude (by hand); Terra 6.1 queued |
-| Proposition F | Astra 6 (lemma 13) | Claude (by hand) |
+| Proposition F | Astra 6 (lemmas 13, 14) | Claude (by hand) |
 
 ## References
 

@@ -264,6 +264,44 @@ prior_work(l11_top, known, "CCM 2007 eqs. (4.16), (5.27)").
 prior_work(rs_G3, known, "Niemi-Slizovskiy arXiv:1004.0212 eqs. (94)-(95)").
 prior_work(paper_14_3_1, known, "Niemi-Slizovskiy arXiv:1004.0212 eqs. (94)-(95)").
 
+%% ---------------------------------------------------------------- lemma 14 (Astra job 14, T4b)
+claim(l14_covariant, theorem, proved, "Theorems 1-2", "The gapped spectral projection P_A is gauge covariant and carries an induced Grassmannian connection on the light-fermion bundle.").
+source(l14_covariant, 'lemmas/14_gauge_covariant_reduction.md', '').
+depends(l14_covariant, l13_not_covariant).
+attempted_by(l14_covariant, astra6).
+claim(l14_image, theorem, proved, "Theorem 3", "For the mixed interval with gauge-invariant bulk mass the induced finite link has fixed singular values and does not supply the full two-sheet fluctuation space.").
+source(l14_image, 'lemmas/14_gauge_covariant_reduction.md', '').
+depends(l14_image, l14_covariant).
+attempted_by(l14_image, astra6).
+claim(l14_sum_rule, theorem, proved, "Theorem 5", "At leading spectral-action order, M_spec = M_KK iff an explicit trace-and-overlap sum rule holds (M_spec^2 = (3/2) Q^-1/2 K Q^-1/2, M_KK^2 = G^-1/2 H G^-1/2).").
+source(l14_sum_rule, 'lemmas/14_gauge_covariant_reduction.md', '').
+depends(l14_sum_rule, l13_mass_formula).
+depends(l14_sum_rule, l14_covariant).
+attempted_by(l14_sum_rule, astra6).
+checked_by(l14_sum_rule, claude_opus_5_5, by_hand).
+claim(l14_three_fifths, counterexample, proved, "Counterexample 6", "The covariant lowest-mode reduction at zero bulk mass gives M_spec^2 = (3/5) M_KK^2.").
+source(l14_three_fifths, 'lemmas/14_gauge_covariant_reduction.md', '').
+depends(l14_three_fifths, l14_sum_rule).
+attempted_by(l14_three_fifths, astra6).
+checked_by(l14_three_fifths, claude_opus_5_5, by_hand).
+claim(l14_tuned, proposition, proved, "Proposition 7", "Equality holds for some bulk mass 0 < M_* < 3 pi/(4l); the matched fermion sits at the tower scale.").
+source(l14_tuned, 'lemmas/14_gauge_covariant_reduction.md', '').
+depends(l14_tuned, l14_sum_rule).
+depends(l14_tuned, l09_lightpair).
+attempted_by(l14_tuned, astra6).
+checked_by(l14_tuned, claude_opus_5_5, by_hand).
+claim(l14_nogo_collapse, no_go, proved, "No-go theorem 8", "Bounded light fermions give M_spec^2 <= 6 C^2 and cannot match the collapsing Neumann-Dirichlet tower pi/(2l).").
+source(l14_nogo_collapse, 'lemmas/14_gauge_covariant_reduction.md', '').
+depends(l14_nogo_collapse, l14_sum_rule).
+depends(l14_nogo_collapse, l13_kk_mass).
+attempted_by(l14_nogo_collapse, astra6).
+checked_by(l14_nogo_collapse, claude_opus_5_5, by_hand).
+claim(l14_normalizations, proposition, proved, "Proposition 9", "Matching one vector mass does not fix relative gauge couplings or all scalar kinetic coefficients.").
+source(l14_normalizations, 'lemmas/14_gauge_covariant_reduction.md', '').
+depends(l14_normalizations, l14_sum_rule).
+attempted_by(l14_normalizations, astra6).
+addresses(t4b, l14_sum_rule).  addresses(t4b, l14_tuned).  addresses(t4b, l14_nogo_collapse).
+
 hypothesis(ccm_relation, "Chamseddine-Connes-Marcolli normalization at the matching scale: 8 M_W^2 = sum of N_f m_f^2 over Dirac masses.").
 hypothesis(positive_rank, "The twisting bundle has positive rank, with the equivariant self-adjoint realization.").
 hypothesis(heat_kernel_spectral_action, "Heat-kernel cutoff spectral action with a vectorial gauge background commuting with the mass matrix.").
@@ -614,7 +652,7 @@ strategy(t2b, settled, "Selection of s by the interval: the bare reflection give
 strategy(t2c, settled, "With a generic Majorana mass for nu_R the reduced triple admits only the KO-7 factorization (lemma 06, Lemma 4 and Proposition 7).").
 strategy(t3, settled, "Chirality from boundary conditions; the boundary Yukawa interpolates (a)+(b) to (c)+(c) at constant index.").
 strategy(t4, settled, "Gauge sector of the towerless interval: fixed compression is not gauge covariant and the finite spectral action does not reproduce the tower mass.").
-strategy(t4b, open, "Gauge-covariant reduction (projection of the fluctuated operator) and matching with the interval tower.").
+strategy(t4b, settled, "Gauge-covariant reduction: matching with the tower only via a sum rule (tuned bulk mass, tower-scale fermion); impossible with bounded light fermions in the collapse.").
 strategy(t5, settled, "Heavy W forces a heavy Dirac fermion (conditional on the CCM relation).").
 strategy(t6, open, "Metric-compatible towerless limits (operator-system truncations).").
 strategy(t7, open, "Towerless S^2, CP^2 to H, M_3(C) with the right real structure.").

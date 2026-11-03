@@ -369,6 +369,8 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
   - [Numerical check (Claude)](lemmas/12_boundary_yukawa_interval.md#numerical-check-claude)
   - [Referee report (gpt-6.1-terra, effort max, 3 Nov 2026)](lemmas/12_boundary_yukawa_interval.md#referee-report-gpt-61-terra-effort-max-3-nov-2026)
 - [13: T4: gauge fluctuations of the chiral interval](lemmas/13_gauge_sector_truncation.md)
+- [14: T4b: gauge-covariant projection and conditional bosonic matching](lemmas/14_gauge_covariant_reduction.md)
+  - [Consequence for T4b and hypothesis H](lemmas/14_gauge_covariant_reduction.md#consequence-for-t4b-and-hypothesis-h)
 
 ### Transcript: [transcripts/Connes_Electrodynamics_ModelMd.txt](transcripts/Connes_Electrodynamics_ModelMd.txt)
 
