@@ -70,12 +70,12 @@ $$
 \sigma_k(Y_0)\Big(1-\frac{\lambda_k^2}{\Lambda_Q^2}-\frac{\lambda_k^2}{\Lambda_U^2}\Big)\le\lambda_k\le\sigma_k(Y_0),\qquad Y_0=F_QXF_U,
 $$
 where $F$ are the zero-mode values at the wall and $\Lambda$ the type-(c) thresholds.
-4. *Towerless limit.* As $l\to0$ with the $c$'s and $\hat Y=X/l$ fixed, the spectrum in any bounded window converges to $0$ (multiplicity $N_Q+N_U-2\,\mathrm{rank}\hat Y$) and $\pm\sigma_k(M_F)$, with
+4. *Towerless limit.* As $l\to0$ with the $c$'s and $\hat Y=X/l$ fixed, the spectrum in $[-E,E]$ converges to $0$ (multiplicity $N_Q+N_U-2\,\mathrm{rank}\hat Y$) and the $\pm\sigma_k(M_F)$ with $\sigma_k(M_F)\le E$, with
 $$
 M_F=\Phi_Q\hat Y\Phi_U,\qquad D_F=\begin{pmatrix}0&M_F\\ M_F^\dagger&0\end{pmatrix},
 $$
 the Yukawa block of the Chamseddine-Connes finite Dirac operator; all other eigenvalues diverge.
-5. *Hierarchies.* For graded $F=\mathrm{diag}(f_1\le\dots\le f_N)$, $G$ likewise, $\sigma_1\cdots\sigma_p(FXG)$ lies between $f_{T_p}g_{T_p}\Delta_p$ and $f_{T_p}g_{T_p}[\Delta_p+D_p((1+K_p\epsilon^F_p)(1+K_p\epsilon^G_p)-1)]$ (compound matrices). With an order-one $\hat Y$ the masses follow $\phi(c^Q_k)\phi(c^U_k)\approx2\sqrt{c^Q_kc^U_k}\,e^{-c^Q_k-c^U_k}$: order-one differences of localization give exponential hierarchies [split fermions: Arkani-Hamed-Schmaltz 2000; Gherghetta-Pomarol 2000; Grossman-Neubert 2000].
+5. *Hierarchies.* For graded $F=\mathrm{diag}(f_1\le\dots\le f_N)$, $G$ likewise, and nonzero trailing minors $\Delta_p$ of $X$, $\sigma_1\cdots\sigma_p(FXG)$ lies between $f_{T_p}g_{T_p}\Delta_p$ and $f_{T_p}g_{T_p}[\Delta_p+D_p((1+K_p\epsilon^F_p)(1+K_p\epsilon^G_p)-1)]$ (compound matrices). With an order-one $\hat Y$ the masses follow $\phi(c^Q_k)\phi(c^U_k)\approx2\sqrt{c^Q_kc^U_k}\,e^{-c^Q_k-c^U_k}$: order-one differences of localization give exponential hierarchies [split fermions: Arkani-Hamed-Schmaltz 2000; Gherghetta-Pomarol 2000; Grossman-Neubert 2000].
 
 The mixing pattern $|V_{ij}|\sim\phi(c^Q_i)/\phi(c^Q_j)$ holds in our numerical samples [lemma 12, Remark 12.10] and is known in the extra-dimensional flavor literature [Huber-Shafi 2001; Agashe-Perez-Soni 2005]; we have no proof with explicit constants.
 
@@ -119,7 +119,7 @@ So the finite spectral action and the interval tower disagree on the vector mass
 |---|---|---|
 | Theorem A, Proposition A.1 | Astra 6 (lemma 05); Astra 6 (lemma 08, No-go 8) | Claude (numerical spectra, distances; Python) |
 | Theorem B | Claude (lemma 09) | Claude (discretization, Python); Terra 6.1 (referee; two errors corrected) |
-| Theorem C | Claude (lemma 12) | Claude (ODE shooting and random samples, Python); Terra 6.1 queued |
+| Theorem C | Claude (lemma 12) | Claude (ODE shooting and random samples, Python); Terra 6.1 (referee; three errors corrected) |
 | Theorem D | Astra 6 (lemmas 06, 08); Claude (lemma 07) | Claude (by hand; Python for 06 and 08); Astra 6 (lemma 07) |
 | Proposition E | Claude (lemma 11) | Claude (by hand); Terra 6.1 queued |
 | Proposition F | Astra 6 (lemma 13) | Claude (by hand) |

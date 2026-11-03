@@ -1,6 +1,6 @@
 # Boundary Yukawa matrices on the interval: from chiral to vectorlike boundary conditions, and towerless textures
 
-Theorems T3 (remaining part) and T8 of [../STRATEGY.md](../STRATEGY.md). Proved by Claude Opus 5.5 without Astra or Fable. The secular equation was checked against direct numerical integration of the ODE; the bounds of Theorem 12.6 and Lemma 12.8 were checked on random samples (section "Numerical check").
+Theorems T3 (remaining part) and T8 of [../STRATEGY.md](../STRATEGY.md). Proved by Claude Opus 5.5 without Astra or Fable. Refereed by Terra 6.1 (gpt-6.1-terra, effort max, 3 Nov 2026): of 9 statements, 4 correct, 2 needed amendments and 3 were wrong as first stated (Theorem 12.4 item 2, Theorem 12.7, Corollary 12.9); all corrections are incorporated below and the referee report is appended. The secular equation was checked against direct numerical integration of the ODE; the bounds of Theorem 12.6 and Lemma 12.8 were checked on random samples (section "Numerical check").
 
 ## Setting
 
@@ -30,7 +30,7 @@ Let a compact group G act unitarily on C^{N_Q} and C^{N_U} by rho_Q and rho_U, c
 
     ind_{H_X} D_X = [ker X^dagger] - [ker X] = [rho_Q] - [rho_U]   (restricted to H_X),
 
-because X maps (ker X)^perp isomorphically and H_X-equivariantly onto ran X = (ker X^dagger)^perp. At X = 0 we have H_X = G, and the index is the chiral class [V_L] - [V_R] of Corollary 9.3. D_X has no zero modes iff X is invertible. This requires rho_Q and rho_U to be isomorphic as H_X-representations, i.e. the residual theory must be vectorlike. For the Standard Model with H = SU(3) x U(1)_em, the quark sector satisfies this. A lepton sector without nu_R does not: a massless left-handed neutrino is forced for every X, in agreement with the unpaired nu_L of [job 06](06_vectorlike_odd_factorization.md). ∎
+because X maps (ker X)^perp isomorphically and H_X-equivariantly onto ran X = (ker X^dagger)^perp. At X = 0 we have H_X = G, and the index is the chiral class [V_L] - [V_R] of Corollary 9.3. D_X has no zero modes iff X is invertible. This requires rho_Q and rho_U to be isomorphic as H_X-representations, i.e. the residual theory must be vectorlike. For the Standard Model with H = SU(3) x U(1)_em, the quark sector satisfies this. A lepton sector without nu_R does not: a massless left-handed neutrino is forced for every X preserving electromagnetism (H contained in H_X), in agreement with the unpaired nu_L of [job 06](06_vectorlike_odd_factorization.md). ∎
 
 ## Exact secular equation
 
@@ -43,19 +43,19 @@ A = diag(alpha_i) and B = diag(beta_j). Let W be the set of lambda > 0 with lamb
 **Theorem 12.4.** For lambda in W, lambda is an eigenvalue of D_X iff det(lambda^2 - A(lambda) X B(lambda) X^dagger) = 0, and its multiplicity is dim ker(lambda^2 - A X B X^dagger). Moreover:
 
 1. alpha_i(0) = 2m/(1 - e^{-2ml}) with m = m_i^Q, which equals f_{Q_i}^2, the value at x = l of the normalized zero mode e^{mx}; likewise beta_j(0) = 2m/(e^{2ml} - 1) = f_{U_j}^2 for e^{-mx}. In terms of c, f^2 = phi(c)^2/l with phi(c)^2 = 2c/(e^{2c} - 1) and phi(0) = 1.
-2. On W, each alpha_i and beta_j is a strictly decreasing, concave function of lambda^2. It vanishes at exactly one point, namely the lowest positive eigenvalue Lambda_i^Q of Q_i alone with R(0) = 0 and L(l) = 0, respectively Lambda_j^U of U_j alone with L(0) = 0 and R(l) = 0. These are the type-(c) problems of lemma 09.
+2. On its own window 0 < lambda^2 < m^2 + pi^2/l^2, each alpha_i (and each beta_j) is a strictly decreasing, concave function of lambda^2, positive at 0 and tending to -infinity at the edge of that window, so it vanishes at exactly one point: the lowest positive eigenvalue Lambda_i^Q of Q_i alone with R(0) = 0 and L(l) = 0, respectively Lambda_j^U of U_j alone with L(0) = 0 and R(l) = 0 (the type-(c) problems of lemma 09). On the common window W it is still decreasing and concave but may stay positive (e.g. l = 1, M_Q = diag(0, 4): alpha_2 > 0 on all of W = (0, pi)).
 
 *Proof.* With R(0) = 0, the Q-field solution is R = a sinh(omega x)/omega and L = a(cosh(omega x) + m sinh(omega x)/omega)/lambda. With L(0) = 0, the U-field solution is L = b sinh(omega x)/omega and R = b(m sinh(omega x)/omega - cosh(omega x))/lambda. On W, every S = sinh(omega l)/omega is nonzero. Inserting these into the conditions at l and eliminating b gives lambda^2 c = X B X^dagger A c for c = diag(S_Q) a. The map c -> eigenfunction is linear and injective. Finally, lambda^2 - X B X^dagger A and lambda^2 - A X B X^dagger have kernels of equal dimension for lambda != 0. For item 2, the expansion x coth x = 1 + sum_{n >= 1} 2x^2/(x^2 + n^2 pi^2) gives
 
     z^{1/2} coth(z^{1/2} l) = (1/l) [1 + sum_{n >= 1} 2 z l^2 / (z l^2 + n^2 pi^2)],
 
-which is strictly increasing and concave in z > -pi^2/l^2. Substituting z = m^2 - lambda^2 gives the claim. The function tends to -infinity at the edge of W, and alpha_i = 0 means Q_L(l) = 0. ∎
+which is strictly increasing and concave in z > -pi^2/l^2. Substituting z = m^2 - lambda^2 gives the claim. The function tends to -infinity at the edge of its own window, and alpha_i = 0 means Q_L(l) = 0. ∎
 
 **Example 12.5 (one flavor, no bulk mass: the interpolation).** For N_Q = N_U = 1 and m = 0 we get alpha = beta = lambda cot(lambda l), and the equation reduces to tan^2(lambda l) = abs(X)^2. With theta = arctan abs(X) in [0, pi/2], the positive spectrum is
 
     theta/l,   (n pi - theta)/l,   (n pi + theta)/l   (n >= 1).
 
-At X = 0 the light pair is the pair of chiral zero modes of types (a) and (b). As abs(X) -> infinity the conditions tend to Q_L(l) = 0 and U_R(l) = 0, so each field becomes type (c), and the spectrum tends to two copies of (r - 1/2) pi/l. The light pair theta/l therefore interpolates continuously between the chiral zero modes and the Connes-Lott mass pi/(2l) of [job 05](05_deconstruction_interval.md). Its eigenvectors span a Gamma-graded two-dimensional space on which D acts as (theta/l) sigma_1, with the Gamma = +1 vector carried by (Q_L, U_L) and the Gamma = -1 vector by (Q_R, U_R). ∎
+At X = 0 the light pair is the pair of chiral zero modes of types (a) and (b): zero then has multiplicity two and the positive eigenvalues are n pi/l, each of multiplicity two; theta = pi/2 is reached only as a limit. As abs(X) -> infinity the conditions tend to Q_L(l) = 0 and U_R(l) = 0, so each field becomes type (c), and the spectrum tends to two copies of (r - 1/2) pi/l. The light pair theta/l therefore interpolates continuously between the chiral zero modes and the Connes-Lott mass pi/(2l) of [job 05](05_deconstruction_interval.md). Its eigenvectors span a Gamma-graded two-dimensional space on which D acts as (theta/l) sigma_1, with the Gamma = +1 vector carried by (Q_L, U_L) and the Gamma = -1 vector by (Q_R, U_R). ∎
 
 ## Light spectrum and towerless limit
 
@@ -74,13 +74,13 @@ Let F_Q = diag(f_{Q_i}), F_U = diag(f_{U_j}) and Y_0 = F_Q X F_U. Let Lambda_Q =
 **Theorem 12.7 (towerless limit of the texture).** Fix the localization parameters c_i^Q and c_j^U and the matrix Y_hat = X/l, and let l -> 0. Put Phi_Q = diag(phi(c_i^Q)), Phi_U = diag(phi(c_j^U)) and M_F = Phi_Q Y_hat Phi_U. For every E > 0 and all small l, the spectrum of D_X in [-E, E] consists of:
 
 - 0 with multiplicity N_Q + N_U - 2 rank Y_hat;
-- plus/minus lambda_k(l) for k <= rank Y_hat, where
+- plus/minus lambda_k(l) for those k <= rank Y_hat with sigma_k(M_F) <= E (since lambda_k(l) < sigma_k(M_F) and lambda_k(l) -> sigma_k(M_F)), where
 
       abs(lambda_k(l) - sigma_k(M_F)) <= sigma_k(M_F)^3 l^2 (1/L_Q^2 + 1/L_U^2),
 
   and L_Q = l Lambda_Q and L_U = l Lambda_U depend only on the c's.
 
-All other eigenvalues exceed lambda_* = min(L_Q, L_U)/l, which tends to infinity. Hence the towerless remnant is the finite even triple with H_F = C^{N_Q} (+) C^{N_U}, Gamma_F = diag(1, -1) and
+All eigenvalues outside zero and the light set {+/- lambda_k} have absolute value greater than lambda_* = min(L_Q, L_U)/l, which tends to infinity. For E > norm(M_F) the light space has dimension N_Q + N_U and, after grading-preserving unitary identifications, its compressed Dirac matrices converge to D_F below. Calling the limit a spectral triple requires specifying an algebra and its representation; with that understood, the towerless remnant is the finite even triple with H_F = C^{N_Q} (+) C^{N_U}, Gamma_F = diag(1, -1) and
 
     D_F = [[0, M_F], [M_F^dagger, 0]],   M_F = Phi_Q Y_hat Phi_U,
 
@@ -100,7 +100,11 @@ where f_I is the product of f_i over i in I.
 
 *Proof.* By Cauchy-Binet, the p-th compound is Lambda^p M = Lambda^p F Lambda^p X Lambda^p G, with entries f_I g_J det X_{IJ}, and sigma_1 ... sigma_p = norm(Lambda^p M). The lower bound is the (T_p, T_p) entry. For the upper bound, norm(A) <= sum abs(A_{IJ}). Any p-subset I != T_p trades at least one index of T_p for an index <= N - p, so f_I/f_{T_p} <= eps_p^F. Hence sum_I f_I <= f_{T_p}(1 + K_p eps_p^F), and similarly for g. ∎
 
-**Corollary 12.9 (masses from localization).** Index generations so that k = N - p + 1. Then m_k = sigma_{N-k+1} = f_k g_k (Delta_{N-k+1}/Delta_{N-k}) (1 + O(eps)), with Delta_0 = 1. With M_F = Phi_Q Y_hat Phi_U and Y_hat anarchic (all minors of order one), the masses follow phi(c_k^Q) phi(c_k^U). Since phi(c) = (2c)^{1/2} e^{-c} (1 + O(e^{-2c})) for large c, order-one differences of the c's between generations give exponential hierarchies:
+**Corollary 12.9 (masses from localization).** Assume every trailing minor Delta_p is nonzero. Put E_0 = E_N = 0 and E_p = (D_p/Delta_p)((1 + K_p eps_p^F)(1 + K_p eps_p^G) - 1) for 1 <= p < N. Then
+
+    1/(1 + E_{p-1}) <= sigma_p / (f_{N-p+1} g_{N-p+1} Delta_p/Delta_{p-1}) <= 1 + E_p,
+
+by dividing the bounds of Lemma 12.8 for p and p - 1. Indexing generations by k = N - p + 1, m_k = f_k g_k (Delta_{N-k+1}/Delta_{N-k})(1 + O(eps)) as eps = max_p (eps_p^F + eps_p^G) -> 0, for fixed X and N (uniform statements need uniform bounds on D_p/Delta_p). Without the minor condition the formula fails: F = G = diag(t, 1) and X = sigma_1 give Delta_1 = 0 while both singular values equal t. With M_F = Phi_Q Y_hat Phi_U and Y_hat anarchic (all minors of order one), the masses follow phi(c_k^Q) phi(c_k^U). Since phi(c) = (2c)^{1/2} e^{-c} (1 + O(e^{-2c})) for large c, order-one differences of the c's between generations give exponential hierarchies (the ratio also carries the factor sqrt(c_k^Q c_k^U/(c_{k+1}^Q c_{k+1}^U)), bounded when adjacent c's differ by bounded amounts):
 
     m_k / m_{k+1} ~ e^{-(c_k^Q - c_{k+1}^Q) - (c_k^U - c_{k+1}^U)}   up to factors of order one. ∎
 
@@ -127,3 +131,232 @@ Method: roots of the secular equation are bracketed on fine grids and refined by
 
   The errors decrease as l^2.
 - **Lemma 12.8:** no violation in 2000 random complex 3 x 3 cases with log-uniform gradings over 8 e-folds (6000 inequalities).
+
+## Referee report (gpt-6.1-terra, effort max, 3 Nov 2026)
+
+Prompt: [prompts/terra_check_12.md](prompts/terra_check_12.md). Reproduced as received; the corrections above implement it. Claude checked the three counterexamples (M_Q = diag(0, 4); arctan(l)/l -> 1; F = G = diag(t, 1), X = sigma_1) by hand.
+
+We take \(\ell>0\) and the bulk masses to be real, as in Lemma 09. All arguments below are analytic; we used no numerical computation.
+
+### Lemma 12.1
+
+**Verdict: Correct.**
+
+At \(x=\ell\), the free boundary values are \(Q_L(\ell)\) and \(U_R(\ell)\). Substitution of the boundary conditions into the boundary form gives zero, and the allowed boundary values have half the total boundary dimension. The conditions at \(x=0\) are likewise maximal isotropic. The adjoint boundary conditions therefore coincide with the stated ones, so \(D_X\) is self-adjoint.
+
+The graph norm controls the \(H^1\)-norm, and the embedding \(H^1([0,\ell])\hookrightarrow L^2([0,\ell])\) is compact. Thus the resolvent is compact. Finally, \(\Gamma\) preserves the boundary conditions and anticommutes with the differential expression.
+
+### Theorem 12.2
+
+**Verdict: Correct.**
+
+The zero-mode equations give
+\[
+L(x)=e^{Mx}a,\qquad R(x)=e^{-Mx}b.
+\]
+The conditions at \(0\) remove \(Q_R\) and \(U_L\), and those at \(\ell\) impose exactly the two displayed kernel conditions.
+
+The endpoint exponentials are invertible, so the two chiral kernel dimensions are \(N_Q-\operatorname{rank}X\) and \(N_U-\operatorname{rank}X\). Their difference is \(N_Q-N_U\).
+
+### Corollary 12.3
+
+**Verdict: Correct with amendment.** The neutrino conclusion holds for every \(X\) that preserves the stated electromagnetic symmetry, meaning \(H\subseteq H_X\). The phrase “for every X” needs that qualification.
+
+The endpoint exponentials commute with the group actions. They identify the actual chiral kernels equivariantly with \(\ker X^\dagger\) and \(\ker X\). The orthogonal complements are equivariantly isomorphic through \(X\), proving the displayed index identity. Both kernels vanish exactly when \(X\) is invertible, in which case \(X\) is an equivariant isomorphism.
+
+If electromagnetic symmetry is not required, the neutrino assertion can fail. For one lepton generation with zero bulk masses, take
+\[
+Q_L=(\nu_L,e_L),\qquad U_R=e_R,\qquad
+X=\begin{pmatrix}1\\0\end{pmatrix}.
+\]
+The left kernel is then spanned by \(e_L\), while \(\nu_L\) is coupled to \(e_R\). This \(X\) breaks electromagnetic charge. If \(X\) intertwines the electromagnetic representations and there is no neutral right-handed lepton, the neutrino subspace lies in \(\ker X^\dagger\), as claimed.
+
+### Theorem 12.4
+
+**Verdict: Error.** The secular equation, multiplicity formula, endpoint values, monotonicity and concavity are correct. The assertion that *each* function has a zero **on the common window \(W\)** is false.
+
+For example, take \(\ell=1\), \(M_Q=\operatorname{diag}(0,4)\), and \(M_U=(0)\). Then \(W=(0,\pi)\), but throughout \(W\),
+\[
+\alpha_2(\lambda)
+=\sqrt{16-\lambda^2}\,
+  \coth\!\sqrt{16-\lambda^2}+4>0.
+\]
+Its individual lowest mixed-boundary eigenvalue is greater than \(4\), hence lies outside \(W\). The proof’s assertion that every function tends to \(-\infty\) at the edge of \(W\) fails for the same reason.
+
+The corrected zero statement uses each mass’s **individual** first-pole window
+\[
+0<\lambda<\sqrt{m^2+\pi^2/\ell^2}.
+\]
+On that interval the corresponding \(\alpha\) or \(\beta\) has exactly one zero, at the lowest positive eigenvalue of its mixed-boundary problem. The \(U\) problem is equivalent to the type-(c) problem after exchanging components and changing the mass sign.
+
+For the monotonicity and concavity, write \(s=\lambda^2\) and \(a_n=(n\pi/\ell)^2\). Differentiating the displayed partial-fraction expansion on the individual window gives
+\[
+\frac{d}{ds}\bigl(\omega\coth(\omega\ell)\bigr)
+=-\frac{2}{\ell}\sum_{n\ge1}
+  \frac{a_n}{(m^2-s+a_n)^2}<0,
+\]
+\[
+\frac{d^2}{ds^2}\bigl(\omega\coth(\omega\ell)\bigr)
+=-\frac{4}{\ell}\sum_{n\ge1}
+  \frac{a_n}{(m^2-s+a_n)^3}<0.
+\]
+The function is positive at \(s=0\) after the appropriate \(\pm m\) is added, and tends to \(-\infty\) at its own first pole. This proves the corrected zero claim.
+
+For the secular equation, the proof’s boundary variables \(c,d\) satisfy
+\[
+\lambda c=-XBd,\qquad \lambda d=-X^\dagger A c.
+\]
+Eliminating \(d\) gives \(\lambda^2c=XB X^\dagger A c\). For \(\lambda\ne0\), the kernels of \(\lambda^2I-CA\) and \(\lambda^2I-AC\), with \(C=XBX^\dagger\), are isomorphic via \(A\), with inverse \(C/\lambda^2\). This also proves the stated multiplicity.
+
+### Example 12.5
+
+**Verdict: Correct with amendment.** At \(X=0\), omit \(\theta/\ell=0\) from the **positive** spectrum; instead, zero has multiplicity two. The positive eigenvalues are then \(n\pi/\ell\), each with multiplicity two. For finite \(X\), \(\theta<\pi/2\); the endpoint \(\theta=\pi/2\) is a limit.
+
+For all positive \(\lambda\), direct substitution of the massless solutions into the boundary conditions gives
+\[
+\sin^2(\lambda\ell)-|X|^2\cos^2(\lambda\ell)=0.
+\]
+For \(X\ne0\), its roots are exactly the listed values. This derivation also includes the roots at \(n\pi/\ell\) when \(X=0\), even though the secular formula of Theorem 12.4 was derived only before the first pole. The negative spectrum follows by grading symmetry. The stated two-dimensional graded block and the limiting mixed-boundary spectrum follow from these roots and their eigenvectors.
+
+### Theorem 12.6
+
+**Verdict: Correct.**
+
+Although Theorem 12.4 requires the correction above, it still supplies what is needed here. The smallest individual first pole belongs to some field; that field’s first zero lies before its pole. Consequently, \(\lambda_*\) lies before the smallest first pole, and \((0,\lambda_*)\subset W\).
+
+On this interval \(A,B\) are positive. Conjugation reduces the secular equation to the eigenvalue equation for \(Y(\lambda)Y(\lambda)^\dagger\), proving the multiplicity claim. If \(\lambda_2>\lambda_1\), then
+\[
+Y(\lambda_2)=P\,Y(\lambda_1)\,Q
+\]
+for diagonal contractions \(P,Q\). Thus every singular value is continuous and nonincreasing, so it meets the strictly increasing function \(\lambda\) at most once. The stated condition at \(\lambda=0\) gives a crossing before \(\lambda_*\).
+
+Concavity gives, with \(t_Q=\lambda^2/\Lambda_Q^2\) and \(t_U=\lambda^2/\Lambda_U^2\),
+\[
+\sigma_k(Y(\lambda))
+\ge \sqrt{(1-t_Q)(1-t_U)}\,\sigma_k(Y_0)
+\ge (1-t_Q-t_U)\sigma_k(Y_0).
+\]
+Together with \(\sigma_k(Y(\lambda))\le\sigma_k(Y_0)\), this proves both bounds.
+
+### Theorem 12.7
+
+**Verdict: Error.** The fixed-energy spectrum cannot contain every listed light eigenvalue for every \(E>0\).
+
+Take one massless flavor, \(\widehat Y=1\), and \(E=1/2\). Then \(X=\ell\), and Example 12.5 gives the positive light eigenvalue
+\[
+\lambda(\ell)=\frac{\arctan\ell}{\ell}\longrightarrow1.
+\]
+For sufficiently small \(\ell\), it is outside \([-1/2,1/2]\), contrary to the stated list.
+
+The corrected fixed-energy statement includes only those \(\pm\lambda_k(\ell)\) with \(\lambda_k(\ell)\le E\). Equivalently, for each fixed \(E>0\) and all sufficiently small \(\ell\), include exactly those indices for which
+\[
+\sigma_k(M_F)\le E.
+\]
+The equality case is included because the strict decrease of \(A\) and \(B\) gives \(\lambda_k(\ell)<\sigma_k(M_F)\) for every positive light eigenvalue.
+
+The displayed error estimate follows from Theorem 12.6:
+\[
+0<\sigma_k(M_F)-\lambda_k(\ell)
+\le \sigma_k(M_F)^3\ell^2
+   \left(L_Q^{-2}+L_U^{-2}\right).
+\]
+Zero has the stated multiplicity. Apart from zero and the **entire** light set \(\{\pm\lambda_k\}\), the eigenvalues have **absolute value** greater than \(\lambda_*\) for small \(\ell\). At \(\lambda_*\), the limiting matrices \(A,B\) are nonnegative and the relevant singular values are at most \(\|M_F\|\), whereas \(\lambda_*\to\infty\); hence equality at the boundary is excluded for small \(\ell\).
+
+For \(E>\|M_F\|\), the full low-energy space has dimension \(N_Q+N_U\). After grading-preserving unitary identifications, its compressed Dirac matrices converge to the displayed \(D_F\). Calling the limit a spectral triple additionally requires an algebra and its representation to be specified.
+
+### Lemma 12.8
+
+**Verdict: Correct.**
+
+The entries of \(\bigwedge^p M\) are \(f_Ig_J\det X_{IJ}\), and its operator norm is \(\sigma_1\cdots\sigma_p\). Its \((T_p,T_p)\) entry gives the lower bound.
+
+For every \(I\ne T_p\), at least one factor from the top \(p\) indices is replaced by one no larger than \(N-p\), so \(f_I/f_{T_p}\le\epsilon_p^F\); the analogous estimate holds for \(g\). Bounding the operator norm by the sum of absolute entries, while keeping the \((T_p,T_p)\) entry separate, gives the upper bound. For \(p=N\), both bounds reduce to the determinant identity.
+
+### Corollary 12.9
+
+**Verdict: Error.** The displayed mass formula is not valid under the hypotheses of Lemma 12.8: its denominator can vanish, and its leading term can be zero when the singular value is positive.
+
+For \(0<t<1\), take
+\[
+F=G=\operatorname{diag}(t,1),\qquad
+X=\begin{pmatrix}0&1\\1&0\end{pmatrix}.
+\]
+Then \(FXG\) has both singular values equal to \(t\), but \(\Delta_1=0\) and \(\Delta_2=1\). The formula for \(m_2\) gives zero, and the formula for \(m_1\) divides by zero.
+
+A sufficient correction is to require every trailing minor \(\Delta_p\) to be nonzero and to define the small parameter. More precisely, put \(E_0=E_N=0\) and, for \(1\le p<N\),
+\[
+E_p=\frac{D_p}{\Delta_p}
+ \left[(1+K_p\epsilon_p^F)(1+K_p\epsilon_p^G)-1\right].
+\]
+Lemma 12.8 then gives the explicit bounds
+\[
+\frac{1}{1+E_{p-1}}
+\le
+\frac{\sigma_p}
+ {f_{N-p+1}g_{N-p+1}\Delta_p/\Delta_{p-1}}
+\le 1+E_p.
+\]
+Indeed, apply the lemma to the products of the first \(p\) and first \(p-1\) singular values and divide their bounds. For fixed \(X,N\), if
+\[
+\epsilon=\max_{p<N}(\epsilon_p^F+\epsilon_p^G)\longrightarrow0,
+\]
+these inequalities give the stated \(1+O(\epsilon)\) formula. Uniform estimates require uniform bounds on \(D_p/\Delta_p\).
+
+The localization conclusion follows under quantitative order-one upper and lower bounds on the relevant minors. For large positive \(c\), the mass ratio also contains the factor
+\[
+\sqrt{\frac{c_k^Q c_k^U}
+           {c_{k+1}^Q c_{k+1}^U}}.
+\]
+It is bounded when the adjacent large \(c\)’s differ by bounded amounts; without such control it cannot be suppressed uniformly as an order-one factor.
+
+### Remark 12.10
+
+**Bound.** We can prove an upper bound independent of the right-hand localization profiles. It does not prove the reported sample medians or a universal lower bound.
+
+For each sector \(s=u,d\), let
+\[
+M_s=F X_s G_s,\qquad
+F=\operatorname{diag}(f_1\le f_2\le f_3),\qquad
+G_s=\operatorname{diag}(g_1^{(s)}\le g_2^{(s)}\le g_3^{(s)}),
+\]
+with all diagonal entries positive. Assume \(X_s\) is invertible and its trailing minors \(\Delta_1^{(s)},\Delta_2^{(s)}\) are nonzero. With \(D_p^{(s)}\) as in Lemma 12.8, define
+\[
+K_s=
+\left(1+\frac{\sqrt3D_1^{(s)}}{\Delta_1^{(s)}}\right)
+\left(1+\frac{\sqrt3D_2^{(s)}}{\Delta_2^{(s)}}\right).
+\]
+Choose the columns of the left singular-vector matrices \(U_s\) in increasing order of singular value, and put \(V=U_u^\dagger U_d\). Then, for \(i<j\),
+\[
+\boxed{\quad |V_{ij}|\le 3K_uK_d\,\frac{f_i}{f_j}.\quad}
+\]
+
+To prove this, set \(H_s=M_sM_s^\dagger\), and temporarily suppress \(s\). Write
+\[
+a=\frac{\sqrt3D_1}{\Delta_1},\qquad
+b=\frac{\sqrt3D_2}{\Delta_2}.
+\]
+For the largest eigenvalue \(\lambda_3\) of \(H\),
+\[
+\lambda_3\ge f_3^2g_3^2\Delta_1^2,
+\qquad H_{ii}\le3D_1^2f_i^2g_3^2.
+\]
+Cauchy–Schwarz therefore gives \(|U_{i3}|\le a f_i/f_3\). Applying the same argument to \(H^{-1}\), and using
+\((X^{-1})_{11}=\det X_{\{2,3\},\{2,3\}}/\det X\), gives
+\(|U_{i1}|\le b f_1/f_i\). Cofactor identities for the unitary \(U\) bound the two remaining off-diagonal entries. Together,
+\[
+|U_{ij}|\le (1+a)(1+b)
+ \min\!\left(\frac{f_i}{f_j},\frac{f_j}{f_i}\right).
+\]
+Summing the three terms in \(V_{ij}=\sum_k\overline{(U_u)_{ki}}(U_d)_{kj}\) proves the boxed inequality.
+
+There is no corresponding positive universal lower bound: identical up and down matrices have \(V=I\), including when their minors are nonzero. The numerical medians also require the sampling distribution and sampled matrices, neither of which is specified in the remark.
+
+### Amendments and errors
+
+- **12.3:** Restrict the neutrino assertion to couplings preserving electromagnetic symmetry.
+- **12.4:** State the unique-zero claim on each field’s individual first-pole window; it can fail on the common window.
+- **12.5:** Treat zero separately at \(X=0\), and treat \(\theta=\pi/2\) as a limit.
+- **12.7:** Filter the light eigenvalues by \(E\); state the gap in absolute value; specify an algebra and representation for a spectral-triple claim.
+- **12.9:** Require nonzero trailing minors and define the separation parameter and its dependence. Retain the square-root localization factors unless they are uniformly bounded.
+
+**Overall:** 9 statements checked: 4 correct, 2 correct with amendment, 0 gaps, and 3 errors.

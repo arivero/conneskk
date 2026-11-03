@@ -242,6 +242,17 @@ depends(l13_rho, l13_mass_formula).
 attempted_by(l13_rho, astra6).
 addresses(t4, l13_compression).  addresses(t4, l13_not_covariant).  addresses(t4, l13_sqrt6).  addresses(t4, l13_ccm).  addresses(t4b, l13_not_covariant).
 
+claim(l06_neutral, theorem, proved, "Lemma 4, Proposition 7", "Neutral-sector criterion: KO-7 always exists; KO-5 exists iff every singular value of the neutral mass matrix has even multiplicity; generic Majorana masses exclude KO-5.").
+source(l06_neutral, 'lemmas/06_vectorlike_odd_factorization.md', '').
+depends(l06_neutral, l06_factorization).
+attempted_by(l06_neutral, astra6).
+checked_by(l06_neutral, claude_opus_5_5, by_hand).
+
+checked_by(l12_index, terra_6_1, by_hand).  % referee, 3 Nov 2026
+checked_by(l12_secular, terra_6_1, by_hand).  % referee, 3 Nov 2026
+checked_by(l12_towerless, terra_6_1, by_hand).  % referee, 3 Nov 2026
+checked_by(l12_graded, terra_6_1, by_hand).  % referee, 3 Nov 2026
+
 hypothesis(ccm_relation, "Chamseddine-Connes-Marcolli normalization at the matching scale: 8 M_W^2 = sum of N_f m_f^2 over Dirac masses.").
 hypothesis(positive_rank, "The twisting bundle has positive rank, with the equivariant self-adjoint realization.").
 hypothesis(heat_kernel_spectral_action, "Heat-kernel cutoff spectral action with a vectorial gauge background commuting with the mass matrix.").
@@ -588,7 +599,7 @@ strategy(t5b, open, "Heavy-W limit at fixed cutoff with the mass-weighted spectr
 strategy(t1, settled, "Deconstruction: Connes-Lott is the minimal truncation of the chiral interval.").
 strategy(t2, settled, "KO parity: grading-reversing involution U with UJ = sJU; s = -1 gives 9, s = +1 gives 11; J alone does not decide.").
 strategy(t2b, settled, "Selection of s by the interval: the bare reflection gives 9 in the standard product; J_M and particle number do not select the sign.").
-strategy(t2c, open, "With a Majorana mass for nu_R, does a unique admissible sign of the reduction remain, and which?").
+strategy(t2c, settled, "With a generic Majorana mass for nu_R the reduced triple admits only the KO-7 factorization (lemma 06, Lemma 4 and Proposition 7).").
 strategy(t3, settled, "Chirality from boundary conditions; the boundary Yukawa interpolates (a)+(b) to (c)+(c) at constant index.").
 strategy(t4, settled, "Gauge sector of the towerless interval: fixed compression is not gauge covariant and the finite spectral action does not reproduce the tower mass.").
 strategy(t4b, open, "Gauge-covariant reduction (projection of the fluctuated operator) and matching with the interval tower.").
@@ -599,7 +610,7 @@ strategy(t8, partial, "Fermion masses as internal momenta: towerless Yukawa text
 addresses(t1, l05_truncation).  addresses(t1, l05_limits).
 addresses(t2, l06_factorization).  addresses(t2, l06_counterexample).  addresses(t2, l06_nuL).
 addresses(t2b, l07_reflection).  addresses(t2b, conj07_4).  addresses(t2b, l08_product).  addresses(t2b, l08_both_signs).  addresses(t2b, l08_pairing).
-addresses(t2c, l08_pairing).  addresses(t2c, l06_nuL).
+addresses(t2c, l08_pairing).  addresses(t2c, l06_nuL).  addresses(t2c, l06_neutral).
 addresses(t3, l09_index).  addresses(t3, l09_lightpair).  addresses(t3, l09_limits).  addresses(t3, l12_index).  addresses(t3, l12_secular).
 addresses(t5b, l03_weights).  addresses(t0, l05_truncation).  addresses(t0, l13_not_covariant).
 addresses(t5, l11_bounds).  addresses(t5, l11_nogo).  addresses(t5, l11_top).
