@@ -786,6 +786,40 @@ depends(l16_twistor, l10_toeplitz).
 attempted_by(l16_twistor, claude_opus_5_5).
 checked_by(l16_twistor, claude_opus_5_5, python("numpy: real dimensions 16 and 32, j, the structure on k = 4")).
 addresses(t0b, l16_two_sheets).  addresses(t0b, l16_twistor).
+%% Astra job 18 (T5b). Referee pending.
+claim(l18_kernel, theorem, proved, "Theorem 1, Lemma 2, Corollary 3", "Exact quadratic kernel of the spectral action for a transverse vector about constant V_0, for f a Laplace transform of a positive measure with moment conditions; gauge invariance through the Goldstone orbit; the asymptotic expansion reproduces Proposition 13.5 and the CCM relation.").
+source(l18_kernel, 'lemmas/18_heavy_limit_near_cutoff.md', '').
+depends(l18_kernel, l03_weights).
+attempted_by(l18_kernel, astra6).
+checked_by(l18_kernel, claude_opus_5_5, python("direct heat traces at zero and nonzero momentum, independent of the kernel")).
+claim(l18_taylor, proposition, proved, "Proposition 4, Theorem 5", "Top-only Standard Model family at fixed Lambda: M_W^2 -> 3 m^2/8 at small m/Lambda, M_W^2 ~ Lambda^4/m^2 at large m/Lambda, for the Taylor and pole masses, with M_W^2 <= Lambda^2/e (pole for the heat cutoff; Taylor for the whole class).").
+source(l18_taylor, 'lemmas/18_heavy_limit_near_cutoff.md', '').
+depends(l18_taylor, l18_kernel).
+attempted_by(l18_taylor, astra6).
+checked_by(l18_taylor, claude_opus_5_5, python("closed forms, limits, bound, root of the pole equation")).
+claim(l18_angles, proposition, proved, "Proposition 6", "In the same family kappa_em/kappa_s = 8/3 and the neutral-current cos^2 theta = 5/8 for all m/Lambda; the matching angle tends to 103/157; M_Z^2 ~ (2/3) x exp(-x) Lambda^2.").
+source(l18_angles, 'lemmas/18_heavy_limit_near_cutoff.md', '').
+depends(l18_angles, l18_kernel).
+attempted_by(l18_angles, astra6).
+checked_by(l18_angles, claude_opus_5_5, python("neutral matrix recomputed from Standard Model charges")).
+claim(l18_wrong_sign, counterexample, proved, "Counterexample 7", "For V_0 = m sigma_3, T = sigma_1, the Taylor kinetic coefficient is negative for m^2 > Lambda^2 (heat cutoff; negative somewhere for all f in the class), while the full form has a unique positive pole with M^2 ~ 4 m^2.").
+source(l18_wrong_sign, 'lemmas/18_heavy_limit_near_cutoff.md', '').
+depends(l18_wrong_sign, l18_kernel).
+attempted_by(l18_wrong_sign, astra6).
+checked_by(l18_wrong_sign, claude_opus_5_5, python("direct heat trace at nonzero momentum against the kernel")).
+claim(l18_no_centralizer, counterexample, proved, "Counterexample 8", "As m_t -> infinity at fixed Lambda, the broken vectors keep a finite nonzero kinetic form and a vanishing mass: heavy fermions do not select the centralizer by mass decoupling. Restricting the connection to the centralizer from the outset does give decoupling of the heavy block.").
+source(l18_no_centralizer, 'lemmas/18_heavy_limit_near_cutoff.md', '').
+depends(l18_no_centralizer, l18_taylor).
+attempted_by(l18_no_centralizer, astra6).
+claim(l18_radial, no_go, proved, "No-go theorem 9", "For f in the positive Laplace class, without an added potential or constraint, no finite c > 0 is stationary along V = c V_*: the constant-background density decreases monotonically.").
+source(l18_radial, 'lemmas/18_heavy_limit_near_cutoff.md', '').
+attempted_by(l18_radial, astra6).
+checked_by(l18_radial, claude_opus_5_5, by_hand).
+claim(l18_joint, corollary, proved, "Corollary 10", "The limit m_t/M_W -> sqrt(8/3) with all scales diverging needs Lambda -> infinity with m_t/Lambda -> 0; at fixed m_t/Lambda > 0, masses scale with Lambda and the ratio is a function of m_t/Lambda.").
+source(l18_joint, 'lemmas/18_heavy_limit_near_cutoff.md', '').
+depends(l18_joint, l18_taylor).
+attempted_by(l18_joint, astra6).
+addresses(t5b, l18_taylor).  addresses(t5b, l18_no_centralizer).  addresses(t5b, l18_radial).  addresses(t5b, l18_joint).
 %% Lemma 17 (T10, routine part). Referee: reviews/2026-11-03_terra_check_17.md
 claim(l17_action, theorem, proved, "Theorem 17.1", "The fermion action of M x F on the Gamma = +1 subspace equals (1/2) <jj psi, (D_M + gamma_5 d) psi> on an unconstrained spinor, with jj = J_M (x) j for s = +1 and gamma_5 J_M (x) j for s = -1.").
 source(l17_action, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').
@@ -827,7 +861,7 @@ addresses(t10, l17_no_kinetic).  addresses(t10, l17_action).  addresses(t10, l17
 strategy(t0, open, "Founding problem: finite real triples (in general, not specifically the Standard Model) from commutative Kaluza-Klein data, with specified spectral, operator-algebraic, K-theoretic or truncation convergence.").
 strategy(t0b, open, "Reach the current Connes et al. framework (KO-6, order one, doubling, classification, beyond first order, twisted triples) beyond the Connes-Lott layer.").
 strategy(t10, open, "Yukawa couplings as explicit mass terms in the D = 9 action (d_5 = D_0 + m Gamma_0) and the chiral limit m_u = m_d = 0.").
-strategy(t5b, open, "Heavy-W limit at fixed cutoff with the mass-weighted spectral action of lemma 03.").
+strategy(t5b, settled, "Heavy-W limit at fixed cutoff: in the top-only family, M_W and M_Z tend to 0 as m_t -> infinity; a heavy limit exists only jointly with Lambda -> infinity (lemma 18; classical, bosonic; referee pending).").
 strategy(t1, settled, "Deconstruction: Connes-Lott is the minimal truncation of the chiral interval.").
 strategy(t2, settled, "KO parity: grading-reversing involution U with UJ = sJU; s = -1 gives 9, s = +1 gives 11; J alone does not decide.").
 strategy(t2b, settled, "Selection of s by the interval: the bare reflection gives 9 in the standard product; J_M and particle number do not select the sign.").
