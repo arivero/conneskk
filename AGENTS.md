@@ -23,6 +23,7 @@ Use plain descriptive headings. Avoid motivational or slogan-like headings and a
 A no-go result is a guide to where to go next, and it leaves the question open. These results are tempting because they come cheaply, and treating them as closing an issue has misled physics before.
 
 - State each negative result in its exact scope: the family, the order, the definition and the action.
+- State it together with its hypotheses and known escapes, as Coleman-Mandula is stated together with supersymmetry.
 - Require consensus among multiple models before relying on one in general, with an independent check by a model other than its author as the minimum.
 - Say which direction the result points to. Close an item only with a positive theorem.
 

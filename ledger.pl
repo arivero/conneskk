@@ -880,6 +880,22 @@ depends(l19_parent, l19_gauge).
 depends(l19_parent, l13_compression).
 attempted_by(l19_parent, claude_opus_5_5).
 addresses(t0b, l19_fluct).  addresses(t0b, l19_parent).
+%% Lemma 21 (T12). Referee pending.
+claim(l21_removal, proposition, proved, "Proposition 21.1", "Among single charged species, only an up-type quark can be removed while keeping cos^2 theta_NC = 5/8 and the photon/gluon ratio 8/3; a down-type gives 59/92 and 46/15, a charged lepton 17/28 and 7/3; d + e together contribute as u.").
+source(l21_removal, 'lemmas/21_top_counting.md', 'removal-identities').
+depends(l21_removal, l18_angles).
+attempted_by(l21_removal, claude_opus_5_5).
+checked_by(l21_removal, claude_opus_5_5, python("exact fractions")).
+claim(l21_counts, claim, proved, "Propositions 21.2 and 21.3", "The finite trace with a top mass is 84 + 12 exp(-x). 96 = 84 + 12 in two ways: five quarks and all leptons plus the top; charged fermions plus the neutrinos, the first with Dirac neutrinos. C_3 and C_6 have 84 on-shell components.").
+source(l21_counts, 'lemmas/21_top_counting.md', 'the-two-families-of-84').
+attempted_by(l21_counts, claude_opus_5_5).
+checked_by(l21_counts, claude_opus_5_5, python("exact counting")).
+claim(l21_so30, claim, proved, "SO(30) branching", "The adjoint of SO(30) with 30 = (5,3) + conjugate contains (15,3bar) and (25,1), with the charged scalar counts of three generations, plus three triplets of charge 4/3 and one neutral state.").
+source(l21_so30, 'lemmas/21_top_counting.md', 'so30').
+attempted_by(l21_so30, claude_opus_5_5).
+checked_by(l21_so30, claude_opus_5_5, python("exact counting")).
+prior_work(l21_so30, partial, "hep-ph/0512065: the 15 diquarks and 25 mesons, the 4/3 states, and the top unable to form them; SO(30) not there").
+addresses(t12, l21_removal).  addresses(t12, l21_counts).  addresses(t12, l21_so30).
 %% Lemma 17 (T10, routine part). Referee: reviews/2026-11-03_terra_check_17.md
 claim(l17_action, theorem, proved, "Theorem 17.1", "The fermion action of M x F on the Gamma = +1 subspace equals (1/2) <jj psi, (D_M + gamma_5 d) psi> on an unconstrained spinor, with jj = J_M (x) j for s = +1 and gamma_5 J_M (x) j for s = -1.").
 source(l17_action, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').
@@ -930,6 +946,7 @@ strategy(t3, settled, "Chirality from boundary conditions; the boundary Yukawa i
 strategy(t4, open, "Gauge sector of the towerless interval: fixed compression is not gauge covariant and the finite spectral action does not reproduce the tower mass.").
 strategy(t4b, open, "Gauge-covariant reduction: matching with the tower only via a sum rule (tuned bulk mass, tower-scale fermion); impossible with bounded light fermions in the collapse.").
 strategy(t5, settled, "Heavy W forces a heavy Dirac fermion (conditional on the CCM relation).").
+strategy(t12, open, "The separate role of the top: removal identities, SO(30) from the five other quarks, Seiberg duality with emergent supersymmetry, and the two families of 84 states against C_3, M2 and M5.").
 strategy(t11, open, "Horava-Witten as a two-sheet geometry: walls as sheets, wall algebras as summands, bulk as connecting operator; compare the chiralities of the walls first.").
 strategy(t6, open, "Metric-compatible towerless limits (operator-system truncations).").
 strategy(t7, open, "Towerless S^2, CP^2 to H, M_3(C) with the right real structure.").
