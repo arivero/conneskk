@@ -1,0 +1,119 @@
+% Explicit masses and the chiral limit: short note, from lemmas/17_explicit_masses_chiral_limit.md
+\ifdefined\mobile
+\documentclass[aps,prd,reprint,onecolumn,nofootinbib,amsmath,amssymb,floatfix]{revtex4-2}
+\usepackage[paperwidth=270pt,paperheight=585pt,textwidth=246pt,textheight=545pt,top=18pt,left=12pt,headheight=0pt,headsep=0pt,footskip=14pt]{geometry}
+\else
+\documentclass[aps,prd,reprint,nofootinbib,amsmath,amssymb,floatfix]{revtex4-2}
+\fi
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsthm}
+\emergencystretch=1.5em
+\ifdefined\mobile\makeatletter\def\frontmatter@abstractwidth{246\p@}\makeatother\fi
+\usepackage[hidelinks]{hyperref}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\pending}[1]{\textsf{[to check: #1]}}
+\newcommand{\C}{\mathbb C}
+\renewcommand{\H}{\mathbb H}
+
+\begin{document}
+
+\title{Explicit masses and the chiral limit in odd reductions of almost-commutative geometries}
+\date{Draft, 3 November 2026}
+
+\begin{abstract}
+A finite KO-6 triple with a grading-reversing involution factors as an odd triple times a point. We show that on the physical subspace the fermion action of the product with spacetime is exactly the action of the odd triple on an unconstrained spinor, with the Yukawa block becoming the constant matrix $d$ in $D_M+\gamma_5d$. A paired sector gives one Dirac action of explicit mass for either sign of the involution, and on a subalgebra commuting with $D_F$ no scalar fluctuation remains. At zero quark mass the symmetry of the colour-only quark sector is $U(N_f)\times U(N_f)$. The admissible involutions are the $\Sigma\in U(N_f)$ with $\Sigma^*M$ Hermitian, which are the stationary points of the mass term, and at $M=0$ they form a homogeneous space of the chiral group. All of this is kinematic. A spacetime-dependent reduction of the fixed operator leaves the spectral action unchanged, so that a pion kinetic term needs another operator or a quantum effective action, and the condensate needs a measure on gauge fields, infinite volume and an order of limits.
+\end{abstract}
+
+\maketitle
+
+\section{Setting}
+
+The noncommutative Standard Model has a finite factor of KO-dimension 6 \cite{Connes2006,Barrett2007,CCM2007}. Reference \cite{DD2011} treats products of real triples. A companion paper \footnote{Finite spectral triples as towerless intervals (draft).} studies when a KO-6 triple factors as an odd triple times a Clifford point, with formal KO-labels $4+5=9$ and $4+7=11$. Here we ask how the Yukawa coupling reads in the odd triple, and what the data say about the chiral limit. The labels are formal: the metric dimension of the product is 4, and the label 9 exists only for sectors with an involution of sign $s=-1$. Charged paired sectors have one. The strict light spectrum with one or three unpaired neutrinos has none, since its $H_0$ has odd dimension.
+
+Let $M$ be a compact Riemannian spin 4-manifold with $(D_M,J_M,\gamma_5)$, $J_M^2=-1$, $J_MD_M=D_MJ_M$, $J_M\gamma_5=\gamma_5J_M$, $\gamma_5D_M=-D_M\gamma_5$. Let $F=(A_F,H_F,D_F,J_F,\gamma_F)$ be finite with KO-6 signs. On $L^2(S)\otimes H_F$ put $D=D_M\otimes1+\gamma_5\otimes D_F$, $J=J_M\otimes J_F$, $\Gamma=\gamma_5\otimes\gamma_F$. The fermion action is $\tfrac12\langle J\xi,D\xi\rangle$ on Grassmann $\xi$ in $\{\Gamma=+1\}$.
+
+Let $U$ be a unitary involution with $U\gamma_F=-\gamma_FU$, $[U,a]=[U,a^\circ]=[U,D_F]=0$ and $UJ_F=sJ_FU$. On $H_0=\{\gamma_F=+1\}$ put $d=UD_F$ and $j=UJ_F$, so that $j^2=s$ and $jd=sdj$.
+
+\section{The reduced action}
+
+\begin{theorem}
+Define $R(\phi\otimes x)=\phi_+\otimes x+\phi_-\otimes Ux$ on $L^2(S)\otimes H_0$. Then $R$ is unitary onto $\{\Gamma=+1\}$, and
+\begin{equation}
+\langle JR\psi,DR\psi'\rangle=\langle\mathcal J\psi,\mathcal D\psi'\rangle,\quad \mathcal D=D_M\otimes1+\gamma_5\otimes d,
+\end{equation}
+with $\mathcal J=J_M\otimes j$ for $s=+1$ and $\mathcal J=\gamma_5J_M\otimes j$ for $s=-1$. So the action is $\tfrac12\langle\mathcal J\psi,\mathcal D\psi\rangle$ on an unconstrained spinor $\psi$. Moreover $\mathcal D^2=D_M^2+d^2$, and $\mathrm{Tr}f(D^2/\Lambda^2)=2\,\mathrm{Tr}f(\mathcal D^2/\Lambda^2)$ when $f(D^2/\Lambda^2)$ is trace class.
+\end{theorem}
+
+\begin{proof}
+Let $\tilde U=1\otimes U$ and $rx=(x+Ux)/\sqrt2$. Then $D_Fr=rd$, $(1+\tilde U)R/\sqrt2=1\otimes r$, so $\tilde UDR=R\mathcal D$. Using $J_Fx=Ujx$ and $UJ_FU=sJ_F$, one finds $\tilde UJR=R\mathcal J$. Finally $\langle J\xi,D\xi'\rangle=\langle\tilde UJ\xi,\tilde UD\xi'\rangle$.
+\end{proof}
+
+So the doubling is removed by the chirality projection, and the physical space is exactly the Hilbert space of the odd product.
+
+\begin{corollary}
+For a paired sector $H_0=\mathrm{span}(e_L,\bar e_R)$ with $m>0$, $(d_+,j_+)=(mI,\sigma_1K)$ and $(d_-,j_-)=(\mathrm{diag}(m,-m),i\sigma_2K)$, the action is
+\begin{equation}
+S_+=\langle J_M\psi_2,(D_M+\gamma_5m)\psi_1\rangle
+\end{equation}
+and $S_-(\psi_1,\psi_2)=S_+(\psi_1,\gamma_5\psi_2)$. With $R_5=e^{i\pi\gamma_5/4}$, $R_5(D_M+\gamma_5m)R_5=D_M+im$. This is one Dirac fermion of explicit mass $m$ for either sign, up to the displayed change of Grassmann variables.
+\end{corollary}
+
+An unpaired reduction has a Majorana-type action: for $\gamma_F=\sigma_3$, $J_F=\sigma_1K$, $D_F=m\sigma_1$ and $U=\sigma_1$, $H_0$ is one-dimensional and the action is $\tfrac12\langle J_M\psi,(D_M+\gamma_5m)\psi\rangle$. The neutral sector of the strict light spectrum has this form with $m=0$. The rotation $R_5$ is formal, and carries a Jacobian in a quantized theory.
+
+\begin{proposition}
+Let $B\subset A_F$ be a unital subalgebra with $[D_F,B]=0$, and let $U$ commute with $B$ and $B^\circ$. Inner fluctuations by $C^\infty(M)\otimes B$ contain only Clifford one-forms, and $D_A$ reduces to $D_M(A)+\gamma_5\otimes d$ with $d$ constant.
+\end{proposition}
+
+In the Standard Model representation with $B=\{(\lambda,Q_\lambda,m)\}\cong\C\oplus M_3(\C)$, $u_L,u_R$ carry the left character $\lambda$, $d_L,d_R$ carry $\bar\lambda$, and both carry the same opposite colour action, so the kept mass blocks commute with $B$. This holds in the strict projection and when only a vectorlike top pair is removed. The reading ``photon and gluons'' needs unimodularity or an inherited restriction, since $U(B)$ contains $U(1)\times U(3)$. A canonically normalized radial field couples to a fermion of fixed mass with strength $m_f/v$.
+
+\section{The chiral limit}
+
+Consider $N_f$ flavours, $q_L,q_R\in\C^{N_f}\otimes\C^3$, with $D_F=\bigl(\begin{smallmatrix}0&M\\M^*&0\end{smallmatrix}\bigr)\otimes1_3$ on $(q_L,q_R)$ and the conjugate on antiparticles.
+
+\begin{proposition}
+The unitaries on this sector commuting with both colour actions, $\gamma_F$, $J_F$ and $D_F$ are the pairs $(V_L,V_R)\in U(N_f)^2$ with $V_LM=MV_R$. So $G(0)=U(N_f)\times U(N_f)$, $G(mI)=U(N_f)_V$, and $G(M)=U(1)^{N_f}_V$ for positive distinct masses. With the electric charge, $G(0)=U(1)^4$ for two flavours.
+\end{proposition}
+
+\begin{theorem}
+With the colour algebra only, the admissible involutions of sign $s$ are $[\begin{smallmatrix}0&\Sigma\\ \Sigma^*&0\end{smallmatrix}]$ on $(q_L,q_R)$, and $s$ times the conjugate on antiparticles, with $\Sigma\in U(N_f)$ and $\Sigma^*M$ Hermitian. This holds iff $\Sigma$ is a stationary point of $-\mathrm{Re}\,\mathrm{tr}(M\Sigma^*)$. The reduced mass on $(q_L,\bar q_R)$ is $\Sigma M^*\oplus s\,\overline{\Sigma^*M}$, tensored with $1_3$. At $M=0$ the set is all of $U(N_f)$, a homogeneous space of $G(0)$ under $\Sigma\mapsto V_L\Sigma V_R^*$, with stabilizer $U(N_f)_V$ at $\Sigma=1$. At $M=mI$ it is $\{\Sigma=\Sigma^*,\Sigma^2=1\}$; for positive distinct masses it is the $2^{N_f}$ sign matrices; for invertible $M$, the polar part is the unique global minimum.
+\end{theorem}
+
+\begin{proof}
+Commuting with both colour actions and reversing the grading gives the form, and $UJ_F=sJ_FU$ fixes the rest. Commuting with $D_F$ is $\Sigma M^*=M\Sigma^*$ and $\Sigma^*M=M^*\Sigma$, which are equivalent. Along $\Sigma e^{itX}$ the derivative of $\mathrm{Re}\,\mathrm{tr}(M\Sigma^*)$ is $\mathrm{Im}\,\mathrm{tr}(\Sigma^*MX)$. The minimum is von Neumann's trace inequality.
+\end{proof}
+
+The homogeneous space at $M=0$ has the same stabilizer as in the symmetry breaking of QCD. The mass condition says that $\Sigma^*M$ is Hermitian, and it captures all stationary points, including saddles and maxima. Vacuum alignment \cite{Dashen1971} asks which of them minimizes a physical energy, and these data contain no such energy. So the theorem gives the shape of the set of reductions, and a map to a quantum order parameter is missing. The anomalous singlet direction also separates the classical $U(N_f)$ from the pion manifold. Choosing another reduction of a fixed even triple changes a sign in the reduced block, and differs from a physical mass-sign change, for which the determinants at $\pm m$ differ by $(-1)^{n_0}$.
+
+\begin{proposition}
+Let $U(x)$ be pointwise admissible, $c^\mu=[D_M,x^\mu]$ and $B_\mu=(U\partial_\mu U)|_{H_0}$. Then $R^{-1}\tilde UDR=D_M+c^\mu P_-B_\mu+\gamma_5d(x)$, which is generally not self-adjoint. If $\Sigma(x)$ only changes coordinates for $D$, the spectral action does not depend on it. A kinetic term needs another operator: for $D_M+\gamma_5d_\Sigma(x)$ on flat $M$ with $M=mI$, $\Sigma=\Sigma^*$, $\Sigma^2=1$, the heat expansion contains
+\begin{equation}
+\frac{N_cf(0)m^2}{4\pi^2}\int\mathrm{tr}(\partial_\mu\Sigma^*\partial^\mu\Sigma),
+\end{equation}
+which vanishes at $M=0$.
+\end{proposition}
+
+This points to a nonzero $m$ with a new operator, for instance the Higgs-type inner fluctuation $\Phi=m\Sigma(x)$ of an even triple whose algebra contains flavour algebras on $L$ and $R$, with accompanying flavour gauge fields, or to a quantum effective action.
+
+\section{The condensate}
+
+\begin{proposition}
+Let $D_M(A)$ have eigenvalues $\lambda_n$, with $n_0$ zero modes, on volume $V$, and let $c_V(m;A)=V^{-1}\sum_nm/(\lambda_n^2+m^2)$, regularized with a subtraction regular at $m=0$. At fixed $A$ on compact $M$, $c_V=n_0/(Vm)+O(m)$ as $m\to0$. If $\rho_m(\lambda)=\lim_V\langle V^{-1}\sum_n\delta(\lambda-\lambda_n)\rangle_m$ is equicontinuous at $0$ with $\rho_m(0)\to\rho_0(0)$, with tails and subtraction controlled uniformly in $m$ and the infinite-volume limit taken inside the integral, then $\lim_{m\to0}\lim_V\langle c_V\rangle=\pi\rho_0(0)$, the form of the Banks-Casher relation \cite{BC1980} \pending{the relation against the source}.
+\end{proposition}
+
+So the spectral triple supplies the operator $D_M+\gamma_5m$, the density of each fixed operator, and the continuity of $m\to0$ at fixed background. The averaged density, the regulated determinant or Pfaffian measure, the sequence of volumes and the order of limits need further input. A proof of existence of QCD with fermions would supply a measure, and would not by itself give $\rho_0(0)>0$. With the anti-self-adjoint $\tilde D=-iD_M$, $\det(\tilde D+m)=m^{n_0}\prod_{\lambda>0}(\lambda^2+m^2)>0$ with a compatible regulator, which is part of the method of \cite{VW1984}.
+
+\section{The chiral limit on an interval}
+
+In the scalar-algebra realization on a chiral interval, $\mathcal D=D_M+\gamma_5(D_0+m\Gamma_0)$. The limit $m\to0$ has two routes. With a bulk mass, $m=\mu\,\mathrm{sech}(\kappa_0l)\sim2\mu e^{-\mu l}$ is positive at finite parameters, and at fixed $\mu$ tends to $0$ as $l\to\infty$: an exponentially small residue, with the localization and overlap mechanism of domain-wall fermions \cite{Kaplan1992,Shamir1993}. With a boundary Yukawa matrix, $X=0$ gives exact zero modes, and for flavour-degenerate bulk masses $X$ preserves exactly $\{(V_Q,V_U):V_QX=XV_U\}$, so that $X$ is a spurion on the wall and the symmetry is exact at finite $l$ when $X=0$.
+
+\section*{Provenance}
+
+This note has no listed authors. The results were proved by Claude Opus 5.5, with the proposition on spacetime-dependent $\Sigma$ by Terra 6.1, and refereed by Terra 6.1, which corrected five items. The identities were checked with Python on finite models. The full proofs are in the project file \texttt{lemmas/17\_explicit\_masses\_chiral\_limit.md}.
+
+\bibliography{towerless_intervals}
+
+\end{document}

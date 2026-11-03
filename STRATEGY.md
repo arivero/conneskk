@@ -14,7 +14,7 @@ We want to know how this works when the 10-dimensional object is a noncommutativ
 1. A finite factor F has heat dimension 0 for every v (canonical 2.1). Light finite modes never create a continuum dimension. Any emerging dimension therefore needs a parent with an infinite tower, and F must be its truncation.
 2. On the two-point space the Connes distance is 1/abs(m). As m -> 0 the points separate to infinite distance, and as m -> infinity they merge (canonical 2.3).
 3. Heavy finite operators give embedded norm-resolvent limits onto ker T, with algebra A ∩ {T}' (canonical 2.2). The Feshbach version with an internal tower R^{-1} D_X + S is in research_state 6.10, and lemma 01 gives the circle case.
-4. Chirality: I_G = [V_L] - [V_R] is nonzero for the electroweak group and restricts to 0 on SU(3) x U(1)_em (research_note 7, canonical 14.2). The heavy endpoint therefore admits a vectorlike (odd) description. The massless endpoint needs a boundary, defect or domain wall, since a closed odd bulk cannot carry it. A 7-dimensional spin bulk has a KO-degree-6 boundary class (canonical 11.1).
+4. Chirality: I_G = [V_L] - [V_R] is nonzero for the electroweak group and restricts to 0 on SU(3) x U(1)_em (research_note 7, canonical 14.2). The heavy endpoint therefore admits a vectorlike (odd) description. The massless endpoint needs a boundary, defect or domain wall, since a closed odd bulk cannot carry it. The objection that odd dimensions have no chiral fermions therefore constrains the endpoints: 9 does not need chiral fermions, and 11 loses them to walls at infinity, as a limit. The physical point, with finite Fermi constant and measured weak angle, lies in the even interior. A 7-dimensional spin bulk has a KO-degree-6 boundary class (canonical 11.1).
 5. Naive compression fails metrically. With D_F = 0, compressing a shrinking S^2 to M_2(C) gives infinite distances where the sphere gives distances tending to 0 (research_state 6.10).
 6. Lemma 02: invariant connections on the monopole kernels can produce M_3(C) and M_6(C) as parallel algebras. Towerless limits can therefore carry nonabelian finite algebras.
 
@@ -47,6 +47,10 @@ The identification "the two sheets are a truncated interval, with length proport
 2. **One session:** finite-dimensional or classical analysis, decidable by one Astra run.
 3. **Fail fast:** prefer results whose negation would kill or reshape H.
 4. **Cite known theorems:** circle collapse (Ammann), adiabatic limits (Bismut-Cheeger, Dai), spectral truncations (Connes-van Suijlekom 2021), fuzzy KO types (Barrett 2015) and QED as NCG (van den Dungen-van Suijlekom 2013) are cited instead of re-proved.
+
+## Papers
+
+The project is larger than one paper. Current plan: `paper/towerless_intervals.tex` (the towerless picture, with proofs as Supplemental Material) and `paper/chiral_limit_note.tex` (T10, lemma 17, a short note). Further results can have their own notes.
 
 ## Ranked list
 

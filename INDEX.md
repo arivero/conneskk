@@ -114,6 +114,10 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
 
 REVTeX source, built with `make` in `paper/` in two forms: Phys Rev two-column, and one column of the same width for phones. Sections: Introduction; Setting and conventions; The two-point space is a truncated interval; Bulk mass: the light pair and both limits; Boundary Yukawa matrices and towerless textures; Real structures: the choice between 9 and 11; Spectral action: heavy fermions and the gauge sector; Whole triples and truncations; Discussion; Provenance and Supplemental Material.
 
+### Short note: *Explicit masses and the chiral limit in odd reductions of almost-commutative geometries*: [paper/chiral_limit_note.tex](paper/chiral_limit_note.tex)
+
+From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built in the same two forms.
+
 ### Paper: *Nine, Ten and Eleven Dimensions*: [canonical_research.md](canonical_research.md)
 
 - [Abstract](canonical_research.md#abstract)

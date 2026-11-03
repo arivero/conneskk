@@ -1,17 +1,19 @@
-# Two forms of one paper: Phys Rev two-column, and one column of the same width for phones.
-all: towerless_intervals.pdf towerless_intervals_mobile.pdf
+# Each paper in two forms: Phys Rev two-column, and one column of the same width for phones.
+PAPERS = towerless_intervals chiral_limit_note
+all: $(PAPERS:%=%.pdf) $(PAPERS:%=%_mobile.pdf)
 
-towerless_intervals.pdf: towerless_intervals.tex towerless_intervals.bib
-	pdflatex -interaction=nonstopmode towerless_intervals >/dev/null || true
-	bibtex towerless_intervals >/dev/null || true
-	pdflatex -interaction=nonstopmode towerless_intervals >/dev/null || true
-	pdflatex -interaction=nonstopmode towerless_intervals >/dev/null
+define build
+	pdflatex -interaction=nonstopmode $(2) $(3) >/dev/null || true
+	bibtex $(1) >/dev/null || true
+	pdflatex -interaction=nonstopmode $(2) $(3) >/dev/null || true
+	pdflatex -interaction=nonstopmode $(2) $(3) >/dev/null
+endef
 
-towerless_intervals_mobile.pdf: towerless_intervals.tex towerless_intervals.bib
-	pdflatex -interaction=nonstopmode -jobname=towerless_intervals_mobile '\def\mobile{}\input{towerless_intervals}' >/dev/null || true
-	bibtex towerless_intervals_mobile >/dev/null || true
-	pdflatex -interaction=nonstopmode -jobname=towerless_intervals_mobile '\def\mobile{}\input{towerless_intervals}' >/dev/null || true
-	pdflatex -interaction=nonstopmode -jobname=towerless_intervals_mobile '\def\mobile{}\input{towerless_intervals}' >/dev/null
+%_mobile.pdf: %.tex towerless_intervals.bib
+	$(call build,$*_mobile,-jobname=$*_mobile,'\def\mobile{}\input{$*}')
+
+%.pdf: %.tex towerless_intervals.bib
+	$(call build,$*,,$*)
 
 clean:
 	rm -f *.aux *.log *.bbl *.blg *.out *Notes.bib
