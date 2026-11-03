@@ -34,6 +34,7 @@ Facts: `claim/5`, `source/3`, `depends/2`, `hypothesis/2`, `attempted_by/2`, `ch
 10. `LITERATURE.md`: prior work for each claim, with verdicts known / partial / not found.
     `current_framework.md`: background note on the current Connes et al. framework, and what truncation reaches (STRATEGY T0b).
 11. `evaluation2026-11-03.md` and `reviews/`: the dated evaluation of the project and the external review of it, with our response.
+12. `11D/` (branch `11D`): eleven dimensions from massless W and Z, Witten's space M^{111} as the hypercharge quotient of the 5-bar, and the M2/M5 reading of lemma 21; start at [11D/README.md](11D/README.md). Its ledger facts are in `11D/ledger_11d.pl`, included by `ledger.pl`.
 
 ## Removed sources
 

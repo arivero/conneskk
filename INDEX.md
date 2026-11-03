@@ -108,6 +108,12 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
 
 [notes §8](connes_kk_research_state.md#8-claim-ledger-status-dependencies-and-tests) · [paper §15](canonical_research.md#15-consolidated-result-and-the-next-test) · [strategy, Ranked list](STRATEGY.md#ranked-list) · [ledger.pl](ledger.pl) · [strategy, What would count against H](STRATEGY.md#what-would-count-against-h) · [lemma RE](lemmas/README.md) · [DUPLICATES.md](DUPLICATES.md#5-contradictions-found-and-their-resolution)
 
+### 1.18 Eleven dimensions from massless W and Z (branch 11D)
+
+The interval of H as an antiperiodic circle and as the M-theory circle; Witten's space M^{111} as the hypercharge quotient of the 5-bar, the Z_6 and chirality from fluxes; hypercharge from C_3, matter from wrapped branes, the Higgs as the M2 position, the magnetic completion AdS5 x CP^2 x S^2, and the 84 of lemma 21 against C_3.
+
+[11D README](11D/README.md) · [11D §1](11D/01_interval_and_eleventh_dimension.md) · [11D §2](11D/02_witten_spaces_hypercharge_quotient.md) · [11D §3](11D/03_branes_hypercharge_and_the_84.md) · [strategy, Ranked list (T14)](STRATEGY.md#ranked-list)
+
 ## Part 2. Documents
 
 ### Draft paper: *Finite spectral triples as towerless intervals*: [paper/towerless_intervals.tex](paper/towerless_intervals.tex)
@@ -462,3 +468,40 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
   - p.3: [item 4. Check whether any fermions survive the sphere collapse.](transcripts/Review_Next_Steps_Terra.txt#L162)
   - p.4: [item 5. Specify what happens to the spectral action and the couplings.](transcripts/Review_Next_Steps_Terra.txt#L203)
 - p.5: [user turn](transcripts/Review_Next_Steps_Terra.txt#L230)
+
+### 11D line: [11D/README.md](11D/README.md)
+
+- [Eleven dimensions from massless W and Z](11D/README.md#eleven-dimensions-from-massless-w-and-z)
+- [The picture](11D/README.md#the-picture)
+- [Results](11D/README.md#results)
+- [How the massless limit gives eleven dimensions here](11D/README.md#how-the-massless-limit-gives-eleven-dimensions-here)
+- [Next computations, ranked](11D/README.md#next-computations-ranked)
+- [References used here](11D/README.md#references-used-here)
+- [Files](11D/README.md#files)
+- [The interval of H as an eleventh dimension](11D/01_interval_and_eleventh_dimension.md#the-interval-of-h-as-an-eleventh-dimension)
+- [Setting](11D/01_interval_and_eleventh_dimension.md#setting)
+- [Proposition 1.1 (the chiral interval is the antiperiodic circle)](11D/01_interval_and_eleventh_dimension.md#proposition-11-the-chiral-interval-is-the-antiperiodic-circle)
+- [Proposal 1.3 (the circle of H as the M-theory circle)](11D/01_interval_and_eleventh_dimension.md#proposal-13-the-circle-of-h-as-the-m-theory-circle)
+- [Proposition 1.4 (the one-loop energy at the vacuum angle attracts the walls)](11D/01_interval_and_eleventh_dimension.md#proposition-14-the-one-loop-energy-at-the-vacuum-angle-attracts-the-walls)
+- [What remains open here](11D/01_interval_and_eleventh_dimension.md#what-remains-open-here)
+- [Witten spaces as the hypercharge quotient of the five-dimensional representation](11D/02_witten_spaces_hypercharge_quotient.md#witten-spaces-as-the-hypercharge-quotient-of-the-five-dimensional-representation)
+- [Setting](11D/02_witten_spaces_hypercharge_quotient.md#setting)
+- [Theorem 2.1 (M^{111} is the hypercharge quotient of the 5-bar)](11D/02_witten_spaces_hypercharge_quotient.md#theorem-21-m111-is-the-hypercharge-quotient-of-the-5-bar)
+- [Proposition 2.2 (uniqueness of the count 7)](11D/02_witten_spaces_hypercharge_quotient.md#proposition-22-uniqueness-of-the-count-7)
+- [Proposition 2.3 (topology of Y_{a,b})](11D/02_witten_spaces_hypercharge_quotient.md#proposition-23-topology-of-y_ab)
+- [Proposition 2.4 (the Z_6 of the Standard Model)](11D/02_witten_spaces_hypercharge_quotient.md#proposition-24-the-z_6-of-the-standard-model)
+- [Chiral zero modes on the base with abelian fluxes](11D/02_witten_spaces_hypercharge_quotient.md#chiral-zero-modes-on-the-base-with-abelian-fluxes)
+  - [Proposition 2.5 (no generation from fluxes along hypercharge and B - L)](11D/02_witten_spaces_hypercharge_quotient.md#proposition-25-no-generation-from-fluxes-along-hypercharge-and-b---l)
+  - [Proposition 2.6 (one generation from a universal charge, the grading and B - L)](11D/02_witten_spaces_hypercharge_quotient.md#proposition-26-one-generation-from-a-universal-charge-the-grading-and-b---l)
+- [What this file establishes, and the direction](11D/02_witten_spaces_hypercharge_quotient.md#what-this-file-establishes-and-the-direction)
+- [Hypercharge from the three-form, matter from branes, and the two families of 84](11D/03_branes_hypercharge_and_the_84.md#hypercharge-from-the-three-form-matter-from-branes-and-the-two-families-of-84)
+- [Setting](11D/03_branes_hypercharge_and_the_84.md#setting)
+- [Proposal 3.1 (hypercharge is the Betti vector of Y_{3,2})](11D/03_branes_hypercharge_and_the_84.md#proposal-31-hypercharge-is-the-betti-vector-of-y_32)
+- [Proposition 3.2 (one generation is the odd part of the exterior algebra of the 5-bar)](11D/03_branes_hypercharge_and_the_84.md#proposition-32-one-generation-is-the-odd-part-of-the-exterior-algebra-of-the-5-bar)
+- [Proposal 3.4 (the Higgs is the position of the M2-brane, and the massless limit is the apex)](11D/03_branes_hypercharge_and_the_84.md#proposal-34-the-higgs-is-the-position-of-the-m2-brane-and-the-massless-limit-is-the-apex)
+- [Proposition 3.5 (a magnetic completion: AdS5 x CP^2 x S^2)](11D/03_branes_hypercharge_and_the_84.md#proposition-35-a-magnetic-completion-ads5-x-cp2-x-s2)
+- [Proposal 3.6 (two completions of one base)](11D/03_branes_hypercharge_and_the_84.md#proposal-36-two-completions-of-one-base)
+- [Proposal 3.7 (the M2/M5 exchange acts on the Betti vector)](11D/03_branes_hypercharge_and_the_84.md#proposal-37-the-m2m5-exchange-acts-on-the-betti-vector)
+- [Proposition 3.8 (no colour-equivariant identification of the 84 with the three-form)](11D/03_branes_hypercharge_and_the_84.md#proposition-38-no-colour-equivariant-identification-of-the-84-with-the-three-form)
+  - [Corollary 3.9 (the coloured states of the 84 are not Kaluza-Klein modes of C_3 on Y_{3,2})](11D/03_branes_hypercharge_and_the_84.md#corollary-39-the-coloured-states-of-the-84-are-not-kaluza-klein-modes-of-c_3-on-y_32)
+- [Summary of the direction](11D/03_branes_hypercharge_and_the_84.md#summary-of-the-direction)

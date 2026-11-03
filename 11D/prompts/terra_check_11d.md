@@ -1,0 +1,17 @@
+You are an independent mathematical referee. Work ALONE: do not spawn subagents and do not delegate. Follow AGENTS.md in the repository root. The repository is read-only for you. You may run Python in memory, and you may run `python3 11D/checks_11d.py` (about 20 s). If you compute, name the language and say what was computed. A computation never replaces a proof.
+
+Files under review: 11D/01_interval_and_eleventh_dimension.md, 11D/02_witten_spaces_hypercharge_quotient.md, 11D/03_branes_hypercharge_and_the_84.md, and the script 11D/checks_11d.py. Author: Claude (Anthropic). Context: STRATEGY.md (hypothesis H), lemmas/05_deconstruction_interval.md (eq. (8) and Part 4), lemmas/21_top_counting.md (the two families of 84), lemmas/24_commutative_parent.md (Theorem 9), LITERATURE.md section F.
+
+Check these items, and for each answer Correct, Correct with amendment, or Error, with the reason.
+
+1. Proposition 1.1: the map W, its unitarity, the image of the domain conditions R(0) = 0 and L(l) = 0, the intertwining of D_l with -i d/dx, and the image of the grading as the reflection.
+2. Proposition 1.4: that the potential of lemma 24 at t = 1 is -n_f F(1)/(8 pi^2 l^4) with the normalization of that lemma, the closed form F(1) = 93 zeta(5)/64, and the sign of the force. Say whether V there is an energy per unit four-volume, so that the reading "the walls attract" is right.
+3. Theorem 2.1: freeness of the circle action, the identification of the quotient as the circle bundle of O(3, 2) over CP^2 x CP^1 (with orientation conventions), the effective group (U(3) x U(2))/U(1)_Y and its intersection with SU(3) x SU(2). Compare with the description of M^{111} in hep-th/9907219 (Kähler quotient with D-term 2|U|^2 = 3|V|^2) and say whether the identification of M^{111} with this quotient, including the Sasaki-Einstein metric as a metric on the same manifold, is right as stated.
+4. Proposition 2.3: the Gysin computation, H^4 of order a^2 with Smith invariants (gcd(a, b), a^2/gcd(a, b)), the spin criterion, and the map (x, y) -> 2x - 3y. Compare with Kreck-Stolz (Ann. Math. 127, 1988) if available.
+5. Proposition 2.4 (c): that every tensor field on Y_{3,2} carries a representation of the effective group, so that no bosonic Kaluza-Klein mode is a colour triplet or weak doublet. State whether the claim needs the isometry group of the Einstein metric to coincide with the effective group of the quotient.
+6. The lemma on required bidegrees and Propositions 2.5 and 2.6: the cohomology of O(alpha, beta), the canonical spin^c root (-3/2, -1), the sign conventions for right-handed conjugates, the proof of 2.5 and the explicit solutions of 2.6. This is a negative result: give an independent check, and state its scope and the escapes you see.
+7. Proposition 3.5: the Ricci components and the condition abs(f_1) < 2 abs(f_2), with the convention R_MN = (G_MPQR G_N^PQR - g_MN G^2/12)/12; the closure of *G_4 and the vanishing of G_4 ∧ G_4.
+8. Proposition 3.8 and Corollary 3.9: the list of real nine-dimensional representations of SU(3), the decompositions used, and the scope. This is a negative result: give an independent check.
+9. Wording: flag any place where a proposal is stated as a result, and any sentence of the forms excluded by AGENTS.md.
+
+Write the report to reviews/2026-11-03_terra_check_11d.md only if the instructions of the run allow writing; otherwise return it as text.
