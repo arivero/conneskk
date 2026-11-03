@@ -400,6 +400,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
 - [Review of the evaluation](reviews/2026-11-03_review_of_evaluation.md)
 - [Terra check of N8](reviews/2026-11-03_terra_check_N8.md)
 - [Terra referee report on lemmas 15 and 16](reviews/2026-11-03_terra_check_15_16.md)
+- [Terra referee report on lemmas 08, 13 and 14](reviews/2026-11-03_terra_check_08_13_14.md)
 
 ### Transcript: [transcripts/Connes_Electrodynamics_ModelMd.txt](transcripts/Connes_Electrodynamics_ModelMd.txt)
 

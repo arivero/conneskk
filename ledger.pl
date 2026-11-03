@@ -71,7 +71,7 @@ source(l06_counterexample, 'lemmas/06_vectorlike_odd_factorization.md', '').
 depends(l06_counterexample, l06_factorization).
 attempted_by(l06_counterexample, astra6).
 checked_by(l06_counterexample, claude_opus_5_5, python("both involutions on the electrodynamics triple")).
-claim(l06_nuL, no_go, proved, "No-go", "A finite triple with an unpaired nu_L (and no Majorana term) admits only the KO-7 factorization; no factorization while H is in the algebra. A statement about the finite triple, not about a parent manifold.").
+claim(l06_nuL, no_go, proved, "No-go", "The strict light spectrum of the Standard Model representation with one or three unpaired nu_L and no Majorana term admits only the KO-7 factorization (odd multiplicity in the neutral criterion); no factorization while H is in the algebra. A statement about that finite triple, not about a parent manifold.").
 source(l06_nuL, 'lemmas/06_vectorlike_odd_factorization.md', 'consequence-for-the-10---9-claim').
 depends(l06_nuL, l06_factorization).
 attempted_by(l06_nuL, astra6).
@@ -737,6 +737,43 @@ claim(paper_14_3_1, claim, proved, "Proved", "The lens order $p$ cancels in the 
 source(paper_14_3_1, 'canonical_research.md', '143-the-angle-test').
 attempted_by(paper_14_3_1, corpus).
 checked_by(paper_14_3_1, corpus, python("see research_checks_knowledge.md")).
+%% Referee of lemmas 08, 13 and 14 (Terra 6.1, 3 Nov 2026): reviews/2026-11-03_terra_check_08_13_14.md
+checked_by(l08_both_signs, terra_6_1, by_hand).
+checked_by(l08_ce_reality, terra_6_1, by_hand).
+checked_by(l08_chargeconj, terra_6_1, by_hand).
+checked_by(l08_lift, terra_6_1, by_hand).
+checked_by(l08_nogo, terra_6_1, by_hand).
+checked_by(l08_pairing, terra_6_1, by_hand).
+checked_by(l08_product, terra_6_1, by_hand).
+checked_by(l08_reconcile, terra_6_1, by_hand).
+checked_by(l08_spacetime, terra_6_1, by_hand).
+checked_by(l13_ccm, terra_6_1, by_hand).
+checked_by(l13_compression, terra_6_1, by_hand).
+checked_by(l13_kk_mass, terra_6_1, by_hand).
+checked_by(l13_mass_formula, terra_6_1, by_hand).
+checked_by(l13_not_covariant, terra_6_1, by_hand).
+checked_by(l13_rho, terra_6_1, by_hand).
+checked_by(l13_sqrt6, terra_6_1, by_hand).
+checked_by(l14_covariant, terra_6_1, by_hand).
+checked_by(l14_image, terra_6_1, by_hand).
+checked_by(l14_nogo_collapse, terra_6_1, by_hand).
+checked_by(l14_normalizations, terra_6_1, by_hand).
+checked_by(l14_sum_rule, terra_6_1, by_hand).
+checked_by(l14_three_fifths, terra_6_1, by_hand).
+checked_by(l14_tuned, terra_6_1, by_hand).
+claim(terra_two_neutral_pairs, counterexample, proved, "Referee's counterexample to the unqualified D.2", "H = C^2 (x) C^2, A = C, D = 0, Gamma = 1 (x) sigma_3, J = (1 (x) sigma_1) K: two unpaired neutral states, no Majorana term, with involutions 1 (x) sigma_1 and sigma_2 (x) sigma_1 of opposite signs.").
+source(terra_two_neutral_pairs, 'reviews/2026-11-03_terra_check_08_13_14.md', 'section-6-theorem-d').
+attempted_by(terra_two_neutral_pairs, terra_6_1).
+checked_by(terra_two_neutral_pairs, claude_opus_5_5, python("numpy: both involutions and their signs")).
+claim(paper_D2_unqualified, claim, refuted, "First version of Theorem D item 2", "Any finite triple with an unpaired left-handed neutrino and no Majorana term admits only s = +1.").
+source(paper_D2_unqualified, 'reviews/2026-11-03_terra_check_08_13_14.md', 'section-6-theorem-d').
+attempted_by(paper_D2_unqualified, claude_opus_5_5).
+refuted_by(paper_D2_unqualified, terra_two_neutral_pairs).
+claim(terra_winding, counterexample, proved, "Referee's counterexample to the global form of Theorem 14.3", "On S^1 x S^3, the fixed-singular-value link lambda exp(i theta) is not attained, since every globally smooth real A_5 gives zero winding.").
+source(terra_winding, 'reviews/2026-11-03_terra_check_08_13_14.md', 'lemma-14').
+attempted_by(terra_winding, terra_6_1).
+checked_by(terra_winding, claude_opus_5_5, by_hand).
+
 %% Lemma 17 (T10, routine part). Referee pending.
 claim(l17_action, theorem, proved, "Theorem 17.1", "The fermion action of M x F on the Gamma = +1 subspace equals (1/2) <jj psi, (D_M + gamma_5 d) psi> on an unconstrained spinor, with jj = J_M (x) j for s = +1 and gamma_5 J_M (x) j for s = -1.").
 source(l17_action, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').
