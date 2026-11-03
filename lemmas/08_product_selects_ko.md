@@ -558,3 +558,5 @@ Python (numpy), antiunitaries represented as J = M K, with J X J^-1 = M conj(X) 
 - **Counterexample 11.** KO-6 signs, order zero and first order hold for random diagonal algebra elements; U_- and U_+ are both admissible (involutive, grading-reversing, commuting with D_F, Q, the algebra and its opposite), with s = -1 and s = +1.
 - **No-go theorem 8.** D_F^2 = D_0^2 (x) 1 + 1 (x) D_I^2 holds exactly.
 - **Counterexample 4 (first order), by hand.** For e = diag(1, 0) and the inherited diagonal J_2, e° = e and [[m sigma_1, e], e] = m sigma_1.
+
+**Terminology.** Here "doubling" means the factorization of an even triple as an odd triple times a Clifford point (the doubling of an odd triple in Dabrowski-Dossena's product construction). It is unrelated to the "fermion doubling" of the noncommutative Standard Model (Lizzi-Mangano-Miele-Sparano). Prior work on products and on J versus J gamma: [../LITERATURE.md](../LITERATURE.md), section D; the factorization criterion and the 9/11 results were not found in print.

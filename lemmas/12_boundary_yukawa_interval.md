@@ -360,3 +360,5 @@ There is no corresponding positive universal lower bound: identical up and down 
 - **12.9:** Require nonzero trailing minors and define the separation parameter and its dependence. Retain the square-root localization factors unless they are uniformly bounded.
 
 **Overall:** 9 statements checked: 4 correct, 2 correct with amendment, 0 gaps, and 3 errors.
+
+**Literature ([../LITERATURE.md](../LITERATURE.md), section C).** The one-flavour spectrum of Example 12.5 is equation (5.6) of Csaki-Grojean-Hubisz-Shirman-Terning, Fermions on an interval (2004); the warped multi-flavour analogue of the light spectrum and of the localization textures is in Casagrande et al. 2008 (equations 65, 87, 90, 94-97). No NCG paper deriving D_F from localization was found.

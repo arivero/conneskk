@@ -336,3 +336,5 @@ Even if “at one end” is read as exactly one Dirichlet condition, another bou
 - **9.11:** Require Neumann at the opposite endpoint for the claimed lightest mass.
 
 Overall: 11 statements checked; 4 correct, 3 correct with amendment, 2 gaps closed above, and 2 errors.
+
+**Literature ([../LITERATURE.md](../LITERATURE.md), section B).** Opposite-chirality boundary modes with exponentially small mixing are in Jackiw-Rebbi 1976, Kaplan 1992 and Shamir 1993 (section 3); collapse of spectral triples to a point is treated by Farsi-Latremoliere (J. London Math. Soc., 2026). The tuned collapse mu(l) of Theorem 9.9 was not found in print.

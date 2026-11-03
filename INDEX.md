@@ -308,6 +308,20 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
 - [Ranked list](STRATEGY.md#ranked-list)
 - [What would sink H](STRATEGY.md#what-would-sink-h)
 
+### Literature check of claims A-I: [LITERATURE.md](LITERATURE.md)
+
+- [A. Connes-Lott as the minimal spectral truncation of a chiral interval](LITERATURE.md#a-connes-lott-as-the-minimal-spectral-truncation-of-a-chiral-interval)
+- [B. The two limits of the massive chiral interval](LITERATURE.md#b-the-two-limits-of-the-massive-chiral-interval)
+- [C. Towerless Yukawa textures](LITERATURE.md#c-towerless-yukawa-textures)
+- [D. KO-dimension of products: 9, 10 or 11](LITERATURE.md#d-ko-dimension-of-products-9-10-or-11)
+- [E. Spectral action: the W mass relation, the top ratio, heavy-fermion weights](LITERATURE.md#e-spectral-action-the-w-mass-relation-the-top-ratio-heavy-fermion-weights)
+- [F. Weinberg angle from a squashed S^3 / lens space and from M^{pqr}](LITERATURE.md#f-weinberg-angle-from-a-squashed-s3--lens-space-and-from-mpqr)
+- [G. The protected zero mode on S^5 (requested by the review)](LITERATURE.md#g-the-protected-zero-mode-on-s5-requested-by-the-review)
+- [H. Anomaly inflow as the five-dimensional parent of chiral boundary modes (requested by the review)](LITERATURE.md#h-anomaly-inflow-as-the-five-dimensional-parent-of-chiral-boundary-modes-requested-by-the-review)
+- [I. The current Connes et al. framework (requested by the coordinator)](LITERATURE.md#i-the-current-connes-et-al-framework-requested-by-the-coordinator)
+- [Items not verified in this session](LITERATURE.md#items-not-verified-in-this-session)
+- [Summary table](LITERATURE.md#summary-table)
+
 ### Lemmas: [lemmas/README.md](lemmas/README.md)
 
 - [01: Lemma 1 — Exact scalar count](lemmas/01_invariant_weyl_growth.md)

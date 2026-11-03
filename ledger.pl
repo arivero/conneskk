@@ -17,6 +17,7 @@
 %% addresses(T, Id)                    strategy item T is addressed by claim Id
 %% contradiction(N, Where, Finding, Resolution, State)    State: resolved | open | compatible
 %% refuted_by(Claim, Counterexample)
+%% prior_work(Claim, Verdict, Reference)   Verdict: known | partial | not_found  (from LITERATURE.md)
 %% claim_amended(Claim, By): Claim stands, with an amendment proved in By
 
 :- discontiguous claim/5, source/3, depends/2, hypothesis/2, attempted_by/2, checked_by/3, overturn/2, addresses/2, strategy/3.
@@ -252,6 +253,16 @@ checked_by(l12_index, terra_6_1, by_hand).  % referee, 3 Nov 2026
 checked_by(l12_secular, terra_6_1, by_hand).  % referee, 3 Nov 2026
 checked_by(l12_towerless, terra_6_1, by_hand).  % referee, 3 Nov 2026
 checked_by(l12_graded, terra_6_1, by_hand).  % referee, 3 Nov 2026
+
+%% ---------------------------------------------------------------- prior work (LITERATURE.md, 3 Nov 2026)
+prior_work(l05_truncation, partial, "Connes-Lott 1991 sections I, III; Viet-Wali 1996; Dimakis-Muller-Hoissen 1994 section VII; truncation theorem not found").
+prior_work(l09_limits, partial, "Jackiw-Rebbi 1976; Kaplan 1992; Shamir 1993; Farsi-Latremoliere 2026; tuned collapse not found").
+prior_work(l12_secular, known, "one-flavour spectrum: Csaki et al. 2004 eq. (5.6)").
+prior_work(l12_towerless, partial, "Casagrande et al. 2008 (warped textures); no NCG derivation of D_F found").
+prior_work(l06_factorization, partial, "Dabrowski-Dossena 2011; Vanhecke-da Silva-Sigaud; criterion not found").
+prior_work(l11_top, known, "CCM 2007 eqs. (4.16), (5.27)").
+prior_work(rs_G3, known, "Niemi-Slizovskiy arXiv:1004.0212 eqs. (94)-(95)").
+prior_work(paper_14_3_1, known, "Niemi-Slizovskiy arXiv:1004.0212 eqs. (94)-(95)").
 
 hypothesis(ccm_relation, "Chamseddine-Connes-Marcolli normalization at the matching scale: 8 M_W^2 = sum of N_f m_f^2 over Dirac masses.").
 hypothesis(positive_rank, "The twisting bundle has positive rank, with the equivariant self-adjoint realization.").
@@ -664,6 +675,9 @@ refuted(C, By) :- refuted_by(C, By).
 where(C) :- source(C, F, A), (A == '' -> format("~w~n", [F]) ; format("~w#~w~n", [F, A])).
 show(C) :- claim(C, K, S, L, T), format("~w  [~w, ~w: ~w]~n  ~w~n", [C, K, S, L, T]), where(C).
 
+%% known_in_literature(-C, -Ref): claims whose statement is already in print.
+known_in_literature(C, R) :- prior_work(C, known, R).
+
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
@@ -672,6 +686,7 @@ test(dependencies_resolve) :- forall(depends(_, D), (D = hyp(H) -> hypothesis(H,
 test(no_circular_dependency) :- \+ rests_on(C, C).
 test(refutations_resolve) :- forall(refuted_by(C, B), (claim(C, _, refuted, _, _), claim(B, counterexample, _, _, _))).
 test(amendments_resolve) :- forall(claim_amended(C, B), (claim(C, _, _, _, _), claim(B, _, _, _, _))).
+test(prior_work_resolves) :- forall(prior_work(C, V, _), (claim(C, _, _, _, _), memberchk(V, [known, partial, not_found]))).
 test(addresses_resolve) :- forall(addresses(T, C), (strategy(T, _, _), claim(C, _, _, _, _))).
 :- end_tests(ledger).
 

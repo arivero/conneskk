@@ -765,7 +765,7 @@ $$
 \cos^2\theta_W=\frac{3\xi^2}{4\xi^2+2}.
 $$
 
-The lens order $p$ cancels in the common volume factor. The value $5/8$ requires $\xi^2=5/2$; the unsourced Einstein condition selects the round $\xi=1$, giving $1/2$. Topology can constrain a charge lattice, but it does not force this kinetic ratio. The proposal that $p=5$ determines $5/8$ fails this test. **Proved** for the Einstein-Hilbert Kaluza-Klein ansatz and the stated embedding: the derivation is in [connes_kk_research_state.md §3.2](connes_kk_research_state.md#32-one-precise-berger-calculation), where $p=5\to5/8$ appears only as a resonance conditional on an added postulate (§4.2); the value $5/8$ at $\xi^2=5/2$ is checked in exact rational arithmetic in Python (research_checks_knowledge.md §4.8).
+The lens order $p$ cancels in the common volume factor. The value $5/8$ requires $\xi^2=5/2$; the unsourced Einstein condition selects the round $\xi=1$, giving $1/2$. Topology can constrain a charge lattice, but it does not force this kinetic ratio. The proposal that $p=5$ determines $5/8$ fails this test. **Proved** for the Einstein-Hilbert Kaluza-Klein ansatz and the stated embedding: the derivation is in [connes_kk_research_state.md §3.2](connes_kk_research_state.md#32-one-precise-berger-calculation), where $p=5\to5/8$ appears only as a resonance conditional on an added postulate (§4.2); the value $5/8$ at $\xi^2=5/2$ is checked in exact rational arithmetic in Python (research_checks_knowledge.md §4.8). The formula itself is in the literature: Niemi and Slizovskiy, arXiv:1004.0212, eqs. (94)-(95) (see LITERATURE.md, section F).
 
 The finite Standard Model trace instead gives, per generation and with $Q=T_3+Y$,
 
