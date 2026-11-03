@@ -983,7 +983,7 @@ depends(l25_sum_rule, l25_mass).
 attempted_by(l25_sum_rule, claude_opus_5_5).
 checked_by(l25_sum_rule, claude_opus_5_5, python("top-only family and neutral direction")).
 addresses(t5b, l25_mass).  addresses(t5b, l25_sum_rule).  addresses(t13, l25_sum_rule).
-%% Lemma 24 (T0, T0b). Astra 6; referee pending.
+%% Lemma 24 (T0, T0b). Astra 6; referee: reviews/2026-11-03_terra_check_24.md
 claim(l24_spectral, theorem, proved, "Theorem 24.1", "On CP^3 x I, spectral walls with finite gradings on the level-one kernel give an exact reduction to the two-gradings operator, with the other modes above Delta_K/r.").
 source(l24_spectral, 'lemmas/24_commutative_parent.md', '').
 attempted_by(l24_spectral, astra6).
@@ -1055,6 +1055,10 @@ checked_by(l25_unfold, terra_6_1, by_hand).
 checked_by(l25_mass, terra_6_1, by_hand).
 checked_by(l25_sum_rule, terra_6_1, by_hand).
 prior_work(l25_sum_rule, partial, "m_t = 2 M_W in flat gauge-Higgs models with suitable representations: hep-ph/0510366, section 5; arXiv:1804.06012, Eq. (3.23). Coefficient (3 - d_eff)/24 and crossover not found in the records inspected.").
+checked_by(l24_spectral, terra_6_1, by_hand).
+checked_by(l24_walls, terra_6_1, by_hand).
+checked_by(l24_two_stage, terra_6_1, by_hand).
+checked_by(l24_no_minimum, terra_6_1, by_hand).
 %% Lemma 17 (T10, routine part). Referee: reviews/2026-11-03_terra_check_17.md
 claim(l17_action, theorem, proved, "Theorem 17.1", "The fermion action of M x F on the Gamma = +1 subspace equals (1/2) <jj psi, (D_M + gamma_5 d) psi> on an unconstrained spinor, with jj = J_M (x) j for s = +1 and gamma_5 J_M (x) j for s = -1.").
 source(l17_action, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').
