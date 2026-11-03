@@ -9,7 +9,7 @@ Referee lemmas/23_two_gradings_interval.md, by Claude Opus 5.5, which builds on 
 5. Theorem 23.6: the stated boundary conditions, the derivation for the charged and neutral directions, the count of massless modes, items 1 to 4. Solve the boundary problem independently if possible. Is it consistent to place the connector at one wall only? Is the normalization the one that gives g_3 = g_2 = sqrt(5/3) g_Y?
 6. The comparison with the constants 2 and 16/5 of lemmas/18_heavy_limit_near_cutoff.md, and the statement on the factor 3/2 of Proposition F in paper/towerless_intervals.tex.
 7. Proposition 23.7 and the claim that it is an escape from No-go theorem 9 of lemma 18. Check the hypotheses of that no-go.
-8. The one-loop potential: the three products, the coefficient n_f, the formula for V, the curvatures, the numerical statement, the leading-order form and the list of escapes. Is the comparison with fermions in the spinor of SO(5) accurate? This is a negative statement by one model, so examine it with care.
+8. The one-loop potential: the three products, the coefficient n_f, the formula for V, the curvatures, the numerical statement, the leading-order form and the list of escapes. Is the extension to bulk masses for the top channel consistent, given that the gauge products are kept as in the flat case? Is the comparison with fermions in the spinor of SO(5) accurate? This is a negative statement by one model, so examine it with care.
 9. The comparison with measured values, and the open questions.
 
 Use "we" and "Let". Use the established vocabulary (Theorem, Lemma, Proposition, Counterexample, No-go theorem, Conjecture, gap, error in the proof).

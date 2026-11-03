@@ -146,7 +146,7 @@ with s = sin(2 theta). A Dirac top with three colours has n_f = 6. Near theta = 
 
 **A numerical statement (Python).** On a grid of 91 values of theta, for n_f in {0, 1, 2, 3, 4, 6, 8, 12, 24, 48, 96, 200}, V has no interior minimum. For n_f <= 8 it has one interior maximum, at theta = 0.785 for n_f = 0, moving to 0.33 at n_f = 8, and for n_f >= 12 none. The global minimum is at theta = pi/2 for n_f > 0.
 
-This is a numerical negative result in an exact scope: one interval, no bulk masses, fermions of frequency 1 under F, this gauge content, one loop, this BC at the connector wall. To leading order in the logarithm, V has the form B sin^2(2 theta) - A sin^2(theta) with A, B > 0, whose interior stationary point cos(2 theta) = A/(4B) is a maximum, which shows the mechanism in that approximation. So an interior minimum needs one of these escapes: a negative coefficient of sin^2(2 theta), as from fermions of frequency 2 under F, which the bimodule E = Hom(V, W) does not contain; bulk masses, with their form factors, whose second-order term enters with the opposite sign and which we have not computed; a wall scalar with its own potential; or tree-level terms at the walls. The form is that of the composite Higgs with fermions in the spinor of SO(5) (to be compared with Agashe, Contino and Pomarol). This points away from a pure Wilson line and toward bulk masses or a wall scalar for the physical interior.
+This is a numerical negative result in an exact scope: one interval, no bulk masses, fermions of frequency 1 under F, this gauge content, one loop, this BC at the connector wall. To leading order in the logarithm, V has the form B sin^2(2 theta) - A sin^2(theta) with A, B > 0, whose interior stationary point cos(2 theta) = A/(4B) is a maximum, which shows the mechanism in that approximation. With bulk masses for a top channel, with n_f = 6, the fermion product becomes cos^2(theta) + sin^2(theta) G(x), with G = (w_Q coth w_Q - c_Q)(w_U coth w_U - c_U)/x^2 and w = (c^2 + x^2)^{1/2} in the secular form of lemma 12, keeping the gauge products above. In a scan of all pairs c_Q <= c_U in {-2, -1, -1/2, 0, 1/4, 1/2, 3/4, 1, 3/2, 2, 3}, on a grid of 181 values of theta, there is again no interior minimum. So an interior minimum needs another escape: a negative coefficient of sin^2(2 theta), as from fermions of frequency 2 under F, which the bimodule E = Hom(V, W) does not contain; bulk masses beyond this range, or with other form factors for the gauge fields, as with warping; a wall scalar with its own potential; or tree-level terms at the walls. The form is that of the composite Higgs with fermions in the spinor of SO(5) (to be compared with Agashe, Contino and Pomarol). This points away from a pure flat Wilson line, toward a wall scalar with its own potential, or warping, for the physical interior.
 
 ## Comparison with measured values in the flat toy
 
@@ -154,7 +154,7 @@ These are numerical comparisons (Python), with no running and no bulk masses, in
 
 ## Open questions
 
-1. The interior vacuum: the effective potential for theta with bulk masses for the top, and with a wall scalar; the flat case with no bulk mass has none, by the numerical statement above.
+1. The interior vacuum: the effective potential with a wall scalar, or with warping; the flat cases scanned have none, by the numerical statements above.
 2. The relation between the two roles of S^4: the base of the twistor window, and the field space of the Higgs quaternion.
 3. A commutative parent: functions on S^4 x I and CP^3 x I, with the gradings as local boundary conditions.
 4. The factor 3/2 between the five-dimensional normalization and the spectral action: whether the spectral action on the parent itself, with its tower, reproduces the formula of Theorem 23.6.
@@ -170,4 +170,4 @@ By Claude Opus 5.5, in Python (numpy and scipy), 3 Nov 2026, in a temporary dire
 - The universal connection on E (+) E\*: J D = D J, Gamma_0 D = -D Gamma_0, all |eigenvalues| equal to theta/l, Gamma_1 = (left Gamma_p, right mirror), J_1^2 = -1, J_1 Gamma_1 = -Gamma_1 J_1, while J alone fails; J_1 h J_1^-1 is right multiplication by +h on E\*, for odd h.
 - The theta function: monotone on a grid for s = 0.3, 1, 2, with the towerless value at s = 0.3 equal to e^{-x} to five digits; Poisson summation and the triple product to 10^-16.
 - The ratio M_W^2/M_Z^2 on a grid: range [0.5032, 0.6250], symmetric under theta -> pi/2 - theta to 10^-15, minimum at pi/4. At theta = 1.1625, M_W l = 0.541, and at theta = 1.0589, M_W l = 0.648.
-- The one-loop integrals by adaptive quadrature (scipy).
+- The one-loop integrals by adaptive quadrature (scipy), and by Gauss-Legendre quadrature on 240 nodes for the bulk-mass scan.
