@@ -913,6 +913,36 @@ addresses(t11, l20_hw).
 checked_by(l11_nogo, astra6, by_hand).
 checked_by(l16_standard_nogo, astra6, by_hand).
 checked_by(l16_grading_not_even, astra6, by_hand).
+%% Lemma 22 (T0, T0b, T10, T13). Claude; referee pending.
+claim(l22_window, theorem, proved, "Theorem 22.1", "Finite data of signs (+,+,-) with l ||D_F|| < pi/2 are exactly the lowest window of the derivative on an interval with coupling tan(l D_F); D, J and Gamma all exact; next level at least (pi - l ||D_F||)/l.").
+source(l22_window, 'lemmas/22_dirac_operator_as_boundary_condition.md', 'the-window').
+attempted_by(l22_window, claude_opus_5_5).
+checked_by(l22_window, claude_opus_5_5, python("eigenvectors, boundary conditions, J, norm on random symmetric M")).
+claim(l22_parent, theorem, proved, "Theorem 22.3", "The parent with A_l = {f : f(l) in C_F} is a real even spectral triple with order zero and order one; order one needs only finite order zero; preservation of the domain is equivalent to f(l) in C_F.").
+source(l22_parent, 'lemmas/22_dirac_operator_as_boundary_condition.md', 'the-parent-as-a-real-spectral-triple').
+depends(l22_parent, l22_window).
+attempted_by(l22_parent, claude_opus_5_5).
+checked_by(l22_parent, claude_opus_5_5, by_hand).
+claim(l22_compression, theorem, proved, "Theorem 22.4", "Q_l(a) = sinc(l ad_D)(a), the average of e^{ixD} a e^{-ixD} over abs(x) <= l; Q_l(E T) = -l^-1 int sin(x ad_D)(T); order defects O(l^2) with explicit constants.").
+source(l22_compression, 'lemmas/22_dirac_operator_as_boundary_condition.md', 'the-compression').
+depends(l22_compression, l22_window).
+attempted_by(l22_compression, claude_opus_5_5).
+checked_by(l22_compression, claude_opus_5_5, python("quadrature against the Schur form; one-generation Standard Model data")).
+claim(l22_transport, theorem, proved, "Theorem 22.5, Corollary 22.6", "Self-adjoint scalar one-forms act on the window by the gauge orbit through the transport along the interval, reproducing D + A_(1) + A~_(1) + A_(2) of arXiv:1304.7583 on the orbit.").
+source(l22_transport, 'lemmas/22_dirac_operator_as_boundary_condition.md', 'scalar-fluctuations').
+depends(l22_transport, l22_parent).
+attempted_by(l22_transport, claude_opus_5_5).
+checked_by(l22_transport, claude_opus_5_5, python("the quadratic-term identity on two-point data")).
+claim(l22_no_radial, no_go, proved, "No-go theorem 22.7", "One interval, fixed X, no bulk masses, even scalar inner fluctuations: singular values fixed, so no radial Higgs mode. Escapes: X as a wall field, odd connections, noncommuting bulk masses, two or more internal dimensions, quantum effective action, finite-only fluctuation.").
+source(l22_no_radial, 'lemmas/22_dirac_operator_as_boundary_condition.md', 'scalar-fluctuations').
+depends(l22_no_radial, l22_transport).
+attempted_by(l22_no_radial, claude_opus_5_5).
+checked_by(l22_no_radial, claude_opus_5_5, by_hand).
+claim(l22_family, corollary, proved, "Corollary 22.9", "The 10 -> 9 family: light couplings vanish as m l at fixed mass; W, Z at pi/(2l), top at Theta/l; massless gauge sector C_F, under an assumed five-dimensional Yang-Mills action; m_t/M_W < 1 and M_W = M_Z in this family.").
+source(l22_family, 'lemmas/22_dirac_operator_as_boundary_condition.md', 'the-gauge-sector-and-the-10---9-family').
+depends(l22_family, l22_window).
+attempted_by(l22_family, claude_opus_5_5).
+addresses(t10, l22_family).  addresses(t0b, l22_transport).  addresses(t13, l22_window).  addresses(t13, l22_family).
 %% Lemma 21 (T12). Referee: reviews/2026-11-03_terra_check_20_21.md
 claim(l21_removal, proposition, proved, "Proposition 21.1", "Among single charged species, only an up-type quark can be removed while keeping cos^2 theta_NC = 5/8 and the photon/gluon ratio 8/3; a down-type gives 59/92 and 46/15, a charged lepton 17/28 and 7/3; d + e together contribute as u.").
 source(l21_removal, 'lemmas/21_top_counting.md', 'removal-identities').

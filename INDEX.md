@@ -100,7 +100,7 @@ The K-theory obstruction and its scope, the 7-to-5 Kasparov factorization, the h
 
 Quantized internal momentum, bulk masses in quadrature, exponential hierarchies from localization, the towerless D_F texture.
 
-[lemma 09, Remark: fermion mass as internal momentum](lemmas/09_massive_chiral_interval.md#remark-fermion-mass-as-internal-momentum) · [lemma 12, Hierarchies from localization](lemmas/12_boundary_yukawa_interval.md#hierarchies-from-localization) · [strategy, Ranked list](STRATEGY.md#ranked-list) · [lemma 17, explicit masses and chiral limit](lemmas/17_explicit_masses_chiral_limit.md) · [steer for the next paper: D = 9 to D = 4 masses and the QCD and Fermi scales](d9_masses_fermi_qcd_steer.md)
+[lemma 09, Remark: fermion mass as internal momentum](lemmas/09_massive_chiral_interval.md#remark-fermion-mass-as-internal-momentum) · [lemma 12, Hierarchies from localization](lemmas/12_boundary_yukawa_interval.md#hierarchies-from-localization) · [strategy, Ranked list](STRATEGY.md#ranked-list) · [lemma 17, explicit masses and chiral limit](lemmas/17_explicit_masses_chiral_limit.md) · [steer for the next paper: D = 9 to D = 4 masses and the QCD and Fermi scales](d9_masses_fermi_qcd_steer.md) · [lemma 22, the finite Dirac operator as a boundary condition](lemmas/22_dirac_operator_as_boundary_condition.md)
 
 ### 1.17 Status, ledgers and open problems
 
@@ -391,6 +391,7 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 - [19: Inner fluctuations of the two-point data without order one](lemmas/19_fluctuations_without_order_one.md)
 - [20: Sheet-connecting operators and boundary gluing](lemmas/20_connecting_operator.md)
 - [21: The separate role of the top: removal identities and counting](lemmas/21_top_counting.md)
+- [22: The finite Dirac operator as a boundary condition on an interval](lemmas/22_dirac_operator_as_boundary_condition.md)
 
 ### Background note: the current Connes et al. framework: [current_framework.md](current_framework.md)
 

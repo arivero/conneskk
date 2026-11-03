@@ -62,6 +62,8 @@ from b_6 = 7, b_5 = 23/3 and 1/alpha(mu_*) = (8/3)/alpha_3(mu_*). So a nonzero l
 
 **6. Pions, the condensate and the anomaly.** The transcript says that pions do not have to be elementary KK modes or fluctuations of the finite algebra. [Proposition 17.10](lemmas/17_explicit_masses_chiral_limit.md) is compatible with this: it shows no kinetic term for the specified change of a fixed operator, and leaves a new operator or a quantum effective action available. The order of limits in the Banks-Casher relation is that of Proposition 17.8 there, under its measure and regularity assumptions. The reduced action of Theorem 17.1 is a starting point for the "physical fermion prescription" of the regulated trace; the algebraic coefficient is 2 N_c tr(T^3 Q^2) = 1, and a regulated measure and anomaly calculation remain to be supplied. This fits the [chiral limit note](paper/chiral_limit_note.tex).
 
+**7. A positive result on the third question.** [Lemma 22](lemmas/22_dirac_operator_as_boundary_condition.md) (referee pending) extends item 1 to the whole finite Dirac operator: D_F is exactly the lowest window of the pure derivative on the interval, with boundary coupling tan(l D_F), so all its eigenvalues are quantized momenta. The family of item 2 becomes Corollary 22.9 there, with W, Z and top at the tower scale, massless photon and gluons, and light couplings vanishing at fixed mass.
+
 ## Open questions for the next paper
 
 1. An interval or parent family in which one set of data fixes the light masses, the gauge kinetic terms and the weak scale, so that a relation between the Fermi and QCD scales becomes a prediction. The closing answer names this as the missing step.
