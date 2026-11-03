@@ -10,3 +10,5 @@ paper/*.bbl
 paper/*.blg
 paper/*.out
 paper/*Notes.bib
+paper/supplemental.md
+paper/.supp_header.tex

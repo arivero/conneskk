@@ -914,6 +914,7 @@ strategy(t3, settled, "Chirality from boundary conditions; the boundary Yukawa i
 strategy(t4, open, "Gauge sector of the towerless interval: fixed compression is not gauge covariant and the finite spectral action does not reproduce the tower mass.").
 strategy(t4b, open, "Gauge-covariant reduction: matching with the tower only via a sum rule (tuned bulk mass, tower-scale fermion); impossible with bounded light fermions in the collapse.").
 strategy(t5, settled, "Heavy W forces a heavy Dirac fermion (conditional on the CCM relation).").
+strategy(t11, open, "Horava-Witten as a two-sheet geometry: walls as sheets, wall algebras as summands, bulk as connecting operator; compare the chiralities of the walls first.").
 strategy(t6, open, "Metric-compatible towerless limits (operator-system truncations).").
 strategy(t7, open, "Towerless S^2, CP^2 to H, M_3(C) with the right real structure.").
 strategy(t8, partial, "Fermion masses as internal momenta: towerless Yukawa textures; mixing pattern numerical only.").
