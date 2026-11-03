@@ -130,13 +130,31 @@ This is proportional to the Jacobi function theta_3(theta, exp(-s^2)). It is str
 
 So No-go theorem 9 of lemma 18, the absence of a finite nonzero stationary point on a free radial ray, has this as an escape: on the interval the radial direction is compact, and the tower, which the finite description omits, supplies a second branch that stops the runaway at theta = pi/2. In the present family the literal action therefore chooses antipodal gradings, m = pi/(2l), with M_W = M_Z = 0 by Theorem 23.6. This is a vacuum with massless vectors, so it is not the physical point. The sign of the term agrees with the fermion loop in the Hosotani mechanism, where gauge-boson loops enter with the opposite sign. So an interior minimum could arise from that competition, which the classical spectral action does not contain. We have not computed it.
 
+## The one-loop potential in the same family
+
+From the exact spectra, the products over the towers are, relative to theta = 0 and in Euclidean momentum x = p l,
+
+    fermion channel:  1 + sin^2(theta)/sinh^2(x),
+    charged vectors:  1 + sin^2(2 theta)/(2 sinh^2(x)),
+    neutral vector:   1 + (4/5) sin^2(2 theta)/sinh^2(x).
+
+So in the gauge-boson and fermion-loop form of the Hosotani mechanism, assuming the usual one-loop formula with three polarizations per vector, and with n_f = (number of Dirac fermion channels) x 2,
+
+    8 pi^2 l^4 V(theta) = int_0^infinity x^3 dx [ 3 log(1 + s^2/(2 sinh^2 x)) + (3/2) log(1 + (4/5) s^2/sinh^2 x) - n_f log(1 + sin^2(theta)/sinh^2 x) ],
+
+with s = sin(2 theta). A Dirac top with three colours has n_f = 6. Near theta = 0, V ~ (10.8 - n_f) I theta^2 with I = int x^3/sinh^2 x dx; near theta = pi/2, it has a positive curvature for every n_f.
+
+**A numerical statement (Python).** On a grid of 91 values of theta, for n_f in {0, 1, 2, 3, 4, 6, 8, 12, 24, 48, 96, 200}, V has no interior minimum. For n_f <= 8 it has one interior maximum, at theta = 0.785 for n_f = 0, moving to 0.33 at n_f = 8, and for n_f >= 12 none. The global minimum is at theta = pi/2 for n_f > 0.
+
+This is a numerical negative result in an exact scope: one interval, no bulk masses, fermions of frequency 1 under F, this gauge content, one loop, this BC at the connector wall. To leading order in the logarithm, V has the form B sin^2(2 theta) - A sin^2(theta) with A, B > 0, whose interior stationary point cos(2 theta) = A/(4B) is a maximum, which shows the mechanism in that approximation. So an interior minimum needs one of these escapes: a negative coefficient of sin^2(2 theta), as from fermions of frequency 2 under F, which the bimodule E = Hom(V, W) does not contain; bulk masses, with their form factors, whose second-order term enters with the opposite sign and which we have not computed; a wall scalar with its own potential; or tree-level terms at the walls. The form is that of the composite Higgs with fermions in the spinor of SO(5) (to be compared with Agashe, Contino and Pomarol). This points away from a pure Wilson line and toward bulk masses or a wall scalar for the physical interior.
+
 ## Comparison with measured values in the flat toy
 
-These are numerical comparisons (Python), with no running and no bulk masses, in lowest levels. The ratio m_t/M_W reaches sqrt(8/3) at theta = 1.0589 and the measured 2.147 at theta = 1.1625, where M_W l = 0.54, so 1/l is about 150 GeV. There, M_W^2/M_Z^2 = 0.58, against the measured 0.777. The wall-scalar family of lemma 22 covers [0.625, 1], and this family covers [0.503, 0.625]. So neither flat family fits on its own, and the tower is far too light. The directions are bulk masses for the light fermions, warping, running of the couplings, and families combining a Wilson line with a wall scalar. These negative statements hold in the flat tree-level toy only.
+These are numerical comparisons (Python), with no running and no bulk masses, in lowest levels. The ratio m_t/M_W reaches sqrt(8/3) at theta = 1.0589 and the measured 2.147 at theta = 1.1625, where M_W l = 0.54, so 1/l is about 150 GeV. There, M_W^2/M_Z^2 = 0.58, against the measured 0.777. The wall-scalar family of lemma 22 covers [0.625, 1], and this family covers [0.503, 0.625]. So neither flat family fits on its own, the tower is far too light, and the flat one-loop potential above does not select an interior point. The directions are bulk masses for the light fermions, warping, running of the couplings, and families combining a Wilson line with a wall scalar. These negative statements hold in the flat tree-level toy only.
 
 ## Open questions
 
-1. The interior vacuum: the effective potential for theta, with fermion and gauge-boson loops.
+1. The interior vacuum: the effective potential for theta with bulk masses for the top, and with a wall scalar; the flat case with no bulk mass has none, by the numerical statement above.
 2. The relation between the two roles of S^4: the base of the twistor window, and the field space of the Higgs quaternion.
 3. A commutative parent: functions on S^4 x I and CP^3 x I, with the gradings as local boundary conditions.
 4. The factor 3/2 between the five-dimensional normalization and the spectral action: whether the spectral action on the parent itself, with its tower, reproduces the formula of Theorem 23.6.
@@ -150,4 +168,6 @@ By Claude Opus 5.5, in Python (numpy and scipy), 3 Nov 2026, in a temporary dire
 - Sp(2) x SU(4), of dimension 25, with the Neumann and Dirichlet subspaces built from the stated stabilizers: the two-point boundary problem was solved as a linear system on a grid in k l. For theta = 0.2, pi/4, 1.06 and 1.3, the two lowest nonzero roots are (0.279, 0.356), (0.785, 1.107), (0.647, 0.868), (0.373, 0.479), equal to the formulas of Theorem 23.6 to three digits, with other roots at pi/2 and above. The intersection of the two stabilizers has dimension 9 at each theta tested.
 - Small theta: M_W^2/m^2 = 2.000 and M_Z^2/m^2 = 3.200.
 - The universal connection on E (+) E\*: J D = D J, Gamma_0 D = -D Gamma_0, all |eigenvalues| equal to theta/l, Gamma_1 = (left Gamma_p, right mirror), J_1^2 = -1, J_1 Gamma_1 = -Gamma_1 J_1, while J alone fails; J_1 h J_1^-1 is right multiplication by +h on E\*, for odd h.
-- The theta function: monotone on a grid for s = 0.3, 1, 2, with the towerless value at s = 0.3 equal to e^{-x} to five digits.
+- The theta function: monotone on a grid for s = 0.3, 1, 2, with the towerless value at s = 0.3 equal to e^{-x} to five digits; Poisson summation and the triple product to 10^-16.
+- The ratio M_W^2/M_Z^2 on a grid: range [0.5032, 0.6250], symmetric under theta -> pi/2 - theta to 10^-15, minimum at pi/4. At theta = 1.1625, M_W l = 0.541, and at theta = 1.0589, M_W l = 0.648.
+- The one-loop integrals by adaptive quadrature (scipy).

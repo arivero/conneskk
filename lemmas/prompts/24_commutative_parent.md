@@ -1,0 +1,19 @@
+You are a mathematical expert. Work ALONE: do not spawn subagents, do not delegate, do not run parallel agents or parallel tool calls. Follow AGENTS.md in the repository root. You may read files and run small local computations (python/sympy) to check algebra; if you do, name the language and say what was computed. A computation never replaces a proof.
+
+Context (all under /home/codexssh/conneskk): lemmas/22_dirac_operator_as_boundary_condition.md and lemmas/23_two_gradings_interval.md (a finite Dirac operator as the relative position of two gradings at the walls of an interval, with a matrix-valued bulk algebra P); lemmas/16_coarse_truncation.md (the two-sheet parent, Example 16.9: at twistor level one, real functions on S^4 and CP^3 compress to generate M_2(H) and M_4(C), with Q(x_a) = Gamma_a/5); lemmas/20_connecting_operator.md (Result 7 and the list after it of what an interface would have to specify); current_framework.md; STRATEGY.md, items T0 and T0b.
+
+The founding problem T0 asks for commutative Kaluza-Klein data. Lemmas 22 and 23 have a parent algebra with values in a matrix algebra. Question: can the matrix-valued bulk algebra be replaced by commutative functions on K x I, with K = S^4 or CP^3, so that the level-one compression in the K-direction yields P-valued functions on I, and the two-gradings window then yields the finite triple?
+
+1. Set up the candidate. On K x I_l, take the Dolbeault-Dirac or twisted operator of Example 16.9 on K, with the operator E d/dx on I, in a product form. Choose boundary conditions at x = 0 and x = l that are local on K, or nonlocal with a stated spectral form of Atiyah-Patodi-Singer type, and that reduce on the level-one window to gradings Gamma_0 and Gamma_1. Say which options are self-adjoint.
+
+2. Commutative algebra at the walls. Which functions on K x I preserve the domain, for each option? Test the following: (a) a local condition given by a bundle grading, such as Gamma(y) on the twistor bundle, for which functions commute and the domain is preserved by all functions on K x I; (b) a condition using a constant grading on the level-one sections only, which is nonlocal on K. In case (a), compute the window, the compressed algebra and the induced grading. Does the marked point p of lemma 20 arise, or a field of gradings on K?
+
+3. The compression in two stages. Let P_K project onto level one. Is the operator on K x I reduced by P_K (x) 1? If not, bound the mixing in terms of the gap of K, and state a limit (radius of K to zero, l fixed or scaling) under which the two-stage compression converges to the data of lemmas 22 and 23. State whether the algebra limit holds at the level of the maps Q, as in Theorem 22.4.
+
+4. Which of the following are derived and which are chosen, in the best case you can construct: the second sheet; the real structure with J_1 anticommuting with both gradings; the even algebra H + H + M_4(C); the connector and C + H + M_3(C).
+
+5. Consensus check. A no-go result here needs agreement among several models. Independently check No-go theorem 22.7 of lemma 22 (no radial mode from even fluctuations) and the numerical negative statement on the one-loop potential in lemma 23: give the verdict, the exact hypotheses and the known escapes.
+
+Allow failure. A negative result is to be stated in its exact scope, with its hypotheses and known escapes, and does not close the question. If a statement cannot be proved, say so and state the strongest result you can prove, or a Conjecture with the evidence.
+
+Output format (Markdown): a title line and a one-paragraph outcome; numbered results labelled Theorem, Lemma, Proposition, Corollary, Counterexample, No-go theorem or Conjecture, each with hypotheses (all conventions explicit) and proof; the authorial "we" and "Let"; no status classes, no motivational phrasing. End with "Consequence for T0 and T0b": two to four sentences.
