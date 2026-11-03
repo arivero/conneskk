@@ -256,7 +256,7 @@ checked_by(l12_graded, terra_6_1, by_hand).  % referee, 3 Nov 2026
 
 %% ---------------------------------------------------------------- prior work (LITERATURE.md, 3 Nov 2026)
 prior_work(l05_truncation, partial, "Connes-Lott 1991 sections I, III; Viet-Wali 1996; Dimakis-Muller-Hoissen 1994 section VII; truncation theorem not found").
-prior_work(l09_limits, partial, "Jackiw-Rebbi 1976; Kaplan 1992; Shamir 1993; Farsi-Latremoliere 2026; tuned collapse not found").
+prior_work(l09_limits, partial, "Jackiw-Rebbi 1976; Kaplan 1992; Shamir 1993; Farsi-Latremoliere 2026 Cor. 4.1 (fixed-mu collapse); tuned collapse outside its hypotheses").
 prior_work(l12_secular, known, "one-flavour spectrum: Csaki et al. 2004 eq. (5.6)").
 prior_work(l12_towerless, partial, "Casagrande et al. 2008 (warped textures); no NCG derivation of D_F found").
 prior_work(l06_factorization, partial, "Dabrowski-Dossena 2011; Vanhecke-da Silva-Sigaud; criterion not found").
@@ -306,6 +306,19 @@ checked_by(l10_toeplitz, terra_6_1, by_hand).  % referee, 3 Nov 2026
 checked_by(l11_bounds, terra_6_1, by_hand).  % referee, 3 Nov 2026
 checked_by(l11_nogo, terra_6_1, by_hand).  % referee, 3 Nov 2026
 checked_by(l11_top, terra_6_1, by_hand).  % referee, 3 Nov 2026
+
+claim(fl_R1, counterexample, proved, "Counterexample R1", "Theorem 3.4 of Farsi-Latremoliere (arXiv v1-v3) needs anticommutation of D_h and D_v or a relative bound: a scalar-algebra family meets its six hypotheses and contradicts Corollary 3.5.").
+source(fl_R1, 'reviews/2026-11-03_farsi_latremoliere_assessment.md', '31-theorem-34-is-missing-a-hypothesis').
+attempted_by(fl_R1, claude_subagent).
+checked_by(fl_R1, claude_opus_5_5, by_hand).
+claim(fl_R2, lemma, open, "Lemma R2 (proof sketch, unrefereed)", "The tuned interval of Theorem 9.9 converges in spectral propinquity to (C, C^2, m_f sigma_1), at distance at least 1/(2 m_f) - 2l from the Connes-Lott triple.").
+source(fl_R2, 'reviews/2026-11-03_farsi_latremoliere_assessment.md', '43-theorem-99-mul-tuned-l---0').
+depends(fl_R2, l09_limits).
+attempted_by(fl_R2, claude_subagent).
+claim(fl_R3, lemma, open, "Lemma R3 (proof sketch, unrefereed)", "Propinquity limits of commutative quantum compact metric spaces (Leibniz tunnels) are commutative.").
+source(fl_R3, 'reviews/2026-11-03_farsi_latremoliere_assessment.md', '45-as-the-convergence-notion-for-t0').
+attempted_by(fl_R3, claude_subagent).
+addresses(t0, fl_R3).
 
 hypothesis(ccm_relation, "Chamseddine-Connes-Marcolli normalization at the matching scale: 8 M_W^2 = sum of N_f m_f^2 over Dirac masses.").
 hypothesis(positive_rank, "The twisting bundle has positive rank, with the equivariant self-adjoint realization.").
