@@ -100,7 +100,7 @@ The K-theory obstruction and its scope, the 7-to-5 Kasparov factorization, the h
 
 Quantized internal momentum, bulk masses in quadrature, exponential hierarchies from localization, the towerless D_F texture.
 
-[lemma 09, Remark: fermion mass as internal momentum](lemmas/09_massive_chiral_interval.md#remark-fermion-mass-as-internal-momentum) · [lemma 12, Hierarchies from localization](lemmas/12_boundary_yukawa_interval.md#hierarchies-from-localization) · [strategy, Ranked list](STRATEGY.md#ranked-list) · [lemma 17, explicit masses and chiral limit](lemmas/17_explicit_masses_chiral_limit.md)
+[lemma 09, Remark: fermion mass as internal momentum](lemmas/09_massive_chiral_interval.md#remark-fermion-mass-as-internal-momentum) · [lemma 12, Hierarchies from localization](lemmas/12_boundary_yukawa_interval.md#hierarchies-from-localization) · [strategy, Ranked list](STRATEGY.md#ranked-list) · [lemma 17, explicit masses and chiral limit](lemmas/17_explicit_masses_chiral_limit.md) · [steer for the next paper: D = 9 to D = 4 masses and the QCD and Fermi scales](d9_masses_fermi_qcd_steer.md)
 
 ### 1.17 Status, ledgers and open problems
 
