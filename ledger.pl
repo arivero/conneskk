@@ -966,6 +966,23 @@ source(l23_theta, 'lemmas/23_two_gradings_interval.md', 'the-spectral-action-on-
 attempted_by(l23_theta, claude_opus_5_5).
 checked_by(l23_theta, claude_opus_5_5, python("Poisson and triple product identities")).
 addresses(t0b, l23_aligned).  addresses(t13, l23_gradings).  addresses(t13, l23_radial).  addresses(t5b, l23_wz).  addresses(t5b, l23_theta).
+%% Lemma 25 (T5b, T13, T1). Claude; referee pending.
+claim(l25_unfold, proposition, proved, "Proposition 25.1", "Unfolded, the parent is -i d/dx (x) 1 + 1 (x) D_F on a circle of length 2l; the tower is D_F shifted by n pi/l; an even constant generator is 1 (x) T.").
+source(l25_unfold, 'lemmas/25_sum_rule_effective_dimension.md', 'unfolding').
+depends(l25_unfold, l22_window).
+attempted_by(l25_unfold, claude_opus_5_5).
+checked_by(l25_unfold, claude_opus_5_5, python("level blocks of the interval against the shifted spectrum")).
+claim(l25_mass, theorem, proved, "Theorem 25.2", "The kernel of lemma 18 over the tower; for the heat cutoff and small masses, M^2 = ((3 - d_eff)/2) ||[D_F, T]||^2/||T||^2, with d_eff the spectral dimension of the interval at the cutoff.").
+source(l25_mass, 'lemmas/25_sum_rule_effective_dimension.md', 'the-kernel-over-the-tower').
+depends(l25_mass, l25_unfold).
+attempted_by(l25_mass, claude_opus_5_5).
+checked_by(l25_mass, claude_opus_5_5, python("random matrices, six digits, s from 0.3 to 10")).
+claim(l25_sum_rule, corollary, proved, "Corollary 25.3", "M_W^2 = ((3 - d_eff)/24) sum N_f m_f^2; for the top alone m_t/M_W = (8/(3 - d_eff))^{1/2}, from sqrt(8/3) to 2; M_W^2/M_Z^2 = 5/8 at all s; flat profiles, matching scale, no running.").
+source(l25_sum_rule, 'lemmas/25_sum_rule_effective_dimension.md', 'the-kernel-over-the-tower').
+depends(l25_sum_rule, l25_mass).
+attempted_by(l25_sum_rule, claude_opus_5_5).
+checked_by(l25_sum_rule, claude_opus_5_5, python("top-only family and neutral direction")).
+addresses(t5b, l25_mass).  addresses(t5b, l25_sum_rule).  addresses(t13, l25_sum_rule).
 %% Lemma 21 (T12). Referee: reviews/2026-11-03_terra_check_20_21.md
 claim(l21_removal, proposition, proved, "Proposition 21.1", "Among single charged species, only an up-type quark can be removed while keeping cos^2 theta_NC = 5/8 and the photon/gluon ratio 8/3; a down-type gives 59/92 and 46/15, a charged lepton 17/28 and 7/3; d + e together contribute as u.").
 source(l21_removal, 'lemmas/21_top_counting.md', 'removal-identities').
