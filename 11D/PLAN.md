@@ -1,5 +1,7 @@
 # Plan of the 11D line (handover file)
 
+*Reference only, as of 4 November 2026: this records how the line was worked. Its rules and steps do not bind later work; [AGENTS.md](../AGENTS.md) governs.*
+
 Kept current so that another agent can continue from any commit. Branch `11D`, a fast-forward of `master` at b2ddf98; only new files plus pointer lines in README.md, INDEX.md, STRATEGY.md and one include line in ledger.pl. Rules: [AGENTS.md](../AGENTS.md); no model identifiers in files (provenance "Claude (Anthropic)", ledger atom `claude`); push after every finished piece; no new Python tests in this round (decision of 4 Nov 2026); menial edits (pointers, ledger rows, TOC) may be delegated.
 
 Conversation record of the session that wrote files 01 to 09 (3 and 4 Nov 2026): <https://claude.ai/code/cshk_01BpscANdX3GG8D45SQ1BxsaHviSe7ufxxCLNiNaDv4fWT>.
