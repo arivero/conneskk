@@ -124,7 +124,7 @@ REVTeX source, built with `make` in `paper/` in two forms: Phys Rev two-column, 
 
 From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built in the same two forms.
 
-### Short note: *Finite spectral windows in seven-dimensional parents: towards the massless electroweak limit*: [paper/joint_limit_note.tex](paper/joint_limit_note.tex)
+### Short note: *Finite spectral windows with an opening tower in seven-dimensional parents*: [paper/joint_limit_note.tex](paper/joint_limit_note.tex)
 
 From [lemma 28](lemmas/28_two_walls_connected_parent.md), [lemma 29](lemmas/29_window_on_the_disc_bundle.md) and [lemma 30](lemmas/30_massless_limit_as_a_joint_limit.md) (STRATEGY T0, T14), built in the same two forms. Draft.
 

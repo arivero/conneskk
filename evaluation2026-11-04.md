@@ -11,7 +11,7 @@ Written by Claude Fable 5.1 on 4 November 2026, after the second checks of the 1
 | Lemma 28 | The two sheets of Example 16.9 as the two ends of the disc bundle of Lambda^2_- over S^4; the mechanism proved for prescribed windows (Theorem 28.21); the wall operator and its closed form; the sign error of the first numerics corrected | Astra (job 28), Terra | supplement, part 28 |
 | Lemma 29 | The eight-state window from the operator, in a chosen metric class: case (b), and case (a) at the Fubini-Study radius; lambda exponentially small; compression to the endpoint maps | Terra once, with two errors in case (a) corrected; the corrected case (a) read once more by Terra within the lemma 30 report | supplement, part 29 |
 | Lemma 30 | The massless limit as a joint limit on the interval, the cylinder and the disc bundle; the quaternionic defect | Terra | joint-limit note |
-| Two notes | *Finite spectral windows in seven-dimensional parents: towards the massless electroweak limit*; *A dictionary between finite spectral triples and Kaluza-Klein data* | the statements they cite | docs/ |
+| Two notes | *Finite spectral windows with an opening tower in seven-dimensional parents* (retitled on 4 Nov 2026; first title: towards the massless electroweak limit); *A dictionary between finite spectral triples and Kaluza-Klein data* | the statements they cite | docs/ |
 | 11D line, files 01-09 | By another Claude session: the interval as an antiperiodic circle; Witten spaces as the hypercharge quotient of the 5-bar; the E8 placement of a generation; the two families of 84 as root configurations; the heterotic and type I' dictionary | Terra (34 sections) and Sonnet (5 batches): every scoped no-go of files 02 to 05 has three model identifiers | 11D/, supplement |
 | 11D/10, 11D/11 | The dilaton against the second scale (negative in scope; the Casimir coefficient a_0); the SO(30) fluctuations of the interval parent and their shadow in the window | Sonnet once; the corrected text unread | 11D/ |
 | Records | The Astra audit and its assessment; the ledger extended with draft use and coverage; the history NCG_HISTORY.md; the removal of all checking scripts | | |
@@ -46,6 +46,6 @@ Corrections made to our own earlier statements, in order of weight: the spin-con
 
 ## What waits on the user
 
-- The title question of the joint-limit note: "towards the massless electroweak limit" keeps the target; 11D/10 weakens the string route to it.
+- The title of the joint-limit note: decided on 4 Nov 2026, the user having delegated it; it now states the result (the window kept while the tower opens) and leaves the electroweak target to the abstract.
 - Whether the historical introduction (decision 1) may say that the link is made for the first time in print, given the scope of the searches recorded in NCG_HISTORY.md section 1.4.
 - Telling Farsi and Latrémolière about Counterexample R1, still the user's call.
