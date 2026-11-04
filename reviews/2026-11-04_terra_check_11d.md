@@ -578,6 +578,42 @@ the original statement needs the left-handed-basis qualification. The
 labels \(C_3,C_6\) express this algebraic grading; a physical
 M2/M5 identification requires the corresponding field construction.
 
+## Proposition 4.5: Yukawa grades and family dependence
+
+**Verdict: Correct with amendment.** The grade-selection rules and
+bracket targets are correct as algebraic statements. They do not by
+themselves establish a physical top mass or its observed family
+hierarchy.
+
+The up-type triple has grades \((1,1)\) three times, so both
+\(\mathbb Z_3\) sums vanish. For the down-type, charged-lepton and
+Dirac-neutrino triples, the second grades are
+\(\{1,1+2t,1-2t\}=\{1,2,0\}\); the family grades again sum to
+zero. The bracket with \(H_u\) sends grade \(b=1\) to \(b=2\), as
+claimed. For the neutrino it sends \(b=2\) to \(b=0\) when
+\(t=+1/2\), and \(b=0\) to \(b=1\) when \(t=-1/2\).
+These are necessary grade conditions; a particular bracket or
+four-dimensional coupling may still vanish.
+
+In the literal \(3_f\otimes27\) realization with exact \(SU(3)_f\)
+invariance, the family part of a cubic involving three grade-one
+triplets is proportional to \(\epsilon_{ijk}\). A Higgs expectation
+value \(h_k\) therefore gives a family matrix proportional to
+\(Y_{ij}=\epsilon_{ijk}h_k\). In the aligned family basis its diagonal
+entries, including the nominal top-top entry, vanish. For nonzero \(h\)
+this matrix has rank two and two equal nonzero singular values, since
+\(Y^\dagger Y=\|h\|^2I-hh^\dagger\) up to the family-index convention.
+Thus this exact one-Higgs family tensor alone does not give a single
+isolated top mass.
+
+The \(\mathbb Z_3\) family grading alone allows more tensors than
+\(\epsilon_{ijk}\); the latter follows from the full
+\(SU(3)_f\) invariance. A compactification in which generation labels
+are cohomology labels and couplings are overlap integrals may evade the
+literal triplet-tensor restriction, but its mode functions and
+intersections must be supplied before identifying the physical Yukawa
+matrix.
+
 ## Proposition 4.6: the graded E8 exchange
 
 **Verdict: Correct with amendment.** The dimension obstruction, the

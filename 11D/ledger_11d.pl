@@ -160,12 +160,12 @@ attempted_by(d11_e8_grading, claude).
 checked_by(d11_e8_grading, claude, by_hand).
 checked_by(d11_e8_grading, terra_6_1, by_hand).
 
-claim(d11_yukawa_brackets, proposition, proved, "Proposition 4.5", "If the cubic couplings come from the structure constants of e8, the up-type Yukawa couplings lie inside the C_3 sector, the other Yukawa couplings have one field in each sector, and the top mass is the wedge Lambda^3 -> Lambda^6.").
+claim(d11_yukawa_brackets, proposition, conditional, "Proposition 4.5 (referee amendment)", "If the stated gradings are symmetries, the up-type Yukawa grades lie inside the C_3 sector and the other Yukawa triples use one field in each sector. The physical top mass requires further family or compactification data; in the exact SU(3) family triplet the one-Higgs family tensor is antisymmetric.").
 source(d11_yukawa_brackets, '11D/04_two_families_m2_m5.md', '5-yukawa-couplings-as-brackets').
 depends(d11_yukawa_brackets, d11_e8_grading).
 attempted_by(d11_yukawa_brackets, claude).
 checked_by(d11_yukawa_brackets, claude, by_hand).
-referee_pending(d11_yukawa_brackets).
+checked_by(d11_yukawa_brackets, terra_6_1, by_hand).
 
 claim(d11_m2m5_is_j, no_go, proved, "Proposition 4.6 (independently checked with amendment)", "In the specified aligned three-family embedding, a complex e8 automorphism preserving or inverting the family grading cannot exchange the top and neutrino blocks. The complex-linear Chevalley involution preserves both families; an antiunitary J requires an additional conjugation, and its identification with physical M2/M5 duality is a proposal.").
 source(d11_m2m5_is_j, '11D/04_two_families_m2_m5.md', '6-in-this-realization-the-m2m5-exchange-is-the-real-structure-j').

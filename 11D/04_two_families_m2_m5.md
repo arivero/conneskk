@@ -79,6 +79,8 @@ So every top state of a particle (t_L in Q, t^c in u^c), and the up-type Higgs, 
 
 **Proposition 4.5.** Suppose the cubic couplings of the matter come from the structure constants of e8, as in heterotic and Hořava-Witten compactifications, and both gradings are symmetries, so that a coupling needs grades summing to (0, 0) mod 3. Take H_u in the 5 ⊂ g_{1,1} and H_d in 5bar_10 ⊂ g_{1,1-2t}. Then, for either sign t:
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The grade selection and bracket targets are independently checked. In the literal exact \(SU(3)_f\) triplet realization, the family tensor is antisymmetric and does not by itself give an isolated top mass; the physical Yukawa matrix needs additional data. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-45-yukawa-grades-and-family-dependence).
+
 1. the up-type Yukawa couplings Q u^c H_u have all three fields in the C_3 sector;
 2. the down-type, charged-lepton and Dirac-neutrino couplings Q d^c H_d, L e^c H_d and L nu^c H_u have one field in each of the three sectors;
 3. in Dirac form, the top mass is ad(<H_u>) : g_{1,1} -> g_{2,2}, the wedge Λ^3 -> Λ^6 with the Higgs trivector, while the Dirac-neutrino mass is a bracket that passes through the gravity sector: Λ^6 -> sl(9) (levels 1 + 2 = 3) for t = +1/2, sl(9) -> Λ^3 for t = -1/2.
