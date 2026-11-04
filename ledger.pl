@@ -1117,6 +1117,24 @@ attempted_by(l41_unimod, claude_fable_5_1).
 checked_by(l41_unimod, claude_fable_5_1, python("the six traces, not kept")).
 referee_pending(l41_unimod).
 addresses(t17, l41_forms).  addresses(t17, l41_orient).  addresses(t17, l41_unimod).
+claim(l42_no_higgs_in_window, proposition, proved, "Proposition 42.1", "With one copy of the 4 of Sp(2) in each degree of the end grading, the off-diagonal part of the window operator is lambda I_4 (Proposition 28.19, Schur), G-invariant, so it transforms trivially under the isotropy group of any marked point and carries no Higgs representation.").
+source(l42_no_higgs_in_window, 'lemmas/42_higgs_as_connector_moduli.md', 'statements').
+attempted_by(l42_no_higgs_in_window, claude_fable_5_1).
+checked_by(l42_no_higgs_in_window, claude_fable_5_1, by_hand).
+depends(l42_no_higgs_in_window, l28_tunnelling).
+referee_pending(l42_no_higgs_in_window).
+claim(l42_tangent, proposition, proved, "Proposition 42.2", "For a marked complex line l in the quaternionic sheet W = H^2 with quaternionic line L over p in S^4: T_L S^4 = (2,2) of Sp(1)_a x Sp(1)_b = Hom_H(L, L^perp), and T_l CP^3 = (2)_{+-1} + (1)_{+-2} under Sp(1)_a x U(1)_b: the Higgs doublet of hypercharge 1/2 (the horizontal part) and a charged singlet of hypercharge 1 along the twistor fibre.").
+source(l42_tangent, 'lemmas/42_higgs_as_connector_moduli.md', 'statements').
+attempted_by(l42_tangent, claude_fable_5_1).
+checked_by(l42_tangent, claude_fable_5_1, by_hand).
+referee_pending(l42_tangent).
+claim(l42_moduli, proposition, proved, "Proposition 42.3", "The Sp(2)-orbits of the pair of marked lines (Cw, Cv) of the connector are classified by a = |h(w,v)| and b = |omega(w,v)|, a^2 + b^2 <= 1, with the coupling modulus |kappa| as the third parameter.").
+source(l42_moduli, 'lemmas/42_higgs_as_connector_moduli.md', 'statements').
+attempted_by(l42_moduli, claude_fable_5_1).
+checked_by(l42_moduli, claude_fable_5_1, by_hand).
+depends(l42_moduli, l20_rank_one).
+referee_pending(l42_moduli).
+addresses(t14, l42_no_higgs_in_window).  addresses(t14, l42_tangent).  addresses(t0, l42_moduli).
 claim(l23_potential, no_go, proved, "Proposition 23.8", "Flat massless family, this gauge content, fermions of frequency 1, one loop: theta = pi/2 is the unique global minimum for n_f > 0, and V is strictly decreasing for n_f >= 10.8; for smaller n_f, no interior minimum on grids (Python). Escapes: general bulk masses with a completion, warping, wall scalar with a potential, wall terms, fermions of frequency 2.").
 source(l23_potential, 'lemmas/23_two_gradings_interval.md', 'the-one-loop-potential-in-the-same-family').
 attempted_by(l23_potential, claude_opus_5_5).
