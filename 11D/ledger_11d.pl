@@ -80,12 +80,12 @@ attempted_by(d11_flux_nogo, claude).
 checked_by(d11_flux_nogo, claude, python("11D/checks_11d.py section D: required bidegrees, span test, search over a third charge in [-3,3]^6")).
 checked_by(d11_flux_nogo, terra_6_1, by_hand).
 
-claim(d11_flux_fit, proposition, proved, "Proposition 2.6", "With fluxed charges F (universal), chi (+1 on Q, L; -1 on the conjugates) and B - L, one generation with nu^c is the exact index content; u^c, d^c share O(1,0) and e^c, nu^c share one line bundle, so the flux sees SU(2)_R doublets and leaves T_3R unfluxed.").
+claim(d11_flux_fit, proposition, conditional, "Proposition 2.6 (referee amendments)", "With fluxed charges F, chi and B - L the displayed line bundles give a one-generation index in the stated colour convention. The quotient's colour action conjugates the quark bidegrees, and the global gauge group, charge lattice and spin^c flux quantization must be specified.").
 source(d11_flux_fit, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-26-one-generation-from-a-universal-charge-the-grading-and-b---l').
 depends(d11_flux_fit, d11_flux_nogo).
 attempted_by(d11_flux_fit, claude).
 checked_by(d11_flux_fit, claude, python("11D/checks_11d.py section D2")).
-referee_pending(d11_flux_fit).
+checked_by(d11_flux_fit, terra_6_1, by_hand).
 
 %% ---------------------------------------------------------------- 03: branes, hypercharge and the 84
 claim(d11_betti_y, conjecture, conjectural, "Proposal 3.1", "Hypercharge is the Betti vector of Y_{3,2} (C_3 on the harmonic two-form); the gauge group of AdS4 x Y_{3,2} is SU(3) x SU(2) x U(1)_Y x U(1)_R; states with Y != 0 are wrapped branes, and the N = 1 fivebrane baryons are d^c and L.").

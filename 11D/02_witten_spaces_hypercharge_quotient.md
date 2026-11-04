@@ -80,6 +80,8 @@ The second entry is 2j + 1 and the first is +-5/2 on colour triplets and +-3/2 o
 
 ### Proposition 2.6 (one generation from a universal charge, the grading and B - L)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The index calculation works with the stated cohomology convention. For the colour action of the earlier quotient, reverse the first-component coefficients to obtain the labelled colour representations; global flux quantization remains to be specified. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-26-flux-assignments-for-one-generation).
+
 **Statement.** Let the fluxed charges be F (one on every field: a change of the common spin^c twist), chi (+1 on Q and L, -1 on u^c, d^c, e^c, nu^c) and B - L. Then one generation with nu^c is the exact index content for the pairing
 
     P^{(1)} = c_0 chi + c_1 (B - L),   P^{(2)} = (3F + chi)/2,

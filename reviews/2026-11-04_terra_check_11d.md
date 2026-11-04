@@ -206,6 +206,56 @@ charges or a common twist, multiple source fields, walls, orbifolds and
 brane states remain possible directions. This is an independent check of
 the scoped obstruction, not a proof about those alternatives.
 
+## Proposition 2.6: flux assignments for one generation
+
+**Verdict: Correct with amendments, conditional on global flux
+quantization.** The bidegrees and the two linear solutions are correct
+with the cohomology convention in the file. With the colour action on
+the quotient fixed as in Theorem 2.1, that convention is conjugated and
+the first-component coefficients must be reversed.
+
+For \((c_0,c_1)=(-9/4,-3/4)\), direct substitution gives
+\[
+ P_Q=(-5/2,2),\quad P_{u^c,d^c}=(5/2,1),\quad
+ P_L=(-3/2,2),\quad P_{e^c,\nu^c}=(3/2,1).
+\]
+For \((-3/2,-3)\), the quark pairings are unchanged and the two
+singlet pairings have first components \(+3/2\) and \(-3/2\),
+respectively. Subtracting the formal shift \((3/2,1)\) yields exactly
+the listed integral bidegrees. On \(\mathbb{CP}^2\), the nonzero
+cohomology of a line bundle is \(H^0(\mathcal O(k))\) for \(k\ge0\),
+or \(H^2(\mathcal O(k))\cong H^0(\mathcal O(-k-3))^*\) for
+\(k\le-3\); \(\mathbb{CP}^1\) has the analogous \(H^0/H^1\)
+formula. All listed choices have even total Dolbeault degree, so the
+common-chirality convention gives the indicated chiral index.
+
+There is a convention mismatch with the earlier quotient. If the base
+is \(\mathbb P(\bar3)\), then
+\(H^0(\mathcal O(1))=3\) and
+\(H^2(\mathcal O(-4))=\bar3\). The listed quark bundles then carry
+the conjugates of the labelled colour representations. Replacing
+\((c_0,c_1)\) by \((9/4,3/4)\) or \((3/2,3)\), while keeping the
+second component unchanged, reverses the first pairings and exchanges
+\(\mathcal O(1)\) with \(\mathcal O(-4)\) for the quarks; this gives
+the labelled \(Q\) and \(u^c,d^c\) with the quotient's colour action.
+Alternatively the original table is valid for \(\mathbb P(3)\), with
+the corresponding conjugate colour convention.
+
+Without \(\chi\), the required weak-doublet pairings have absolute
+value \(2\). If the two signs for \(Q,L\) agree, a pairing in the span
+of \(F,B-L\) has zero \(B-L\) coefficient and gives the wrong absolute
+value for \(u^c\); if they disagree, it gives zero for \(u^c\).
+Without \(B-L\), \(Q,L\) have identical \(F,\chi\) charges but require
+colour pairings of absolute values \(5/2,3/2\), respectively. These
+obstructions also allow independent source chiralities.
+
+The final line-bundle degrees are integral, but \(K^{1/2}\) itself is
+formal and the displayed coefficients include fractional flux
+components. An actual background requires a specified global gauge
+group, charge lattice, spin^c determinant and compatible flux
+quantization. The index calculation alone does not establish those data
+or the physical interpretation of the grading as a gauge connection.
+
 ## Theorem 2.1 and Propositions 2.2 and 2.4: quotient and tensor action
 
 **Verdict: Correct with amendments, conditional on the cited
