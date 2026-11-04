@@ -51,6 +51,8 @@ The search found further signed permutations with the same effect on the two blo
 
 ## Proposition 5.3 (the flip in a four-family finite geometry)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** Choose the factor isomorphism \(\iota\) unitary, or unitary up to a common scalar. An arbitrary isomorphism need not make \(F\) unitary. With this amendment the flip and block calculation are independently checked; see the [report](../reviews/2026-11-04_terra_check_11d.md#proposition-53-finite-geometry-flip).
+
 **Statement.** Let H_f = (C^2_L ⊕ C^2_R) ⊗ C^4_c ⊗ C^4_f, H = H_f ⊕ conj(H_f), with J the antilinear exchange of the two summands and γ equal to +1 on C^2_L and −1 on C^2_R in H_f and to its negative on conj(H_f), the signs of KO-dimension six. Fix an isomorphism ι: C^4_c -> C^4_f sending the lepton line ℓ to the family line e_0 and the colour space C^3 onto the span of e_1, e_2, e_3, and let F be the flip x ⊗ y -> ι^{-1}(y) ⊗ ι(x) on C^4_c ⊗ C^4_f, extended by the identity on C^2_L ⊕ C^2_R and to conj(H_f) by J F J^{-1}. Then:
 
 1. F is unitary, F^2 = 1, and F commutes with γ and J.

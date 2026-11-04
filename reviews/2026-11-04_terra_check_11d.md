@@ -784,6 +784,41 @@ For a family-zero lepton,
 charged lepton. The full Dirac species blocks are therefore invariant
 setwise, rather than every root being fixed pointwise.
 
+## Proposition 5.3: finite-geometry flip
+
+**Verdict: Correct with amendment.** The factor identification
+\(\iota\) must be unitary, or unitary up to an overall nonzero scalar,
+for the stated flip to be unitary. A general vector-space isomorphism
+with the stated subspace images is insufficient.
+
+For a counterexample to the unqualified statement, choose orthonormal
+bases and set \(\iota(\ell)=2e_0\) while mapping the three colour
+basis vectors to \(e_1,e_2,e_3\) isometrically. Then
+\[
+ F(\ell\otimes e_1)=2e_1\otimes e_0,
+\]
+so \(F\) changes the norm. It is still an involution.
+
+With unitary \(\iota\), the flip is unitary and involutive. Its action
+on the colour-family factors gives
+\[
+ F(P_q\otimes P_0)F^{-1}
+ =P_\ell\otimes(1-P_0).
+\]
+It commutes with \(\gamma\), which acts on the chirality factor, and
+with \(J\) by its conjugate extension to the second summand.
+Extend the self-adjoint Dirac blocks to both particle and conjugate
+summands in the same way. Their ranks are \(12\): two chirality
+states, three colour or family states, and two conjugate summands.
+Their kernels consequently have dimension \(128-12=116\).
+If a fixed self-adjoint \(D\) commutes with \(F\), the two families
+\(D+tT_{\rm top}\) and \(D+tT_\nu\) are conjugate for every \(t\);
+the bounded spectral sector in the heavy limit has dimension \(116\).
+The commutant algebras are conjugate when the represented algebra is
+itself flip-invariant. The displayed Standard Model and Pati-Salam
+colour algebras acting on the colour factor alone do not satisfy that
+condition.
+
 ## Proposition 5.4: misaligned three-slot configurations
 
 **Verdict: Correct with amendment.** The no-isometry conclusion holds for

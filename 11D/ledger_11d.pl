@@ -204,12 +204,12 @@ attempted_by(d11_transposition, claude).
 checked_by(d11_transposition, claude, by_hand).
 checked_by(d11_transposition, terra_6_1, by_hand).
 
-claim(d11_flip, proposition, proved, "Proposition 5.3", "In a four-family finite geometry on (C^2_L + C^2_R) x C^4_colour x C^4_family with KO-6 signs, the flip of colour and family (lepton line to family 0) commutes with gamma and J and conjugates the top Dirac block into the Dirac blocks of the neutrinos of families 1, 2, 3, so the two heavy limits are conjugate; the Pati-Salam and Standard Model algebras are not flip-invariant.").
+claim(d11_flip, proposition, conditional, "Proposition 5.3 (referee amendment)", "In the specified four-family finite geometry, a unitary colour-family identification makes the flip unitary and involutive; it commutes with gamma and J and conjugates the top Dirac block into the Dirac blocks of the other three neutrinos. The displayed Pati-Salam and Standard Model algebras are not flip-invariant.").
 source(d11_flip, '11D/05_colour_family_exchange.md', 'proposition-53-the-flip-in-a-four-family-finite-geometry').
 depends(d11_flip, d11_transposition).
 attempted_by(d11_flip, claude).
 checked_by(d11_flip, claude, by_hand).
-referee_pending(d11_flip).
+checked_by(d11_flip, terra_6_1, by_hand).
 
 claim(d11_two_heavy, conjecture, conjectural, "Readings 1-4 (proposals)", "Three families are the obstruction to the exchange, M exchanges the two heavy directions of the algebra chain, and the 128 of four families is 44 + 84 under Spin(9).").
 source(d11_two_heavy, '11D/05_colour_family_exchange.md', 'readings-proposals').
