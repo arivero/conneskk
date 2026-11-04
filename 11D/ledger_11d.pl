@@ -123,12 +123,12 @@ depends(d11_two_completions, d11_ads5).
 depends(d11_two_completions, d11_betti_y).
 attempted_by(d11_two_completions, claude).
 
-claim(d11_colour84, proposition, proved, "Proposition 3.8 (negative result, pending check)", "For every homomorphism SU(3) -> SO(9), Lambda^3 R^9 (and Lambda^6 R^9) is not the colour content of either family of 84 of lemma 21: real nine-dimensional representations give only singlets, a 6bar, or 10 + 27.").
+claim(d11_colour84, no_go, proved, "Proposition 3.8 (independently checked)", "For every homomorphism SU(3) -> SO(9), Lambda^3 R^9 (and Lambda^6 R^9) is not the colour content of either family of 84 of lemma 21: real nine-dimensional representations give only singlets, a 6bar, or 10 + 27.").
 source(d11_colour84, '11D/03_branes_hypercharge_and_the_84.md', 'proposition-38-no-colour-equivariant-identification-of-the-84-with-the-three-form').
 depends(d11_colour84, l21_counts).
 attempted_by(d11_colour84, claude).
 checked_by(d11_colour84, claude, python("11D/checks_11d.py section E: weights of Lambda^3")).
-referee_pending(d11_colour84).
+checked_by(d11_colour84, terra_6_1, by_hand).
 
 claim(d11_kk_triality, corollary, proved, "Corollary 3.9", "Under the quotient realization no Kaluza-Klein mode of C_3 or of the metric on Y_{3,2} is a colour triplet, so the coloured states of either family of 84 are not modes of C_3 on Y_{3,2}.").
 source(d11_kk_triality, '11D/03_branes_hypercharge_and_the_84.md', 'corollary-39-the-coloured-states-of-the-84-are-not-kaluza-klein-modes-of-c_3-on-y_32').
@@ -136,7 +136,7 @@ depends(d11_kk_triality, d11_z6).
 depends(d11_kk_triality, d11_colour84).
 attempted_by(d11_kk_triality, claude).
 checked_by(d11_kk_triality, claude, by_hand).
-referee_pending(d11_kk_triality).
+checked_by(d11_kk_triality, terra_6_1, by_hand).
 
 %% ---------------------------------------------------------------- 04: the two families and the M2/M5 sides in E8
 claim(d11_blocks, proposition, proved, "Proposition 4.1", "Among blocks of 12 states made of whole Dirac species, exactly one up-type quark or the three neutrinos together keep both spectral-action values of lemma 21 (cos^2 theta_NC = 5/8 and kappa_em/kappa_s = 8/3) on removal.").

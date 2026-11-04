@@ -64,3 +64,63 @@ fluxes in the span of \(Y\) and \(B-L\). Nonabelian bundles, additional
 charges or a common twist, multiple source fields, walls, orbifolds and
 brane states remain possible directions. This is an independent check of
 the scoped obstruction, not a proof about those alternatives.
+
+## Proposition 3.8 and Corollary 3.9: colour and the three-form
+
+**Verdict: Correct.** The conclusions hold for the specified linear colour
+action on the nine transverse directions, and for tensor Kaluza-Klein modes
+of the specified quotient, respectively.
+
+**Independent check of Proposition 3.8.** An irreducible complex
+\(SU(3)\) representation with highest weight \((p,q)\) has dimension
+\((p+1)(q+1)(p+q+2)/2\). The only irreducibles of dimension at most nine
+are \(1,3,\bar3,6,\bar6,8\). The complexification of a real representation
+is self-conjugate. Dimension nine therefore leaves exactly
+\[
+  9\,1,\qquad 3+\bar3+3\,1,\qquad 8+1.
+\]
+The first exterior cube is trivial. In the second,
+\[
+ \Lambda^2 3\otimes\bar3
+ =\bar3\otimes\bar3=\bar6+3
+\]
+is a summand of the exterior cube. In the third,
+\(\Lambda^3(8+1)=\Lambda^3 8+\Lambda^2 8\), and \(\Lambda^2 8\)
+contains a \(10\). For the last assertion, identify \(8\) with
+\(\mathfrak{sl}_3(\mathbb C)\). The vector
+\(E_{13}\wedge E_{12}\) is killed by the two positive simple root
+operators and has highest weight \((3,0)\), so it generates a \(10\).
+Neither target colour representation contains a \(6\) or a \(10\), and
+the trivial case contains no triplets.
+
+The decomposition used in the original proof is also correct:
+\[
+ \Lambda^3 8=1+8+10+\bar{10}+27.
+\]
+For an analytic check, \(E_{13}\wedge E_{12}\wedge E_{23}\) is a highest
+weight vector of weight \((2,2)\); \(E_{13}\wedge E_{12}\wedge H\),
+with nonzero Cartan \(H\) satisfying \(\alpha_2(H)=0\), has highest
+weight \((3,0)\). Conjugation supplies \((0,3)\), and the invariant
+Cartan three-form supplies \(1\). The \((1,1)\)-weight space of
+\(\Lambda^3 8\) has dimension five, while each of the two spaces reached
+by the simple raising operators has dimension two. Their joint kernel
+therefore supplies a highest-weight \(8\). The dimensions sum to
+\(1+8+10+10+27=56=\binom83\), exhausting the exterior cube.
+Orientation and the Hodge star give
+\(\Lambda^6\mathbb R^9\cong\Lambda^3\mathbb R^9\) equivariantly.
+
+**Independent check of Corollary 3.9.** The colour centre acts trivially
+on \(Y_{3,2}\): for \(\omega=e^{2\pi i/3}\),
+\((\omega I_3,I_2)\) is a quotient-circle transformation, obtained from
+\(\lambda=e^{4\pi i/3}\). Its induced action on every tensor bundle is
+the identity. Thus tensor fields contain only colour representations
+with trivial centre, excluding \(3\) and \(\bar3\). The same argument
+applies to tensor modes of \(C_3\) and the metric. It is enough that the
+displayed colour action preserve the background metric and flux; an
+identification of the *full* isometry group is unnecessary.
+
+**Scope and direction.** The first result concerns exterior powers of a
+linear real nine-dimensional colour representation; the second concerns
+tensor modes on the stated quotient with the stated action. Colour acting
+on other internal spaces, nonlinear or brane realizations, and maps without
+colour equivariance remain open directions.

@@ -2,6 +2,8 @@
 
 Part of the 11D line of research ([README](README.md)). Propositions 3.2 and 3.5 and Corollary 3.9 are proved here, and Proposition 3.8 is a negative result in a stated scope, pending an independent check; the numbered proposals are conjectures to test. Attempted by Claude (Anthropic), 3 Nov 2026. Checks: [checks_11d.py](checks_11d.py), sections B, E and G, Python with exact fractions. Referee pending.
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** Proposition 3.8 and Corollary 3.9 have been independently checked by hand in their stated scopes; the tensor-mode argument needs the displayed colour action to preserve the background. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-38-and-corollary-39-colour-and-the-three-form). The other results of this file remain pending.
+
 ## Setting
 
 [02](02_witten_spaces_hypercharge_quotient.md) realizes the Witten space with Killing spinors as Y_{3,2} = (5bar)//U(1)_Y. Its isometries give SU(3) x SU(2) x U(1)_R, and no bosonic Kaluza-Klein mode on it carries triality, weak isospin 1/2 or fractional hypercharge (Proposition 2.4). The M-theory vacuum AdS4 x Y_{3,2} is the near-horizon geometry of N M2-branes at the apex of the cone C(Y_{3,2}), with N units of flux of *G_4 through Y_{3,2}. [Lemma 21](../lemmas/21_top_counting.md) proposed relating its two families of 84 states to the three-form C_3, to the M2 or M5 brane, and to their duality. This file connects the two.
