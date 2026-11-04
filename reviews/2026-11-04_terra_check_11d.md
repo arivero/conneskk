@@ -753,6 +753,37 @@ Euclidean isometries. State bijections without such an isometry, other
 embeddings or larger representations, and a fourth family remain possible
 directions.
 
+## Proposition 5.2: four-family colour-family transposition
+
+**Verdict: Correct with a setwise-invariance clarification.** The
+specified map is a Weyl isometry and exchanges the two twelve-root
+blocks. The right-handed-conjugate fields can be sent to antiparticle
+roots, so “fixed” for the family-zero leptons means fixed as a complete
+particle-antiparticle species block.
+
+The permutation \(P\) exchanges three pairs of colour/family
+coordinates and the two weak coordinates. Negating all eight coordinates
+is an even sign change; signed permutations with an even number of sign
+changes preserve the \(D_8\) roots and lie in \(W(D_8)\subset W(E_8)\).
+Thus \(M=-P\in W(E_8)\) and \(M^2=1\). It preserves the half-integer
+roots with an even number of minus signs.
+
+For a quark colour pattern \(c\) and the all-plus family pattern \(1\),
+\[
+ M(c\mid-+\mid1)=(-1\mid-+\mid-c)=\nu_L(-c),\qquad
+ M(-c\mid++\mid1)=(-1\mid--\mid c)=-\nu^c(-c).
+\]
+The three \(-c\) are the other three family patterns. Including
+negatives gives the entire neutrino block and, since \(M^2=1\), the
+reverse map. The weak root \(e_4-e_5\) is fixed, so the corresponding
+\(SU(2)_L\) subalgebra is preserved. The same calculation gives the
+down-quark/charged-lepton exchange.
+
+For a family-zero lepton,
+\(M(\nu_L)=\nu_L\), but \(M(\nu^c)=-\nu^c\), and similarly for the
+charged lepton. The full Dirac species blocks are therefore invariant
+setwise, rather than every root being fixed pointwise.
+
 ## Proposition 5.4: misaligned three-slot configurations
 
 **Verdict: Correct with amendment.** The no-isometry conclusion holds for

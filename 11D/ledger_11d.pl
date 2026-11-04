@@ -202,7 +202,7 @@ claim(d11_transposition, proposition, proved, "Proposition 5.2", "With four fami
 source(d11_transposition, '11D/05_colour_family_exchange.md', 'proposition-52-four-families-the-transposition-of-colour-and-family').
 attempted_by(d11_transposition, claude).
 checked_by(d11_transposition, claude, by_hand).
-referee_pending(d11_transposition).
+checked_by(d11_transposition, terra_6_1, by_hand).
 
 claim(d11_flip, proposition, proved, "Proposition 5.3", "In a four-family finite geometry on (C^2_L + C^2_R) x C^4_colour x C^4_family with KO-6 signs, the flip of colour and family (lepton line to family 0) commutes with gamma and J and conjugates the top Dirac block into the Dirac blocks of the neutrinos of families 1, 2, 3, so the two heavy limits are conjugate; the Pati-Salam and Standard Model algebras are not flip-invariant.").
 source(d11_flip, '11D/05_colour_family_exchange.md', 'proposition-53-the-flip-in-a-four-family-finite-geometry').

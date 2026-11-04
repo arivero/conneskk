@@ -35,6 +35,8 @@ F1 has roots with d = 16 and d = 22, and F2 has none. The sums of d agree, 4·16
 
 ## Proposition 5.2 (four families: the transposition of colour and family)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The Weyl map and block exchange are independently checked. Family-zero lepton species blocks are fixed setwise; \(\nu^c\) and \(e^c\) individually go to their negatives. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-52-four-family-colour-family-transposition).
+
 **Statement.** Let P be the permutation of coordinates that exchanges the three colour coordinates with the three family coordinates and the two weak coordinates with each other, and M = −P. Then M is an involution in the Weyl group of E8 that preserves the 128 roots of the four families and SU(2)_L, and acts on the up-type and down-type states as the transposition of the four Pati-Salam colours (r, g, b, lepton) with the four families (1, 2, 3, 0), with the lepton paired with family 0 and the colour c paired with the family −c. In particular:
 
 1. the up-type quark of family 0 (t_L and t^c, three colours, with conjugates) goes onto the neutrinos of families 1, 2, 3 (ν_L and the conjugate of ν^c), and back;
