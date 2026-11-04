@@ -494,7 +494,7 @@ A synthesis with the status of each entry, drawing on lemmas 05 to 30 and on the
 - [The joint family: weak masses below a descending tower](11D/01_interval_and_eleventh_dimension.md#the-joint-family-weak-masses-below-a-descending-tower)
 - [Proposal 1.3 (the circle of H as the M-theory circle)](11D/01_interval_and_eleventh_dimension.md#proposal-13-the-circle-of-h-as-the-m-theory-circle)
 - [Proposition 1.4 (the angle-dependent one-loop term at the vacuum angle)](11D/01_interval_and_eleventh_dimension.md#proposition-14-the-angle-dependent-one-loop-term-at-the-vacuum-angle)
-- [Proposition 1.5 (a scale-free potential fixes the path with M_W l constant)](11D/01_interval_and_eleventh_dimension.md#proposition-15-a-scale-free-potential-fixes-the-path-with-m_w-l-constant)
+- [Proposition 1.5 (a scale-free potential with an isolated stationary angle fixes M_W l)](11D/01_interval_and_eleventh_dimension.md#proposition-15-a-scale-free-potential-with-an-isolated-stationary-angle-fixes-m_w-l)
 - [What remains open here](11D/01_interval_and_eleventh_dimension.md#what-remains-open-here)
 - [Witten spaces as the hypercharge quotient of the five-dimensional representation](11D/02_witten_spaces_hypercharge_quotient.md#witten-spaces-as-the-hypercharge-quotient-of-the-five-dimensional-representation)
 - [Setting](11D/02_witten_spaces_hypercharge_quotient.md#setting)

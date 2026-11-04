@@ -10,6 +10,7 @@ depends(d11_circle, l05_truncation).
 attempted_by(d11_circle, claude).
 checked_by(d11_circle, claude, by_hand).
 checked_by(d11_circle, terra_6_1, by_hand).
+checked_by(d11_circle, sonnet_5_5, by_hand).
 
 claim(d11_m_circle, conjecture, conjectural, "Proposal 1.3", "The circle of H is the M-theory circle: v -> 0 along the joint family (weak masses below a descending tower, Wilson-line angles -> 0) is strong coupling with the D0 (momentum) tower becoming light; v -> infinity is a shrinking circle with antiperiodic fermions and no bulk fermions, as in type 0 strings; light fermions of the 9 endpoint come from branes or walls.").
 source(d11_m_circle, '11D/01_interval_and_eleventh_dimension.md', 'proposal-13-the-circle-of-h-as-the-m-theory-circle').
@@ -24,6 +25,7 @@ depends(d11_casimir, l23_wz).
 attempted_by(d11_casimir, claude).
 checked_by(d11_casimir, claude, python("11D/checks_11d.py sections F, F2: series against quadrature")).
 checked_by(d11_casimir, terra_6_1, by_hand).
+checked_by(d11_casimir, sonnet_5_5, by_hand).
 
 claim(d11_scale_free, proposition, conditional, "Proposition 1.5 (referee amendment)", "For V = l^-4 G(theta), a nonzero angular minimum gives a runaway in l; with theta = l m, an isolated stationary angle gives l proportional to 1/m. A flat direction such as G(theta) = theta^4 allows other stationary paths without selecting one. The specified flat one-loop determinant has no positive stationary angles tending to zero when n_f != 54/5.").
 source(d11_scale_free, '11D/01_interval_and_eleventh_dimension.md', 'proposition-15-a-scale-free-potential-fixes-the-path-with-m_w-l-constant').
@@ -31,6 +33,7 @@ depends(d11_scale_free, d11_casimir).
 attempted_by(d11_scale_free, claude).
 checked_by(d11_scale_free, claude, by_hand).
 checked_by(d11_scale_free, terra_6_1, by_hand).
+checked_by(d11_scale_free, sonnet_5_5, by_hand).
 
 %% the two families of the Astra 6 audit of 3 Nov 2026 (reviews/2026-11-03_astra_audit_d11.md), used by 01
 claim(a11_joint_limit, proposition, proved, "Audit, section 3", "D_F = epsilon D_*, l = l_* epsilon^-alpha, 0 < alpha < 1: exact window epsilon D_*, gap >= pi/l - epsilon ||D_*||, compression error O(epsilon^{2(1-alpha)}); a cutoff epsilon^beta, alpha < beta < 1, holds exactly the r finite states, while N(E) ~ 2 r l E/pi diverges at fixed E.").
@@ -40,6 +43,7 @@ depends(a11_joint_limit, l22_compression).
 attempted_by(a11_joint_limit, astra6).
 checked_by(a11_joint_limit, claude, python("11D/checks_11d.py section H: window, gap and Weyl constant on exact spectra")).
 checked_by(a11_joint_limit, terra_6_1, by_hand).
+checked_by(a11_joint_limit, sonnet_5_5, by_hand).
 
 claim(a11_localized, proposition, proved, "Audit, section 4", "Bulk mass mu = mu_* epsilon^alpha with mu l = (1 - alpha) log(1/epsilon) + c_0: light mass ~ 2 mu_* e^{-c_0} epsilon, gap ~ mu_* epsilon^alpha, localization width over l -> 0; exact tail identity e^{-2 kappa l} = (m/(mu + kappa))^2.").
 source(a11_localized, 'reviews/2026-11-03_astra_audit_d11.md', '4-a-localized-family-with-the-same-hierarchy').
@@ -53,6 +57,7 @@ source(d11_quotient, '11D/02_witten_spaces_hypercharge_quotient.md', 'theorem-21
 attempted_by(d11_quotient, claude).
 checked_by(d11_quotient, claude, python("11D/checks_11d.py sections A, B: weights, Calabi-Yau condition, Z_6")).
 checked_by(d11_quotient, terra_6_1, by_hand).
+checked_by(d11_quotient, sonnet_5_5, by_hand).
 
 claim(d11_unique, proposition, proved, "Proposition 2.2", "Among circle quotients of S^5 x S^3 with coprime weights (b, -a), only (3,2) has a Calabi-Yau cone; a free circle quotient of a moment level in a complex representation of dimension n has dimension 2n - 3, which is 7 only for n = 5 (the 5 and 5-bar of SU(5)).").
 source(d11_unique, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-22-uniqueness-of-the-count-7').
@@ -60,25 +65,29 @@ depends(d11_unique, d11_quotient).
 attempted_by(d11_unique, claude).
 checked_by(d11_unique, claude, python("11D/checks_11d.py section A")).
 checked_by(d11_unique, terra_6_1, by_hand).
+checked_by(d11_unique, sonnet_5_5, by_hand).
 
 claim(d11_topology, proposition, proved, "Proposition 2.3", "Circle bundle Y_{a,b} over CP^2 x CP^1, a != 0: H^2 = Z + Z/gcd(a,b), b_3 = 0, H^4 of order a^2 with Smith invariants (gcd, a^2/gcd), spin iff a odd and b even; for (3,2) H^4 = Z/9 and H^2(B) -> H^2(Y) = Z is (x,y) -> 2x - 3y.").
 source(d11_topology, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-23-topology-of-y_ab').
 attempted_by(d11_topology, claude).
 checked_by(d11_topology, claude, python("11D/checks_11d.py section C: Smith invariants, spin condition")).
 checked_by(d11_topology, terra_6_1, by_hand).
+checked_by(d11_topology, sonnet_5_5, by_hand).
 
-claim(d11_z6, proposition, proved, "Proposition 2.4", "Every monomial in U, V and every state of Lambda^*(5-bar) satisfies 2t + 3d + 6Y = 0 mod 6; Y-neutral monomials have t = d = 0; tensor fields on Y_{3,2} carry representations of PSU(3) x SO(3) x U(1)_R, so no bosonic Kaluza-Klein mode is a colour triplet or weak doublet.").
+claim(d11_z6, proposition, proved, "Proposition 2.4", "Every monomial in U, V and every state of Lambda^*(5-bar) satisfies 2t + 3d + 6Y = 0 mod 6; Y-neutral monomials have t = d = 0; tensor fields on Y_{3,2} carry representations of PSU(3) x SO(3) x U(1)_R, so no tensor Kaluza-Klein mode on an invariant background is a colour triplet or weak doublet; spinors open.").
 source(d11_z6, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-24-the-z_6-of-the-standard-model').
 depends(d11_z6, d11_quotient).
 attempted_by(d11_z6, claude).
 checked_by(d11_z6, claude, python("11D/checks_11d.py section B")).
 checked_by(d11_z6, terra_6_1, by_hand).
+checked_by(d11_z6, sonnet_5_5, by_hand).
 
 claim(d11_flux_nogo, no_go, proved, "Proposition 2.5 (independently checked with amendment)", "Ten-dimensional Weyl fermions on CP^2 x CP^1 with one abelian line bundle per Standard Model field and the canonical formal spin^c shift: no generation for fluxes along Y and B - L. Equal u^c and d^c images and unsigned linearity of 2j + 1 require a common ten-dimensional chirality.").
 source(d11_flux_nogo, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-25-no-generation-from-fluxes-along-hypercharge-and-b---l').
 attempted_by(d11_flux_nogo, claude).
 checked_by(d11_flux_nogo, claude, python("11D/checks_11d.py section D: required bidegrees, span test, search over a third charge in [-3,3]^6")).
 checked_by(d11_flux_nogo, terra_6_1, by_hand).
+checked_by(d11_flux_nogo, sonnet_5_5, by_hand).
 
 claim(d11_flux_fit, proposition, conditional, "Proposition 2.6 (referee amendments)", "With fluxed charges F, chi and B - L the displayed line bundles give a one-generation index in the stated colour convention. The quotient's colour action conjugates the quark bidegrees, and the global gauge group, charge lattice and spin^c flux quantization must be specified.").
 source(d11_flux_fit, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-26-one-generation-from-a-universal-charge-the-grading-and-b---l').
@@ -86,6 +95,7 @@ depends(d11_flux_fit, d11_flux_nogo).
 attempted_by(d11_flux_fit, claude).
 checked_by(d11_flux_fit, claude, python("11D/checks_11d.py section D2")).
 checked_by(d11_flux_fit, terra_6_1, by_hand).
+checked_by(d11_flux_fit, sonnet_5_5, by_hand).
 
 %% ---------------------------------------------------------------- 03: branes, hypercharge and the 84
 claim(d11_betti_y, conjecture, conjectural, "Proposal 3.1", "Hypercharge is the Betti vector of Y_{3,2} (C_3 on the harmonic two-form); the gauge group of AdS4 x Y_{3,2} is SU(3) x SU(2) x U(1)_Y x U(1)_R; states with Y != 0 are wrapped branes, and the N = 1 fivebrane baryons are d^c and L.").

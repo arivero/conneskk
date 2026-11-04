@@ -79,7 +79,7 @@ In lemmas 23, 24 and 26 the gauge field is valued in sp(2) (+) su(4), with 25 ge
 
 1. If a_0 != 0, then at small m the leading balance is the scale-free one of Proposition 1.5: alpha = 1 or a runaway. The term in alpha'/l^2 changes neither.
 2. If a_0 = 0, G_1(0) = a_1 > 0 and b < 0, there is a minimum at l^4 = 3 a_1 alpha' / (|b| m^2), so alpha = 1/2: 1/l is the geometric mean of m and the string scale, up to constants, and m << 1/l << 1/l_s.
-3. If supersymmetry is exact at theta = 0, then V = 0 at theta = 0 at all orders, a_1 = 0, and V = m^2 l^-2 H(theta, alpha'/l^2). Then l is fixed by H independently of m, or runs away, and no joint family results.
+3. If supersymmetry is exact at theta = 0, then V = 0 at theta = 0 at all orders, a_1 = 0, and V = m^2 l^-2 H(theta, alpha'/l^2). Then l is fixed by H independently of m, or runs away, and no joint family results, unless the stationarity condition has a root interval (a flat direction), as in the counterexample to the universal form of Proposition 1.5.
 
 So in the scope of a potential analytic in alpha'/l^2 around the flat family, with corpus content, the gradient is not the second scale. Item 2 would need a Bose-Fermi balance at theta = 0 that is not a supersymmetry at theta = 0, with about 169 further real bosonic degrees of freedom for three generations.
 
