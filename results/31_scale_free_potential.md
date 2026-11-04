@@ -1,0 +1,17 @@
+# For a scale-free potential V = l^{-4} G(theta), a free angle gives a runaway of l at every angle with G != 0, and an angle tied to a mass, theta = l m, has stationary lengths l = theta_\*/m at isolated roots of theta G' = 4 G, so M_W l is the same at every m
+
+**Status.** Proposition (Proposition 1.5, with the referee amendment; the ledger records it as conditional). Proved by Claude Opus 5.5 (branch 11D; ledger agent `claude`); checked by its author by hand, by Terra 6.1 by hand, who found an error in the universal conclusion of the first version (31_counterexample_flat_direction.md) and analysed the displayed determinant, and by Claude Sonnet 5.5 by hand (reports: historical/reviews/2026-11-04_terra_check_11d.md, historical/reviews/2026-11-04_sonnet_second_check_11d.md). Ledger row `d11_scale_free` (depending on `d11_casimir`). Stated in the section on the massless limit of paper/connes_kk_dictionary_note.tex ("\supp{31}").
+
+**Setting.** V(l, theta) = l^{-4} G(theta) with G of class C^1: the form of every one-loop potential of a flat interval whose only scales are l and the wall angles (lemmas 23 and 24), with the angle-independent coefficient a_0 included in G.
+
+**Statement.**
+
+1. If the angle is free, V is monotone in l at every fixed theta with G(theta) != 0: at the minimizing angle the length runs to infinity if G(theta_min) > 0 and to zero if G(theta_min) < 0, and stationary points exist only on the set G = G' = 0.
+2. If the angle is tied to a fixed mass, theta = l m (as for X = tan(l M) in lemma 22), the stationary lengths satisfy theta G'(theta) = 4 G(theta) at theta = l m. An isolated root theta_\* gives l = theta_\*/m, so M_W l and M_Z l, functions of theta alone by Theorem 23.6, are the same at every m: the path l ~ 1/M_W, alpha = 1 in the scaling of the joint family.
+3. For the displayed flat one-loop determinant, G(theta) = a_0 + c theta^2 + o(theta^2) with c = (3 zeta(3)/(16 pi^2))(54/5 - n_f), and if n_f != 54/5 there is no sequence of positive stationary angles tending to zero, whether or not a_0 = 0; this covers every integer n_f.
+
+*Scope.* Isolated stationary roots of a scale-free C^1 potential. A root interval, as for G = theta^4 near 0, makes every alpha < 1 stationary and selects none (31_counterexample_flat_direction.md), and the tuned case c = 0 needs its higher-order term. A joint family with alpha < 1 selected by the potential needs a second scale in the action: a bulk mass, the cutoff of the spectral action, curvature, flux or a wall term. Remark 10.7 of lemma 37 amends this last point: on the scale-free path the window can separate with a fixed small ratio if the light mass is exponentially small in a stabilized shape parameter.
+
+**Proof.** Lemma 31, Proposition 1.5: d/dl [l^{-4} G(l m)] = l^{-5}(theta G'(theta) - 4 G(theta)) at theta = l m, and d/dl V = -4 l^{-5} G at a free angle. Item 3 is the referee's analysis in the Referee proofs of lemma 31: theta G' - 4 G = -4 a_0 - 2 c theta^2 + o(theta^2).
+
+**What it leaves open.** A potential with a second scale that selects alpha < 1 with finite gauge couplings; the localized family of the audit, with G(l m, l mu) from the exact secular equations of lemma 09, is the first candidate. The modulus target V = a r^{-p} + b eps^2 r^q of the audit has q = -2 in the flat family, the borderline alpha = 1, so a term growing with l at fixed v must come from one of the second scales listed (lemma 37, Remark 10.8).

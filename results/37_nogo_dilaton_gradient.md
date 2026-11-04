@@ -1,0 +1,20 @@
+# For a potential analytic in alpha'/l^2 around the flat family, the type I' dilaton gradient supplies no second scale for Proposition 1.5: its relative variation falls as 6/R^2 along an opening path, and it can matter only if a_0 = 0
+
+**Status.** No-go theorem in its scope (Propositions 10.5 and 10.6). Proved by Claude Opus 5.5 on 4 November 2026; checked by its author by hand and read independently by Claude Sonnet 5.5 by hand (historical/reviews/2026-11-04_sonnet_check_11d_10_11.md), whose amendments were rechecked by Claude Opus 5.5 and applied. No Terra referee was available, and the corrected text has not been read again; lemma 37 records that this negative result has had one independent reading. Ledger row `d11_gradient`. Stated in the section on the string dualities of paper/connes_kk_dictionary_note.tex ("it can act as the second scale only if the coefficient in Eq. (a0) vanishes").
+
+**Setting.** The profile of 37_angle_to_position_map.md with L = 2 pi and alpha' = 2, where z is B plus a function of size at most 8L = 16 pi; a joint family R_eps ~ eps^{-alpha}; and V = l^{-4} [G_0(theta) + (alpha'/l^2) G_1(theta) + ...], theta = l m, with G_0 = a_0 + b theta^2 + ... near 0.
+
+**Statement.**
+
+1. (Proposition 10.5) For large R, R^2 ~ 3B/(8 pi), and the relative variation of z across the interval is at most 16 pi/B ~ 6/R^2; along the family it falls as eps^{2 alpha}, the map of Proposition 10.1 linearizes and the dilaton is constant in the limit, so its corrections to any potential are powers of alpha'/l^2.
+2. (Proposition 10.6, item 1) If a_0 != 0, the leading balance at small m is the scale-free one of Proposition 1.5, alpha = 1 or a runaway, and the term in alpha'/l^2 changes neither.
+3. (item 2) If a_0 = 0, G_1(0) = a_1 > 0 and b < 0, there is a minimum at l^4 = 3 a_1 alpha'/(abs(b) m^2), so alpha = 1/2, and 1/l is the geometric mean of m and the string scale up to constants.
+4. (item 3) If supersymmetry is exact at theta = 0, then V = m^2 l^{-2} H(theta, alpha'/l^2), l is fixed by H independently of m or runs away, and no joint family results, unless the stationarity condition has a root interval, a flat direction as in 31_counterexample_flat_direction.md.
+
+*Hypotheses.* A potential with a regular expansion in alpha'/l^2 around the flat family with its towers; the corpus content, with a_0 > 0 (37_casimir_coefficient.md); the dilaton gradient, as distinct from a dilaton potential. In supersymmetric type I' there is no potential at all, since the D8 positions, B and C are flat directions.
+
+*Escapes, as the lemma states them.* A dilaton potential from string tree level, in non-supersymmetric strings or with tadpoles, for which a term in positive powers of 1/g could grow with l at fixed v through Proposition 10.4; a different frame relation between l and the four-dimensional Planck mass; wall-localized dynamics; the other chambers of the moduli space, where 8 + 8 removes the Romans mass and E8 x E8 is available.
+
+**Proof.** Lemma 37, Propositions 10.5 and 10.6: insert z = B + O(16 pi) in the formula for R; differentiate, with V'' = 8 abs(b) m^2/l^4 > 0 at the stationary point of item 3; V even in theta and vanishing at theta = 0 for every l gives V = theta^2 l^{-4} H.
+
+**What it leaves open.** The result points to three targets, none derived: a bulk energy depending on the electroweak order parameter (Remark 10.8: V = a/l^4 + b v^2 M^3 l gives alpha = 2/5 if the bulk energy vanishes at v = 0); a cancellation a_0 = 0 without supersymmetry at theta = 0; or a fixed shape with an exponentially small ratio, as on the disc bundle of lemma 29 (Remark 10.7).

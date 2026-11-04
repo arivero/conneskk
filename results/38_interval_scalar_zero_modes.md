@@ -1,0 +1,21 @@
+# Under a five-dimensional Yang-Mills action the massless four-dimensional scalars from the interval component of an so(30) connection form the orthogonal complement of k_0 + k_l, so lemma 22's parent has none, wall algebras M_15(C) give exactly Lambda^2 V + Lambda^2 V-bar, and a generator has a massless vector or a massless scalar, never both
+
+**Status.** Theorem (Theorem 11.3, with the amendments of the independent reading). Proved by Claude Opus 5.5 on 4 November 2026; checked by its author by hand and read independently by Claude Sonnet 5.5 by hand (historical/reviews/2026-11-04_sonnet_check_11d_10_11.md), whose amendments are applied. No Terra referee was available, and the corrected text has not been read again. Ledger row `d11_so30_zero`. Theorem 11.3 in the section on the interval parent of paper/real_structure_note.tex ("\supp{38}"); stated in the section on the Higgs field of paper/connes_kk_dictionary_note.tex ("\supp{38}"), whose table lists it with one reading.
+
+**Setting.** The algebra A_l of 38_interval_connection_so30.md, with wall algebras C_0, C_l of skew parts k_0, k_l, and a five-dimensional Yang-Mills action for the fluctuation on a flat product with M^4, as in Proposition 22.8.
+
+**Statement.**
+
+1. The gauge group is {g : I -> O(30), g(0) in K_0, g(l) in K_l}; the holonomy of a_x transforms as P -> g(l) P g(0)^{-1}, so the moduli are the double cosets of SO(30) under K_l on the left and K_0 on the right, and the massless four-dimensional scalars from a_x form the orthogonal complement of k_0 + k_l in so(30).
+2. In lemma 22's algebra C_0 = A, so k_0 = so(30), and there are no such scalars, for any algebra of this kind.
+3. If C_0 = C_l = M_15(C), the massless scalars are exactly Lambda^2 V + Lambda^2 V-bar, with colour-antitriplet counts (6, 6, 3), and the massless vectors are u(15).
+4. A generator in k_0 cap k_l has a massless vector and no massless scalar, one in the orthogonal complement of k_0 + k_l has a massless scalar and no massless vector, and all others have neither. For aligned walls the towers are n pi/l in the first two cases and (n - 1/2) pi/l for a generator in exactly one of k_0, k_l; for k_0 spanned by T_1 and k_l by cos(phi) T_1 + sin(phi) T_2 they move to k l = n pi +- phi, the mechanism of lemma 23.
+5. With colour unbroken at both walls the (1, 8) of Lambda^2(30) is a vector, so Lambda^2(30) cannot consist entirely of massless scalars; in item 3 the (24, 8) + (24, 1) + (1, 8) + (1, 1) are vectors and the scalars are (15, 3-bar) + (10, 6) and conjugates.
+
+*Scope.* Free five-dimensional Yang-Mills at trivial background. The wall algebra M_15(C) of item 3 is an input, since every f preserves the domain at D_F = 0; it says that the walls conserve quark number and the bulk does not. On a circle without walls every generator has both a massless vector and a massless scalar, and all of Lambda^2(30) appears.
+
+*Escapes, as the lemma states them.* A circle without walls, nontrivial holonomy, brane-localized terms, further internal dimensions.
+
+**Proof.** Lemma 38, Theorem 11.3: a gauge parameter with xi(0) in k_0 and xi(l) in k_l shifts int a_x by xi(l) - xi(0), so the linear moduli are so(30)/(k_0 + k_l); A_mu has Neumann or Dirichlet conditions at each wall by membership in k_0 or k_l, and a_x the opposite.
+
+**What it leaves open.** Whether a wall term that conserves quark number derives M_15(C) at the walls; scalars in the slepton representations (24, 1) + (1, 1), which are vectors on an interval and need components along further internal directions, such as the base of lemma 32; the colour sextets (10, 6), which nothing removes in this construction.

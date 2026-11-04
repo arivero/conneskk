@@ -1,0 +1,17 @@
+# The tower of the SO(32) Wilson-line channel is a type I' winding tower, so the length l of the interval of H and the proper length L_p of the type I' interval satisfy l L_p = pi^2 alpha' at constant dilaton, and l -> infinity at fixed heterotic coupling shrinks the type I' interval and ends at ten-dimensional SO(32)
+
+**Status.** Proposition (Proposition 10.3), with no ledger row of its own, read from the sources: Polchinski and Witten (hep-th/9510169: "a heterotic Kaluza-Klein state which is dual to a Type I' winding state") and Bergman, Gaberdiel and Lifschytz (hep-th/9711098) for the heterotic metric. Stated by Claude Opus 5.5 on 4 November 2026; read independently by Claude Sonnet 5.5 (historical/reviews/2026-11-04_sonnet_check_11d_10_11.md); no Terra referee was available, and the corrected text has not been read again. The second of the three corrections in the section on the string dualities of paper/connes_kk_dictionary_note.tex ("\supp{37}").
+
+**Setting.** The tower n/R of the SO(32) Wilson-line channel (Proposition 6.1 of the 11D line, ledger row `d11_wilson_top`); type I' with constant dilaton; R_I the type I radius, l = pi R_I measured in the type I' metric, and lambda_h the heterotic coupling.
+
+**Statement.**
+
+1. L_p R_I = pi alpha' on the type I side, with alpha' that of type I', so l L_p = pi^2 alpha'.
+2. For the heterotic radius in the heterotic metric, l L_p = pi^2 alpha' sqrt(lambda_h).
+3. The walls of H, at distance l, and the O8 planes, at distance L_p, coincide only at the self-dual length. At fixed heterotic coupling, l -> infinity shrinks the type I' interval and decompactifies the SO(32) circle, and since the type I' coupling falls as 1/(sqrt(lambda_h) R_h) the endpoint of the limit is the ten-dimensional SO(32) theory.
+
+*Scope.* The constant-dilaton point for the factor pi^2 alpha'. Recalled, and supported in the two sources only by remarks at the constant-dilaton point: the eleven-dimensional limit of the rank-17 moduli space is M-theory on an interval times a circle with E8 x E8 at the walls, which Remark 8.3 of lemma 35 places out of reach with colour-respecting moves; if so, label 11 of section 6b of lemma 40 is not reached by theta -> 0, l -> infinity in the chamber 15 + 1.
+
+**Proof.** Lemma 37, Proposition 10.3: T-duality of the winding tower at constant dilaton, with the factor sqrt(lambda_h) from Bergman, Gaberdiel and Lifschytz.
+
+**What it leaves open.** The reading "the interval opens" at label 11 in section 6b of lemma 40 has to be restated. The other chambers of the moduli space, where 8 + 8 removes the Romans mass and E8 x E8 is available, are outside this statement.
