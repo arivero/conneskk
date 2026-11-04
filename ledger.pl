@@ -14,7 +14,7 @@
 %% attempted_by(Id, Agent)             Agent: astra6 | claude_opus_5_5 | terra | sol | chatgpt | corpus
 %% checked_by(Id, Agent, Method)       Method: by_hand | python(Description) | not_recorded(Description)
 %%    Each checked_by row stands in the block of its claim, so that the block reads as the whole record.
-%% referee_report(File, Report)        the referee of File by Terra 6.1 is in Report (the lemma table records it)
+%% referee_report(File, Report)        the referee of File (by Terra 6.1, or by Claude Opus 5.5 from 4 Nov 2026) is in Report (the lemma table records it)
 %%    The test on these rows checks bookkeeping: a Terra checker, Terra authorship or an exception. It reads neither the statement nor the verdict of the report.
 %% outside_referee(Claim, Why)         a proved or conditional claim of a refereed File that its Report did not cover
 %% referee_pending(Claim)              a new claim checked only by its author, with a referee queued
@@ -460,6 +460,7 @@ attempted_by(l16_family, terra_6_1).
 checked_by(l16_family, claude_opus_5_5, by_hand).
 addresses(t0, fl_R3).  addresses(t0, l15_finite_limits).  addresses(t0, l16_truncation).  addresses(t0b, l16_truncation).
 
+hypothesis(sheet_diagonal_ps, "At the Pati-Salam step of lemma 41 the finite D is sheet-diagonal, of the form of Corollary 16.8 (a Pati-Salam-symmetric Yukawa, no Majorana block), so that order one holds there; with the Majorana block order one fails and Theorem 20.2 selects A_SM.").
 hypothesis(ccm_relation, "Chamseddine-Connes-Marcolli normalization at the matching scale: 8 M_W^2 = sum of N_f m_f^2 over Dirac masses.").
 hypothesis(positive_rank, "The twisting bundle has positive rank, with the equivariant self-adjoint realization.").
 hypothesis(heat_kernel_spectral_action, "Heat-kernel cutoff spectral action with a vectorial gauge background commuting with the mass matrix.").
@@ -1099,77 +1100,78 @@ checked_by(l21_exotic, claude_fable_5_1, by_hand).  % arithmetic; the anomaly tr
 depends(l21_exotic, l21_so30).
 addresses(t12, l21_exotic).
 referee_pending(l21_exotic).  % added on 4 Nov 2026, after the Terra report on lemma 21
-claim(l41_forms, theorem, proved, "Lemma 41.1 and Theorem 41.2", "For a finite real KO-6 triple with order zero the trace form Q_ij = Tr(gamma p_i p_j^o) is skew. Along the chain A_PS -> A_SM -> C + M_3(C) of lemma 20 and lemma 06 (one generation, Dirac neutrinos) the forms are [[0,0,-2],[0,0,2],[2,-2,0]], [[0,-2,-2],[2,0,2],[2,-2,0]] and 0, of ranks 2, 2, 0: the trace-form Poincare duality fails at every step, at the last because the light block is vectorlike (the form is the bimodule index).").
+claim(l41_forms, theorem, proved, "Lemma 41.1 and Theorem 41.2", "For a finite real KO-6 triple with order zero the trace form Q_ij = Tr(gamma p_i p_j^o) is skew. Along the chain A_PS -> A_SM -> C + M_3(C) of lemma 20 and lemma 06 (one generation, Dirac neutrinos) the forms are [[0,0,-2],[0,0,2],[2,-2,0]], [[0,-2,-2],[2,0,2],[2,-2,0]] and 0, of ranks 2, 2, 0: the trace-form Poincare duality fails at every step, at the last because every range rho(p_i) rho(p_j)^o of the light block has graded dimension zero (the bimodule balance of lemma 06, weaker than vectorlikeness: the unpaired nu_L coexists with Q_B = 0).").
 source(l41_forms, 'lemmas/41_axioms_along_the_chain.md', 'poincare-duality').
 attempted_by(l41_forms, claude_fable_5_1).
 checked_by(l41_forms, claude_fable_5_1, python("the three matrices on the 32-state representation, not kept")).
 depends(l41_forms, l20_rank_one).  depends(l41_forms, l06_nuL).
-referee_pending(l41_forms).
-claim(l41_orient, proposition, proved, "Proposition 41.4", "The Pati-Salam data are orientable, with the cycle gamma = rho(p_L' - p_R') rho(1_4)^o - rho(1_4) rho(p_L' - p_R')^o; the Standard Model data with nu_R are not (nu_R and J nu_R share both characters with opposite gradings); the light block of the third step is not, since its nonzero mass blocks commute with B (a nonzero D commuting with both actions forbids every orientation cycle, the corpus statement rs_N9, proved here).").
+checked_by(l41_forms, claude_opus_5_5, by_hand).  % recomputed the three matrices; corrected the reading of Q_B = 0 (bimodule balance, not vectorlikeness)
+claim(l41_orient, proposition, proved, "Proposition 41.4", "The Pati-Salam data are orientable, with the cycle gamma = rho(p_L' - p_R') rho(1_4)^o - rho(1_4) rho(p_L' - p_R')^o; the Standard Model data with nu_R are not (nu_R and J nu_R share both characters with opposite gradings, and so do e_R and J e_R, so the failure does not depend on nu_R); the light block of the third step is not, since its nonzero mass blocks commute with B (a nonzero D commuting with both actions forbids every orientation cycle, the corpus statement rs_N9, proved here).").
 source(l41_orient, 'lemmas/41_axioms_along_the_chain.md', 'orientability').
 attempted_by(l41_orient, claude_fable_5_1).
 checked_by(l41_orient, claude_fable_5_1, python("the Pati-Salam cycle on the 32-state representation, not kept")).
 depends(l41_orient, l17_no_higgs).
-referee_pending(l41_orient).
-claim(l41_unimod, proposition, proved, "Proposition 41.5", "The left-action traces of the abelian generator of C and of the common colour phase are (4i, 12i) on the full space, (i, 6i) after the removal of the up-type pair with nu_R kept, and (-i, 6i) on the light block of the third step; the unimodularity condition inherited from the parent and the one reimposed on the light block give different relations between the two abelian phases.").
+depends(l41_orient, hyp(sheet_diagonal_ps)).
+checked_by(l41_orient, claude_opus_5_5, by_hand).  % added the e_R/J e_R obstruction and the sheet-diagonal hypothesis at the Pati-Salam step
+claim(l41_unimod, proposition, proved, "Proposition 41.5", "The left-action traces of the abelian generator of the summand C, taken as the element (i, 0, 0) of A_SM and (i, Q_i, 0) of B, and of the common colour phase are (4i, 12i) on the 32 states, (2i, 12i) with the Majorana pair removed, (-2i, 6i) with the up-type sector removed and nu_R kept (20 states), and (-4i, 6i) on the light block (18 states); the inherited unimodularity condition theta_lambda + 3 theta_c = 0 gives the charges (2/3, -1/3, -1, 0) and the one reimposed on the light block, -4 theta_lambda + 6 theta_c = 0, gives (1/6, -5/6, -1, 0), so only the inherited lift gives the photon.").
 source(l41_unimod, 'lemmas/41_axioms_along_the_chain.md', 'unimodularity').
 attempted_by(l41_unimod, claude_fable_5_1).
-checked_by(l41_unimod, claude_fable_5_1, python("the six traces, not kept")).
-referee_pending(l41_unimod).
+checked_by(l41_unimod, claude_fable_5_1, python("the six traces of the first version, not kept")).
+checked_by(l41_unimod, claude_opus_5_5, by_hand).  % found the first version used (i, 0, 0) outside B and counted 26 states for 20; recomputed the traces and the charges
 addresses(t17, l41_forms).  addresses(t17, l41_orient).  addresses(t17, l41_unimod).
 claim(l42_no_higgs_in_window, proposition, proved, "Proposition 42.1", "With one copy of the 4 of Sp(2) in each degree of the end grading, the off-diagonal part of the window operator is lambda I_4 (Proposition 28.19, Schur), G-invariant, so it transforms trivially under the isotropy group of any marked point and carries no Higgs representation.").
 source(l42_no_higgs_in_window, 'lemmas/42_higgs_as_connector_moduli.md', 'statements').
 attempted_by(l42_no_higgs_in_window, claude_fable_5_1).
 checked_by(l42_no_higgs_in_window, claude_fable_5_1, by_hand).
 depends(l42_no_higgs_in_window, l28_tunnelling).
-referee_pending(l42_no_higgs_in_window).
+checked_by(l42_no_higgs_in_window, claude_opus_5_5, by_hand).  % correct for the G-invariant block; Hom(W, V) = 1 + 5 + 10 contains T_p S^4 twice, so G-breaking blocks carry the representation
 claim(l42_tangent, proposition, proved, "Proposition 42.2", "For a marked complex line l in the quaternionic sheet W = H^2 with quaternionic line L over p in S^4: T_L S^4 = (2,2) of Sp(1)_a x Sp(1)_b = Hom_H(L, L^perp), and T_l CP^3 = (2)_{+-1} + (1)_{+-2} under Sp(1)_a x U(1)_b: the Higgs doublet of hypercharge 1/2 (the horizontal part) and a charged singlet of hypercharge 1 along the twistor fibre.").
 source(l42_tangent, 'lemmas/42_higgs_as_connector_moduli.md', 'statements').
 attempted_by(l42_tangent, claude_fable_5_1).
 checked_by(l42_tangent, claude_fable_5_1, by_hand).
-referee_pending(l42_tangent).
-claim(l42_moduli, proposition, proved, "Proposition 42.3", "The Sp(2)-orbits of the pair of marked lines (Cw, Cv) of the connector are classified by a = |h(w,v)| and b = |omega(w,v)|, a^2 + b^2 <= 1, with the coupling modulus |kappa| as the third parameter.").
+checked_by(l42_tangent, claude_opus_5_5, by_hand).  % stabilizer dimensions and ad-eigenvalues recomputed
+claim(l42_moduli, proposition, proved, "Proposition 42.3", "The Sp(2)-orbits of the pair of marked lines (Cw, Cv) of the connector are classified by a = |h(w,v)| and b = |omega(w,v)|, a^2 + b^2 <= 1; the orbits of the connector T_kappa are classified by a, b, |kappa| and, when alpha = h(w,v) is nonzero, the phase of the invariant kappa alpha^2 = tr T_kappa(1): four real moduli, three when alpha = 0.").
 source(l42_moduli, 'lemmas/42_higgs_as_connector_moduli.md', 'statements').
 attempted_by(l42_moduli, claude_fable_5_1).
 checked_by(l42_moduli, claude_fable_5_1, by_hand).
 depends(l42_moduli, l20_rank_one).
-referee_pending(l42_moduli).
+checked_by(l42_moduli, claude_opus_5_5, by_hand).  % found the missing invariant arg(kappa alpha^2), with T_kappa and T_{-kappa} as the counterexample to the first count
 addresses(t14, l42_no_higgs_in_window).  addresses(t14, l42_tangent).  addresses(t0, l42_moduli).
-claim(l43_berry, theorem, proved, "Proposition 43.1 and Theorem 43.2", "Changing the coefficient connection by alpha changes the Berry connection on a constant-rank kernel bundle by the fibrewise compression P alpha P; every connection on the kernel bundle is a Berry connection iff the fibrewise compression Gamma(F_b, u(E)) -> u(K_b) is surjective at every point, iff the products s_j s_i^* of a kernel frame are linearly independent over the fibre; then a smooth preimage is C^*(C C^*)^{-1} beta.").
+claim(l43_berry, theorem, proved, "Proposition 43.1 and Theorem 43.2", "Changing the coefficient connection by a horizontal alpha (vanishing on vertical vectors, so the fibre operators and their kernels are unchanged) changes the Berry connection on a constant-rank kernel bundle by the fibrewise compression P alpha P, exactly; every connection on the kernel bundle is a Berry connection of such a change iff the fibrewise compression Gamma(F_b, u(E)) -> u(K_b) is surjective at every point, iff the products s_i s_j^* of a kernel frame are linearly independent over the fibre; then a smooth preimage is C^*(C C^*)^{-1} beta. With volume-preserving horizontal transport, or with the common mean-curvature term added.").
 source(l43_berry, 'lemmas/43_engineered_connections.md', 'statements').
 attempted_by(l43_berry, claude_fable_5_1).
 checked_by(l43_berry, claude_fable_5_1, by_hand).
-referee_pending(l43_berry).
-claim(l43_scalar, corollary, proved, "Corollary 43.3", "Scalar changes attain every connection iff the functions <s_i, s_j> are independent on the fibre: true for H^0(CP^3, O(1)) (sixteen functions z-bar_i z_j/|z|^2, the second-moment identity a bijection of Herm(4)), false for functions pulled back from S^4 (image of real dimension six, Proposition 10.1), so the core copy of lemma 29 needs matrix-valued changes between the summands of E, the collar connection of case (b).").
+checked_by(l43_berry, claude_opus_5_5, by_hand).  % amendments: mean-curvature term, transposed adjoint, vertical components excluded (they move the kernel and change the connection at first order)
+claim(l43_scalar, corollary, proved, "Corollary 43.3", "Scalar changes attain every connection iff the functions <s_i, s_j> are independent on the fibre: true for H^0(CP^3, O(1)) (sixteen functions z-bar_i z_j/|z|^2, the second-moment identity a bijection of Herm(4)), false for functions pulled back from S^4 (image of real dimension six, Example 16.9 with Proposition 10.1), so scalar changes along the base reach six of sixteen directions on the core copy of lemma 29. The collar connection of lemma 29 is outside the theorem: it acts at the wall, on the CP^3 copy, and moves the kernel.").
 source(l43_scalar, 'lemmas/43_engineered_connections.md', 'statements').
 attempted_by(l43_scalar, claude_fable_5_1).
 checked_by(l43_scalar, claude_fable_5_1, by_hand).
 depends(l43_scalar, l43_berry).  depends(l43_scalar, l10_toeplitz).
-referee_pending(l43_scalar).
+checked_by(l43_scalar, claude_opus_5_5, by_hand).  % both computations confirmed; the last clause of the first version, reading the collar connection as an instance, withdrawn
 addresses(t15, l43_berry).  addresses(t15, l43_scalar).
-claim(l44_algebra, proposition, proved, "Proposition 44.1 and Corollary 44.3", "For D_t = t T_R + t^alpha V_nu + S with the Majorana block T_R and the neutrino Dirac block V_nu, the algebra retained by bounded commutators is C + H + M_3(C) for alpha = 0 and {(lambda, Q_lambda, m)} = C + M_3(C) for alpha > 0; a finite seesaw mass (alpha = 1/2) and the Standard Model algebra belong to two different limits of the family.").
+claim(l44_algebra, proposition, proved, "Proposition 44.1 and Corollary 44.3", "For D_t = t T_R + t^alpha V_nu + S with the Majorana block T_R and the neutrino Dirac block V_nu (y nonzero), the algebra retained by bounded commutators is C + H + M_3(C) for alpha = 0 and {(lambda, Q_lambda, m)} = C + M_3(C) for 0 < alpha < 1; under this criterion a finite seesaw mass (alpha = 1/2) and the Standard Model algebra belong to two different limits of the family. Under the order-one criterion of Theorem 20.2, which V_nu satisfies on A_SM, A_SM stays admissible at every alpha: the two criteria agree for T_R and differ for V_nu.").
 source(l44_algebra, 'lemmas/44_seesaw_scaling_retained_algebra.md', 'statements').
 attempted_by(l44_algebra, claude_fable_5_1).
 checked_by(l44_algebra, claude_fable_5_1, by_hand).
 depends(l44_algebra, l20_rank_one).
-referee_pending(l44_algebra).
-claim(l44_light_mass, proposition, proved, "Proposition 44.2", "On the neutral block the light eigenvalue is -2 t^{2 alpha} y^2/(t + sqrt(t^2 + 4 t^{2 alpha} y^2)) ~ -y^2 t^{2 alpha - 1}: zero for alpha < 1/2, -y^2 at alpha = 1/2, divergent for alpha > 1/2.").
+checked_by(l44_algebra, claude_opus_5_5, by_hand).  % commutants recomputed; the dependence on the criterion made explicit; the conjugate states give no condition
+claim(l44_light_mass, proposition, proved, "Proposition 44.2", "On the neutral block the spectrum of t T_R + t^alpha V_nu is plus and minus the roots of mu^2 - t mu - t^{2 alpha} |y|^2, and the light mass is |mu_-| with mu_- = -2 t^{2 alpha} |y|^2/(t + sqrt(t^2 + 4 t^{2 alpha} |y|^2)) ~ -|y|^2 t^{2 alpha - 1}: zero for alpha < 1/2, -|y|^2 at alpha = 1/2, divergent for alpha > 1/2.").
 source(l44_light_mass, 'lemmas/44_seesaw_scaling_retained_algebra.md', 'statements').
 attempted_by(l44_light_mass, claude_fable_5_1).
 checked_by(l44_light_mass, claude_fable_5_1, by_hand).
-referee_pending(l44_light_mass).
+checked_by(l44_light_mass, claude_opus_5_5, python("eigenvalues at t = 10^4 for alpha = 1/4, 1/2, 3/4 against the asymptotics")).
 addresses(t2c, l44_algebra).  addresses(t2c, l44_light_mass).
-claim(l45_fibres, proposition, proved, "Proposition 45.1", "For B = C(T^6) x W, W = S_3 x Z_2 the Weyl group of SU(3) x SU(2): evaluation at the fixed point maps B onto C*(W) = C^4 + M_2(C)^2; restriction to a three-point orbit maps B onto M_3(C*(S_2 x Z_2)) = M_3(C)^4; selecting the trivial character, the standard representation of S_3 and one character of the stabilizer gives B -> C + M_2(C) + M_3(C), the complexified finite algebra, the corpus row rs_N18 proved structurally.").
+claim(l45_fibres, proposition, proved, "Proposition 45.1", "For B = C(T^6) x W, W = S_3 x Z_2 the Weyl group of SU(3) x SU(2): evaluation at the fixed point maps B onto C*(W) = C^4 + M_2(C)^2; restriction to a three-point orbit maps B onto M_3(C*(S_2 x Z_2)) = M_3(C)^4; selecting the trivial character, the standard representation of S_3 and one character of the stabilizer gives B -> C + M_2(C) + M_3(C), the complex finite algebra with M_2(C) in place of H, the corpus row rs_N18 proved structurally; C*(W) has six irreducible representations.").
 source(l45_fibres, 'lemmas/45_weyl_crossed_product_two_sheets.md', 'statements').
 attempted_by(l45_fibres, claude_fable_5_1).
 checked_by(l45_fibres, claude_fable_5_1, by_hand).
-referee_pending(l45_fibres).
-claim(l45_two_sheets, theorem, proved, "Theorem 45.2", "Corollary 16.8 with the sheets V_X = C + C^2 (algebra C + M_2(C), grading diag(1,-1,-1), d_X = D_v) and V_Y = C^3 (algebra M_3(C), d_Y = 0) gives the 18-state bimodule of the corpus (rs_N6) with KO-6 signs, order zero, order one, nonzero one-forms and the real orientability relation; its intersection form is skew of rank 2 with kernel (2, 1, 0). The two sheets are the two orbit types of the Weyl action.").
+checked_by(l45_fibres, claude_opus_5_5, by_hand).  % amendments: not the complexification of A_F; the Z_2 characters in the selection; six irreducible representations, not eight
+claim(l45_two_sheets, theorem, proved, "Theorem 45.2", "The finite content of Corollary 16.8 with the sheets V_X = C + C^2 (algebra C + M_2(C), grading diag(1,-1,-1) as a chosen central element, d_X = D_v) and V_Y = C^3 (algebra M_3(C), d_Y = 0) gives, in Hilbert space, D, J and grading, the 18-state bimodule of the corpus (rs_N6) with KO-6 signs, order zero, order one, nonzero one-forms and the real orientability relation; over the complex algebra its intersection form on minimal projections is [[0,0,1],[0,0,-1],[-1,1,0]], skew of rank 2 on a K_0 of rank 3 with kernel (1, 1, 0), and the corpus form with entries 2 is the one over the real algebra C + H + M_3(C). The two sheets are the two orbit types of the Weyl action, as quotients of the crossed product.").
 source(l45_two_sheets, 'lemmas/45_weyl_crossed_product_two_sheets.md', 'statements').
 attempted_by(l45_two_sheets, claude_fable_5_1).
 checked_by(l45_two_sheets, claude_fable_5_1, by_hand).
 depends(l45_two_sheets, l16_two_sheets).  depends(l45_two_sheets, l45_fibres).
-referee_pending(l45_two_sheets).
+checked_by(l45_two_sheets, claude_opus_5_5, by_hand).  % the intersection form over the complex algebra, the formal use of 16.8, the grading as a choice; Remark 45.3 corrected (H arises at the orbit type (a, a, a), not at the fixed point)
 addresses(t16, l45_fibres).  addresses(t16, l45_two_sheets).
 claim(l23_potential, no_go, proved, "Proposition 23.8", "Flat massless family, this gauge content, fermions of frequency 1, one loop: theta = pi/2 is the unique global minimum for n_f > 0, and V is strictly decreasing for n_f >= 10.8; for smaller n_f, no interior minimum on grids (Python). Escapes: general bulk masses with a completion, warping, wall scalar with a potential, wall terms, fermions of frequency 2.").
 source(l23_potential, 'lemmas/23_two_gradings_interval.md', 'the-one-loop-potential-in-the-same-family').
@@ -1597,6 +1599,11 @@ checked_by(steer_item11, astra6, python("independent integration of the linear e
 
 %% ---------------------------------------------------------------- referees
 referee_report('lemmas/05_deconstruction_interval.md', 'historical/reviews/2026-11-03_terra_check_nogo_19.md').
+referee_report('lemmas/41_axioms_along_the_chain.md', 'historical/reviews/2026-11-04_opus_check_41_45.md').
+referee_report('lemmas/42_higgs_as_connector_moduli.md', 'historical/reviews/2026-11-04_opus_check_41_45.md').
+referee_report('lemmas/43_engineered_connections.md', 'historical/reviews/2026-11-04_opus_check_41_45.md').
+referee_report('lemmas/44_seesaw_scaling_retained_algebra.md', 'historical/reviews/2026-11-04_opus_check_41_45.md').
+referee_report('lemmas/45_weyl_crossed_product_two_sheets.md', 'historical/reviews/2026-11-04_opus_check_41_45.md').
 referee_report('lemmas/05_deconstruction_interval.md', 'historical/reviews/2026-11-03_terra_check_08_13_14.md').
 referee_report('lemmas/06_vectorlike_odd_factorization.md', 'historical/reviews/2026-11-03_terra_check_nogo_19.md').
 referee_report('lemmas/08_product_selects_ko.md', 'historical/reviews/2026-11-03_terra_check_08_13_14.md').
@@ -1712,7 +1719,7 @@ test(draft_files_exist) :- forall(stated_in_draft(_, F), exists_file(F)).
 test(referee_reports_exist) :- forall(referee_report(F, R), (exists_file(F), exists_file(R))).
 test(refereed_claims_have_review_bookkeeping) :-
     forall(( referee_report(F, _), source(C, F, _), claim(C, _, S, _, _), memberchk(S, [proved, conditional]) ),
-           ( checked_by(C, terra_6_1, _) ; attempted_by(C, terra_6_1) ; outside_referee(C, _) ; referee_pending(C) )).  % a row added to a refereed file after its report waits for its own referee
+           ( checked_by(C, terra_6_1, _) ; attempted_by(C, terra_6_1) ; checked_by(C, claude_opus_5_5, _) ; outside_referee(C, _) ; referee_pending(C) )).  % Terra 6.1 or Claude Opus 5.5 (from 4 Nov 2026) as referee; a row added to a refereed file after its report waits for its own referee
 test(claims_outside_the_corpus_have_a_checker) :-
     forall(( claim(C, _, S, _, _), memberchk(S, [proved, conditional]), \+ attempted_by(C, corpus) ), checked_by(C, _, _)).
 test(self_checks_are_corpus_only) :-
