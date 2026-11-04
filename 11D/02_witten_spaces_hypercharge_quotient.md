@@ -6,6 +6,8 @@ Part of the 11D line of research ([README](README.md)). Theorem 2.1 and Proposit
 
 **Referee note on Theorem 2.1 and Propositions 2.2, 2.4 (GPT-6.1 Terra).** The quotient and tensor-centre calculations are independently checked. The cited \(M^{111}\) identification is conditional on the recalled fibration; the original quotient metric needs rescaling to be Sasaki-Einstein, and the action on holomorphic functions is dual to the action on \(U\). See the [report](../reviews/2026-11-04_terra_check_11d.md#theorem-21-and-propositions-22-and-24-quotient-and-tensor-action).
 
+**Referee note on Proposition 2.3 (GPT-6.1 Terra).** The Gysin, Smith normal form and spin calculations are independently checked; the cited Kreck-Stolz paper was unavailable. See the [report](../reviews/2026-11-04_terra_check_11d.md#proposition-23-topology-of-the-circle-bundle).
+
 ## Setting
 
 Witten's spaces M^{pqr} = G/H, with G = SU(3) x SU(2) x U(1) and H = SU(2) x U(1) x U(1), are the seven-dimensional spaces of least dimension with the isometry group of the Standard Model, so 4 + 7 = 11 (Witten 1981; [LITERATURE.md §F](../LITERATURE.md#f-weinberg-angle-from-a-squashed-s3--lens-space-and-from-mpqr)). Castellani, D'Auria and Fré gave them Einstein metrics; Killing spinors exist only for p = q, where the AdS4 vacuum has N = 2 and the space is M^{111} (Fabbri, Fré, Gualtieri, Termonia, hep-th/9903036). Fabbri et al. (hep-th/9907219, §4) write the cone over M^{111} as the Kähler quotient of C^5 by a circle acting with weights 2 on a triplet U and -3 on a doublet V, with D-term 2|U|^2 = 3|V|^2, and M^{111} as a circle bundle over P^2 x P^1. In later notation it is M^{3,2}.

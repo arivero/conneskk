@@ -65,7 +65,7 @@ claim(d11_topology, proposition, proved, "Proposition 2.3", "Circle bundle Y_{a,
 source(d11_topology, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-23-topology-of-y_ab').
 attempted_by(d11_topology, claude).
 checked_by(d11_topology, claude, python("11D/checks_11d.py section C: Smith invariants, spin condition")).
-referee_pending(d11_topology).
+checked_by(d11_topology, terra_6_1, by_hand).
 
 claim(d11_z6, proposition, proved, "Proposition 2.4", "Every monomial in U, V and every state of Lambda^*(5-bar) satisfies 2t + 3d + 6Y = 0 mod 6; Y-neutral monomials have t = d = 0; tensor fields on Y_{3,2} carry representations of PSU(3) x SO(3) x U(1)_R, so no bosonic Kaluza-Klein mode is a colour triplet or weak doublet.").
 source(d11_z6, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-24-the-z_6-of-the-standard-model').
