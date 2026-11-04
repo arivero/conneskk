@@ -45,6 +45,8 @@ The new element is the reading of the generators: U and V are the coordinates wh
 
 ## Proposal 3.4 (the Higgs is the position of the M2-brane, and the massless limit is the apex)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The stated coordinate stabilizer is independently checked under the proposed charge assignment. The FI quotient has residual \(\mathbb Z_3\) or \(\mathbb Z_2\) stabilizers on the respective exceptional loci, so it is a partial orbifold resolution. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposal-34-higgs-stabilizer-and-the-fi-quotient).
+
 Resolve the cone with a Fayet-Iliopoulos parameter: 2|U|^2 - 3|V|^2 = zeta. For zeta < 0 the locus U = 0 is the projective line of the doublet, P(V) = CP^1; for zeta > 0 the locus V = 0 is CP^2.
 
 **Statement (proved part).** On the brane coordinates (U, V), on which the Betti U(1)_Y of Proposal 3.1 acts with charges (2, -3), the value V = (v, 0), U = 0 on the doublet line is fixed by SU(3) and by T_3 + Y, and moved by T_3 - Y. (In the quotient geometry, where U(1)_Y is divided out, the same point is fixed by T_3, which is T_3 + Y up to the quotient.) Q = T_3 + Y gives U the charge +1/3 of d^c and V the charges (0, -1) of (nu, e). (Python, section B2.)
@@ -105,5 +107,7 @@ In AdS4, M2-branes on the two-cycle and M5-branes on five-cycles are electric an
 Under the quotient realization, on a background invariant under the displayed action, every tensor Kaluza-Klein mode of C_3 (or of the metric) on Y_{3,2} carries a representation of PSU(3) x SO(3) (Proposition 2.4), so none is a colour triplet; spinor modes are open. The 60 coloured states of the first family, and the 72 of the second, are therefore not modes of C_3 on Y_{3,2}. Together with Proposition 3.8 this excludes, in their stated scopes, the two direct routes, the little group and the tensor Kaluza-Klein tower, for a colour-equivariant identification. The route left open is the brane one: wrapped M5 and M2 states, which carry triality through their hypercharge class (Proposition 2.4 (a)).
 
 ## Summary of the direction
+
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The physical identifications in this summary are proposals. The colour exclusions have the stated linear-representation and tensor-mode scopes; other internal spaces, nonlinear actions and brane realizations remain directions. See the [wording audit](../reviews/2026-11-04_terra_check_11d.md#wording-audit-results-and-proposals).
 
 The M2 and M5 details of lemma 21 enter in a specific place. Hypercharge is the C_3 vector of the Witten space with Killing spinors, the 5-bar consists of the N = 1 fivebrane baryons, the Higgs is the M2 position, and the M2/M5 exchange is the electric-magnetic duality of hypercharge. The count 84 of C_3 does not survive as a colour-equivariant identification. The next computations are in the README.

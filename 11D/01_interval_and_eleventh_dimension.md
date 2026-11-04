@@ -51,6 +51,8 @@ In the five-dimensional Yang-Mills toy of lemma 23 the vector poles along this f
 
 The audit also gives a localized family (its §4): a bulk mass mu_epsilon = mu_* epsilon^alpha and mu l = (1 - alpha) log(1/epsilon) + c_0, with light mass m ~ 2 mu_* e^{-c_0} epsilon, gap ~ mu_* epsilon^alpha, and the exact tail identity e^{-2 kappa l} = (m/(mu + kappa))^2. Its table of roots is reproduced in section H (Python, bisection on tanh s = s/c and tan y = y/c): the four light masses and next masses agree with the audit to the digits printed there.
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The localized asymptotics and tail identity are independently checked analytically; the length includes a logarithmic factor. The numerical table was not recomputed. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#audit-section-4-and-file-01-localized-joint-family).
+
 ## Proposal 1.3 (the circle of H as the M-theory circle)
 
 Take the circle of Proposition 1.1 to be the eleventh direction of M-theory over a ten-dimensional type IIA background, so R = g_s l_s. Then, along the joint family:

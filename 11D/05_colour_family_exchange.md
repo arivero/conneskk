@@ -6,6 +6,8 @@ Part of the 11D line of research ([README](README.md), [PLAN](PLAN.md), step 4).
 
 ## Setting
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The M2/M5 identification is a proposal, and the colour-family conclusion of Proposition 4.2 needs a factor-preserving map. See the [wording audit](../reviews/2026-11-04_terra_check_11d.md#wording-audit-results-and-proposals).
+
 Proposition 4.6 showed that the M2/M5 exchange of the graded e8 acts as J and cannot exchange the top with the neutrinos, and Proposition 4.2 that any such exchange must trade the colour index of the top for the generation index of the neutrinos. This file tests the colour-family exchanges inside E8.
 
 Use E8 ⊃ SO(16) ⊃ SO(10) × SO(6), with the roots of E8 in the coordinates of R^8: ±e_i ± e_j, and (1/2)(±1, ..., ±1) with an even number of minus signs. The 128 half-integer roots form the chiral spinor of SO(16), which under SO(10) × SU(4) is (16, 4) + (16bar, 4bar): four families of the Standard Model with ν^c, with their conjugates. Write a root as (χ | w | φ), with χ the signs of the three colour coordinates, w those of the two weak coordinates and φ those of the three family coordinates; a particle has an even number of minus signs among χ, w and an even number among φ. The four family patterns are 𝟙 = (+++) (family 0) and the three patterns with two minus signs (families 1, 2, 3); the colour patterns with one minus sign are the quark colours, the pattern −𝟙 is the lepton. Then, for a colour pattern c with one minus sign and a family f,

@@ -2,6 +2,18 @@
 
 *Reference only, as of 4 November 2026: this records how the line was worked. Its rules and steps do not bind later work; [AGENTS.md](../AGENTS.md) governs.*
 
+## Current referee status
+
+GPT-6.1 Terra has addressed the requested analytic checks in the [referee report](../reviews/2026-11-04_terra_check_11d.md). The original scoped no-go results have two-model support; a third model remains needed for the ledger's general-consensus threshold. A new arbitrary-third-charge extension has a single-model argument and awaits an independent check. The full EPJC paper and several cited primary sources were unavailable, and the original localized-family numerical table was not recomputed.
+
+The no-go results concern the stated line-bundle fluxes, linear colour representations, invariant tensor modes, graded automorphisms or single-slot E8 root configurations. Their escapes include nonabelian bundles, additional charge directions, different internal actions and bundle zero modes. The misaligned-root neighbour counts have been corrected in the report.
+
+An isolated stationary angle gives the scale-free 1/m path; a flat direction permits other paths. The identification with M^{111} and the flux quantization need the conditions in the report, and the FI quotients have residual orbifold stabilizers. The Chevalley involution is complex-linear; an antiunitary J needs additional conjugation, and its M2/M5 identification is a proposal. Proposition 7.3's displayed M_p action is nonunital; the report supplies a unital M_p(C) + C datum. The brane, duality and string dictionaries remain conditional or proposed.
+
+The dated handover and workflow instructions below preserve the original notes. Their pending-referee flags and unqualified physical readings are superseded by this status, the adjacent referee notes and the [results table](README.md#results).
+
+*Update on master (4 Nov 2026).* Claude Sonnet 5.5 has since checked the Terra sections on files 01 to 04 a second time ([report](../reviews/2026-11-04_sonnet_second_check_11d.md)), which supplies the third model identifier for the scoped no-go results there; files 05 to 09 and the sections added later are being checked in the same way.
+
 Kept current so that another agent can continue from any commit. Branch `11D`, a fast-forward of `master` at b2ddf98; only new files plus pointer lines in README.md, INDEX.md, STRATEGY.md and one include line in ledger.pl. Rules: [AGENTS.md](../AGENTS.md); no model identifiers in files (provenance "Claude (Anthropic)", ledger atom `claude`); push after every finished piece; no new Python tests in this round (decision of 4 Nov 2026); menial edits (pointers, ledger rows, TOC) may be delegated.
 
 Conversation record of the session that wrote files 01 to 09 (3 and 4 Nov 2026): <https://claude.ai/code/cshk_01BpscANdX3GG8D45SQ1BxsaHviSe7ufxxCLNiNaDv4fWT>.

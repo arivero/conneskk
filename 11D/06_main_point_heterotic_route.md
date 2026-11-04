@@ -57,6 +57,8 @@ In the type I' form the adjoint scalars of the D8 stack are open strings with tw
 
 ## 6. What would make this a theorem, and the first steps
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The proposed dictionary needs a physical construction. Proposition 1.5 allows flat directions; a second scale is a candidate for selecting a joint path, rather than a universal requirement. See the [wording audit](../reviews/2026-11-04_terra_check_11d.md#wording-audit-results-and-proposals).
+
 1. **One family, three regimes.** Realize T_s as the type I' interval with D8-branes in the configuration 15 + 1, with the corpus parent (lemma 22) as its low-energy window: the window must reproduce the modern D_F, J and gamma (lemma 22 does this for any finite data), the tower must open along a joint family as the interval grows (strong coupling, 11), and the collapse must give the non-chiral nine-dimensional theory (9).
 2. **The algebra.** The Chan-Paton algebras of orientifold stacks are of the types O(n), Sp(n), U(n); the Connes algebra C + H + M_3(C) has the form of stacks of one brane, two branes with a symplectic projection, and three branes. Decide whether the modern algebra is the Chan-Paton algebra of a stack configuration on the interval (for the colour factor, lemma 21 puts colour inside SO(30), on the same stack as the light flavours).
 3. **The six dimensions and chirality.** Ten-dimensional chirality and the KO-6 class must come from the internal six dimensions (02: CP^2 x S^2 with fluxes, or a Calabi-Yau with an SU(4) bundle as in Proposal 5.5).

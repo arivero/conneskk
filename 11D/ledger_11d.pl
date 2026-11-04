@@ -50,6 +50,7 @@ source(a11_localized, 'reviews/2026-11-03_astra_audit_d11.md', '4-a-localized-fa
 depends(a11_localized, l09_lightpair).
 attempted_by(a11_localized, astra6).
 checked_by(a11_localized, claude, python("11D/checks_11d.py section H: secular roots by bisection, the audit table and the identity")).
+checked_by(a11_localized, terra_6_1, by_hand).
 
 %% ---------------------------------------------------------------- 02: Witten spaces as the hypercharge quotient
 claim(d11_quotient, theorem, conditional, "Theorem 2.1 (referee amendments)", "Y_{3,2} = (S^9 cap mu_Y^{-1}(0))/U(1)_Y is the circle bundle of O(3,2) over CP^2 x CP^1, with trivial-canonical cone and effective group (U(3) x U(2))/U(1)_Y. Its identification with M^{111} is conditional on the recalled fibration; the Sasaki-Einstein metric requires rescaling the natural quotient metric.").
@@ -89,6 +90,18 @@ checked_by(d11_flux_nogo, claude, python("11D/checks_11d.py section D: required 
 checked_by(d11_flux_nogo, terra_6_1, by_hand).
 checked_by(d11_flux_nogo, sonnet_5_5, by_hand).
 
+claim(d11_flux_third_bounded, no_go, proved, "Proposition 2.5 (bounded third-charge search)", "In the stated one-line-bundle construction and common-chirality convention, adding any third integer charge in [-3,3]^6 to Y and B - L gives no generation.").
+source(d11_flux_third_bounded, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-25-no-generation-from-fluxes-along-hypercharge-and-b---l').
+attempted_by(d11_flux_third_bounded, claude).
+checked_by(d11_flux_third_bounded, claude, python("11D/checks_11d.py section D: bounded third-charge search")).
+checked_by(d11_flux_third_bounded, terra_6_1, by_hand).
+
+claim(d11_flux_third_general, conjecture, conjectural, "Third-charge extension (independent referee pending)", "An analytic argument extends the one-line-bundle exclusion to any real third charge and independent source chiralities; an independent model check remains pending. Fourth charges, a changed twist, and nonabelian bundles remain open directions.").
+source(d11_flux_third_general, 'reviews/2026-11-04_terra_check_11d.md', 'proposition-25-adding-a-third-charge').
+attempted_by(d11_flux_third_general, terra_6_1).
+checked_by(d11_flux_third_general, terra_6_1, by_hand).
+referee_pending(d11_flux_third_general).
+
 claim(d11_flux_fit, proposition, conditional, "Proposition 2.6 (referee amendments)", "With fluxed charges F, chi and B - L the displayed line bundles give a one-generation index in the stated colour convention. The quotient's colour action conjugates the quark bidegrees, and the global gauge group, charge lattice and spin^c flux quantization must be specified.").
 source(d11_flux_fit, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-26-one-generation-from-a-universal-charge-the-grading-and-b---l').
 depends(d11_flux_fit, d11_flux_nogo).
@@ -118,10 +131,11 @@ depends(d11_fock_branes, d11_fock).
 depends(d11_fock_branes, d11_betti_y).
 attempted_by(d11_fock_branes, claude).
 
-claim(d11_higgs_m2, conjecture, conjectural, "Proposal 3.4", "The Higgs is the M2 position on the doublet line of the resolved cone (fixed by SU(3) and T_3 + Y on the brane coordinates); v -> 0 is the apex, with near-horizon AdS4 x Y_{3,2} and the Standard Model group unbroken. At fixed N this restores the group at a fixed tower; opening a dimension needs N -> infinity, against N = 1 for the matter of Proposal 3.1.").
+claim(d11_higgs_m2, conjecture, conjectural, "Proposal 3.4 (referee amendment)", "The Higgs as an M2 position is a proposal; the coordinate stabilizer follows from the assumed charges. The nonzero-FI quotient has residual Z_3 or Z_2 stabilizers on its exceptional loci and is a partial orbifold resolution.").
 source(d11_higgs_m2, '11D/03_branes_hypercharge_and_the_84.md', 'proposal-34-the-higgs-is-the-position-of-the-m2-brane-and-the-massless-limit-is-the-apex').
 depends(d11_higgs_m2, d11_betti_y).
 attempted_by(d11_higgs_m2, claude).
+checked_by(d11_higgs_m2, terra_6_1, by_hand).
 
 claim(d11_ads5, proposition, proved, "Proposition 3.5", "AdS5 x CP^2 x S^2 with G_4 = f_1 vol(CP^2) + f_2 J ^ vol(S^2) solves eleven-dimensional supergravity with R_AdS = -(f_1^2 + 2 f_2^2)/6, R_CP2 = f_1^2/3 + f_2^2/6, R_S2 = 2 f_2^2/3 - f_1^2/6; round factors iff abs(f_1) < 2 abs(f_2). Supersymmetry, stability and flux quantization not checked.").
 source(d11_ads5, '11D/03_branes_hypercharge_and_the_84.md', 'proposition-35-a-magnetic-completion-ads5-x-cp2-x-s2').
@@ -350,7 +364,7 @@ depends(d11_orientifold_scalars, d11_diquark_strings).
 depends(d11_orientifold_scalars, d11_orientifold_sign).
 attempted_by(d11_orientifold_scalars, claude).
 
-claim(d11_so32_comparison, claim, conditional, "Section 1", "The chain SO(32) > SO(2) x SO(30) > SO(2) x SU(5) x SU(3) x U(1), five light quarks in three colours and the top as the SO(2), of A. Rivero, Eur. Phys. J. C 84 (2024) 1058 (arXiv:2407.05397), coincides with lemma 21 and the dictionary of 06; read through a summarizing fetch of the arXiv text.").
+claim(d11_so32_comparison, claim, conditional, "Section 1 (full-paper comparison pending)", "The detailed comparison with A. Rivero, Eur. Phys. J. C 84 (2024) 1058 (arXiv:2407.05397), was read through a summarizing fetch. The archived original abstract also specifies an extra chiral +4/3 quark per generation; the full primary text remains to be checked.").
 source(d11_so32_comparison, '11D/09_dilaton_spectral_and_so32.md', '1-the-so32-of-a-rivero-eur-phys-j-c-84-2024-1058-arxiv240705397').
 depends(d11_so32_comparison, l21_so30).
 depends(d11_so32_comparison, d11_heterotic_route).
@@ -358,6 +372,13 @@ attempted_by(d11_so32_comparison, claude).
 checked_by(d11_so32_comparison, claude, by_hand).
 referee_pending(d11_so32_comparison).
 prior_work(d11_so32_comparison, partial, "The chain and the composite counts are known (the EPJC paper; hep-ph/0512065); the type I' realization (the top as a displaced D8-brane, the 30 as Chan-Paton labels on an O8^- wall) was not found there.").
+
+claim(d11_so32_algebra, proposition, proved, "Section 1 (referee algebra)", "Under SU(16) x U(1), the complex SO(32) adjoint is 120 + 120bar + 255 + 1; under SU(5) x SU(3), the 105 contains (15, 3bar) + (10, 6). Matching these representations does not identify physical composites.").
+source(d11_so32_algebra, '11D/09_dilaton_spectral_and_so32.md', '1-the-so32-of-a-rivero-eur-phys-j-c-84-2024-1058-arxiv240705397').
+depends(d11_so32_algebra, d11_diquark_strings).
+attempted_by(d11_so32_algebra, claude).
+checked_by(d11_so32_algebra, claude, by_hand).
+checked_by(d11_so32_algebra, terra_6_1, by_hand).
 
 claim(d11_real_structure_diquarks, no_go, proved, "Proposition 9.3 (independently checked with amendment)", "For an antiunitary J exchanging V and Vbar and a Hermitian J-compatible X, the particle-antiparticle block obeys B = eps eps' B^T. For KO labels 9, 10, 11 the sign is +1, excluding nonzero antisymmetric blocks within one multiplet. The signs permit only a subspace of S^2 V; actual fluctuations and interval scalar modes require further construction.").
 source(d11_real_structure_diquarks, '11D/09_dilaton_spectral_and_so32.md', '4-proposition-93-the-real-structure-decides-between-the-two-diquark-counts').
@@ -400,7 +421,7 @@ addresses(t14, d11_angle_interval).  addresses(t14, d11_far_wall).  addresses(t1
 addresses(t12, d11_far_wall).  addresses(t0, d11_torus_flux).
 addresses(t14, d11_orientifold_sign).  addresses(t14, d11_wall_multiplicity).  addresses(t14, d11_e_walls).  addresses(t14, d11_orientifold_reading).
 addresses(t2c, d11_orientifold_sign).
-addresses(t14, d11_dilaton_spectral).  addresses(t14, d11_diquark_strings).  addresses(t14, d11_orientifold_scalars).  addresses(t14, d11_so32_comparison).  addresses(t14, d11_dp_walls).  addresses(t14, d11_transposition_tduality).
+addresses(t14, d11_dilaton_spectral).  addresses(t14, d11_diquark_strings).  addresses(t14, d11_orientifold_scalars).  addresses(t14, d11_so32_comparison).  addresses(t14, d11_so32_algebra).  addresses(t14, d11_dp_walls).  addresses(t14, d11_transposition_tduality).
 addresses(t2c, d11_orientifold_scalars).
 addresses(t14, d11_real_structure_diquarks).
 

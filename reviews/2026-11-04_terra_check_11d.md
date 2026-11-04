@@ -2,12 +2,14 @@
 
 Referee: GPT-6.1 Terra, 4 Nov 2026. Author of files 01-09: Claude
 (Anthropic). We work independently and use analytic arguments throughout;
-no Python or other numerical enumeration is used. Each section records a
-completed referral. Claims outside the sections below remain to be checked.
-The author's check and this independent check give two-model support for
-the scoped no-go results. The ledger flags fewer than three model
-identifiers as below its general-consensus threshold; a third independent
-check remains open.
+no Python or other numerical enumeration is used. The requested items are
+addressed below, with the unavailable primary-source comparisons and the
+unrecomputed localized numerical table identified explicitly. The author's
+check and this independent check give two-model support for the original
+scoped no-go results. The ledger flags fewer than three model identifiers
+as below its general-consensus threshold; a third independent check remains
+open. The new general third-charge extension also awaits an independent
+model check.
 
 ## Proposition 1.1 and the joint family: interval unfolding
 
@@ -51,6 +53,38 @@ states; the original interval's two components have been unfolded into
 that single scalar fibre. The phrase “on the circle ... fibre
 \(\mathbb C^2\)” in the original check would double the count if read
 as an extra circle fibre.
+
+## Audit section 4 and file 01: localized joint family
+
+**Verdict: Correct with clarification.** The asymptotic light mass,
+gap, localization ratio and exact tail identity follow analytically
+from the interval equations. The localized length includes a
+logarithmic factor and differs from the pure-power length of the
+preceding boundary-angle family.
+
+Let \(c=\mu\ell\), \(s=\kappa\ell\), and \(s=c\tanh s\). As
+\(c\to\infty\), the positive solution has \(s/c\to1\), and
+\(0<c-s= c(1-\tanh s)\leq2ce^{-2s}\to0\). Therefore
+\[
+ m=\mu\operatorname{sech}s
+   \sim2\mu e^{-c}.
+\]
+With \(\mu=\mu_*\varepsilon^\alpha\) and
+\(c=(1-\alpha)\log(1/\varepsilon)+c_0\), this gives
+\(m\sim2\mu_*e^{-c_0}\varepsilon\) and
+\(\ell=c/(\mu_*\varepsilon^\alpha)\). The localization width
+is \(1/\kappa\), so its ratio to \(\ell\) is \(1/s\sim1/c\).
+
+The first oscillatory root satisfies
+\(\pi<k_1\ell<3\pi/2\), whence the gap above the light pair is
+\[
+ \Delta=\mu\sqrt{1+(k_1\ell/c)^2}\sim\mu
+       =\mu_*\varepsilon^\alpha.
+\]
+Finally, \(\mu=\kappa\coth s\) and \(m=\kappa/\sinh s\)
+give \(m/(\mu+\kappa)=e^{-s}\) and
+\(m^2=(\mu-\kappa)(\mu+\kappa)\), proving both displayed tail
+identities. The numerical table in file 01 was not recomputed.
 
 ## Proposition 1.4: the one-loop endpoint and small-angle coefficient
 
@@ -205,6 +239,50 @@ fluxes in the span of \(Y\) and \(B-L\). Nonabelian bundles, additional
 charges or a common twist, multiple source fields, walls, orbifolds and
 brane states remain possible directions. This is an independent check of
 the scoped obstruction, not a proof about those alternatives.
+
+## Proposition 2.5: adding a third charge
+
+**Verdict: Correct for the original bounded search.** The exclusion of a
+third charge in \([-3,3]^6\), under the original common-chirality
+convention, follows from the following analytic argument.
+
+**Conjecture (independent check pending).** The same exclusion holds for
+an arbitrary real third charge and independently chosen
+ten-dimensional chiralities. The argument below supports this extension;
+another model's check is needed before relying on it.
+
+Let \(y=(1,-4,2,-3,6,0)\) and
+\(b=(1,-1,-1,-3,3,3)\), ordered as
+\((Q,u^c,d^c,L,e^c,\nu^c)\). For the stated colour convention the
+necessary \(\mathbb{CP}^2\) pairings are
+\[
+ p=(-5/2,5/2,5/2,p_L,p_e,p_\nu),\qquad |p_L|=3/2.
+\]
+The \(\mathbb{CP}^1\) pairings have the form
+\[
+ w=(2s_Q,s_u,s_d,2s_L,s_e,s_\nu),\qquad s_i\in\{+1,-1\}.
+\]
+The signs allow independently chosen source chiralities. Reversing the
+colour convention reverses \(p\) and leaves the argument unchanged.
+
+Suppose both \(p\) and \(w\) lie in the span of \(y,b,z\) for any
+third charge \(z\). The \(Q,L\) entries of \(y,b\) have ratio
+\(-3\), while \(|w_L/w_Q|=1\), so \(w\notin\operatorname{span}(y,b)\).
+It follows that \(p=a y+b_0 b+t w\). Taking the combination
+\(2Q+u^c+d^c\) gives
+\[
+ 0=t(4s_Q+s_u+s_d).
+\]
+The factor in parentheses is nonzero, hence \(t=0\). Equality of the
+\(u^c,d^c\) entries then gives \(a=0\), and their common value gives
+\(b_0=-5/2\). The resulting \(L\) entry is \(15/2\), contradicting
+\(|p_L|=3/2\). The same four fields suffice without \(\nu^c\).
+
+**Scope and direction.** This concerns the one-line-bundle-per-field
+Dolbeault construction, the specified \(Y,B-L\) charges and the
+canonical formal shift. A fourth charge direction, a changed common
+twist, nonabelian bundles, multiple source fields, walls, orbifolds and
+brane states remain directions to investigate.
 
 ## Proposition 2.6: flux assignments for one generation
 
@@ -384,6 +462,36 @@ The divisor classes from Proposition 2.3 can be added formally with the
 same weights \(2,-3\). A physical identification of those exterior
 generators with fermionic wrapped-fivebrane states requires the proposed
 brane construction and its statistics.
+
+## Proposal 3.4: Higgs stabilizer and the FI quotient
+
+**Verdict: Correct with amendment for the stated stabilizer.** The
+coordinate charge calculation is correct assuming the proposed action
+of the Betti \(U(1)\). A nonzero FI parameter gives a partial
+orbifold resolution, with finite stabilizers along the displayed
+projective loci.
+
+On \(V=(v,0)\), \(U=0\), take
+\(T_3=\operatorname{diag}(1/2,-1/2)\) and \(Y(V)=-1/2\).
+The first component has \((T_3+Y)V=0\) and
+\((T_3-Y)V=V\); \(SU(3)\) fixes \(U=0\). The charges of the
+two components of \(V\) are \(0,-1\), and \(Q(U)=1/3\).
+These statements assume the assignment of the physical Betti charge
+to the brane coordinates; identifying it with the electroweak action
+is part of the proposal.
+
+For the quotient action
+\(\lambda\cdot(U,V)=(\lambda^2U,\lambda^{-3}V)\), at
+\(\zeta<0\) the locus \(U=0,\ V\ne0\) has stabilizer
+\(\lambda^3=1\). This \(\mathbb Z_3\) acts faithfully on the
+three transverse \(U\) coordinates. The coarse exceptional locus is
+\(\mathbb{CP}^1\), with transverse singularity
+\(\mathbb C^3/\mathbb Z_3\). At \(\zeta>0\), the locus
+\(V=0,\ U\ne0\) has stabilizer \(\mathbb Z_2\), acting by
+minus the identity on the two transverse \(V\) coordinates; its coarse
+exceptional locus is \(\mathbb{CP}^2\) with transverse
+\(\mathbb C^2/\mathbb Z_2\). Thus the FI quotient is not a
+smooth resolution without further geometric data.
 
 ## Proposition 4.1: ratio-preserving twelve-state blocks
 
@@ -1328,13 +1436,53 @@ to fixed colour and family structures needs an explicit action on
 those structures. The root no-go applies to its stated three-slot
 configuration, while bundle zero modes remain an open escape.
 
+## File 09, section 1: the SO(32) comparison
+
+**Verdict: Correct with amendments for the representation algebra;
+the full-paper comparison remains open.** The two branching chains
+and composite charge counts are consistent. The physical dictionary
+and the exact reading of the whole EPJC paper require additional
+evidence.
+
+The alternative chain follows directly from
+\(32_\mathbb C=16_{+1}\oplus\overline{16}_{-1}\):
+\[
+ 496=120_{+2}\oplus\overline{120}_{-2}
+     \oplus255_0\oplus1_0.
+\]
+Under \(SU(15)\), \(16=15\oplus1\) and
+\(120=105\oplus15\). With \(15=5\otimes3\),
+\[
+ 105=\Lambda^2(5\otimes3)
+     =(15,\bar3)\oplus(10,6),
+\]
+and \(15\otimes\bar{15}=(24,8)\oplus(24,1)\oplus(1,8)\oplus(1,1)\).
+The antitriplet charge multiplicities were checked in Proposition 9.2.
+These group products are Lie-algebra shorthand; global embeddings
+involve finite central quotients.
+
+The archived [original arXiv abstract](https://github.com/ehijano/rss_fetch/blob/323070730322e6274704c62d0d46fcab0e27b1c6/rss_data/hep-ph/2024-07-24_hep-ph.xml#L555-L561)
+confirms the three-generation scalar classification through flavour
+\(SU(5)\), the composite postulate, and an additional chiral
+charge-\(+4/3\) quark per generation. The source file's scalar count
+does not state that additional chiral-fermion hypothesis. The paper
+itself could not be accessed, so its full chain, the attribution of
+particular multiplets and the claimed absence of a type-I' realization
+have not been checked against the primary text.
+
+The \(SO(2)\) plane is a colour singlet. Assigning it to a top brane
+is a label in the proposed dictionary and does not by itself
+construct a colour-triplet top field. Chan-Paton bilinearity and
+matching representation counts likewise do not by themselves
+establish dynamical quark composites.
+
 ## Proposition 6.1: the SO(32) Wilson-line spectrum
 
 **Verdict: Correct with amendments.** The charged momentum progressions
 match a channel of Lemma 22 after the stated identification of
 parameters. The \(SO(32)\) charged sector has 30 copies of that channel,
-and \(a/R\) is the lowest positive mass only on the chosen fundamental
-interval \(0\leq a\leq1/2\).
+and \(a/R\) is the lightest nonnegative mass on the chosen fundamental
+interval \(0\leq a\leq1/2\); it vanishes at \(a=0\).
 
 Complexifying the defining representation gives
 \(30\oplus1_{+1}\oplus1_{-1}\), hence
@@ -1418,3 +1566,55 @@ freely, while the full constraint still relates it to
 the stated signs. Distinct multiplets, other real structures or signs,
 derivative couplings, and circle or interval connection components remain
 possible directions; each requires its own field and boundary data.
+
+## Wording audit: results and proposals
+
+The original passages remain as authored records. The following
+qualifications apply to their summaries and readings.
+
+- File 01, Proposition 1.5, “Hence” and the modulus consequence:
+  isolated stationary angles give the stated scaling; flat directions
+  also permit other stationary paths. A second scale is a candidate for
+  selecting a joint path.
+- File 02, “What this file establishes”: the \(M^{111}\) identification
+  uses the recalled fibration and a metric normalization. The flux
+  examples do not establish that every construction must use the
+  grading or leave \(T_{3R}\) unfluxed.
+- File 03, “Summary of the direction”: the Betti-hypercharge,
+  wrapped-brane matter, Higgs-position and M2/M5 duality identifications
+  are proposals. Corollary 3.9 excludes tensor modes on the stated
+  quotient; its known escapes include other internal spaces, nonlinear
+  actions and brane realizations.
+- File 04, sections 6 and 7, and file 05, “Setting”: the Chevalley
+  involution is complex-linear. Constructing antiunitary \(J\) needs
+  additional conjugation, and its identification with physical
+  M2/M5 exchange remains a proposal. The colour-family conclusion
+  additionally assumes a factor-preserving map.
+- File 05, Proposal 5.5: the bundle index gives net chirality, and a
+  split bundle need not supply three distinct single-root slots. A
+  bundle and an induced action on its zero modes remain to be built.
+- File 06, sections 5 and 6: the Chan-Paton/composite identification is
+  a physical proposal; bilinear labels alone do not establish it.
+  The flat-direction qualification to Proposition 1.5 applies to the
+  proposed second scale.
+- File 07, sections 6b and 7: the brane-wall and \(E_8\)-holonomy
+  dictionary is proposed. The doubled-torus action in 7.3 is nonunital;
+  the repaired algebra is given in the 7.3 referral. The flat-direction
+  qualification also applies here.
+- File 08, sections 2–4: matching an antiunitary commutant with a
+  Chan-Paton symmetry and identifying the \(E_2\) wall with the
+  physical electroweak group require additional data. The wall
+  enhancement is conditional on the recalled rule and tuned coupling.
+- File 09, sections 1, 3–6: the SO(32) algebra and charge counts are
+  checked; the EPJC full-paper attribution, string dictionary,
+  orientifold projections and light interval scalars require the
+  stated further checks. KO signs alone permit a subspace of
+  \(S^2V\), and \(\Lambda^2\) of a line excludes one component.
+
+For the direct-statement rule, file 08 section 4 phrases the
+colour-triple restriction as “\(E_8\times E_8\) is not available ...;
+\(E_8\times E_7\) is”. A direct replacement is: “With colour triples,
+the proposed \(E_8\times E_7\) arrangement has seven and six branes at
+the walls and a bulk triple at \(2L/3\). Two \(E_8\) walls require
+relaxing the colour-triple rule.” No first-person-singular wording was
+found in files 01–09.
