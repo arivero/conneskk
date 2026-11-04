@@ -417,6 +417,36 @@ same weights \(2,-3\). A physical identification of those exterior
 generators with fermionic wrapped-fivebrane states requires the proposed
 brane construction and its statistics.
 
+## Proposal 3.4: Higgs stabilizer and the FI quotient
+
+**Verdict: Correct with amendment for the stated stabilizer.** The
+coordinate charge calculation is correct assuming the proposed action
+of the Betti \(U(1)\). A nonzero FI parameter gives a partial
+orbifold resolution, with finite stabilizers along the displayed
+projective loci.
+
+On \(V=(v,0)\), \(U=0\), take
+\(T_3=\operatorname{diag}(1/2,-1/2)\) and \(Y(V)=-1/2\).
+The first component has \((T_3+Y)V=0\) and
+\((T_3-Y)V=V\); \(SU(3)\) fixes \(U=0\). The charges of the
+two components of \(V\) are \(0,-1\), and \(Q(U)=1/3\).
+These statements assume the assignment of the physical Betti charge
+to the brane coordinates; identifying it with the electroweak action
+is part of the proposal.
+
+For the quotient action
+\(\lambda\cdot(U,V)=(\lambda^2U,\lambda^{-3}V)\), at
+\(\zeta<0\) the locus \(U=0,\ V\ne0\) has stabilizer
+\(\lambda^3=1\). This \(\mathbb Z_3\) acts faithfully on the
+three transverse \(U\) coordinates. The coarse exceptional locus is
+\(\mathbb{CP}^1\), with transverse singularity
+\(\mathbb C^3/\mathbb Z_3\). At \(\zeta>0\), the locus
+\(V=0,\ U\ne0\) has stabilizer \(\mathbb Z_2\), acting by
+minus the identity on the two transverse \(V\) coordinates; its coarse
+exceptional locus is \(\mathbb{CP}^2\) with transverse
+\(\mathbb C^2/\mathbb Z_2\). Thus the FI quotient is not a
+smooth resolution without further geometric data.
+
 ## Proposition 4.1: ratio-preserving twelve-state blocks
 
 **Verdict: Correct** for whole Dirac species, three generations and the

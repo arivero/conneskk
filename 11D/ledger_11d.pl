@@ -108,10 +108,11 @@ depends(d11_fock_branes, d11_fock).
 depends(d11_fock_branes, d11_betti_y).
 attempted_by(d11_fock_branes, claude).
 
-claim(d11_higgs_m2, conjecture, conjectural, "Proposal 3.4", "The Higgs is the M2 position on the doublet line of the resolved cone (fixed by SU(3) and T_3 + Y on the brane coordinates); v -> 0 is the apex, with near-horizon AdS4 x Y_{3,2} and the Standard Model group unbroken. At fixed N this restores the group at a fixed tower; opening a dimension needs N -> infinity, against N = 1 for the matter of Proposal 3.1.").
+claim(d11_higgs_m2, conjecture, conjectural, "Proposal 3.4 (referee amendment)", "The Higgs as an M2 position is a proposal; the coordinate stabilizer follows from the assumed charges. The nonzero-FI quotient has residual Z_3 or Z_2 stabilizers on its exceptional loci and is a partial orbifold resolution.").
 source(d11_higgs_m2, '11D/03_branes_hypercharge_and_the_84.md', 'proposal-34-the-higgs-is-the-position-of-the-m2-brane-and-the-massless-limit-is-the-apex').
 depends(d11_higgs_m2, d11_betti_y).
 attempted_by(d11_higgs_m2, claude).
+checked_by(d11_higgs_m2, terra_6_1, by_hand).
 
 claim(d11_ads5, proposition, proved, "Proposition 3.5", "AdS5 x CP^2 x S^2 with G_4 = f_1 vol(CP^2) + f_2 J ^ vol(S^2) solves eleven-dimensional supergravity with R_AdS = -(f_1^2 + 2 f_2^2)/6, R_CP2 = f_1^2/3 + f_2^2/6, R_S2 = 2 f_2^2/3 - f_1^2/6; round factors iff abs(f_1) < 2 abs(f_2). Supersymmetry and stability not checked.").
 source(d11_ads5, '11D/03_branes_hypercharge_and_the_84.md', 'proposition-35-a-magnetic-completion-ads5-x-cp2-x-s2').
