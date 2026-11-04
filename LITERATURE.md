@@ -213,6 +213,10 @@ Not found by that search: the classification with n_c, and the pair (M_KK, mu_*)
 - C. Bär and W. Ballmann, [arXiv:1307.3021](https://arxiv.org/abs/1307.3021): the boundary criterion of Theorem 28.9. C. Kottke, [arXiv:0909.5661](https://arxiv.org/abs/0909.5661): the Callias index in families, for Proposition 28.11.
 - I. Prokhorenkov and K. Richardson, *Perturbations of Dirac operators*, J. Geom. Phys. 57 (2006) 297-321, [arXiv:math/0307251](https://arxiv.org/abs/math/0307251); M. Maridakis, [arXiv:1510.07004](https://arxiv.org/abs/1510.07004), Definition 2.1 and Lemma 2.2, and [arXiv:2110.11654](https://arxiv.org/abs/2110.11654), section 2: concentration of low modes of D + s A at the zero set of A on closed manifolds. Read by Terra 6.1 in arXiv HTML ([report](reviews/2026-11-03_terra_check_28.md)): the operator of lemma 28 is a concentrating pair, and Assumption 3 of the spectral separation theorem fails for the spin-3/2 mass.
 
+- R. Parthasarathy, *Dirac operator and the discrete series*, Ann. of Math. 96 (1972) 1-30, [doi:10.2307/1970892](https://doi.org/10.2307/1970892), bibliographic data from Crossref: the formula D^2 = Cas_G + R/8 - Cas_K(twist) on a symmetric space, used in lemma 29. Text not read here; the formula is tested on the slice blocks in Python.
+
+- K.-D. Kirchberg, *An estimation for the first eigenvalue of the Dirac operator on closed Kähler manifolds of positive scalar curvature*, Ann. Global Anal. Geom. 4 (1986) 291-325, [doi:10.1007/BF00128050](https://doi.org/10.1007/BF00128050), bibliographic data from Crossref: the limit (m + 1) R / (4 m) for odd complex dimension m, which is R/3 on CP^3, used as a check of the normalization in Lemma 29.5. Text not read here.
+
 ## Sources read on 4 November 2026
 
 Read by Claude Opus 5.5 from PDFs supplied by the user (Banks-Casher, Dashen) and from the scan held by INSPIRE (Witten 1983).

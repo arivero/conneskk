@@ -1354,6 +1354,85 @@ outside_referee(l28_doubled, "the Terra report on lemma 28 covers Proposition 28
 outside_referee(l28_prescribed, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
 addresses(t0, l28_prescribed).  addresses(t0b, l28_prescribed).
 addresses(t0, l28_window).  addresses(t0b, l28_window).
+claim(l29_splitting, proposition, proved, "Proposition 29.1", "On the tube with flat fibres and the pull-back connection, T_M = T_0 + R with |R| <= C_R |y|, and T_0^* T_0 = D_H^2 + Q^* Q exactly, by K-equivariance of the fibre operator.").
+source(l29_splitting, 'lemmas/29_window_on_the_disc_bundle.md', '').
+depends(l29_splitting, l28_normal).
+attempted_by(l29_splitting, claude_opus_5_5).
+referee_pending(l29_splitting).
+claim(l29_model, proposition, proved, "Proposition 29.2", "On the normal bundle, ker T_0 is one copy of the 4, ker T_0^* = 0, and both are bounded below by min(2, sqrt(mu_1 M)) on the complement, for all representations.").
+source(l29_model, 'lemmas/29_window_on_the_disc_bundle.md', '').
+depends(l29_model, l29_splitting).
+depends(l29_model, l28_normal).
+attempted_by(l29_model, claude_opus_5_5).
+referee_pending(l29_model).
+claim(l29_core, lemma, proved, "Lemma 29.3", "Near the zero section, ||T_M u|| >= (2 - o(1)) ||u|| on the complement of the model kernel, and ||T_M^* v|| >= (2 - o(1)) ||v||.").
+source(l29_core, 'lemmas/29_window_on_the_disc_bundle.md', '').
+depends(l29_core, l29_model).
+attempted_by(l29_core, claude_opus_5_5).
+referee_pending(l29_core).
+claim(l29_bulk, lemma, proved, "Lemma 29.4", "In the bulk, ||T_M w||^2 >= (M^2 f_1^2/4 - C M) ||w||^2, independently of the representation.").
+source(l29_bulk, 'lemmas/29_window_on_the_disc_bundle.md', '').
+attempted_by(l29_bulk, claude_opus_5_5).
+referee_pending(l29_bulk).
+claim(l29_lines, lemma, proved, "Lemma 29.5", "At the Fubini-Study metric, D_k^2 = C_2(L) + 3/2 - (3/8) k^2; on O(3) the kernel is one copy of the 4 in Z = +1, with D^2 >= 5 off the 4; on O(1) there is no kernel, D^2 >= 3 on the 4 and >= 6 off it.").
+source(l29_lines, 'lemmas/29_window_on_the_disc_bundle.md', '').
+attempted_by(l29_lines, claude_opus_5_5).
+referee_pending(l29_lines).
+claim(l29_wall, lemma, proved, "Lemma 29.6", "On the collar with the line-preserving connection, T_M and T_M^* are sums of squares with lower bound min(m^2/4, 3) on the stated domains and complement.").
+source(l29_wall, 'lemmas/29_window_on_the_disc_bundle.md', '').
+depends(l29_wall, l29_lines).
+attempted_by(l29_wall, claude_opus_5_5).
+referee_pending(l29_wall).
+claim(l29_window_b, theorem, proved, "Theorem 29.7", "Conjecture 28.6 in case (b), for Setting 29.0: exactly eight eigenvalues of D-hat_M in (-delta, delta) for every delta < sqrt 3 and M large, one copy of the 4 at each end.").
+source(l29_window_b, 'lemmas/29_window_on_the_disc_bundle.md', '').
+depends(l29_window_b, l29_core).
+depends(l29_window_b, l29_bulk).
+depends(l29_window_b, l29_wall).
+depends(l29_window_b, l28_criterion).
+attempted_by(l29_window_b, claude_opus_5_5).
+referee_pending(l29_window_b).
+claim(l29_tunnelling, proposition, proved, "Proposition 29.8", "The tunnelling identity lambda (<u, chi u> - <v, chi v>) = <v, c(d chi) u>, and |lambda_M| <= C exp(-(1 - eta)(M/2) int f dr).").
+source(l29_tunnelling, 'lemmas/29_window_on_the_disc_bundle.md', '').
+depends(l29_tunnelling, l29_window_b).
+depends(l29_tunnelling, l28_tunnelling).
+attempted_by(l29_tunnelling, claude_opus_5_5).
+referee_pending(l29_tunnelling).
+claim(l29_compression, theorem, proved, "Theorem 29.9", "The compression converges to the endpoint maps with error O(M^{-1/2}); the limit map generates M_2(H) + M_4(C), with fibre part w(rho) at the wall in case (a).").
+source(l29_compression, 'lemmas/29_window_on_the_disc_bundle.md', '').
+depends(l29_compression, l29_window_b).
+depends(l29_compression, l28_compression).
+depends(l29_compression, l28_endpoints).
+attempted_by(l29_compression, claude_opus_5_5).
+referee_pending(l29_compression).
+claim(l29_wall_a, proposition, proved, "Proposition 29.10", "Under K(rho), the wall estimates hold in case (a) with gap kappa_a(rho), and the half-cylinder kernel is one copy of the 4, within O(1/m) of the kernel of A(rho).").
+source(l29_wall_a, 'lemmas/29_window_on_the_disc_bundle.md', '').
+depends(l29_wall_a, l29_lines).
+depends(l29_wall_a, l28_wall).
+depends(l29_wall_a, l28_mixing).
+attempted_by(l29_wall_a, claude_opus_5_5).
+referee_pending(l29_wall_a).
+claim(l29_window_a, theorem, proved, "Theorem 29.11", "K(1) holds, so Conjecture 28.6 holds in case (a) at the Fubini-Study radius, for Setting 29.0, with fibre part 2/3; at another radius it holds under K(rho).").
+source(l29_window_a, 'lemmas/29_window_on_the_disc_bundle.md', '').
+depends(l29_window_a, l29_wall_a).
+depends(l29_window_a, l29_core).
+depends(l29_window_a, l29_bulk).
+depends(l29_window_a, l28_criterion).
+attempted_by(l29_window_a, claude_opus_5_5).
+referee_pending(l29_window_a).
+checked_by(l29_splitting, claude_opus_5_5, python("the identities {A0,Z} = 0, [A0,tau] = 0, {A0,A1} = 0 on the representations 4, 16, 20, 40")).
+checked_by(l29_model, claude_opus_5_5, python("A0^2 against the Casimir formula on 4, 16, 20, 40")).
+checked_by(l29_core, claude_opus_5_5, by_hand).
+checked_by(l29_bulk, claude_opus_5_5, by_hand).
+checked_by(l29_lines, claude_opus_5_5, python("slice blocks on 4, 16, 20, 40 against the formula; enumeration of types below the cutoff")).
+checked_by(l29_wall, claude_opus_5_5, python("[A,q] = 0 and {A,Z} = 0 at rho = 1")).
+checked_by(l29_window_b, claude_opus_5_5, python("direct radial solve under Setting 29.0: the predicted limit values")).
+checked_by(l29_tunnelling, claude_opus_5_5, by_hand).
+checked_by(l29_compression, claude_opus_5_5, python("fibre and Gamma_5 parts of the wall mode, case (b)")).
+checked_by(l29_wall_a, claude_opus_5_5, by_hand).
+checked_by(l29_window_a, claude_opus_5_5, python("block norms; the 2 x 3 block on the 4")).
+claim_amended(l28_window, l29_window_b).
+claim_amended(l28_window, l29_window_a).
+addresses(t0, l29_window_b).  addresses(t0, l29_window_a).  addresses(t0, l29_compression).  addresses(t0b, l29_compression).
 
 %% ---------------------------------------------------------------- steer note, items 9 and 11
 claim(steer_tower_coefficients, proposition, proved, "Steer note, item 9", "One Kaluza-Klein level of all Standard Model fields in the bulk has one-loop coefficients (81/10, 7/6, -5/2): a massive vector (-7/2 C_2), two Weyl fermions for each Standard Model Weyl fermion, and one complex Higgs doublet.").

@@ -275,7 +275,7 @@ def tests(R):
         vals = sorted(set(np.round(np.linalg.eigvalsh(B) ** 2, 5)))
         print('  rep %s: %s' % (name, vals))
         assert KODAIRA[name] in vals
-    print('(e) wall operator on 4: fibre part against -2(rho^2+2)^2/(9+2(rho^2+2)^2)')
+    print('(e) wall operator on 4: fibre part against 2(rho^2+2)^2/(9+2(rho^2+2)^2)')
     S = System(R['4'])
     for r in (0.5, 1.0, 2.0):
         A, iu, iv = S.wall(r)
