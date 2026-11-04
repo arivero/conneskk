@@ -9,12 +9,13 @@ def F(z):
     f=lambda x: x**3*np.log1p(z/np.sinh(x)**2)
     return quad(f,0,1,limit=200)[0]+quad(f,1,40,limit=200)[0]
 print('(a) F(1) vs 93 zeta5/64',F(1.0),93*Z5/64)
-def A0(ND,nv,ns=0,grav=0): return Z5*(3/16)*(4*2*ND-3*nv-ns-5*grav)
+# sp(2)+su(4): 16 generators with integer towers and 9 with half-integer towers at theta = 0 (lemmas 23, 24, 26)
+def A0(ND,ni=16,nh=9,ns=0,grav=0): return Z5*(3/16)*(4*2*ND-3*(ni-nh*15/16)-ns-5*grav)
 def G(th,nf,a0):
     t=np.sin(th)**2;u=t*(1-t)
     return a0+3*F(2*u)+1.5*F(16*u/5)-nf*F(t)
-for label,nf,ND,nv,grav in (('top only, 24 Dirac, 21 gauge',6,24,21,0),('top only, with 5d graviton',6,24,21,1),('universal, 24 Dirac, 21 gauge',48,24,21,0),('universal, with 5d graviton',48,24,21,1),('one generation universal, 8 Dirac',16,8,21,0)):
-    a0=A0(ND,nv,0,grav)
+for label,nf,ND,grav in (('top only, 24 Dirac',6,24,0),('top only, with 5d graviton',6,24,1),('universal, 24 Dirac',48,24,0),('universal, with 5d graviton',48,24,1),('one generation universal, 8 Dirac',16,8,0)):
+    a0=A0(ND,grav=grav)
     ths=np.linspace(0.001,pi/2,160); Gs=np.array([G(t,nf,a0) for t in ths]); dG=np.gradient(Gs,ths)
     S=ths*dG-4*Gs
     roots=[brentq(lambda th:(th*(G(th+1e-4,nf,a0)-G(th-1e-4,nf,a0))/2e-4-4*G(th,nf,a0)),ths[i],ths[i+1]) for i in range(len(ths)-2) if S[i]*S[i+1]<0]

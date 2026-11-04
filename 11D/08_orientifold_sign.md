@@ -26,6 +26,8 @@ The even dimension for s = −1 is lemma 06's own statement (Kramers degeneracy 
 
 ## 4. Remark 8.3 (E8 walls from 15 + 1; conditional)
 
+*Correction (4 Nov 2026).* The far-wall group is reached at the string-scale radius R = R_*, with the tower fixed, and only its charged states are D0-branes. See [10](10_dilaton_and_second_scale.md).
+
 Conditions: the dictionary of 06 (fifteen D8-branes for the five light quarks in three colours, the sixteenth for the top) and the recalled rule that an O8^- plane with n <= 7 D8-branes on it, at infinite coupling, carries E_{n+1} (E_4 = SU(5), E_5 = SO(10), E_6, E_7, E_8), while n >= 8 admits no such point (Seiberg, hep-th/9608111; Bergman, Gaberdiel and Lifschytz, hep-th/9711098; recalled).
 
 1. Dilaton bookkeeping: the dilaton is e^{phi} = z^{−5/6} with z piecewise linear along the interval (conformal coordinate; Polchinski and Witten, hep-th/9510169) and slope proportional to 8 − n_left, where n_left counts the D8-branes to the left (O8^- carrying −8 units), so the coupling grows toward the wall with fewer branes; this reproduces the constant dilaton of 8 + 8, the SU(2) at the empty wall of the SO(32) point (the self-dual radius of the heterotic string) and 7 + 7 for E8 x E8. In the configuration 15 + 1 the wall with fifteen branes has no E point (15 > 7), and the coupling can diverge only at the far wall. With the top's brane on the far wall (the label-9 configuration of Proposition 7.2, n = 1) the far wall enhances to E_2 = SU(2) x U(1), the electroweak group; with the top's brane in the bulk it is empty and enhances to E_1 = SU(2). The light-quark wall keeps SO(30).

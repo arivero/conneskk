@@ -22,6 +22,8 @@ That paper uses the adjoint of SO(32) to classify the scalars of a supersymmetri
 
 **Proof.** ∫_0^x N(y) dy = Σ_k (x − x_k)_+, so z(x) = z(0) + c (8x − Σ_k (x − x_k)_+) = z(0) + c Σ_k (x/2 − (x − x_k)_+), and x/2 − (x − x_k)_+ = min(x/2, x_k − x/2). Item 2 is x = L with Σ_k (L − x_k) = 16L − Σ x_k. Item 3 sets z(L) = 0 and substitutes x_k = (2L/pi) l m_k. ∎
 
+*Correction (4 Nov 2026).* The dictionary x_k = (2L/pi) theta_k is exact only for constant z; the map from angles to positions is nonlinear. See [10](10_dilaton_and_second_scale.md), Proposition 10.1.
+
 **Reading (proposal).** With the light quarks near θ = 0, Σ_k m_k ≈ m_t and the condition is z(0) ≈ (2cL/pi)(4 pi − θ_t): 7cL at label 9 (θ_t = pi/2) and 8cL at label 11 (θ_t -> 0). The coupling therefore varies along the interval on a scale set by the spectrum of D_F, which is the kind of second scale that Proposition 1.5 requires to select a joint family; whether the type I' coupling can play that role in the corpus's flat family is the next question. Since the slope decreases with x, z is concave, so z > 0 on [0, L) once z(0) > 0 and z(L) = 0; positivity of z(0) gives l Σ_k m_k < 4 pi, a bound on the trace of |D_F| in units of the tower scale, met when only the top is heavy (θ_t <= pi/2).
 
 ## 3. Proposition 9.2 (diquarks as strings between the stack and its image)

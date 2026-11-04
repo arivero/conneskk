@@ -61,6 +61,8 @@ For U(N) matrices X^i (i = 1, ..., 9) that are block-diagonal, X^i = ⊕_a x_a^i
 
 ## 6b. The three labels in type I' variables (proposal)
 
+*Correction (4 Nov 2026).* The length l of H and the type I' length are T-dual, and the limit at label 11 below ends at ten-dimensional SO(32). See [10](10_dilaton_and_second_scale.md), Proposition 10.3.
+
 Hypothesis H has two parameters for the top channel: the interval length l and the angle θ = l m_t in [0, pi/2] (Proposition 7.1). In the type I' reading of Proposition 7.2 they are the length of the interval and the position of the top's D8-brane as a fraction of it. Then:
 
 - **label 9:** θ = pi/2 at fixed l, the brane on the far orientifold wall: the top at the tower scale pi/(2l) (lemma 22, Corollary 22.9: W, Z and top at the tower scale in the 10 -> 9 family), the antiperiodic tower, and the one-loop minimum of the flat family (lemma 24);

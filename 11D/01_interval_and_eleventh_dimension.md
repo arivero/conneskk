@@ -92,6 +92,8 @@ Hence a scale-free action realizes only the path l ~ 1/M_W of H's original state
 
 **Proof.** d/dl [l^{-4} G(l m)] = l^{-5} (theta G'(theta) - 4 G(theta)) at theta = l m. For item 1, d/dl V = -4 l^{-5} G(theta) and d/dtheta V = l^{-4} G'(theta). ∎
 
+*Amendment (4 Nov 2026).* The window can separate on the scale-free path, with a fixed small ratio, if the light mass is exponentially small in a stabilized shape parameter, and a_0 is now computed. See [10](10_dilaton_and_second_scale.md), Remark 10.7.
+
 **Consequence for the modulus target of the audit (§7.1).** The audit proposes V = V_*(a r^{-p} + b epsilon^2 r^q) with a, b, p, q > 0, whose minimum r ~ epsilon^{-2/(p+q)} gives alpha = 2/(p + q) < 1 when p + q > 2. In the flat one-loop family the epsilon-dependent term near theta = 0 is (3 zeta(3)/(16 pi^2)) (54/5 - n_f) m^2/l^2, so q = -2, and with the Casimir term p = 4 the stationary point has l ~ 1/m, alpha = 1, in agreement with item 2. A term growing with l at fixed v, as the ansatz requires, is absent from the flat family and must come from one of the second scales listed above.
 
 ## What remains open here

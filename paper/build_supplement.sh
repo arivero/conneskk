@@ -43,6 +43,7 @@ part "R15 (Terra referee, lemma 28)" reviews/2026-11-03_terra_check_28.md
 part "R16 (Terra referee, lemma 29)" reviews/2026-11-04_terra_check_29.md
 part "R17 (Terra referee, lemma 30 and the joint-limit note)" reviews/2026-11-04_terra_check_30_note.md
 part "R18 (assessment of the Astra audit)" reviews/2026-11-04_outside_audit_assessment.md
+part "R19 (independent reading of 11D files 10 and 11)" reviews/2026-11-04_sonnet_check_11d_10_11.md
 # Plain-text adjoints and subscripts must survive pandoc emphasis parsing.
 python3 -I paper/supplement_escape.py "$OUT"
 # unicode-math needs braces around font commands in sub- and superscripts

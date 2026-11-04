@@ -63,6 +63,8 @@ This is the finite-geometry form of Proposition 5.2. It also makes reading 2 bel
 
 **Proof.** Exhaustive computation of the neighbour counts d (Python, exact fractions, scratch script not kept); the counts of S − T and S − N differ for every configuration, so no isometry exists. ∎ This is a computer-assisted statement; Proposition 5.1 is its hand-proved aligned case.
 
+*Correction (4 Nov 2026).* The conclusion holds on rerun; the sentence on the values of d in the Statement is wrong for misaligned configurations. See [10](10_dilaton_and_second_scale.md), section on corrections.
+
 **Scope.** It assumes that each family occupies one slot, so that every state is a single root. Four slots then cannot be reduced to three while keeping the exchange as an isometry of the roots.
 
 ## Proposal 5.5 (four slots, three zero modes)
