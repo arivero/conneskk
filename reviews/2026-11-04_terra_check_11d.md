@@ -1328,6 +1328,46 @@ to fixed colour and family structures needs an explicit action on
 those structures. The root no-go applies to its stated three-slot
 configuration, while bundle zero modes remain an open escape.
 
+## File 09, section 1: the SO(32) comparison
+
+**Verdict: Correct with amendments for the representation algebra;
+the full-paper comparison remains open.** The two branching chains
+and composite charge counts are consistent. The physical dictionary
+and the exact reading of the whole EPJC paper require additional
+evidence.
+
+The alternative chain follows directly from
+\(32_\mathbb C=16_{+1}\oplus\overline{16}_{-1}\):
+\[
+ 496=120_{+2}\oplus\overline{120}_{-2}
+     \oplus255_0\oplus1_0.
+\]
+Under \(SU(15)\), \(16=15\oplus1\) and
+\(120=105\oplus15\). With \(15=5\otimes3\),
+\[
+ 105=\Lambda^2(5\otimes3)
+     =(15,\bar3)\oplus(10,6),
+\]
+and \(15\otimes\bar{15}=(24,8)\oplus(24,1)\oplus(1,8)\oplus(1,1)\).
+The antitriplet charge multiplicities were checked in Proposition 9.2.
+These group products are Lie-algebra shorthand; global embeddings
+involve finite central quotients.
+
+The archived [original arXiv abstract](https://github.com/ehijano/rss_fetch/blob/323070730322e6274704c62d0d46fcab0e27b1c6/rss_data/hep-ph/2024-07-24_hep-ph.xml#L555-L561)
+confirms the three-generation scalar classification through flavour
+\(SU(5)\), the composite postulate, and an additional chiral
+charge-\(+4/3\) quark per generation. The source file's scalar count
+does not state that additional chiral-fermion hypothesis. The paper
+itself could not be accessed, so its full chain, the attribution of
+particular multiplets and the claimed absence of a type-I' realization
+have not been checked against the primary text.
+
+The \(SO(2)\) plane is a colour singlet. Assigning it to a top brane
+is a label in the proposed dictionary and does not by itself
+construct a colour-triplet top field. Chan-Paton bilinearity and
+matching representation counts likewise do not by themselves
+establish dynamical quark composites.
+
 ## Proposition 6.1: the SO(32) Wilson-line spectrum
 
 **Verdict: Correct with amendments.** The charged momentum progressions

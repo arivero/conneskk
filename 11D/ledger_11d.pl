@@ -330,7 +330,7 @@ depends(d11_orientifold_scalars, d11_diquark_strings).
 depends(d11_orientifold_scalars, d11_orientifold_sign).
 attempted_by(d11_orientifold_scalars, claude).
 
-claim(d11_so32_comparison, claim, conditional, "Section 1", "The chain SO(32) > SO(2) x SO(30) > SO(2) x SU(5) x SU(3) x U(1), five light quarks in three colours and the top as the SO(2), of A. Rivero, Eur. Phys. J. C 84 (2024) 1058 (arXiv:2407.05397), coincides with lemma 21 and the dictionary of 06; read through a summarizing fetch of the arXiv text.").
+claim(d11_so32_comparison, claim, conditional, "Section 1 (full-paper comparison pending)", "The detailed comparison with A. Rivero, Eur. Phys. J. C 84 (2024) 1058 (arXiv:2407.05397), was read through a summarizing fetch. The archived original abstract also specifies an extra chiral +4/3 quark per generation; the full primary text remains to be checked.").
 source(d11_so32_comparison, '11D/09_dilaton_spectral_and_so32.md', '1-the-so32-of-a-rivero-eur-phys-j-c-84-2024-1058-arxiv240705397').
 depends(d11_so32_comparison, l21_so30).
 depends(d11_so32_comparison, d11_heterotic_route).
@@ -338,6 +338,13 @@ attempted_by(d11_so32_comparison, claude).
 checked_by(d11_so32_comparison, claude, by_hand).
 referee_pending(d11_so32_comparison).
 prior_work(d11_so32_comparison, partial, "The chain and the composite counts are known (the EPJC paper; hep-ph/0512065); the type I' realization (the top as a displaced D8-brane, the 30 as Chan-Paton labels on an O8^- wall) was not found there.").
+
+claim(d11_so32_algebra, proposition, proved, "Section 1 (referee algebra)", "Under SU(16) x U(1), the complex SO(32) adjoint is 120 + 120bar + 255 + 1; under SU(5) x SU(3), the 105 contains (15, 3bar) + (10, 6). Matching these representations does not identify physical composites.").
+source(d11_so32_algebra, '11D/09_dilaton_spectral_and_so32.md', '1-the-so32-of-a-rivero-eur-phys-j-c-84-2024-1058-arxiv240705397').
+depends(d11_so32_algebra, d11_diquark_strings).
+attempted_by(d11_so32_algebra, claude).
+checked_by(d11_so32_algebra, claude, by_hand).
+checked_by(d11_so32_algebra, terra_6_1, by_hand).
 
 claim(d11_real_structure_diquarks, no_go, proved, "Proposition 9.3 (independently checked with amendment)", "For an antiunitary J exchanging V and Vbar and a Hermitian J-compatible X, the particle-antiparticle block obeys B = eps eps' B^T. For KO labels 9, 10, 11 the sign is +1, excluding nonzero antisymmetric blocks within one multiplet. The signs permit only a subspace of S^2 V; actual fluctuations and interval scalar modes require further construction.").
 source(d11_real_structure_diquarks, '11D/09_dilaton_spectral_and_so32.md', '4-proposition-93-the-real-structure-decides-between-the-two-diquark-counts').
@@ -380,6 +387,6 @@ addresses(t14, d11_angle_interval).  addresses(t14, d11_far_wall).  addresses(t1
 addresses(t12, d11_far_wall).  addresses(t0, d11_torus_flux).
 addresses(t14, d11_orientifold_sign).  addresses(t14, d11_wall_multiplicity).  addresses(t14, d11_e_walls).  addresses(t14, d11_orientifold_reading).
 addresses(t2c, d11_orientifold_sign).
-addresses(t14, d11_dilaton_spectral).  addresses(t14, d11_diquark_strings).  addresses(t14, d11_orientifold_scalars).  addresses(t14, d11_so32_comparison).  addresses(t14, d11_dp_walls).  addresses(t14, d11_transposition_tduality).
+addresses(t14, d11_dilaton_spectral).  addresses(t14, d11_diquark_strings).  addresses(t14, d11_orientifold_scalars).  addresses(t14, d11_so32_comparison).  addresses(t14, d11_so32_algebra).  addresses(t14, d11_dp_walls).  addresses(t14, d11_transposition_tduality).
 addresses(t2c, d11_orientifold_scalars).
 addresses(t14, d11_real_structure_diquarks).
