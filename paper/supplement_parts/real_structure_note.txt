@@ -1,0 +1,23 @@
+# paper: The real structure of a massless block: $SO(30)$ in the finite geometry
+# name: real_structure_note
+part 06 lemmas/06_*.md
+part 18 lemmas/18_*.md
+part 19 lemmas/19_*.md
+part 21 lemmas/21_*.md
+part 22 lemmas/22_*.md
+part 23 lemmas/23_*.md
+part "11D, README, referee pending" 11D/README.md
+part "11D, 01 interval and eleventh dimension, referee pending" 11D/01_interval_and_eleventh_dimension.md
+part "11D, 02 witten spaces hypercharge quotient, referee pending" 11D/02_witten_spaces_hypercharge_quotient.md
+part "11D, 06 main point heterotic route, referee pending" 11D/06_main_point_heterotic_route.md
+part "11D, 07 dualities 9 11, referee pending" 11D/07_dualities_9_11.md
+part "11D, 08 orientifold sign, referee pending" 11D/08_orientifold_sign.md
+part "11D, 09 dilaton spectral and so32, referee pending" 11D/09_dilaton_spectral_and_so32.md
+part "11D, 11 so30 fluctuations, referee pending" 11D/11_so30_fluctuations.md
+part "R4 (referee report, lemma 18, two sheets, framework note)" reviews/2026-11-03_terra_check_18_16b.md
+part "R6 (referee report, no-go results and lemma 19)" reviews/2026-11-03_terra_check_nogo_19.md
+part "R7 (referee report, lemmas 20 and 21, Proposition I)" reviews/2026-11-03_terra_check_20_21.md
+part "R8 (referee report, lemma 22)" reviews/2026-11-03_terra_check_22.md
+part "R9 (referee report, lemma 23)" reviews/2026-11-03_terra_check_23.md
+part "R19 (independent reading of 11D files 10 and 11)" reviews/2026-11-04_sonnet_check_11d_10_11.md
+part "R21 (second check of the Terra referee of the 11D line)" reviews/2026-11-04_sonnet_second_check_11d.md
