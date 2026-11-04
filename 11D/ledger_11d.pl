@@ -285,12 +285,12 @@ attempted_by(d11_orientifold_sign, claude).
 checked_by(d11_orientifold_sign, claude, by_hand).
 checked_by(d11_orientifold_sign, terra_6_1, by_hand).
 
-claim(d11_wall_multiplicity, proposition, proved, "Proposition 8.2", "Wall channels of the parent come with doubled multiplicity relative to bulk channels, from Proposition 7.1.").
+claim(d11_wall_multiplicity, proposition, proved, "Proposition 8.2 (referee clarification)", "For k channels, the signed eigenvalue theta/l has multiplicity k in the interior and 2k at the endpoints; the lowest absolute eigenvalue has multiplicities 2k, 2k and 4k at interior, zero and pi/2 respectively.").
 source(d11_wall_multiplicity, '11D/08_orientifold_sign.md', '3-proposition-82-wall-channels-come-with-doubled-multiplicity').
 depends(d11_wall_multiplicity, d11_angle_interval).
 attempted_by(d11_wall_multiplicity, claude).
 checked_by(d11_wall_multiplicity, claude, by_hand).
-referee_pending(d11_wall_multiplicity).
+checked_by(d11_wall_multiplicity, terra_6_1, by_hand).
 
 claim(d11_e_walls, conjecture, conjectural, "Remark 8.3 (conditional on recalled rules and the dictionary of 06)", "In the configuration 15 + 1 with the top's brane on the far wall, that wall enhances to SU(2) x U(1) at infinite coupling while the light-quark wall keeps SO(30), conditional on recalled type I' rules.").
 source(d11_e_walls, '11D/08_orientifold_sign.md', '4-remark-83-e8-walls-from-15--1-conditional').

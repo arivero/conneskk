@@ -20,6 +20,8 @@ The even dimension for s = −1 is lemma 06's own statement (Kramers degeneracy 
 
 ## 3. Proposition 8.2 (wall channels come with doubled multiplicity)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The stated count is for one signed eigenvalue. The lowest \(|D|\) multiplicity is \(2k\) in the interior and at zero, and \(4k\) at \(\pi/2\); interpreting the signed count as Chan-Paton labels requires further data. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-82-endpoint-channel-multiplicities).
+
 **Statement.** In the parent of lemma 22, k channels at a common angle θ contribute, at the eigenvalue θ/l of the window, an eigenspace of dimension k if 0 < θ < pi/2 and of dimension 2k at the ends θ = 0 and θ = pi/2.
 
 **Proof.** By Proposition 7.1 each channel has the spectrum {(n pi ± θ)/l}; the value θ/l occurs once (n = 0, sign +) for 0 < θ < pi/2, and twice at the ends: at θ = 0 as the zero mode of multiplicity two, at θ = pi/2 as (0 + pi/2)/l = (pi − pi/2)/l. ∎

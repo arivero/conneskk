@@ -1085,6 +1085,24 @@ transformations, while \(SO(n)\) is its identity component for
 Chan-Paton representation and compatibility with the rest of the
 data.
 
+## Proposition 8.2: endpoint channel multiplicities
+
+**Verdict: Correct with clarification.** For \(k\) independent channels
+at the same angle, the signed eigenvalue \(\theta/\ell\) has
+multiplicity \(k\) in the interior and \(2k\) at either endpoint.
+
+For \(0<\theta<\pi/2\), only \(n=0\) in the positive progression
+gives \(+\theta/\ell\). At zero both progressions have \(n=0\), and
+at \(\pi/2\) the positive \(n=0\) and negative \(n=1\) branches
+coincide. This proves the claimed signed count.
+
+The multiplicity of the corresponding lowest eigenvalue of \(|D|\)
+is \(2k\) in the interior, \(2k\) at zero, and \(4k\) at
+\(\pi/2\). At zero the two interior signed eigenvalues simply
+coalesce; at \(\pi/2\) the next level also meets the window. Thus
+the signed count alone does not establish a doubling of independent
+physical Chan-Paton labels or an orientifold projection.
+
 ## Proposition 6.1: the SO(32) Wilson-line spectrum
 
 **Verdict: Correct with amendments.** The charged momentum progressions
