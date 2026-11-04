@@ -26,6 +26,7 @@ Facts: `claim/5`, `source/3`, `depends/2`, `hypothesis/2`, `attempted_by/2`, `ch
 2. `research_limits/`: its derivation appendices (`research_note.md`, `solidification.md`, `nine_dimensional_construction.md`; historical record).
 3. `research_checks_knowledge.md`: the finite checks behind the paper (constructions, formulas, recorded outputs; historical record).
 4. `connes_kk_research_state.md`: the parallel line on lens lattices, the Fermi scale and KK theory (state-of-research notes; the LaTeX paper condensing them was merged into them; historical record).
+   `CORPUS_SALVAGE.md`: the full reading of items 1 to 4 (4 Nov 2026), section by section: what the lemmas carry, what stands as record, and the ideas carried forward into STRATEGY.md.
 5. `transcripts/`: text of the four chat printouts (the ChatGPT conversation "Connes Electrodynamics Model" and the Astra / Sol / Terra next-step reviews), with the cited links of each page.
 6. `lemmas/`: short proofs by Astra 6 (`gpt-6-astra` via codex, one job at a time) and by Claude, with the Astra prompts in `lemmas/prompts/`.
 7. `STRATEGY.md`: which theorems to prove first (11/10/9 limits, towerless KK), and why.

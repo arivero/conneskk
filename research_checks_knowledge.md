@@ -1,6 +1,6 @@
 # Technical content of the research_limits check scripts
 
-*This file is historical record, the ground the project started from (2 November 2026). Its claims are carried in `ledger.pl` as corpus rows, 62 of the 84 without an outside checker. Where a lemma in `lemmas/` corrects or supersedes a statement here, the lemma governs. No result of the papers rests on this file (`reviews/2026-11-04_unchecked_claims_audit.md`). A full reading, to carry forward the ideas that remain open, is in progress (4 November 2026, `CORPUS_SALVAGE.md`).*
+*This file is historical record, the ground the project started from (2 November 2026). Its claims are carried in `ledger.pl` as corpus rows, 62 of the 84 without an outside checker. Where a lemma in `lemmas/` corrects or supersedes a statement here, the lemma governs. No result of the papers rests on this file (`reviews/2026-11-04_unchecked_claims_audit.md`). Read in full on 4 November 2026; the ideas carried forward, and the decision for each part, are in `CORPUS_SALVAGE.md`.*
 
 Source folder: `research_limits/` (scripts removed after this extraction; recover them with `git show 54445a4:unzipped/zip_B_1800/research_limits/<name>`). This file records the mathematics and the recorded results of
 `checks.py`, `solidification_checks.py`, `nine_dimensional_checks.py`, `canonical_checks.py`,

@@ -1,6 +1,6 @@
 # Dimension limits, chirality and a twistor route to the finite Standard Model
 
-*This file is historical record, the ground the project started from (1 November 2026). Its claims are carried in `ledger.pl` as corpus rows, 62 of the 84 without an outside checker. Where a lemma in `lemmas/` corrects or supersedes a statement here, the lemma governs. No result of the papers rests on this file (`reviews/2026-11-04_unchecked_claims_audit.md`). A full reading, to carry forward the ideas that remain open, is in progress (4 November 2026, `CORPUS_SALVAGE.md`).*
+*This file is historical record, the ground the project started from (1 November 2026). Its claims are carried in `ledger.pl` as corpus rows, 62 of the 84 without an outside checker. Where a lemma in `lemmas/` corrects or supersedes a statement here, the lemma governs. No result of the papers rests on this file (`reviews/2026-11-04_unchecked_claims_audit.md`). Read in full on 4 November 2026; the ideas carried forward, and the decision for each part, are in `CORPUS_SALVAGE.md`.*
 
 Derivation appendix (first stage, 1 November 2026) to [../canonical_research.md](../canonical_research.md), which states the results and their current labels. One Terra agent checked the constructions, sequentially. Several labels here predate the paper: §5 takes the scalar matching mu = lambda and unimodularity as inputs, which the paper derives in §3 from the heavy Majorana centralizer of [solidification.md](solidification.md) §3-4; §8 calls the bounded-mixing collapse conditional, which the paper proves in §2.2.
 
