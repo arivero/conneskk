@@ -23,7 +23,7 @@ part 27 lemmas/27_*.md
 part 28 lemmas/28_*.md
 part 29 lemmas/29_*.md
 part 30 lemmas/30_*.md
-for f in 11D/README.md 11D/0*.md 11D/1*.md; do part "11D ($(basename $f .md), referee pending)" "$f"; done
+for f in 11D/README.md 11D/0*.md 11D/1*.md; do part "11D, $(basename $f .md | tr _ ' '), referee pending" "$f"; done
 part "L (literature check and record of searches)" LITERATURE.md
 part "R1 (assessment of Farsi-Latremoliere, with the counterexample to their Theorem 3.4)" reviews/2026-11-03_farsi_latremoliere_assessment.md
 part "R2 (referee report, lemmas 08, 13, 14)" reviews/2026-11-03_terra_check_08_13_14.md
@@ -43,6 +43,8 @@ part "R15 (Terra referee, lemma 28)" reviews/2026-11-03_terra_check_28.md
 part "R16 (Terra referee, lemma 29)" reviews/2026-11-04_terra_check_29.md
 part "R17 (Terra referee, lemma 30 and the joint-limit note)" reviews/2026-11-04_terra_check_30_note.md
 part "R18 (assessment of the Astra audit)" reviews/2026-11-04_outside_audit_assessment.md
+# Plain-text adjoints and subscripts must survive pandoc emphasis parsing.
+python3 -I paper/supplement_escape.py "$OUT"
 # unicode-math needs braces around font commands in sub- and superscripts
 perl -i -pe 's/([\^_])\\(mathcal|mathbb|mathrm|mathsf|mathfrak|mathbf|operatorname|text)(\{[^{}]*\}| *[A-Za-z])/$1\{\\$2$3\}/g' "$OUT"
 HDR=paper/.supp_header.tex
@@ -61,6 +63,7 @@ cat > "$HDR" <<'H'
 \newunicodechar{⊕}{{\fallback ⊕}}
 \newunicodechar{⊗}{{\fallback ⊗}}
 \newunicodechar{σ}{{\fallback σ}}
+\newfontfamily\fallbackmath{Latin Modern Math}
 \sloppy
 \emergencystretch=3em
 \allowdisplaybreaks
@@ -70,9 +73,9 @@ if [ "$1" = mobile ]; then
 else
   GEO="letterpaper,margin=1in"; NAME=supplemental; TW=469.75
 fi
-pandoc "$OUT" -f markdown+tex_math_single_backslash+tex_math_double_backslash-raw_tex-implicit_figures \
+pandoc "$OUT" -f markdown+tex_math_single_backslash+tex_math_double_backslash-raw_tex-implicit_figures-superscript-subscript \
   --pdf-engine=xelatex --no-highlight --toc --toc-depth=1 -H "$HDR" -H paper/supplement_layout.tex \
-  --lua-filter=paper/supplement_layout.lua -M supp_textwidth=$TW \
+  --lua-filter=paper/supplement_fallback.lua --lua-filter=paper/supplement_layout.lua -M supp_textwidth=$TW \
   -V documentclass=article -V fontsize=10pt -V geometry:"$GEO" -V mainfont="Latin Modern Roman" -V colorlinks=false \
   -M title="Supplemental Material: Finite spectral triples as towerless intervals" -M date="Draft, 3 November 2026" \
   -o paper/$NAME.pdf

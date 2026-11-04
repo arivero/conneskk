@@ -1,0 +1,146 @@
+% A dictionary between finite spectral triples and Kaluza-Klein data: short note, synthesis of lemmas 05 to 30 and the 11D line
+\ifdefined\mobile
+\documentclass[aps,prd,reprint,onecolumn,nofootinbib,amsmath,amssymb,floatfix]{revtex4-2}
+\usepackage[paperwidth=270pt,paperheight=585pt,textwidth=246pt,textheight=545pt,top=18pt,left=12pt,headheight=0pt,headsep=0pt,footskip=14pt]{geometry}
+\else
+\documentclass[aps,prd,reprint,nofootinbib,amsmath,amssymb,floatfix]{revtex4-2}
+\fi
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsthm}
+\emergencystretch=1.5em
+\ifdefined\mobile\makeatletter\def\frontmatter@abstractwidth{246\p@}\makeatother\fi
+\usepackage[hidelinks]{hyperref}
+\theoremstyle{plain}
+\newtheorem{proposition}{Proposition}
+\newcommand{\C}{\mathbb C}
+\renewcommand{\H}{\mathbb H}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\supp}[1]{Supplemental Material, part #1}
+\newcommand{\file}[1]{Supplemental Material, 11D file #1}
+
+\begin{document}
+
+\title{A dictionary between finite spectral triples and Kaluza-Klein data}
+\date{Draft, 4 November 2026}
+
+\begin{abstract}
+We collect, with the status of each, the statements that translate Connes' finite spectral triple into Kaluza-Klein data. The grading of the two-point space is the reflection of an antiperiodic circle. The finite Dirac operator is a wall angle and a flat connection. The finite Higgs one-form is the compression of the gauge field along the internal direction, and the Higgs modulus is the angle between the wall gradings. The real structure decides whether a massless block has orthogonal or symplectic symmetry, which fixes the antisymmetric or symmetric diquark block. Noncommutative algebras arise as windows of commutative parents. The translation has limits, which we state: the finite data and the chirality remain inputs on the interval; the window algebras concern compression maps; no action in the flat family selects a path on which a dimension opens, and with the top alone it has no vacuum in the window. A reading through the heterotic and type I$'$ web fails in three specific ways: the angle-position map is nonlinear, the length of the interval is T-dual to the type I$'$ length, and the relevant configuration has a Romans mass, with no eleven-dimensional regime.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Connes' finite spectral triple packages the masses, the Higgs field and the gauge group of the Standard Model into finite-dimensional data. A Kaluza-Klein theory packages them into the geometry of internal dimensions. The proposal of \cite{towerlesspaper} is that the first is a towerless window of the second, with 9 and 11 as limits of an even interior. This note asks what the word ``is'' can mean here, entry by entry. We separate what is proved from what is a reading, and we say where the translation stops. It brings together the two companion notes \cite{boundarynote,jointnote} and a line of work on eleven-dimensional completions. It contains few new statements of its own; those are marked.
+
+Table~\ref{tab:dictionary} is the summary. The status column uses the record in the repository ledger: ``refereed'' means an independent reading by another model, and ``unrefereed'' a statement checked only by its author, or by a lighter reading where stated.
+
+\begin{table*}
+\caption{\label{tab:dictionary}The dictionary. Parts refer to the Supplemental Material; 11D/n is file n of the eleven-dimensional line.}
+\begin{ruledtabular}
+\begin{tabular}{p{0.27\textwidth}p{0.47\textwidth}p{0.18\textwidth}}
+Finite side&Kaluza-Klein side&Status\\
+\hline
+Two points, grading $\gamma$&Antiperiodic circle of radius $l/\pi$; $\gamma$ is its reflection, the walls its fixed points&Proposition, 11D/01, lemma 05\\
+$D_F$ with KO-6 signs&Wall data $X=\tan(lD_F)$, with exact window; a constant connection, odd for the grading&Theorem, refereed, lemma 22\\
+$J_F$, $\gamma_F$&Exact on the parent&Theorem, refereed, lemma 22\\
+Masses&Internal momenta: $(n\pi\pm\theta_k)/l$, $\theta_k=l\sigma_k$&Theorem, refereed, lemma 22\\
+Higgs one-form $[D_F,a]$&Compression of the connection along the interval; the modulus is the angle between two wall gradings&Theorems, refereed, lemmas 22, 23; reading unrefereed, 11D/11\\
+Gauge fields, centralizer $C_F$&$A_\mu$ with wall conditions; a generator has a massless vector or a massless scalar, never both&Proposition 22.8, refereed; Theorem 11.3, unrefereed\\
+Sign $s$ of an odd factorization&$j^2=s$: $O(n)$ or $USp(n)$ on a massless block; $SO(30)$ of the five light quarks for $s=+1$&Propositions, unrefereed, 11D/08, 11D/11\\
+Coefficients $(3,24/5)$ of the action&$(2,16/5)$ of the interval, joined at leading order by $(3-d_{\rm eff})/2$&Theorem, refereed, lemma 25\\
+$M_2(\H)\oplus M_4(\C)$&Limit of compressions of real functions on a disc bundle over $S^4$&Theorems, refereed, lemmas 28, 29\\
+$M_p(\C)$, KO-6&Lowest Landau level of a doubled torus with flux $p$&Proposition, unrefereed, 11D/07\\
+$M_W,M_Z\to0$&A family with $m\ll E_\varepsilon\ll\Delta\to0$ and a divergent count at fixed energy: vector poles in a five-dimensional toy, and a fermion window only on the disc bundle&Theorems, refereed, lemma 30\\
+\end{tabular}
+\end{ruledtabular}
+\end{table*}
+
+\section{The grading is a reflection}
+
+Let $D_l(L,R)=(R',-L')$ on $L^2([0,l],\C^2)$, with $R(0)=0$ and $L(l)=0$, grading $\Gamma=\mathrm{diag}(1,-1)$ and scalar functions on $[0,l]$: the chiral interval whose minimal truncation is the Connes-Lott two-point space \cite{ConnesLott1991}. Then
+\begin{equation}
+(W(L,R))(x)=\tfrac1{\sqrt2}\bigl(L(|x|)+i\,\mathrm{sgn}(x)R(|x|)\bigr)
+\end{equation}
+is a unitary onto the antiperiodic functions on a circle of length $2l$, with $WD_lW^*=-i\,d/dx$, $W\Gamma W^*$ the reflection $x\to-x$, and the algebra going to the reflection-even functions (\file{01}). So the two sheets of the finite geometry are the two fixed points of a reflection, and the grading of the finite geometry is that reflection. The Connes-Lott mass is $m=\pi/(2l)=1/(2R)$, the lowest momentum of an antiperiodic spinor. The two-point distance $1/m$ is a statement about this circle.
+
+\section{The finite Dirac operator is a boundary condition and a holonomy}
+
+Every $D_F$ with the signs of KO-dimension six is exactly the lowest window of the pure derivative on the interval, for $l\|D_F\|<\pi/2$, with the wall data $X=\tan(lD_F)$, and with $J_F$ and $\gamma_F$ exact. There is no bulk mass, and the masses are momenta. After a unitary change of domain, $D_F$ is a constant connection, odd for the grading \cite{boundarynote}. On the circle it is a Wilson line, and the angle $\theta=l\sigma$ of a channel lives on the fundamental domain $[0,\pi/2]$, whose ends are the periodic and the antiperiodic spectra (\file{07}).
+
+The holonomy form has a consequence for dynamics. A flat connection cannot be seen by a local operator in the bulk. So the dependence of an action on $D_F$ at large $l$ is nonlocal, of the Casimir kind, and it falls with $l$; this is the point of Section~\ref{sec:path}.
+
+\section{The Higgs field is the gauge field along the interval}
+
+In Connes' geometry the Higgs field comes from inner fluctuations $\sum a_i[D_F,b_i]$. In a Kaluza-Klein theory a scalar in the gauge sector comes from the component of a connection along the internal direction. These are the same object seen in the parent and in its window, in three precise senses.
+
+First, for $f$ in the parent algebra, the compression $Q_l$ to the window satisfies $Q_l([D_X,f])=[D_F,Q_l(f)]$ (\supp{22}). More generally $Q_l(ET)=-l^{-1}\int_0^l\sin(x\,\mathrm{ad}_{D_F})(T(x))\,dx$, which is $-\tfrac l2[D_F,T]$ to leading order for constant $T$. So a connection along the interval compresses to a finite one-form.
+
+Second, a connection $h$ along the interval is equivalent to a rotation of the second wall: $D(\Gamma_0,\Gamma_1)+Eh=uD(\Gamma_0,w^*\Gamma_1w)u^*$, with $w$ its holonomy (\supp{23}). The fluctuations odd for the grading change the principal angles between the two wall gradings, which are the masses. So the Higgs modulus is the angle between the walls. For $M_2(\H)$ the field space is $S^4$, and the modulus is half the geodesic distance between the points chosen by the walls. The even fluctuations, by contrast, leave all the singular values fixed (\supp{22}, No-go theorem 22.7).
+
+Third, which of these are physical is decided at the walls. With wall algebras of skew parts $k_0,k_l$ and a five-dimensional Yang-Mills action, the massless scalars from the interval component are the orthogonal complement of $k_0+k_l$. A generator in $k_0\cap k_l$ has a massless vector and no massless scalar; a generator in the complement has a massless scalar and no massless vector; all others have neither (\file{11}). So in the parent of lemma 22, whose algebra is free at one wall, the interval component has no zero mode, and the Higgs is the wall datum $X$. In the two-grading parent of lemma 23, it is a modulus. The rule ``vector or scalar, never both'' is the reason a gauge-Higgs scalar in a chosen representation forces the walls.
+
+\section{The real structure fixes the symmetry of a massless block}
+
+An odd factorization of a KO-6 triple uses a grading-reversing unitary $U$ with $UJ=sJU$; $s=+1$ gives KO-7 (label 11) and $s=-1$ gives KO-5 (label 9) \cite{towerlesspaper}. The induced antiunitary $j=JU$ on the positive-chirality subspace has $j^2=s$, so the unitaries commuting with it on a massless block of dimension $n$ form $O(n)$ for $s=+1$ and $USp(n)$ for $s=-1$ (\file{08}).
+
+\begin{proposition}\label{prop:so30}
+For the five light quarks in three colours, the positive-chirality block is $H_+=\{q_L\}\oplus\{\overline{q_R}\}=V\oplus\bar V$, of dimension 30, with $j\,q_L=\overline{q_R}$. For $s=+1$ the skew generators commuting with $j$ are $\mathfrak{so}(30)=\mathfrak u(15)\oplus\Lambda^2V$, with $\mathfrak u(15)$ the commutant of quark number, and for $s=-1$ they are $\mathfrak{usp}(30)=\mathfrak u(15)\oplus S^2V$. In the colour antitriplet, with charges $(-2/3,+1/3,+4/3)$, the counts are $(6,6,3)$ and $(3,6,1)$.
+\end{proposition}
+
+The proof is linear algebra (\file{11}). So the $SO(30)$ met by counting in the spectral action \cite{towerlesspaper} and the scalar counts of \cite{Rivero2005} have a precise place in the finite geometry: the symmetry of the massless light block under the real structure, for the sign that the seesaw sector also selects.
+
+A second statement separates the two kinds of operator. A Hermitian operator $X$ with $JX=XJ$, in the labels 9 to 11, has a symmetric block between particles and antiparticles of one multiplet, as a Majorana mass does (\file{09}). A Hermitian gauge generator anticommutes with $j$ and has an antisymmetric block. The two are joined by the commutator with the masses: the connection along the interval has a block $B_{ij}$ in $\Lambda^2V$, and its compression to the window is the symmetric block
+\begin{equation}\label{eq:shadow}
+\delta\Lambda_{ij}=-\frac{1-\cos(l(m_i-m_j))}{l(m_i-m_j)}\,B_{ij},
+\end{equation}
+with $\Lambda$ the mass matrix. This maps $(S^25,\bar3)$ onto $(\Lambda^25,\bar3)$ for distinct masses, with kernel the five same-flavour diquarks, and it vanishes for a universal mass, where $M=mU$ is invariant under $SO(30)$ (\file{11}). So the counts $(6,6,3)$ belong to the parent, and $(3,6,1)$ to its window.
+
+The scope matters. With this algebra order one fails on the block for nonzero masses, and on the interval massless scalars in $\Lambda^2V$ need both walls reduced to $M_{15}(\C)$, as an input. Then the $(24,1)+(1,1)$ are vectors, so the slepton counts of \cite{Rivero2005} do not come out as scalars on an interval.
+
+\section{The algebra}
+
+A function algebra is commutative; a window of it need not be. Three exact examples, in increasing strength. The two lowest levels of the chiral interval give a four-dimensional operator system generating $M_2(\C)$ on each chiral block \cite{towerlesspaper}. The lowest Landau level of a torus with flux $p$, doubled, has the signs of KO-dimension six and window $M_p(\C)$, with the Landau gap $\sim(p/A)^{1/2}$ sending the tower to infinity as the area shrinks at fixed flux (\file{07}); at $p=3$ this has the form of the colour sector, with the opposite algebra acting on the antiquarks. On the disc bundle of $\Lambda^2_-T^*S^4$, with a Callias potential and a local wall, there are exactly eight light states, a copy of the $\mathbf 4$ of $Sp(2)$ near each end, and real functions compress to maps generating $M_2(\H)\oplus M_4(\C)$ \cite{jointnote}.
+
+Two cautions come with these. Generated algebras need not converge when compression maps do: an unrestricted generated algebra can retain extra directions, and the quaternionic statement holds for bounded expressions, up to a defect (\supp{30}). Second, order zero with the inherited $J$ forces a commutative algebra under pointwise reality (\supp{16}, Proposition 16.1), so a noncommutative window needs a doubling, a second sheet, or a loss of the inherited symmetry; on the disc bundle, the wall breaks charge conjugation, and this is what allows $M_4(\C)$ there.
+
+\section{The massless limit and what selects the path}\label{sec:path}
+
+A path to $M_W=M_Z=0$ opens a dimension only if the first discarded level also falls, more slowly than the light masses, and the count at fixed energy diverges \cite{jointnote}. Such families exist on the interval and on the disc bundle, where the count has seven-dimensional growth. No action has selected one.
+
+A one-loop potential with $l$ and the wall angles as its only scales has the form $l^{-4}G(\theta)$. With $\theta$ free the length runs away, and with $\theta=lm$ it selects $lm$ at a fixed number (\file{01}). In the normalization of \supp{24}, the angle-independent part is new here:
+\begin{equation}\label{eq:a0}
+8\pi^2l^4V(0)=\frac{3\zeta(5)}{16}\bigl(4n_f-3n_v-n_s-5n_g\bigr),
+\end{equation}
+with $n_f$ twice the Dirac species, $n_v$ the gauge generators, $n_s$ the real scalars with integer towers and $n_g=1$ with a five-dimensional graviton, assuming the bulk vacuum energy and the wall tensions tuned away (\file{10}). For three generations and the 21 generators of $\mathfrak{su}(4)\oplus\mathfrak{su}(2)\oplus\mathfrak{su}(2)$ the bracket is $192-63=129$, so at $v=0$ the length runs to infinity, in the direction of the proposal. For one generation it is $64-63=1$; we record this count without a reading.
+
+With only the top at the wall angle, $G>0$ on $[0,\pi/2]$, and the length grows until the top leaves the window (Python). With a universal mass, $G$ changes sign and there is a stable point, at $\theta_*=0.877$ for three generations and $\theta_*=0.202$ for one (Python). So a scale-free action can separate the window, with a fixed small ratio, if $\theta_*$ is small or if the light mass is exponentially small in a stabilized shape parameter, as on the disc bundle. A ratio that tends to zero needs a second scale, and a term growing with $l$ at fixed $v$. Since $D_F$ is a holonomy, that term must come from a local bulk energy depending on the electroweak order parameter, which goes beyond $D_F$ as a pure boundary condition.
+
+\section{What the string dualities give}
+
+The shape of the heterotic web, with a non-chiral theory in nine dimensions, chiral theories in ten and walls in eleven, suggests a dictionary: the two sheets as two orientifold walls, $D_F$ as sixteen D8-brane positions, $SO(30)\times SO(2)$ as fifteen branes and one displaced for the top \cite{towerlesspaper,PW1996}. At the level of free spectra the top channel is an $SO(32)$ Wilson-line channel, $m_t=a/R$, which is a form of the Hosotani mechanism \cite{Hosotani1983}. Against the sources, the rest needs three corrections (\file{10}).
+
+First, the angle is nonlinear in the position: $\theta_k=\tfrac\pi2W(x_k)/W(L)$ with $W=\int z^{-1/3}dx$, from the BPS masses \cite{PW1996}, so the dilaton is a trace of a function of $|D_F|$ only implicitly. Second, the tower is a winding tower of type I$'$, so the length $l$ and the type I$'$ length $L_p$ are T-dual, with $lL_p=\pi^2\alpha'$ at constant dilaton. The limit $l\to\infty$ at fixed heterotic coupling shrinks the type I$'$ interval, and it ends at ten-dimensional $SO(32)$. Third, the configuration $15+1$ has a Romans mass in the bulk. Its proper length is linear in the inverse coupling, so no region has both strong coupling and a length resolved in eleven-dimensional units, in line with the absence of an eleven-dimensional lift of massive type IIA.
+
+The states massless at the far wall at infinite coupling are D0-branes \cite{BGL1998}, heterotic winding states: they are massless at the string-scale radius and grow heavier with $R$, the opposite of $l\sim1/M_W$. The dilaton gradient falls as $6/R^2$ along an opening path, and it can act as the second scale only if the coefficient in Eq.~\eqref{eq:a0} vanishes. These are negative statements in the scope of that dictionary. They point to the other chambers, without the Romans mass, and to other completions.
+
+One comparison with an eleven-dimensional geometry survives as an observation. Witten's space with Killing spinors, $M^{111}$, is the hypercharge quotient of the $\bar5$ of $SU(5)$, since the weights $2,-3$ of its K\"ahler quotient are $6Y$ on $d^c$ and $L$; the cone is Calabi-Yau because $\mathrm{tr}\,Y=0$, and $11=4+(2\cdot5-3)$ (\file{02}, \cite{Witten1981,Fabbri1999}). The $Z_6$ of the Standard Model is then the kernel of $SU(3)\times SU(2)$ on it, so no bosonic Kaluza-Klein mode is a triplet or a doublet. We have not searched prior work for this observation.
+
+\section{Where this leaves the question}
+
+Three things seem settled, in their scopes. The finite Dirac operator, grading and real structure are boundary data of a parent, exactly. The Higgs field is the interval component of a connection, seen in the window. Noncommutative finite algebras arise from commutative parents as limits of compression maps, and a local operator can produce the window.
+
+Three things stay open, in order of consequence. The first is the vector sector on a seven-dimensional parent: nothing yet identifies the tunnelling scale with $M_W$, and the coupling $g_4^{-2}=\mathrm{Vol}/g^2$ falls with the size. The second is the selection of the family, by a term in the action with a local dependence on the order parameter, or by a stabilized shape. The third is the part of the finite data that remains input: on the interval the chirality comes from the choice of walls, and on the disc bundle the $\mathbf 4$ is pseudoreal, so the chiral spectrum of the Standard Model is not obtained. Equivariant cobordism invariance of the index \cite{Witten1983} gives total index zero on the boundary, so a chiral spectrum needs another source: walls with data beyond the extension of a bundle, or fluxes on an even base.
+
+\section*{Status}
+
+The statements of the rows marked refereed were read by GPT-6.1 Terra or GPT-6 Astra, as the ledger records. Eq.~\eqref{eq:a0}, Proposition~\ref{prop:so30}, Eq.~\eqref{eq:shadow} and the corrections of the last section but one are new or newly assembled here, with proofs in \file{10} and \file{11}. They are unrefereed, with a reading by Claude Sonnet 5.5 as recorded in the repository. Numerical statements are Python, in the repository tools. Nothing here is submitted.
+
+\section*{Provenance}
+
+This note has no listed authors. It was written by Claude Opus 5.5. It draws on lemmas by Claude Opus 5.5 and GPT-6 Astra, on referee reports by GPT-6.1 Terra, on an audit by GPT-6 Astra, and on the eleven-dimensional line written by another Claude session.
+
+\bibliography{towerless_intervals}
+
+\end{document}

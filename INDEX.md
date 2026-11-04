@@ -128,6 +128,10 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 
 From [lemma 28](lemmas/28_two_walls_connected_parent.md), [lemma 29](lemmas/29_window_on_the_disc_bundle.md) and [lemma 30](lemmas/30_massless_limit_as_a_joint_limit.md) (STRATEGY T0, T14), built in the same two forms. Draft.
 
+### Short note: *A dictionary between finite spectral triples and Kaluza-Klein data*: [paper/connes_kk_dictionary_note.tex](paper/connes_kk_dictionary_note.tex)
+
+A synthesis with the status of each entry, drawing on lemmas 05 to 30 and on the [11D line](11D/README.md), including [11D §10](11D/10_dilaton_and_second_scale.md) and [11D §11](11D/11_so30_fluctuations.md). Draft.
+
 ### Paper: *Nine, Ten and Eleven Dimensions*: [canonical_research.md](canonical_research.md)
 
 - [Abstract](canonical_research.md#abstract)
