@@ -281,7 +281,7 @@ a(x)=W(x)bW(x)^\dagger
 \]
 for a constant matrix \(b\). Its restriction is a single diagonal \(M_n(\mathbb C)\), commuting with \(V_F\), and its finite scalar one-forms vanish.
 
-Thus the two-sheet algebra is obtained by equipping the compression range with its matrix product; it is not a multiplicative quotient of the interval multiplication algebra. No real structure, real gauge-group prescription, or Standard Model representation follows from this construction. \(\square\)
+Thus the two-sheet algebra is obtained by equipping the compression range with its matrix product; the interval multiplication algebra has no multiplicative quotient onto it. No real structure, real gauge-group prescription, or Standard Model representation follows from this construction. \(\square\)
 
 **4. Proposition (boundary Yukawa data determine a finite operator, but not a unique finite triple).**
 

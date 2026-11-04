@@ -37,7 +37,7 @@ So an exchange needs a structure in which colour and generation can be exchanged
 
 **Proof.** C^9 is a sum of irreducibles of dimensions 1, 3, 6, 8 with total 9. With a sextet: 6 + 3 (1) has the 6 in Λ^1(6) ⊗ Λ^2(3 (1)); 6 + 3 has Λ^3(6) = 10 + 10bar. With an octet: 8 + 1 has Λ^3(8) = 1 + 8 + 10 + 10bar + 27. With two triplets T, T' (each 3 or 3bar) and three singlets: Λ^1(T) ⊗ Λ^1(T') ⊗ Λ^1(1) contains T ⊗ T', which is 6 + 3bar, 6bar + 3 or 8 + 1. With three triplets: T ⊗ T' ⊗ T'' contains a 10, a 10bar, a 15 or a 15bar. With nine singlets there is no triplet. With one triplet and six singlets, Λ^3(3 + 6 (1)) = Λ^3(3) + 6 Λ^2(3) + 15 (3) + 20 (1) = 15 (3) + 6 (3bar) + 21 (1). Neither family has unequal numbers of 3 and 3bar. ∎
 
-Together with Proposition 3.8 (real nine-dimensional representations) this excludes, in that scope, the colour-equivariant route through Λ^3 of a linear nine-dimensional space. The positive construction below places the two blocks instead of identifying the two families.
+Together with Proposition 3.8 (real nine-dimensional representations) this excludes, in that scope, the colour-equivariant route through Λ^3 of a linear nine-dimensional space. The positive construction below places the two blocks, and leaves the two families unidentified.
 
 ## 3. Two commuting gradings of E8
 
@@ -116,7 +116,7 @@ The family grading alone allows only epsilon_{ijk} in exact family SU(3); in com
 
 ## 8. Remark: a discrete symmetry from the M-grading
 
-For t = +1/2, s_M acts on the 27 by omega^b: omega on the 10 and on the 5 (H_u, D), omega^2 on (d^c, L) and N, and 1 on (D^c, H_d) and nu^c. It allows Q u^c H_u, Q d^c H_d, L e^c H_d, L nu^c H_u, N H_u H_d, the Majorana mass of nu^c and the Weinberg operator L L H_u H_u, and forbids the mu term H_u H_d, the dimension-five operators Q Q Q L and u^c u^c d^c e^c, and the trilinear couplings L L e^c, L Q d^c, u^c d^c d^c; the bilinear L H_u is allowed. This is the pattern of E6-inspired models in which the singlet N supplies the mu term. It is a symmetry of the low-energy theory only if the breaking of E6 commutes with s_M; for t = -1/2 the charges change. Stated as a remark, not used above.
+For t = +1/2, s_M acts on the 27 by omega^b: omega on the 10 and on the 5 (H_u, D), omega^2 on (d^c, L) and N, and 1 on (D^c, H_d) and nu^c. It allows Q u^c H_u, Q d^c H_d, L e^c H_d, L nu^c H_u, N H_u H_d, the Majorana mass of nu^c and the Weinberg operator L L H_u H_u, and forbids the mu term H_u H_d, the dimension-five operators Q Q Q L and u^c u^c d^c e^c, and the trilinear couplings L L e^c, L Q d^c, u^c d^c d^c; the bilinear L H_u is allowed. This is the pattern of E6-inspired models in which the singlet N supplies the mu term. It is a symmetry of the low-energy theory only if the breaking of E6 commutes with s_M; for t = -1/2 the charges change. Stated as a remark; the results above do not use it.
 
 *Scope of the remark (second check, 4 Nov 2026).* The selection rule is that of the single element s_M, and it is a symmetry only if the breaking of E6 commutes with s_M. The family grading would forbid (nu^c)^2, L L H_u H_u and L H_u, which s_M allows, since their family grades are 2, 1 and 2.
 
@@ -129,4 +129,119 @@ For t = +1/2, s_M acts on the 27 by omega^b: omega on the 10 and on the 5 (H_u, 
 
 ## References for this file
 
-Recalled, not reread in this session: E. Witten, "On flux quantization in M-theory and the effective action", hep-th/9609122; D.-E. Diaconescu, G. Moore and E. Witten, "E8 gauge theory, and a derivation of K-theory from M-theory", hep-th/0005090; P. West, "E11 and M theory", hep-th/0104081, for the level decomposition and the commutator of the level-one generators; E. Cremmer and B. Julia (1979) for E8(8) in three dimensions; E. B. Vinberg and A. G. Elashvili (1978) for the Z_3-graded e8 and trivectors of C^9; the E6 subgroup chains are standard (R. Slansky, Phys. Rep. 79 (1981) 1).
+Recalled without rereading in this session: E. Witten, "On flux quantization in M-theory and the effective action", hep-th/9609122; D.-E. Diaconescu, G. Moore and E. Witten, "E8 gauge theory, and a derivation of K-theory from M-theory", hep-th/0005090; P. West, "E11 and M theory", hep-th/0104081, for the level decomposition and the commutator of the level-one generators; E. Cremmer and B. Julia (1979) for E8(8) in three dimensions; E. B. Vinberg and A. G. Elashvili (1978) for the Z_3-graded e8 and trivectors of C^9; the E6 subgroup chains are standard (R. Slansky, Phys. Rep. 79 (1981) 1).
+
+## Referee proofs (GPT-6.1 Terra, 4 November 2026)
+
+The arguments below are those of the referee report on the 11D line, written out in the notation of this lemma; the report in historical/reviews/ stays as the provenance record.
+
+**Independent proof of Proposition 4.2(a), with the scope of 4.2(b).**
+*From the referee report on the 11D line, section 'Propositions 4.2 and 4.3: complex colour representations', transferred verbatim in substance on 4 Nov 2026.*
+
+The colour multiplicities are
+
+    F1 = 10 (3 + 3bar) + 24 (1),    F2 = 12 (3 + 3bar) + 12 (1):
+
+each quark species of 12 states gives two triplets and two antitriplets (particle and antiparticle, two chiralities); F1 holds five quark species and the 24 lepton states, and F2 holds the six quark species and the 12 charged-lepton states. An intertwiner preserves the isotypic components, so no colour-commuting unitary exchanges F1 and F2. Even a colour-group automorphism preserves the dimension of the invariant subspace, which is 24 for F1 and 12 for F2.
+
+For 4.2(b), the stated conclusion holds for a tensor-factor-preserving bijection identifying the top's colour factor with the neutrinos' family factor. Linearity in each index alone does not imply this: every linear map on the tensor product is multilinear in its arguments, and a unitary may entangle the three-dimensional index with the four-dimensional chirality/conjugation index. Such a unitary need not be a flip of tensor factors.
+
+**Counterexample (referee) to the first version of Proposition 4.3.**
+*Same section of the referee report, transferred verbatim in substance on 4 Nov 2026.*
+
+The first version stated that the exterior cube contains only 1, 3 and 3bar exactly for 3 + 6 (1) or its conjugate. The trivial homomorphism gives C^9 = 9 (1) and Λ^3 C^9 = 84 (1), which also contains only those representations. The statement above lists 9 (1); equivalently, the corrected statement adds the requirement that the exterior cube contain a nonzero triplet.
+
+**Independent proof of Proposition 4.3 (corrected).**
+*Same section of the referee report, transferred verbatim in substance on 4 Nov 2026.*
+
+The irreducible SU(3) representations of dimension at most nine are 1, 3, 3bar, 6, 6bar and 8: the irreducible of highest weight (p, q) has dimension (p + 1)(q + 1)(p + q + 2)/2, and the next values are 10 and 15. So C^9 is a sum of irreducibles of dimensions 1, 3, 6, 8 with total 9, and the cases are the following.
+
+1. 8 + 1. Λ^3(8 + 1) = Λ^3 8 + Λ^2 8, and Λ^2 8 contains a 10: identify 8 with sl_3(C); the vector E_13 ∧ E_12 is killed by ad E_12 and ad E_23 (the only nonzero bracket, [E_23, E_12] = -E_13, produces E_13 ∧ E_13 = 0) and has weight 2 alpha_1 + alpha_2 = (3, 0), so it generates a 10.
+2. 6 + 3 (1). Λ^1(6) ⊗ Λ^2(3 (1)) = 3 (6) is a summand, so the exterior cube has a 6.
+3. 6 + 3 or 6 + 3bar. Λ^3 6 is a summand and contains both 10 and 10bar: in 6 = Sym^2 C^3, with coordinates x, y, z, the highest-weight vectors
+
+       x^2 ∧ xy ∧ xz,    x^2 ∧ xy ∧ y^2
+
+   are killed by the raising operators x d/dy and y d/dz and have weights (3, 0) and (0, 3) respectively. Their dimensions already sum to C(6, 3) = 20, so Λ^3 6 = 10 + 10bar. The conjugate cases are analogous.
+4. Two triplets T, T' (each 3 or 3bar) and three singlets. The cube contains T ⊗ T' ⊗ 1, hence T ⊗ T', which is 6 + 3bar, 6bar + 3 or 8 + 1: a 6, 6bar or 8.
+5. Three triplets. The cube contains T ⊗ T' ⊗ T'', which contains a 10, 10bar, 15 or 15bar (3 ⊗ 3 ⊗ 3 contains 10, and 3 ⊗ 3 ⊗ 3bar contains 6 ⊗ 3bar, which contains 15; the others are conjugate).
+6. One triplet and six singlets:
+
+       Λ^3(3 + 6 (1)) = Λ^3 3 + 6 Λ^2 3 + 15 (3) + 20 (1) = 15 (3) + 6 (3bar) + 21 (1),
+
+   using Λ^3 3 = 1, Λ^2 3 = 3bar, C(6, 2) = 15 and C(6, 3) = 20. Its conjugate has the multiplicities of 3 and 3bar reversed.
+7. The trivial representation 9 (1), with Λ^3 C^9 = 84 (1).
+
+None gives either target: both targets contain equally many 3 and 3bar, as well as nonzero triplets, while cases 1 to 5 contain a 6, 6bar, 8, 10, 10bar, 15 or 15bar, case 6 and its conjugate have unequal numbers of 3 and 3bar, and case 7 has no triplet. Only cases 6 and 7 contain nothing beyond 1, 3 and 3bar, which is the "exactly" clause.
+
+*Scope and direction.* This concerns the full exterior cube of a complex nine-dimensional linear SU(3) representation and the stated colour action on F1 and F2. Other dimensions, non-equivariant identifications, nonlinear or brane constructions, and maps that do not preserve the colour action remain possible directions.
+
+**Independent proof of Lemma 4.A and of the grades in Theorem 4.4.**
+*From the referee report on the 11D line, section 'Lemma 4.A and Theorem 4.4: the two E8 gradings', transferred verbatim in substance on 4 Nov 2026.*
+
+Let 9 = (3, 1)_{-2} ⊕ (1, 6)_1. The exterior-power expansion Λ^3(A ⊕ B) = Λ^3 A ⊕ (Λ^2 A ⊗ B) ⊕ (A ⊗ Λ^2 B) ⊕ Λ^3 B, with Λ^3 3 = 1, Λ^2 3 = 3bar, Λ^2 6 = 15 and Λ^3 6 = 20, gives
+
+    Λ^3 9 = (1, 1)_{-6} ⊕ (3bar, 6)_{-3} ⊕ (3, 15)_0 ⊕ (1, 20)_3.
+
+The adjoint, 9 ⊗ 9bar minus the trace, contains (8, 1)_0 ⊕ (1, 35)_0 ⊕ (1, 1)_0 ⊕ (3, 6bar)_{-3} ⊕ (3bar, 6)_3, and Λ^6 9 is the conjugate of Λ^3 9. The family centre gives grade a = 1 on 3, a = 2 on 3bar and a = 0 on singlets. Comparing the three columns (b = 0 on sl(9), b = 1 on Λ^3, b = 2 on Λ^6) yields
+
+    b ≡ a + q/3 = a + 2 T_3   (mod 3),
+
+including the singlet terms of charges ±6: for instance (1, 1)_{-6} has a + q/3 = -2 ≡ 1, and (3bar, 6)_{-3} has a + q/3 = 2 - 1 = 1. The grade-zero dimensions are 8 + 78 = 86, and the grade-one pieces form 3 ⊗ 27 (18 + 45 + 18 = 81), in agreement with the stated SU(6) × SU(2) ⊂ E6 branching.
+
+*Grades of the generation.* Under SU(5), 15 = 10 + 5 has T_3 = 0. In the quoted E6 charge normalization, T_3 = (psi + chi)/8 gives +1/2 on 5bar_16 and N, and -1/2 on 5bar_10 and nu^c (for example (1 + 3)/8 on 5bar_3 ⊂ 16_1 and (1 - 5)/8 on 1_{-5} ⊂ 16_1); reversing the SU(2)_I Cartan exchanges the two signs. With t = +1/2, the left-handed 16 has grades 10_{b=1} ⊕ 5bar_{b=2} ⊕ 1_{b=0}. Adding its conjugate, with a = 2 and T_3 reversed, gives 15, 15 and 2 states per family in grades 1, 2 and 0, hence 45 + 45 + 6. With t = -1/2 the corresponding counts are 11, 11 and 10, hence 33 + 33 + 30.
+
+*Left-handed basis.* Both t_L ∈ Q and t^c ∈ u^c lie in b = 1, and t^c is the left-handed conjugate of t_R. The right-handed top state lies in b = 2, and the antitop likewise has chiral components in both sectors. The phrase "every top state of a particle" in Theorem 4.4 therefore holds in the left-handed basis. The labels C_3 and C_6 express this algebraic grading; a physical M2/M5 identification requires the corresponding field construction.
+
+**Independent proof of Proposition 4.6, with the block argument.**
+*From the referee report on the 11D line, section 'Proposition 4.6: the graded E8 exchange', transferred verbatim in substance on 4 Nov 2026.*
+
+*Dimensions.* The branching table gives dim g_{1,1} = 45 and dim g_{1,2} = 18, so no linear automorphism maps the first whole space onto the second.
+
+*Chevalley involution.* The Chevalley involution theta sends each root space g_alpha to g_{-alpha}; consequently it sends g_{a,b} to g_{-a,-b}. It exchanges the two exterior-power sectors and preserves F1 and F2, which include each root together with its negative.
+
+*Real structure.* Let kappa be coefficient conjugation in a real Chevalley basis. Since theta maps the real span of that basis to itself, theta and kappa commute, and J = theta kappa is antilinear with J^2 = 1. With a compatible positive Hermitian form it is antiunitary. On the placed 16 + 16bar states, the grading gamma with signs +1, -1 on family grades 1, 2 obeys J gamma = -gamma J, since J maps family grade a to -a. This establishes these two KO-6 signs for the constructed operators; the spectral-triple algebra, the order conditions and JD = DJ remain to be established. The complex-linear theta alone cannot be the antiunitary J.
+
+*The SU(2)_I reflection.* It sends T_3 to -T_3, so b = a + 2 T_3 becomes b' = a - 2 T_3 = 2a - b (mod 3). It fixes b = 1 at a = 1 and exchanges b = 0 and b = 2, as stated.
+
+*Blocks.* The dimension argument excludes an exchange of the whole joint-graded sectors. The exclusion of the top and neutrino blocks has an independent argument under the specified three-family embedding. In g_1 = 3_f ⊗ 27 their grade-one parts are
+
+    T ∩ g_1 = <e_t> ⊗ U_t,  dim U_t = 6;      N ∩ g_1 = 3_f ⊗ U_nu,  dim U_nu = 2,
+
+with e_t the top's family line, U_t ⊂ 27 spanned by the t_L and t^c states, and U_nu ⊂ 27 spanned by nu_L and nu^c. Both subspaces have dimension 6, so dimensions alone do not separate them. An automorphism phi preserving the family grading preserves g_0 = sl_3 ⊕ e_6 and its two nonisomorphic simple ideals, so it acts on g_0 as a pair (alpha, beta) of automorphisms of sl_3 and e_6. Its restriction to g_1 satisfies phi([x, v]) = [phi(x), phi(v)], so it is an isomorphism of g_1 onto g_1 with the g_0-action twisted by (alpha, beta). That twisted module is isomorphic to 3_f ⊗ 27 only when the twists preserve 3_f and 27, so there are A in GL(3) and B in GL(27) implementing alpha on 3_f and beta on 27; then (A ⊗ B)^{-1} phi is an endomorphism of the irreducible g_0-module 3_f ⊗ 27, a scalar by Schur's lemma. So phi restricted to g_1 is a multiple of A ⊗ B. It sends a subspace supported on one family line to another subspace supported on one family line, and cannot give the neutrino subspace, whose family support is all of 3_f. The same argument applies when the family grading is inverted, with the conjugate module g_2.
+
+*Scope and direction.* This concerns complex-linear automorphisms of the specified graded e8, the aligned 3_f ⊗ 16 embedding, and the top and neutrino blocks just described. Automorphisms that neither preserve nor invert the family grading, other embeddings or state spaces, and dualities not represented by such an automorphism remain open directions. A physical M2/M5 identification also requires its action on the fields and on the finite triple.
+
+**Independent proof of Proposition 4.5, with the family tensor.**
+*From the referee report on the 11D line, section 'Proposition 4.5: Yukawa grades and family dependence', transferred verbatim in substance on 4 Nov 2026.*
+
+The grade-selection rules and bracket targets hold as algebraic statements; by themselves they establish neither a physical top mass nor its observed family hierarchy.
+
+*Grades.* The up-type triple Q u^c H_u has grades (1, 1) three times, so both Z_3 sums vanish. For the down-type, charged-lepton and Dirac-neutrino triples the second grades are {1, 1 + 2t, 1 - 2t} = {1, 2, 0}, with sum 3 ≡ 0, and the family grades are again 1, 1, 1, with sum zero. The bracket with H_u ∈ g_{1,1} adds (1, 1), so it sends grade b = 1 to b = 2, as claimed. For the neutrino it sends b = 2 to b = 0 when t = +1/2 (L lies at b = 1 + 2t = 2), and b = 0 to b = 1 when t = -1/2 (L lies at b = 0). These are necessary grade conditions; a particular bracket or four-dimensional coupling may still vanish.
+
+*The family tensor.* In the literal 3_f ⊗ 27 realization with exact SU(3)_f invariance, the family part of a cubic involving three grade-one triplets is proportional to epsilon_{ijk}, the invariant of 3 ⊗ 3 ⊗ 3. A Higgs expectation value h_k therefore gives a family matrix proportional to
+
+    Y_{ij} = epsilon_{ijk} h_k.
+
+In the aligned family basis its diagonal entries, including the nominal top-top entry, vanish. For nonzero h this matrix has rank two and two equal nonzero singular values, since, up to the family-index convention,
+
+    (Y^† Y)_{jl} = sum_{i,k,m} conj(epsilon_{ijk} h_k) epsilon_{ilm} h_m = ||h||^2 delta_{jl} - h_j conj(h_l),
+
+that is Y^† Y = ||h||^2 I - h h^†, with eigenvalue ||h||^2 twice and 0 on h. Thus this exact one-Higgs family tensor alone gives no single isolated top mass.
+
+The Z_3 family grading alone allows more tensors than epsilon_{ijk}; epsilon_{ijk} follows from the full SU(3)_f invariance. A compactification in which generation labels are cohomology labels and couplings are overlap integrals may evade the literal triplet-tensor restriction, but its mode functions and intersections must be supplied before the physical Yukawa matrix is identified.
+
+**Independent proof of the selection rule of section 8.**
+*From the referee report on the 11D line, section 'File 04, section 8: the discrete grade', transferred verbatim in substance on 4 Nov 2026.*
+
+The remark holds as a selection rule for the single element s_M, assuming it survives the breaking. For t = +1/2 the grades are b(10) = b(H_u) = 1 (Q, u^c, e^c and H_u), b(5bar_16) = b(N) = 2 (d^c, L and N), and b(H_d) = b(nu^c) = 0. Adding grades modulo three gives zero for
+
+    Q u^c H_u (1 + 1 + 1),  Q d^c H_d (1 + 2 + 0),  L e^c H_d (2 + 1 + 0),  L nu^c H_u (2 + 0 + 1),
+    N H_u H_d (2 + 1 + 0),  (nu^c)^2 (0),  L L H_u H_u (2 + 2 + 1 + 1),  L H_u (2 + 1),
+
+and grade 2 for
+
+    H_u H_d (1 + 0),  Q Q Q L (1 + 1 + 1 + 2),  u^c u^c d^c e^c (1 + 1 + 2 + 1),
+    L L e^c (2 + 2 + 1),  L Q d^c (2 + 1 + 2),  u^c d^c d^c (1 + 2 + 2).
+
+Additional unbroken symmetries may impose further restrictions. In particular, the family Z_3 has to be considered separately if it is also retained.

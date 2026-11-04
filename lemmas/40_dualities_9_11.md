@@ -2,7 +2,7 @@
 
 *Lemma 40. Written as file 07 of the eleven-dimensional line (branch 11D, by another Claude session) and moved here on 4 November 2026 with its text unchanged; its proposals keep their labels, and the plan and the unfinished files of that line are in [historical/11D/](../historical/11D/README.md). Internal references to "file 0n" of that line mean the lemma with the same content: 01 is lemma 31, 02 is 32, 03 is 39, 04 is 33, 05 is 34, 06 is in historical/11D, 07 is 40, 08 is 35, 09 is 36, 10 is 37, 11 is 38.*
 
-Part of the 11D line of research ([README](../historical/11D/README.md), [PLAN](../historical/11D/PLAN.md), task C). Attempted by Claude (Anthropic), 4 Nov 2026. Propositions 7.1 to 7.3 are proved here by hand; the string-theory statements of section 1 are recalled, not reread; the readings are proposals. Refereed by GPT-6.1 Terra and checked a second time by Claude Sonnet 5.5 (historical/reviews/2026-11-04_terra_check_11d.md, historical/reviews/2026-11-04_sonnet_second_check_11d.md).
+Part of the 11D line of research ([README](../historical/11D/README.md), [PLAN](../historical/11D/PLAN.md), task C). Attempted by Claude (Anthropic), 4 Nov 2026. Propositions 7.1 to 7.3 are proved here by hand; the string-theory statements of section 1 are recalled without rereading; the readings are proposals. Refereed by GPT-6.1 Terra and checked a second time by Claude Sonnet 5.5 (historical/reviews/2026-11-04_terra_check_11d.md, historical/reviews/2026-11-04_sonnet_second_check_11d.md).
 
 ## 1. The dualities (recalled)
 
@@ -91,3 +91,70 @@ Open:
 - A nine-dimensional spectral triple with sixteen D8 positions as the eigenvalues of D_F on the type I' interval, and its strong-coupling limit with E8 walls; the configuration 15 + 1 lies at the SO(32) end, while E8 needs seven D8-branes at an orientifold plane with divergent coupling.
 - The quaternionic factor H from a torus with even flux and a real structure of quaternionic type, and the full A_F from several tori or from a rank-three bundle with flux.
 - The lower-rank nine-dimensional components (duality 3), whose J-like orientation reversal may supply the real structure of the finite triple.
+
+## Referee proofs (GPT-6.1 Terra, 4 November 2026)
+
+The arguments below are those of the referee report on the 11D line, written out in the notation of this lemma; the report in historical/reviews/ stays as the provenance record.
+
+**Independent proof of Proposition 7.1.**
+*From the referee report on the 11D line, section 'Proposition 7.1: channel-angle fundamental domain', transferred verbatim in substance on 4 Nov 2026.*
+
+The stated fundamental domain classifies the signed channel spectrum, including its endpoint multiplicities. The spectrum modulo pi/l consists of the two residues ±θ/l. Equality of two such multisets is equivalent to θ' ≡ ±θ (mod pi): if θ' = ±θ + k pi the progressions are relabelled, and conversely the residue sets {±θ'} and {±θ} modulo pi must agree. This gives the unique representative in [0, pi/2]. In the interior the two progressions are disjoint, since n pi + θ = m pi - θ would need 2θ ∈ pi Z. At zero they coincide on pi Z/l; at pi/2 they coincide on (Z + 1/2) pi/l. Thus every endpoint eigenvalue has multiplicity two, including the zero at the first endpoint.
+
+The channel has two copies of the scalar antiperiodic circle spectrum at the second endpoint. Theorem 22.1 assumes the strict window l ||D_F|| < pi/2; θ = pi/2 is the corresponding boundary-condition limit, and its lowest level is degenerate. The massless electroweak vectors at that endpoint come from the specified two-grading model of lemma 23 and do not follow from the spectrum of an isolated channel. The endpoints require separate domains or limits, and the quotient of one spectrum need not identify complete physical backgrounds.
+
+**Independent proof of Proposition 7.2, with the full centralizer at a = 1/2.**
+*From the referee report on the 11D line, section 'Proposition 7.2: Wilson-line endpoint and one-loop minimum', transferred verbatim in substance on 4 Nov 2026.*
+
+For 0 < a < 1/2, the nonreal conjugate eigenvalues e^{±2 pi i a} of the rotation force a commuting orthogonal transformation to preserve the two-plane of R(2 pi a) and its complement, and to act on the plane by an element of O(2) commuting with a rotation by an angle other than 0 and pi, that is, by a rotation. Its centralizer in SO(32) is therefore SO(30) x SO(2). At a = 1/2 the holonomy is diag(1_30, -1_2); a commuting orthogonal transformation preserves both eigenspaces and is otherwise arbitrary on them, so the full centralizer is
+
+    S(O(30) x O(2)) = {(A, B) ∈ O(30) x O(2) : det A det B = 1},
+
+with identity component SO(30) x SO(2) and a second component of pairs with det A = det B = -1. At a = 0 the centralizer is SO(32). Conjugation by a reflection in each subspace, an element of SO(32), sends a to -a, and a -> a + 1 leaves this SO(32) holonomy unchanged.
+
+*Minimum.* For the determinant of lemma 24, write t = sin^2 θ. Its two gauge terms are nonnegative and vanish at t = 1; the fermion term -n_f F(t) is strictly decreasing for n_f > 0. Thus the unique global minimum is t = 1, that is a = 1/2. This conclusion assumes the flat massless determinant, its stated field content and wall conditions, and no additional angle-dependent term. It does not derive a force on a supersymmetric type I' brane, and the D8 interpretation is conditional on the proposed dictionary.
+
+**Independent proof of Proposition 7.3, items 1 and 2, and of the generation step in item 3.**
+*From the referee report on the 11D line, section 'Proposition 7.3: doubled torus and the finite algebra', transferred verbatim in substance on 4 Nov 2026.*
+
+*Zero modes.* Let S_0 be the flat spin line of the chosen spin structure, with S_0^2 ≅ O, so that S ⊗ L = Λ^{0,*}(L ⊗ S_0). The two zero-mode spaces are
+
+    H^0(L ⊗ S_0)    and    H^1(L^{-1} ⊗ S_0).
+
+The first has dimension p: a negative-degree line bundle has no holomorphic sections, so by Serre duality (K trivial on the torus) H^1(L ⊗ S_0) = 0, and Riemann-Roch on a genus-one curve gives χ(L ⊗ S_0) = p. For the same reason H^0(L^{-1} ⊗ S_0) = 0, and Serre duality identifies H^1(L^{-1} ⊗ S_0) with the dual of H^0(L ⊗ S_0^{-1}) = H^0(L ⊗ S_0), hence with its complex conjugate after choosing the inner product. With the stated orientation these have opposite gradings. The untwisted formula of item 2, H^0(L) ⊕ H^1(Lbar), is literal for the trivial spin structure; the dimensions hold for all four.
+
+*J and the levels.* The assumed charge conjugation C intertwines the two coupled Dirac operators and reverses the grading. Consequently the displayed J satisfies J^2 = 1, JD = DJ and J gamma = -gamma J. In a constant field B = 2 pi p/A, the nonzero Dirac levels have magnitudes sqrt(2|B| n), n >= 1, in the standard Dirac normalization.
+
+*Compression.* For a reciprocal lattice vector k, split the position operator as x = R + η, with guiding-centre part R and oscillator part η, which commute with each other and satisfy [η_1, η_2] = -[R_1, R_2], of modulus 1/|B|. Then e^{ik·x} = e^{ik·R} e^{ik·η}, and the oscillator-vacuum matrix element of e^{ik·η} is e^{-|k|^2/(4|B|)}. So projecting multiplication by e^{ik·x} onto the lowest Landau level gives
+
+    P e^{ik·x} P = e^{-|k|^2/(4|B|)} e^{ik·R} P,
+
+the nonzero Gaussian factor times a guiding-centre translation. For primitive reciprocal vectors k_1, k_2, with |k_1 x k_2| = (2 pi)^2/A and 1/|B| = A/(2 pi p), the two translations U = e^{ik_1·R} P and V = e^{ik_2·R} P are unitary on the lowest Landau level and form a clock-and-shift pair, UV = e^{±2 pi i/p} VU. Their p^2 products U^m V^n, 0 <= m, n < p, span M_p(C): the commutation relation forces tr(U^m V^n) = 0 unless m ≡ n ≡ 0 (mod p), so the p^2 products are orthogonal for the trace inner product. Flat spin and connection holonomies change only phases, and leave the nonzero Gaussian factor. Compression generates this algebra, and the compression map itself is not multiplicative on the function algebra.
+
+**Counterexample (referee) to the unital finite triple of Proposition 7.3, item 3, and the unital repair.**
+*Same section of the referee report, transferred verbatim in substance on 4 Nov 2026.*
+
+On V ⊕ Vbar, with V = H^0(L ⊗ S_0) ≅ C^p, the generated representation is ρ(a) = a ⊕ 0. Thus ρ(1) = 1_V ⊕ 0, and both the parent and the finite representations are degenerate on the second summand. They do not have the unital representation required in the finite-data setting of lemma 22. In particular, for p = 3, no complex-linear unital M_3(C) representation on C^3 ⊕ conj(C^3) can satisfy order zero with a unital opposite action: the two commuting unital actions would make this six-dimensional space a module for M_3(C) ⊗ M_3(C)^op ≅ M_9(C), whose nonzero modules have dimensions divisible by nine.
+
+One repair is to unitize the represented corner:
+
+    A = M_p(C) ⊕ C,    ρ(a, λ) = a ⊕ λ I_{Vbar}.
+
+In conjugate bases J ρ(b, μ)^* J^{-1} = μ I_V ⊕ b^T, which commutes with ρ(a, λ). This yields a unital finite KO-6 datum with D = 0 and order zero. It has an additional scalar summand; deriving the full Standard Model algebra and its representation remains open.
+
+## Second-check derivation (Claude Sonnet 5.5, 4 November 2026)
+
+**Spin lift of W_{1/2} and connectedness of the heterotic centralizer (Proposition 7.2).**
+*From the second check on the 11D line (historical/reviews/2026-11-04_sonnet_second_check_11d.md, batch 4, item B2), adopted in the note at Proposition 7.2 and written out on 4 Nov 2026.*
+
+Let G_1, ..., G_32 generate the Clifford algebra of R^32, with G_i G_j + G_j G_i = 2 δ_ij, and let pi: Spin(32) -> SO(32) be the covering map, under which g~ acts on vectors by v -> g~ v g~^{-1}. The rotation by angle 2 pi a in the plane of the coordinates 31 and 32 lifts to
+
+    W~_a = exp(pi a G_31 G_32) = cos(pi a) + sin(pi a) G_31 G_32,
+
+using (G_31 G_32)^2 = -1. At a = 1/2 the lift of W_{1/2} = diag(1_30, -1_2) is W~ = G_31 G_32, up to the sign of the covering. The product of the reflections in e_1 and in e_31 lies in the component of S(O(30) x O(2)) with det A = det B = -1, and lifts to g~ = G_1 G_31. Since G_1 anticommutes with G_31 and with G_32, it commutes with their product, and
+
+    g~ W~ g~^{-1} = G_1 G_31 (G_31 G_32) G_31 G_1 = G_1 G_32 G_31 G_1 = G_32 G_31 = -W~.
+
+Every other element of that component is the product of this one with an element of SO(30) x SO(2), whose lifts are products of exp(φ G_i G_j/2) with i, j <= 30 or {i, j} = {31, 32}, all commuting with G_31 G_32. So every lift of the determinant -1 component conjugates W~ to -W~. The computation involves only G_1, G_31 and G_32 and holds in every even dimension.
+
+Let ω = G_1 G_2 ... G_32 be the volume element. It is central in Spin(32), ω^2 = 1, ω != ±1, and pi(ω) = -1. The heterotic group is the quotient of Spin(32) by {1, ω} (or by {1, -ω} for the other chirality convention; the argument is the same). The class of g~ centralizes the class of W~ exactly when g~ W~ g~^{-1} ∈ {W~, ω W~}. The case ω W~ would give pi(g~) W pi(g~)^{-1} = -W, which is impossible, since W and -W have the eigenvalue -1 with multiplicities 2 and 30. So pi(g~) lies in S(O(30) x O(2)). On the determinant -1 component g~ W~ g~^{-1} = -W~, and -1 differs from 1 and from ω. Hence the centralizer of the class of W~ in Spin(32)/Z_2 is the image of the preimage of SO(30) x SO(2) in Spin(32). That preimage is connected, since it contains the path exp(φ G_1 G_2/2), φ ∈ [0, 2 pi], from 1 to -1. So the heterotic centralizer is connected. Finally W~_{a+1} = -W~_a: the SO(32) holonomy has period 1 in a, and its lift, in Spin(32) and in Spin(32)/Z_2, has period 2.

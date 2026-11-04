@@ -148,7 +148,7 @@ M_n(\mathbb C)\oplus M_n(\mathbb C)
 \]
 with \(D_F=m\begin{psmallmatrix}0&I\\I&0\end{psmallmatrix}\) admits an arbitrary complex matrix as its total link. Indeed, writing \(p_L,p_R\) for its central projections, \(p_L[D_F,p_R]\) supplies an arbitrary upper-right block after multiplication by the left algebra; adding its adjoint supplies the lower-left block. The allowed finite fluctuation \(\phi=0\), for example, has no continuum lift under the displayed compression.
 
-For \(SU(2)\), \(B\) is additionally traceless. The continuum \(A_5\) is adjoint-valued; it is not automatically an electroweak Higgs doublet.
+For \(SU(2)\), \(B\) is additionally traceless. The continuum \(A_5\) is adjoint-valued; an electroweak Higgs doublet needs a further identification.
 
 If an additional finite factor is included in the internal-first convention, and the gauge algebra commutes with \(D_0,\Gamma_0\), its compressed internal operator is
 \[
@@ -376,7 +376,7 @@ Thus this particular restriction gives
 \[
 M_{\rm restricted}^2=\frac35m^2.
 \]
-It is an additional restriction of the action, not a mass eigenvector of the unrestricted two-sheet theory. It demonstrates that retaining a continuum gauge profile and fluctuating the full compressed algebra are different prescriptions. \(\square\)
+It is an additional restriction of the action, and differs from the mass eigenvector of the unrestricted two-sheet theory. It demonstrates that retaining a continuum gauge profile and fluctuating the full compressed algebra are different prescriptions. \(\square\)
 
 **7. Corollary (the precise conditional CCM comparison).**
 

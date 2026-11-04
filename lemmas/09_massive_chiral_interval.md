@@ -61,6 +61,12 @@ Counting roots for M = -mu, with t = k l or t = kappa l:
 
 For M = +mu, the function tan t + t/c is strictly increasing on (n pi - pi/2, n pi), from -infinity to n pi/c > 0, so it has exactly one root there. The hyperbolic equation and M l = -1 have no solutions. Finally, s = kappa_0 l satisfies s = c tanh s, which gives lambda_0^2 = mu^2 - kappa_0^2 = mu^2 sech^2 s. ∎
 
+**Remark 9.4a (the boundary identity; from the Farsi-Latrémolière assessment of 3 Nov 2026, section 4.1).** Write D_M = D_0 + M sigma_1 with D_0 the massless operator. For psi = (L, R) in the domain of condition (c),
+
+    ||D_M psi||^2 = ||D_0 psi||^2 + M^2 ||psi||^2 + M (|R(l)|^2 + |L(0)|^2),
+
+since 2 Re <D_0 psi, sigma_1 psi> = [|R|^2]_0^l - [|L|^2]_0^l and the condition kills R(0) and L(l). So the anticommutator {D_0, sigma_1} vanishes in the interior and its quadratic form is the boundary term: this is exactly the hypothesis that Theorem 3.4 of Farsi-Latrémolière needs and that the interval fails, by the term that creates the wall modes (results/R1_counterexample_farsi_latremoliere.md). For M = +mu the term is nonnegative and the identity gives ||D_M psi||^2 >= ((pi/(2l))^2 + mu^2) ||psi||^2, a one-line proof of the bound in item 3; for M = -mu it is negative, which is where item 1 finds its eigenvalue below mu.
+
 **Lemma 9.5 (size and shape of the light pair).** For c > 1,
 
     mu sech(mu l) <= lambda_0 <= 2 mu e^{-kappa_0 l},   so   lambda_0 = 2 mu e^{-mu l} (1 + o(1))   as mu l -> infinity.

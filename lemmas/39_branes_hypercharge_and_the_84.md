@@ -55,7 +55,7 @@ Resolve the cone with a Fayet-Iliopoulos parameter: 2|U|^2 - 3|V|^2 = zeta. For 
 
 **Proposal.** The scalar that breaks SU(2) x U(1)_Y to U(1)_em is the position of the M2-brane on the doublet line, with the quantum numbers of V, that is of H^* (or of a sneutrino). As zeta -> 0 and the brane moves to the apex, the full group is restored and the near-horizon geometry is AdS4 x Y_{3,2}. So the eleven-dimensional theory reached at v -> 0 is the Freund-Rubin vacuum on the Witten space with Killing spinors, with SU(3) x SU(2) from its isometries and U(1)_Y from C_3. The relation between M_W and zeta, or the brane position, is the next computation (README, item 3).
 
-**Which path this is.** In AdS4 x Y_{3,2} the Kaluza-Klein scale is 1/L with L ~ N^{1/6} l_p, independent of zeta. At fixed N, the limit zeta -> 0 therefore restores the group at a fixed tower: it is the path of the Astra audit (§2.2) on which masslessness opens no dimension, and the eleven dimensions are present above 1/L at every v. A joint family in the sense of [01](31_interval_as_antiperiodic_circle.md) (weak masses vanishing faster than the tower) needs L/l_p -> infinity, so N -> infinity, with the isometry couplings, g^{-2} proportional to the Killing-vector norms times the volume of Y in eleven-dimensional units, going to zero unless compensated (audit §7.2). Large N conflicts with item 3 of Proposal 3.1, which needs N = 1 for the baryons to be d^c and L rather than Sym^N(3bar) and Sym^N(2). This tension, between the regime in which the matter content is right and the regime in which the dimension opens, is the main obstruction of the M2 side in its present form, stated for the Freund-Rubin vacuum with N units of flux; escapes are N = 1 matter on a separate stack, a varying flux along the family, or a different vacuum.
+**Which path this is.** In AdS4 x Y_{3,2} the Kaluza-Klein scale is 1/L with L ~ N^{1/6} l_p, independent of zeta. At fixed N, the limit zeta -> 0 therefore restores the group at a fixed tower: it is the path of the Astra audit (§2.2) on which masslessness opens no dimension, and the eleven dimensions are present above 1/L at every v. A joint family in the sense of [01](31_interval_as_antiperiodic_circle.md) (weak masses vanishing faster than the tower) needs L/l_p -> infinity, so N -> infinity, with the isometry couplings, g^{-2} proportional to the Killing-vector norms times the volume of Y in eleven-dimensional units, going to zero unless compensated (audit §7.2). Large N conflicts with item 3 of Proposal 3.1, which needs N = 1 for the baryons Sym^N(3bar) and Sym^N(2) to be d^c and L. This tension, between the regime in which the matter content is right and the regime in which the dimension opens, is the main obstruction of the M2 side in its present form, stated for the Freund-Rubin vacuum with N units of flux; escapes are N = 1 matter on a separate stack, a varying flux along the family, or a different vacuum.
 
 **Agreement with the audit (its Appendix A).** The audit states independently that the circle bundle of M^{111} has c_1 = 3h + 2u, that the total space is spin, that its geometric U(1) is an R-symmetry, and that hypercharge belongs to the charged module and the gauge lift, since a fixed circle-charge sector acts by a scalar phase. This agrees with Theorem 2.1, Proposition 2.3 for (3, 2), and the placement of hypercharge in Proposal 3.1. The audit also notes that Toeplitz compression on the first holomorphic sector H^0(O(3, 2)), the (10, 3) of Theorem 2.1, item 4, generates the full M_30(C), a noninformative algebra in the sense of STRATEGY T0.
 
@@ -73,7 +73,7 @@ so a solution exists with round factors exactly when |f_1| < 2|f_2|.
 
 **Proof.** dG_4 = 0, and *G_4 = vol(AdS5) ∧ (f_1 vol(S^2) + f_2 J), which is closed. G_4 ∧ G_4 is an eight-form on the six-dimensional factor, so it vanishes and d*G_4 + G_4 ∧ G_4/2 = 0. The Einstein equation R_MN = (G_MPQR G_N^PQR - g_MN G^2/12)/12 gives the displayed components and zero off the diagonal (Python, section G, by summing all frame components); each factor is Einstein, and the radii follow from the three values. ∎
 
-Supersymmetry, stability and flux quantization are not checked. The product with flux on KE_4 x S^2 appears in Pope and van Nieuwenhuizen (1989), and supersymmetric AdS5 solutions fibre the S^2 over the Kähler-Einstein base (Gauntlett, Martelli, Sparks and Waldram, hep-th/0402153); both recalled, not reread here.
+Supersymmetry, stability and flux quantization are not checked. The product with flux on KE_4 x S^2 appears in Pope and van Nieuwenhuizen (1989), and supersymmetric AdS5 solutions fibre the S^2 over the Kähler-Einstein base (Gauntlett, Martelli, Sparks and Waldram, hep-th/0402153); both recalled without rereading here.
 
 ## Proposal 3.6 (two completions of one base)
 
@@ -94,7 +94,7 @@ Under reduction along the fibre of class (3, 2), the combination of U(1)_{h_1} x
 
 In AdS4, M2-branes on the two-cycle and M5-branes on five-cycles are electric and magnetic for the Betti vector (C_3 = A ∧ omega_2 and C_6 = Ã ∧ omega_5), with Dirac pairing given by the intersection of H_2 and H_5. Which of the two is electric depends on the boundary condition of the bulk vector, and the S operation of Witten's SL(2, Z) action on three-dimensional theories with a U(1) symmetry exchanges them (hep-th/0307041, recalled). With Proposal 3.1 this exchange acts on hypercharge as electric-magnetic duality.
 
-**Test against lemma 21.** S maps charges to monopole charges; it does not permute the 96 states of H_F. The exchange of the top and the neutrinos in lemma 21 is a permutation, so it does not come from this S. In the brane reading, the 84 states of the second family (Q_em != 0) are the states whose fivebrane class 6Y is not cancelled by T_3, after the breaking of Proposal 3.4; the first family (all states except the top) has no reading here. This points away from the M2/M5 duality as the origin of the exchange, and toward a property of the top (lemma 21, Proposition 21.1) that the present construction does not see.
+**Test against lemma 21.** S maps charges to monopole charges; it does not permute the 96 states of H_F. The exchange of the top and the neutrinos in lemma 21 is a permutation, so it does not come from this S. In the brane reading, the 84 states of the second family (Q_em != 0) are the states whose fivebrane class 6Y is not cancelled by T_3, after the breaking of Proposal 3.4; the first family (all states except the top) has no reading here. As the origin of the exchange, this points to a property of the top (lemma 21, Proposition 21.1) that the present construction does not see, and away from the M2/M5 duality.
 
 ## Proposition 3.8 (no colour-equivariant identification of the 84 with the three-form)
 
@@ -102,7 +102,7 @@ In AdS4, M2-branes on the two-cycle and M5-branes on five-cycles are electric an
 
 **Proof.** A real nine-dimensional representation has a self-conjugate complexification of dimension 9, which is 9 (1), 3 + 3bar + 3 (1) or 8 + 1 (the sextets and two triplet pairs already exceed 9). In the first case Λ^3 has only singlets. In the second, Λ^2(3) ⊗ 3bar = 3bar ⊗ 3bar contains the 6bar. In the third, Λ^3(8) = 1 + 8 + 10 + 10bar + 27. Both families contain only 1, 3 and 3bar. Λ^6 R^9 is isomorphic to Λ^3 R^9 under SO(9). (Python, section E, by weights.) ∎
 
-**Scope and escapes.** A linear action of colour on the nine transverse directions of the eleven-dimensional little group. Escapes: colour acting on the internal space instead of the little group, a nonlinear or brane realization, or a map that is not colour-equivariant, in which case the equality of the two 84s is an equality of numbers only.
+**Scope and escapes.** A linear action of colour on the nine transverse directions of the eleven-dimensional little group. Escapes: colour acting on the internal space, outside the little group, a nonlinear or brane realization, or a map that is not colour-equivariant, in which case the equality of the two 84s is an equality of numbers only.
 
 ### Corollary 3.9 (the coloured states of the 84 are not Kaluza-Klein modes of C_3 on Y_{3,2})
 
@@ -113,3 +113,79 @@ Under the quotient realization, on a background invariant under the displayed ac
 **Referee note (GPT-6.1 Terra, 4 Nov 2026).** The physical identifications in this summary are proposals. The colour exclusions have the stated linear-representation and tensor-mode scopes; other internal spaces, nonlinear actions and brane realizations remain directions. See the [wording audit](../historical/reviews/2026-11-04_terra_check_11d.md#wording-audit-results-and-proposals).
 
 The M2 and M5 details of lemma 21 enter in a specific place. Hypercharge is the C_3 vector of the Witten space with Killing spinors, the 5-bar consists of the N = 1 fivebrane baryons, the Higgs is the M2 position, and the M2/M5 exchange is the electric-magnetic duality of hypercharge. The count 84 of C_3 does not survive as a colour-equivariant identification. The next computations are in the README.
+
+## Referee proofs (GPT-6.1 Terra, 4 November 2026)
+
+The arguments below are those of the referee report on the 11D line, written out in the notation of this lemma; the report in historical/reviews/ stays as the provenance record.
+
+**Independent proof of Proposition 3.8.**
+*From the referee report on the 11D line, section 'Proposition 3.8 and Corollary 3.9: colour and the three-form', transferred verbatim in substance on 4 Nov 2026.*
+
+Hypothesis: a linear colour action on the nine transverse directions.
+
+An irreducible complex SU(3) representation with highest weight (p, q) has dimension (p + 1)(q + 1)(p + q + 2)/2. The only irreducibles of dimension at most nine are 1, 3, 3bar, 6, 6bar and 8. The complexification of a real representation is self-conjugate, so a sextet needs its conjugate (12 > 9) and two triplet pairs have dimension 12. Dimension nine therefore leaves exactly
+
+    9 (1),    3 + 3bar + 3 (1),    8 + 1.
+
+The first exterior cube is trivial. In the second,
+
+    Λ^2 3 ⊗ 3bar = 3bar ⊗ 3bar = 6bar + 3
+
+is a summand of the exterior cube. In the third, Λ^3(8 + 1) = Λ^3 8 + Λ^2 8, and Λ^2 8 contains a 10: identify 8 with sl_3(C); the vector E_13 ∧ E_12 is killed by the two positive simple root operators ad E_12 and ad E_23 and has highest weight (3, 0), so it generates a 10. Neither target colour representation contains a 6bar or a 10, and the trivial case contains no triplets.
+
+The decomposition used in the proof above also holds:
+
+    Λ^3 8 = 1 + 8 + 10 + 10bar + 27.
+
+E_13 ∧ E_12 ∧ E_23 is a highest-weight vector of weight 2 alpha_1 + 2 alpha_2 = (2, 2): the only nonzero brackets with the raising operators, [E_12, E_23] = E_13 and [E_23, E_12] = -E_13, produce a repeated factor E_13. E_13 ∧ E_12 ∧ H, with H a nonzero Cartan element satisfying alpha_2(H) = 0, has highest weight (3, 0). Conjugation supplies (0, 3), and the invariant Cartan three-form (X, Y, Z) -> tr(X [Y, Z]) supplies 1. The (1, 1)-weight space of Λ^3 8 has dimension five (E_13 ∧ H_1 ∧ H_2, E_12 ∧ E_23 ∧ H_i for a basis H_1, H_2 of the Cartan subalgebra, and E_13 ∧ E_alpha ∧ E_{-alpha} for alpha = alpha_1, alpha_2), while each of the two spaces reached from it by the simple raising operators, of weights (3, 0) and (0, 3), has dimension two (E_13 ∧ E_12 ∧ H_i and E_13 ∧ E_23 ∧ H_i). Their joint kernel therefore supplies a highest-weight 8. The dimensions sum to 1 + 8 + 10 + 10 + 27 = 56 = C(8, 3), exhausting the exterior cube. Orientation and the Hodge star give Λ^6 R^9 ≅ Λ^3 R^9 equivariantly.
+
+**Independent proof of Corollary 3.9.**
+*Same section of the referee report, transferred verbatim in substance on 4 Nov 2026.*
+
+The colour centre acts trivially on Y_{3,2}: for omega = e^{2 pi i/3}, (omega I_3, I_2) is a transformation of the quotient circle, obtained from lambda = e^{4 pi i/3}, since (lambda^2, lambda^{-3}) = (e^{8 pi i/3}, 1) = (omega, 1). Its induced action on every tensor bundle is the identity. Thus tensor fields contain only colour representations with trivial centre, which excludes 3 and 3bar. The same argument applies to tensor modes of C_3 and of the metric. It is enough that the displayed colour action preserve the background metric and flux; an identification of the full isometry group is unnecessary.
+
+*Scope and direction.* The first result concerns exterior powers of a linear real nine-dimensional colour representation; the second concerns tensor modes on the stated quotient with the stated action. Colour acting on other internal spaces, nonlinear or brane realizations, and maps without colour equivariance remain open directions.
+
+**Independent proof of Proposition 3.5.**
+*From the referee report on the 11D line, section 'Proposition 3.5: magnetic product solution', transferred verbatim in substance on 4 Nov 2026.*
+
+Scope: a classical local supergravity solution with scaled Einstein factors. Flux quantization, global consistency, supersymmetry and stability remain separate questions.
+
+Choose an orthonormal frame e^1, ..., e^4 on CP^2 and e^5, e^6 on S^2, with J = e^{12} + e^{34}, and write
+
+    G = f_1 e^{1234} + f_2 (e^{1256} + e^{3456}).
+
+Then G^2 = G_MNPQ G^MNPQ = 4! (f_1^2 + 2 f_2^2) = 24 (f_1^2 + 2 f_2^2). The contraction G_aPQR G_a^PQR, with no sum over a, is 3! (f_1^2 + f_2^2) = 6 (f_1^2 + f_2^2) in a CP^2 direction (each such index lies in e^{1234} and in one of the two f_2 terms), 3! (2 f_2^2) = 12 f_2^2 in an S^2 direction, and zero in an AdS direction. The mixed contractions with a != b vanish, since no two components of G share three indices. Substitution in the Einstein equation R_MN = (G_MPQR G_N^PQR - g_MN G^2/12)/12 gives
+
+    R_AdS = -(f_1^2 + 2 f_2^2)/6,    R_CP2 = f_1^2/3 + f_2^2/6,    R_S2 = 2 f_2^2/3 - f_1^2/6;
+
+for instance R_CP2 = (6 (f_1^2 + f_2^2) - 2 (f_1^2 + 2 f_2^2))/12. The forms J, vol(CP^2), vol(S^2) and the AdS volume form are parallel, so dG = d*G = 0. Also G ∧ G = 0, since it is an eight-form entirely on the six-dimensional compact factor.
+
+Positive curvature of the S^2 factor, 2 f_2^2/3 > f_1^2/6, is equivalent to |f_1| < 2|f_2|. This also makes the other compact curvature positive and the AdS curvature negative. The radii are then determined by the three Einstein constants. Here "round factors" means the standard scaled Fubini-Study metric on CP^2 and the round metric on S^2.
+
+**Independent proof of Proposition 3.2.**
+*From the referee report on the 11D line, section 'Proposition 3.2: exterior algebra of the five-bar', transferred verbatim in substance on 4 Nov 2026.*
+
+The representation and charge count is the standard spinor construction. Identifying these algebraic states with wrapped-brane states remains conditional on Proposal 3.1 and Conjecture 3.3.
+
+Write 5bar = U ⊕ V, with U = (3bar, 1)_{1/3} and V = (1, 2)_{-1/2}. The terms of Λ^3 5bar are
+
+    Λ^3 U = e^c,    Λ^2 U ⊗ V = Q,    U ⊗ Λ^2 V = u^c,
+
+with respective 6Y charges 6, 4 - 3 = 1 and 2 - 6 = -4, using Λ^3 3bar = 1, Λ^2 3bar = 3 and Λ^2 2 = 1. Λ^1 5bar = d^c + L, and Λ^5 5bar = nu^c, since the determinant charge is 3(2) + 2(-3) = 0. The odd degrees therefore have dimension 5 + 10 + 1 = 16; the even degrees are their conjugates, since Λ^k 5bar is dual to Λ^{5-k} 5bar when the determinant is trivial, and have dimension 16. Three generations give 96 complex finite-Hilbert-space states. The conventional SO(10)/SU(5) charge X = 5 - 2k gives 3, -1 and -5 on the three odd degrees.
+
+The divisor classes from Proposition 2.3 can be added formally with the same weights 2 and -3. A physical identification of those exterior generators with fermionic wrapped-fivebrane states requires the proposed brane construction and its statistics.
+
+**Independent proof of the proved part of Proposal 3.4, and the stabilizers of the FI quotient.**
+*From the referee report on the 11D line, section 'Proposal 3.4: Higgs stabilizer and the FI quotient', transferred verbatim in substance on 4 Nov 2026.*
+
+The coordinate charge calculation holds assuming the proposed action of the Betti U(1) on the brane coordinates; identifying that action with the electroweak one is part of the proposal. A nonzero FI parameter gives a partial orbifold resolution, with finite stabilizers along the projective loci below.
+
+*Stabilizer.* On V = (v, 0), U = 0, take T_3 = diag(1/2, -1/2) and Y(V) = -1/2. The first component has (T_3 + Y) V = (1/2 - 1/2) V = 0 and (T_3 - Y) V = V, and SU(3) fixes U = 0. The charges Q = T_3 + Y of the two components of V are 0 and -1, and Q(U) = 0 + 1/3 = 1/3.
+
+*FI quotient.* For the action lambda · (U, V) = (lambda^2 U, lambda^{-3} V) on the level 2|U|^2 - 3|V|^2 = zeta:
+
+- At zeta < 0 every point has V != 0. Points with U != 0 as well have trivial stabilizer (lambda^2 = lambda^3 = 1), and the locus U = 0, V != 0 has stabilizer lambda^3 = 1. This Z_3 acts faithfully on the three transverse U coordinates, by the primitive cube root lambda^2. The coarse exceptional locus is {U = 0}/U(1) = CP^1, with transverse singularity C^3/Z_3.
+- At zeta > 0, the locus V = 0, U != 0 has stabilizer lambda^2 = 1, a Z_2 acting by lambda^{-3} = -1, minus the identity, on the two transverse V coordinates. Its coarse exceptional locus is CP^2, with transverse singularity C^2/Z_2.
+
+Thus the FI quotient needs further geometric data to be a smooth resolution.

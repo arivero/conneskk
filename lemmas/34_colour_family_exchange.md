@@ -83,7 +83,7 @@ F equals M on the left-handed states and M followed by the particle-antiparticle
 
 **Referee note (GPT-6.1 Terra, 4 Nov 2026).** General bundle zero modes are outside the root-slot hypotheses. The index gives net chirality, and split bundles do not automatically reduce to three distinct root slots; the Weyl action on a specified bundle and its zero modes remains open. See the [referee report](../historical/reviews/2026-11-04_terra_check_11d.md#proposal-55-four-slot-bundles-and-three-families).
 
-In heterotic compactifications on a Calabi-Yau threefold with E8 ⊃ SO(10) × SU(4), 248 = (45, 1) + (1, 15) + (16, 4) + (16bar, 4bar) + (10, 6), the SU(4) is the structure group of a rank-four bundle V, and the families are the zero modes, the 16s coming from H^1(X, V); their net number is the index |c_3(V)|/2, which is 3 in the heterotic Standard Models built on SU(4) bundles (Braun, He, Ovrut and Pantev, hep-th/0501070; recalled, not reread). In that reading the four slots of this file are the fibre of V, and the three families are not three of the slots: a zero mode is a section of V and in general involves all four. Propositions 5.1 and 5.4 do not apply to it, since they assume one slot per family.
+In heterotic compactifications on a Calabi-Yau threefold with E8 ⊃ SO(10) × SU(4), 248 = (45, 1) + (1, 15) + (16, 4) + (16bar, 4bar) + (10, 6), the SU(4) is the structure group of a rank-four bundle V, and the families are the zero modes, the 16s coming from H^1(X, V); their net number is the index |c_3(V)|/2, which is 3 in the heterotic Standard Models built on SU(4) bundles (Braun, He, Ovrut and Pantev, hep-th/0501070; recalled without rereading). In that reading the four slots of this file are the fibre of V, and each family is a zero mode, a section of V that in general involves all four slots. Propositions 5.1 and 5.4 do not apply to it, since they assume one slot per family.
 
 The transposition M of Proposition 5.2 then exchanges the Pati-Salam SU(4), a gauge group, with the structure group SU(4) of V: colour and holonomy trade places, and SO(10) goes to the commutant SO(10)' of the other SU(4). The top-neutrino exchange becomes a statement about the fibre, which an index map must carry to the zero modes. The test is an explicit bundle. For a split bundle V = L_0 + L_1 + L_2 + L_3 (line-bundle models), slot i carries n_i = −χ(L_i) families with n_0 + ... + n_3 = 3; such models fall under Proposition 5.1 only for n = (1, 1, 1, 0) up to order; for every n_i >= 0 with sum 3 the degree multisets still differ (second check, 40 cases), so the obstruction persists for aligned split bundles. A non-split V, whose zero modes are spread over the slots, is the case to compute.
 
@@ -101,7 +101,7 @@ The transposition M of Proposition 5.2 then exchanges the Pati-Salam SU(4), a ga
 
 (c) The record holds two placements of the top, from different subgroups of E8, and they differ: under the Z_3 grading by SU(9) of file 04 (Lemma 4.A, Theorem 4.4) the left-handed top lies in the C_3 sector and ν^c in the gravity sector (t = +1/2, proposed in section 7 there); under the Spin(9) count above the top goes with the fourth family into the 44. SU(9) ⊂ E8 and Spin(9) ⊂ SO(16) ⊂ E8 are different subgroups and the sectors are different objects, so there is no contradiction, and no identification between the sectors is claimed. The two groups themselves are related: the Chevalley involution restricted to sl(9) is an outer involution with fixed algebra the so(9) of file 04, which is conjugate in E8 to the Spin(9) of this reading, with k = so(9) + 84 and p = 44 + 84, the 44 inside the gravity sector (Sonnet, 4 Nov 2026; a single-model statement, referee pending). How the 96 states of the three-family frame sit against the conjugated Spin(9) has not been worked out.
 
-(d) Recalled analogy: Gell-Mann's colour-flavour SU(8) of N = 8 supergravity put the spin-1/2 fermions in Λ^3(8) = 56 with 8 = 3 + 5 (Gell-Mann, "From renormalizability to calculability?", 1983, and the SU(8) of Cremmer and Julia; recalled, not reread); here it is Λ^3 of 9 = 84 with the C-field, and Proposition 4.3 plays the role of the known failure of that content.
+(d) Recalled analogy: Gell-Mann's colour-flavour SU(8) of N = 8 supergravity put the spin-1/2 fermions in Λ^3(8) = 56 with 8 = 3 + 5 (Gell-Mann, "From renormalizability to calculability?", 1983, and the SU(8) of Cremmer and Julia; recalled without rereading); here it is Λ^3 of 9 = 84 with the C-field, and Proposition 4.3 plays the role of the known failure of that content.
 
 4. **NCG.** In the finite geometry with three generations the exchange is not an automorphism (Proposition 4.2). A Pati-Salam finite geometry with C^4_colour ⊗ C^4_family, where the flip of the two factors exchanges the σ field with the top Yukawa direction, is the candidate in which it is (PLAN, step 5).
 
@@ -109,3 +109,67 @@ The transposition M of Proposition 5.2 then exchanges the Pati-Salam SU(4), a ga
 
 - A finite spectral triple, or a Hořava-Witten configuration, with four families in which M is a symmetry and the fourth family is decoupled in a controlled way, so that the three-family statement of lemma 21 follows as a limit.
 - Whether the fourth family can be made heavy by the same mechanism as the top (lemma 21 counts only one heavy up-type quark).
+
+## Referee proofs (GPT-6.1 Terra, 4 November 2026)
+
+The arguments below are those of the referee report on the 11D line, written out in the notation of this lemma; the report in historical/reviews/ stays as the provenance record.
+
+**Independent check of Proposition 5.1 (the neighbour table).**
+*From the referee report on the 11D line, section 'Proposition 5.1: aligned three-family root configurations', transferred verbatim in substance on 4 Nov 2026.*
+
+Write a half-integer root as (s | f)/2 with five colour and weak signs s and a family sign pattern f. Distinct family patterns have inner product -1 on the family part and identical ones have 3. For two particle roots in the same slot, inner product +1 means that the five-sign patterns have Hamming distance two. For distinct slots, a particle root is a +1 neighbour exactly when the five-sign patterns are equal, and an antiparticle root is a +1 neighbour exactly when the five-sign patterns have distance four; no antiparticle in the same slot is a +1 neighbour. Let U, D, E, N denote the up-quark, down-quark, charged-lepton and neutrino blocks of one slot, each with its antiparticles. The number of +1 neighbours of one root of the row block among all roots of a column block, for the same slot and for a different slot, is
+
+| source | U | D | E | N |
+|---|---|---|---|---|
+| U | 4 / 2 | 3 / 3 | 1 / 1 | 2 / 0 |
+| D | 3 / 3 | 4 / 2 | 2 / 0 | 1 / 1 |
+| E | 3 / 3 | 6 / 0 | 0 / 2 | 1 / 1 |
+| N | 6 / 0 | 3 / 3 | 1 / 1 | 0 / 2 |
+
+The entries follow from the root types and colour choices of the Setting and the Hamming criterion; for instance a neutrino has six same-slot up-quark neighbours and none in another slot, and a charged lepton has six same-slot down-quark neighbours and none in another slot. In three aligned slots each row sums to 10 + 2 x 6 = 22, the degree in H_F. Removing all three neutrino blocks gives degree 20 on the 36 up-quark roots and 19 on the 48 down-quark and charged-lepton roots. Removing the top block instead gives degree 22 - 6 = 16 to the neutrinos of its slot, 22 to the other eight neutrino roots, 20 to the 24 remaining up-quark roots and 19 to the 48 others. So F1 has degrees 16 and 22 that F2 lacks; both sets are closed under negation with centroid zero, so an affine Euclidean isometry between them would fix the origin and preserve degrees, and none exists. The degree sums 4(16) + 48(19) + 24(20) + 8(22) = 48(19) + 36(20) = 1632 give 816 unordered pairs at inner product +1 in each set, 816 at -1 by negation, 42 antipodal pairs at -2, and the remaining C(84, 2) - 42 - 2(816) = 1812 pairs at inner product zero. Scope: the indicated half-root embedding, three aligned slots, complete species blocks and Euclidean isometries.
+
+**Independent check of Proposition 5.2.**
+*From the section 'Proposition 5.2: four-family colour-family transposition'.*
+
+P exchanges three pairs of colour and family coordinates and the two weak coordinates; negating all eight coordinates is an even sign change, and signed permutations with an even number of sign changes preserve the D_8 roots and lie in W(D_8), a subgroup of W(E8). So M = -P is in W(E8), M^2 = 1, and M preserves the half-integer roots with an even number of minus signs. For a quark colour pattern c and the all-plus family pattern 1,
+
+    M(c | -+ | 1) = (-1 | -+ | -c) = nu_L(-c),     M(-c | ++ | 1) = (-1 | -- | c) = -nu^c(-c),
+
+and the three patterns -c are the other three family patterns; with negatives this is the whole neutrino block, and M^2 = 1 gives the reverse map. The weak root e_4 - e_5 is fixed, so the SU(2)_L subalgebra is preserved; the same calculation exchanges the down quarks of family zero with the charged leptons. For a family-zero lepton, M(nu_L) = nu_L but M(nu^c) = -nu^c, and likewise for the charged lepton: the Dirac species blocks of family zero are invariant setwise, and their roots are fixed only up to sign.
+
+**Counterexample (referee) to Proposition 5.3 without unitarity.**
+*From the section 'Proposition 5.3: finite-geometry flip'.*
+
+The factor identification iota must be unitary, or unitary up to one nonzero scalar, for the flip F to be unitary. With orthonormal bases, iota(l) = 2 e_0 and the three colour basis vectors sent isometrically to e_1, e_2, e_3 give F(l (x) e_1) = 2 e_1 (x) e_0, which changes the norm while F stays an involution. With unitary iota, F is unitary and involutive, F(P_q (x) P_0)F^{-1} = P_l (x) (1 - P_0), F commutes with gamma (which acts on the chirality factor) and with J by its conjugate extension to the second summand; the two Dirac blocks have rank 12 (two chiralities, three colour or family states, two conjugate summands) and kernels of dimension 128 - 12 = 116. If a fixed self-adjoint D commutes with F, the families D + t T_top and D + t T_nu are conjugate for every t, with a bounded spectral sector of dimension 116 in the heavy limit; the commutant algebras are conjugate when the represented algebra is itself flip-invariant, which the displayed Standard Model and Pati-Salam colour algebras acting on the colour factor alone are not.
+
+**Independent proof of Proposition 5.4 for all 192 assignments, without enumeration.**
+*From the section 'Proposition 5.4: misaligned three-slot configurations'.*
+
+Let A, B, C, D be the three-slot sets of the up quarks, down quarks, charged leptons and neutrinos, with 0 in A the slot of the top. The neighbour table above applies to every slot assignment. For a root in slot f, after removing all neutrinos,
+
+| source | d_{S - N} |
+|---|---|
+| U, f in A | 20 |
+| D, f in B | 17 + 2 1_C(f) |
+| E, f in C | 13 + 6 1_B(f) |
+
+(for a down quark, 3|A| + [4 + 2(|B| - 1)] + 2 1_C(f) = 17 + 2 1_C(f)). So S - N has degrees in {13, 17, 19, 20}, and 16 and 22 are absent. After removing the top, every neutrino root in slot f in D has
+
+    d_{S - T} = 16 + 6 (1_A(f) - 1_{{0}}(f))  in {16, 22}:
+
+the three down-quark slots contribute 9, the three charged-lepton slots 3, the two other neutrino slots 4, and the up quarks six exactly when f is in A, less six for the removed top when f = 0. Both sets are closed under negation, so their centroids are zero, and an isometry between them would preserve these degrees, which is impossible. This covers all 3 x 4^3 = 192 choices. The universal counts stated in the first version of the proposition are false when slots are misaligned: for A = C = {0, 1, 2} and B = D = {0, 1, 3}, the down-quark roots in slot 3 have degree 17 and the charged-lepton roots in slot 2 have degree 13 in S - N, and the neutrino degrees in slots 0, 1, 3 of S - T are 16, 22, 16; so S - N has degrees other than 19 and 20, and more than one neutrino slot can have degree 16. Scope: the specific half-root realization, whole colour multiplets, one root slot per species and Euclidean isometries; general zero modes of a nonsplit SU(4) bundle and maps without an isometric root action are outside it (Proposal 5.5).
+
+**Independent proof of the index statement in Proposal 5.5, with the net-chirality caution.**
+*From the referee report on the 11D line, section 'Proposal 5.5: four-slot bundles and three families', transferred verbatim in substance on 4 Nov 2026.*
+
+Verdict of the referee: correct with amendment as a possible escape. General bundle zero modes are sections, and the isometry hypotheses of Propositions 5.1 and 5.4, which concern individual fibre roots, do not automatically apply to them. The index counts net chirality, and the proposed Weyl map on zero modes remains to be constructed.
+
+*Index.* On a Calabi-Yau threefold X, for a rank-four SU(4) bundle V, c_1(V) = 0 gives ch(V) = 4 - c_2(V) + c_3(V)/2, and c_1(X) = 0 gives Td(X) = 1 + c_2(X)/12. Riemann-Roch gives
+
+    chi(V) = int_X ch(V) Td(X) = (1/2) int_X c_3(V).
+
+When H^0(V) = H^3(V) = 0, this is -h^1(V) + h^2(V), with h^2(V) = h^1(V^*) by Serre duality, since K_X is trivial. Thus index three gives three net chiral families. Exactly three 16 zero modes additionally requires the opposite-chirality cohomology H^1(V^*) to vanish.
+
+*Split bundles.* For a split bundle V = L_0 + L_1 + L_2 + L_3, the integers n_i = -chi(L_i) are signed indices; their sum being three does not force one zero mode in each of three distinct slots. Even in that special distribution, applying Proposition 5.1 to normalized global sections requires an identification of the physical zero-mode metric with the root configuration.
+
+*The Weyl map.* The fibre Weyl transposition M can exchange the abstract subgroups, but a symmetry of a particular compactification must also act compatibly on the bundle, the connection, the zero-mode spaces, their inner products and any Wilson-line data. Establishing such an action is an open construction; the escape from the root no-go alone does not establish it.

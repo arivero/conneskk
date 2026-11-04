@@ -168,7 +168,7 @@ There is also a pleasing refinement of the $S^5$ observation. For the familiar $
 
 $$\frac{SU(3)_c\times U(1)_{3Q}}{\mathbb Z_3}\cong U(3).$$
 
-This is the same abstract group as the connected isometry group of a generic Hopf-squashed $S^5$, not merely the same Lie algebra. The electrostrong $U(3)$ was discussed by Hucks in 1991.
+This is the same abstract group as the connected isometry group of a generic Hopf-squashed $S^5$, beyond the equality of Lie algebras. The electrostrong $U(3)$ was discussed by Hucks in 1991.
 
 With $V$ the fundamental representation of this $U(3)$, the charge assignments can be written as
 
@@ -402,7 +402,7 @@ $$P_{\ker D_X}D_XP_{\ker D_X}=0;$$
 
 nonzero masses then need additional couplings, perturbations, mixing, or retained nonzero internal modes. The required real structure, grading and gauge action remain separate parts of the construction.
 
-The useful conclusion for the $10\to9$ picture is therefore quite specific: a collapsing direction can remove one set of KK momenta while finite momentum or Dirac eigenvalues in the surviving internal geometry continue to contribute to fermion masses. Zero modes are one important protected sector, not the whole mass mechanism.
+The useful conclusion for the $10\to9$ picture is therefore quite specific: a collapsing direction can remove one set of KK momenta while finite momentum or Dirac eigenvalues in the surviving internal geometry continue to contribute to fermion masses. Zero modes are one protected sector; the mass mechanism has other parts.
 
 ### Prompt 4
 
@@ -460,7 +460,7 @@ Therefore, along this particular family of theories, if $\Lambda_6$ and $y_t$ ar
 
 $$\Lambda_5\propto v^{2/23}\propto G_F^{-1/23}.$$
 
-So the heavy top leaves a dependence in the low-energy strong scale even though the top is absent from the low-energy spectrum. This is threshold matching, rather than a violation of decoupling: the heavy field changes the relation between the couplings on the two sides of the threshold. Simultaneous decoupling of the top and electroweak particles is a standard effective-field-theory calculation.
+So the heavy top leaves a dependence in the low-energy strong scale even though the top is absent from the low-energy spectrum. This is threshold matching, consistent with decoupling: the heavy field changes the relation between the couplings on the two sides of the threshold. Simultaneous decoupling of the top and electroweak particles is a standard effective-field-theory calculation.
 
 The result depends on what is held fixed. If the intended 9D theory has a finite, fixed $\Lambda_5$, the same formula requires
 
@@ -544,7 +544,7 @@ The spectral-action relations also check out for the specified minimal model:
 
 $$g_3^2=g_2^2=\frac53g_Y^2,\quad Y_2\equiv\mathrm{Tr}\left[3Y_u^\dagger Y_u+3Y_d^\dagger Y_d+Y_e^\dagger Y_e+Y_\nu^\dagger Y_\nu\right]=4g_2^2.$$
 
-They are matching-scale conditions, not automatically relations at the weak scale or in the 9D effective theory. Under top dominance, $y_t\simeq2g_2/\sqrt3$. Thus the light Yukawas can vanish while a top Yukawa remains in the pre-limit theory; after the top is integrated out, the high-scale sum rule cannot simply be reapplied to the reduced field content.
+They are matching-scale conditions; relations at the weak scale or in the 9D effective theory need the running. Under top dominance, $y_t\simeq2g_2/\sqrt3$. Thus the light Yukawas can vanish while a top Yukawa remains in the pre-limit theory; after the top is integrated out, the high-scale sum rule cannot simply be reapplied to the reduced field content.
 
 With the additional hypothesis $\mu_*=\kappa v$, top dominance, and no extra colored thresholds, the earlier expression is algebraically correct:
 
@@ -578,6 +578,6 @@ Finally, the photon conclusion holds within that same restricted trajectory. The
 
 $$g_Y^2=\frac35g_2^2,\quad e_*^2=\frac38g_2^2\longrightarrow0.$$
 
-With ordinary electroweak and QED running, a fixed particle spectrum, and no unusual threshold or gauge-mixing effects, the low-energy electromagnetic coupling also tends to zero. That is a constraint on this one-scale model, not a general result for every 9D geometry.
+With ordinary electroweak and QED running, a fixed particle spectrum, and no unusual threshold or gauge-mixing effects, the low-energy electromagnetic coupling also tends to zero. That is a constraint on this one-scale model; other 9D geometries are outside it.
 
 The verified picture is therefore more restrictive than the original answer suggested. A finite mass with vanishing light Yukawa is consistent; top decoupling gives a calculable dependence of the strong scale on the weak-limit trajectory. A predicted Fermi–QCD relation still requires the same geometric or spectral data to determine the internal quark masses, gauge normalization, Higgs potential and matching scale together.

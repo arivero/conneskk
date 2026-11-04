@@ -357,6 +357,7 @@ addresses(t4b, l14_sum_rule).  addresses(t4b, l14_tuned).  addresses(t4b, l14_no
 
 claim(fl_R1, counterexample, proved, "Counterexample R1", "Theorem 2.5 of arXiv v1 of Farsi-Latremoliere, Theorem 3.4 in v3 and in J. London Math. Soc. 114 (2026) e70628, with the same six hypotheses and the step printed as (3.11): the printed hypotheses are insufficient, since a scalar-algebra family meets them and contradicts Corollary 3.5. Anticommutation of D_h and D_v, or the stated uniform relative bound, supplies a sufficient additional hypothesis; the anticommuting applications avoid this defect.").
 source(fl_R1, 'historical/reviews/2026-11-03_farsi_latremoliere_assessment.md', '31-theorem-34-is-missing-a-hypothesis').
+source(fl_R1, 'results/R1_counterexample_farsi_latremoliere.md', '').  % the statement, the failing step and the sufficient repairs, written out on 4 Nov 2026
 attempted_by(fl_R1, claude_subagent).
 checked_by(fl_R1, claude_opus_5_5, by_hand).
 checked_by(fl_R1, terra_6_1, by_hand).  % report paper_note, item 49, on arXiv v3
@@ -604,6 +605,7 @@ overturn(rs_N7, "A different real Kasparov duality or multi-class construction i
 attempted_by(rs_N7, corpus).
 claim(rs_N8, claim, proved, "proved for the colour-preserving bridge exchange (Terra 6.1 referee)", "An orientable four-summand parent can reduce to a nonorientable, faithful three-summand finite triple with nonzero one-forms, while preserving first-order throughout: explicit 32D finite-matrix model.").
 source(rs_N8, 'historical/corpus/connes_kk_research_state.md', '66-orientation-loss-under-a-heavy-centralizer-and-spectral-projection').
+source(rs_N8, 'results/orientability_under_heavy_centralizer.md', '').  % statement and the proof by hand of Terra 6.1, written out on 4 Nov 2026
 overturn(rs_N8, "Projection alone preserves orientability and makes the two scalar states infinitely distant; the algebra restriction and the geometric justification remain independent requirements.").
 checked_by(rs_N8, terra_6_1, by_hand).  % referee, 3 Nov 2026
 %% rs_N8 amended in place: the bridge exchange is the colour-preserving swap (section 6.6).

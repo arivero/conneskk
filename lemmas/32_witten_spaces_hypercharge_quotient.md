@@ -107,3 +107,112 @@ with (c_0, c_1) = (-9/4, -3/4) or (-3/2, -3). The bidegrees are Q: (-4, 1); u^c,
 **Referee note (GPT-6.1 Terra, 4 Nov 2026).** The \(M^{111}\) identification is conditional on the recalled fibration and metric normalization. The flux examples establish a particular construction and scoped obstructions; a general necessity for the grading flux remains open. See the [wording audit](../historical/reviews/2026-11-04_terra_check_11d.md#wording-audit-results-and-proposals).
 
 The Witten space with Killing spinors is the hypercharge quotient of the 5-bar (Theorem 2.1), the count 7 is fixed by SU(5) (Proposition 2.2), and the Z_6 of the Standard Model is the kernel of the isometry action (Proposition 2.4). The price is that hypercharge is no longer an isometry, and no tensor Kaluza-Klein mode on an invariant background carries triality, weak isospin 1/2 or fractional hypercharge. Kaluza-Klein chirality on the base needs fluxes that see the grading and leave T_3R free (Propositions 2.5 and 2.6). Both results point to states outside the Kaluza-Klein spectrum of Y_{3,2} for the quarks and leptons: [03](../lemmas/39_branes_hypercharge_and_the_84.md) takes them to be wrapped branes.
+
+## Referee proofs (GPT-6.1 Terra, 4 November 2026)
+
+The arguments below are those of the referee report on the 11D line, written out in the notation of this lemma; the report in historical/reviews/ stays as the provenance record.
+
+**Independent proof of Proposition 2.5 (the exclusion).**
+*From the referee report on the 11D line, section 'Proposition 2.5: hypercharge and B - L fluxes', transferred verbatim in substance on 4 Nov 2026.*
+
+Hypotheses: one abelian line bundle per field, the canonical formal shift, fluxes in the span of Y and B - L. The exclusion holds even if the ten-dimensional Weyl fields have different chiralities.
+
+Let M_2 be the component of the flux pairing M along CP^1, and use the charges c = (6Y, 3(B - L)). A weak doublet occurs for a line bundle O(beta) on CP^1 only when beta = 1 or beta = -3, which give H^0(O(1)) = 2 and H^1(O(-3)) = 2 respectively. The formal K^{1/2} shift on CP^1 is -1, so M_2(c) = beta + 1 and |M_2(c)| = 2 for each doublet. This remains true if a right-handed mode is conjugated to the left-handed convention, since conjugation reverses the sign of the pairing.
+
+For the left-handed doublets,
+
+    c_Q = (1, 1),   c_L = (-3, -3) = -3 c_Q.
+
+Linearity gives M_2(c_L) = -3 M_2(c_Q), so |M_2(c_L)| = 3 |M_2(c_Q)|, whereas both absolute values must be 2. This contradiction excludes a generation with or without nu^c, for arbitrary flux quanta in the two specified directions. It uses neither the colour component nor a choice of signs for the individual doublets.
+
+*Amendment to the required-bidegrees lemma.* On CP^2 x CP^1, K^{1/2} is a formal notation: K = O(-3, -2) has no line-bundle square root. A genuine spin^c structure and its charged twists must give integral final bidegrees. With a common ten-dimensional chirality, Serre duality relates a right-handed conjugate to the sign-reversed pairing, and the convention P^{(2)} = 2j + 1 of the table is consistent. If the ten-dimensional chiralities can be chosen independently, the table is incomplete. For example, O(-4, -3) has H^3 = H^2(O(-4)) ⊗ H^1(O(-3)) = (3, 2) and pairing (-5/2, -2); a suitable ten-dimensional chirality makes this a left-handed Q, and (-5/2, -2) is neither the table entry (-5/2, 2) nor its overall negative.
+
+Likewise, with independent chiralities and independent flux directions, u^c can arise from H^0(O(1, 0)) = 3bar, while d^c arises by conjugating a right-handed H^2(O(-4, 0)) = 3 with opposite abelian charges. Their pairings in the left-handed charge convention are (5/2, 1) and (5/2, -1). The equality of their images, and the unsigned linear formula P^{(2)} = 2j + 1, are therefore conditional on the common-chirality convention; the direct doublet obstruction above uses neither.
+
+*Scope and direction.* This concerns the Dolbeault cohomology of a single abelian line bundle for each field on CP^2 x CP^1, with the canonical formal shift and fluxes in the span of Y and B - L. Nonabelian bundles, additional charges or a common twist, multiple source fields, walls, orbifolds and brane states remain possible directions. This is an independent check of the scoped obstruction and makes no claim about those alternatives.
+
+**Independent proof of the third-charge exclusion in Proposition 2.5.**
+*From the referee report on the 11D line, section 'Proposition 2.5: adding a third charge', transferred verbatim in substance on 4 Nov 2026.*
+
+Status as the referee stated it: the argument proves the original bounded search, a third integer charge in [-3, 3]^6 under the common-chirality convention. The same argument covers an arbitrary real third charge and independently chosen ten-dimensional chiralities; the referee stated that extension as a conjecture awaiting an independent check by another model, and the referee note at Proposition 2.5 records that check by Claude Sonnet 5.5.
+
+Write, on (Q, u^c, d^c, L, e^c, nu^c),
+
+    y = 6Y = (1, -4, 2, -3, 6, 0),    b = 3(B - L) = (1, -1, -1, -3, 3, 3).
+
+(Here b is a charge vector, unrelated to the Euler-class coefficient b of Proposition 2.3.) For the stated colour convention the necessary CP^2 pairings are
+
+    p = (-5/2, 5/2, 5/2, p_L, p_e, p_nu),   |p_L| = 3/2,
+
+and the CP^1 pairings have the form
+
+    w = (2 s_Q, s_u, s_d, 2 s_L, s_e, s_nu),   s_i in {+1, -1}.
+
+The signs allow independently chosen source chiralities. Reversing the colour convention reverses p and leaves the argument unchanged.
+
+Suppose that p and w both lie in the span of y, b and z, for some third charge z. The Q and L entries of y and of b have ratio -3, so every vector of span(y, b) has L entry equal to -3 times its Q entry, while |w_L/w_Q| = 1; hence w lies outside span(y, b). Then span(y, b, w) has dimension three and lies in span(y, b, z), so the two spans coincide, and
+
+    p = a y + b_0 b + t w
+
+for real a, b_0, t. Apply the combination 2Q + u^c + d^c, the linear form v -> 2 v_Q + v_u + v_d. It vanishes on y (2 - 4 + 2 = 0), on b (2 - 1 - 1 = 0) and on p (-5 + 5/2 + 5/2 = 0), and takes the value 4 s_Q + s_u + s_d on w. So
+
+    0 = t (4 s_Q + s_u + s_d).
+
+The factor in parentheses is nonzero, since |4 s_Q| = 4 > 2 >= |s_u + s_d|; hence t = 0. Equality of the u^c and d^c entries of p = a y + b_0 b, -4a - b_0 = 2a - b_0, gives a = 0, and their common value -b_0 = 5/2 gives b_0 = -5/2. The resulting L entry is -3 b_0 = 15/2, contradicting |p_L| = 3/2. The same four fields suffice without nu^c.
+
+*Scope and direction.* This concerns the one-line-bundle-per-field Dolbeault construction, the specified Y and B - L charges and the canonical formal shift. A fourth charge direction, a changed common twist, nonabelian bundles, multiple source fields, walls, orbifolds and brane states remain directions to investigate.
+
+**Independent proof of Proposition 2.3.**
+*From the referee report on the 11D line, section 'Proposition 2.3: topology of the circle bundle', transferred verbatim in substance on 4 Nov 2026.*
+
+The calculation is independent of the specific M^{111} identification. The cited Kreck-Stolz paper was unavailable to the referee, so no direct comparison with that paper is claimed.
+
+Let B = CP^2 x CP^1, H^*(B; Z) = Z[h_1, h_2]/(h_1^3, h_2^2), and let the Euler class be e = a h_1 + b h_2, with a != 0. The Gysin sequence gives
+
+    H^2(Y) = Z^2/<(a, b)> ≅ Z ⊕ Z/g,   g = gcd(a, b).
+
+The map H^2(B) -> H^4(B), cup product with e, sends h_1 to a h_1^2 + b h_1 h_2 and h_2 to a h_1 h_2 (since h_2^2 = 0); in the bases (h_1, h_2) and (h_1^2, h_1 h_2) its matrix is
+
+    [[a, 0], [b, a]].
+
+Its determinant is a^2 != 0, so its kernel is zero, and since H^3(B) = 0 the Gysin sequence gives H^3(Y) = 0. The greatest common divisor of its entries is g, so its Smith invariants are g and a^2/g, and H^4(Y), its cokernel, is Z/g ⊕ Z/(a^2/g): a group of order a^2, cyclic when g = 1.
+
+*Spin.* The vertical tangent line is trivial, spanned by the generator of the circle action, so w_2(Y) = pi^* w_2(B) = pi^*(h_1 mod 2), using w_2(CP^2) = h_1 mod 2 and w_2(CP^1) = 0. The mod-two Gysin sequence H^0(B; Z/2) -> H^2(B; Z/2) -> H^2(Y; Z/2), whose first map is the cup product with e mod 2, shows that the kernel of the pullback on H^2 is the span of e mod 2. Thus Y is spin exactly when h_1 ≡ e mod 2, that is, when a is odd and b is even. For (a, b) = (3, 2), the primitive homomorphism (x, y) -> 2x - 3y is onto Z and has kernel generated by (3, 2), so it identifies H^2(Y) with Z; and H^4(Y) ≅ Z/9.
+
+**Independent proofs for Theorem 2.1 and Propositions 2.2 and 2.4: freeness, the neutral-monomial congruence, the dual action and the Sasaki-Einstein normalization.**
+*From the referee report on the 11D line, section 'Theorem 2.1 and Propositions 2.2 and 2.4: quotient and tensor action', transferred verbatim in substance on 4 Nov 2026.*
+
+Hypotheses: the identification with M^{111} is conditional on the recalled description of M^{111} as the circle bundle of class 3h_1 + 2h_2; the cited paper could not be accessed by the referee.
+
+*Freeness and the bundle.* On the moment level in the unit sphere, |U|^2 = 3/5 and |V|^2 = 2/5. Both factors are nonzero, so the stabilizer of a point under (lambda^2 U, lambda^{-3} V) has lambda^2 = lambda^3 = 1, hence lambda = 1, and the action is free. The quotient has dimension 9 - 1 - 1 = 7 and is simply connected by the homotopy sequence of U(1) -> S^5 x S^3 -> Y_{3,2}. The residual character of the two Hopf phases has primitive weight (3, 2); its circle bundle over CP^2 x CP^1 therefore has Euler class ±(3h_1 + 2h_2). Principal circle bundles over this base are classified by their Euler classes, which gives the conditional identification with M^{111}. The zero sum 3(2) + 2(-3) = 0 gives the Gorenstein holomorphic cone with trivial canonical bundle; a Ricci-flat metric needs a separate argument.
+
+*The congruence of Proposition 2.4.* The congruence 2t + 3d + 6Y ≡ 0 (mod 6) holds on U, where (t, d, 6Y) = (-1, 0, 2), and on V, where (t, d, 6Y) = (0, 1, -3), and extends additively to tensor products and to conjugates, which reverse all three quantities. For a monomial in U, V and their conjugates, let Delta_U be the number of factors U minus the number of factors Ubar, and Delta_V likewise for V. Neutrality under U(1)_Y reads
+
+    2 Delta_U - 3 Delta_V = 0,
+
+so 3 | Delta_U and 2 | Delta_V. The triality of the monomial is -Delta_U ≡ 0 (mod 3) and d ≡ Delta_V ≡ 0 (mod 2): zero triality and integer weak isospin. This extends item (b) of Proposition 2.4 from the holomorphic monomials U^alpha V^beta to all monomials in U, V and their conjugates.
+
+*Dual action.* If U is the vector representation 3bar and projective space parametrizes its lines, the conventional pullback action on holomorphic coordinate functions is the dual 3: functions of degree 3k transform as Sym^{3k}(3). Treating U as formal field components gives Sym^{3k}(3bar) instead. The convention must be fixed consistently when identifying the 10 versus the 10bar and the later cohomology table.
+
+*Sasaki-Einstein normalization.* With the standard unit-sphere quotient metric, the two transverse Fubini-Study factors have relative scales 3/5 and 2/5. CP^2 is the base of the Hopf circle on the sphere of radius sqrt(3/5), with Ricci constant 6/(3/5) = 10, and CP^1 is the base of the Hopf circle on the sphere of radius sqrt(2/5), a round sphere of radius sqrt(2/5)/2 with Ricci constant 4/(2/5) = 10; so each has Ricci constant 10. A seven-dimensional Sasaki-Einstein metric needs transverse Ricci constant 8. The Sasaki metric obtained by the standard transverse homothety of factor 5/4 has the same underlying circle bundle and the required Einstein normalization. Thus the existence of the Sasaki-Einstein metric on that manifold is compatible with the quotient, and the initial round-sphere quotient metric is identified with it only after the rescaling.
+
+**Independent proof of Proposition 2.6, with the colour convention.**
+*From the referee report on the 11D line, section 'Proposition 2.6: flux assignments for one generation', transferred verbatim in substance on 4 Nov 2026.*
+
+Verdict of the referee: correct with amendments, conditional on global flux quantization. The bidegrees and the two linear solutions are correct with the cohomology convention of the file. With the colour action on the quotient fixed as in Theorem 2.1, that convention is conjugated and the first-component coefficients must be reversed.
+
+*The pairings.* The charges of the left-handed fields are F = 1 on all; chi = +1 on Q, L and -1 on u^c, d^c, e^c, nu^c; and B - L = 1/3, -1/3, -1/3, -1, 1, 1 on Q, u^c, d^c, L, e^c, nu^c. For (c_0, c_1) = (-9/4, -3/4), direct substitution in P^{(1)} = c_0 chi + c_1 (B - L) and P^{(2)} = (3F + chi)/2 gives
+
+    P_Q = (-5/2, 2),   P_{u^c, d^c} = (5/2, 1),   P_L = (-3/2, 2),   P_{e^c, nu^c} = (3/2, 1);
+
+for instance P_Q^{(1)} = -9/4 - 1/4 and P_L^{(1)} = -9/4 + 3/4. For (c_0, c_1) = (-3/2, -3), the quark pairings are unchanged (-3/2 - 1 = -5/2 and 3/2 + 1 = 5/2), and the first components for L and for e^c, nu^c are +3/2 and -3/2 respectively. Subtracting the formal shift (3/2, 1) yields exactly the listed integral bidegrees. On CP^2, the nonzero cohomology of a line bundle O(k) is H^0(O(k)) for k >= 0, or H^2(O(k)) ≅ H^0(O(-k - 3))^* for k <= -3; CP^1 has the analogous H^0/H^1 formula. So O(-4, 1) gives (3, 2), O(1, 0) gives 3bar, O(-3, 1) and O(0, 1) give (1, 2), and O(0, 0) and O(-3, 0) give a singlet, in the convention of the Setting. All listed choices have even total Dolbeault degree (0 or 2), so the common-chirality convention gives the indicated chiral index.
+
+*The colour convention.* If the base is P(3bar), as in the quotient of Theorem 2.1, then H^0(O(1)) = 3 and H^2(O(-4)) = 3bar, and the listed quark bundles carry the conjugates of the labelled colour representations. Replacing (c_0, c_1) by (9/4, 3/4) or (3/2, 3), with the second component unchanged, reverses the first pairings and exchanges O(1) with O(-4) for the quarks; this gives the labelled Q and u^c, d^c with the colour action of the quotient. Alternatively, the original table is valid for P(3), with the corresponding conjugate colour convention.
+
+*Without chi.* The required weak-doublet pairings have absolute value 2. Write P^{(2)} = alpha F + beta (B - L), so P_Q^{(2)} = alpha + beta/3 and P_L^{(2)} = alpha - beta. If the two signs for Q and L agree, then beta = 0 and |alpha| = 2, and u^c gets |P^{(2)}| = 2, the wrong absolute value for a weak singlet. If they disagree, say alpha + beta/3 = 2 and alpha - beta = -2, then beta = 3, alpha = 1, and u^c gets P^{(2)} = 1 - 1 = 0.
+
+*Without B - L.* Q and L have identical charges F = 1, chi = +1, so their pairings coincide, while they require colour pairings of absolute values 5/2 and 3/2 respectively.
+
+These obstructions use only absolute values, so they also allow independent source chiralities.
+
+*Global data.* The final line-bundle degrees are integral, but K^{1/2} itself is formal and the displayed coefficients include fractional flux components. An actual background requires a specified global gauge group, charge lattice, spin^c determinant and compatible flux quantization. The index calculation alone establishes neither those data nor the physical interpretation of the grading as a gauge connection.

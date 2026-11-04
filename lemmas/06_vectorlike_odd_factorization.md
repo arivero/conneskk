@@ -186,7 +186,7 @@ Conversely, pair equal entries of `Sigma` and choose `V=σ_2` on each pair. Then
 
 A single neutral Weyl state and its conjugate therefore **are** a KO-7 doubling, even without a Dirac partner. They cannot be a KO-5 doubling. The same statement holds for a single Majorana pair, whether its mass vanishes or not.
 
-**5. Proposition — The strict one-generation heavy limit is a KO-7 doubling, not a KO-5 doubling.**
+**5. Proposition — The strict one-generation heavy limit is a KO-7 doubling, and KO-5 is obstructed.**
 
 Here is an explicit convention for the Standard Model representation. Set
 \[
@@ -337,7 +337,7 @@ The heavy projection itself preserves KO-degree six, as [canonical §3 explicitl
 
 A subsequent choice of a KO-5 reduction removes a degree-one Clifford factor and gives the formal representative `4+5=9`. Such a reduction exists for the charged truncation or the pure-Dirac completion, but **both also admit KO-7 reductions**. Their fixed `J` does not select nine.
 
-For the strict light spectrum with one or three unpaired left neutrinos, **KO-5 is obstructed; only KO-7 is available among the proposed reductions**. This gives the formal representative eleven, not nine. If particle preservation is additionally required, that strict light spectrum admits neither reduction.
+For the strict light spectrum with one or three unpaired left neutrinos, **KO-5 is obstructed; only KO-7 is available among the proposed reductions**. This gives the formal representative eleven. If particle preservation is additionally required, that strict light spectrum admits neither reduction.
 
 **Proof.** These are Results 2–7. For completeness, the spacetime real structures are
 \[

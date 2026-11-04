@@ -94,7 +94,7 @@ Note that the choice in item 3 is an input: the domain does not force the wall a
 
 ## What remains open
 
-- Whether M_15(C) at the walls can be derived from a boundary condition instead of chosen, for example by a wall term that conserves quark number.
+- Whether a boundary condition, for example a wall term that conserves quark number, can derive M_15(C) at the walls, where at present it is chosen.
 - The treatment of nonzero masses, where order one fails on the block: the quadratic terms of lemma 19 for this algebra.
 - The sleptons: on an interval the (24, 1) + (1, 1) are vectors. Scalars in these representations need components along further internal directions, such as the base of [02](32_witten_spaces_hypercharge_quotient.md).
 - The colour sextets (10, 6) come with the antitriplets, and nothing removes them in this construction.

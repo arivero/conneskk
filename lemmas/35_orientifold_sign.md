@@ -48,6 +48,50 @@ In this reading the top is what completes E8 at a wall (7 = 2 x 3 + 1), and with
 
 ## 5. What remains open
 
-- The bulk symmetry: k D8-branes in the bulk carry U(k), while Proposition 8.1 gives O or USp on every eigenspace of d^2; the relation between the window's degenerate levels in the bulk and U(k) needs the parent's own structures, not only j.
+- The bulk symmetry: k D8-branes in the bulk carry U(k), while Proposition 8.1 gives O or USp on every eigenspace of d^2; the relation between the window's degenerate levels in the bulk and U(k) needs the parent's own structures in addition to j.
 - The dilaton: a spectral-triple counterpart of the type I' dilaton profile (a coupling varying along the interval, with slope set by the brane charge to one side) and the infinite-coupling points of Remark 8.3. Proposition 9.1 of [09](36_dilaton_spectral_and_so32.md) writes the profile as a trace of a function of |D_F|, only implicitly after [10](37_dilaton_and_second_scale.md), Proposition 10.1, and the gradient is not the second scale in the scope of Propositions 10.5 and 10.6 there.
 - The physical status of E8 x E7 with colour triples, and whether the top's brane at an E8 wall has a counterpart in the finite geometry.
+
+## Referee proofs (GPT-6.1 Terra, 4 November 2026)
+
+The arguments below are those of the referee report on the 11D line, written out in the notation of this lemma; the report in historical/reviews/ stays as the provenance record.
+
+**Independent proof of Proposition 8.1, with its caution.**
+*From the referee report on the 11D line, section 'Proposition 8.1: antiunitary commutants', transferred verbatim in substance on 4 Nov 2026.*
+
+On each finite-dimensional eigenspace E of d^2, the commutant of j in the unitary group of E is O(n) for j^2 = 1, and USp(n) for j^2 = -1, with even complex dimension n in the latter case.
+
+For j^2 = 1, the fixed points of j form a real subspace E_R with E = E_R ⊕ i E_R, and the inner product is real on E_R, since <jv, jw> = conj<v, w>. A real orthonormal basis of E_R is an orthonormal basis of E and identifies j with complex conjugation; the unitaries commuting with complex conjugation are the real orthogonal matrices, O(n). For j^2 = -1, a unit vector v and jv are orthogonal: antiunitarity gives <jv, j^2 v> = conj<v, jv> = <jv, v>, and j^2 v = -v gives <jv, j^2 v> = -<jv, v>, so <jv, v> = 0. The span of v and jv is j-invariant, and so is its orthogonal complement; induction gives a quaternionic orthonormal basis v_1, jv_1, ..., v_m, jv_m, with n = 2m. The unitaries commuting with j are then the compact symplectic group USp(n).
+
+*Caution.* This commutant is defined using j and the d^2-eigenspace alone. It need not commute with d, with the represented algebra, or with other physical structures. For example, on C^2 let j be complex conjugation and d = diag(1, -1): the commutant on the d^2 = 1 space is O(2), and a generic rotation does not commute with d. Moreover O(n) contains disconnected transformations, while SO(n) is its identity component for n >= 2. The orientifold comparison therefore requires an explicit Chan-Paton representation and compatibility with the rest of the data.
+
+**Independent proof of Proposition 8.2, with the multiplicities of |D|.**
+*From the referee report on the 11D line, section 'Proposition 8.2: endpoint channel multiplicities', transferred verbatim in substance on 4 Nov 2026.*
+
+For k independent channels at the same angle, the signed eigenvalue theta/l has multiplicity k in the interior and 2k at either endpoint. For 0 < theta < pi/2, only n = 0 in the positive progression gives +theta/l: (n pi + theta)/l = theta/l forces n = 0, and (n pi - theta)/l = theta/l forces theta = n pi/2, outside the interior. At zero both progressions have n = 0. At pi/2 the positive n = 0 and negative n = 1 branches coincide. This proves the claimed signed count.
+
+The multiplicity of the corresponding lowest eigenvalue of |D| is 2k in the interior (the values ±theta/l, k each), 2k at zero, and 4k at pi/2 (the values ±pi/(2l), 2k each). At zero the two interior signed eigenvalues simply coalesce; at pi/2 the next level also meets the window. Thus the signed count alone does not establish a doubling of independent physical Chan-Paton labels or an orientifold projection.
+
+**Independent proof of the arithmetic of Remark 8.3.**
+*From the referee report on the 11D line, section 'Remark 8.3: wall bookkeeping and enhancements', transferred verbatim in substance on 4 Nov 2026.*
+
+The slope and brane-count arithmetic below is conditional on the recalled type I' rules; the referee could not access the primary sources, and the second check later confirmed the slope rule and the E_{n+1} table against Polchinski-Witten and Bergman-Gaberdiel-Lifschytz (note at the remark). An enhancement requires tuning the coupling to a zero of z, and identifying the resulting E_2 factor with the physical electroweak sector requires additional data.
+
+Assume z' = c (8 - N), with c > 0, N(x) the number of D8-branes to the left of x, and z > 0 in the open interval.
+
+- *8 + 8.* N = 8 in the interior, so the interior slope is zero.
+- *16 + 0.* z' = -8c, and the empty far wall reaches z = 0 only when z(0) = 8cL.
+- *7 + 7.* With the other two branes at x_1 < x_2 in (0, L), the slopes are c, 0 and -c on (0, x_1), (x_1, x_2) and (x_2, L). Both walls have z = 0 precisely when
+
+      z(0) = 0,    x_1 + x_2 = L,
+
+  since z(L) = z(0) + c x_1 - c (L - x_2). Then z is positive in the interior. Thus "7 + 7 for E8 x E8" includes a coupling and a position condition.
+- *Isolated zeros.* With n branes at a wall where z = 0, the slope next to the wall is c (8 - n) at x = 0 and c (n - 8) at x = L, so z > 0 inside requires n <= 7: an isolated zero with a positive interior requires at most seven branes at that wall under this slope rule.
+- *15 + 1.* With the single brane at L, the slope is c (8 - 15) = -7c, so the far-wall zero is at z(0) = 7cL. Assuming the recalled E_{n+1} rule gives E_2, with Lie algebra su(2) ⊕ u(1), at that tuned wall. The rule alone does not determine the Standard Model charges, couplings, global group or embedding.
+
+*Colour triples.* If every light flavour moves as a triple and there is a single top brane, a wall holds 3j or 3j + 1 branes, so the allowed wall counts up to seven are 0, 1, 3, 4, 6, 7. Only a wall containing the top can have seven (7 = 2 x 3 + 1); two such walls require relaxing the triple constraint or the single-top assumption. For seven branes at 0, six at L, and the remaining triple at x_b, N = 7 on (0, x_b) and N = 10 on (x_b, L), so the slopes are +c and -2c. With z(0) = z(L) = 0, c x_b - 2c (L - x_b) = 0 gives x_b = 2L/3, and
+
+    z(x) = c x            for 0 <= x <= 2L/3,
+    z(x) = 2c (L - x)     for 2L/3 <= x <= L.
+
+The resulting E8 x E7 interpretation is conditional on the recalled enhancement rule and the proposed brane dictionary.

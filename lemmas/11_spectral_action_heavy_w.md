@@ -116,7 +116,7 @@ There is also a scope distinction for \(N_g\ne3\). Proposition 11.1 remains true
 \sum_fN_fm_f^2=\frac{8N_g}{3}M_W^2.
 \]
 
-Thus the \(N_g\)-generation version with coefficient \(8\) is an additional assumption, not the automatic extension of the cited normalization.
+Thus the \(N_g\)-generation version with coefficient \(8\) is an additional assumption beyond the cited normalization.
 
 ### [Corollary 11.2](11_spectral_action_heavy_w.md)
 

@@ -112,3 +112,90 @@ Hence, when the roots of theta G' - 4 G are isolated, a stationary branch has l 
 - The theta-independent Casimir coefficient a_0 of the flat family, which decides the runaway direction of Proposition 1.5, item 1.
 - A potential with a second scale that selects alpha < 1: the localized family of the audit is the first candidate, with G(l m, l mu) computable from the exact secular equations of lemma 09.
 - A fermion with both a fibre momentum and a base twist: on a nontrivial circle bundle (Witten spaces, file 02) the antiperiodic shift corresponds to a spin structure whose fibre circle does not lift the circle action. Which Witten spaces carry such a structure is an open item for the next job.
+
+## Referee proofs (GPT-6.1 Terra, 4 November 2026)
+
+The arguments below are those of the referee report on the 11D line, written out in the notation of this lemma; the report in historical/reviews/ stays as the provenance record.
+
+**Independent proof of Proposition 1.4.**
+*From the referee report on the 11D line, section 'Proposition 1.4: the one-loop endpoint and small-angle coefficient', transferred verbatim in substance on 4 Nov 2026.*
+
+Hypotheses: those of Theorem 9 of lemma 24, including n_f > 0 and its normalization. The result is relative to theta = 0 and leaves the theta-independent Casimir term open.
+
+Let
+
+    F(t) = int_0^infinity x^3 log(1 + t/sinh^2 x) dx,   t = sin^2 theta,
+
+so that, by equation (22) of lemma 24, 𝒱(t) = 8 pi^2 l^4 V(theta) = 3 F(2t(1 - t)) + (3/2) F((16/5) t(1 - t)) - n_f F(t). For every x > 0 the integrand increases strictly with t, so F is strictly increasing, and F(0) = 0. The two gauge terms are nonnegative and vanish at t = 1, where their arguments vanish; the fermion term -n_f F(t) is strictly decreasing for n_f > 0. Hence t = 1 is the unique global minimum.
+
+*Endpoint value.* At t = 1, 1 + 1/sinh^2 x = coth^2 x. With q = e^{-2x}, coth x = (1 + q)/(1 - q), so
+
+    log coth x = log(1 + q) - log(1 - q) = 2 sum_{k >= 1, k odd} e^{-2kx}/k,     int_0^infinity x^3 e^{-2kx} dx = 3!/(2k)^4.
+
+All terms are positive, so the series may be integrated term by term, and
+
+    F(1) = 2 int_0^infinity x^3 log coth x dx = 4 sum_{k odd} (1/k) 3!/(2k)^4 = (3/2) sum_{k odd} k^{-5} = (3/2)(1 - 2^{-5}) zeta(5) = 93 zeta(5)/64.
+
+Since 𝒱(0) = 0 and 𝒱(1) = -n_f F(1), division by 8 pi^2 l^4 gives the stated endpoint value V(pi/2) - V(0) = -93 zeta(5) n_f/(512 pi^2 l^4).
+
+*Small-angle coefficient.* Differentiation under the integral at t = 0 is allowed because x^3/sinh^2 x is integrable on (0, infinity). With 1/sinh^2 x = 4 e^{-2x}/(1 - e^{-2x})^2 = 4 sum_{n >= 1} n e^{-2nx},
+
+    F'(0) = int_0^infinity x^3/sinh^2 x dx = 4 sum_{n >= 1} n 3!/(2n)^4 = (3/2) sum_{n >= 1} n^{-3} = (3/2) zeta(3),
+
+which is J(0) in the proof of Proposition 1.4. The two gauge arguments 2t(1 - t) and (16/5) t(1 - t) have derivatives 2 and 16/5 at t = 0, with prefactors 3 and 3/2, so
+
+    𝒱'(0) = (3 * 2 + (3/2)(16/5) - n_f) F'(0) = (54/5 - n_f)(3/2) zeta(3).
+
+With t = sin^2 theta = theta^2 + o(theta^2), V(theta) - V(0) = 𝒱'(0) theta^2/(8 pi^2 l^4) + o(theta^2) = (3 zeta(3)/(16 pi^2))(54/5 - n_f) theta^2/l^4 + o(theta^2), the claimed coefficient. The exact vector formulas of lemma 23 vanish at theta = pi/2, where the lowest fermion mass is pi/(2l).
+
+**Counterexample (referee) to the universal conclusion of Proposition 1.5.**
+*From the referee report on the 11D line, section 'Proposition 1.5: scale-free potentials and the joint path', transferred verbatim in substance on 4 Nov 2026.*
+
+Verdict of the referee: an error in the universal conclusion, and correct with an amendment for isolated stationary angles. The derivative identities in the proof hold. The universal conclusion, that every stationary family has constant angle and that a second scale is necessary for the existence of a joint family, fails by the counterexample below.
+
+At fixed m > 0 put theta = l m. Then
+
+    d/dl V(l, l m) = l^{-5} (theta G'(theta) - 4 G(theta)).
+
+If a continuous stationary branch chooses an isolated positive root theta_*, then theta_* is constant along the branch and l = theta_*/m. A root interval gives a flat direction instead.
+
+*Counterexample.* Let G(theta) = theta^4 on a neighbourhood 0 <= theta < delta, with a C^1 extension to the angle domain. There
+
+    V(l, l m) = l^{-4} (l m)^4 = m^4
+
+is independent of l. For any 0 < alpha < 1, the family m = epsilon, l = epsilon^{-alpha} has theta = l m = epsilon^{1 - alpha} < delta for all sufficiently small epsilon, so it is stationary, and l m -> 0. The vector mass formula of Theorem 23.6 gives M_W l ~ sqrt 2 l m -> 0. The potential leaves this path undetermined and does not dynamically select it. A smooth extension can also be chosen with G(theta) >= theta^4 on the rest of the fundamental interval; then V(l, l m) >= m^4, with equality on l m < delta, and the example is a flat family of minima.
+
+*The specified flat one-loop determinant.* By Proposition 1.4, with a_0 the theta-independent Casimir coefficient,
+
+    G(theta) = a_0 + c theta^2 + o(theta^2),    theta G'(theta) - 4 G(theta) = -4 a_0 - 2 c theta^2 + o(theta^2),
+
+where c = (3 zeta(3)/(16 pi^2))(54/5 - n_f) is proportional to 54/5 - n_f (the expansion of G' follows from that of 𝒱', since 𝒱 is C^1 at t = 0). If c != 0, there is no sequence of positive stationary angles tending to zero, whether or not a_0 = 0: for a_0 != 0 the right side tends to -4 a_0, and for a_0 = 0 it equals -2 c theta^2 (1 + o(1)). In particular this covers every integer n_f under the displayed determinant. The tuned case c = 0 requires its higher-order term to be checked. The comparison with the audit's ansatz with q > 0, in the paragraph on the modulus target, is correct: the displayed quadratic contribution is l^{-4} c (l m)^2 = c m^2/l^2.
+
+*Free angle.* For a free angle, d/dl V = -4 l^{-5} G(theta); a nonzero minimized G produces the stated runaway, and a zero minimum leaves the length flat. At an endpoint of a constrained angle interval, the stationarity condition on G' must be understood one-sided.
+
+*Scope and direction.* The corrected fixed-angle result concerns isolated stationary roots of a scale-free C^1 potential. A flat modulus, a tuned higher-order potential, or additional dimensionful terms leave other families possible. A mechanism that selects a joint path with finite gauge couplings remains to be constructed.
+
+**Independent proof of the asymptotics of the localized family (audit, its §4).**
+*From the referee report on the 11D line, section 'Audit section 4 and file 01: localized joint family', transferred verbatim in substance on 4 Nov 2026.*
+
+The asymptotic light mass, the gap, the localization ratio and the exact tail identity follow analytically from the interval equations. The localized length includes a logarithmic factor, and so differs from the pure-power length of the boundary-angle family above. The numerical table of section H was not recomputed by the referee.
+
+Let c = mu l, s = kappa l, and s = c tanh s, the light-mode condition kappa = mu tanh(kappa l). For c > 1 there is a positive solution, and as c -> infinity it has s -> infinity and s/c = tanh s -> 1. Moreover
+
+    0 < c - s = c (1 - tanh s) = 2c e^{-2s}/(1 + e^{-2s}) <= 2c e^{-2s} -> 0.
+
+Therefore
+
+    m = mu sech s = 2 mu e^{-s}/(1 + e^{-2s}) ~ 2 mu e^{-s} ~ 2 mu e^{-c}.
+
+With mu = mu_* epsilon^alpha and c = (1 - alpha) log(1/epsilon) + c_0, e^{-c} = e^{-c_0} epsilon^{1 - alpha}, which gives m ~ 2 mu_* e^{-c_0} epsilon and l = c/(mu_* epsilon^alpha). The localization width is 1/kappa, so its ratio to l is 1/s ~ 1/c.
+
+The first oscillatory root y_1 = k_1 l of tan y = y/c satisfies pi < y_1 < 3 pi/2, since y/c > 0 is small for large c. The gap above the light pair is therefore
+
+    Delta = sqrt(mu^2 + k_1^2) = mu sqrt(1 + (k_1 l/c)^2) ~ mu = mu_* epsilon^alpha.
+
+Finally, s = c tanh s reads mu = kappa coth s, and with it m = mu sech s = kappa/sinh s. Then
+
+    m/(mu + kappa) = 1/(sinh s (coth s + 1)) = 1/(cosh s + sinh s) = e^{-s},    m^2 = kappa^2/sinh^2 s = kappa^2 (coth^2 s - 1) = (mu - kappa)(mu + kappa),
+
+and the first identity squared is e^{-2 kappa l} = (m/(mu + kappa))^2. This proves both displayed tail identities.
