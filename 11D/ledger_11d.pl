@@ -217,6 +217,33 @@ depends(d11_two_heavy, d11_transposition).
 depends(d11_two_heavy, d11_no_isometry).
 attempted_by(d11_two_heavy, claude).
 
+claim(d11_misaligned, proposition, proved, "Proposition 5.4 (computer-assisted, negative result, pending check)", "For none of the 192 assignments of the four types to three of the four family slots, aligned or misaligned as at the 9 label, is there an isometry of R^8 mapping S - T onto S - N.").
+source(d11_misaligned, '11D/05_colour_family_exchange.md', 'proposition-54-no-three-slot-assignment-admits-the-exchange').
+depends(d11_misaligned, d11_no_isometry).
+attempted_by(d11_misaligned, claude).
+checked_by(d11_misaligned, claude, python("exhaustive neighbour counts over 192 slot assignments, exact fractions, not kept")).
+referee_pending(d11_misaligned).
+
+claim(d11_four_slots, conjecture, conjectural, "Proposal 5.5", "If the families are the zero modes of an SU(4) bundle, the four slots are the fibre and three families are an index, so Propositions 5.1 and 5.4 do not apply as stated.").
+source(d11_four_slots, '11D/05_colour_family_exchange.md', 'proposal-55-four-slots-three-zero-modes').
+depends(d11_four_slots, d11_transposition).
+attempted_by(d11_four_slots, claude).
+
+%% ---------------------------------------------------------------- 06: the main point and the heterotic route
+claim(d11_wilson_top, proposition, proved, "Proposition 6.1", "The top channel of lemma 22 is an SO(32) Wilson-line channel with m_t = a/R.").
+source(d11_wilson_top, '11D/06_main_point_heterotic_route.md', '4-proposition-61-the-top-channel-as-an-so32-wilson-line').
+depends(d11_wilson_top, l22_window).
+depends(d11_wilson_top, l21_so30).
+attempted_by(d11_wilson_top, claude).
+checked_by(d11_wilson_top, claude, by_hand).
+referee_pending(d11_wilson_top).
+
+claim(d11_heterotic_route, conjecture, conjectural, "Sections 2, 3 and 5 (proposals)", "The heterotic web with its regimes 9, 10 and 11 realizes the target: D_F as a Wilson line, lemma 21's SO(30) x SO(2) as fifteen D8-branes and one displaced, and the composite scalars as open strings on the stack.").
+source(d11_heterotic_route, '11D/06_main_point_heterotic_route.md', '3-dictionary-proposal').
+depends(d11_heterotic_route, d11_wilson_top).
+depends(d11_heterotic_route, d11_circle).
+attempted_by(d11_heterotic_route, claude).
+
 %% ---------------------------------------------------------------- strategy
 strategy(t14, open, "Eleven dimensions from massless W and Z: the interval of H as an antiperiodic circle and as the M-theory circle; Witten's space M^{111} as the hypercharge quotient of the 5-bar; hypercharge from C_3, matter from wrapped branes, the Higgs as the M2 position; the magnetic completion AdS5 x CP^2 x S^2; the 84 of lemma 21 against C_3.").
 addresses(t14, d11_circle).  addresses(t14, d11_m_circle).  addresses(t14, d11_casimir).  addresses(t14, d11_scale_free).
@@ -230,3 +257,5 @@ addresses(t14, d11_blocks).  addresses(t14, d11_colour_families).  addresses(t14
 addresses(t12, d11_blocks).  addresses(t12, d11_m2m5_is_j).
 addresses(t14, d11_no_isometry).  addresses(t14, d11_transposition).  addresses(t14, d11_two_heavy).
 addresses(t12, d11_no_isometry).  addresses(t14, d11_flip).  addresses(t12, d11_transposition).
+addresses(t14, d11_misaligned).  addresses(t14, d11_four_slots).  addresses(t14, d11_wilson_top).  addresses(t14, d11_heterotic_route).
+addresses(t12, d11_heterotic_route).
