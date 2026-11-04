@@ -188,3 +188,64 @@ complex nine-dimensional linear \(SU(3)\) representation and the stated
 colour action on \(F_1,F_2\). Other dimensions, non-equivariant
 identifications, nonlinear or brane constructions, and maps that do not
 preserve the colour action remain possible directions.
+
+## Proposition 4.6: the graded E8 exchange
+
+**Verdict: Correct with amendment.** The dimension obstruction, the
+root-space action, and the \(SU(2)_I\) reflection are correct. The
+Chevalley involution is complex-linear; an antiunitary real structure
+requires an additional conjugation and a choice of Hermitian structure.
+Identifying a physical M2/M5 duality with that map remains a proposal.
+
+**Independent check.** The branching table gives
+\(\dim\mathfrak g_{1,1}=45\) and
+\(\dim\mathfrak g_{1,2}=18\), so no linear automorphism maps the first
+whole space onto the second. The Chevalley involution \(\theta\) sends
+each root space \(\mathfrak g_\alpha\) to
+\(\mathfrak g_{-\alpha}\); consequently it sends
+\(\mathfrak g_{a,b}\) to \(\mathfrak g_{-a,-b}\). It exchanges the
+two exterior-power sectors and preserves \(F_1,F_2\), which include each
+root together with its negative.
+
+Let \(\kappa\) be coefficient conjugation in a real Chevalley basis.
+Then \(J=\theta\kappa\) is antilinear and \(J^2=1\). With a compatible
+positive Hermitian form it is antiunitary. On the placed
+\(16+\overline{16}\) states, the grading taking signs \(+1,-1\) on
+family grades \(1,2\) obeys \(J\gamma=-\gamma J\). This establishes
+these two KO-6 signs for the constructed operators; it does not by itself
+establish the spectral-triple algebra, order conditions, or
+\(JD=DJ\). The complex-linear \(\theta\) alone cannot be the
+antiunitary \(J\).
+
+The \(SU(2)_I\) reflection sends \(T_3\) to \(-T_3\), so
+\(b=a+2T_3\) becomes \(b'=2a-b\pmod3\). It fixes \(b=1\) at
+\(a=1\) and exchanges \(b=0,2\), as stated.
+
+The dimension argument alone excludes an exchange of the **whole**
+joint-graded sectors. The exclusion of the top and neutrino **blocks**
+has an independent argument under the specified three-family embedding.
+In \(\mathfrak g_1=3_f\otimes27\), their grade-one parts are
+\[
+ T\cap\mathfrak g_1=\langle e_t\rangle\otimes U_t,\quad
+ \dim U_t=6;\qquad
+ N\cap\mathfrak g_1=3_f\otimes U_\nu,\quad
+ \dim U_\nu=2.
+\]
+An automorphism preserving the family grading preserves the two
+nonisomorphic simple ideals of
+\(\mathfrak g_0=\mathfrak{sl}_3\oplus\mathfrak e_6\). Its action on
+the irreducible tensor-product module \(\mathfrak g_1\) therefore
+factors as \(A\otimes B\), by the intertwining property and Schur's
+lemma. It sends a subspace supported on one family line to another
+subspace supported on one family line; it cannot give the neutrino
+subspace, whose family support is all of \(3_f\). The same argument
+applies when the family grading is inverted, with the conjugate module
+\(\mathfrak g_2\).
+
+**Scope and direction.** This concerns complex-linear automorphisms of
+the specified graded \(\mathfrak e_8\), the aligned
+\(3_f\otimes16\) embedding, and the top and neutrino blocks just
+described. Automorphisms that do not preserve or invert the family
+grading, other embeddings or state spaces, and dualities not represented
+by such an automorphism remain open directions. A physical M2/M5
+identification also requires its action on the fields and finite triple.

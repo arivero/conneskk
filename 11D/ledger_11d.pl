@@ -166,12 +166,12 @@ attempted_by(d11_yukawa_brackets, claude).
 checked_by(d11_yukawa_brackets, claude, by_hand).
 referee_pending(d11_yukawa_brackets).
 
-claim(d11_m2m5_is_j, proposition, proved, "Proposition 4.6 (negative result, pending check)", "In e8 with these two gradings the M2/M5 exchange is the Chevalley involution acting as the real structure J, which preserves both families and so does not exchange the top with the neutrinos.").
+claim(d11_m2m5_is_j, no_go, proved, "Proposition 4.6 (independently checked with amendment)", "In the specified aligned three-family embedding, a complex e8 automorphism preserving or inverting the family grading cannot exchange the top and neutrino blocks. The complex-linear Chevalley involution preserves both families; an antiunitary J requires an additional conjugation, and its identification with physical M2/M5 duality is a proposal.").
 source(d11_m2m5_is_j, '11D/04_two_families_m2_m5.md', '6-in-this-realization-the-m2m5-exchange-is-the-real-structure-j').
 depends(d11_m2m5_is_j, d11_e8_grading).
 attempted_by(d11_m2m5_is_j, claude).
 checked_by(d11_m2m5_is_j, claude, by_hand).
-referee_pending(d11_m2m5_is_j).
+checked_by(d11_m2m5_is_j, terra_6_1, by_hand).
 
 claim(d11_nu_gravity, conjecture, conjectural, "Section 7 (proposal)", "The state nu^c is the gravitational state, which agrees with its placement in the gravity sector of e8 for t = +1/2 and selects that sign.").
 source(d11_nu_gravity, '11D/04_two_families_m2_m5.md', '7-agreement-with-files-02-and-03-and-the-finite-geometry').

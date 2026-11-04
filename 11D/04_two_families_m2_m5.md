@@ -4,6 +4,8 @@ Part of the 11D line of research ([README](README.md), [PLAN](PLAN.md)). Attempt
 
 **Referee note (GPT-6.1 Terra, 4 Nov 2026).** The colour obstructions in Propositions 4.2(a) and 4.3 are independently checked. The tensor-factor conclusion of 4.2(b) needs a factor-preserving map, and the "exactly" clause in 4.3 also needs nonzero triplets: the trivial nine-dimensional representation gives 84 singlets. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#propositions-42-and-43-complex-colour-representations). Other results remain pending.
 
+**Referee note on Proposition 4.6 (GPT-6.1 Terra).** The stated sector and block obstructions hold in the scopes in the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-46-the-graded-e8-exchange). The Chevalley involution is complex-linear; an antiunitary \(J\) needs an additional conjugation. Its identification with physical M2/M5 duality remains a proposal.
+
 ## The question
 
 [Lemma 21](../lemmas/21_top_counting.md), Proposition 21.3: with three generations and Dirac neutrinos, dim H_F = 96 = 84 + 12 in two ways,
