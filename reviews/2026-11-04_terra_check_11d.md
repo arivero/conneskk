@@ -1479,8 +1479,8 @@ establish dynamical quark composites.
 **Verdict: Correct with amendments.** The charged momentum progressions
 match a channel of Lemma 22 after the stated identification of
 parameters. The \(SO(32)\) charged sector has 30 copies of that channel,
-and \(a/R\) is the lowest positive mass only on the chosen fundamental
-interval \(0\leq a\leq1/2\).
+and \(a/R\) is the lightest nonnegative mass on the chosen fundamental
+interval \(0\leq a\leq1/2\); it vanishes at \(a=0\).
 
 Complexifying the defining representation gives
 \(30\oplus1_{+1}\oplus1_{-1}\), hence
@@ -1564,3 +1564,55 @@ freely, while the full constraint still relates it to
 the stated signs. Distinct multiplets, other real structures or signs,
 derivative couplings, and circle or interval connection components remain
 possible directions; each requires its own field and boundary data.
+
+## Wording audit: results and proposals
+
+The original passages remain as authored records. The following
+qualifications apply to their summaries and readings.
+
+- File 01, Proposition 1.5, “Hence” and the modulus consequence:
+  isolated stationary angles give the stated scaling; flat directions
+  also permit other stationary paths. A second scale is a candidate for
+  selecting a joint path.
+- File 02, “What this file establishes”: the \(M^{111}\) identification
+  uses the recalled fibration and a metric normalization. The flux
+  examples do not establish that every construction must use the
+  grading or leave \(T_{3R}\) unfluxed.
+- File 03, “Summary of the direction”: the Betti-hypercharge,
+  wrapped-brane matter, Higgs-position and M2/M5 duality identifications
+  are proposals. Corollary 3.9 excludes tensor modes on the stated
+  quotient; its known escapes include other internal spaces, nonlinear
+  actions and brane realizations.
+- File 04, sections 6 and 7, and file 05, “Setting”: the Chevalley
+  involution is complex-linear. Constructing antiunitary \(J\) needs
+  additional conjugation, and its identification with physical
+  M2/M5 exchange remains a proposal. The colour-family conclusion
+  additionally assumes a factor-preserving map.
+- File 05, Proposal 5.5: the bundle index gives net chirality, and a
+  split bundle need not supply three distinct single-root slots. A
+  bundle and an induced action on its zero modes remain to be built.
+- File 06, sections 5 and 6: the Chan-Paton/composite identification is
+  a physical proposal; bilinear labels alone do not establish it.
+  The flat-direction qualification to Proposition 1.5 applies to the
+  proposed second scale.
+- File 07, sections 6b and 7: the brane-wall and \(E_8\)-holonomy
+  dictionary is proposed. The doubled-torus action in 7.3 is nonunital;
+  the repaired algebra is given in the 7.3 referral. The flat-direction
+  qualification also applies here.
+- File 08, sections 2–4: matching an antiunitary commutant with a
+  Chan-Paton symmetry and identifying the \(E_2\) wall with the
+  physical electroweak group require additional data. The wall
+  enhancement is conditional on the recalled rule and tuned coupling.
+- File 09, sections 1, 3–6: the SO(32) algebra and charge counts are
+  checked; the EPJC full-paper attribution, string dictionary,
+  orientifold projections and light interval scalars require the
+  stated further checks. KO signs alone permit a subspace of
+  \(S^2V\), and \(\Lambda^2\) of a line excludes one component.
+
+For the direct-statement rule, file 08 section 4 phrases the
+colour-triple restriction as “\(E_8\times E_8\) is not available ...;
+\(E_8\times E_7\) is”. A direct replacement is: “With colour triples,
+the proposed \(E_8\times E_7\) arrangement has seven and six branes at
+the walls and a bulk triple at \(2L/3\). Two \(E_8\) walls require
+relaxing the colour-triple rule.” No first-person-singular wording was
+found in files 01–09.

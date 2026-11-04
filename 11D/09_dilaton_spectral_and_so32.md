@@ -73,6 +73,8 @@ Item 2 is a negative statement with the following scope: the blocks of J-compati
 
 ## 6. Open
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The finite KO signs restrict the symmetric block without producing the full representation. Light interval scalar modes, their boundary conditions and the physical string dictionary remain to be constructed; the detailed EPJC comparison is pending.
+
 - Whether the type I' coupling, as a spectral function of D_F (Proposition 9.1), supplies the second scale of Proposition 1.5 in the flat family of lemmas 23 and 24.
 - The local dP_2 of the top's wall and its relation to the Witten base CP^2 x CP^1.
 - Spin: in type I' the strings of Proposition 9.2 belong to nine-dimensional vector multiplets, with one real scalar each (the relative position), the same gap as in Proposition 6.1. By Proposition 9.3 a finite triple in the labels 9 to 11 gives S²V, so the Λ²V scalars must come from the connection along the interval; the next computation is the inner fluctuations of the parent of lemma 22 with an SO(30) algebra, and whether its interval component carries Λ²V with the counts of lemma 21.

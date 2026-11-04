@@ -93,6 +93,8 @@ The family grading alone allows only epsilon_{ijk} in exact family SU(3); in com
 
 ## 6. In this realization the M2/M5 exchange is the real structure J
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** This heading describes a proposed physical identification. The Chevalley involution is complex-linear, and an antiunitary \(J\) needs additional conjugation; constructing the finite triple remains open. See the [wording audit](../reviews/2026-11-04_terra_check_11d.md#wording-audit-results-and-proposals).
+
 **Proposition 4.6.**
 
 1. No automorphism of e8 that preserves the family grading maps the C_3 sector of the matter, g_{1,1} (dimension 45), onto its C_6 sector, g_{1,2} (dimension 18).

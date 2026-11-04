@@ -108,4 +108,6 @@ Under the quotient realization, every Kaluza-Klein mode of C_3 (or of the metric
 
 ## Summary of the direction
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The physical identifications in this summary are proposals. The colour exclusions have the stated linear-representation and tensor-mode scopes; other internal spaces, nonlinear actions and brane realizations remain directions. See the [wording audit](../reviews/2026-11-04_terra_check_11d.md#wording-audit-results-and-proposals).
+
 The M2 and M5 details of lemma 21 enter in a specific place. Hypercharge is the C_3 vector of the Witten space with Killing spinors, the 5-bar consists of the N = 1 fivebrane baryons, the Higgs is the M2 position, and the M2/M5 exchange is the electric-magnetic duality of hypercharge. The count 84 of C_3 does not survive as a colour-equivariant identification. The next computations are in the README.

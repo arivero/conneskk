@@ -100,4 +100,6 @@ with (c_0, c_1) = (-9/4, -3/4) or (-3/2, -3). The bidegrees are Q: (-4, 1); u^c,
 
 ## What this file establishes, and the direction
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The \(M^{111}\) identification is conditional on the recalled fibration and metric normalization. The flux examples establish a particular construction and scoped obstructions; a general necessity for the grading flux remains open. See the [wording audit](../reviews/2026-11-04_terra_check_11d.md#wording-audit-results-and-proposals).
+
 The Witten space with Killing spinors is the hypercharge quotient of the 5-bar (Theorem 2.1), the count 7 is fixed by SU(5) (Proposition 2.2), and the Z_6 of the Standard Model is the kernel of the isometry action (Proposition 2.4). The price is that hypercharge is no longer an isometry, and no bosonic Kaluza-Klein mode carries triality, weak isospin 1/2 or fractional hypercharge. Kaluza-Klein chirality on the base needs fluxes that see the grading and leave T_3R free (Propositions 2.5 and 2.6). Both results point to states outside the Kaluza-Klein spectrum of Y_{3,2} for the quarks and leptons: [03](03_branes_hypercharge_and_the_84.md) takes them to be wrapped branes.

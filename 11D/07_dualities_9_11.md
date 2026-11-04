@@ -79,6 +79,8 @@ In this reading the 9 and 11 endpoints are the two ends of the brane's path, the
 
 ## 7. What this adds, and what remains open
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The brane and \(E_8\)-holonomy readings below are proposals. Proposition 7.3's displayed algebra action is nonunital; the corrected finite datum is in the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-73-doubled-torus-and-the-finite-algebra). Proposition 1.5 also permits flat directions.
+
 Added: the angle of the top channel lives on an interval whose ends are the two orientifold walls of type I' (7.1, 7.2); the corpus's one-loop vacuum puts the top brane on the far wall, the SO(32) Wilson line diag(1_30, −1_2); the same datum is an E8 holonomy in the eleven-dimensional frame; a torus with flux gives the colour form of the finite triple with KO-6 signs (7.3).
 
 Open:
