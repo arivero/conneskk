@@ -247,13 +247,13 @@ depends(d11_heterotic_route, d11_circle).
 attempted_by(d11_heterotic_route, claude).
 
 %% ---------------------------------------------------------------- 07: dualities between 9 and 11
-claim(d11_angle_interval, proposition, proved, "Proposition 7.1", "The angle of a channel of lemma 22 lives on the fundamental domain [0, pi/2], whose ends are the periodic and the antiperiodic spectra.").
+claim(d11_angle_interval, proposition, proved, "Proposition 7.1 (referee clarification)", "The signed channel spectrum has fundamental domain [0, pi/2], with doubly degenerate periodic and antiperiodic endpoint spectra; the lemma-22 window uses the strict interior.").
 source(d11_angle_interval, '11D/07_dualities_9_11.md', '3-proposition-71-the-angle-of-a-channel-lives-on-an-interval').
 depends(d11_angle_interval, l22_window).
 depends(d11_angle_interval, l23_wz).
 attempted_by(d11_angle_interval, claude).
 checked_by(d11_angle_interval, claude, by_hand).
-referee_pending(d11_angle_interval).
+checked_by(d11_angle_interval, terra_6_1, by_hand).
 
 claim(d11_far_wall, proposition, proved, "Proposition 7.2", "The top channel is the SO(32) Wilson line 1_30 + R(2 pi a) with a in [0, 1/2], and the one-loop minimum of lemma 24 is the far end a = 1/2, the top's D8-brane on the other wall.").
 source(d11_far_wall, '11D/07_dualities_9_11.md', '4-proposition-72-the-far-end-is-the-displaced-d8-brane-on-the-other-wall').

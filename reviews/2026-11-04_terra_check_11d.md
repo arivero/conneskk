@@ -943,6 +943,31 @@ three Einstein constants. Here “round factors” means the standard
 scaled Fubini-Study metric on \(\mathbb{CP}^2\) and round metric on
 \(S^2\).
 
+## Proposition 7.1: channel-angle fundamental domain
+
+**Verdict: Correct with clarification.** The stated fundamental domain
+classifies the signed channel spectrum, including its endpoint
+multiplicities. The endpoints require separate domains or limits, and
+the quotient of one spectrum need not identify complete physical
+backgrounds.
+
+The spectrum modulo \(\pi/\ell\) consists of the two residues
+\(\pm\theta/\ell\). Equality of two such multisets is equivalent to
+\(\theta'\equiv\pm\theta\pmod\pi\), giving the unique representative
+in \([0,\pi/2]\). In the interior the progressions are disjoint.
+At zero they coincide on \(\pi\mathbb Z/\ell\); at \(\pi/2\) they
+coincide on \((\mathbb Z+1/2)\pi/\ell\). Thus every endpoint
+eigenvalue has multiplicity two, including the zero at the first
+endpoint.
+
+The channel has two copies of the scalar antiperiodic circle spectrum
+at the second endpoint. Theorem 22.1 assumes the strict window
+\(\ell\|D_F\|<\pi/2\); \(\theta=\pi/2\) is the corresponding
+boundary-condition limit and its lowest level is degenerate. The
+massless electroweak vectors at that endpoint are a further conclusion
+of the specified two-grading model of Lemma 23, rather than a property
+of an arbitrary isolated channel.
+
 ## Proposition 6.1: the SO(32) Wilson-line spectrum
 
 **Verdict: Correct with amendments.** The charged momentum progressions
