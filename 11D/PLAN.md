@@ -4,7 +4,7 @@
 
 ## Current referee status
 
-GPT-6.1 Terra has addressed the requested analytic checks in the [referee report](../reviews/2026-11-04_terra_check_11d.md). The original scoped no-go results have two-model support; a third model remains needed for the ledger's general-consensus threshold. A new arbitrary-third-charge extension has a single-model argument and awaits an independent check. The full EPJC paper and several cited primary sources were unavailable, and the original localized-family numerical table was not recomputed.
+GPT-6.1 Terra has addressed the requested analytic checks in the [referee report](../reviews/2026-11-04_terra_check_11d.md). The original scoped no-go results have two-model support; a third model remains needed for the ledger's general-consensus threshold. The arbitrary-third-charge extension of the referee was checked by Claude Sonnet 5.5 on master. The full EPJC paper and several cited primary sources were unavailable, and the original localized-family numerical table was not recomputed.
 
 The no-go results concern the stated line-bundle fluxes, linear colour representations, invariant tensor modes, graded automorphisms or single-slot E8 root configurations. Their escapes include nonabelian bundles, additional charge directions, different internal actions and bundle zero modes. The misaligned-root neighbour counts have been corrected in the report.
 

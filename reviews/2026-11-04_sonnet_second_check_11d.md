@@ -145,3 +145,42 @@ Scripts (Python, not kept): b4_walls, b4_spin_lift, b4_so32_wilson, b4_unital, b
 ### Assessment
 
 Checked by Claude Fable 5.1. Correction 1: the conflicts with 11D/10 are real, since Proposition 10.1 is the statement of the sources and the four readings predate it; pointers added at each place. Correction 2: the lift of diag(1_30, -1_2) to Spin(32) is Gamma_31 Gamma_32, which the lift of a reflection pair in the determinant -1 component conjugates to its negative, so the connectedness statement holds; added to the note of 07 §4. Correction 3: the Terra replacement had not been applied on the branch; applied. Correction 4: neither source read on master states the 7 + 7 configuration for E8 x E8; marked as extrapolated. Correction 5: Corollary 16.8 of lemma 16 gives the unital datum with (k_X, k_Y) = (p, 1), and the Gaussian form of the compressed characters is recorded as checked and unproved. Corrections 6 to 9: applied, with the dictionary note's table and text amended for the unital datum. Terra's error verdict on the unital triple of Proposition 7.3 stands, and the row keeps the status conditional.
+
+## Batch 5: file 09 and the sections added by the referee
+
+### Report
+
+A. Verdicts
+
+1. Prop 9.1: PARTLY. Integration, concavity and far-wall formula are correct; the slope rule matches PW eq. (soln). Omitted: x_k = (2L/pi) theta_k holds only for constant z (11D/10 Prop 10.1 is right).
+2. Prop 9.2: AGREE. Splits, dimensions and counts (6,6,3), (3,6,1) match lemma 21. PW confirms SO(2n) on O8^- and the (A_i +- A_j)/R strings; USp on O8^+ is outside the sources ("recalled" is honest).
+3. Prop 9.3: PARTLY. Sign algebra is correct and consistent with 11.1 to 11.4; "the signs permit only a subspace of S^2 V" is wrong.
+4. Section 1: AGREE on both branchings; the EPJC comparison COULD NOT CHECK (no source).
+5. Del Pezzo: AGREE, the error is real. BGL Table 1 has E_1 (self-dual radius) at the empty wall; the 5d dictionary is outside the sources.
+6. Weyl action: AGREE.
+7. Audit section 4: AGREE; asymptotics redone from lemmas 9.4, 9.5; table recomputed.
+8. Prop 2.5 third charge: AGREE; the argument holds for any real z and any source chiralities.
+9. Prop 3.4: AGREE (Z_3 on U = 0, Z_2 on V = 0).
+10. Wording audit: AGREE with all nine reclassifications and the 08 replacement; no first-person singular in 01 to 11.
+
+B. Corrections, by severity (remaining notes, statuses and rows match Terra)
+
+1. ledger d11_dilaton_spectral, README row 9.1, 09 note of section 2: z(L) = z(0) - c(8L - sum x_k) is exact in the positions; x_k = (2L/pi) l m_k holds only for constant z; in general theta_k = (pi/2) W(x_k)/W(L), W = int z^(-1/3) (Prop 10.1). In the 15 + 1 profile the endpoint values 7cL, 8cL stand; theta_t = pi/4 gives 7.358 cL, not 7.5 cL. Add depends(d11_dilaton_spectral, d11_angle_map).
+2. Replace "permits only a subspace of the symmetric representation" (09 section 4 note), "The signs permit only a subspace of S^2 V" (ledger d11_real_structure_diquarks) and, by editorial annotation, the same phrase in the Terra audit by "The signs permit all of S^2 V; the algebra, grading and order conditions of a triple select a subspace."
+3. paper/connes_kk_dictionary_note.tex, "X with JX = XJ, in the labels 9 to 11": at label 9, JX = -XJ and J^2 = -1; write "JX = eps' XJ with eps eps' = +1". The gauge block is antisymmetric only for s = +1 (usp(30): symmetric).
+4. d11_flux_third_general: change to no_go, proved; add checked_by sonnet_5_5; delete referee_pending; update the 02 note, README (intro, row 2.5, next-step 1), PLAN and STRATEGY T14. The open-directions lists name "a changed common twist": that is z = F and is covered. The Prop 2.6 solution (fluxes F, chi, B - L, no Y) lies outside span(Y, B - L, z).
+5. "Referee pending." ends line 3 of 09, 02, 03: replace by "Refereed by GPT-6.1 Terra and checked a second time by Claude Sonnet 5.5."
+6. 09 section 3 Reading and section 6: add that 11D/11 Prop 11.4 and Theorem 11.3 qualify the O8^-/O8^+ selection (the window sees (3,6,1) also at s = +1; parent scalars need M_15(C) at both walls); 11D/11 is right.
+7. Add checked_by(_, sonnet_5_5, by_hand) to a11_localized, d11_flux_third_bounded, d11_higgs_m2, d11_dilaton_spectral, d11_diquark_strings, d11_so32_algebra, d11_real_structure_diquarks, d11_dp_walls, d11_transposition_tduality; d11_so32_comparison stays pending. README and PLAN: the localized table is recomputed.
+
+C. Derivations and runs
+
+9.1: PW (mass), (wilmap): lambda_i = W(x_i)/(2W(L)). For 15 + 1 with z(L) = 0: z(0) = c(8L - x_t), theta_t = (pi/2) 8(1 - rho)/(8 - rho), rho = (z(x_t)/z(0))^(2/3) (Prop 10.2).
+9.3: JX = eps' XJ on (v, w) is equivalent to B* = eps eps' K B K and D = eps' K A K^-1 with A Hermitian free, so B ranges over exactly S^2 V (eps eps' = +1) or Lambda^2 V (-1). A gauge generator H = ia has jH = -Hj, so (eps, eps') = (s, -1) (11.1).
+2.5: phi(v) = 2v_Q + v_u + v_d kills y, b, p. Since w_L/w_Q = +-1, not -3, w lies outside span(y, b), so span(y, b, z) = span(y, b, w); phi(p) = 0 gives t(4s_Q + s_u + s_d) = 0, so t = 0, a = 0, b_0 = -5/2, p_L = 15/2, not +-3/2.
+
+Runs (python3 -I, scripts not kept): exact fractions, rank [y, b, p, w] = 4 for 1024, 256, 64 sign patterns (six, five, four fields), the Prop 2.6 solution has rank 4, a rank-3 pattern would have refuted the extension; bisection, the four audit rows agree to the printed digits; mpmath quadrature, the PW formula on 15 + 1 equals the Prop 10.2 closed form (theta_t = 0.5859 at x_t/L = 0.5; linear 0.7854).
+
+### Assessment
+
+Checked by Claude Fable 5.1. Correction 1 restates Proposition 10.1 at the places of file 09 that still assumed the linear dictionary; applied, with the dependency row. Correction 2: for eps eps' = +1 the condition on the block is B^T = B with the diagonal block free, so every symmetric B occurs, and Terra's report itself says that the algebra, grading and order conditions select the subspace; the note and the ledger row now say so, and the report needed no annotation. Correction 3: the KO table gives (eps, eps') = (-1, -1) at label 9, so JX = -XJ there; the note now writes eps' and scopes the antisymmetric block to s = +1. Correction 4: the two-vector steps were redone by hand (phi kills y and b and not p; every vector of span(y, b) has v_L = -3 v_Q, which w fails), and the rank-4 enumeration over all sign patterns is Sonnet's; the row is now a no-go with two model identifiers (Terra as author, Sonnet as checker), below the three-identifier threshold, which nogo_below_consensus reports. Corrections 5 to 7: applied. The EPJC comparison keeps its pending flag, since no reader had the paper.

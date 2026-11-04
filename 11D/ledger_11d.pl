@@ -51,6 +51,7 @@ depends(a11_localized, l09_lightpair).
 attempted_by(a11_localized, astra6).
 checked_by(a11_localized, claude, python("11D/checks_11d.py section H: secular roots by bisection, the audit table and the identity")).
 checked_by(a11_localized, terra_6_1, by_hand).
+checked_by(a11_localized, sonnet_5_5, by_hand).
 
 %% ---------------------------------------------------------------- 02: Witten spaces as the hypercharge quotient
 claim(d11_quotient, theorem, conditional, "Theorem 2.1 (referee amendments)", "Y_{3,2} = (S^9 cap mu_Y^{-1}(0))/U(1)_Y is the circle bundle of O(3,2) over CP^2 x CP^1, with trivial-canonical cone and effective group (U(3) x U(2))/U(1)_Y. Its identification with M^{111} is conditional on the recalled fibration; the Sasaki-Einstein metric requires rescaling the natural quotient metric.").
@@ -95,12 +96,13 @@ source(d11_flux_third_bounded, '11D/02_witten_spaces_hypercharge_quotient.md', '
 attempted_by(d11_flux_third_bounded, claude).
 checked_by(d11_flux_third_bounded, claude, python("11D/checks_11d.py section D: bounded third-charge search")).
 checked_by(d11_flux_third_bounded, terra_6_1, by_hand).
+checked_by(d11_flux_third_bounded, sonnet_5_5, by_hand).
 
-claim(d11_flux_third_general, conjecture, conjectural, "Third-charge extension (independent referee pending)", "An analytic argument extends the one-line-bundle exclusion to any real third charge and independent source chiralities; an independent model check remains pending. Fourth charges, a changed twist, and nonabelian bundles remain open directions.").
+claim(d11_flux_third_general, no_go, proved, "Third-charge extension (Terra; checked by Sonnet)", "In the one-line-bundle setting of Proposition 2.5, adding any real third charge z to Y and B - L, with independent source chiralities, gives no generation: the vectors y, b, p, w have rank 4 for every sign pattern, so no three-dimensional span of charges carries both pairing components. A changed common twist is the case z = F and is covered. Open: fourth charges and nonabelian bundles; the solution of Proposition 2.6 lies outside span(Y, B - L, z).").
 source(d11_flux_third_general, 'reviews/2026-11-04_terra_check_11d.md', 'proposition-25-adding-a-third-charge').
 attempted_by(d11_flux_third_general, terra_6_1).
 checked_by(d11_flux_third_general, terra_6_1, by_hand).
-referee_pending(d11_flux_third_general).
+checked_by(d11_flux_third_general, sonnet_5_5, python("rank of [y, b, p, w] over all sign patterns, exact fractions; not kept")).
 
 claim(d11_flux_fit, proposition, conditional, "Proposition 2.6 (referee amendments)", "With fluxed charges F, chi and B - L the displayed line bundles give a one-generation index in the stated colour convention. The quotient's colour action conjugates the quark bidegrees, and the global gauge group, charge lattice and spin^c flux quantization must be specified.").
 source(d11_flux_fit, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-26-one-generation-from-a-universal-charge-the-grading-and-b---l').
@@ -136,6 +138,7 @@ source(d11_higgs_m2, '11D/03_branes_hypercharge_and_the_84.md', 'proposal-34-the
 depends(d11_higgs_m2, d11_betti_y).
 attempted_by(d11_higgs_m2, claude).
 checked_by(d11_higgs_m2, terra_6_1, by_hand).
+checked_by(d11_higgs_m2, sonnet_5_5, by_hand).
 
 claim(d11_ads5, proposition, proved, "Proposition 3.5", "AdS5 x CP^2 x S^2 with G_4 = f_1 vol(CP^2) + f_2 J ^ vol(S^2) solves eleven-dimensional supergravity with R_AdS = -(f_1^2 + 2 f_2^2)/6, R_CP2 = f_1^2/3 + f_2^2/6, R_S2 = 2 f_2^2/3 - f_1^2/6; round factors iff abs(f_1) < 2 abs(f_2). Supersymmetry, stability and flux quantization not checked.").
 source(d11_ads5, '11D/03_branes_hypercharge_and_the_84.md', 'proposition-35-a-magnetic-completion-ads5-x-cp2-x-s2').
@@ -354,13 +357,15 @@ depends(d11_orientifold_reading, d11_wall_multiplicity).
 attempted_by(d11_orientifold_reading, claude).
 
 %% ---------------------------------------------------------------- 09: the dilaton as a spectral function, SO(32) of the EPJC paper
-claim(d11_dilaton_spectral, proposition, conditional, "Proposition 9.1 (referee clarification)", "Given the recalled slope rule and sixteen selected channel values m_k, z is z(0) plus c Tr g_x(l |D_F|) over that channel space, and the far-wall zero condition is z(0) = (2cL/pi)(4 pi - l Sigma m_k). The full physical trace has additional multiplicities.").
+claim(d11_dilaton_spectral, proposition, conditional, "Proposition 9.1 (referee clarification; second check)", "Given the slope rule of Polchinski-Witten and sixteen selected channels, z(L) = z(0) - c (8L - sum x_k) exactly in the positions; the reading as a trace of a function of l |D_F| over that channel space holds for constant z, and in general through theta_k = (pi/2) W(x_k)/W(L) (11D/10, Proposition 10.1). The full physical trace has additional multiplicities.").
 source(d11_dilaton_spectral, '11D/09_dilaton_spectral_and_so32.md', '2-proposition-91-the-type-i-coupling-function-is-a-trace-of-a-function-of-the-finite-dirac-operator').
 depends(d11_dilaton_spectral, d11_angle_interval).
+depends(d11_dilaton_spectral, d11_angle_map).
 depends(d11_dilaton_spectral, d11_e_walls).
 attempted_by(d11_dilaton_spectral, claude).
 checked_by(d11_dilaton_spectral, claude, by_hand).
 checked_by(d11_dilaton_spectral, terra_6_1, by_hand).
+checked_by(d11_dilaton_spectral, sonnet_5_5, by_hand).
 
 claim(d11_diquark_strings, proposition, conditional, "Proposition 9.2 (referee amendments)", "The antitriplet counts are (6, 6, 3) in the antisymmetric block and (3, 6, 1) in the symmetric block; the single-line antisymmetric component vanishes. The orientifold projections and physical string identification are conditional.").
 source(d11_diquark_strings, '11D/09_dilaton_spectral_and_so32.md', '3-proposition-92-diquarks-as-strings-between-the-stack-and-its-image').
@@ -369,6 +374,7 @@ depends(d11_diquark_strings, d11_wilson_top).
 attempted_by(d11_diquark_strings, claude).
 checked_by(d11_diquark_strings, claude, by_hand).
 checked_by(d11_diquark_strings, terra_6_1, by_hand).
+checked_by(d11_diquark_strings, sonnet_5_5, by_hand).
 
 claim(d11_orientifold_scalars, conjecture, conjectural, "Reading of section 3 (proposal)", "The seesaw sign of Proposition 8.1 and the scalar counts of Proposition 9.2 select the same orientifold type, O8^-.").
 source(d11_orientifold_scalars, '11D/09_dilaton_spectral_and_so32.md', '3-proposition-92-diquarks-as-strings-between-the-stack-and-its-image').
@@ -391,8 +397,9 @@ depends(d11_so32_algebra, d11_diquark_strings).
 attempted_by(d11_so32_algebra, claude).
 checked_by(d11_so32_algebra, claude, by_hand).
 checked_by(d11_so32_algebra, terra_6_1, by_hand).
+checked_by(d11_so32_algebra, sonnet_5_5, by_hand).
 
-claim(d11_real_structure_diquarks, no_go, proved, "Proposition 9.3 (independently checked with amendment)", "For an antiunitary J exchanging V and Vbar and a Hermitian J-compatible X, the particle-antiparticle block obeys B = eps eps' B^T. For KO labels 9, 10, 11 the sign is +1, excluding nonzero antisymmetric blocks within one multiplet. The signs permit only a subspace of S^2 V; actual fluctuations and interval scalar modes require further construction.").
+claim(d11_real_structure_diquarks, no_go, proved, "Proposition 9.3 (independently checked with amendment)", "For an antiunitary J exchanging V and Vbar and a Hermitian J-compatible X, the particle-antiparticle block obeys B = eps eps' B^T. For KO labels 9, 10, 11 the sign is +1, excluding nonzero antisymmetric blocks within one multiplet. The signs permit all of S^2 V; the algebra, grading and order conditions of a triple select a subspace, and interval scalar modes are treated in 11D/11.").
 source(d11_real_structure_diquarks, '11D/09_dilaton_spectral_and_so32.md', '4-proposition-93-the-real-structure-decides-between-the-two-diquark-counts').
 depends(d11_real_structure_diquarks, d11_diquark_strings).
 depends(d11_real_structure_diquarks, l06_factorization).
@@ -401,18 +408,21 @@ depends(d11_real_structure_diquarks, d11_wilson_top).
 attempted_by(d11_real_structure_diquarks, claude).
 checked_by(d11_real_structure_diquarks, claude, by_hand).
 checked_by(d11_real_structure_diquarks, terra_6_1, by_hand).
+checked_by(d11_real_structure_diquarks, sonnet_5_5, by_hand).
 
 claim(d11_dp_walls, conjecture, conjectural, "Section 5, item 1 (referee amendment)", "The E-type wall and local del Pezzo correspondence is conditional on the recalled dualities. The usual E_1 and tilde E_1 engineering assignments distinguish P1 x P1 from dP_1; dP_2 has the expected A1 root.").
 source(d11_dp_walls, '11D/09_dilaton_spectral_and_so32.md', '5-two-more-dualities-between-9-and-11-recalled-proposals').
 depends(d11_dp_walls, d11_e_walls).
 attempted_by(d11_dp_walls, claude).
 checked_by(d11_dp_walls, terra_6_1, by_hand).
+checked_by(d11_dp_walls, sonnet_5_5, by_hand).
 
 claim(d11_transposition_tduality, conjecture, conjectural, "Section 5, item 2 (referee clarification)", "The colour-family Weyl transposition conjugates an E8 holonomy and is a Narain lattice automorphism. An exchange relative to fixed physical structures requires compatibility with the full background.").
 source(d11_transposition_tduality, '11D/09_dilaton_spectral_and_so32.md', '5-two-more-dualities-between-9-and-11-recalled-proposals').
 depends(d11_transposition_tduality, d11_transposition).
 attempted_by(d11_transposition_tduality, claude).
 checked_by(d11_transposition_tduality, terra_6_1, by_hand).
+checked_by(d11_transposition_tduality, sonnet_5_5, by_hand).
 
 %% ---------------------------------------------------------------- strategy
 %% The strategy fact of T14 is in ../ledger.pl; both lines address it.

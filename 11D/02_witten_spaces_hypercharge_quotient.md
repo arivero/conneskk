@@ -74,7 +74,7 @@ The second entry is 2j + 1 and the first is +-5/2 on colour triplets and +-3/2 o
 
 *Scope note (4 Nov 2026, after the referee).* The statement on equal images and the linearity of 2j + 1 assume a common ten-dimensional chirality for the fields. The conclusion holds without it: in the span of 6Y and 3(B - L) the charges of L are -3 times those of Q, so their second pairings are P_2(L) = -3 P_2(Q), against |P_2| = 2 on both doublets.
 
-**Referee note on the third-charge search (GPT-6.1 Terra, 4 Nov 2026).** The bounded search below has an independent analytic proof. The same argument extends to any real third charge and independent source chiralities; this stronger extension awaits an independent check. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-25-adding-a-third-charge).
+**Referee note on the third-charge search (GPT-6.1 Terra, 4 Nov 2026).** The bounded search below has an independent analytic proof. The same argument extends to any real third charge and independent source chiralities; this stronger extension was checked by Claude Sonnet 5.5 (second check: the vectors y, b, p, w have rank 4 for every sign pattern), so it stands as a no-go in the same scope with two model identifiers. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-25-adding-a-third-charge).
 
 **Statement.** In the setting above, with the canonical spin^c root and fluxes only in U(1) directions spanned by Y and B - L (any flux quanta), no choice reproduces one generation, with or without nu^c. More generally, the pairing must give u^c and d^c the same image, and 2j + 1 = (2, 1, 1, 2, 1, 1) on (Q, u^c, d^c, L, e^c, nu^c) must be a linear function of the fluxed charges.
 
