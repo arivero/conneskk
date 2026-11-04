@@ -25,6 +25,13 @@ Lemma 21: 96 = 84 + 12 in two ways, F1 = all but the top, F2 = all but the neutr
 7. [open] E11 levels (C_3 at level 1, C_6 at level 2, dual graviton at level 3) as a test of the assignment 10 -> C_3, 5bar -> C_6 or gravity, 1 -> gravity or C_6 beyond E8.
 8. [open, earlier rounds] Second-scale potential selecting the joint family (01, Proposition 1.5); W, Z masses from the resolution on the M2 side (03); spinors on Y_{3,2} (prompts/astra_11d_01.md); referee of the folder (prompts/terra_check_11d.md, extend to 04).
 
+## Round of 4 Nov 2026, second request
+
+The four-family result (05) is not acceptable as physics: the investment in SO(30) is five light quarks with three families. Two tasks:
+
+A. **Four back to three.** (A1) Decide whether any three-family set of E8 roots that is a union of whole colour multiplets admits an isometry exchanging the top block with the neutrino block; allow the 9-label relaxation in which SU(2)_L is off, so that up quarks, down quarks, charged leptons and neutrinos occupy family slots independently (misaligned slots, a CKM-like freedom). (A2) If none, state the obstruction in its scope (Proposition 5.1 covers aligned families).
+B. **The main point: 9 and 11 as limits of the modern spectral triple.** (B1) State the target precisely (the three records of canonical §1: KO class, metric dimension, physics), with the modern triple = KO-6 real triple with order one, fermion doubling, H_F of dimension 96, A_F = C + H + M_3(C) or the grand algebra. (B2) Collect what the corpus and this folder give toward it. (B3) Propose a concrete route and its first computable test.
+
 ## How to continue
 
 Write each result in 04 or a new numbered file, label it (Theorem, Proposition, Conjecture, No-go with scope), add ledger rows in ledger_11d.pl with `referee_pending/1`, update the results table of README.md and INDEX.md (`python3 -I tools/index_links.py toc FILE` gives the anchors; `python3 -I tools/index_links.py check` must report 0 bad), run `swipl -g run_tests -t halt ledger.pl`, commit and push to `11D`.
