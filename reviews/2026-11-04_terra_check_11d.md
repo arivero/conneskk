@@ -1103,6 +1103,52 @@ coalesce; at \(\pi/2\) the next level also meets the window. Thus
 the signed count alone does not establish a doubling of independent
 physical Chan-Paton labels or an orientifold projection.
 
+## Remark 8.3: wall bookkeeping and enhancements
+
+**Verdict: Correct with amendments, conditional on the recalled
+type-I' rules.** The slope and brane-count arithmetic checks out.
+An enhancement requires tuning the coupling to a zero of \(z\), and
+the identification of the resulting \(E_2\) factor with the physical
+electroweak sector requires additional data.
+
+Assume \(z'=c(8-N)\), \(c>0\), and \(z>0\) in the open interval.
+The \(8+8\) placement has zero interior slope. For \(16+0\),
+\(z'= -8c\), and the empty far wall reaches \(z=0\) only when
+\(z(0)=8cL\). For \(7+7\) with the other two branes at
+\(x_1,x_2\in(0,L)\), both walls have \(z=0\) precisely when
+\[
+ z(0)=0,\qquad x_1+x_2=L.
+\]
+Then \(z\) is positive in the interior. Thus “\(7+7\) for
+\(E_8\times E_8\)” includes a coupling and position condition.
+More generally, an isolated zero with a positive interior requires
+at most seven branes at that wall under this slope rule.
+
+For \(15+1\) with the single brane at \(L\), the slope is
+\(-7c\), so the far-wall zero is at \(z(0)=7cL\). Assuming the
+recalled \(E_{n+1}\) rule gives \(E_2\), with Lie algebra
+\(\mathfrak{su}(2)\oplus\mathfrak u(1)\), at that tuned wall. The
+rule alone does not determine the Standard Model charges, couplings,
+global group or embedding.
+
+If every light flavour moves as a triple and there is a single top
+brane, the allowed wall counts up to seven are
+\(0,1,3,4,6,7\). Only a wall containing the top can have seven;
+two such walls require relaxing the triple constraint or the single-top
+assumption. For seven branes at \(0\), six at \(L\), and the remaining
+triple at \(x_b\), the slopes are \(+c\) and \(-2c\). With
+\(z(0)=z(L)=0\), integration gives \(x_b=2L/3\), and
+\[
+ z(x)=\begin{cases}cx,&0\leq x\leq2L/3,\\
+                    2c(L-x),&2L/3\leq x\leq L.
+       \end{cases}
+\]
+The resulting \(E_8\times E_7\) interpretation is conditional on
+the recalled enhancement rule and the proposed brane dictionary.
+Direct access to the cited primary sources was unavailable; their
+normalization and the string-theory enhancement are not independently
+verified here.
+
 ## Proposition 6.1: the SO(32) Wilson-line spectrum
 
 **Verdict: Correct with amendments.** The charged momentum progressions

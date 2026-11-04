@@ -292,11 +292,12 @@ attempted_by(d11_wall_multiplicity, claude).
 checked_by(d11_wall_multiplicity, claude, by_hand).
 checked_by(d11_wall_multiplicity, terra_6_1, by_hand).
 
-claim(d11_e_walls, conjecture, conjectural, "Remark 8.3 (conditional on recalled rules and the dictionary of 06)", "In the configuration 15 + 1 with the top's brane on the far wall, that wall enhances to SU(2) x U(1) at infinite coupling while the light-quark wall keeps SO(30), conditional on recalled type I' rules.").
+claim(d11_e_walls, conjecture, conjectural, "Remark 8.3 (referee amendments)", "The wall slope arithmetic is conditional on the recalled type I' rule; enhancements require tuned coupling, and 7 + 7 needs two bulk positions summing to L. The E_2 physical electroweak identification remains open.").
 source(d11_e_walls, '11D/08_orientifold_sign.md', '4-remark-83-e8-walls-from-15--1-conditional').
 depends(d11_e_walls, d11_heterotic_route).
 depends(d11_e_walls, d11_far_wall).
 attempted_by(d11_e_walls, claude).
+checked_by(d11_e_walls, terra_6_1, by_hand).
 
 claim(d11_orientifold_reading, conjecture, conjectural, "Readings of sections 2 and 3", "The odd factorizations of labels 11 and 9 have the symmetry types of O^- and O^+ orientifold planes, and wall channels carry the Chan-Paton counts of D8-branes on the planes.").
 source(d11_orientifold_reading, '11D/08_orientifold_sign.md', '2-proposition-81-the-factorization-sign-fixes-orthogonal-or-symplectic-symmetry').
