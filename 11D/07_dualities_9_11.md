@@ -59,6 +59,16 @@ The construction is the torus analogue of lemma 16 (a doubled parent with restri
 
 For U(N) matrices X^i (i = 1, ..., 9) that are block-diagonal, X^i = ⊕_a x_a^i 1_{n_a} with distinct points x_a in R^9, the commutant of all X^i is ⊕_a M_{n_a}(C), and the fermion operator Γ^i ad(X^i) on the adjoint, with the sixteen-component spinor of Spin(9), vanishes on the diagonal blocks and has eigenvalues ±|x_a − x_b|, each with multiplicity eight times the block size n_a n_b, on the off-diagonal blocks (a, b). With stacks of sizes 1, 2, 3 the commutant is C + M_2(C) + M_3(C), the complex form of A_F, the off-diagonal blocks are bifundamentals as in the Krajewski diagrams of the finite geometry, and the masses are the distances between stacks; coincident stacks restore U(N), the analogue of massless W and Z, and large N is the eleven-dimensional limit. A quaternionic factor H needs an orientifold projection on the two-stack, and chirality needs more than the nine Hermitian matrices.
 
+## 6b. The three labels in type I' variables (proposal)
+
+Hypothesis H has two parameters for the top channel: the interval length l and the angle θ = l m_t in [0, pi/2] (Proposition 7.1). In the type I' reading of Proposition 7.2 they are the length of the interval and the position of the top's D8-brane as a fraction of it. Then:
+
+- **label 9:** θ = pi/2 at fixed l, the brane on the far orientifold wall: the top at the tower scale pi/(2l) (lemma 22, Corollary 22.9: W, Z and top at the tower scale in the 10 -> 9 family), the antiperiodic tower, and the one-loop minimum of the flat family (lemma 24);
+- **label 10:** 0 < θ < pi/2, the brane between the walls, a window below the tower;
+- **label 11:** θ -> 0 together with l -> infinity, the joint family of 01 (θ_epsilon ~ epsilon^{1 − alpha}): the brane returns to the stack, SO(32) is restored on that channel, and the interval opens.
+
+In this reading the 9 and 11 endpoints are the two ends of the brane's path, the far wall and the stack, and the second scale required by Proposition 1.5 must fix how l grows as the brane returns. The flat one-loop potential pushes the brane to the far wall (label 9); reaching label 11 needs a term that pulls it back to the stack while the interval grows.
+
 ## 7. What this adds, and what remains open
 
 Added: the angle of the top channel lives on an interval whose ends are the two orientifold walls of type I' (7.1, 7.2); the corpus's one-loop vacuum puts the top brane on the far wall, the SO(32) Wilson line diag(1_30, −1_2); the same datum is an E8 holonomy in the eleven-dimensional frame; a torus with flux gives the colour form of the finite triple with KO-6 signs (7.3).
