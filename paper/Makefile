@@ -1,5 +1,5 @@
 # Each paper in two forms: Phys Rev two-column, and one column of the same width for phones.
-PAPERS = towerless_intervals chiral_limit_note boundary_condition_note
+PAPERS = towerless_intervals chiral_limit_note boundary_condition_note joint_limit_note
 .PHONY: all supplement docs clean
 all: $(PAPERS:%=%.pdf) $(PAPERS:%=%_mobile.pdf)
 

@@ -50,7 +50,7 @@ The identification "the two sheets are a truncated interval, with length proport
 
 ## Papers
 
-The project is larger than one paper. Current plan: `paper/towerless_intervals.tex` (the towerless picture, with proofs as Supplemental Material) `paper/chiral_limit_note.tex` (T10, lemma 17, a short note), and `paper/boundary_condition_note.tex` (T13, lemmas 22 and 23, a short note). Further results can have their own notes. Steer for the next paper: mass generation from D = 9 to D = 4 and the QCD and Fermi scales (T13, [note](d9_masses_fermi_qcd_steer.md)).
+The project is larger than one paper. Current plan: `paper/towerless_intervals.tex` (the towerless picture, with proofs as Supplemental Material) `paper/chiral_limit_note.tex` (T10, lemma 17, a short note), `paper/boundary_condition_note.tex` (T13, lemmas 22 and 23, a short note), and `paper/joint_limit_note.tex` (T14, T0, lemmas 28 to 30, a short note). Further results can have their own notes. Steer for the next paper: mass generation from D = 9 to D = 4 and the QCD and Fermi scales (T13, [note](d9_masses_fermi_qcd_steer.md)).
 
 ## Ranked list
 

@@ -17,6 +17,9 @@ part 24 lemmas/24_*.md
 part 25 lemmas/25_*.md
 part 26 lemmas/26_*.md
 part 27 lemmas/27_*.md
+part 28 lemmas/28_*.md
+part 29 lemmas/29_*.md
+part 30 lemmas/30_*.md
 part "L (literature check and record of searches)" LITERATURE.md
 part "R1 (assessment of Farsi-Latremoliere, with the counterexample to their Theorem 3.4)" reviews/2026-11-03_farsi_latremoliere_assessment.md
 part "R2 (referee report, lemmas 08, 13, 14)" reviews/2026-11-03_terra_check_08_13_14.md
