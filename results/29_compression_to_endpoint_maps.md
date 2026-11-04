@@ -15,4 +15,4 @@
 
 **Proof.** Lemma 29, Theorem 29.9; the proof is there. It is Theorem 28.15 with eta_M = O(M^{-1/2}) from Theorems 29.7 and 29.11; the normal first moments are O(M^{-1/2}) at the core, by the Gaussian decay of the model, and O(M^{-1}) at the wall. At the core, F in Hom_K(4, (1, 2) (x) (1, 3)) kills (2, 1), so B = 2 P_x; at the wall the density is a sum over channels with the weights of Proposition 28.13.
 
-**What it leaves open.** The quaternionic defect of the core block at finite mass (30_quaternionic_defect.md), the joint limit with the dilation (30_joint_limit_disc_bundle.md), and the connector, the quaternionic grading and the chirality of the physical spectrum, which stay inputs.
+**What it leaves open.** The quaternionic defect of the core block at finite mass (30_quaternionic_defect.md), the joint limit with the dilation (30_joint_limit_disc_bundle.md), and the connector of Proposition 28.20 and the quaternionic grading of Proposition 28.19, which stay inputs (lemma 29, Scope).
