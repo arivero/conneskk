@@ -2,6 +2,8 @@
 
 Part of the 11D line of research ([README](README.md)). Propositions 1.1, 1.4 and 1.5 are proved here; Proposal 1.3 is a dictionary to be tested. The joint-limit family of the section of that name is from the Astra 6 audit of 3 Nov 2026 ([reviews/2026-11-03_astra_audit_d11.md](../reviews/2026-11-03_astra_audit_d11.md), §3 and §4), restated here in circle language and checked. Attempted by Claude (Anthropic), 3 Nov 2026; checks in Python, [checks_11d.py](checks_11d.py), sections F, F2 and H. Referee pending.
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** Proposition 1.1 and the joint family's Weyl constant are independently checked; the unfolded circle is scalar, and even extensions of arbitrary smooth interval functions need not be smooth at the fixed points. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-11-and-the-joint-family-interval-unfolding). Proposition 1.5 is amended at its statement below.
+
 **Correction (3 Nov 2026).** There was an error in the first version of Proposition 1.4: it read the potential of lemma 24 as the whole energy of the walls, but that potential is taken relative to theta = 0 and omits the theta-independent Casimir energy. The corrected statement is below; the reading "the walls attract" is withdrawn. The first version of Proposal 1.3 also placed the W at the bottom of the tower, M_W ~ 1/(2R), along every path to v = 0; after the audit (its §2.2), that holds only on the scale-free path of Proposition 1.5.
 
 ## Setting

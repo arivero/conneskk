@@ -9,7 +9,7 @@ source(d11_circle, '11D/01_interval_and_eleventh_dimension.md', 'proposition-11-
 depends(d11_circle, l05_truncation).
 attempted_by(d11_circle, claude).
 checked_by(d11_circle, claude, by_hand).
-referee_pending(d11_circle).
+checked_by(d11_circle, terra_6_1, by_hand).
 
 claim(d11_m_circle, conjecture, conjectural, "Proposal 1.3", "The circle of H is the M-theory circle: v -> 0 along the joint family (weak masses below a descending tower, Wilson-line angles -> 0) is strong coupling with the D0 (momentum) tower becoming light; v -> infinity is a shrinking circle with antiperiodic fermions and no bulk fermions, as in type 0 strings; light fermions of the 9 endpoint come from branes or walls.").
 source(d11_m_circle, '11D/01_interval_and_eleventh_dimension.md', 'proposal-13-the-circle-of-h-as-the-m-theory-circle').
@@ -39,6 +39,7 @@ depends(a11_joint_limit, l22_window).
 depends(a11_joint_limit, l22_compression).
 attempted_by(a11_joint_limit, astra6).
 checked_by(a11_joint_limit, claude, python("11D/checks_11d.py section H: window, gap and Weyl constant on exact spectra")).
+checked_by(a11_joint_limit, terra_6_1, by_hand).
 
 claim(a11_localized, proposition, proved, "Audit, section 4", "Bulk mass mu = mu_* epsilon^alpha with mu l = (1 - alpha) log(1/epsilon) + c_0: light mass ~ 2 mu_* e^{-c_0} epsilon, gap ~ mu_* epsilon^alpha, localization width over l -> 0; exact tail identity e^{-2 kappa l} = (m/(mu + kappa))^2.").
 source(a11_localized, 'reviews/2026-11-03_astra_audit_d11.md', '4-a-localized-family-with-the-same-hierarchy').

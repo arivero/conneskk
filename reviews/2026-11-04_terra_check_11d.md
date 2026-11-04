@@ -9,6 +9,49 @@ the scoped no-go results. The ledger flags fewer than three model
 identifiers as below its general-consensus threshold; a third independent
 check remains open.
 
+## Proposition 1.1 and the joint family: interval unfolding
+
+**Verdict: Correct with a counting clarification.** The unitary,
+domains, operator, grading and Weyl constant are correct. A scalar
+antiperiodic circle has the quoted single-circle count; a circle with an
+additional \(\mathbb C^2\) fibre would have twice that count.
+
+For \(0<x<\ell\), the inverse of the displayed \(W\) is
+\[
+ L(x)=\frac{u(x)+u(-x)}{\sqrt2},\qquad
+ R(x)=\frac{u(x)-u(-x)}{i\sqrt2}.
+\]
+The pointwise norm identity on the pair \(x,-x\) proves unitarity.
+For \(H^1\) functions, continuity across \(0\) gives \(R(0)=0\), and
+antiperiodicity at \(\pm\ell\) gives \(L(\ell)=0\). Differentiating on
+the two open halves gives \(WD_\ell W^{-1}=-i\partial_x\). Reflection
+exchanges the two values and hence sends \(R\) to \(-R\), giving the
+displayed grading. The reflection fixes both base points; in the
+antiperiodic fibre it acts as \(+1\) at \(0\) and \(-1\) at \(\ell\).
+
+Multiplication by \(f\in C^\infty([0,\ell])\) becomes multiplication by
+\(f(|x|)\). This even extension is generally Lipschitz rather than smooth
+at the fixed points; smoothness on the circle requires the odd boundary
+derivatives to vanish. The operator-algebra statement remains valid.
+
+For the joint family, Theorems 22.1 and 22.4 give the exact window, the
+gap and the stated compression bound after substitution of
+\(D_F=\varepsilon D_*\) and
+\(\ell=\ell_*\varepsilon^{-\alpha}\). Since
+\(\alpha<\beta<1\), the cutoff \(\varepsilon^\beta\) is eventually
+above the \(r\) window eigenvalues and below the rest. For each of the
+\(r/2\) singular-value channels, the two signed progressions of spacing
+\(\pi/\ell\) contribute \(4\ell E/\pi+O(1)\) states in
+\([-E,E]\). Thus
+\[
+ N_\varepsilon(E)=\frac{2r\ell_\varepsilon E}{\pi}+O(r).
+\]
+One scalar circle from Proposition 1.1 has \(2\ell E/\pi+O(1)\)
+states; the original interval's two components have been unfolded into
+that single scalar fibre. The phrase “on the circle ... fibre
+\(\mathbb C^2\)” in the original check would double the count if read
+as an extra circle fibre.
+
 ## Proposition 1.5: scale-free potentials and the joint path
 
 **Verdict: Error in the universal conclusion; correct with amendment for
