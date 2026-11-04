@@ -614,6 +614,21 @@ literal triplet-tensor restriction, but its mode functions and
 intersections must be supplied before identifying the physical Yukawa
 matrix.
 
+## File 04, section 8: the discrete grade
+
+**Verdict: Correct** as a selection rule for the single element
+\(s_M\), assuming it survives the breaking. For \(t=+1/2\), the grades
+are \(b(10)=b(H_u)=1\), \(b(\bar5_{16})=b(N)=2\), and
+\(b(H_d)=b(\nu^c)=0\). Adding grades modulo three gives zero for the
+listed Yukawas, \(NH_uH_d\), \((\nu^c)^2\),
+\(LLH_uH_u\) and \(LH_u\). It gives nonzero grade for
+\(H_uH_d\), \(QQQL\), \(u^cu^cd^ce^c\), \(LLe^c\),
+\(LQd^c\) and \(u^cd^cd^c\).
+
+Additional unbroken symmetries may impose further restrictions. In
+particular, the family \(\mathbb Z_3\) has to be considered separately
+if it is also retained.
+
 ## Proposition 4.6: the graded E8 exchange
 
 **Verdict: Correct with amendment.** The dimension obstruction, the

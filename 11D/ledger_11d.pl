@@ -186,7 +186,7 @@ source(d11_discrete_z3, '11D/04_two_families_m2_m5.md', '8-remark-a-discrete-sym
 depends(d11_discrete_z3, d11_e8_grading).
 attempted_by(d11_discrete_z3, claude).
 checked_by(d11_discrete_z3, claude, by_hand).
-referee_pending(d11_discrete_z3).
+checked_by(d11_discrete_z3, terra_6_1, by_hand).
 
 %% ---------------------------------------------------------------- 05: the colour-family exchange
 claim(d11_no_isometry, no_go, proved, "Proposition 5.1 (independently checked)", "As configurations of E8 roots in the specified aligned three-family embedding, the two families of 84 have equal pair counts but are not isometric, so no element of W(E8) maps F1 onto F2 and no isometry of H_F maps the top block onto the neutrino block.").
