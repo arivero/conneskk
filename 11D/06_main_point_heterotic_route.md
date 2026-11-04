@@ -24,7 +24,7 @@ Recalled facts (Polchinski and Witten, hep-th/9510169; Hořava and Witten, hep-t
 - **10:** the two heterotic strings, both chiral, distinct.
 - **11:** M-theory on an interval (Hořava-Witten), with an E8 multiplet on each wall, chiral at the walls; the length of the interval grows with the string coupling.
 
-This is the pattern of hypothesis H: vectorlike at 9, chiral and KO-6 at 10, chiral walls at 11, with an interval whose two ends are the two sheets. The steer's remark places SO(32) at the non-chiral end and E8 × E8 at the chiral end; in this web the two meet at 9.
+This is the pattern of hypothesis H: vectorlike at 9, chiral and KO-6 at 10, chiral walls at 11, with an interval whose two ends are the two sheets. In this web the chiral/non-chiral split is a split between dimensions: both heterotic strings are chiral at 10, and at 9 both are the same non-chiral theory. The two groups differ by their descriptions: SO(32) has the open-string description (type I, type I') and no eleven-dimensional end, and E8 × E8 has the eleven-dimensional end (Hořava-Witten) and no perturbative open-string description. The steer's assignment of chirality to the groups therefore does not hold as stated, which was noted on 4 Nov 2026. The pair of supergravity limits of eleven dimensions, on a circle (type IIA, non-chiral) and on the interval S^1/Z_2 (Hořava-Witten, chiral), matches hypothesis H more closely than the heterotic pair, since by Proposition 1.1 of [01](01_interval_and_eleventh_dimension.md) the finite grading is the reflection of an antiperiodic circle, so the two cases differ by whether the reflection is quotiented; whether the Z_2 action C_3 -> −C_3 of Hořava-Witten has a counterpart on the finite data is open.
 
 ## 3. Dictionary (proposal)
 
