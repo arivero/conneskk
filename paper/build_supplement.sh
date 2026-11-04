@@ -23,6 +23,7 @@ part 27 lemmas/27_*.md
 part 28 lemmas/28_*.md
 part 29 lemmas/29_*.md
 part 30 lemmas/30_*.md
+for f in 11D/README.md 11D/0*.md 11D/1*.md; do part "11D ($(basename $f .md), referee pending)" "$f"; done
 part "L (literature check and record of searches)" LITERATURE.md
 part "R1 (assessment of Farsi-Latremoliere, with the counterexample to their Theorem 3.4)" reviews/2026-11-03_farsi_latremoliere_assessment.md
 part "R2 (referee report, lemmas 08, 13, 14)" reviews/2026-11-03_terra_check_08_13_14.md
@@ -38,6 +39,10 @@ part "R11 (referee report, lemma 24)" reviews/2026-11-03_terra_check_24.md
 part "R12 (referee report, lemma 26)" reviews/2026-11-03_terra_check_26.md
 part "R13 (referee report, lemma 27 and additions to lemma 26)" reviews/2026-11-03_terra_check_27.md
 part "R14 (Astra validation of the ledger, citations and steer note)" reviews/2026-11-03_astra_validation_corrections.md
+part "R15 (Terra referee, lemma 28)" reviews/2026-11-03_terra_check_28.md
+part "R16 (Terra referee, lemma 29)" reviews/2026-11-04_terra_check_29.md
+part "R17 (Terra referee, lemma 30 and the joint-limit note)" reviews/2026-11-04_terra_check_30_note.md
+part "R18 (assessment of the Astra audit)" reviews/2026-11-04_outside_audit_assessment.md
 # unicode-math needs braces around font commands in sub- and superscripts
 perl -i -pe 's/([\^_])\\(mathcal|mathbb|mathrm|mathsf|mathfrak|mathbf|operatorname|text)(\{[^{}]*\}| *[A-Za-z])/$1\{\\$2$3\}/g' "$OUT"
 HDR=paper/.supp_header.tex
