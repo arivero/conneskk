@@ -24,40 +24,40 @@
 
 \begin{document}
 
-\title{Finite spectral windows and the massless electroweak limit of seven-dimensional parents}
+\title{Finite spectral windows in seven-dimensional parents: towards the massless electroweak limit}
 \date{Draft, 4 November 2026}
 
 \begin{abstract}
-The statement that a Kaluza-Klein dimension opens as the $W$ and $Z$ become massless needs a family, since along a general path to $M_W=M_Z=0$ no tower opens. We give families with the hierarchy $m\ll E_\varepsilon\ll\Delta\to0$: a moving low-energy window keeps a fixed finite number of states, and a fixed positive energy resolves more and more of the parent. On an interval this follows from exact formulas. On the disc bundle of $\Lambda^2_-T^*S^4$, a connected seven-dimensional commutative parent with boundary $\CP^3$, we prove for a chosen class of metrics that a local Dirac operator with a Callias potential has exactly eight light states, one copy of the $\mathbf 4$ of $Sp(2)$ at each end, with exponentially small mixing, and that real functions compress to the two-sheet finite maps generating $M_2(\H)\oplus M_4(\C)$. Along a family with logarithmically growing potential and expanding metric, the eight states stay separated at the moving scale, and the spectrum at fixed energy has seven-dimensional Weyl growth. The proofs rest on exact sums of squares given by $Sp(2)$-equivariance. The vector poles on the disc bundle, the gauge couplings, the connector of the real bimodule and any dynamics selecting the family remain open.
+The statement that a Kaluza-Klein dimension opens as the $W$ and $Z$ become massless needs a family, since along a general path to $M_W=M_Z=0$ no tower opens. We give families with the hierarchy $m\ll E_\varepsilon\ll\Delta\to0$ in which a moving low-energy window keeps a fixed finite number of states and the count at fixed positive energy diverges. On an interval this follows from exact formulas, and in a five-dimensional toy the vector poles follow the same hierarchy. On the disc bundle of $\Lambda^2_-T^*S^4$, a connected seven-dimensional commutative parent with boundary $\CP^3$, we treat a fermion window: for a chosen class of metrics, a local Dirac operator with a Callias potential has exactly eight light states, one copy of the pseudoreal $\mathbf 4$ of $Sp(2)$ near each end, with exponentially small mixing, and real functions compress to the two-sheet finite maps generating $M_2(\H)\oplus M_4(\C)$. Along a family with logarithmically growing potential and expanding metric, the eight states stay separated at the moving scale, and the count at fixed energy has seven-dimensional Weyl growth. The proofs rest on exact sums of squares given by $Sp(2)$-equivariance. On the disc bundle no calculation identifies the tunnelling scale with $M_W$ or $M_Z$: the vector poles, the gauge couplings, the connector of the real bimodule, the chirality of the physical spectrum and any dynamics selecting the family remain open.
 \end{abstract}
 
 \maketitle
 
 \section{Introduction}
 
-In the towerless reading of almost-commutative geometry \cite{towerlesspaper}, a finite spectral triple is the low-energy window of a parent with an internal geometry, and the labels 9 and 11 are limits of an even interior at finite Fermi constant, where the physical point lies. The limit towards 11 is the one in which the $W$ and $Z$ become massless and a dimension opens. This note asks what that statement can mean.
+In the towerless reading of almost-commutative geometry proposed in \cite{towerlesspaper}, a finite spectral triple is the low-energy window of a parent with an internal geometry, and the labels 9 and 11 are limits of an even interior at finite Fermi constant, where the physical point would lie. In that proposal, the limit towards 11 is the one in which the $W$ and $Z$ become massless and a dimension opens. This note asks what that statement can mean.
 
 It needs a path. On the interval of \cite{boundarynote}, the vector masses obey $\sin^2(M_Wl)=\tfrac12\sin^2 2\theta$, so $\theta\to0$ at fixed $l$ makes them vanish with the tower spacing fixed. The criterion we use is a hierarchy along a family indexed by $\varepsilon\to0$,
 \begin{equation}\label{eq:hierarchy}
 m_\varepsilon\ll E_\varepsilon\ll\Delta_\varepsilon\to0,
 \end{equation}
-with $m_\varepsilon$ the light scale and $\Delta_\varepsilon$ the first discarded level. Then a window at the moving scale $E_\varepsilon$ holds a fixed number of states, while the count at any fixed $E>0$ diverges. The two observations have different limits, and this reconciles a finite description near the weak scale with a tower at fixed energy.
+with $m_\varepsilon$ the light scale and $\Delta_\varepsilon$ the first discarded level. Then a window at the moving scale $E_\varepsilon$ holds a fixed number of states. The hierarchy alone does not make the count at fixed $E>0$ diverge, so we require that as a separate property, and prove it for each family below. For such a family the two observations have different limits, which reconciles a finite description near the weak scale with a tower at fixed energy.
 
 The results of Sections~\ref{sec:interval} and \ref{sec:cylinder}, and the formulation of \eqref{eq:hierarchy}, follow an outside audit of this project (see the Provenance). The new content is Section~\ref{sec:window} and what rests on it: a window obtained from a local operator on a connected seven-dimensional parent, rather than prescribed.
 
 \section{The interval}\label{sec:interval}
 
-Let $(H_F,D_*,J_F,\Gamma_F)$ have the signs of KO-dimension six, with $r=\dim H_F$. For $0<\alpha<1$, let $D_F=\varepsilon D_*$ and $l_\varepsilon=l_*\varepsilon^{-\alpha}$, and let $D_\varepsilon$ be the derivative on the interval with the boundary conditions that realize $D_F$ exactly \cite{boundarynote}. Its signed spectrum is $(n\pi\pm\theta_k)/l$, $n\in\mathbb Z$, with $\theta_k=l\sigma_k$ and $\sigma_k$ the singular values of the block of $D_F$.
+Let $(H_F,D_*,J_F,\Gamma_F)$ have the signs of KO-dimension six, with $r=\dim H_F$ and an algebra $A_F$ acting through $\pi$, as in \cite{boundarynote}. For $0<\alpha<1$ and $l_*>0$, let $D_F=\varepsilon D_*$ and $l_\varepsilon=l_*\varepsilon^{-\alpha}$, and let $D_\varepsilon$ be the derivative on the interval with the boundary conditions that realize $D_F$ exactly \cite{boundarynote}. Its signed spectrum is $(n\pi\pm\theta_k)/l$, $n\in\mathbb Z$, with $\theta_k=l\sigma_k$ and $\sigma_k$ the singular values of the block of $D_F$.
 
 \begin{theorem}\label{thm:interval}
 For small $\varepsilon$, an isometry $W_\varepsilon$ gives $W_\varepsilon^*D_\varepsilon W_\varepsilon=\varepsilon D_*$, with $J_F$ and $\Gamma_F$ exact, and
 \begin{equation}
 \begin{aligned}
-\Delta_\varepsilon&\ge\frac{\pi}{l_*}\varepsilon^\alpha-\varepsilon\|D_*\|,\\
+\Delta_\varepsilon&=\frac{\pi}{l_*}\varepsilon^\alpha-\varepsilon\|D_*\|,\\
 \|Q_\varepsilon(a)-\pi(a)\|&\le\tfrac23l_*^2\|D_*\|^2\varepsilon^{2(1-\alpha)}\|a\|.
 \end{aligned}
 \end{equation}
-For $\alpha<\beta<1$ and $E_\varepsilon=E_*\varepsilon^\beta$, the number of levels with $|D_\varepsilon|\le E_\varepsilon$ is $r$. For fixed $E>0$ it is asymptotic to $(2rl_*E/\pi)\,\varepsilon^{-\alpha}$.
+For $\alpha<\beta<1$, $E_*>0$ and $E_\varepsilon=E_*\varepsilon^\beta$, the number of levels with $|D_\varepsilon|\le E_\varepsilon$ is $r$. For fixed $E>0$ it is asymptotic to $(2rl_*E/\pi)\,\varepsilon^{-\alpha}$.
 \end{theorem}
 
 This is a direct consequence of the exact formulas (\supp{30}): $l_\varepsilon\|D_F\|\to0$, and $\varepsilon\ll\varepsilon^\beta\ll\varepsilon^\alpha$. The finite data remain inputs, the wall data vary by hand, and a fixed Majorana block does not scale as $\varepsilon D_*$, so an application to an electroweak Dirac block needs a reducing sector.
@@ -66,28 +66,28 @@ In the five-dimensional Yang-Mills toy of \cite{boundarynote}, with universal ma
 \begin{equation}
 M_W^2\simeq2m_\varepsilon^2,\qquad M_Z^2\simeq\tfrac{16}{5}m_\varepsilon^2,
 \end{equation}
-and the vector poles follow \eqref{eq:hierarchy}. The small-mass coefficients of the finite spectral action in the fully massive family are $3$ and $24/5$. The sum rule of \cite{boundarynote}, $M^2=\tfrac12(3-d_{\mathrm{eff}}(s))\,\|[D_F,T]\|^2/\|T\|^2$ with $s=l\Lambda$, connects the two pairs: $d_{\mathrm{eff}}=0$ gives the finite values, and $d_{\mathrm{eff}}=1$ the interval values. Along $\Lambda=E_\varepsilon$ we have $s\to0$, and at fixed $\Lambda$ we have $s\to\infty$. Varying the cutoff of the action is an additional prescription.
+and the vector poles follow \eqref{eq:hierarchy}. The small-mass coefficients of the finite spectral action, in the family with both members of each doublet at one Dirac mass and no Majorana mass, are $3$ and $24/5$. The leading Taylor quotient of \cite{boundarynote}, $M^2=\tfrac12(3-d_{\mathrm{eff}}(s))\,\|[D_F,T]\|^2/\|T\|^2$ with $s=l\Lambda$, connects the two pairs at the level of this coefficient: $d_{\mathrm{eff}}=0$ gives the finite values, and $d_{\mathrm{eff}}=1$ the interval values. It does not identify the spectral-action pole problem with the Yang-Mills toy. Along $\Lambda=E_\varepsilon$ we have $s\to0$, and at fixed $\Lambda$ we have $s\to\infty$; a joint use needs a remainder uniform in $s$. Varying the cutoff of the action is an additional prescription.
 
-A family closer to the geometry below uses localization instead of boundary angles. With a bulk mass $\mu_\varepsilon=\mu_*\varepsilon^\alpha$ and $c_\varepsilon=\mu_\varepsilon l_\varepsilon=(1-\alpha)\log(1/\varepsilon)+c_0$, the light pair has $m=\mu\,\mathrm{sech}\,\kappa l$ with $\kappa l=c\tanh\kappa l$, so that
+A family closer to the geometry below uses localization instead of boundary angles. With a bulk mass $\mu_\varepsilon=\mu_*\varepsilon^\alpha$ and a new length $l^{\mathrm{loc}}_\varepsilon=c_\varepsilon/\mu_\varepsilon$, where $c_\varepsilon=(1-\alpha)\log(1/\varepsilon)+c_0$, the light pair has $m=\mu\,\mathrm{sech}\,\kappa l$ with $\kappa l=c\tanh\kappa l$, so that
 \begin{equation}
-m_\varepsilon\sim2\mu_*e^{-c_0}\varepsilon,\qquad\Delta_\varepsilon\sim\mu_*\varepsilon^\alpha,\qquad\frac{1/\kappa}{l_\varepsilon}\to0.
+m_\varepsilon\sim2\mu_*e^{-c_0}\varepsilon,\qquad\Delta_\varepsilon\sim\mu_*\varepsilon^\alpha,\qquad\frac{1/\kappa}{l^{\mathrm{loc}}_\varepsilon}\to0.
 \end{equation}
 The widths and the length both grow, with a shrinking ratio. Writing the profile as $e^{-\kappa x}-re^{\kappa x}$, the opposite-wall coefficient is exactly $r=(m/(\mu+\kappa))^2$, quadratic in the light mass.
 
 \section{A cylinder with a prescribed window}\label{sec:cylinder}
 
-Let $A$ be the Dolbeault-Dirac operator of $\CP^3$ twisted by $\mathcal O(1)$, with kernel $\C^4$ and first nonzero level $\Delta_K$, and let $\mathcal D_r=E\partial_x+ZA/r$ on $I_l\times\CP^3$, with the spectral walls of \supp{24}. Taking $r_\varepsilon=r_*\varepsilon^{-\gamma}$ and the family above, the next level is at least $\min\{(\Delta_K/r_*)\varepsilon^\gamma,\,(\pi/l_*)\varepsilon^\alpha-\varepsilon\|D_*\|\}$, so a cutoff $E_*\varepsilon^\beta$ with $\max(\alpha,\gamma)<\beta<1$ isolates the window, and the count at fixed energy grows as $l_\varepsilon r_\varepsilon^6E^7$. For $\gamma=\alpha$ all seven directions expand homothetically. So \eqref{eq:hierarchy} is compatible with seven internal dimensions, for $4+7=11$. The window here is imposed by nonlocal walls.
+Let $A$ be the Dolbeault-Dirac operator of $\CP^3$ twisted by $\mathcal O(1)$, with kernel $\C^4$ and first nonzero level $\Delta_K$, and let $\mathcal D_r=E\partial_x+ZA/r$ on $I_l\times\CP^3$, with the spectral walls of \supp{24}, which prescribe finite data on this $\C^4$, with gradings of type $(2,2)$, so here $r=4$. Taking $r_\varepsilon=r_*\varepsilon^{-\gamma}$ and the scaling of Theorem~\ref{thm:interval}, the next level is at least $\min\{(\Delta_K/r_*)\varepsilon^\gamma,\,(\pi/l_*)\varepsilon^\alpha-\varepsilon\|D_*\|\}$, so a cutoff $E_*\varepsilon^\beta$ with $\max(\alpha,\gamma)<\beta<1$ isolates the window, and the count at fixed energy grows as $l_\varepsilon r_\varepsilon^6E^7$, by Dirichlet and Neumann bracketing. For $\gamma=\alpha$ all seven directions expand homothetically. So \eqref{eq:hierarchy} is compatible with seven internal dimensions, for $4+7=11$. The window here is imposed by nonlocal walls.
 
 \section{A window from a local operator}\label{sec:window}
 
-Let $X$ be the disc bundle of $\Lambda^2_-T^*S^4$, with $G=Sp(2)$, $K=Sp(1)_a\times Sp(1)_b$, and $H=Sp(1)_a\times U(1)_b$. It has zero section $S^4$ and boundary $\CP^3$, and a smooth function has independent values at the two ends. Let $E=S^3(S)$, and let $J$ be the spin-$\frac32$ action on it. On $X$ take
+Let $X$ be the disc bundle of $\Lambda^2_-T^*S^4$, with $G=Sp(2)$, $K=Sp(1)_a\times Sp(1)_b$, and $H=Sp(1)_a\times U(1)_b$. It has zero section $S^4$ and boundary $\CP^3$, and a smooth function has independent values at the two ends. Let $S=G\times_K(1,\mathbf 2)$, let $E=S^3(S)$ with its pull-back to $X$, and let $J$ be the spin-$\frac32$ action on it. On $X$ take
 \begin{equation}
 T_M=D_X^E+i\Phi_M,\qquad\Phi_M=\epsilon Mf(r)\,n\cdot J,
 \end{equation}
-with $\hatD_M$ the doubled operator, $Z=-ic(dr)$, and the local wall condition $Zu=-u$ for $T_M$, $Zv=+v$ for $T_M^*$, which gives a self-adjoint elliptic operator (\supp{28}, Theorem 28.9). The sign $\epsilon$ is the one that puts the kernel of $T_M$ at the zero section. We assume the following: the metric is $dr^2+\pi^*g_{S^4}+\rho(r)^2g_{S^2}$, with $\rho=r$ and $f=r$ near $0$, and $\rho=1$, $f=f_0$ on a product collar, which is the Fubini-Study metric on $\CP^3$; the connection on $E$ is the pull-back near $S^4$; on the collar it is either (b) the connection preserving the four line summands $\mathcal O(3),\mathcal O(1),\mathcal O(-1),\mathcal O(-3)$, or (a) the pull-back.
+with $\hatD_M$ the doubled operator, $Z=-ic(dr)$, and the local wall condition $Zu=-u$ for $T_M$, $Zv=+v$ for $T_M^*$, which gives a self-adjoint elliptic operator (\supp{28}, Theorem 28.9). The sign $\epsilon$ is the one that puts the kernel of the end model of $T_M$ at the zero section. We assume the following: the metric is $dr^2+\pi^*g_{S^4}+\rho(r)^2g_{S^2}$, with $S^4$ of radius $1$ and $\rho,f$ smooth and positive for $r>0$, with $\rho=f=r$ on $r\le2e$, and with $\rho=1$, $f=f_0>0$ on a product collar $l-2a\le r\le l$, which is the Fubini-Study metric on $\CP^3$. The connection on $E$ is $Sp(2)$-invariant, in radial parallel gauge. It is either (a) the pull-back throughout, or (b) the pull-back near $S^4$ and, on the collar, the connection preserving the four line summands $\mathcal O(3),\mathcal O(1),\mathcal O(-1),\mathcal O(-3)$.
 
 \begin{theorem}\label{thm:window}
-For $M$ large, $\hatD_M$ has exactly eight eigenvalues in $(-\delta,\delta)$, for every $\delta<\sqrt3$ in case (b), and for every $\delta<\min(2,\kappa_a)$ in case (a), with $\kappa_a\ge\sqrt5-\tfrac32$. The window is one copy of the $\mathbf 4$ of $Sp(2)$ in each $\hat\Gamma$ degree, at the zero section in the domain of $T_M$ and at the wall in the domain of $T_M^*$.
+For $M$ large, $\hatD_M$ has exactly eight eigenvalues in $(-\delta,\delta)$, for every $\delta<\sqrt3$ in case (b), and for every $\delta<\min(2,\kappa_a)$ in case (a), with $\kappa_a\ge\sqrt5-\tfrac32$. The spectral subspace is one copy of the $\mathbf 4$ of $Sp(2)$ in each $\hat\Gamma$ degree, within $O(M^{-1/2})$ of the cut-off core model in the domain of $T_M$, and of the cut-off wall model in the domain of $T_M^*$.
 \end{theorem}
 
 The proof (\supp{29}) is a partition into three regions, and each estimate holds on a fixed manifold, so uniformity over the representations of $Sp(2)$ needs no separate argument.
@@ -96,9 +96,9 @@ The proof (\supp{29}) is a partition into three regions, and each estimate holds
 \begin{equation}\label{eq:square}
 T_0^*T_0=D_H^2+\hat Q^*\hat Q.
 \end{equation}
-The fibre operator has kernel $(1,\mathbf 3)\oplus(1,\mathbf 1)$ and a gap of order $M$ above it, and on the kernel $D_H$ is a twisted Dirac operator on $S^4$, with $D_H^2=\mathrm{Cas}_G(V)+\tfrac32-\mathrm{Cas}_K$ \cite{Parthasarathy1972}. This vanishes only on the $\mathbf 4$ and is at least $4$ otherwise. Since \eqref{eq:square} also bounds $M^2\||y|u\|^2$, the term $R$ is a small perturbation. The stronger localization theorem of \cite{Maridakis2021} has a hypothesis that fails for this mass, since $(n\cdot J)^2$ depends on $n$, and it is not needed here; nor is the block analysis of \cite{BL1991}.
+On one chirality of $\Sigma_4$ the fibre operator has kernel $(1,\mathbf 3)\oplus(1,\mathbf 1)$, and its square is at least of order $M$ on the complement and on the other chirality. The projection onto this $K$-type, on both chiralities, commutes with $D_H$, and on its range $D_H$ is a twisted Dirac operator on $S^4$, with $D_H^2=\mathrm{Cas}_G(V)+\tfrac32-\mathrm{Cas}_K$ \cite{Parthasarathy1972}. This vanishes only on the $\mathbf 4$ and is at least $4$ otherwise. Since \eqref{eq:square} also bounds $M^2\||y|u\|^2$, the term $R$ is a small perturbation. The stronger localization theorem of \cite{Maridakis2021} has a hypothesis that fails for this mass, since $(n\cdot J)^2$ depends on $n$, and it is not needed here; nor is the block analysis of \cite{BL1991}.
 
-\emph{The bulk.} For $w$ supported away from both ends, $\|T_Mw\|^2=\|Dw\|^2+\|\Phi_Mw\|^2+\langle w,i[D,\Phi_M]w\rangle\ge(M^2f^2/4-CM)\|w\|^2$, for every representation.
+\emph{The bulk.} For $w$ supported away from both ends, $\|T_Mw\|^2=\|Dw\|^2+\|\Phi_Mw\|^2+\langle w,i[D,\Phi_M]w\rangle\ge\int(M^2f^2/4-CM)|w|^2$, for every representation.
 
 \emph{The wall.} On the collar in case (b), with $q=\epsilon n\cdot J$ and $m=Mf_0$,
 \begin{equation}
@@ -107,19 +107,19 @@ The fibre operator has kernel $(1,\mathbf 3)\oplus(1,\mathbf 1)$ and a gap of or
 &+\|(\partial_x-mq)w_-\|^2+\|Aw_-\|^2,
 \end{aligned}
 \end{equation}
-where $A$ is the sum of line-twisted Dirac operators. Only the channels $Z=-1,\ q>0$ for $T_M$ and $Z=+1,\ q>0$ for $T_M^*$ have a stable profile, and on these the lower bound comes from $A$. On the Fubini-Study metric $D_k^2=C_2+\tfrac32-\tfrac38k^2$ on the $SU(4)$-type with Casimir $C_2$; the normalization passes the Kirchberg limit $R/3$ for $k=0$ \cite{Kirchberg1986}. So $\mathcal O(3)$ has as kernel exactly one copy of the $\mathbf 4$, in $Z=+1$, and all other values have $D^2\ge3$. In case (a) the line summands mix through a bounded term with overlap $\sqrt3/2$ between the profiles, and a Schur complement of order $1/m$ reduces the wall to an elliptic operator on $\CP^3$, with fibre part $-w(\rho)$, $w(\rho)=2(\rho^2+2)^2/(9+2(\rho^2+2)^2)$, for its kernel, so $-2/3$ at the Fubini-Study radius. At other radii the theorem holds under one kernel condition.
+where $A$ is the sum of line-twisted Dirac operators. Only the channels $Z=-1,\ q>0$ for $T_M$ and $Z=+1,\ q>0$ for $T_M^*$ have a stable profile, and on these the lower bound comes from $A$. On the Fubini-Study metric $D_k^2=C_2+\tfrac32-\tfrac38k^2$ on the $SU(4)$-type with Casimir $C_2$; the normalization passes the Kirchberg limit $R/3$ for $k=0$ \cite{Kirchberg1986}. So on the stable lines $\mathcal O(3)$ and $\mathcal O(1)$ the kernel is exactly one copy of the $\mathbf 4$, in $Z=+1$, and all other values have $D^2\ge3$, for all representations. In case (a) the line summands mix through a bounded term with overlap $\sqrt3/2$ between the profiles, and a Schur complement of order $1/m$ reduces the wall to an elliptic operator on $\CP^3$, with fibre part $-w(\rho)$, $w(\rho)=2(\rho^2+2)^2/(9+2(\rho^2+2)^2)$, for its kernel in the limit, so $-2/3$ at the Fubini-Study radius. At other radii the theorem holds under one kernel condition.
 
-The transition regions lie in the bulk, where the mass controls $\|u\|$ with a factor $M^{-2}$, so the partition costs nothing at the scale of the gap. The limit values were fixed by these estimates before a direct check in Python (Table~\ref{tab:values}).
+The transition regions lie in the bulk, where the mass controls $\|u\|$ with a factor $M^{-2}$, so the partition costs nothing at the scale of the gap. The end models fix the expected low values, which were written down before a direct check in Python (Table~\ref{tab:values}).
 
 \begin{table}
-\caption{\label{tab:values}Lowest singular values of $T_M$ on the $Sp(2)$-representation $V$, case (b), from a radial solve in Python at $M=32$, $l=3$, against the limits fixed by Theorem~\ref{thm:window}. The smallest value on the $\mathbf 4$ is a mesh floor at this resolution and is omitted; the wall values have a mesh error of about $0.005$.}
+\caption{\label{tab:values}Lowest singular values of $T_M$ on the $Sp(2)$-representation $V$, case (b), from a radial solve in Python at $M=32$, $l=3$, against the values of the core (c) and wall (w) end models. The smallest computed value on the $\mathbf 4$ is dominated by the mesh floor at this resolution and is omitted; the observed mesh discrepancy of the wall values is about $0.005$.}
 \begin{ruledtabular}
 \begin{tabular}{lll}
 $V$&$M=32$&limit\\
 \hline
-$\mathbf 4$&1.7323, 1.9991, 2.4497&$\sqrt3,\ 2,\ \sqrt6$\\
-$\mathbf{16}$&2.2351, 2.2409, 2.4497&$\sqrt5,\ \sqrt5,\ \sqrt6$\\
-$\mathbf{20}$&2.2409, 2.8275, 2.8286&$\sqrt5,\ \sqrt8,\ \sqrt8$\\
+$\mathbf 4$&1.7323, 1.9991, 2.4497&$\sqrt3$ w, $2$ c, $\sqrt6$ w\\
+$\mathbf{16}$&2.2351, 2.2409, 2.4497&$\sqrt5$ c, $\sqrt5$ w, $\sqrt6$ w\\
+$\mathbf{20}$&2.2409, 2.8275, 2.8286&$\sqrt5$ w, $\sqrt8$ c, $\sqrt8$ w\\
 $\mathbf{40}$&3.4626, 3.4642, 3.4672&$\sqrt{12}$ (three)
 \end{tabular}
 \end{ruledtabular}
@@ -130,67 +130,71 @@ Let $T_Mu=\lambda v$, $T_M^*v=\lambda u$ be a unit singular pair of the window. 
 \begin{equation}
 \lambda\bigl(\langle u,\chi u\rangle-\langle v,\chi v\rangle\bigr)=\langle v,c(d\chi)u\rangle,
 \end{equation}
-and for every $\eta\in(0,1)$, $|\lambda_M|\le C_\eta\exp\bigl(-(1-\eta)\tfrac M2\int f\,dr\bigr)$, the integral running over the bulk.
+and for every $\eta\in(0,1)$, $|\lambda_M|\le C_\eta\exp\bigl(-(1-\eta)\tfrac M2\int_e^{l-a}f\,dr\bigr)$.
 \end{proposition}
 
-The identity is an integration by parts, and Agmon estimates from each end give the bound, with rate set by the smallest eigenvalue $\frac12$ of $|n\cdot J|$. The summands of $E$ on $\CP^3$ have indices $4,0,0,-4$, of total zero, as equivariant cobordism invariance requires since $E$ extends over $X$ (\cite{Witten1983}, preprint pp.~43-44). The window has index $\mathbf 4-\mathbf 4=0$, so index theory allows $\lambda\neq0$, and the eight states come from the estimates. The $\mathbf 4$ is pseudoreal, so this says nothing yet about the complex representations of the Standard Model.
+The identity is an integration by parts, and Agmon estimates from each end give the bound, with rate set by the smallest eigenvalue $\frac12$ of $|n\cdot J|$. The summands of $E$ on $\CP^3$ have indices $4,0,0,-4$, of total zero, as equivariant cobordism invariance requires, since their sum extends over $X$, although the individual lines do not (\cite{Witten1983}, preprint pp.~43-44). The window has index $\mathbf 4-\mathbf 4=0$, so index theory allows $\lambda\neq0$, and the eight states come from the estimates. The $\mathbf 4$ is pseudoreal, and the auxiliary grading $\hat\Gamma$ with zero virtual index says nothing yet about the chiral spectrum of the Standard Model.
 
 \begin{theorem}\label{thm:compression}
-For $a\in C^1(X)$, the compression to the window satisfies
+For $a\in C^1(X)$, with the norm in fixed shape coordinates and after equivariant identifications of the window with the model copies of the $\mathbf 4$, the compression satisfies
 \begin{equation}
 \|Q_M(a)-(Q_B(a|_{S^4})\oplus Q_Y(a|_{\CP^3}))\|\le C\|a\|_{C^1}M^{-1/2},
 \end{equation}
-with $Q_B(a)=\int a(x)(1-x\cdot\Gamma)\,d\mu$, and with $Q_Y$ the level-one Toeplitz map of the twistor space in case (b), and its $w(\rho)$-weighted form in case (a). Real functions on $X$ generate $M_2(\H)\oplus M_4(\C)$ under the limit map.
+with $Q_B(a)=\int a(x)(1-x\cdot\Gamma)\,d\mu$, and with $Q_Y$ the level-one Toeplitz map of the twistor space in case (b), and in case (a) its form $B=2((1+w)p_z+(1-w)p_{jz})$, with $w=w(\rho)$. Real functions on $X$ generate $M_2(\H)\oplus M_4(\C)$ under the limit map.
 \end{theorem}
 
-This is a statement about compression maps. Generated algebras do not converge when compression maps do, in line with the setting of \cite{CvS2021}.
+This is a statement about compression maps. Generated algebras need not converge when compression maps do, in line with the setting of \cite{CvS2021}.
 
 \section{The joint limit on the disc bundle}\label{sec:joint}
 
-Under $g\to R^2g$, with the potential divided by $R$, the operator is unitarily equivalent to $\hatD_M/R$. So the light mass and the gap both scale as $1/R$, with the compression maps unchanged. Let $G_0=\int f\,dr$ over the bulk, $0<\alpha<\beta<1$, and $\eta\in(0,1)$.
+Under $g\to R^2g$, with the potential divided by $R$, the operator is unitarily equivalent to $\hatD_M/R$. So the light mass and the gap both scale as $1/R$, with the compression maps unchanged. Let $G_0=\int_e^{l-a}f\,dr$, $0<\alpha<\beta<1$, $E_*>0$ and $\eta\in(0,1)$.
 
 \begin{theorem}\label{thm:joint}
 Take $M_\varepsilon=\frac{2(1-\alpha)}{(1-\eta)G_0}\log\frac1\varepsilon$, $R_\varepsilon=\varepsilon^{-\alpha}$, and $D_\varepsilon=\hatD_{M_\varepsilon}/R_\varepsilon$, in the setting of Theorem~\ref{thm:window}. For small $\varepsilon$:
 \begin{enumerate}
-\item $D_\varepsilon$ has exactly eight eigenvalues in $(-\delta\varepsilon^\alpha,\delta\varepsilon^\alpha)$, equal to $\pm m_\varepsilon$ with multiplicity four, and $m_\varepsilon\le C\varepsilon$;
+\item $D_\varepsilon$ has exactly eight eigenvalues in $(-\delta\varepsilon^\alpha,\delta\varepsilon^\alpha)$, equal to $\pm m_\varepsilon$ with multiplicity four, or zero with multiplicity eight, and $m_\varepsilon\le C\varepsilon$; the next level is at most $C\log(1/\varepsilon)\,\varepsilon^\alpha$, so it tends to zero;
 \item the number of levels with $|D_\varepsilon|\le E_*\varepsilon^\beta$ is $8$;
-\item the compression converges to the endpoint maps, with error $O((\log1/\varepsilon)^{-1/2})$;
+\item the compression converges to the endpoint maps in shape coordinates, with error $O((\log1/\varepsilon)^{-1/2})$;
 \item at fixed $E>0$, the number of levels with $|D_\varepsilon|\le E$ is asymptotic to $C_XE^7\varepsilon^{-7\alpha}$.
 \end{enumerate}
 \end{theorem}
 
-Item 4 follows from the Weyl law for $\hatD_0$, since $\hatD_M-\hatD_0$ is bounded by $cM_\varepsilon$, which is small against $ER_\varepsilon$. So \eqref{eq:hierarchy} holds for a window that comes from the operator, with growth of a seven-dimensional internal space at fixed energy. The bound on $m_\varepsilon$ is one-sided, since a lower bound on $\lambda$ is open. The fixed shape expands, so the pointed limit at fixed energy is locally flat at a generic point. Nothing here identifies it with the complete Bryant-Salamon manifold \cite{BS1989,KL2020}, whose metric lies outside our class, or with a solution of field equations.
+Item 4 follows from the Weyl law for $\hatD_0$, since $\hatD_M-\hatD_0$ is bounded by $cM_\varepsilon$, which is small against $ER_\varepsilon$. So \eqref{eq:hierarchy} holds for a fermion window that comes from the operator, with growth of a seven-dimensional internal space at fixed energy. The bound on $m_\varepsilon$ is one-sided, since a lower bound on $\lambda$ is open. The fixed shape expands, so the pointed limit at fixed energy is flat at an interior point and a half-space at a boundary point. Nothing here identifies it with the complete Bryant-Salamon manifold \cite{BS1989,KL2020}, whose metric lies outside our class, or with a solution of field equations.
 
 \section{The quaternionic defect}
 
 Proposition 28.16 of \supp{28} gives the test for the core block: with $B(r)=F^*F=\mathrm{diag}(b_aI_2,b_+,b_-)$, all real multipliers compress to operators commuting with the quaternionic structure $j$ if and only if $b_+=b_-$. Put $\eta_t=\int|b_+-b_-|\,dr/\int\mathrm{tr}\,B\,dr$, and let $P_H(A)=\frac12(A+jAj^{-1})$.
 
 \begin{proposition}\label{prop:defect}
-For real $f$ with $\|f\|_\infty\le1$, $\|Q(f)-P_HQ(f)\|\le2\eta_t$, and products of $k$ such compressions have defect at most $2k\eta_t$. Moreover, for every $\eta\in(0,1)$,
+For real $f$ with $\|f\|_\infty\le1$, $\|Q(f)-P_HQ(f)\|\le2\eta_t$, and products of $k$ such compressions have defect at most $2k\eta_t$. Moreover, $\eta_t=O(M^{-1/2})$. If the quaternionic structure $j_E$ of $E$ is parallel, as for the pull-back connection and for the real affine interpolation between it and the line-preserving connection, then for every $\eta\in(0,1)$,
 \begin{equation}
-\eta_t\le C_\eta\exp\Bigl(-(1-\eta)M\int f\,dr\Bigr).
+\eta_t\le C_\eta\exp\Bigl(-(1-\eta)M\int_{2e}^{l-a}f\,dr\Bigr).
 \end{equation}
 \end{proposition}
 
-The charge conjugation $C$ commutes with $T_M$ and exchanges the two wall conditions, so only the wall breaks the symmetry. On $4$-copies, $F\mapsto CFj^{-1}$ is a real structure, which fixes the model kernel. Then $\zeta=u-Cu$ obeys $T_M\zeta=\lambda(v-Cv)$ in the interior, with no component on the model kernel, and it is exponentially small at the core, sourced at the wall. A weighted Cauchy-Schwarz inequality gives twice the rate of Proposition~\ref{prop:tunnel}. So bounded expressions in the core block lie exponentially close to $M_2(\H)$. An unrestricted generated algebra may use coefficients of size $1/\eta_t$, and it is $M_4(\C)$ at finite mass when $b_+\ne b_-$ and the $\mathbf 5$ component is nonzero. The wall block generates $M_4(\C)$, which requires the loss of $C$ there.
+With $j_E$ parallel, the charge conjugation $C$ commutes with $T_M$ and exchanges the two wall conditions, so only the wall breaks the symmetry. On copies of the $\mathbf 4$, $F\mapsto CFj^{-1}$ is a real structure, which fixes the model kernel. Then $\zeta=u-Cu$ obeys $T_M\zeta=\lambda(v-Cv)$ in the interior, with vanishing projection of its cut-off to the model kernel, and it is exponentially small at the core, sourced at the wall. A weighted Cauchy-Schwarz inequality doubles the exponent of Proposition~\ref{prop:tunnel}, with the integral starting at $2e$. So under this hypothesis, bounded expressions in the core block lie exponentially close to $M_2(\H)$. An unrestricted generated algebra may use coefficients of size $1/\eta_t$, and it is $M_4(\C)$ at finite mass when $b_+\ne b_-$ and the $\mathbf 5$ component is nonzero. The wall block generates $M_4(\C)$, which requires the loss of $C$ there.
+
+\section{Relation to prior work}
+
+The mechanisms have precedents, which we distinguish from the combination studied here. Chiral localization on defects and boundaries goes back to \cite{Kaplan1992,Shamir1993}, and gauge symmetry breaking by interval boundary conditions to \cite{Csaki2004,Csaki2003}; a tree-level $m_t=2M_W$ for a suitable representation is in \cite{CCP2006}. The square identity with a zero-order cross term is in \cite{Maridakis2015}, in a concentrating-pair setting, and a horizontal and vertical factorization of the Dirac operator with a curvature contraction is in \cite{KvS2017}, under other hypotheses. Index statements of Callias type in families are in \cite{Callias1978,Kottke2009}, and the finite boundary window is a separate question. Kaluza-Klein modes that become massless during gauge restoration are followed in \cite{Iso2021}, with a different mechanism and geometry. Targeted searches found these and did not establish whether the eight-state theorem has appeared elsewhere; they were not exhaustive.
 
 \section{What is missing}
 
 \emph{The vector sector.} On the family of Theorem~\ref{thm:joint} one needs the kinetic matrix and the mass Hessian of the vector fluctuations, then the momentum-dependent kernel, with the aim $M_W,M_Z\sim c\lambda/R$. The tunnelling eigenvalue alone does not establish this, so the words ``massless electroweak limit'' apply to the disc bundle only as a target.
 
-\emph{The couplings.} For a bulk Yang-Mills field with constant profile, $g_4^{-2}=\mathrm{Vol}(X)/g_{11}^2$, so a plain dilation drives $g_4$ to zero, which must be separated from restoration at finite coupling. Gauge fields from isometries have Killing overlap integrals instead, and non-Killing fields behave differently again \cite{Baptista2026}.
+\emph{The couplings.} For a bulk Yang-Mills field with a constant profile, $g_4^{-2}=\mathrm{Vol}(X)/g_{11}^2$, so with fixed microscopic coupling a plain dilation gives $g_4\propto R^{-7/2}$, which must be separated from restoration at finite coupling. Gauge fields from isometries have Killing overlap integrals instead, and non-Killing fields behave differently again \cite{Baptista2026}.
 
 \emph{The dynamics.} A potential $a\,r^{-p}+b\,\varepsilon^2r^q$ has its minimum at $r\propto\varepsilon^{-2/(p+q)}$, so it would select $\alpha=2/(p+q)$ if $p+q>2$. Nothing has derived such a potential, and adding it by hand derives nothing.
 
-\emph{The finite structure.} The window gives the graded eight-dimensional space and the limit algebra. The connector of the 32-dimensional real bimodule, the quaternionic grading and the chirality of the physical spectrum remain inputs. The product of two copies of the parent has heat exponent $t^{-7}$, so the bimodule should come from a finite-rank correspondence, to keep seven dimensions.
+\emph{The finite structure.} The window gives the graded eight-dimensional space and the limit algebra. The connector of the bimodule of complex dimension 32 with a real structure, the quaternionic grading and the chirality of the physical spectrum remain inputs. The product of two copies of the parent has heat exponent $t^{-7}$, so the bimodule should come from a finite-rank correspondence, to keep seven dimensions.
 
 \section{Status}
 
-Theorem~\ref{thm:interval}, the vector poles and the cylinder are direct consequences of refereed lemmas, with proofs in \supp{30}. Theorems~\ref{thm:window}, \ref{thm:compression} and \ref{thm:joint} and Propositions~\ref{prop:tunnel}, \ref{prop:defect} are new here, for the stated class of metrics, with proofs in \supp{29} and \supp{30}. At this draft they are checked only by their author, and an independent referee is queued. Other metrics, and case (a) at other radii, stay open. Table~\ref{tab:values} is a Python computation, with the script in the repository.
+Theorem~\ref{thm:interval}, the vector poles and the cylinder are direct consequences of refereed lemmas, with proofs in \supp{30}. Theorems~\ref{thm:window}, \ref{thm:compression} and \ref{thm:joint} and Propositions~\ref{prop:tunnel}, \ref{prop:defect} are new here, for the stated class of metrics, with proofs in \supp{29} and \supp{30}. They were read by an independent referee, GPT-6.1 Terra, whose reports found errors in case (a) and a missing hypothesis in the exponential defect bound. These are corrected, and the corrections have had no further independent reading. The referee ran no computation. Other metrics, and case (a) at other radii, stay open. Table~\ref{tab:values} is a Python computation, with the script in the repository.
 
 \section*{Provenance}
 
-The formulation of the joint limit and the interval and cylinder statements come from an outside audit of the repository, of unstated model, kept in its \texttt{reviews} folder. The proofs of Sections \ref{sec:window} and \ref{sec:joint} and of the defect bound are by Claude Opus 5.5, using results of GPT-6 Astra on the operator and its two ends, with referee reports by GPT-6.1 Terra on the earlier lemmas. Claude Sonnet 5.5 rechecked the audit in Python. Referee status is recorded in the repository ledger.
+The formulation of the joint limit and the interval and cylinder statements come from an outside audit of the repository, of unstated model, kept in its \texttt{reviews} folder. The proofs of Sections \ref{sec:window} and \ref{sec:joint} and of the defect bound are by Claude Opus 5.5, using results of GPT-6 Astra on the operator and its two ends, with referee reports by GPT-6.1 Terra on the earlier lemmas. Claude Sonnet 5.5 rechecked the audit in Python. The two referee reports on lemmas 29 and 30 and this note are in the repository, and referee status is recorded in its ledger.
 
 \bibliography{towerless_intervals}
 
