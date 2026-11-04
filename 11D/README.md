@@ -61,6 +61,10 @@ There are two ways to complete 4 + 6 by one dimension, and they correspond to th
 | 8.1 | The descended antiunitary of lemma 06 with j^2 = s gives O(n) or USp(n) on every eigenspace of d^2 | Proposition, proved | [08](08_orientifold_sign.md) |
 | 8.2 | Wall channels of the parent come with doubled multiplicity relative to bulk channels | Proposition, proved | [08](08_orientifold_sign.md) |
 | 8.3, 8 readings | O^- for label 11 and O^+ for label 9; E8 walls from 15 + 1, with the far wall enhancing to SU(2) x U(1) at infinite coupling | Remark conditional on recalled rules; proposals | [08](08_orientifold_sign.md) |
+| 9.1 | The type I' function z (with e^phi = z^(-5/6)) is z(0) + c Tr g_x(l abs(D_F)) over sixteen channels; infinite coupling at the far wall iff z(0) = (2cL/pi)(4 pi - l Sigma m_k) | Proposition, proved from the recalled slope rule | [09](09_dilaton_spectral_and_so32.md) |
+| 9.2 | The diquark counts of lemma 21 (-2/3: 6, +1/3: 6, +4/3: 3) are the strings between the fifteen-brane stack and its image on an O8^- plane; O8^+ gives (3, 6, 1); a single brane has no string to its image on O8^- | Proposition, proved from representation theory and the recalled projections; reading as proposal | [09](09_dilaton_spectral_and_so32.md) |
+| 9 §1 | Comparison with A. Rivero, Eur. Phys. J. C 84 (2024) 1058 (arXiv:2407.05397): the chain SO(32) > SO(2) x SO(30) > SO(2) x SU(5) x SU(3) x U(1) coincides with lemma 21 and the dictionary of 06; the type I' realization was not found there | Comparison, read through a summarizing fetch | [09](09_dilaton_spectral_and_so32.md) |
+| 9 §4 | E-type walls as local del Pezzo surfaces (dP_2 for the top's wall); the colour-family transposition of 05 as a nine-dimensional T-duality, which by itself is a gauge relabelling | Proposals | [09](09_dilaton_spectral_and_so32.md) |
 | 5 Readings | Three families as the obstruction; M exchanges the two heavy directions of the algebra chain; 128 = 44 + 84 under Spin(9) | Proposals | [05](05_colour_family_exchange.md) |
 
 The checks are in [checks_11d.py](checks_11d.py) (Python 3, exact fractions; every check asserts; about 20 s).
@@ -79,7 +83,7 @@ The angle-dependent one-loop term (Proposition 1.4) is minimized at the massless
 ## Next computations, ranked
 
 0a. **The main point** (06, PLAN task B): one family realizing the three regimes; first steps listed in 06 §6 (type I' interval with the D8 configuration 15 + 1 as the parent of the lemma-22 window; Chan-Paton algebras against C + H + M_3(C); inner fluctuations against Λ^2(30)).
-0b. **A nine-dimensional spectral triple on the type I' interval** (07 §7): sixteen D8 positions as the eigenvalues of D_F, and its strong-coupling limit with E8 walls.
+0b. **A nine-dimensional spectral triple on the type I' interval** (07 §7): sixteen D8 positions as the eigenvalues of D_F, and its strong-coupling limit with E8 walls; the dilaton as a spectral function and the diquark strings are in 09 (Propositions 9.1, 9.2), and whether the type I' coupling supplies the second scale of Proposition 1.5 is the next question there.
 0. **A potential with a second scale that selects alpha < 1** (Proposition 1.5 and audit §7.1): the one-loop potential of the localized family, G(l m, l mu), from the exact secular equations of lemma 09, and the angle-independent Casimir coefficient a_0 of the flat family; then the vector kinetic matrix and mass Hessian along the selected path (audit eq. (17)), with g_4 finite.
 1. **The referee of this folder** ([prompts/terra_check_11d.md](prompts/terra_check_11d.md)): Propositions 1.1, 1.4, 2.1 to 2.6, 3.2, 3.5, 3.8 and Corollary 3.9, with the negative results 2.5 and 3.8 needing the independent check before they are relied on.
 2. **Spinors on Y_{3,2}** ([prompts/astra_11d_01.md](prompts/astra_11d_01.md)): the lift of (U(3) x U(2))/U(1)_Y to the spin bundle, whether fermionic Kaluza-Klein modes can carry triality or isospin 1/2, and which spin structures give the antiperiodic fibre momenta (k + 1/2)/R of Proposition 1.1.
@@ -125,6 +129,7 @@ Prior work for the observation of Theorem 2.1, that the weights of M^{111} are t
 - [06_main_point_heterotic_route.md](06_main_point_heterotic_route.md): the main point: target, the heterotic web 9/10/11, dictionary, Proposition 6.1.
 - [07_dualities_9_11.md](07_dualities_9_11.md): dualities between 9 and 11 adapted to the spectral triple: the top angle as a D8 position between two orientifold walls, the one-loop vacuum as the far wall, a torus with flux as the colour form.
 - [08_orientifold_sign.md](08_orientifold_sign.md): the sign of lemma 06 as an orientifold type (O^- for label 11, O^+ for label 9); E8 walls from 15 + 1: the far wall with the top's brane enhances to SU(2) x U(1) at infinite coupling.
+- [09_dilaton_spectral_and_so32.md](09_dilaton_spectral_and_so32.md): the type I' dilaton as a trace of a function of D_F; the SO(32) of the EPJC paper compared with lemma 21; diquarks as strings between the stack and its image on an O8^- plane; del Pezzo walls and the transposition as a T-duality (proposals).
 - [PLAN.md](PLAN.md): the handover plan of the line.
 - [checks_11d.py](checks_11d.py): exact checks.
 - [ledger_11d.pl](ledger_11d.pl): ledger facts, included by [../ledger.pl](../ledger.pl).

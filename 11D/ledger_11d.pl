@@ -303,6 +303,48 @@ depends(d11_orientifold_reading, d11_orientifold_sign).
 depends(d11_orientifold_reading, d11_wall_multiplicity).
 attempted_by(d11_orientifold_reading, claude).
 
+%% ---------------------------------------------------------------- 09: the dilaton as a spectral function, SO(32) of the EPJC paper
+claim(d11_dilaton_spectral, proposition, proved, "Proposition 9.1", "The type I' function z is z(0) plus c Tr g_x(l |D_F|) over sixteen channels, and infinite coupling at the far wall holds iff z(0) = (2cL/pi)(4 pi - l Sigma m_k), proved from the recalled slope rule.").
+source(d11_dilaton_spectral, '11D/09_dilaton_spectral_and_so32.md', '2-proposition-91-the-type-i-coupling-function-is-a-trace-of-a-function-of-the-finite-dirac-operator').
+depends(d11_dilaton_spectral, d11_angle_interval).
+depends(d11_dilaton_spectral, d11_e_walls).
+attempted_by(d11_dilaton_spectral, claude).
+checked_by(d11_dilaton_spectral, claude, by_hand).
+referee_pending(d11_dilaton_spectral).
+
+claim(d11_diquark_strings, proposition, proved, "Proposition 9.2", "The colour-antitriplet diquark counts of lemma 21 (-2/3: 6, +1/3: 6, +4/3: 3) are the strings between the fifteen-brane stack and its image on an O8^- plane; an O8^+ plane gives (3, 6, 1); a single brane has no string to its own image on O8^-, proved from representation theory and the recalled orientifold projections.").
+source(d11_diquark_strings, '11D/09_dilaton_spectral_and_so32.md', '3-proposition-92-diquarks-as-strings-between-the-stack-and-its-image').
+depends(d11_diquark_strings, l21_so30).
+depends(d11_diquark_strings, d11_wilson_top).
+attempted_by(d11_diquark_strings, claude).
+checked_by(d11_diquark_strings, claude, by_hand).
+referee_pending(d11_diquark_strings).
+
+claim(d11_orientifold_scalars, conjecture, conjectural, "Reading of section 3 (proposal)", "The seesaw sign of Proposition 8.1 and the scalar counts of Proposition 9.2 select the same orientifold type, O8^-.").
+source(d11_orientifold_scalars, '11D/09_dilaton_spectral_and_so32.md', '3-proposition-92-diquarks-as-strings-between-the-stack-and-its-image').
+depends(d11_orientifold_scalars, d11_diquark_strings).
+depends(d11_orientifold_scalars, d11_orientifold_sign).
+attempted_by(d11_orientifold_scalars, claude).
+
+claim(d11_so32_comparison, claim, conditional, "Section 1", "The chain SO(32) > SO(2) x SO(30) > SO(2) x SU(5) x SU(3) x U(1), five light quarks in three colours and the top as the SO(2), of A. Rivero, Eur. Phys. J. C 84 (2024) 1058 (arXiv:2407.05397), coincides with lemma 21 and the dictionary of 06; read through a summarizing fetch of the arXiv text.").
+source(d11_so32_comparison, '11D/09_dilaton_spectral_and_so32.md', '1-the-so32-of-a-rivero-eur-phys-j-c-84-2024-1058-arxiv240705397').
+depends(d11_so32_comparison, l21_so30).
+depends(d11_so32_comparison, d11_heterotic_route).
+attempted_by(d11_so32_comparison, claude).
+checked_by(d11_so32_comparison, claude, by_hand).
+referee_pending(d11_so32_comparison).
+prior_work(d11_so32_comparison, partial, "The chain and the composite counts are known (the EPJC paper; hep-ph/0512065); the type I' realization (the top as a displaced D8-brane, the 30 as Chan-Paton labels on an O8^- wall) was not found there.").
+
+claim(d11_dp_walls, conjecture, conjectural, "Section 4, item 1 (recalled; proposal)", "The E-type walls of type I' at infinite coupling have eleven-dimensional descriptions by local del Pezzo surfaces, dP_2 for the top's wall.").
+source(d11_dp_walls, '11D/09_dilaton_spectral_and_so32.md', '4-two-more-dualities-between-9-and-11-recalled-proposals').
+depends(d11_dp_walls, d11_e_walls).
+attempted_by(d11_dp_walls, claude).
+
+claim(d11_transposition_tduality, conjecture, conjectural, "Section 4, item 2 (proposal)", "The colour-family transposition of 05 is a nine-dimensional T-duality, which by itself is a gauge relabelling of Wilson lines.").
+source(d11_transposition_tduality, '11D/09_dilaton_spectral_and_so32.md', '4-two-more-dualities-between-9-and-11-recalled-proposals').
+depends(d11_transposition_tduality, d11_transposition).
+attempted_by(d11_transposition_tduality, claude).
+
 %% ---------------------------------------------------------------- strategy
 strategy(t14, open, "Eleven dimensions from massless W and Z: the interval of H as an antiperiodic circle and as the M-theory circle; Witten's space M^{111} as the hypercharge quotient of the 5-bar; hypercharge from C_3, matter from wrapped branes, the Higgs as the M2 position; the magnetic completion AdS5 x CP^2 x S^2; the 84 of lemma 21 against C_3.").
 addresses(t14, d11_circle).  addresses(t14, d11_m_circle).  addresses(t14, d11_casimir).  addresses(t14, d11_scale_free).
@@ -322,3 +364,5 @@ addresses(t14, d11_angle_interval).  addresses(t14, d11_far_wall).  addresses(t1
 addresses(t12, d11_far_wall).  addresses(t0, d11_torus_flux).
 addresses(t14, d11_orientifold_sign).  addresses(t14, d11_wall_multiplicity).  addresses(t14, d11_e_walls).  addresses(t14, d11_orientifold_reading).
 addresses(t2c, d11_orientifold_sign).
+addresses(t14, d11_dilaton_spectral).  addresses(t14, d11_diquark_strings).  addresses(t14, d11_orientifold_scalars).  addresses(t14, d11_so32_comparison).  addresses(t14, d11_dp_walls).  addresses(t14, d11_transposition_tduality).
+addresses(t2c, d11_orientifold_scalars).
