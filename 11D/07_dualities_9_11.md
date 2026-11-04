@@ -4,6 +4,8 @@ Part of the 11D line of research ([README](README.md), [PLAN](PLAN.md), task C).
 
 ## 1. The dualities (recalled)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The duality descriptions are conditional on the recalled sources. The M2 wrapping number and the auxiliary torus flux are separately specified; a map identifying them remains open. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#files-06-and-07-recalled-dualities).
+
 1. **M-theory on T^2 and type IIB on S^1** (Schwarz, hep-th/9508143; Aspinwall, hep-th/9508154). The modulus tau of the torus is the IIB coupling and SL(2, Z) is IIB S-duality; the IIB radius scales as a negative power of the area A of the torus. M2-branes wrapped on T^2 are IIB momentum states, and momenta on T^2 are (p, q)-strings wound on S^1. Eleven dimensions at A -> infinity, ten (IIB) at A -> 0, nine in between.
 2. **Sixteen supercharges, rank 17** (Polchinski and Witten, hep-th/9510169; Hořava and Witten, hep-th/9510209). The two heterotic strings on S^1 are T-dual through Wilson lines; their type I' form is an interval with two orientifold planes O8 and sixteen D8-branes whose positions are the Wilson-line eigenvalues; at strong coupling, M-theory on an interval times a circle, with E8 walls.
 3. **Sixteen supercharges, lower rank.** The CHL string (rank 9) and M-theory on the Möbius strip; a rank-1 component related to the Klein bottle (Aharony, Komargodski and Patir, hep-th/0702195); further components with discrete theta angles (Montero and Parra de Freitas, arXiv:2209.03361).

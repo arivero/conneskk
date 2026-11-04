@@ -16,6 +16,8 @@ What exists: the exact window for D_F, J and gamma on an interval parent (lemma 
 
 ## 2. The heterotic web has the shape 9, 10, 11
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The nine-dimensional duality involves specified Wilson lines and radii; the finite-triple dictionary and field identification remain proposals. The cited primary papers were unavailable for direct checking. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#files-06-and-07-recalled-dualities).
+
 Recalled facts (Polchinski and Witten, hep-th/9510169; Hořava and Witten, hep-th/9510209 and hep-th/9603142; Bergman, Gaberdiel and Lifschytz, hep-th/9711098; to be checked before use):
 
 - **9:** the heterotic strings on a circle. SO(32) and E8 × E8 are T-dual there, joined through the moduli space of Wilson lines; the theory is non-chiral, nine being odd. Its type I' form is an interval with two orientifold walls (O8) and sixteen D8-branes, whose positions are the Wilson-line eigenvalues.

@@ -1230,6 +1230,46 @@ proposed composites is an additional physical construction. The
 O8-minus/O8-plus projection and global tadpole conditions were not
 independently verified from the unavailable primary sources.
 
+## Files 06 and 07: recalled dualities
+
+**Verdict: Correct with amendments, conditional on the recalled
+duality statements.** The nine-dimensional heterotic moduli space,
+the type-I' interval and the Hořava-Witten interval provide related
+settings. The equalities in the proposed spectral-triple dictionary
+require explicit maps of backgrounds, fields and global data.
+
+The two ten-dimensional heterotic theories arise as different
+decompactification limits of the nine-dimensional Narain moduli space;
+the duality involves specified Wilson lines and radii. A generic
+channel spectrum matching one Wilson-line shift does not identify the
+whole finite Dirac operator with heterotic Wilson-line moduli, nor
+does it supply chirality, couplings or a map to a particular
+Hořava-Witten wall. The two orientifold walls and the two finite
+sheets are a proposed identification.
+
+In the recalled M-theory/IIB correspondence, the torus complex
+structure is the IIB axiodilaton, and the IIB radius varies inversely
+with the torus area at fixed eleven-dimensional scale. The statement
+that \(A\to\infty\) decompactifies both torus directions assumes fixed
+nondegenerate shape. M2 wrapping and the degree \(p\) of the auxiliary
+line bundle in Proposition 7.3 are independently specified integers;
+their proposed identification needs a construction.
+
+The stated rank \(17\), \(9\) or \(1\) uses the convention that counts
+vector multiplets, excluding the gravity multiplet's graviphoton.
+The lower-rank Möbius and Klein-bottle descriptions remain recalled
+literature statements. The finite-\(N\) light-cone matrix description
+uses the DLCQ and decoupling-limit hypotheses; the unqualified
+large-\(N\) M-theory interpretation is a conjectural duality. A
+noncommutative-torus and Morita description likewise requires the
+specified compactification and background. None of these recalls
+establishes the algebra, real structure or gauge couplings of the
+target family.
+
+Direct access to the cited primary papers was unavailable. The
+duality recalls are therefore not certified against those sources by
+this referral.
+
 ## Proposition 6.1: the SO(32) Wilson-line spectrum
 
 **Verdict: Correct with amendments.** The charged momentum progressions

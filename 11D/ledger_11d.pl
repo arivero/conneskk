@@ -245,6 +245,7 @@ source(d11_heterotic_route, '11D/06_main_point_heterotic_route.md', '3-dictionar
 depends(d11_heterotic_route, d11_wilson_top).
 depends(d11_heterotic_route, d11_circle).
 attempted_by(d11_heterotic_route, claude).
+checked_by(d11_heterotic_route, terra_6_1, by_hand).
 
 %% ---------------------------------------------------------------- 07: dualities between 9 and 11
 claim(d11_angle_interval, proposition, proved, "Proposition 7.1 (referee clarification)", "The signed channel spectrum has fundamental domain [0, pi/2], with doubly degenerate periodic and antiperiodic endpoint spectra; the lemma-22 window uses the strict interior.").
@@ -276,6 +277,7 @@ source(d11_duality_readings, '11D/07_dualities_9_11.md', '2-what-each-one-offers
 depends(d11_duality_readings, d11_far_wall).
 depends(d11_duality_readings, d11_torus_flux).
 attempted_by(d11_duality_readings, claude).
+checked_by(d11_duality_readings, terra_6_1, by_hand).
 
 %% ---------------------------------------------------------------- 08: the orientifold sign
 claim(d11_orientifold_sign, proposition, proved, "Proposition 8.1 (referee clarification)", "The descended antiunitary j with j^2 = s gives O(n) or USp(n) as its unitary commutant on each eigenspace of d^2. Preservation of d, the algebra and physical Chan-Paton data requires further conditions.").
