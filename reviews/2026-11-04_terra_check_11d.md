@@ -1060,6 +1060,31 @@ finite KO-6 datum with \(D=0\) and order zero. It has an additional
 scalar summand; deriving the full Standard Model algebra and its
 representation remains open.
 
+## Proposition 8.1: antiunitary commutants
+
+**Verdict: Correct with clarification.** On each finite-dimensional
+eigenspace of \(d^2\), the commutant of \(j\) in the unitary group is
+\(O(n)\) for \(j^2=1\), and \(USp(n)\) for \(j^2=-1\), with even
+complex dimension \(n\) in the latter case.
+
+For \(j^2=1\), a real orthonormal basis identifies \(j\) with
+complex conjugation, and its commuting unitaries are real orthogonal
+matrices. For \(j^2=-1\), \(v\) and \(jv\) are orthogonal; taking
+their orthogonal complement inductively gives a quaternionic
+orthonormal basis. The commuting unitaries are the compact symplectic
+group.
+
+This commutant is defined using \(j\) and the \(d^2\) eigenspace
+alone. It need not commute with \(d\), the represented algebra, or
+other physical structures. For example, on \(\mathbb C^2\) let
+\(j\) be conjugation and \(d=\operatorname{diag}(1,-1)\): the
+commutant on the \(d^2=1\) space is \(O(2)\), but a generic rotation
+does not commute with \(d\). Moreover \(O(n)\) contains disconnected
+transformations, while \(SO(n)\) is its identity component for
+\(n\geq2\). The orientifold comparison therefore requires an explicit
+Chan-Paton representation and compatibility with the rest of the
+data.
+
 ## Proposition 6.1: the SO(32) Wilson-line spectrum
 
 **Verdict: Correct with amendments.** The charged momentum progressions

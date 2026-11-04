@@ -278,12 +278,12 @@ depends(d11_duality_readings, d11_torus_flux).
 attempted_by(d11_duality_readings, claude).
 
 %% ---------------------------------------------------------------- 08: the orientifold sign
-claim(d11_orientifold_sign, proposition, proved, "Proposition 8.1", "The descended antiunitary j of lemma 06 with j^2 = s gives O(n) or USp(n) as the commutant on every eigenspace of d^2, according to the sign s.").
+claim(d11_orientifold_sign, proposition, proved, "Proposition 8.1 (referee clarification)", "The descended antiunitary j with j^2 = s gives O(n) or USp(n) as its unitary commutant on each eigenspace of d^2. Preservation of d, the algebra and physical Chan-Paton data requires further conditions.").
 source(d11_orientifold_sign, '11D/08_orientifold_sign.md', '2-proposition-81-the-factorization-sign-fixes-orthogonal-or-symplectic-symmetry').
 depends(d11_orientifold_sign, l06_factorization).
 attempted_by(d11_orientifold_sign, claude).
 checked_by(d11_orientifold_sign, claude, by_hand).
-referee_pending(d11_orientifold_sign).
+checked_by(d11_orientifold_sign, terra_6_1, by_hand).
 
 claim(d11_wall_multiplicity, proposition, proved, "Proposition 8.2", "Wall channels of the parent come with doubled multiplicity relative to bulk channels, from Proposition 7.1.").
 source(d11_wall_multiplicity, '11D/08_orientifold_sign.md', '3-proposition-82-wall-channels-come-with-doubled-multiplicity').

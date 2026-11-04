@@ -8,6 +8,8 @@ In type I' the two ends of the interval are orientifold planes. A stack of n Cha
 
 ## 2. Proposition 8.1 (the factorization sign fixes orthogonal or symplectic symmetry)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The antiunitary commutants are independently checked. They need not preserve \(d\) or the remaining data, and the Chan-Paton identification is a proposal. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-81-antiunitary-commutants).
+
 **Statement.** Let E be an eigenspace of d^2 in H_+, of dimension n. The unitaries of E that commute with j form O(n) if s = +1, and USp(n) if s = −1, in which case n is even.
 
 **Proof.** j preserves E because it commutes with d^2. An antiunitary with j^2 = +1 is a real structure: E = E_R ⊗ C with E_R its fixed points, and a unitary commutes with j exactly when it preserves E_R, which gives O(n). An antiunitary with j^2 = −1 is a quaternionic structure: E is a right H-module of quaternionic dimension n/2, and the unitaries commuting with j form USp(n). ∎
