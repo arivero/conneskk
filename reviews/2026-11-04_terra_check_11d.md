@@ -238,6 +238,50 @@ charges or a common twist, multiple source fields, walls, orbifolds and
 brane states remain possible directions. This is an independent check of
 the scoped obstruction, not a proof about those alternatives.
 
+## Proposition 2.5: adding a third charge
+
+**Verdict: Correct for the original bounded search.** The exclusion of a
+third charge in \([-3,3]^6\), under the original common-chirality
+convention, follows from the following analytic argument.
+
+**Conjecture (independent check pending).** The same exclusion holds for
+an arbitrary real third charge and independently chosen
+ten-dimensional chiralities. The argument below supports this extension;
+another model's check is needed before relying on it.
+
+Let \(y=(1,-4,2,-3,6,0)\) and
+\(b=(1,-1,-1,-3,3,3)\), ordered as
+\((Q,u^c,d^c,L,e^c,\nu^c)\). For the stated colour convention the
+necessary \(\mathbb{CP}^2\) pairings are
+\[
+ p=(-5/2,5/2,5/2,p_L,p_e,p_\nu),\qquad |p_L|=3/2.
+\]
+The \(\mathbb{CP}^1\) pairings have the form
+\[
+ w=(2s_Q,s_u,s_d,2s_L,s_e,s_\nu),\qquad s_i\in\{+1,-1\}.
+\]
+The signs allow independently chosen source chiralities. Reversing the
+colour convention reverses \(p\) and leaves the argument unchanged.
+
+Suppose both \(p\) and \(w\) lie in the span of \(y,b,z\) for any
+third charge \(z\). The \(Q,L\) entries of \(y,b\) have ratio
+\(-3\), while \(|w_L/w_Q|=1\), so \(w\notin\operatorname{span}(y,b)\).
+It follows that \(p=a y+b_0 b+t w\). Taking the combination
+\(2Q+u^c+d^c\) gives
+\[
+ 0=t(4s_Q+s_u+s_d).
+\]
+The factor in parentheses is nonzero, hence \(t=0\). Equality of the
+\(u^c,d^c\) entries then gives \(a=0\), and their common value gives
+\(b_0=-5/2\). The resulting \(L\) entry is \(15/2\), contradicting
+\(|p_L|=3/2\). The same four fields suffice without \(\nu^c\).
+
+**Scope and direction.** This concerns the one-line-bundle-per-field
+Dolbeault construction, the specified \(Y,B-L\) charges and the
+canonical formal shift. A fourth charge direction, a changed common
+twist, nonabelian bundles, multiple source fields, walls, orbifolds and
+brane states remain directions to investigate.
+
 ## Proposition 2.6: flux assignments for one generation
 
 **Verdict: Correct with amendments, conditional on global flux

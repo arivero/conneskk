@@ -72,6 +72,8 @@ The second entry is 2j + 1 and the first is +-5/2 on colour triplets and +-3/2 o
 
 ### Proposition 2.5 (no generation from fluxes along hypercharge and B - L)
 
+**Referee note on the third-charge search (GPT-6.1 Terra, 4 Nov 2026).** The bounded search below has an independent analytic proof. The same argument extends to any real third charge and independent source chiralities; this stronger extension awaits an independent check. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-25-adding-a-third-charge).
+
 **Statement.** In the setting above, with the canonical spin^c root and fluxes only in U(1) directions spanned by Y and B - L (any flux quanta), no choice reproduces one generation, with or without nu^c. More generally, the pairing must give u^c and d^c the same image, and 2j + 1 = (2, 1, 1, 2, 1, 1) on (Q, u^c, d^c, L, e^c, nu^c) must be a linear function of the fluxed charges.
 
 **Proof.** The pairing M is linear in the charges, and M c_s = P_s with c_s the charges of the left-handed field s. With only Y and B - L fluxed, c_u - c_d = (-6, 0) in the coordinates (6Y, 3(B - L)), so M vanishes on the hypercharge direction and P_s = 3(B - L)_s m for one vector m. The second entries 2 on Q and 1 on u^c would then need 3(B - L) to take values in the ratio 2 : 1 on (Q, u^c), against 1 : -1. In general, 2j + 1 is not in the span of 6Y = (1, -4, 2, -3, 6, 0) and 3(B - L) = (1, -1, -1, -3, 3, 3): from Q and u^c the coefficients are -1 and 3, and then d^c gives -5 against 1. ∎ An exhaustive search adding a third integer charge z in [-3, 3]^6 to Y and B - L finds no solution either (Python, section D).

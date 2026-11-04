@@ -81,6 +81,18 @@ attempted_by(d11_flux_nogo, claude).
 checked_by(d11_flux_nogo, claude, python("11D/checks_11d.py section D: required bidegrees, span test, search over a third charge in [-3,3]^6")).
 checked_by(d11_flux_nogo, terra_6_1, by_hand).
 
+claim(d11_flux_third_bounded, no_go, proved, "Proposition 2.5 (bounded third-charge search)", "In the stated one-line-bundle construction and common-chirality convention, adding any third integer charge in [-3,3]^6 to Y and B - L gives no generation.").
+source(d11_flux_third_bounded, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-25-no-generation-from-fluxes-along-hypercharge-and-b---l').
+attempted_by(d11_flux_third_bounded, claude).
+checked_by(d11_flux_third_bounded, claude, python("11D/checks_11d.py section D: bounded third-charge search")).
+checked_by(d11_flux_third_bounded, terra_6_1, by_hand).
+
+claim(d11_flux_third_general, conjecture, conjectural, "Third-charge extension (independent referee pending)", "An analytic argument extends the one-line-bundle exclusion to any real third charge and independent source chiralities; an independent model check remains pending. Fourth charges, a changed twist, and nonabelian bundles remain open directions.").
+source(d11_flux_third_general, 'reviews/2026-11-04_terra_check_11d.md', 'proposition-25-adding-a-third-charge').
+attempted_by(d11_flux_third_general, terra_6_1).
+checked_by(d11_flux_third_general, terra_6_1, by_hand).
+referee_pending(d11_flux_third_general).
+
 claim(d11_flux_fit, proposition, conditional, "Proposition 2.6 (referee amendments)", "With fluxed charges F, chi and B - L the displayed line bundles give a one-generation index in the stated colour convention. The quotient's colour action conjugates the quark bidegrees, and the global gauge group, charge lattice and spin^c flux quantization must be specified.").
 source(d11_flux_fit, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-26-one-generation-from-a-universal-charge-the-grading-and-b---l').
 depends(d11_flux_fit, d11_flux_nogo).
