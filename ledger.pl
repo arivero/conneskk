@@ -1528,6 +1528,9 @@ referee_report('lemmas/23_two_gradings_interval.md', 'reviews/2026-11-03_terra_c
 referee_report('lemmas/24_commutative_parent.md', 'reviews/2026-11-03_terra_check_24.md').
 referee_report('lemmas/25_sum_rule_effective_dimension.md', 'reviews/2026-11-03_terra_check_25.md').
 
+%% ---------------------------------------------------------------- 11D line (branch 11D)
+:- include('11D/ledger_11d.pl').
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).

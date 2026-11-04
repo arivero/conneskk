@@ -1,0 +1,138 @@
+# Eleven dimensions from massless W and Z
+
+Branch `11D`, opened 3 Nov 2026. This folder holds one line of research: how the limit M_W, M_Z -> 0 of hypothesis H can give an eleven-dimensional theory, related on one side to Witten's family of seven-manifolds with the isometry group of the Standard Model, and on the other to the M2 and M5 details of [lemma 21](../lemmas/21_top_counting.md) and [STRATEGY T12](../STRATEGY.md). All files are new; the only edits outside the folder are pointer lines in README.md, INDEX.md, STRATEGY.md and one include line in ledger.pl, so the branch can be fast-forwarded into master while master has not moved.
+
+Attempted by Claude (Anthropic) on 3 Nov 2026. The Astra 6 audit of the same day ([reviews/2026-11-03_astra_audit_d11.md](../reviews/2026-11-03_astra_audit_d11.md), of snapshot b2ddf98, before this branch) is used in the second version of the folder: its joint-limit family defines the path along which v -> 0 opens a dimension, and its points corrected Proposition 1.4 and Proposal 1.3; see the section on the audit below. Every proposition of this folder is checked only by its author so far, and the ledger marks it as referee pending; [prompts/terra_check_11d.md](prompts/terra_check_11d.md) is the referee request. The conversation in which the folder was written is recorded at <https://claude.ai/code/cshk_01BpscANdX3GG8D45SQ1BxsaHviSe7ufxxCLNiNaDv4fWT>.
+
+## The picture
+
+H reads the two sheets of the finite geometry as the minimal truncation of an interval with opposite chiral walls, and v -> 0 as the interval growing. The labels 9, 10 and 11 of H are KO labels; the heat dimension at the 11 endpoint is 5. To make 11 a metric count, the finite KO-6 factor is resolved into a six-dimensional base, B_6 = CP^2 x S^2, which has isometry SU(3) x SU(2) and is the base of Witten's spaces:
+
+    11 = 4 (spacetime) + 1 (the interval of H) + 6 (B_6).
+
+There are two ways to complete 4 + 6 by one dimension, and they correspond to the two branes of M-theory:
+
+| | electric (M2) completion | magnetic (M5) completion |
+|---|---|---|
+| eleven-dimensional vacuum | AdS4 x Y_{3,2}, Y_{3,2} = M^{111}, a circle bundle over B_6 | AdS5 x CP^2 x S^2 |
+| the interval of H | the fibre circle, antiperiodic, two walls at the fixed points of a reflection | the radial direction of AdS5, infrared end at z_IR ~ 1/v |
+| SU(3) x SU(2) | isometries | isometries |
+| hypercharge | the vector of C_3 on the harmonic two-form (b_2 = 1) | one combination of the two C_3 vectors (b_2 = 2) |
+| v -> 0 | the M2-brane moves to the apex; AdS4 x Y_{3,2} with the Standard Model group unbroken | the infrared end moves to infinity |
+
+## Results
+
+| # | result | status | file |
+|---|---|---|---|
+| 1.1 | The chiral interval of length l is unitarily the antiperiodic circle of radius R = l/pi; the grading is the reflection, the walls its fixed points, m = 1/(2R) | Proposition, proved | [01](01_interval_and_eleventh_dimension.md) |
+| audit §3, §4 | Joint family: D_F = epsilon D_*, l ~ epsilon^{-alpha}, alpha < 1, gives m_weak << E_epsilon << 1/R -> 0, a finite window at the weak scale and an opening tower at fixed energy; a localized variant with a bulk mass | Proposition (Astra 6), rechecked here in circle language, constant of the Weyl count confirmed, localized table reproduced | [01](01_interval_and_eleventh_dimension.md) |
+| 1.3 | The circle of H as the M-theory circle: v -> 0 along the joint family is strong coupling with the Wilson-line angles going to zero, the 9 endpoint has no bulk fermions as in type 0 strings | Proposal | [01](01_interval_and_eleventh_dimension.md) |
+| 1.4 | The angle-dependent one-loop term of lemma 24 is -93 zeta(5) n_f/(512 pi^2 l^4) at its minimum, relative to theta = 0, where M_W = M_Z = 0 at fixed l (first version misread it as the whole wall energy; corrected) | Proposition, proved (scope of lemma 24) | [01](01_interval_and_eleventh_dimension.md) |
+| 1.5 | A scale-free potential l^{-4} G(theta) runs away in l, or with theta = l m fixes l m: it selects only l ~ 1/M_W (alpha = 1); alpha < 1 needs a second scale | Proposition, proved | [01](01_interval_and_eleventh_dimension.md) |
+| 2.1 | M^{111} is the hypercharge quotient of the 5-bar: (S^9 ∩ mu_Y^{-1}(0))/U(1)_Y, Calabi-Yau cone because tr Y = 0, isometries (U(3) x U(2))/U(1)_Y | Theorem, proved | [02](02_witten_spaces_hypercharge_quotient.md) |
+| 2.2 | Only the 5 and 5-bar of SU(5) give a seven-dimensional quotient; among the circle quotients of S^5 x S^3 only (3, 2) is Calabi-Yau | Proposition, proved | [02](02_witten_spaces_hypercharge_quotient.md) |
+| 2.3 | Y_{a,b}: H^2 = Z (+ torsion), H^4 of order a^2 (Z/9 for M^{111}), spin iff a odd and b even; H^2(B_6) -> H^2(Y) is (x, y) -> 2x - 3y | Proposition, proved | [02](02_witten_spaces_hypercharge_quotient.md) |
+| 2.4 | The Z_6 of the Standard Model is the kernel of SU(3) x SU(2) -> Isom(Y_{3,2}); no bosonic Kaluza-Klein mode is a triplet or doublet | Proposition, proved | [02](02_witten_spaces_hypercharge_quotient.md) |
+| 2.5 | No generation from abelian fluxes on CP^2 x CP^1 along Y and B - L: u^c and d^c need one line bundle, and 2j + 1 must be linear in the fluxed charges | Negative result in scope, pending check | [02](02_witten_spaces_hypercharge_quotient.md) |
+| 2.6 | One generation exactly, from fluxes along a universal charge, the grading chi and B - L; u^c, d^c share O(1, 0), so the flux sees SU(2)_R doublets and leaves T_3R free | Proposition, proved | [02](02_witten_spaces_hypercharge_quotient.md) |
+| 3.1 | Hypercharge is the Betti vector of Y_{3,2}; the N = 1 fivebrane baryons are d^c and L | Proposal | [03](03_branes_hypercharge_and_the_84.md) |
+| 3.2, 3.3 | One generation is Λ^odd(5-bar), with 6Y the homology class of the wrapped fivebranes; conjecture: a Fock space of wrapped fivebranes | Proposition (standard), Conjecture | [03](03_branes_hypercharge_and_the_84.md) |
+| 3.4 | The Higgs is the M2 position on the doublet line of the resolved cone; v -> 0 is the apex and gives AdS4 x Y_{3,2}; at fixed N this is the fixed-tower path, and opening needs N -> infinity, against N = 1 for the matter | Proposal (stabilizer proved), obstruction stated | [03](03_branes_hypercharge_and_the_84.md) |
+| 3.5 | AdS5 x CP^2 x S^2 with G_4 = f_1 vol(CP^2) + f_2 J ∧ vol(S^2) solves eleven-dimensional supergravity iff abs(f_1) < 2 abs(f_2) | Proposition, proved | [03](03_branes_hypercharge_and_the_84.md) |
+| 3.6, 3.7 | Two completions of one base; the M2/M5 exchange as the electric-magnetic duality of hypercharge, which does not permute the 96 states | Proposals | [03](03_branes_hypercharge_and_the_84.md) |
+| 3.8, 3.9 | The 84 of C_3 is not colour-equivariantly either family of 84, neither through the little group nor as Kaluza-Klein modes on Y_{3,2} | Negative result in scope, pending check; Corollary | [03](03_branes_hypercharge_and_the_84.md) |
+| 4.1 | The two 12-state blocks of lemma 21 are exactly the ratio-preserving blocks of whole species: one up-type quark, or the three neutrinos | Proposition, proved | [04](04_two_families_m2_m5.md) |
+| 4.2, 4.3 | The colour contents of F1 and F2 differ, and for every SU(3) -> SU(9) the space Lambda^3 C^9 is never either family (only 3 + 6 (1) gives triplets only) | Negative results in scope, pending check | [04](04_two_families_m2_m5.md) |
+| 4.A, 4.4 | Two commuting order-3 gradings of e8, by SU(9) (brane level mod 3: gravity, C_3, C_6) and by SU(3) x E6 (families); the 10 and H_u lie in the C_3 sector, (d^c, L) and nu^c in the C_6 and gravity sectors according to a sign t | Theorem, proved | [04](04_two_families_m2_m5.md) |
+| 4.5 | Up-type Yukawa couplings lie inside the C_3 sector, the others have one field per sector; the top mass is the wedge Lambda^3 -> Lambda^6 | Proposition, proved | [04](04_two_families_m2_m5.md) |
+| 4.6 | The M2/M5 exchange is the Chevalley involution, acting as the real structure J; it preserves both families and does not exchange the top with the neutrinos | Negative result in scope, pending check | [04](04_two_families_m2_m5.md) |
+| 4 §7, §8 | nu^c as the gravitational state selects t = +1/2; a discrete Z_3 from the M-grading | Proposal; Remark | [04](04_two_families_m2_m5.md) |
+| 5.1 | As configurations of E8 roots the two families of 84 have equal pair counts but are not isometric (the neutrino of the top's own family carries the obstruction), so no element of W(E8) exchanges them | Negative result in scope, pending check | [05](05_colour_family_exchange.md) |
+| 5.2 | With four families, M = -P in W(E8) transposes Pati-Salam colour with family and maps the up-type quark of family 0 onto the neutrinos of families 1, 2, 3 | Proposition, proved | [05](05_colour_family_exchange.md) |
+| 5.3 | In a four-family finite geometry the colour-family flip commutes with gamma and J and conjugates the heavy-top limit into the heavy Dirac-neutrino limit of the other three families; the Pati-Salam and Standard Model algebras are not flip-invariant | Proposition, proved | [05](05_colour_family_exchange.md) |
+| 5.4 | No assignment of the four types to three of four family slots, aligned or misaligned as at the 9 label, admits the exchange as an isometry of the E8 roots (192 configurations) | Computer-assisted negative result in scope, pending check | [05](05_colour_family_exchange.md) |
+| 5.5 | Families as zero modes of an SU(4) bundle: the four slots are the fibre and three families an index | Proposal | [05](05_colour_family_exchange.md) |
+| 6.1 | The top channel of lemma 22 is an SO(32) Wilson-line channel with m_t = a/R | Proposition, proved | [06](06_main_point_heterotic_route.md) |
+| 6 §2, §3, §5 | The heterotic web 9, 10, 11 as the realization of the target; dictionary with D_F as a Wilson line, SO(30) x SO(2) as fifteen D8-branes and one displaced, composite scalars as open strings | Proposals | [06](06_main_point_heterotic_route.md) |
+| 7.1 | The angle of a channel of lemma 22 lives on the interval [0, pi/2], whose ends are the periodic and the antiperiodic spectra | Proposition, proved | [07](07_dualities_9_11.md) |
+| 7.2 | The top channel is the SO(32) Wilson line 1_30 + R(2 pi a); the one-loop minimum of lemma 24 is the far end a = 1/2, the top's D8-brane on the other wall | Proposition, proved | [07](07_dualities_9_11.md) |
+| 7.3 | A torus with flux p, doubled, has KO-6 signs, kernel C^p + conj(C^p) and window M_p(C), the colour form for p = 3 | Proposition, proved | [07](07_dualities_9_11.md) |
+| 7 §2, §4, §5, §6 | Readings of the dualities 1 to 4 for the finite geometry: walls and D8 positions, Landau levels as towers, stacks of D0-branes as the algebra | Proposals; known remark | [07](07_dualities_9_11.md) |
+| 8.1 | The descended antiunitary of lemma 06 with j^2 = s gives O(n) or USp(n) on every eigenspace of d^2 | Proposition, proved | [08](08_orientifold_sign.md) |
+| 8.2 | Wall channels of the parent come with doubled multiplicity relative to bulk channels | Proposition, proved | [08](08_orientifold_sign.md) |
+| 8.3, 8 readings | O^- for label 11 and O^+ for label 9; E8 walls from 15 + 1, with the far wall enhancing to SU(2) x U(1) at infinite coupling | Remark conditional on recalled rules; proposals | [08](08_orientifold_sign.md) |
+| 9.1 | The type I' function z (with e^phi = z^(-5/6)) is z(0) + c Tr g_x(l abs(D_F)) over sixteen channels; infinite coupling at the far wall iff z(0) = (2cL/pi)(4 pi - l Sigma m_k) | Proposition, proved from the recalled slope rule | [09](09_dilaton_spectral_and_so32.md) |
+| 9.2 | The diquark counts of lemma 21 (-2/3: 6, +1/3: 6, +4/3: 3) are the strings between the fifteen-brane stack and its image on an O8^- plane; O8^+ gives (3, 6, 1); a single brane has no string to its image on O8^- | Proposition, proved from representation theory and the recalled projections; reading as proposal | [09](09_dilaton_spectral_and_so32.md) |
+| 9.3 | The diquark block between V and Vbar is symmetric iff eps eps' = +1: labels 9, 10, 11 give S^2 V with counts (3, 6, 1); the counts (6, 6, 3) of lemma 21 come from Lambda^2 V, as for a connection component along a circle or interval | Proposition, proved (linear algebra and the KO sign table); scope and escapes stated | [09](09_dilaton_spectral_and_so32.md) |
+| 9 §1 | Comparison with A. Rivero, Eur. Phys. J. C 84 (2024) 1058 (arXiv:2407.05397): the chain SO(32) > SO(2) x SO(30) > SO(2) x SU(5) x SU(3) x U(1) coincides with lemma 21 and the dictionary of 06; the type I' realization was not found there | Comparison, read through a summarizing fetch | [09](09_dilaton_spectral_and_so32.md) |
+| 9 §4 | E-type walls as local del Pezzo surfaces (dP_2 for the top's wall); the colour-family transposition of 05 as a nine-dimensional T-duality, which by itself is a gauge relabelling | Proposals | [09](09_dilaton_spectral_and_so32.md) |
+| 5 Readings | Three families as the obstruction; M exchanges the two heavy directions of the algebra chain; 128 = 44 + 84 under Spin(9) | Proposals | [05](05_colour_family_exchange.md) |
+
+The checks are in [checks_11d.py](checks_11d.py) (Python 3, exact fractions; every check asserts; about 20 s).
+
+## How the massless limit gives eleven dimensions here
+
+Vanishing W and Z masses open a dimension only along a specified path (audit §2.2): at fixed l, both theta -> 0 and theta -> pi/2 make them massless with the tower fixed. The criterion used here is the joint family of the audit, m_weak << E_epsilon << 1/R -> 0, with finite gauge couplings.
+
+1. In the circle language of Proposition 1.1, the joint family is R -> infinity for an antiperiodic circle with two fixed points, with the Wilson-line angles of D_F going to zero. Read as the M-theory circle (Proposal 1.3), it is the strong-coupling limit, with the weak scale below the momentum tower of the eleventh dimension.
+2. What selects the path: a potential with l and the angles as its only scales selects alpha = 1, the original l ~ 1/M_W of H, on which the finite window does not separate (Proposition 1.5). The joint family needs a second scale; the localized family of the audit (bulk mass mu, mu l ~ (1 - alpha) log(1/epsilon)) is the first candidate, and the four-dimensional couplings must stay finite, which on the circle needs g_5^2 ~ R.
+3. In the brane language of Proposal 3.4, v -> 0 moves the M2-brane to the apex of the cone over the Witten space with Killing spinors, and the near-horizon geometry is AdS4 x Y_{3,2}: 4 + 7 = 11 with SU(3) x SU(2) from isometries and U(1)_Y from C_3 (Proposal 3.1). This is the family of manifolds with the Standard Model group, singled out by the 5-bar (Theorem 2.1, Proposition 2.2). At fixed N it is the fixed-tower path; a joint family there needs N -> infinity, in tension with the N = 1 matter content.
+4. On the magnetic side, AdS5 x CP^2 x S^2 carries the same base, and v -> 0 sends the infrared end of AdS5 to infinity (Proposal 3.6), which is the interval of H growing.
+
+The angle-dependent one-loop term (Proposition 1.4) is minimized at the massless point at fixed l; the direction in which l moves depends on the angle-independent Casimir coefficient, which is not yet computed.
+
+## Next computations, ranked
+
+0a. **The main point** (06, PLAN task B): one family realizing the three regimes; first steps listed in 06 §6 (type I' interval with the D8 configuration 15 + 1 as the parent of the lemma-22 window; Chan-Paton algebras against C + H + M_3(C); inner fluctuations against Λ^2(30)).
+0b. **A nine-dimensional spectral triple on the type I' interval** (07 §7): sixteen D8 positions as the eigenvalues of D_F, and its strong-coupling limit with E8 walls; the dilaton as a spectral function and the diquark strings are in 09 (Propositions 9.1, 9.2), and whether the type I' coupling supplies the second scale of Proposition 1.5 is the next question there.
+0. **A potential with a second scale that selects alpha < 1** (Proposition 1.5 and audit §7.1): the one-loop potential of the localized family, G(l m, l mu), from the exact secular equations of lemma 09, and the angle-independent Casimir coefficient a_0 of the flat family; then the vector kinetic matrix and mass Hessian along the selected path (audit eq. (17)), with g_4 finite.
+1. **The referee of this folder** ([prompts/terra_check_11d.md](prompts/terra_check_11d.md)): Propositions 1.1, 1.4, 2.1 to 2.6, 3.2, 3.5, 3.8 and Corollary 3.9, with the negative results 2.5 and 3.8 needing the independent check before they are relied on.
+2. **Spinors on Y_{3,2}** ([prompts/astra_11d_01.md](prompts/astra_11d_01.md)): the lift of (U(3) x U(2))/U(1)_Y to the spin bundle, whether fermionic Kaluza-Klein modes can carry triality or isospin 1/2, and which spin structures give the antiperiodic fibre momenta (k + 1/2)/R of Proposition 1.1.
+3. **W and Z masses from the resolution**: in the warped resolved cone over Y_{3,2} with the M2-brane on the doublet line, compute the masses of the SU(2) x U(1)_Y vectors broken by the brane position, as functions of zeta and N, and compare M_W/M_Z with the cos^2 theta = 5/8 of the spectral action.
+4. **The 9D reduction of Proposition 2.6**: with SU(2)_R broken by wall data, derive the mass basis of u and d against the charge basis, and the vectorlike limit at the 9 label, where the left-handed interactions are off.
+5. **Fermionic zero modes of wrapped fivebranes** (Conjecture 3.3) at N = 1, and three generations.
+6. **The magnetic completion**: flux quantization, stability and the two C_3 vectors of AdS5 x CP^2 x S^2 against the fluxed pair (chi, B - L) of Proposition 2.6.
+7. **A four-family completion with the fourth family decoupled** (PLAN, steps 4-5): a finite geometry or Hořava-Witten configuration in which the colour-family transposition M of Proposition 5.2 is a symmetry, so that the three-family statement of lemma 21 follows as a limit; Proposition 5.1 shows that with three families the exchange is not an isometry.
+
+## The Astra 6 audit of 3 Nov 2026
+
+The audit ([reviews/2026-11-03_astra_audit_d11.md](../reviews/2026-11-03_astra_audit_d11.md)) reviews the master snapshot b2ddf98 and proposes a route from the massless electroweak limit to eleven dimensions with X = D(Λ^2_- T^*S^4) as principal candidate and M^{111} as comparison. Its use here:
+
+| audit item | use in this folder |
+|---|---|
+| §2.2, the massless limit must specify a path | adopted as the criterion; Proposal 1.3 revised; Proposition 1.5 shows what a scale-free action selects |
+| §3, joint family | restated in circle language in 01, checked against Theorems 22.1 and 22.4; the constant 2 r l E/pi of its Weyl count confirmed (Python, section H) |
+| §3.1, vector poles of the lemma-23 toy | quoted in 01: M_W^2/M_Z^2 -> 5/8 along the family |
+| §4, localized family and tail identity | table of roots and the identity (8) reproduced (Python, section H, bisection), independently of the audit's script |
+| §7.1, modulus target | Proposition 1.5: in the flat family the electroweak term is m^2/l^2 (q = -2), so the ansatz with q > 0 needs a second scale |
+| §7.2, gauge normalization | test 2 of Proposal 1.3, and the large-N couplings in 03 |
+| Appendix A, M^{111} | agrees with Theorem 2.1 and Proposition 2.3 for (3, 2), and with the placement of hypercharge in the charged module (03) |
+| §2.1, §5, §6, X and lemma 28 | outside this folder; the 7-dimensional parent X is a third possible completion, M-theory on R^4 x X with the Bryant-Salamon comparison and the circle of solidification §7 as a candidate M-circle, listed as a direction only |
+| §2.4, docs and distribution | outside this branch: refreshing the PDFs, adding lemmas 17 and 28 to paper/build_supplement.sh and repairing the supplement layout belong to master's build, and LaTeX is not available in this session |
+
+## References used here
+
+Read in this session (3 Nov 2026), from the arXiv abstract pages or the ar5iv text through a summarizing fetch: D. Fabbri, P. Fré, L. Gualtieri and P. Termonia, *M-theory on AdS4 x M^{111}: the complete Osp(2|4) x SU(3) x SU(2) spectrum from harmonic analysis*, Nucl. Phys. B 560 (1999) 617, [hep-th/9903036](https://arxiv.org/abs/hep-th/9903036) (coset, Killing spinors only for p = q, R-symmetry, Betti multiplet, Kaluza-Klein states neutral under it); D. Fabbri, P. Fré, L. Gualtieri, C. Reina, A. Tomasiello, A. Zaffaroni and A. Zampa, *3D superconformal theories from Sasakian seven-manifolds*, [hep-th/9907219](https://arxiv.org/abs/hep-th/9907219) (D-term 2|U|^2 = 3|V|^2, U(1) fibration over P^1 x P^2, baryons det U and det V as wrapped M5-branes, E_0 = 4N/9 and N/3, b_2 = b_5 = 1). M. Kreck and S. Stolz, *A diffeomorphism classification of 7-dimensional homogeneous Einstein manifolds with SU(3) x SU(2) x U(1)-symmetry*, Ann. of Math. 127 (1988) 373 (title and scope only).
+
+Recalled and not reread, to be checked before any of them carries an argument: E. Witten, *String theory dynamics in various dimensions*, hep-th/9503124 (D0 states as momentum modes); O. Bergman and M. Gaberdiel, *Dualities of type 0 strings*, hep-th/9906055; M. Fabinger and P. Hořava, *Casimir forces between end-of-the-world branes*, hep-th/0002073; E. Witten, *SL(2, Z) action on three-dimensional conformal field theories with Abelian symmetry*, hep-th/0307041; C. N. Pope and P. van Nieuwenhuizen, *Compactifications of d = 11 supergravity on Kähler manifolds*, Commun. Math. Phys. 122 (1989) 281; J. Gauntlett, D. Martelli, J. Sparks and D. Waldram, *Supersymmetric AdS5 solutions of M-theory*, hep-th/0402153.
+
+Already in the corpus: Witten 1981 and Castellani-D'Auria-Fré ([LITERATURE.md §F](../LITERATURE.md#f-weinberg-angle-from-a-squashed-s3--lens-space-and-from-mpqr)); Hořava-Witten, Atiyah-Witten and Acharya-Witten-type cones ([solidification §6](../research_limits/solidification.md#6-what-m-theory-supplies-and-what-it-does-not)).
+
+Prior work for the observation of Theorem 2.1, that the weights of M^{111} are the hypercharges of the 5-bar, was not searched; this is an open item for LITERATURE.md.
+
+## Files
+
+- [01_interval_and_eleventh_dimension.md](01_interval_and_eleventh_dimension.md): the "1".
+- [02_witten_spaces_hypercharge_quotient.md](02_witten_spaces_hypercharge_quotient.md): the "6 + 1" of Witten's spaces, the Z_6, chirality from fluxes.
+- [03_branes_hypercharge_and_the_84.md](03_branes_hypercharge_and_the_84.md): C_3, M2, M5 and the 84.
+- [04_two_families_m2_m5.md](04_two_families_m2_m5.md): the two 12-state blocks, the two gradings of E8, Yukawa couplings as brackets, the M2/M5 exchange as J.
+- [05_colour_family_exchange.md](05_colour_family_exchange.md): the two families as E8 root configurations, the colour-family transposition with four families.
+- [06_main_point_heterotic_route.md](06_main_point_heterotic_route.md): the main point: target, the heterotic web 9/10/11, dictionary, Proposition 6.1.
+- [07_dualities_9_11.md](07_dualities_9_11.md): dualities between 9 and 11 adapted to the spectral triple: the top angle as a D8 position between two orientifold walls, the one-loop vacuum as the far wall, a torus with flux as the colour form.
+- [08_orientifold_sign.md](08_orientifold_sign.md): the sign of lemma 06 as an orientifold type (O^- for label 11, O^+ for label 9); E8 walls from 15 + 1: the far wall with the top's brane enhances to SU(2) x U(1) at infinite coupling.
+- [09_dilaton_spectral_and_so32.md](09_dilaton_spectral_and_so32.md): the type I' dilaton as a trace of a function of D_F; the SO(32) of the EPJC paper compared with lemma 21; diquarks as strings between the stack and its image on an O8^- plane; del Pezzo walls and the transposition as a T-duality (proposals).
+- [PLAN.md](PLAN.md): the handover plan of the line.
+- [checks_11d.py](checks_11d.py): exact checks.
+- [ledger_11d.pl](ledger_11d.pl): ledger facts, included by [../ledger.pl](../ledger.pl).
+- [prompts/](prompts/): the referee request and the first Astra job.
+- [../reviews/2026-11-03_astra_audit_d11.md](../reviews/2026-11-03_astra_audit_d11.md): the Astra 6 audit used in the second version.
