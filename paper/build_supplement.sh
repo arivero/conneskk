@@ -24,6 +24,7 @@ part 28 lemmas/28_*.md
 part 29 lemmas/29_*.md
 part 30 lemmas/30_*.md
 for f in 11D/README.md 11D/0*.md 11D/1*.md; do part "11D, $(basename $f .md | tr _ ' '), referee pending" "$f"; done
+part "H (history of the field, to November 2026)" NCG_HISTORY.md
 part "L (literature check and record of searches)" LITERATURE.md
 part "R1 (assessment of Farsi-Latremoliere, with the counterexample to their Theorem 3.4)" reviews/2026-11-03_farsi_latremoliere_assessment.md
 part "R2 (referee report, lemmas 08, 13, 14)" reviews/2026-11-03_terra_check_08_13_14.md
