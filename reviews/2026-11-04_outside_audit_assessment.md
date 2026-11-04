@@ -1,6 +1,6 @@
-# Assessment of the outside audit of commit b2ddf98
+# Assessment of the audit of commit b2ddf98
 
-The user supplied on 4 November 2026 an outside audit of the repository at b2ddf98, titled "conneskk: audit and a route from the massless electroweak limit to eleven dimensions", kept verbatim in [2026-11-03_outside_audit_d11.md](2026-11-03_outside_audit_d11.md). Its authorship model is not stated in the file. This note records what was checked and what was done. Provenance: Claude Sonnet 5.5 recomputed all items, read-only, in Python and with pdftotext, and Claude Opus 5.5 rederived by hand the items marked below, against the source lemmas. The user asked for attention to detail with the reports of smaller models, so the column "by hand" says which verdicts do not rest on such a report alone.
+The user supplied on 4 November 2026 an outside audit of the repository at b2ddf98, titled "conneskk: audit and a route from the massless electroweak limit to eleven dimensions", kept verbatim in [2026-11-03_astra_audit_d11.md](2026-11-03_astra_audit_d11.md). The file does not state its authorship; the 11D line, merged on 4 November, attributes it to Astra 6, and we follow that. This note records what was checked and what was done. Provenance: Claude Sonnet 5.5 recomputed all items, read-only, in Python and with pdftotext, and Claude Opus 5.5 rederived by hand the items marked below, against the source lemmas. The user asked for attention to detail with the reports of smaller models, so the column "by hand" says which verdicts do not rest on such a report alone.
 
 ## Verdicts
 

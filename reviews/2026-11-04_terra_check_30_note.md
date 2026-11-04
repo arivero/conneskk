@@ -1,6 +1,6 @@
 # Referee report on lemma 30, the note and the corrected case (a) of lemma 29, by Terra 6.1
 
-Model gpt-6.1-terra, effort max, read-only sandbox, run on 4 November 2026 with the prompt [terra_check_30_note.md](../lemmas/prompts/terra_check_30_note.md). The report below is verbatim. No Python was run by the referee.
+Model gpt-6.1-terra, effort max, read-only sandbox, run on 4 November 2026 with the prompt [terra_check_30_note.md](../lemmas/prompts/terra_check_30_note.md). The report below is verbatim, except that local absolute links were rewritten as relative links. No Python was run by the referee.
 
 Assessment by Claude Opus 5.5, reading it against the text. All items applied, with these checks. Item 7: correct; the bulk interpolation allowed by (H3) need not keep j_E parallel. The fix was checked by hand: j_E (n . J) j_E^-1 = -n . J gives j_E P_q j_E^-1 = P_{-q}, so j_E is parallel for the line-preserving connection and for real affine interpolation with the pull-back connection, which is the interpolation in tools/lemma28_radial.py, and C then commutes with i Phi_M as well as with D. The unconditional bound eta_t = O(M^{-1/2}) is adopted, with its proof written out. Item 4: correct; lemma 24 has V = C^4 with gradings of type (2, 2). Item 9, first point: the counterexample to the implication from the hierarchy alone is correct. Item 5: the sign in Proposition 29.10 and the missing projection estimate are applied; the Weyl constant has the rank 64 = 8 x 4 x 2. Item 1: the gap is an equality, since the next level is (pi - theta_max)/l. Item 13: the identifiers not already in the record were checked on arXiv. The source-level attributions to Parthasarathy, Bismut-Lebeau and Kirchberg stay unread, as the referee says. This was the last Codex job available in the weekly quota, so these corrections have had no further independent reading.
 
@@ -12,7 +12,7 @@ The interval and disc-bundle counting arguments otherwise support the stated joi
 
 ## Part A: lemma 30
 
-1. **AMENDMENT — Theorem 30.1.** The compression constant \(2/3\), the gap bound and both counts agree with [Theorems 22.1 and 22.4](/home/codexssh/conneskk/lemmas/22_dirac_operator_as_boundary_condition.md:34). Add \(l_*>0\), \(E_*>0\), and the algebra and representation assumptions needed to define \(Q_\varepsilon(a)\) and \(\pi(a)\). Alternatively, state the compression estimate for a bounded even operator \(a\), using its operator norm.
+1. **AMENDMENT — Theorem 30.1.** The compression constant \(2/3\), the gap bound and both counts agree with [Theorems 22.1 and 22.4](../lemmas/22_dirac_operator_as_boundary_condition.md). Add \(l_*>0\), \(E_*>0\), and the algebra and representation assumptions needed to define \(Q_\varepsilon(a)\) and \(\pi(a)\). Alternatively, state the compression estimate for a bounded even operator \(a\), using its operator norm.
 
    There are \(r/2\) singular values counted with multiplicity, and each gives two signed arithmetic progressions. These remain **\(r\) progressions with multiplicity** when singular values coincide or vanish. In particular, a zero singular value contributes two zero modes. Thus the moving-window count is \(r\), and the fixed-energy leading term is
    \[
@@ -25,7 +25,7 @@ The interval and disc-bundle counting arguments otherwise support the stated joi
 
 2. **AMENDMENT — Corollary 30.2.** The two endpoint pairs are correct for the **universal fully massive family**, with both members of every Standard Model doublet assigned the same Dirac mass and no Majorana mass. In that family the two commutator quotients are \(2m^2\) and \(16m^2/5\); multiplying them by \((3-d_{\rm eff})/2\) gives \((3,24/5)m^2\) as \(d_{\rm eff}\to0\) and \((2,16/5)m^2\) as \(d_{\rm eff}\to1\).
 
-   [Lemma 25](/home/codexssh/conneskk/lemmas/25_sum_rule_effective_dimension.md:39) concerns the leading **Taylor quotient** for the heat-cutoff spectral action, with an even vector generator constant in the transported frame and an enlarged admissible gauge algebra. The interval poles belong to the separately specified five-dimensional Yang–Mills problem. The coefficient comparison holds at leading order; it does not identify the full spectral-action pole problem with that Yang–Mills problem.
+   [Lemma 25](../lemmas/25_sum_rule_effective_dimension.md) concerns the leading **Taylor quotient** for the heat-cutoff spectral action, with an even vector generator constant in the transported frame and an enlarged admissible gauge algebra. The interval poles belong to the separately specified five-dimensional Yang–Mills problem. The coefficient comparison holds at leading order; it does not identify the full spectral-action pole problem with that Yang–Mills problem.
 
    The path is correct:
    \[
@@ -36,7 +36,7 @@ The interval and disc-bundle counting arguments otherwise support the stated joi
    \]
    At fixed \(\Lambda>0\), \(s\to\infty\) and \(m_\varepsilon/\Lambda\to0\). Lemma 25 states its expansion first at fixed \(s\); a joint-limit use should add a uniform remainder argument, or state explicitly that the displayed endpoints concern the leading coefficient. Varying the action cutoff is an additional prescription, as the corollary says.
 
-3. **AMENDMENT — Proposition 30.3.** The root and asymptotics follow from [Theorem 9.4 and Lemma 9.5](/home/codexssh/conneskk/lemmas/09_massive_chiral_interval.md:39). For \(c>1\), the first oscillatory root satisfies
+3. **AMENDMENT — Proposition 30.3.** The root and asymptotics follow from [Theorem 9.4 and Lemma 9.5](../lemmas/09_massive_chiral_interval.md). For \(c>1\), the first oscillatory root satisfies
    \[
    \pi<k_1l<\frac{3\pi}{2},\qquad
    \frac{\Delta}{\mu}=\sqrt{1+\left(\frac{k_1l}{c}\right)^2}\longrightarrow1.
@@ -51,7 +51,7 @@ The interval and disc-bundle counting arguments otherwise support the stated joi
    \]
    with \(\mu_*>0\) and \(0<\alpha<1\). The reuse of \(l_\varepsilon\) is also misleading in the note.
 
-4. **ERROR — Corollary 30.4 for arbitrary finite data.** The cylinder in [lemma 24](/home/codexssh/conneskk/lemmas/24_commutative_parent.md:7) has \(\ker A\simeq\mathbb C^4\), with wall gradings having two positive and two negative directions. It does not realize an arbitrary dimension \(r\) from Theorem 30.1. For example, finite data with \(H_+=H_-=\mathbb C^3\) and \(D_*=0\) satisfy the interval hypotheses and have \(r=6\); the stated cylinder has a four-dimensional tangential kernel.
+4. **ERROR — Corollary 30.4 for arbitrary finite data.** The cylinder in [lemma 24](../lemmas/24_commutative_parent.md) has \(\ker A\simeq\mathbb C^4\), with wall gradings having two positive and two negative directions. It does not realize an arbitrary dimension \(r\) from Theorem 30.1. For example, finite data with \(H_+=H_-=\mathbb C^3\) and \(D_*=0\) satisfy the interval hypotheses and have \(r=6\); the stated cylinder has a four-dimensional tangential kernel.
 
    Restrict the corollary to the compatible \(r=4\) data, or construct and state an enlarged tangential bundle for other dimensions. The gap estimate then follows from lemma 24. The seven-dimensional count needs an additional Weyl argument: Dirichlet and Neumann bracketing of the squared product operator give the same leading term as \(l_\varepsilon,r_\varepsilon\to\infty\), proportional to \(l_\varepsilon r_\varepsilon^6E^7\). Lemma 24’s gap estimate alone does not prove that asymptotic.
 
@@ -73,7 +73,7 @@ The interval and disc-bundle counting arguments otherwise support the stated joi
    \[
    \frac{45\pm3\sqrt{33}}8
    \]
-   are consistent. The displayed matrix at \(\rho=1\) has kernel \((-2,1,1)\), giving signed fibre part \((-4-1+1)/6=-2/3\). However, [Proposition 29.10](/home/codexssh/conneskk/lemmas/29_window_on_the_disc_bundle.md:154) still says that the fibre part tends to \(+w(\rho)\). It must say **\(-w(\rho)\)**. Theorem 29.11 has the correct sign.
+   are consistent. The displayed matrix at \(\rho=1\) has kernel \((-2,1,1)\), giving signed fibre part \((-4-1+1)/6=-2/3\). However, [Proposition 29.10](../lemmas/29_window_on_the_disc_bundle.md) still says that the fibre part tends to \(+w(\rho)\). It must say **\(-w(\rho)\)**. Theorem 29.11 has the correct sign.
 
    The adjoint estimate in Proposition 29.10 also needs one explicit step. Orthogonality to the *exact* half-cylinder kernel does not immediately give orthogonality to \(\ker F^*\). The Schur-complement graph estimate gives
    \(\|P_{\ker T_M^*}-P_{\ker F^*}\|=O(1/m)\); inserting this projection estimate supplies the required \(O(1/m)\) loss. With that addition, no further error was found in the corrected case-(a) block argument.
@@ -86,7 +86,7 @@ The interval and disc-bundle counting arguments otherwise support the stated joi
    Quaternionic conjugation exchanges \(b_+\) and \(b_-\), so
    \(\|B-P_{\mathbb H}B\|=|b_+-b_-|/2\). This gives \(2\eta_t\). Each compression of a real \(f\) with \(\|f\|_\infty\le1\) is a contraction; telescoping against its \(j\)-conjugate gives \(2k\eta_t\) for a product of \(k\) such compressions.
 
-7. **ERROR — Proposition 30.7 as stated for all allowed connections.** The proof assumes \(CT_M=T_MC\) throughout the interior. [Setting 29.0](/home/codexssh/conneskk/lemmas/29_window_on_the_disc_bundle.md:18) permits any invariant unitary interpolation in the bulk; it does not require that interpolation to preserve \(j_E\).
+7. **ERROR — Proposition 30.7 as stated for all allowed connections.** The proof assumes \(CT_M=T_MC\) throughout the interior. [Setting 29.0](../lemmas/29_window_on_the_disc_bundle.md) permits any invariant unitary interpolation in the bulk; it does not require that interpolation to preserve \(j_E\).
 
    This is a failure of a stated premise in the proof. For an allowed connection that is pull-back on a bulk annulus, put \(q=n\!\cdot\!J\) there and add the invariant skew-Hermitian connection form
    \[
@@ -116,7 +116,7 @@ The interval and disc-bundle counting arguments otherwise support the stated joi
    Under the original general connection hypotheses, the window estimate still gives
    \(\eta_t=O(M^{-1/2})\): choose an equivariant normalized core model fixed by the local real structure and use the \(L^2\) distance to that model from Theorem 29.7. Finally, an exponential upper bound expressed in \(M\) does not imply \(O(\lambda^2)\) without a lower bound on \(\lambda\).
 
-   The Python samples cited at [lemma 30, line 106](/home/codexssh/conneskk/lemmas/30_massless_limit_as_a_joint_limit.md:106) vary the length at fixed mass and use profiles outside Setting 29.0. They support a qualitative comparison and do not test the stated \(M\to\infty\) theorem.
+   The Python samples cited at [lemma 30, line 106](../lemmas/30_massless_limit_as_a_joint_limit.md) vary the length at fixed mass and use profiles outside Setting 29.0. They support a qualitative comparison and do not test the stated \(M\to\infty\) theorem.
 
 8. **AMENDMENT — Remark 30.8.** The vector-sector and connector obligations are accurately identified. The gauge formula assumes a fixed microscopic coupling, a constant internal Yang–Mills profile and the stated normalization; then \(g_4\propto R^{-7/2}\).
 
@@ -130,7 +130,7 @@ The interval and disc-bundle counting arguments otherwise support the stated joi
 
 ## Part B: the note
 
-9. **ERROR — Several statements exceed their supplied hypotheses.** The following corrections are needed in [joint_limit_note.tex](/home/codexssh/conneskk/paper/joint_limit_note.tex:27).
+9. **ERROR — Several statements exceed their supplied hypotheses.** The following corrections are needed in [joint_limit_note.tex](../paper/joint_limit_note.tex).
 
    - **Hierarchy, lines 40–44.** The hierarchy alone does not imply that the fixed-energy count diverges. For a compact-resolvent counterexample, take signed spectrum
      \[
@@ -155,7 +155,7 @@ The interval and disc-bundle counting arguments otherwise support the stated joi
 
    The Bryant–Salamon qualification is correct. [Karigiannis–Lotay, arXiv:2002.06444v3, Eq. (3.36) and Theorem 3.6](https://arxiv.org/pdf/2002.06444) gives a complete asymptotically conical \(G_2\) metric on the same total bundle, with a radial horizontal scale and non-flat fibre metric outside Setting 29.0. Homothetic enlargement of the fixed shape has a flat pointed limit at a fixed interior point; a fixed boundary point gives a half-space limit.
 
-11. **AMENDMENT — Citations and companion drafts.** The internal interval references support the exact spectrum and the qualified Taylor coefficient. The note should preserve the companion draft’s explicit distinction between a leading Taylor quotient and a pole calculation. [towerless_intervals.tex](/home/codexssh/conneskk/paper/towerless_intervals.tex:184) treats the relation between the KO labels and geometric limits as a proposal; the joint note’s introduction presents that relation more definitively and should retain the proposal status.
+11. **AMENDMENT — Citations and companion drafts.** The internal interval references support the exact spectrum and the qualified Taylor coefficient. The note should preserve the companion draft’s explicit distinction between a leading Taylor quotient and a pole calculation. [towerless_intervals.tex](../paper/towerless_intervals.tex) treats the relation between the KO labels and geometric limits as a proposal; the joint note’s introduction presents that relation more definitively and should retain the proposal status.
 
    [Connes–van Suijlekom, §1](https://link.springer.com/article/10.1007/s00220-020-03825-x) supports the operator-system discussion. Replace “generated algebras do not converge when compression maps do” at line 146 by “need not converge”; constant families already show that convergence can occur.
 
@@ -163,7 +163,7 @@ The interval and disc-bundle counting arguments otherwise support the stated joi
 
    [Baptista, arXiv:2506.09126v2, §1 and Eq. (1.2)](https://arxiv.org/html/2506.09126), supports the distinction between Killing and non-Killing metric modes in its stated Kaluza–Klein setting. It does not calculate the vector sector on this disc bundle.
 
-12. **AMENDMENT — Table I.** Every displayed \(M=32\) row matches [lemma 29’s Python table](/home/codexssh/conneskk/lemmas/29_window_on_the_disc_bundle.md:179). The first \(\mathbf{16}\) entry is the core value and the second is the wall value; on the \(\mathbf{20}\), the first is the wall value and the second is the core value. Adding those labels would make the comparison easier to assess.
+12. **AMENDMENT — Table I.** Every displayed \(M=32\) row matches [lemma 29’s Python table](../lemmas/29_window_on_the_disc_bundle.md). The first \(\mathbf{16}\) entry is the core value and the second is the wall value; on the \(\mathbf{20}\), the first is the wall value and the second is the core value. Adding those labels would make the comparison easier to assess.
 
    The smallest computed \(\mathbf4\) value is floor-dominated at the reported meshes. Its mesh dependence does not determine whether the continuum value vanishes. The stated \(0.005\) wall discrepancy is a Python mesh observation from the source, not an independently established error bound. The caption should attribute the limit values to the end models and their spectral comparison: the window theorem by itself gives the low-window count and gap, not all individual excited limits.
 

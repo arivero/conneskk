@@ -112,7 +112,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
 
 The interval of H as an antiperiodic circle and as the M-theory circle; Witten's space M^{111} as the hypercharge quotient of the 5-bar, the Z_6 and chirality from fluxes; hypercharge from C_3, matter from wrapped branes, the Higgs as the M2 position, the magnetic completion AdS5 x CP^2 x S^2, and the 84 of lemma 21 against C_3.
 
-[11D README](11D/README.md) · [11D §1](11D/01_interval_and_eleventh_dimension.md) · [11D §2](11D/02_witten_spaces_hypercharge_quotient.md) · [11D §3](11D/03_branes_hypercharge_and_the_84.md) · [strategy, Ranked list (T14)](STRATEGY.md#ranked-list) · [Astra audit §3-§4, joint family](reviews/2026-11-03_astra_audit_d11.md#3-a-positive-joint-limit-result-from-the-exact-interval) · [11D §4, two families and M2/M5](11D/04_two_families_m2_m5.md) · [11D §5, colour-family exchange](11D/05_colour_family_exchange.md) · [11D §6, main point and heterotic route](11D/06_main_point_heterotic_route.md) · [11D §7, dualities between 9 and 11](11D/07_dualities_9_11.md) · [11D §8, orientifold sign](11D/08_orientifold_sign.md) · [11D §9, dilaton as spectral function and the SO(32) of the EPJC paper](11D/09_dilaton_spectral_and_so32.md)
+[lemma 28, two ends of a connected parent](lemmas/28_two_walls_connected_parent.md) · [lemma 29, the eight-state window](lemmas/29_window_on_the_disc_bundle.md) · [lemma 30, the joint limit](lemmas/30_massless_limit_as_a_joint_limit.md) · [note on the joint limit](paper/joint_limit_note.tex) · [11D README](11D/README.md) · [11D §1](11D/01_interval_and_eleventh_dimension.md) · [11D §2](11D/02_witten_spaces_hypercharge_quotient.md) · [11D §3](11D/03_branes_hypercharge_and_the_84.md) · [strategy, Ranked list (T14)](STRATEGY.md#ranked-list) · [Astra audit §3-§4, joint family](reviews/2026-11-03_astra_audit_d11.md#3-a-positive-joint-limit-result-from-the-exact-interval) · [11D §4, two families and M2/M5](11D/04_two_families_m2_m5.md) · [11D §5, colour-family exchange](11D/05_colour_family_exchange.md) · [11D §6, main point and heterotic route](11D/06_main_point_heterotic_route.md) · [11D §7, dualities between 9 and 11](11D/07_dualities_9_11.md) · [11D §8, orientifold sign](11D/08_orientifold_sign.md) · [11D §9, dilaton as spectral function and the SO(32) of the EPJC paper](11D/09_dilaton_spectral_and_so32.md)
 
 ## Part 2. Documents
 
@@ -123,6 +123,10 @@ REVTeX source, built with `make` in `paper/` in two forms: Phys Rev two-column, 
 ### Short note: *Explicit masses and the chiral limit in odd reductions of almost-commutative geometries*: [paper/chiral_limit_note.tex](paper/chiral_limit_note.tex)
 
 From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built in the same two forms.
+
+### Short note: *Finite spectral windows in seven-dimensional parents: towards the massless electroweak limit*: [paper/joint_limit_note.tex](paper/joint_limit_note.tex)
+
+From [lemma 28](lemmas/28_two_walls_connected_parent.md), [lemma 29](lemmas/29_window_on_the_disc_bundle.md) and [lemma 30](lemmas/30_massless_limit_as_a_joint_limit.md) (STRATEGY T0, T14), built in the same two forms. Draft.
 
 ### Paper: *Nine, Ten and Eleven Dimensions*: [canonical_research.md](canonical_research.md)
 

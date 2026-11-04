@@ -356,7 +356,7 @@ depends(d11_transposition_tduality, d11_transposition).
 attempted_by(d11_transposition_tduality, claude).
 
 %% ---------------------------------------------------------------- strategy
-strategy(t14, open, "Eleven dimensions from massless W and Z: the interval of H as an antiperiodic circle and as the M-theory circle; Witten's space M^{111} as the hypercharge quotient of the 5-bar; hypercharge from C_3, matter from wrapped branes, the Higgs as the M2 position; the magnetic completion AdS5 x CP^2 x S^2; the 84 of lemma 21 against C_3.").
+%% The strategy fact of T14 is in ../ledger.pl; both lines address it.
 addresses(t14, d11_circle).  addresses(t14, d11_m_circle).  addresses(t14, d11_casimir).  addresses(t14, d11_scale_free).
 addresses(t14, a11_joint_limit).  addresses(t14, a11_localized).
 addresses(t14, d11_quotient).  addresses(t14, d11_unique).  addresses(t14, d11_topology).  addresses(t14, d11_z6).
