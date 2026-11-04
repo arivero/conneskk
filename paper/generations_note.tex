@@ -1,0 +1,197 @@
+% The two families of 84 and the number of generations: short note, from lemma 21 and 11D files 03 to 05
+\ifdefined\mobile
+\documentclass[aps,prd,reprint,onecolumn,nofootinbib,amsmath,amssymb,floatfix]{revtex4-2}
+\usepackage[paperwidth=270pt,paperheight=585pt,textwidth=246pt,textheight=545pt,top=18pt,left=12pt,headheight=0pt,headsep=0pt,footskip=14pt]{geometry}
+\else
+\documentclass[aps,prd,reprint,nofootinbib,amsmath,amssymb,floatfix]{revtex4-2}
+\fi
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsthm}
+\emergencystretch=1.5em
+\ifdefined\mobile\makeatletter\def\frontmatter@abstractwidth{246\p@}\makeatother\fi
+\usepackage[hidelinks]{hyperref}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\C}{\mathbb C}
+\renewcommand{\H}{\mathbb H}
+\newcommand{\R}{\mathbb R}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\hatD}{\widehat D}
+\newcommand{\supp}[1]{Supplemental Material, part #1}
+\newcommand{\file}[1]{Supplemental Material, 11D file #1}
+
+\begin{document}
+
+\title{The two families of 84 and the number of generations}
+\date{Draft, 4 November 2026}
+
+\begin{abstract}
+With three generations and Dirac neutrinos, the 96 states of the finite Hilbert space split as $84+12$ in two ways, without the top or without the neutrinos, the blocks whose removal keeps the spectral-action values $5/8$ and $8/3$. With three families, one root per state, no structure examined exchanges the two blocks: unitaries commuting with colour, automorphisms of $\mathfrak e_8$ preserving or inverting a family grading, and isometries of $E_8$ roots in 192 slot assignments. With four families an element of $W(E_8)$ does, transposing colour and family, and $128=44+84$ under $\mathrm{Spin}(9)$ with $44=32+12$, a numerical fit, since colour lies in no such $\mathrm{Spin}(9)$. We propose no mechanism for three.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+In the Connes-Chamseddine line the number of generations is an input \cite{CC2008,CC2007}, and Krajewski diagrams \cite{Krajewski1998} and the Jureit-Stephan classification \cite{JS2005} admit any multiplicity. The proposals we located that derive three, the DFTUZ notes of 1999 and 2000 \cite{Rivero1999,Rivero2000} and the exceptional-Jordan line \cite{DV2016,Boyle2026}, lie outside the spectral-triple axioms; whether they give three as a theorem was not checked. In the limit of noncommutative geometry we know of no argument beyond ``more than one''. The postulates behind the $SO(30)$ of composite scalars \cite{Rivero2005} fix the number at three through three counting equations (\file{09}, Section 1), outside the spectral-triple axioms and unrelated to the Kaluza-Klein reading pursued here. The hints are scarce; this note records one.
+
+Counting four states per Dirac fermion and colour, \supp{21} splits the 96 states of $H_F$, three generations with $\nu_R$ \cite{CCM2007}, in two ways,
+\begin{equation}\label{eq:two}
+96=\underbrace{84}_{F_1}+\underbrace{12}_{T}=\underbrace{84}_{F_2}+\underbrace{12}_{N},
+\end{equation}
+with $T$ the top block, $N$ the neutrino block, $F_1=H_F\ominus T$ and $F_2=H_F\ominus N$. The three-form $C_3$ of eleven-dimensional supergravity and its dual $C_6$ have $\binom93=\binom96=84$ on-shell components, a real count, while 84 in $H_F$ is a complex dimension.
+
+\begin{proposition}\label{prop:blocks}
+Among blocks of 12 states made of whole Dirac species, those whose removal keeps $\cos^2\theta_{\rm NC}=5/8$ and the ratio $8/3$ of the photon and gluon coefficients, in the quadratic spectral action of \supp{18}, are exactly one up-type quark and the three neutrinos together.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+With the sums $(\sum T_3Q,\sum YQ;\,Q^2,\,\text{colour})$ of \supp{21}, an up-type quark $(1,\frac53;\frac{16}3,2)$ is proportional to the totals $(6,10;32,12)$ and a down-type quark is not. Three leptons with $k$ charged give $\cos^2\theta_{\rm NC}=(10-\frac32k)/(16-2k)$, which is $5/8$ only for $k=0$ (\file{04}).
+\end{proof}
+
+\supp{21} proposed relating one family to $C_3$ or the M2-brane and the other to $C_6$ or the M5-brane, with the exchange of $T$ and $N$ as the content of the duality on the Standard Model side. We collect what the eleven-dimensional line proves about this exchange (Supplemental Material, 11D files 03 to 05): in every structure examined, three families in single slots admit none, and four admit one.
+
+\section{The colour obstructions}\label{sec:colour}
+
+\begin{proposition}\label{prop:colour}
+(a) Under colour $SU(3)$, $F_1\simeq10(3+\bar3)+24(1)$ and $F_2\simeq12(3+\bar3)+12(1)$, so no unitary of $H_F$ commuting with colour maps $F_1$ onto $F_2$. (b) For every homomorphism $SU(3)\to SO(9)$, $\Lambda^3\R^9\otimes\C\simeq\Lambda^6\R^9\otimes\C$ has the colour content of neither family. (c) For every homomorphism $SU(3)\to SU(9)$, $\Lambda^3\C^9$ has the colour content of neither family; it contains only $1$, $3$ and $\bar3$ exactly when $\C^9$ is $9(1)$, $3+6(1)$ or $\bar3+6(1)$, and it is then $84(1)$, $15(3)+6(\bar3)+21(1)$ or its conjugate.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+(b) A real nine-dimensional representation complexifies to $9(1)$, $3+\bar3+3(1)$ or $8+1$, giving in $\Lambda^3$ only singlets, a $\bar6$, or the $27$ of $\Lambda^3(8)$. (c) A case analysis over irreducibles of dimensions 1, 3, 6 and 8 leaves the cases stated, none with equal nonzero numbers of $3$ and $\bar3$ (Supplemental Material, 11D files 03 and 04).
+\end{proof}
+
+Since colour acts through the finite algebra, (a) excludes every automorphism of the finite spectral triple of the Standard Model. The scope of (b) and (c) is linear colour on the nine transverse directions of the little group and the 84 of the three-form (escapes in Section~\ref{sec:open}). The direction: a bijection of $T$ onto $N$ preserving the tensor factors, linear in each index, trades the colour index of the top for the generation index of the neutrinos (\file{04}, Proposition 4.2(b)).
+
+\section{The \texorpdfstring{$E_8$}{E8} placement}\label{sec:e8}
+
+$E_8$ is the wall group of Ho\v{r}ava-Witten theory \cite{HW1996}. Over $\C$, an inner automorphism of order three with fixed algebra $\mathfrak{sl}(9)$ grades
+\begin{equation}\label{eq:sl9}
+\mathfrak e_8=\mathfrak{sl}(9)\oplus\Lambda^3\C^9\oplus\Lambda^6\C^9\quad(80+84+84),
+\end{equation}
+with $b=0,1,2$ the gravity, $C_3$ and $C_6$ sectors. Under $SO(9)$, $248=36+44+84+84$. Reading $b=1,2$ as M2 and M5 charge is a proposal.
+
+\begin{lemma}\label{lem:grades}
+Let $\C^9=(3,1)_{-2}+(1,6)_1$ under $SU(3)\times SU(6)\times U(1)$, with $s_f$ the centre of this $SU(3)$, which defines the family grade $a$. Then $s_f$ commutes with the grading \eqref{eq:sl9}, its centralizer is $(SU(3)\times E_6)/\mathbb Z_3$, $b\equiv a+2T_3\pmod3$ for the Cartan $T_3$ of the $SU(2)$ in $E_6\supset SU(6)\times SU(2)$, and the pieces $\mathfrak g_{a,b}$ are
+\begin{equation}\label{eq:table}
+\begin{array}{c|ccc}
+&b=0&b=1&b=2\\\hline
+a=0&44&21&21\\
+a=1&(3,\bar6)_{-3}&(3,15)_0&(3,\bar6)_3\\
+a=2&(\bar3,6)_3&(\bar3,6)_{-3}&(\bar3,\overline{15})_0
+\end{array}
+\end{equation}
+\end{lemma}
+
+This $SU(2)$, called $SU(2)_I$, commutes with the Georgi-Glashow $SU(5)$, with $T_3=t$ on $\bar5\subset16$ and on the singlet $N$, and $T_3=-t$ on $\bar5\subset10$ and on $\nu^c$, where $t=\pm\frac12$.
+
+\begin{theorem}\label{thm:placement}
+For the generation $16\subset27$ at $a=1$, in the left-handed basis, $10=(Q,u^c,e^c)$ and $5=(D,H_u)$ lie in the $C_3$ sector $\mathfrak g_{1,1}$; $(d^c,L)$ and $N$ lie in $\mathfrak g_{1,1+2t}$, and $(D^c,H_d)$ and $\nu^c$ in $\mathfrak g_{1,1-2t}$; antiparticles lie in $\mathfrak g_{2,-b}$. With conjugates, the top block has $(C_3,C_6,\text{gravity})=(6,6,0)$ and the neutrino block $(3,3,6)$, for both signs of $t$, and the 96 states split as $45+45+6$ for $t=+\frac12$ and $33+33+30$ for $t=-\frac12$.
+\end{theorem}
+
+The proofs are in \file{04}. As $t^c$ is an antitop field, the two chiralities of the top particle lie in different sectors. Selecting $t=+\frac12$, where $\nu^c$ is the only state in the gravity sector, is a proposal.
+
+\begin{proposition}\label{prop:yukawa}
+If the cubic couplings come from the structure constants of $\mathfrak e_8$ and both gradings are symmetries, then, with $H_u\in5$ and $H_d\in\bar5\subset10$, the couplings $Qu^cH_u$ lie inside the $C_3$ sector, and $Qd^cH_d$, $Le^cH_d$ and $L\nu^cH_u$ take one field from each sector.
+\end{proposition}
+
+In exact family $SU(3)$ the family tensor is $\epsilon_{ijk}$, which isolates no top mass; that the top mass comes from $\Lambda^3\times\Lambda^3\to\Lambda^6$ is a proposal.
+
+\begin{proposition}\label{prop:chevalley}
+(1) No automorphism of $\mathfrak e_8$ preserving the family grading maps $\mathfrak g_{1,1}$ (dimension 45) onto $\mathfrak g_{1,2}$ (dimension 18). (2) The Chevalley involution $-1\in W(E_8)$ maps $\mathfrak g_{a,b}$ to $\mathfrak g_{-a,-b}$ and each placed state to its conjugate, so it preserves $F_1$ and $F_2$. (3) In the aligned three-family embedding, no complex automorphism $\phi$ with $\phi(s_f)=s_f^{\pm1}$ maps $T$ onto $N$.
+\end{proposition}
+
+\begin{proof}[Proof of (3)]
+By Schur's lemma $\phi$ maps $\mathfrak g_1=3_f\otimes27$ onto $\mathfrak g_1$ or $\mathfrak g_2$ as a tensor product $A\otimes B$; the grade-one part of $T$ lies on one family line, and that of $N$ spans $3_f$.
+\end{proof}
+
+The involution is complex-linear, so an antiunitary $J$ needs a further conjugation, and its reading as the M2/M5 exchange is a proposal. The result points to automorphisms that neither preserve nor invert the family grading, such as the colour-family exchanges tested in Section~\ref{sec:roots}.
+
+\section{Root configurations}\label{sec:roots}
+
+In $E_8\supset SO(16)\supset SO(10)\times SO(6)$ the 128 half-integer roots form $(16,4)+(\overline{16},\bar4)$, four families with $\nu^c$ and conjugates. Write twice a root as $(\chi|w|\varphi)$, the signs of the colour, weak and family coordinates; family 0 is $o=(+{+}+)$, families 1 to 3 and the quark colours $c$ have two and one minus signs, and the lepton is $-o$. Then
+\begin{equation}\label{eq:roots}
+\begin{array}{lll}
+u_L,\ d_L&(c|{-}{+}|f)&(c|{+}{-}|f)\\
+u^c,\ d^c&(-c|{+}{+}|f)&(-c|{-}{-}|f)\\
+\nu_L,\ e_L&(-o|{-}{+}|f)&(-o|{+}{-}|f)\\
+\nu^c,\ e^c&(o|{+}{+}|f)&(o|{-}{-}|f)
+\end{array}
+\end{equation}
+for a family $f$, antiparticles being the negatives; three slots give $H_F$. Let $d_S(v)$ count the roots of $S$ at inner product $+1$ with $v$.
+
+\begin{proposition}\label{prop:iso}
+With one root per state in this aligned embedding, unique up to $W(E_8)$, let $T$ be the up-type quark of one family $f_t$ and $N$ the three neutrinos, with conjugates. Then $F_1$ and $F_2$ have equal numbers of pairs at each inner product (42 at $-2$, 816 at $\pm1$, 1812 at $0$), and no isometry of $\R^8$ maps $F_1$ onto $F_2$; in particular no element of $W(E_8)$ does.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+Two half-integer roots are at $+1$ when their signs agree in six places, and every root of $H_F$ has $d=22$. The four neutrino roots of family $f_t$ each have six roots of $T$ at $+1$, and the other neutrino roots none, so $F_1$ has $d=16$ on four roots and $22$ on eight. In $F_2$ the up-type roots lose two neighbours and the others three, so $d\in\{19,20\}$ (\file{05}).
+\end{proof}
+
+\begin{proposition}\label{prop:slots}
+Put the top in slot 0, and let the up-type quarks (in a set $A\ni0$), the down-type quarks, the charged leptons and the neutrinos each occupy three of the four slots, independently. For none of the 192 configurations $S$ does an isometry of $\R^8$ map $S\ominus T$ onto $S\ominus N$.
+\end{proposition}
+
+With the degrees as corrected, $S\ominus N$ has $d\in\{13,17,19,20\}$, only $19,20$ in the 48 where down-type quarks and charged leptons share slots, while each neutrino root of family $f$ in $S\ominus T$ has $d=16+6\,(\mathbf 1_A(f)-\mathbf 1_{\{0\}}(f))$, which is 16 or 22. Exhaustive computation (Python, exact integers) found it, and the referee gave an analytic proof (\file{05}).
+
+\begin{proposition}\label{prop:M}
+Let $P$ exchange the colour coordinates with the family coordinates and the two weak coordinates with each other, and let $M=-P$. Then $M$ is an involution in $W(E_8)$ preserving the 128 roots and $SU(2)_L$; it transposes the colours $(r,g,b,\ell)$ with the families $(1,2,3,0)$, maps the up-type and down-type quarks of family 0 onto the neutrinos and charged leptons of families 1, 2, 3, and exchanges $128\ominus T(0)$ with $128\ominus N(1,2,3)$, of 116 roots each.
+\end{proposition}
+
+\begin{proof}
+$P$ is an even permutation and $-1\in W(E_8)$. $M$ maps $(\chi|w_1w_2|\varphi)$ to $(-\varphi|{-w_2}\,{-w_1}|-\chi)$, so $t_L(c)\mapsto\nu_L(-c)$ and $t^c\mapsto-\nu^c(-c)$.
+\end{proof}
+
+\begin{proposition}\label{prop:flip}
+Let $H=H_f\oplus\overline{H_f}$ with $H_f=(\C^2_L\oplus\C^2_R)\otimes\C^4_c\otimes\C^4_f$ and the signs of KO-dimension six \cite{Connes2006}. For a unitary $\iota:\C^4_c\to\C^4_f$ sending the lepton line to $e_0$, let $F$ be the flip $x\otimes y\mapsto\iota^{-1}y\otimes\iota x$ on $\C^4_c\otimes\C^4_f$, extended to $\overline{H_f}$ by $JFJ^{-1}$. Then $F$ is a unitary involution commuting with $\gamma$ and $J$, and it conjugates the top Dirac block $T_{\rm top}=Y\otimes P_q\otimes P_0$ into the neutrino block $T_\nu=Y\otimes P_\ell\otimes(1-P_0)$, with $P_q$, $P_\ell$, $P_0$ the quark, lepton and family-0 projectors; for $D$ commuting with $F$, the heavy limits of $D+sT_{\rm top}$ and $D+sT_\nu$ have conjugate light spaces of 116 states.
+\end{proposition}
+
+The Pati-Salam and Standard Model algebras act on $\C^4_c$ alone and are not $F$-invariant. $F$ equals $M$ on left-handed states and $M$ followed by the particle-antiparticle exchange on right-handed ones, where $M$ reverses $\gamma$ on 64 states; $F$ lies outside $W(E_8)$.
+
+\begin{proposition}\label{prop:44}
+With four families, let $S_T$ and $S_N$ be the fourth family together with $T$ and with $N$, 44 roots each. No isometry of $\R^8$ maps $S_T$ onto $S_N$: up to family permutations their degree multisets are $\{10^{16},12^{12},13^{16}\}$ and $\{10^{24},13^{16},16^4\}$ (Python, exact integers).
+\end{proposition}
+
+\section{The four-family count and the two placements}\label{sec:44}
+
+Under $\mathrm{Spin}(9)\subset SO(16)$ embedded through its spinor, the 128 is $44+84$ for one chirality of the embedding, the graviton and the three-form (recalled in \file{05}). With four families,
+\begin{equation}
+128-84=44=32+12,
+\end{equation}
+so removing $F_1$ leaves the fourth family and $T$, and removing $F_2$ leaves it and $N$, completing \eqref{eq:two}. $M$ carries neither set of 44 onto the other, and Proposition~\ref{prop:44} excludes every isometry.
+
+\begin{proposition}\label{prop:spin9}
+The colour $SU(3)$ of \eqref{eq:roots} lies in no $\mathrm{Spin}(9)\subset SO(16)$ with $128\to44+84$. So the split $44+84$ is not colour-covariant, and the fit $44=32+12$ is numerical.
+\end{proposition}
+
+\begin{proof}
+Under such a $\mathrm{Spin}(9)$ the vector 16 of $SO(16)$ is the spinor, which restricts to an $SU(3)\subset\mathrm{Spin}(9)$ as $16(1)$, $2(3+\bar3)+4(1)$ or $8+8$, by the three real nine-dimensional representations of Proposition~\ref{prop:colour}(b). Under colour the vector 16 is $3+\bar3+10(1)$. The stabilizer of the split in $\mathfrak{so}(16)=\mathfrak{so}(9)+84$ is $\mathfrak{spin}(9)$, since the 84 is irreducible and $\mathfrak{so}(16)$ is irreducible on the 128.
+\end{proof}
+
+Colour likewise lies in no $\mathfrak{so}(9)$ of $\mathfrak e_8$ with $248=36+44+84+84$, that of Section~\ref{sec:e8} included: colour gives $248=8+78(1)+27(3+\bar3)$, and the 44 contains a $6$ or a $27$ under any $SU(3)$ in such an $\mathfrak{so}(9)$. The scope is the regular colour $SU(3)$ in this class.
+
+The top thus has two placements, in the $C_3$ sector of the $SU(9)$ grading and with the fourth family in the 44 of $\mathrm{Spin}(9)$; the subgroups differ, and no identification of their sectors is claimed. The $\mathfrak{so}(9)$ of Section~\ref{sec:e8}, fixed by the Chevalley involution on $\mathfrak{sl}(9)$, is conjugate in $E_8$ to this $\mathrm{Spin}(9)$, with $\mathfrak k=\mathfrak{so}(9)+84$ and $\mathfrak p=44+84$, the 44 in the gravity sector; this is a single-model statement, pending a referee. A recalled analogy (\file{05}) is Gell-Mann's colour-flavour $SU(8)$ of $N=8$ supergravity, with the spin-$\frac12$ fermions in $\Lambda^3(8)=56$ and $8=3+5$; Proposition~\ref{prop:colour}(c) plays the role of the known failure of that content.
+
+\section{What this leaves}\label{sec:open}
+
+\emph{Escapes.} Proposition~\ref{prop:colour}: nonlinear colour, colour on an internal space, brane states, non-equivariant identifications. Proposition~\ref{prop:chevalley}: automorphisms that neither preserve nor invert the family grading, other embeddings. Proposition~\ref{prop:spin9}: other colour embeddings and non-equivariant identifications. Propositions~\ref{prop:iso}, \ref{prop:slots} and \ref{prop:44}: maps not linear on the roots, larger groups, and states spread over several roots, which heterotic compactification uses. In $E_8\supset SO(10)\times SU(4)$ the $SU(4)$ is the structure group of a rank-four bundle $V$, and the families are zero modes, as the massless fermions of a Kaluza-Klein theory are \cite{Witten1983}, with net number an index, 3 in the heterotic Standard Models on $SU(4)$ bundles (recalled in \file{05}). A zero mode is a section of $V$, in general involving all four slots, so Propositions~\ref{prop:iso} and \ref{prop:slots} do not apply; for split bundles $V=\bigoplus_iL_i$ with $n_i=-\chi(L_i)\ge0$ and $\sum n_i=3$, the degree multisets still differ in all 40 cases checked.
+
+\emph{Open items.} (i) How the 96 states of the three-family frame sit against the conjugated $\mathrm{Spin}(9)$. (ii) A four-family finite spectral triple, or Ho\v{r}ava-Witten configuration, with $M$ or $F$ as a symmetry and an $F$-invariant algebra, from which the statements of \supp{21} follow as the fourth family decouples; whether the mechanism of the top can make it heavy is open. (iii) A nonsplit bundle with index 3, its zero modes, and the action of $M$ on them.
+
+We propose no mechanism for three. The obstructions say where an exchange of the top with the neutrinos can live: with four slots, and with three as a count of zero modes or of light families.
+
+\section*{Status}
+
+In the project ledger, Propositions~\ref{prop:blocks}, \ref{prop:colour}, \ref{prop:chevalley}, \ref{prop:iso}, \ref{prop:slots} and \ref{prop:M}, Lemma~\ref{lem:grades} and Theorem~\ref{thm:placement} carry checks by their author, by the referee GPT-6.1 Terra and by Claude Sonnet 5.5: three model identifiers each. Propositions~\ref{prop:yukawa} and \ref{prop:flip} have the same three and are conditional, on the gradings being symmetries and on the unitary $\iota$. Proposition~\ref{prop:spin9} has two, Claude Opus 5.5 and Claude Sonnet 5.5; Proposition~\ref{prop:44} and the conjugacy have one, Claude Sonnet 5.5. Proposals are unproved. Since the Codex quota ran out on 4 November 2026, no result here has had a referee of another kind. Numerical checks are in Python; the scripts were not kept.
+
+\section*{Provenance}
+
+This note has no listed authors. Lemma 21 is by Claude Opus 5.5; the eleven-dimensional line, by a Claude session (Claude, Anthropic), was refereed by GPT-6.1 Terra and checked again by Claude Sonnet 5.5. The user who directs the project observed $44=32+12$. Claude Opus 5.5 gave the argument of Proposition~\ref{prop:spin9}, posed Proposition~\ref{prop:44} and drafted this note at the request of Claude Fable 5.1; Claude Sonnet 5.5 computed Proposition~\ref{prop:44} and the conjugacy.
+
+\bibliography{towerless_intervals}
+
+\end{document}

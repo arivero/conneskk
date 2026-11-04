@@ -132,6 +132,10 @@ From [lemma 28](lemmas/28_two_walls_connected_parent.md), [lemma 29](lemmas/29_w
 
 A synthesis with the status of each entry, drawing on lemmas 05 to 30 and on the [11D line](11D/README.md), including [11D §10](11D/10_dilaton_and_second_scale.md) and [11D §11](11D/11_so30_fluctuations.md). Draft.
 
+### Short note: *The two families of 84 and the number of generations*: [paper/generations_note.tex](paper/generations_note.tex)
+
+From [lemma 21](lemmas/21_top_counting.md) and the [11D line](11D/README.md), files 03 to 05: the scoped obstructions to exchanging the top block with the neutrino block for three families in single slots, the four-family transposition, the count 44 = 32 + 12 and why it is numerical. Draft.
+
 ### Paper: *Nine, Ten and Eleven Dimensions*: [canonical_research.md](canonical_research.md)
 
 - [Abstract](canonical_research.md#abstract)
