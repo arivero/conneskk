@@ -217,7 +217,7 @@ S_p=\begin{pmatrix}0&Y^*\\Y&0\end{pmatrix},
 \]
 where `Y` has entries `y_nu,y_e,y_u I_3,y_d I_3` on the corresponding species. The antiparticle block is `bar S_p`; the additional Majorana block connects `nu_R` with `J nu_R`. This realizes the bimodule and mass-block structure in [CCM, Proposition 2.4 and Theorem 2.21](https://arxiv.org/pdf/hep-th/0610241).
 
-Assume precisely the strict projection described in [canonical §3](../canonical_research.md): remove `nu_R,J nu_R` and the complete up-type Dirac sector, and restrict to
+Assume precisely the strict projection described in [canonical §3](../historical/corpus/canonical_research.md): remove `nu_R,J nu_R` and the complete up-type Dirac sector, and restrict to
 \[
 B=\{(\lambda,Q_\lambda,m)\}\simeq\mathbb C\oplus M_3(\mathbb C).
 \]
@@ -333,7 +333,7 @@ not merely `I_G`. It too is nonzero: the coefficient of `(3,2)_{1/6}` is `g`. Ei
 
 **9. Proposition — What dimension reduction is actually established.**
 
-The heavy projection itself preserves KO-degree six, as [canonical §3 explicitly states](../canonical_research.md). Hence its spacetime product still has degree `4+6=10 mod 8`.
+The heavy projection itself preserves KO-degree six, as [canonical §3 explicitly states](../historical/corpus/canonical_research.md). Hence its spacetime product still has degree `4+6=10 mod 8`.
 
 A subsequent choice of a KO-5 reduction removes a degree-one Clifford factor and gives the formal representative `4+5=9`. Such a reduction exists for the charged truncation or the pure-Dirac completion, but **both also admit KO-7 reductions**. Their fixed `J` does not select nine.
 
@@ -351,8 +351,8 @@ Thus even the odd reductions require different product conventions. No finite-di
 
 We used the electrodynamics data of Result 3, with m = 0.7, J = [[0, I_2],[I_2, 0]] K and gamma = diag(1,-1,-1,1). The triple has J^2 = 1, JD = DJ and J gamma = -gamma J, so its KO-dimension is 6. Both U_+ = diag(sigma_1, sigma_1) and U_- = diag(sigma_1, -sigma_1) satisfy U^2 = 1 and U gamma = -gamma U. Both commute with random algebra elements, their opposites and D; and U_+ J = J U_+, U_- J = -J U_-. On H_0 = span(e_L, bar e_R), U_+ descends to j^2 = +1 with jd = dj (KO-7) and U_- to j^2 = -1 with jd = -dj (KO-5). For No-go 8 we also rechecked by hand the dimension count dim rho(e_H) H_+ = 8g, dim rho(e_H) H_- = 0 in the representation of Result 5.
 
-**Terminology.** Here "doubling" means the factorization of an even triple as an odd triple times a Clifford point (the doubling of an odd triple in Dabrowski-Dossena's product construction). It is unrelated to the "fermion doubling" of the noncommutative Standard Model (Lizzi-Mangano-Miele-Sparano). Prior work on products and on J versus J gamma: [../LITERATURE.md](../LITERATURE.md), section D; the factorization criterion and the 9/11 results were not found in print.
+**Terminology.** Here "doubling" means the factorization of an even triple as an odd triple times a Clifford point (the doubling of an odd triple in Dabrowski-Dossena's product construction). It is unrelated to the "fermion doubling" of the noncommutative Standard Model (Lizzi-Mangano-Miele-Sparano). Prior work on products and on J versus J gamma: [../LITERATURE.md](../paper/LITERATURE.md), section D; the factorization criterion and the 9/11 results were not found in print.
 
 ## Referee note
 
-Terra 6.1 (3 Nov 2026; [report](../reviews/2026-11-03_terra_check_nogo_19.md)) checked Result 3, Lemma 4, Proposition 5, Result 7, No-go theorem 8 and the no-go under [U, Q] = 0: all correct. One amendment to Result 7: "arbitrary flavor mixing" means arbitrary matrices within the displayed species blocks, with the heavy projection chosen onto the specified top Dirac sector; mixing between inequivalent species is outside the displayed Dirac operator. Escapes: for KO-5, neutral-sector pairing or a symmetry enforcing even multiplicities; for No-go 8, a change of algebra or representation, the even description, and boundary or defect realizations of chirality; for the no-go under [U, Q] = 0, a matching particle bimodule of opposite grading.
+Terra 6.1 (3 Nov 2026; [report](../historical/reviews/2026-11-03_terra_check_nogo_19.md)) checked Result 3, Lemma 4, Proposition 5, Result 7, No-go theorem 8 and the no-go under [U, Q] = 0: all correct. One amendment to Result 7: "arbitrary flavor mixing" means arbitrary matrices within the displayed species blocks, with the heavy projection chosen onto the specified top Dirac sector; mixing between inequivalent species is outside the displayed Dirac operator. Escapes: for KO-5, neutral-sector pairing or a symmetry enforcing even multiplicities; for No-go 8, a change of algebra or representation, the even description, and boundary or defect realizations of chirality; for the no-go under [U, Q] = 0, a matching particle bimodule of opposite grading.

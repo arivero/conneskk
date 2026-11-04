@@ -369,7 +369,7 @@ Finally, substituting these families into the curvature formula gives their stat
 
 ## Verdict on corpus claim
 
-Section 8’s assertion for the **homogeneous horizontal/Berry connection** is correct, including its multiplicity formula. That is the scope explicitly stated in [the canonical-connection discussion](../canonical_research.md).
+Section 8’s assertion for the **homogeneous horizontal/Berry connection** is correct, including its multiplicity formula. That is the scope explicitly stated in [the canonical-connection discussion](../historical/corpus/canonical_research.md).
 
 The obstruction is **not robust under all `SU(3)`-invariant unitary connections**:
 
@@ -377,7 +377,7 @@ The obstruction is **not robust under all `SU(3)`-invariant unitary connections*
 - `E` also admits a nonflat connection with parallel algebra `M_3(C)`.
 - `E'` admits a flat connection with parallel algebra `M_4(C)`, besides its canonical `M_2(C)+C`.
 
-These connections use the off-diagonal freedom identified in [section 9](../canonical_research.md). For block-diagonal invariant connections on `E`, the algebra remains `C+C+C`.
+These connections use the off-diagonal freedom identified in [section 9](../historical/corpus/canonical_research.md). For block-diagonal invariant connections on `E`, the algebra remains `C+C+C`.
 
 The crucial distinction is that a parallel endomorphism need not be invariant under the transitive `SU(3)` action. Applying isotropy Schur’s lemma to every parallel endomorphism would incorrectly exclude the exceptional families.
 ---

@@ -1,6 +1,6 @@
 # The interior vacuum and the matching scale in the flat parent
 
-For STRATEGY T13, T5b and T12, following [lemma 23](23_two_gradings_interval.md), [lemma 24](24_commutative_parent.md), [lemma 25](25_sum_rule_effective_dimension.md) and the [steer note](../d9_masses_fermi_qcd_steer.md), items 9 and 11. Proved by Claude Opus 5.5; the numerical statements are in Python and each is labelled. Refereed by Terra 6.1 (effort max, 3 Nov 2026; [first report](../reviews/2026-11-03_terra_check_26.md)): three errors and two gaps as first written, and amendments. Proposition 26.3c and Result 26.8 were added after that report and answer its gap on the wall mass, and a [second report](../reviews/2026-11-03_terra_check_27.md) corrected one error in the summary. The textual corrections of both are incorporated below, and the calculations they call for are listed under "Outstanding".
+For STRATEGY T13, T5b and T12, following [lemma 23](23_two_gradings_interval.md), [lemma 24](24_commutative_parent.md), [lemma 25](25_sum_rule_effective_dimension.md) and the [steer note](../d9_masses_fermi_qcd_steer.md), items 9 and 11. Proved by Claude Opus 5.5; the numerical statements are in Python and each is labelled. Refereed by Terra 6.1 (effort max, 3 Nov 2026; [first report](../historical/reviews/2026-11-03_terra_check_26.md)): three errors and two gaps as first written, and amendments. Proposition 26.3c and Result 26.8 were added after that report and answer its gap on the wall mass, and a [second report](../historical/reviews/2026-11-03_terra_check_27.md) corrected one error in the summary. The textual corrections of both are incorporated below, and the calculations they call for are listed under "Outstanding".
 
 **Outcome.**
 
@@ -204,7 +204,7 @@ We state the outcome in the exact scope of (1) and (4): one interval, flat profi
 
 ## Priority
 
-The sources are listed in [LITERATURE](../LITERATURE.md), section J. The referee's search covered orbifold differential running, Pati-Salam interval scales, flat large-representation tops, SO(5) vector and adjoint embeddings, exotics and Wilson-line minima, and found no prior occurrence of the classification with n_c or of the pair (M_KK, mu_*) from (4), with forward citation chains incomplete. So priority for those exact statements is open. Hosotani et al. find theta_H = pi/2, corresponding to 2 theta = pi/2, in a warped model with other matter.
+The sources are listed in [LITERATURE](../paper/LITERATURE.md), section J. The referee's search covered orbifold differential running, Pati-Salam interval scales, flat large-representation tops, SO(5) vector and adjoint embeddings, exotics and Wilson-line minima, and found no prior occurrence of the classification with n_c or of the pair (M_KK, mu_*) from (4), with forward citation chains incomplete. So priority for those exact statements is open. Hosotani et al. find theta_H = pi/2, corresponding to 2 theta = pi/2, in a warped model with other matter.
 
 ## Numerical check
 

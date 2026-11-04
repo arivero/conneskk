@@ -2,6 +2,3 @@
 # name: chiral_limit_note
 part 17 lemmas/17_*.md
 part 27 lemmas/27_*.md
-part "R5 (referee report, main draft and note)" reviews/2026-11-03_terra_check_paper_note.md
-part "R13 (referee report, lemma 27 and additions to lemma 26)" reviews/2026-11-03_terra_check_27.md
-part "R20 (referee report, lemma 17)" reviews/2026-11-03_terra_check_17.md

@@ -108,7 +108,7 @@ by dividing the bounds of Lemma 12.8 for p and p - 1. Indexing generations by k 
 
     m_k / m_{k+1} ~ e^{-(c_k^Q - c_{k+1}^Q) - (c_k^U - c_{k+1}^U)}   up to factors of order one. ∎
 
-**Remark 12.10 (mixing; numerical, not proved here).** For an up sector and a down sector sharing Phi_Q, we drew 500 anarchic complex samples with c^Q = (3, 2, 0.5). The medians of abs(V_ij)/(phi(c_i^Q)/phi(c_j^Q)) were 1.02, 0.92 and 1.09 for (ij) = (12), (23) and (13). So the left mixing follows the doublet localization alone, abs(V_ij) ~ phi(c_i^Q)/phi(c_j^Q), as in the split-fermion and warped-flavor literature (Huber-Shafi 2001; Agashe-Perez-Soni 2005; Casagrande et al. 2008). An upper bound with explicit constants, |V_ij| <= 3 K_u K_d f_i/f_j for i < j, is proved in the referee report appended below, which also notes that there is no universal lower bound; Astra 6 wrote out the cofactor step that the report names ([validation](../reviews/2026-11-03_astra_validation_corrections.md), item 10).
+**Remark 12.10 (mixing; numerical, not proved here).** For an up sector and a down sector sharing Phi_Q, we drew 500 anarchic complex samples with c^Q = (3, 2, 0.5). The medians of abs(V_ij)/(phi(c_i^Q)/phi(c_j^Q)) were 1.02, 0.92 and 1.09 for (ij) = (12), (23) and (13). So the left mixing follows the doublet localization alone, abs(V_ij) ~ phi(c_i^Q)/phi(c_j^Q), as in the split-fermion and warped-flavor literature (Huber-Shafi 2001; Agashe-Perez-Soni 2005; Casagrande et al. 2008). An upper bound with explicit constants, |V_ij| <= 3 K_u K_d f_i/f_j for i < j, is proved in the referee report appended below, which also notes that there is no universal lower bound; Astra 6 wrote out the cofactor step that the report names ([validation](../historical/reviews/2026-11-03_astra_validation_corrections.md), item 10).
 
 ## Consequences for STRATEGY
 
@@ -134,7 +134,7 @@ Method: roots of the secular equation are bracketed on fine grids and refined by
 
 ## Referee report (gpt-6.1-terra, effort max, 3 Nov 2026)
 
-Prompt: [prompts/terra_check_12.md](prompts/terra_check_12.md). Reproduced as received; the corrections above implement it. Claude checked the three counterexamples (M_Q = diag(0, 4); arctan(l)/l -> 1; F = G = diag(t, 1), X = sigma_1) by hand.
+Prompt: [prompts/terra_check_12.md](../historical/prompts/terra_check_12.md). Reproduced as received; the corrections above implement it. Claude checked the three counterexamples (M_Q = diag(0, 4); arctan(l)/l -> 1; F = G = diag(t, 1), X = sigma_1) by hand.
 
 We take \(\ell>0\) and the bulk masses to be real, as in Lemma 09. All arguments below are analytic; we used no numerical computation.
 
@@ -361,4 +361,4 @@ There is no corresponding positive universal lower bound: identical up and down 
 
 **Overall:** 9 statements checked: 4 correct, 2 correct with amendment, 0 gaps, and 3 errors.
 
-**Literature ([../LITERATURE.md](../LITERATURE.md), section C).** The one-flavour spectrum of Example 12.5 is equation (5.6) of Csaki-Grojean-Hubisz-Shirman-Terning, Fermions on an interval (2004); the warped multi-flavour analogue of the light spectrum and of the localization textures is in Casagrande et al. 2008 (equations 65, 87, 90, 94-97). No NCG paper deriving D_F from localization was found.
+**Literature ([../LITERATURE.md](../paper/LITERATURE.md), section C).** The one-flavour spectrum of Example 12.5 is equation (5.6) of Csaki-Grojean-Hubisz-Shirman-Terning, Fermions on an interval (2004); the warped multi-flavour analogue of the light spectrum and of the localization textures is in Casagrande et al. 2008 (equations 65, 87, 90, 94-97). No NCG paper deriving D_F from localization was found.

@@ -1,8 +1,8 @@
 # T4: gauge fluctuations of the chiral interval
 
-Prompt: [prompts/13](prompts/13_gauge_sector_truncation.md) (STRATEGY T4). Attempted by gpt-6-astra (codex 0.164, xhigh, 3 Nov 2026), working alone. Checked by Claude Opus 5.5 by hand: Results 2, 3, 4, 5 and 6 (the compression integrals, the counterexample B = -2a/(3 pi) with trivial Wilson line, the Neumann-Dirichlet mass, the 1 : 3 ratio of the a_4 gauge and scalar terms with the canonical normalization, and the eigenvalues 0 and 6m^2); Results 7 and 8 reproduce the standard CCM relations (8 M_W^2 = sum N_f m_f^2, M_W/M_Z = sqrt(5/8) with Q_2 = 12, Q_Y = 20).
+Prompt: [prompts/13](../historical/prompts/13_gauge_sector_truncation.md) (STRATEGY T4). Attempted by gpt-6-astra (codex 0.164, xhigh, 3 Nov 2026), working alone. Checked by Claude Opus 5.5 by hand: Results 2, 3, 4, 5 and 6 (the compression integrals, the counterexample B = -2a/(3 pi) with trivial Wilson line, the Neumann-Dirichlet mass, the 1 : 3 ratio of the a_4 gauge and scalar terms with the canonical normalization, and the eigenvalues 0 and 6m^2); Results 7 and 8 reproduce the standard CCM relations (8 M_W^2 = sum N_f m_f^2, M_W/M_Z = sqrt(5/8) with Q_2 = 12, Q_Y = 20).
 
-Refereed by Terra 6.1 (gpt-6.1-terra, effort max, 3 Nov 2026; [report](../reviews/2026-11-03_terra_check_08_13_14.md)): of 8 statements, 7 are correct and Proposition 8 needs one amendment, recorded there.
+Refereed by Terra 6.1 (gpt-6.1-terra, effort max, 3 Nov 2026; [report](../historical/reviews/2026-11-03_terra_check_08_13_14.md)): of 8 statements, 7 are correct and Proposition 8 needs one amendment, recorded there.
 
 We prove an exact compression formula, but it does not identify the continuum gauge theory with the full Connes–Lott gauge theory. The fermion boundary conditions impose no boundary conditions on the gauge potentials, and fixed spectral compression produces only links of the form `phi = m I + i B`, with `B` Hermitian. The proposed ratio `M_W/m = sqrt(3/8)` is correct under the three-generation Standard Model CCM normalization, with one massive colour triplet and all other Dirac masses zero. It is not a consequence of the interval alone: the minimal two-sheet spectral action has a different gauge representation and gives a massive relative gauge field of mass `sqrt(6) m`.
 
@@ -215,7 +215,7 @@ Finally, compression differs from eliminating the omitted fermions. With \(Q=1-P
 \[
 -PD_AQ\,[Q(D_A-z)Q]^{-1}QD_AP
 \]
-whenever the inverse exists. This follows by solving the \(Q\)-component of \((D_A-z)\psi=0\) and substituting into the \(P\)-component. It is the distinction relevant to the effective-operator discussion in [research state §6.10](../connes_kk_research_state.md). \(\square\)
+whenever the inverse exists. This follows by solving the \(Q\)-component of \((D_A-z)\psi=0\) and substituting into the \(P\)-component. It is the distinction relevant to the effective-operator discussion in [research state §6.10](../historical/corpus/connes_kk_research_state.md). \(\square\)
 
 **4. Lemma (the continuum vector mass requires specified gauge boundary conditions).**
 
@@ -487,7 +487,7 @@ so
 \[
 \boxed{\frac{M_W}{M_Z}=\sqrt{\frac58}}
 \]
-at that matching scale. These trace weights agree with the per-generation calculation in [research state §6.10](../connes_kk_research_state.md).
+at that matching scale. These trace weights agree with the per-generation calculation in [research state §6.10](../historical/corpus/connes_kk_research_state.md).
 
 The original interval multiplication representation acts identically on both chiralities. Its matrix link transforms as
 \[

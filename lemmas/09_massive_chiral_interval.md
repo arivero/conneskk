@@ -137,7 +137,7 @@ At mu = 6, 2 mu e^{-mu l} = 0.029745, against lambda_0 = 0.029747. Lemma 9.7 was
 
 ## Referee report (gpt-6.1-terra, effort max, 3 Nov 2026)
 
-Prompt: [prompts/terra_check_09.md](prompts/terra_check_09.md). Reproduced as received; the corrections above implement it. Claude checked the two errors, the identity R_0(x) = L_0(l - x) and the asymptotic of 9.5 by hand.
+Prompt: [prompts/terra_check_09.md](../historical/prompts/terra_check_09.md). Reproduced as received; the corrections above implement it. Claude checked the two errors, the identity R_0(x) = L_0(l - x) and the asymptotic of 9.5 by hand.
 
 We take \(\ell>0\) throughout. All checks below are analytic; we used no numerical computation.
 
@@ -337,4 +337,4 @@ Even if “at one end” is read as exactly one Dirichlet condition, another bou
 
 Overall: 11 statements checked; 4 correct, 3 correct with amendment, 2 gaps closed above, and 2 errors.
 
-**Literature ([../LITERATURE.md](../LITERATURE.md), section B).** Opposite-chirality boundary modes with exponentially small mixing are in Jackiw-Rebbi 1976, Kaplan 1992 and Shamir 1993 (section 3); collapse of spectral triples to a point is treated by Farsi-Latremoliere (J. London Math. Soc., 2026). The tuned collapse mu(l) of Theorem 9.9 was not found in print.
+**Literature ([../LITERATURE.md](../paper/LITERATURE.md), section B).** Opposite-chirality boundary modes with exponentially small mixing are in Jackiw-Rebbi 1976, Kaplan 1992 and Shamir 1993 (section 3); collapse of spectral triples to a point is treated by Farsi-Latremoliere (J. London Math. Soc., 2026). The tuned collapse mu(l) of Theorem 9.9 was not found in print.

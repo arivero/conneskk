@@ -1,6 +1,6 @@
 # Commutative cylinders, spectral walls, and the two-stage compression
 
-By Astra 6 (gpt-6-astra, effort xhigh), 3 Nov 2026; prompt in [prompts/24_commutative_parent.md](prompts/24_commutative_parent.md). Reproduced as delivered, with links made relative. The section "Numerical check" at the end is by Claude Opus 5.5. Refereed by Terra 6.1 (effort max, 3 Nov 2026; [report](../reviews/2026-11-03_terra_check_24.md)): no error in the displayed equations, and one gap in the general statement on compression maps. The record above the section "Referee amendments" stays as delivered, and those amendments apply to it.
+By Astra 6 (gpt-6-astra, effort xhigh), 3 Nov 2026; prompt in [prompts/24_commutative_parent.md](../historical/prompts/24_commutative_parent.md). Reproduced as delivered, with links made relative. The section "Numerical check" at the end is by Claude Opus 5.5. Refereed by Terra 6.1 (effort max, 3 Nov 2026; [report](../historical/reviews/2026-11-03_terra_check_24.md)): no error in the displayed equations, and one gap in the general statement on compression maps. The record above the section "Referee amendments" stays as delivered, and those amendments apply to it.
 
 A commutative cylinder admits an exact realization of the **operator window** of lemmas 22 and 23 when the two finite gradings are prescribed through nonlocal spectral boundary conditions. The higher \(K\)-modes then decouple as the radius of \(K\) tends to zero. Two qualifications remain essential: these boundary conditions restrict scalar functions at the walls, and compression of scalar functions through both stages differs from generating a matrix algebra between the stages. In particular, aligned walls give \(\mathbb R\oplus\mathbb R\) on the quaternionic factor under direct scalar compression, whereas the intervening matrix-algebra construction gives \(\mathbb H\oplus\mathbb H\). Local boundary gradings preserve all scalar functions, but their reduction to the unchanged four-section window has a precise restriction proved below. The radial no-go of lemma 22 survives rechecking in its stated scope. For the massless one-loop potential of lemma 23, an analytic argument strengthens the numerical statement to all \(n_f>0\).
 
@@ -511,7 +511,7 @@ Q_\ell(Eh)
 \]
 Adding a multiple of this operator to the fixed \(m\sigma_1\) changes its singular values at second order.
 
-The verdict agrees with the author’s amended theorem and [Terra’s independent endpoint-preserving proof](../reviews/2026-11-03_terra_check_22.md). In the usual nondegenerate Standard Model representation, the normalized shifted Higgs quaternion lies on the unit-quaternion orbit; its norm is fixed.
+The verdict agrees with the author’s amended theorem and [Terra’s independent endpoint-preserving proof](../historical/reviews/2026-11-03_terra_check_22.md). In the usual nondegenerate Standard Model representation, the normalized shifted Higgs quaternion lies on the unit-quaternion orbit; its norm is fixed.
 
 The known escapes are a variable wall coupling, odd connection directions, suitable bulk masses, additional internal directions with nontrivial connection data, or additional elementary or composite fields. A quantum effective action on the same configuration space does not add a radial coordinate. The proposed \(K\times I_\ell\) parent has tangential directions and tangential one-forms, so this theorem does not decide its full fluctuation space.
 
@@ -635,7 +635,7 @@ For \(n_f\ge54/5\), its sign is negative. For \(0<n_f<54/5\), it changes sign ex
 
 This proves the massless statement for the entire parameter range, including the previously numerical range. No numerical computation is used in this proof.
 
-The recorded author and [Terra referee calculations](../reviews/2026-11-03_terra_check_23.md) agree on the sampled massless cases. The logarithmic-concavity proof above is an additional single-agent derivation; it has not received a fresh independent model review in this turn. The recorded agreement therefore should not be described as a multi-model review of this new proof.
+The recorded author and [Terra referee calculations](../historical/reviews/2026-11-03_terra_check_23.md) agree on the sampled massless cases. The logarithmic-concavity proof above is an additional single-agent derivation; it has not received a fresh independent model review in this turn. The recorded agreement therefore should not be described as a multi-model review of this new proof.
 
 The escapes remain changes to the stated determinant: frequency-two fermions, modified form factors through warping or other geometry, suitable bulk-mass sectors, wall potentials, and wall kinetic or interaction terms. The full effective action of the proposed \(K\times I_\ell\) parent, including its \(K\)-tower, has not been computed here.
 

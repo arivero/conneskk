@@ -1,7 +1,7 @@
 %% ledger.pl -- machine-readable ledger of claims, dependencies, checks and contradictions.
 %% Load with:  swipl ledger.pl     Run consistency tests:  swipl -g run_tests -t halt ledger.pl
-%% Maintained by hand from here on; sources: lemmas/README.md, connes_kk_research_state.md section 8,
-%% canonical_research.md status labels, STRATEGY.md, DUPLICATES.md section 5.
+%% Maintained by hand from here on; sources: lemmas/README.md, historical/corpus/connes_kk_research_state.md section 8,
+%% historical/corpus/canonical_research.md status labels, STRATEGY.md, historical/DUPLICATES.md section 5.
 %%
 %% claim(Id, Kind, Status, Label, Statement)
 %%    Kind:   theorem | lemma | proposition | corollary | counterexample | no_go | conjecture | example | claim
@@ -23,9 +23,9 @@
 %% addresses(T, Id)                    strategy item T is addressed by claim Id
 %% contradiction(N, Where, Finding, Resolution, State)    State: resolved | open | compatible
 %% refuted_by(Claim, Counterexample)
-%% prior_work(Claim, Verdict, Reference)   Verdict: known | partial | not_found  (from LITERATURE.md)
+%% prior_work(Claim, Verdict, Reference)   Verdict: known | partial | not_found  (from paper/LITERATURE.md)
 %% claim_amended(Claim, By): Claim stands, with an amendment proved in By
-%% stated_in_draft(Claim, File)        a draft in paper/ states Claim (mapping in reviews/2026-11-04_unchecked_claims_audit.md)
+%% stated_in_draft(Claim, File)        a draft in paper/ states Claim (mapping in historical/reviews/2026-11-04_unchecked_claims_audit.md)
 %% covered_by(Claim, Lemma)             the content of a corpus Claim is proved in the checked row Lemma
 
 :- discontiguous refuted_by/2.
@@ -299,7 +299,7 @@ checked_by(l06_neutral, claude_opus_5_5, by_hand).
 checked_by(l06_neutral, terra_6_1, by_hand).
 
 
-%% ---------------------------------------------------------------- prior work (LITERATURE.md, 3 Nov 2026)
+%% ---------------------------------------------------------------- prior work (paper/LITERATURE.md, 3 Nov 2026)
 prior_work(l05_truncation, partial, "Connes-Lott 1991 sections I, III; Viet-Wali 1996; Dimakis-Muller-Hoissen 1994 section VII; truncation theorem not found").
 prior_work(l09_limits, partial, "Jackiw-Rebbi 1976; Kaplan 1992; Shamir 1993; Farsi-Latremoliere 2026 Cor. 4.1 (fixed-mu collapse); tuned collapse outside its hypotheses").
 prior_work(l12_secular, known, "one-flavour spectrum: Csaki et al. 2004 eq. (5.6)").
@@ -356,7 +356,7 @@ addresses(t4b, l14_sum_rule).  addresses(t4b, l14_tuned).  addresses(t4b, l14_no
 
 
 claim(fl_R1, counterexample, proved, "Counterexample R1", "Theorem 2.5 of arXiv v1 of Farsi-Latremoliere, Theorem 3.4 in v3 and in J. London Math. Soc. 114 (2026) e70628, with the same six hypotheses and the step printed as (3.11): the printed hypotheses are insufficient, since a scalar-algebra family meets them and contradicts Corollary 3.5. Anticommutation of D_h and D_v, or the stated uniform relative bound, supplies a sufficient additional hypothesis; the anticommuting applications avoid this defect.").
-source(fl_R1, 'reviews/2026-11-03_farsi_latremoliere_assessment.md', '31-theorem-34-is-missing-a-hypothesis').
+source(fl_R1, 'historical/reviews/2026-11-03_farsi_latremoliere_assessment.md', '31-theorem-34-is-missing-a-hypothesis').
 attempted_by(fl_R1, claude_subagent).
 checked_by(fl_R1, claude_opus_5_5, by_hand).
 checked_by(fl_R1, terra_6_1, by_hand).  % report paper_note, item 49, on arXiv v3
@@ -420,7 +420,7 @@ attempted_by(l16_truncation, claude_opus_5_5).
 checked_by(l16_truncation, claude_opus_5_5, python("numpy on random finite data: KO-6 signs")).
 checked_by(l16_truncation, terra_6_1, by_hand).
 claim(t0_note_overread, claim, refuted, "Earlier T0 note", "A noncommutative A_F must come from compressions, operator systems or a noncommutative parent, and compressions being operator systems forces the algebra to be produced by a limit.").
-source(t0_note_overread, 'reviews/2026-11-03_t0_note_assessment.md', 'claim-by-claim').
+source(t0_note_overread, 'historical/reviews/2026-11-03_t0_note_assessment.md', 'claim-by-claim').
 attempted_by(t0_note_overread, claude_opus_5_5).
 claim(l10_generates_m4, counterexample, proved, "Proposition 10.1 and example 16(c)", "Compression of functions on connected CP^3 generates M_4(C) with no limit, against the earlier T0 note.").
 source(l10_generates_m4, 'lemmas/16_coarse_truncation.md', 'setting').
@@ -428,7 +428,7 @@ depends(l10_generates_m4, l10_toeplitz).
 attempted_by(l10_generates_m4, claude_opus_5_5).
 checked_by(l10_generates_m4, terra_6_1, by_hand).  % report 15_16, under Proposition 10.1 and example (c)
 refuted_by(t0_note_overread, l10_generates_m4).
-%% Referee of lemmas 15 and 16 (Terra 6.1, 3 Nov 2026): reviews/2026-11-03_terra_check_15_16.md
+%% Referee of lemmas 15 and 16 (Terra 6.1, 3 Nov 2026): historical/reviews/2026-11-03_terra_check_15_16.md
 claim(l15_first_order, proposition, proved, "Proposition 15.10", "In a finite real triple with order zero and order one, if D commutes with u J u J^-1 then [D, u] = 0; in a metric such triple, u is scalar.").
 source(l15_first_order, 'lemmas/15_propinquity_collapse.md', 'unbroken-symmetry-and-the-metric-class').
 attempted_by(l15_first_order, terra_6_1).
@@ -438,7 +438,7 @@ source(l15_symmetry_ce, 'lemmas/15_propinquity_collapse.md', 'unbroken-symmetry-
 attempted_by(l15_symmetry_ce, terra_6_1).
 checked_by(l15_symmetry_ce, claude_opus_5_5, by_hand).
 claim(t0_unbroken_unrestricted, claim, refuted, "First version of the T0 section of lemma 15", "A metric spectral triple excludes every unbroken inner gauge symmetry.").
-source(t0_unbroken_unrestricted, 'reviews/2026-11-03_terra_check_15_16.md', 'i-unbroken-symmetry-and-the-standard-model').
+source(t0_unbroken_unrestricted, 'historical/reviews/2026-11-03_terra_check_15_16.md', 'i-unbroken-symmetry-and-the-standard-model').
 attempted_by(t0_unbroken_unrestricted, claude_opus_5_5).
 refuted_by(t0_unbroken_unrestricted, l15_symmetry_ce).
 claim(l16_formal, claim, proved, "Remark 16.5", "Order zero and order one on the tensor square hold for every finite even representation, so they are formal and carry nothing specific about A_F.").
@@ -457,358 +457,358 @@ hypothesis(ccm_relation, "Chamseddine-Connes-Marcolli normalization at the match
 hypothesis(positive_rank, "The twisting bundle has positive rank, with the equivariant self-adjoint realization.").
 hypothesis(heat_kernel_spectral_action, "Heat-kernel cutoff spectral action with a vectorial gauge background commuting with the mass matrix.").
 
-%% ---------------------------------------------------------------- connes_kk_research_state.md section 8 (parsed)
+%% ---------------------------------------------------------------- historical/corpus/connes_kk_research_state.md section 8 (parsed)
 claim(rs_G1, claim, proved, "proved geometrically", "The \\(7\\to6\\to5\\) orbit dimensions occur in a smooth commutative 7-manifold: proved geometrically. The product parent is non-spin.").
-source(rs_G1, 'connes_kk_research_state.md', '21-a-commutative-11--10--9-pattern').
+source(rs_G1, 'historical/corpus/connes_kk_research_state.md', '21-a-commutative-11--10--9-pattern').
 overturn(rs_G1, "A physical realization also requires a suitable twist and fields solving the equations.").
 attempted_by(rs_G1, corpus).
 claim(rs_G2, claim, proved, "proved", "\\(\\Lambda_{p,q}=\\mathbb Z^2+\\mathbb Z(1,q)/p\\), and primitive lattice vectors give closed circles: proved.").
-source(rs_G2, 'connes_kk_research_state.md', '31-all-globally-closed-torus-circles').
+source(rs_G2, 'historical/corpus/connes_kk_research_state.md', '31-all-globally-closed-torus-circles').
 overturn(rs_G2, "A different quotient action or ineffectively normalized torus requires recalculation.").
 attempted_by(rs_G2, corpus).
 claim(rs_G2a, claim, proved, "proved by the Hopf quotient", "\\(L(p,1)\\) is a smooth principal circle bundle over \\(\\mathbb{CP}^1\\) with Chern number \\(\\pm p\\): proved by the Hopf quotient.").
-source(rs_G2a, 'connes_kk_research_state.md', '21-a-commutative-11--10--9-pattern').
+source(rs_G2a, 'historical/corpus/connes_kk_research_state.md', '21-a-commutative-11--10--9-pattern').
 overturn(rs_G2a, "A noncentral quotient or a different reduction circle requires a different bundle or an orbifold treatment.").
 attempted_by(rs_G2a, corpus).
 claim(rs_G3, claim, proved, "proved in the displayed KK ansatz; quadrature verified", "Berger formula and \\(p\\)-cancellation: proved in the displayed KK ansatz; quadrature verified.").
-source(rs_G3, 'connes_kk_research_state.md', '32-one-precise-berger-calculation').
+source(rs_G3, 'historical/corpus/connes_kk_research_state.md', '32-one-precise-berger-calculation').
 overturn(rs_G3, "Extra action terms, changed gauge embedding, broken \\(U(2)\\) isometry or thresholds invalidate direct physical use.").
 attempted_by(rs_G3, corpus).
 checked_by(rs_G3, corpus, not_recorded("numerical quadrature reported in section 3.2; language not recorded")).
 claim(rs_G4, claim, proved, "proved by two metrics on the same \\(L(5,1)\\)", "Quotient topology alone fixes no angle: proved by two metrics on the same \\(L(5,1)\\).").
-source(rs_G4, 'connes_kk_research_state.md', '').
+source(rs_G4, 'historical/corpus/connes_kk_research_state.md', '').
 depends(rs_G4, rs_G2).
 depends(rs_G4, rs_G3).
 overturn(rs_G4, "A specified physical theory may forbid one metric; it must prove an additional selection law.").
 attempted_by(rs_G4, corpus).
 claim(rs_G5, claim, conditional, "conditional on a closed primitive neutral circle and exact deck–center intersection", "\\(p=5\\) gives \\(5/8\\): conditional on a closed primitive neutral circle and exact deck–center intersection, not a topology-only result.").
-source(rs_G5, 'connes_kk_research_state.md', '42-a-precise-conditional-occurrence-of-p5').
+source(rs_G5, 'historical/corpus/connes_kk_research_state.md', '42-a-precise-conditional-occurrence-of-p5').
 depends(rs_G5, rs_G3).
 overturn(rs_G5, "Allowing dense neutral flow or just deck containment removes the unique \\(p=5\\) inference.").
 attempted_by(rs_G5, corpus).
 claim(rs_G6, claim, conditional, "proved conditionally", "The \\(p=5\\) neutral quotient is a weighted-projective orbifold: proved conditionally.").
-source(rs_G6, 'connes_kk_research_state.md', '').
+source(rs_G6, 'historical/corpus/connes_kk_research_state.md', '').
 depends(rs_G6, rs_G5).
 overturn(rs_G6, "A different reduction circle or a different geometric quotient need not have this stabilizer.").
 attempted_by(rs_G6, corpus).
 claim(rs_G7, claim, proved, "proved in the chosen embedding", "At the \\(z_1=0\\) endpoint, the original \\(Q=T_3+Y\\) acts trivially tangentially and rotates the normal plane: proved in the chosen embedding.").
-source(rs_G7, 'connes_kk_research_state.md', '53-the-endpoint-geometry-charge-and-spin-structure').
+source(rs_G7, 'historical/corpus/connes_kk_research_state.md', '53-the-endpoint-geometry-charge-and-spin-structure').
 overturn(rs_G7, "A normal-bundle gauge field or a different geometric embedding may realize electromagnetism by another route.").
 attempted_by(rs_G7, corpus).
 claim(rs_G8, claim, proved, "proved", "\\(\\mathbb{CP}^2\\times S^1\\) has no ordinary spin structure, and \\(s+q\\ell\\equiv0\\bmod p\\) for the stated scalar normal modes: proved.").
-source(rs_G8, 'connes_kk_research_state.md', '53-the-endpoint-geometry-charge-and-spin-structure').
+source(rs_G8, 'historical/corpus/connes_kk_research_state.md', '53-the-endpoint-geometry-charge-and-spin-structure').
 overturn(rs_G8, "Spin-\\(c\\), other bundle twists and different spin lifts alter the fermionic mode rule.").
 attempted_by(rs_G8, corpus).
 claim(rs_G9, claim, proved, "proved geometrically", "\\(N=S(Q)\\) is spin and has the three displayed \\(S^1,S^2,S^3\\) bundle projections: proved geometrically.").
-source(rs_G9, 'connes_kk_research_state.md', '23-a-spin-seven-manifold-with-flag-and-sphere-quotients').
+source(rs_G9, 'historical/corpus/connes_kk_research_state.md', '23-a-spin-seven-manifold-with-flag-and-sphere-quotients').
 overturn(rs_G9, "A proposed background may fail the field equations or choose incompatible flux, spin lift or metric.").
 attempted_by(rs_G9, corpus).
 claim(rs_G10, claim, proved, "proved", "Neither \\(F_3\\) nor \\(\\mathbb{CP}^2\\times\\mathbb{CP}^1\\) has a smooth surjective submersion to a five-manifold or a uniformly sectional-curvature-bounded collapse to a fixed smooth closed 5D target: proved.").
-source(rs_G10, 'connes_kk_research_state.md', '23-a-spin-seven-manifold-with-flag-and-sphere-quotients').
+source(rs_G10, 'historical/corpus/connes_kk_research_state.md', '23-a-spin-seven-manifold-with-flag-and-sphere-quotients').
 overturn(rs_G10, "Singular collapse, unbounded curvature, a stratified or boundary endpoint, and other six-manifolds are outside the statement.").
 attempted_by(rs_G10, corpus).
 claim(rs_G11, claim, proved, "proved", "Flag and product have different integral cohomology rings and spin properties: proved.").
-source(rs_G11, 'connes_kk_research_state.md', '24-projective-candidates-spin-and-the-quaternionic-hopf-bundle').
+source(rs_G11, 'historical/corpus/connes_kk_research_state.md', '24-projective-candidates-spin-and-the-quaternionic-hopf-bundle').
 overturn(rs_G11, "Different spaces or twisted structures require a separate comparison.").
 attempted_by(rs_G11, corpus).
 claim(rs_G12, claim, proved, "proved", "The displayed torus/Weyl quotient is \\(\\mathbb{CP}^2\\times\\mathbb{CP}^1\\) as a complex variety: proved.").
-source(rs_G12, 'connes_kk_research_state.md', '25-an-exact-torus-quotient-with-fixed-points').
+source(rs_G12, 'historical/corpus/connes_kk_research_state.md', '25-an-exact-torus-quotient-with-fixed-points').
 overturn(rs_G12, "It is not a free quotient or a smooth flat metric quotient; another finite-group action may differ.").
 attempted_by(rs_G12, corpus).
 claim(rs_G13, claim, proved, "proved", "\\(S(Q)\\) and the \\(c_2=\\pm2\\) pulled-back quaternionic Hopf bundle are distinct: proved.").
-source(rs_G13, 'connes_kk_research_state.md', '24-projective-candidates-spin-and-the-quaternionic-hopf-bundle').
+source(rs_G13, 'historical/corpus/connes_kk_research_state.md', '24-projective-candidates-spin-and-the-quaternionic-hopf-bundle').
 overturn(rs_G13, "Altering either bundle changes the comparison.").
 attempted_by(rs_G13, corpus).
 claim(rs_E1, claim, conditional, "proved conditionally", "Spectral-action and Berger \\(5/8\\) use compatible local charge conventions: proved conditionally.").
-source(rs_E1, 'connes_kk_research_state.md', '33-comparison-with-the-reported-14-and-spectral-action-58').
+source(rs_E1, 'historical/corpus/connes_kk_research_state.md', '33-comparison-with-the-reported-14-and-spectral-action-58').
 overturn(rs_E1, "A mismatch in represented charges, normalization, global gauge group or scale defeats physical identification.").
 attempted_by(rs_E1, corpus).
 claim(rs_E2, claim, not_reconstructed, "not reconstructed from the parallel transcript", "Reported flag \\(1/4\\): not reconstructed from the parallel transcript.").
-source(rs_E2, 'connes_kk_research_state.md', '33-comparison-with-the-reported-14-and-spectral-action-58').
+source(rs_E2, 'historical/corpus/connes_kk_research_state.md', '33-comparison-with-the-reported-14-and-spectral-action-58').
 overturn(rs_E2, "The original flag embedding or kinetic matrix could give another ratio.").
 attempted_by(rs_E2, corpus).
 claim(rs_E3, claim, proved, "proved in that model", "Same-metric orbit model has \\(\\rho=\\xi^{-2}\\), so \\(5/8\\) and \\(\\rho=1\\) are incompatible: proved in that model.").
-source(rs_E3, 'connes_kk_research_state.md', '5-the-fermi-scale-and-an-independent-mass-test').
+source(rs_E3, 'historical/corpus/connes_kk_research_state.md', '5-the-fermi-scale-and-an-independent-mass-test').
 overturn(rs_E3, "A derived extra mass sector, threshold corrections, or a different model can evade the premises.").
 attempted_by(rs_E3, corpus).
 claim(rs_E4, claim, proved, "proved in the single-\\(W\\) orbit model", "\\(G_F=1/(\\sqrt2\\kappa a^2)\\): proved in the single-\\(W\\) orbit model, not a geometric prediction of \\(G_F\\).").
-source(rs_E4, 'connes_kk_research_state.md', '').
+source(rs_E4, 'historical/corpus/connes_kk_research_state.md', '').
 depends(rs_E4, rs_E3).
 overturn(rs_E4, "Additional light mediators, different current normalization or a derived \\(\\kappa\\) change the inference.").
 attempted_by(rs_E4, corpus).
 claim(rs_E5, claim, conditional, "proved conditionally", "In the fixed-coupling \\(M_W\\to\\infty\\) limit the tree-level Fermi coefficient tends to zero; beta decay is absent if no other charged-current operator survives: proved conditionally.").
-source(rs_E5, 'connes_kk_research_state.md', '51-the-9d-endpoint-and-beta-decay').
+source(rs_E5, 'historical/corpus/connes_kk_research_state.md', '51-the-9d-endpoint-and-beta-decay').
 overturn(rs_E5, "Independent contact interactions, other mediators, or nonstandard simultaneous coupling scaling change the conclusion.").
 attempted_by(rs_E5, corpus).
 claim(rs_F1, claim, conditional, "conditional algebraic derivation", "The chosen dominant top \\(T\\) has centralizer \\(\\mathbb C\\oplus M_3(\\mathbb C)\\): conditional algebraic derivation.").
-source(rs_F1, 'connes_kk_research_state.md', '72-the-reported-heavy-top-selection').
+source(rs_F1, 'historical/corpus/connes_kk_research_state.md', '72-the-reported-heavy-top-selection').
 overturn(rs_F1, "A different \\(T\\), representation, color action, or degeneracy alters the centralizer.").
 attempted_by(rs_F1, corpus).
 claim(rs_F2, claim, proved, "proved as logical constructions", "Algebra centralization, kernel compression and lifted gauge stabilization are distinct: proved as logical constructions.").
-source(rs_F2, 'connes_kk_research_state.md', '72-the-reported-heavy-top-selection').
+source(rs_F2, 'historical/corpus/connes_kk_research_state.md', '72-the-reported-heavy-top-selection').
 overturn(rs_F2, "Equivalence in any specific model requires a separate explicit isomorphism.").
 attempted_by(rs_F2, corpus).
 claim(rs_F3, claim, reference, "standard result", "A single 9D Majorana scalar bilinear vanishes, while paired real fields and complex Dirac fields can have mass: standard result.").
-source(rs_F3, 'connes_kk_research_state.md', '52-massive-9d-spinors-and-4d-dirac-masses').
+source(rs_F3, 'historical/corpus/connes_kk_research_state.md', '52-massive-9d-spinors-and-4d-dirac-masses').
 overturn(rs_F3, "A non-scalar background coupling, broken 9D symmetry, different gauge module or 4D effective mass is a different question.").
 attempted_by(rs_F3, corpus).
 claim(rs_F4, claim, proved, "proved in the elementary electroweak model", "At fixed \\(g_2\\), the usual \\(v\\to\\infty\\) weak limit keeps \\(m_f\\ne0\\) only with \\(y_f\\sim1/v\\): proved in the elementary electroweak model.").
-source(rs_F4, 'connes_kk_research_state.md', '55-a-second-endpoint-s5-and-the-correlated-weak-limit').
+source(rs_F4, 'historical/corpus/connes_kk_research_state.md', '55-a-second-endpoint-s5-and-the-correlated-weak-limit').
 overturn(rs_F4, "Independent mass generation or other mediators change the conclusion.").
 attempted_by(rs_F4, corpus).
 claim(rs_N1, claim, proved, "proved; finite-matrix checked", "The compressed operator system has complex dimension \\(12\\), while the generated algebra is the stated three matrix blocks of dimension \\(14\\): proved; finite-matrix checked.").
-source(rs_N1, 'connes_kk_research_state.md', '62-an-exact-1oplus2oplus3-construction').
+source(rs_N1, 'historical/corpus/connes_kk_research_state.md', '62-an-exact-1oplus2oplus3-construction').
 overturn(rs_N1, "A different bundle, projection or demand that compression itself be a homomorphism changes the claim.").
 attempted_by(rs_N1, corpus).
 checked_by(rs_N1, corpus, not_recorded("finite-matrix computation of the complex dimension, section 6.2")).
 claim(rs_N1a, claim, proved, "proved; finite-matrix checked", "At \\(p=5\\), the degree-one projective doublet is not an untwisted scalar Hopf mode; the first positive compatible degree gives a six-dimensional holomorphic sector: proved; finite-matrix checked.").
-source(rs_N1a, 'connes_kk_research_state.md', '62-an-exact-1oplus2oplus3-construction').
+source(rs_N1a, 'historical/corpus/connes_kk_research_state.md', '62-an-exact-1oplus2oplus3-construction').
 depends(rs_N1a, rs_G2a).
 overturn(rs_N1a, "A flat deck-character twist, different field bundle or another spectral sector changes the selection rule.").
 attempted_by(rs_N1a, corpus).
 checked_by(rs_N1a, corpus, not_recorded("finite-matrix rank calculation, section 6.2")).
 claim(rs_N1b, claim, proved, "proved within the two displayed constructions", "At fixed projective base and bundle, changing the Hopf radius varies the Berger angle while leaving that base zero-mode algebra fixed: proved within the two displayed constructions.").
-source(rs_N1b, 'connes_kk_research_state.md', '62-an-exact-1oplus2oplus3-construction').
+source(rs_N1b, 'historical/corpus/connes_kk_research_state.md', '62-an-exact-1oplus2oplus3-construction').
 depends(rs_N1b, rs_G2a).
 depends(rs_N1b, rs_G3).
 overturn(rs_N1b, "A physical full-operator spectral threshold can change the retained sector and requires separate analysis.").
 attempted_by(rs_N1b, corpus).
 claim(rs_N2, claim, proved, "proved", "This zero-mode model has no inherited KO-6 structure or Dirac one-forms; no symmetric cutoff of the same index-\\(6\\) operator can supply an anti-commuting \\(J\\) for the inherited grading: proved.").
-source(rs_N2, 'connes_kk_research_state.md', '63-the-zero-mode-obstruction-and-the-higher-mode-obstruction').
+source(rs_N2, 'historical/corpus/connes_kk_research_state.md', '63-the-zero-mode-obstruction-and-the-higher-mode-obstruction').
 depends(rs_N2, rs_N1).
 overturn(rs_N2, "An opposite-index sector, different graded correspondence, or a changed representation escapes the hypotheses.").
 attempted_by(rs_N2, corpus).
 claim(rs_N3, claim, proved, "proved", "Higher modes of the same diagonal background cannot generate cross-bundle one-forms: proved.").
-source(rs_N3, 'connes_kk_research_state.md', '63-the-zero-mode-obstruction-and-the-higher-mode-obstruction').
+source(rs_N3, 'historical/corpus/connes_kk_research_state.md', '63-the-zero-mode-obstruction-and-the-higher-mode-obstruction').
 depends(rs_N3, rs_N1).
 depends(rs_N3, rs_N2).
 overturn(rs_N3, "A derived operator that mixes the bundle summands or a different correspondence evades the hypothesis.").
 attempted_by(rs_N3, corpus).
 claim(rs_N4, claim, conditional, "proved conditionally", "Naively inherited \\(J\\) fails order-zero for noncommuting compressions: proved conditionally.").
-source(rs_N4, 'connes_kk_research_state.md', '63-the-zero-mode-obstruction-and-the-higher-mode-obstruction').
+source(rs_N4, 'historical/corpus/connes_kk_research_state.md', '63-the-zero-mode-obstruction-and-the-higher-mode-obstruction').
 overturn(rs_N4, "A different bimodule/real structure, or absence of a parent \\(J\\), escapes the lemma.").
 attempted_by(rs_N4, corpus).
 claim(rs_N5, claim, proved, "proved by direct calculation (exact algebra)", "A doubled \\(\\mathbb C\\oplus\\mathbb H\\) toy model has KO-6 signs, order-zero, first-order and nonzero one-forms, but fails finite orientability: explicit finite-matrix calculation.").
-source(rs_N5, 'connes_kk_research_state.md', '64-continuing-the-obstruction-test-a-finite-repair-and-orientability').
+source(rs_N5, 'historical/corpus/connes_kk_research_state.md', '64-continuing-the-obstruction-test-a-finite-repair-and-orientability').
 overturn(rs_N5, "A different representation may satisfy orientability; it would still need a controlled geometric derivation.").
 checked_by(rs_N5, claude_opus_5_5, by_hand).  % 3 Nov 2026
 attempted_by(rs_N5, corpus).
 claim(rs_N6, claim, proved, "proved by direct calculation (exact algebra)", "An 18-dimensional bimodule over \\(\\mathbb C\\oplus\\mathbb H\\oplus M_3(\\mathbb C)\\) satisfies KO-6 signs, order-zero, first-order, orientability and nonzero one-forms; the intersection pairing has rank \\(2\\): explicit finite-matrix calculation.").
-source(rs_N6, 'connes_kk_research_state.md', '65-an-orientable-real-bimodule-from-the-1oplus2oplus3-spaces').
+source(rs_N6, 'historical/corpus/connes_kk_research_state.md', '65-an-orientable-real-bimodule-from-the-1oplus2oplus3-spaces').
 overturn(rs_N6, "A different bimodule can alter the pairing entries, but the odd-rank obstruction N7 persists; a KK derivation and gauge lift remain unproved.").
 checked_by(rs_N6, claude_opus_5_5, by_hand).  % 3 Nov 2026
 attempted_by(rs_N6, corpus).
 claim(rs_N7, claim, proved, "proved under the trace-pairing definition", "The ordinary finite intersection form for a real KO-6 bimodule over the three-summand \\(A_F\\) is skew and hence singular: proved under the trace-pairing definition.").
-source(rs_N7, 'connes_kk_research_state.md', '65-an-orientable-real-bimodule-from-the-1oplus2oplus3-spaces').
+source(rs_N7, 'historical/corpus/connes_kk_research_state.md', '65-an-orientable-real-bimodule-from-the-1oplus2oplus3-spaces').
 overturn(rs_N7, "A different real Kasparov duality or multi-class construction is not decided by this matrix.").
 attempted_by(rs_N7, corpus).
 claim(rs_N8, claim, proved, "proved for the colour-preserving bridge exchange (Terra 6.1 referee)", "An orientable four-summand parent can reduce to a nonorientable, faithful three-summand finite triple with nonzero one-forms, while preserving first-order throughout: explicit 32D finite-matrix model.").
-source(rs_N8, 'connes_kk_research_state.md', '66-orientation-loss-under-a-heavy-centralizer-and-spectral-projection').
+source(rs_N8, 'historical/corpus/connes_kk_research_state.md', '66-orientation-loss-under-a-heavy-centralizer-and-spectral-projection').
 overturn(rs_N8, "Projection alone preserves orientability and makes the two scalar states infinitely distant; the algebra restriction and the geometric justification remain independent requirements.").
 checked_by(rs_N8, terra_6_1, by_hand).  % referee, 3 Nov 2026
 %% rs_N8 amended in place: the bridge exchange is the colour-preserving swap (section 6.6).
 attempted_by(rs_N8, corpus).
 claim(rs_N9, claim, proved, "proved", "A nonzero grading-odd bimodule-linear finite mass forbids the usual finite orientability cycle: proved, with the published QED triple as a concrete example.").
-source(rs_N9, 'connes_kk_research_state.md', '54-direct-link-between-a-central-dirac-mass-and-finite-orientability').
+source(rs_N9, 'historical/corpus/connes_kk_research_state.md', '54-direct-link-between-a-central-dirac-mass-and-finite-orientability').
 overturn(rs_N9, "Mere gauge invariance or the absence of a propagating Higgs is weaker and does not entail the result.").
 attempted_by(rs_N9, corpus).
 claim(rs_N10, claim, proved, "proved by direct calculation (exact algebra)", "A relative \\(U(1)\\) can act through the real lift while the inner automorphism group is trivial: explicit matrix calculation.").
-source(rs_N10, 'connes_kk_research_state.md', '68-gauge-symmetry-on-each-side').
+source(rs_N10, 'historical/corpus/connes_kk_research_state.md', '68-gauge-symmetry-on-each-side').
 overturn(rs_N10, "A different \\(J\\) or representation changes the kernel and gauge lift.").
 checked_by(rs_N10, claude_opus_5_5, by_hand).  % 3 Nov 2026
 attempted_by(rs_N10, corpus).
 claim(rs_N11, claim, proved, "proved and numerically checked", "Round-sphere rotations become inner automorphisms of the compressed \\(M_2\\) algebra: proved and numerically checked.").
-source(rs_N11, 'connes_kk_research_state.md', '69-an-isometry-becoming-inner-after-compression').
+source(rs_N11, 'historical/corpus/connes_kk_research_state.md', '69-an-isometry-becoming-inner-after-compression').
 overturn(rs_N11, "Other projections or backgrounds can break equivariance or alter the resulting algebra.").
 attempted_by(rs_N11, corpus).
 checked_by(rs_N11, corpus, not_recorded("numerical check reported in section 6.9")).
 claim(rs_N12, claim, proved, "proved under the bounded-perturbation assumptions", "A gapped Dirac family has a finite low-energy sector with the stated \\(O(R)\\) Feshbach correction: proved under the bounded-perturbation assumptions.").
-source(rs_N12, 'connes_kk_research_state.md', '610-what-towerless-can-mean').
+source(rs_N12, 'historical/corpus/connes_kk_research_state.md', '610-what-towerless-can-mean').
 overturn(rs_N12, "Missing zero modes, closing gap, or unbounded \\(R\\)-dependent couplings require a new estimate.").
 attempted_by(rs_N12, corpus).
 claim(rs_N13, claim, proved, "proved under the displayed assumptions", "The standard connected metric collapse selects asymptotically constant bounded-Lipschitz scalar functions; the simple \\((M_2,\\mathbb C^2,0)\\) projection does not reproduce the collapsing spectral metric: proved under the displayed assumptions.").
-source(rs_N13, 'connes_kk_research_state.md', '610-what-towerless-can-mean').
+source(rs_N13, 'historical/corpus/connes_kk_research_state.md', '610-what-towerless-can-mean').
 depends(rs_N13, rs_N11).
 depends(rs_N13, rs_N12).
 overturn(rs_N13, "Different rescaling, correspondence, spectral data, or an explicitly derived finite geometry are separate possibilities.").
 attempted_by(rs_N13, corpus).
 claim(rs_N14, claim, proved, "proved as a logical limitation", "Isometry–inner group agreement produces neither the Standard Model finite triple nor coupling matching by itself: proved as a logical limitation.").
-source(rs_N14, 'connes_kk_research_state.md', '68-gauge-symmetry-on-each-side').
+source(rs_N14, 'historical/corpus/connes_kk_research_state.md', '68-gauge-symmetry-on-each-side').
 overturn(rs_N14, "An explicit model satisfying the missing geometric and representation data would establish more, not contradict this limitation.").
 attempted_by(rs_N14, corpus).
 claim(rs_N15, claim, proved, "proved", "The flag-fiber kernels are \\(1,Q^*,\\operatorname{Sym}^2Q^*\\); they define a nonconstant matrix algebra bundle and a nonconstant quaternion algebra bundle: proved.").
-source(rs_N15, 'connes_kk_research_state.md', '611-flag-fiber-zero-modes-and-a-quaternion-algebra-bundle').
+source(rs_N15, 'historical/corpus/connes_kk_research_state.md', '611-flag-fiber-zero-modes-and-a-quaternion-algebra-bundle').
 overturn(rs_N15, "Other twists or a different projection change the bundles; a derived bimodule and KO-6 structure remain separate.").
 attempted_by(rs_N15, corpus).
 claim(rs_N16, claim, proved, "proved under the stated \\(SU(2)\\)-compatible twist", "The \\(N\\to S^5\\) degree-two fiber kernel is a quaternionic line with nonzero reduced \\(KSp\\) class, and the corresponding twisted base Dirac kernel has odd parity: proved under the stated \\(SU(2)\\)-compatible twist. The homogeneous singlet is neutral under the specified real Hopf lift.").
-source(rs_N16, 'connes_kk_research_state.md', '612-the-s5-reduction-and-a-protected-real-index-mode').
+source(rs_N16, 'historical/corpus/connes_kk_research_state.md', '612-the-s5-reduction-and-a-protected-real-index-mode').
 overturn(rs_N16, "A connection breaking quaternionic compatibility, a different circle lift, conjugate-sector mixing or a different background changes the applicable operator.").
 attempted_by(rs_N16, corpus).
 claim(rs_N17, claim, proved, "proved under the stated spectral assumptions", "The associated connection-metric family has a twisted 7D eigenvalue within \\(C\\varepsilon\\) of zero; the \\(SU(3)\\)-homogeneous subfamily has an exact zero for every \\(\\varepsilon>0\\): proved under the stated spectral assumptions.").
-source(rs_N17, 'connes_kk_research_state.md', '612-the-s5-reduction-and-a-protected-real-index-mode').
+source(rs_N17, 'historical/corpus/connes_kk_research_state.md', '612-the-s5-reduction-and-a-protected-real-index-mode').
 depends(rs_N17, rs_N16).
 overturn(rs_N17, "Different background terms or the pulled-back Fubini–Study connection change the effective operator; no 11D solution is implied.").
 attempted_by(rs_N17, corpus).
 claim(rs_N18, claim, proved, "proved; exact finite-matrix checked", "The stated torus crossed product has a finite quotient \\(\\mathbb C\\oplus M_2\\oplus M_3\\): proved; exact finite-matrix checked.").
-source(rs_N18, 'connes_kk_research_state.md', '613-torus-crossed-product-finite-quotient-versus-mode-compression').
+source(rs_N18, 'historical/corpus/connes_kk_research_state.md', '613-torus-crossed-product-finite-quotient-versus-mode-compression').
 overturn(rs_N18, "Another group action, a required real structure or an actual spectral cutoff demands additional work.").
 attempted_by(rs_N18, corpus).
 checked_by(rs_N18, corpus, not_recorded("exact finite-matrix check reported in section 6.13")).
 claim(rs_N19, claim, proved, "proved", "A nonzero finite-rank compression of all scalar multipliers on a nonatomic space cannot be multiplicative: proved.").
-source(rs_N19, 'connes_kk_research_state.md', '613-torus-crossed-product-finite-quotient-versus-mode-compression').
+source(rs_N19, 'historical/corpus/connes_kk_research_state.md', '613-torus-crossed-product-finite-quotient-versus-mode-compression').
 overturn(rs_N19, "Atomic measures, approximate or nonmultiplicative compression, and abstract quotient representations are outside the statement.").
 attempted_by(rs_N19, corpus).
 claim(rs_N20, claim, proved, "proved", "The torus Weyl action has no honest equivariant ordinary spin lift at the transposition fixed point: proved.").
-source(rs_N20, 'connes_kk_research_state.md', '613-torus-crossed-product-finite-quotient-versus-mode-compression').
+source(rs_N20, 'historical/corpus/connes_kk_research_state.md', '613-torus-crossed-product-finite-quotient-versus-mode-compression').
 overturn(rs_N20, "A spin-\\(c\\), projective or internally twisted action is a different construction.").
 attempted_by(rs_N20, corpus).
 claim(rs_N21, claim, conditional, "proved conditionally", "The natural connection-Laplacian zero-mode algebra of the displayed flag or \\(S^5\\) endomorphism bundles is \\(\\mathbb C^3\\): proved conditionally.").
-source(rs_N21, 'connes_kk_research_state.md', '611-flag-fiber-zero-modes-and-a-quaternion-algebra-bundle').
+source(rs_N21, 'historical/corpus/connes_kk_research_state.md', '611-flag-fiber-zero-modes-and-a-quaternion-algebra-bundle').
 overturn(rs_N21, "Other operators, background couplings, gauge-isometry modes or unrelated connections can change the massless spectrum.").
 attempted_by(rs_N21, corpus).
 claim(rs_K1, claim, proved, "proved", "The specified six-dimensional function algebra and \\(A_F\\) are not directly KK-equivalent: proved.").
-source(rs_K1, 'connes_kk_research_state.md', '71-the-k-theory-obstruction-has-a-precise-scope').
+source(rs_K1, 'historical/corpus/connes_kk_research_state.md', '71-the-k-theory-obstruction-has-a-precise-scope').
 overturn(rs_K1, "Changing the comparison algebra or asking only for a noninvertible correspondence avoids the conclusion.").
 attempted_by(rs_K1, corpus).
 claim(rs_K2, claim, conditional, "conditional illustration, without a construction for this model", "A KO-6 factor can survive a metric collapse in principle: conditional illustration, without a construction for this model.").
-source(rs_K2, 'connes_kk_research_state.md', '22-metric-dimension-chirality-and-ko-dimension').
+source(rs_K2, 'historical/corpus/connes_kk_research_state.md', '22-metric-dimension-chirality-and-ko-dimension').
 overturn(rs_K2, "Failure of a vertical zero mode or inability to define the required real structure in the chosen family.").
 attempted_by(rs_K2, corpus).
 claim(rs_K3, claim, proved, "proved", "Product and flag are complex \\(KK\\)-equivalent but the standard real forms are not \\(KKO\\)-equivalent: proved.").
-source(rs_K3, 'connes_kk_research_state.md', '71-the-k-theory-obstruction-has-a-precise-scope').
+source(rs_K3, 'historical/corpus/connes_kk_research_state.md', '71-the-k-theory-obstruction-has-a-precise-scope').
 overturn(rs_K3, "Different real structures, noninvertible cycles or dropping the requirement of an invertible equivalence are separate questions.").
 attempted_by(rs_K3, corpus).
 claim(rs_K4, claim, proved, "proved by the spin-submersion theorem", "The \\(N\\to S^5\\) twisted Dirac operator factors through the vertical family in complex Kasparov theory: proved by the spin-submersion theorem.").
-source(rs_K4, 'connes_kk_research_state.md', '612-the-s5-reduction-and-a-protected-real-index-mode').
+source(rs_K4, 'historical/corpus/connes_kk_research_state.md', '612-the-s5-reduction-and-a-protected-real-index-mode').
 overturn(rs_K4, "The factorization does not imply an equivalence to \\(A_F\\), a finite KO-6 triple, or a dynamical solution.").
 attempted_by(rs_K4, corpus).
 claim(rs_D1, claim, open, "open", "A common stabilized geometry fixes both \\(5/8\\) and \\(G_F\\) without unrelated tunings: open.").
-source(rs_D1, 'connes_kk_research_state.md', '').
+source(rs_D1, 'historical/corpus/connes_kk_research_state.md', '').
 depends(rs_D1, rs_E1).
 depends(rs_D1, rs_E3).
 depends(rs_D1, rs_E4).
 depends(rs_D1, rs_G3).
 overturn(rs_D1, "Any candidate is falsified if the solutions retain free shape/scale moduli or fail the mass and coupling relations.").
 attempted_by(rs_D1, corpus).
-%% ---------------------------------------------------------------- canonical_research.md status labels (parsed)
+%% ---------------------------------------------------------------- historical/corpus/canonical_research.md status labels (parsed)
 claim(paper_1_1, claim, proved, "Proved distinction.", "Its product KO-degree is $4+6=10$ modulo eight. This does not assert ten ordinary metric dimensions [19].").
-source(paper_1_1, 'canonical_research.md', '1-what-the-numbers-9-10-and-11-mean').
+source(paper_1_1, 'historical/corpus/canonical_research.md', '1-what-the-numbers-9-10-and-11-mean').
 attempted_by(paper_1_1, corpus).
-claim(paper_2_1_1, claim, example, "Example", "(proved: the spectrum is derived in `research_limits/research_note.md` §2; checked numerically in Python, research_checks_knowledge.md §1.1-1.2). A doubled matrix approximation to a two-sphere, with matrix size $N$ and").
-source(paper_2_1_1, 'canonical_research.md', '21-heat-dimension-and-the-order-of-limits').
+claim(paper_2_1_1, claim, example, "Example", "(proved: the spectrum is derived in `historical/corpus/research_note.md` §2; checked numerically in Python, historical/corpus/research_checks_knowledge.md §1.1-1.2). A doubled matrix approximation to a two-sphere, with matrix size $N$ and").
+source(paper_2_1_1, 'historical/corpus/canonical_research.md', '21-heat-dimension-and-the-order-of-limits').
 attempted_by(paper_2_1_1, corpus).
-checked_by(paper_2_1_1, corpus, python("see research_checks_knowledge.md")).
+checked_by(paper_2_1_1, corpus, python("see historical/corpus/research_checks_knowledge.md")).
 claim(paper_2_2_1, claim, proved, "Proved.", "This has an embedded norm-resolvent limit on the light space, with finite operator $PSP$. Bounded light-heavy mixing is allowed. Finite-dimensional perturbation gives a unitary $1+O(t^{-1})$ identifying the low spectral").
-source(paper_2_2_1, 'canonical_research.md', '22-heavy-finite-operators').
+source(paper_2_2_1, 'historical/corpus/canonical_research.md', '22-heavy-finite-operators').
 attempted_by(paper_2_2_1, corpus).
-claim(paper_3_1, claim, proved, "Proved; checked numerically in Python", "(research_checks_knowledge.md §2). Its algebra commutant requires").
-source(paper_3_1, 'canonical_research.md', '3-the-finite-algebra-chain-and-the-electron').
+claim(paper_3_1, claim, proved, "Proved; checked numerically in Python", "(historical/corpus/research_checks_knowledge.md §2). Its algebra commutant requires").
+source(paper_3_1, 'historical/corpus/canonical_research.md', '3-the-finite-algebra-chain-and-the-electron').
 attempted_by(paper_3_1, corpus).
-checked_by(paper_3_1, corpus, python("see research_checks_knowledge.md")).
-claim(paper_4_1, claim, proved, "Proved", "in `research_limits/research_note.md` §4; checked numerically in Python (research_checks_knowledge.md §1.5). Compressed real base functions generate $M_2(\\mathbb H)$; real functions on the total projective space generat").
-source(paper_4_1, 'canonical_research.md', '4-the-six-dimensional-twistor-geometry-and-the-higgs').
+checked_by(paper_3_1, corpus, python("see historical/corpus/research_checks_knowledge.md")).
+claim(paper_4_1, claim, proved, "Proved", "in `historical/corpus/research_note.md` §4; checked numerically in Python (historical/corpus/research_checks_knowledge.md §1.5). Compressed real base functions generate $M_2(\\mathbb H)$; real functions on the total projective space generat").
+source(paper_4_1, 'historical/corpus/canonical_research.md', '4-the-six-dimensional-twistor-geometry-and-the-higgs').
 attempted_by(paper_4_1, corpus).
-checked_by(paper_4_1, corpus, python("see research_checks_knowledge.md")).
+checked_by(paper_4_1, corpus, python("see historical/corpus/research_checks_knowledge.md")).
 claim(paper_5_1, claim, proved, "Proved:", "At $(\\mathbb Ce_1,e_2)$, its SU(3) stabilizer is $\\operatorname{diag}(e^{it},1,e^{-it})$. Permuting coordinates identifies this with the (1,-1,0) convention for the Aloff-Wallach space.").
-source(paper_5_1, 'canonical_research.md', '5-seven-dimensions-the-exact-fibrations').
+source(paper_5_1, 'historical/corpus/canonical_research.md', '5-seven-dimensions-the-exact-fibrations').
 attempted_by(paper_5_1, corpus).
 claim(paper_5_2, claim, proved, "Proved (table row)", "| $N\\to\\mathbb{CP}^2_{\\ell}$ | $S^3$ | Forget u | Proved |").
-source(paper_5_2, 'canonical_research.md', '5-seven-dimensions-the-exact-fibrations').
+source(paper_5_2, 'historical/corpus/canonical_research.md', '5-seven-dimensions-the-exact-fibrations').
 attempted_by(paper_5_2, corpus).
 claim(paper_5_3, claim, proved, "Proved (table row)", "| $N\\to F=SU(3)/T^2$ | $S^1$ | Send $(\\ell,u)$ to $(\\ell,\\mathbb Cu)$ | Proved |").
-source(paper_5_3, 'canonical_research.md', '5-seven-dimensions-the-exact-fibrations').
+source(paper_5_3, 'historical/corpus/canonical_research.md', '5-seven-dimensions-the-exact-fibrations').
 attempted_by(paper_5_3, corpus).
 claim(paper_5_4, claim, proved, "Proved (table row)", "| $N\\to S^5=SU(3)/SU(2)$ | $S^2$ | Send $(\\ell,u)$ to $u$ | Proved |").
-source(paper_5_4, 'canonical_research.md', '5-seven-dimensions-the-exact-fibrations').
+source(paper_5_4, 'historical/corpus/canonical_research.md', '5-seven-dimensions-the-exact-fibrations').
 attempted_by(paper_5_4, corpus).
 claim(paper_5_5, claim, proved, "Proved", "gives $w_2(N)=p^*(3h+h)=0$ modulo two. Thus N is spin and simply connected. Its integral cohomology is Z in degrees 0,2,5,7 and zero otherwise; in particular $H^4(N;\\mathbb Z)=0$. , using the $S^3$-sphere-bundle Gysin se").
-source(paper_5_5, 'canonical_research.md', '5-seven-dimensions-the-exact-fibrations').
+source(paper_5_5, 'historical/corpus/canonical_research.md', '5-seven-dimensions-the-exact-fibrations').
 attempted_by(paper_5_5, corpus).
 claim(paper_5_6, claim, proved, "Proved as quotient geometry.", "L has three fixed $\\mathbb{CP}^1$ strata; its central $\\mathbb Z_3$ kernel on F must be removed for an effective action. The induced metric on Y is singular. The residual connected symmetry inherited from this quotient").
-source(paper_5_6, 'canonical_research.md', 'a-genuine-sequential-orbit-space-chain-also-exists').
+source(paper_5_6, 'historical/corpus/canonical_research.md', 'a-genuine-sequential-orbit-space-chain-also-exists').
 attempted_by(paper_5_6, corpus).
 claim(paper_5_7, claim, conditional, "Conditional:", "The second step can use the spectral family $D_\\tau=D_F+\\tau\\Gamma_F L$, on an equivariant bundle with an effective projectable lift. Its square is $D_F^2+\\tau^2L^2$, so nonzero circle momentum is suppressed with resolve").
-source(paper_5_7, 'canonical_research.md', 'a-genuine-sequential-orbit-space-chain-also-exists').
+source(paper_5_7, 'historical/corpus/canonical_research.md', 'a-genuine-sequential-orbit-space-chain-also-exists').
 attempted_by(paper_5_7, corpus).
 claim(paper_6_1, claim, proved, "Proved (table row)", "| Integral ring | $\\mathbb Z[h,y]/(h^3,y^2)$ | $\\mathbb Z[h,x]/(h^3,x^2+hx+h^2)$ | Proved |").
-source(paper_6_1, 'canonical_research.md', '6-keep-the-product-and-flag-candidates-separate').
+source(paper_6_1, 'historical/corpus/canonical_research.md', '6-keep-the-product-and-flag-candidates-separate').
 attempted_by(paper_6_1, corpus).
 claim(paper_6_2, claim, proved, "Proved (table row)", "| Betti numbers in degrees 0,2,4,6 | 1,2,2,1 | 1,2,2,1 | Proved |").
-source(paper_6_2, 'canonical_research.md', '6-keep-the-product-and-flag-candidates-separate').
+source(paper_6_2, 'historical/corpus/canonical_research.md', '6-keep-the-product-and-flag-candidates-separate').
 attempted_by(paper_6_2, corpus).
 claim(paper_6_3, claim, proved, "Proved (table row)", "| $c_1$ for the indicated complex structure | $3h+2y$ | $4h+2x$ | Proved (below) |").
-source(paper_6_3, 'canonical_research.md', '6-keep-the-product-and-flag-candidates-separate').
+source(paper_6_3, 'historical/corpus/canonical_research.md', '6-keep-the-product-and-flag-candidates-separate').
 attempted_by(paper_6_3, corpus).
 claim(paper_6_4, claim, proved, "Proved (table row)", "| $w_2$ | h mod 2 | 0 | Proved |").
-source(paper_6_4, 'canonical_research.md', '6-keep-the-product-and-flag-candidates-separate').
+source(paper_6_4, 'historical/corpus/canonical_research.md', '6-keep-the-product-and-flag-candidates-separate').
 attempted_by(paper_6_4, corpus).
 claim(paper_6_5, claim, proved, "Proved (table row)", "| $p_1$ | $3h^2$ | 0 | Proved (below) |").
-source(paper_6_5, 'canonical_research.md', '6-keep-the-product-and-flag-candidates-separate').
+source(paper_6_5, 'historical/corpus/canonical_research.md', '6-keep-the-product-and-flag-candidates-separate').
 attempted_by(paper_6_5, corpus).
 claim(paper_6_6, claim, conditional, "Proved/conditional as indicated.", "One spin distinction matters: the vertical tangent of F→$\\mathbb{CP}^2$ has $c_1=h+2x$ and is not spin by itself. Its $w_2$ cancels the base $w_2$ in the total flag. A family of ordinary fibre spin bundles cannot be assu").
-source(paper_6_6, 'canonical_research.md', '6-keep-the-product-and-flag-candidates-separate').
+source(paper_6_6, 'historical/corpus/canonical_research.md', '6-keep-the-product-and-flag-candidates-separate').
 attempted_by(paper_6_6, corpus).
 claim(paper_7_1, claim, proved, "Proved.", "There is a further distinction: Its vertical principal-bundle tangent is trivial, so $TP\\simeq q_P^*T\\mathbb{CP}^2\\oplus\\mathbb R^3$ and $w_2(P)=q_P^*h\\ne0$. The $S^3$-fibre sequence makes $q_P^*$ injective in degree tw").
-source(paper_7_1, 'canonical_research.md', '7-three-sphere-bundles-and-the-circle-endpoints').
+source(paper_7_1, 'historical/corpus/canonical_research.md', '7-three-sphere-bundles-and-the-circle-endpoints').
 attempted_by(paper_7_1, corpus).
 claim(paper_7_2, claim, proved, "Proved.", "Principal circle bundles $P_k$ over $\\mathbb{CP}^2$ have Euler/Chern class k h. Their total spaces are $\\mathbb{CP}^2$×$S^1$ for k=0, $S^5$ for |k|=1, and $S^5/\\mathbb Z_{|k|}$ for |k|>1, up to orientation conventions. S").
-source(paper_7_2, 'canonical_research.md', '7-three-sphere-bundles-and-the-circle-endpoints').
+source(paper_7_2, 'historical/corpus/canonical_research.md', '7-three-sphere-bundles-and-the-circle-endpoints').
 attempted_by(paper_7_2, corpus).
 claim(paper_8_1, claim, proved, "Proved", "with multiplicity n+2p per sign. The vertical gap is therefore uniform and grows as $\\epsilon^{-1}$. by the $\\mathbb{CP}^1$ spin/Dolbeault identification and the angular-momentum spectrum.").
-source(paper_8_1, 'canonical_research.md', '8-the-decisive-monopole-collapse').
+source(paper_8_1, 'historical/corpus/canonical_research.md', '8-the-decisive-monopole-collapse').
 attempted_by(paper_8_1, corpus).
 claim(paper_8_2, claim, proved, "Proved outcome:", "the flux choice (1,2,3) gives a positive-chirality kernel of rank six with").
-source(paper_8_2, 'canonical_research.md', 'the-induced-connection-is-decisive').
+source(paper_8_2, 'historical/corpus/canonical_research.md', 'the-induced-connection-is-decisive').
 attempted_by(paper_8_2, corpus).
 claim(paper_8_3, claim, proved, "Proved", "Charge conjugation reverses flux and chirality. On W plus its conjugate, merely choosing a conjugate exchange with $J^2=+1$ or $-1$ changes the real commutant. The finite check gives unitary commutant Lie dimension three").
-source(paper_8_3, 'canonical_research.md', 'real-structures-cannot-be-inferred-from-pseudoreality').
+source(paper_8_3, 'historical/corpus/canonical_research.md', 'real-structures-cannot-be-inferred-from-pseudoreality').
 attempted_by(paper_8_3, corpus).
-checked_by(paper_8_3, corpus, python("see research_checks_knowledge.md")).
+checked_by(paper_8_3, corpus, python("see historical/corpus/research_checks_knowledge.md")).
 claim(paper_9_1, claim, proved, "Proved existence of an engineered connection:", "the fibrewise Toeplitz map from horizontal $\\operatorname{End}(V)$-valued symbols onto $\\operatorname{End}(K)$ is surjective. Constant symbols on the two L copies supply $M_2(\\mathbb C)$, scalar symbols on $L^2$ give $\\").
-source(paper_9_1, 'canonical_research.md', '9-constructing-a-surviving-spinor-bundle').
+source(paper_9_1, 'historical/corpus/canonical_research.md', '9-constructing-a-surviving-spinor-bundle').
 attempted_by(paper_9_1, corpus).
-claim(paper_9_2, claim, conditional, "Conditional", "on the analytic connection and spin-lift formulas (the phase arithmetic is checked in Python, research_checks_knowledge.md §4.7): for the specified connection and spin lifts, all three coefficient lines retain a circle").
-source(paper_9_2, 'canonical_research.md', 'a-concrete-wilson-line-compatibility-test').
+claim(paper_9_2, claim, conditional, "Conditional", "on the analytic connection and spin-lift formulas (the phase arithmetic is checked in Python, historical/corpus/research_checks_knowledge.md §4.7): for the specified connection and spin lifts, all three coefficient lines retain a circle").
+source(paper_9_2, 'historical/corpus/canonical_research.md', 'a-concrete-wilson-line-compatibility-test').
 attempted_by(paper_9_2, corpus).
-checked_by(paper_9_2, corpus, python("see research_checks_knowledge.md")).
+checked_by(paper_9_2, corpus, python("see historical/corpus/research_checks_knowledge.md")).
 claim(paper_9_3, claim, conditional, "Conditional application:", "The homogeneous connection transports the vertical operator by fibre isometries. Adding the specified horizontal multiplication operators changes $\\{A,B\\}$ by a bounded vertical commutator. These are the required compati").
-source(paper_9_3, 'canonical_research.md', 'the-analytic-limit-and-its-scope').
+source(paper_9_3, 'historical/corpus/canonical_research.md', 'the-analytic-limit-and-its-scope').
 attempted_by(paper_9_3, corpus).
 claim(paper_10_1, claim, proved, "Proved", ", with primary general context in [6]. These are smooth complex quotient varieties, with branched quotient maps and singular quotient metrics. The isotropy stack and crossed product retain extra information. The equality").
-source(paper_10_1, 'canonical_research.md', '10-torusweyl-quotients-and-what-the-spin-lift-changes').
+source(paper_10_1, 'historical/corpus/canonical_research.md', '10-torusweyl-quotients-and-what-the-spin-lift-changes').
 attempted_by(paper_10_1, corpus).
 claim(paper_10_2, claim, numerical, "Numerical check in Python", "The Frobenius-Schur indicators are zero for the conjugate one-dimensional characters and minus one for the doublet. Explicit six-dimensional Clifford matrices verify the representation and its faithfulness on a chiral sp").
-source(paper_10_2, 'canonical_research.md', 'a-real-algebra-improvement').
+source(paper_10_2, 'historical/corpus/canonical_research.md', 'a-real-algebra-improvement').
 attempted_by(paper_10_2, corpus).
-checked_by(paper_10_2, corpus, python("see research_checks_knowledge.md")).
-claim(paper_10_3, claim, proved, "Proved", "is a corner of a finite-orbit quotient of the spin-twisted real crossed product. algebraic statement; checked numerically in Python (research_checks_knowledge.md §4.4). It is not a result about the original untwisted co").
-source(paper_10_3, 'canonical_research.md', 'a-real-algebra-improvement').
+checked_by(paper_10_2, corpus, python("see historical/corpus/research_checks_knowledge.md")).
+claim(paper_10_3, claim, proved, "Proved", "is a corner of a finite-orbit quotient of the spin-twisted real crossed product. algebraic statement; checked numerically in Python (historical/corpus/research_checks_knowledge.md §4.4). It is not a result about the original untwisted co").
+source(paper_10_3, 'historical/corpus/canonical_research.md', 'a-real-algebra-improvement').
 attempted_by(paper_10_3, corpus).
-checked_by(paper_10_3, corpus, python("see research_checks_knowledge.md")).
+checked_by(paper_10_3, corpus, python("see historical/corpus/research_checks_knowledge.md")).
 claim(paper_11_1_1, claim, proved, "Proved obstruction.", "This follows by integrating $e^{kh}(1-h^2/6)$ over $\\mathbb{CP}^3$. The spin Dirac operator twisted by $\\mathcal O(3)$, which equals the Dolbeault operator on $\\mathcal O(1)$ because $S=\\Lambda^{0,*}\\otimes\\mathcal O(-2)").
-source(paper_11_1_1, 'canonical_research.md', '111-a-genuine-change-of-ko-degree').
+source(paper_11_1_1, 'historical/corpus/canonical_research.md', '111-a-genuine-change-of-ko-degree').
 attempted_by(paper_11_1_1, corpus).
 claim(paper_12_1, claim, proved, "Proved operator limit:", "With $P_0$ projecting onto $\\ker L$, the heavy resolvent is bounded by $(1+\\tau^2)^{-1/2}$. only circle-invariant modes survive. Uniformly bounded commutators retain invariant scalar functions.").
-source(paper_12_1, 'canonical_research.md', '12-a-controlled-six-to-five-operator-limit').
+source(paper_12_1, 'historical/corpus/canonical_research.md', '12-a-controlled-six-to-five-operator-limit').
 attempted_by(paper_12_1, corpus).
-claim(paper_13_1_1, claim, conditional, "Conditional normalization", "(derived analytically in `research_limits/nine_dimensional_construction.md` from the sphere averages $\\langle z^*T^2z\\rangle=1/6$ and $\\langle(z^*Tz)^2\\rangle=1/24$; no script computes it; §13.2 uses a different charge").
-source(paper_13_1_1, 'canonical_research.md', '131-one-electron-from-a-specified-character').
+claim(paper_13_1_1, claim, conditional, "Conditional normalization", "(derived analytically in `historical/corpus/nine_dimensional_construction.md` from the sphere averages $\\langle z^*T^2z\\rangle=1/6$ and $\\langle(z^*Tz)^2\\rangle=1/24$; no script computes it; §13.2 uses a different charge").
+source(paper_13_1_1, 'historical/corpus/canonical_research.md', '131-one-electron-from-a-specified-character').
 attempted_by(paper_13_1_1, corpus).
 claim(paper_14_3_1, claim, proved, "Proved", "The lens order $p$ cancels in the common volume factor. The value $5/8$ requires $\\xi^2=5/2$; the unsourced Einstein condition selects the round $\\xi=1$, giving $1/2$. Topology can constrain a charge lattice, but it does").
-source(paper_14_3_1, 'canonical_research.md', '143-the-angle-test').
+source(paper_14_3_1, 'historical/corpus/canonical_research.md', '143-the-angle-test').
 attempted_by(paper_14_3_1, corpus).
-checked_by(paper_14_3_1, corpus, python("see research_checks_knowledge.md")).
-%% Referee of lemmas 08, 13 and 14 (Terra 6.1, 3 Nov 2026): reviews/2026-11-03_terra_check_08_13_14.md
+checked_by(paper_14_3_1, corpus, python("see historical/corpus/research_checks_knowledge.md")).
+%% Referee of lemmas 08, 13 and 14 (Terra 6.1, 3 Nov 2026): historical/reviews/2026-11-03_terra_check_08_13_14.md
 claim(terra_two_neutral_pairs, counterexample, proved, "Referee's counterexample to the unqualified D.2", "H = C^2 (x) C^2, A = C, D = 0, Gamma = 1 (x) sigma_3, J = (1 (x) sigma_1) K: two unpaired neutral states, no Majorana term, with involutions 1 (x) sigma_1 and sigma_2 (x) sigma_1 of opposite signs.").
-source(terra_two_neutral_pairs, 'reviews/2026-11-03_terra_check_08_13_14.md', 'section-6-theorem-d').
+source(terra_two_neutral_pairs, 'historical/reviews/2026-11-03_terra_check_08_13_14.md', 'section-6-theorem-d').
 attempted_by(terra_two_neutral_pairs, terra_6_1).
 checked_by(terra_two_neutral_pairs, claude_opus_5_5, python("numpy: both involutions and their signs")).
 claim(paper_D2_unqualified, claim, refuted, "First version of Theorem D item 2", "Any finite triple with an unpaired left-handed neutrino and no Majorana term admits only s = +1.").
-source(paper_D2_unqualified, 'reviews/2026-11-03_terra_check_08_13_14.md', 'section-6-theorem-d').
+source(paper_D2_unqualified, 'historical/reviews/2026-11-03_terra_check_08_13_14.md', 'section-6-theorem-d').
 attempted_by(paper_D2_unqualified, claude_opus_5_5).
 refuted_by(paper_D2_unqualified, terra_two_neutral_pairs).
 claim(terra_winding, counterexample, proved, "Referee's counterexample to the global form of Theorem 14.3", "On S^1 x S^3, the fixed-singular-value link lambda exp(i theta) is not attained, since every globally smooth real A_5 gives zero winding.").
-source(terra_winding, 'reviews/2026-11-03_terra_check_08_13_14.md', 'lemma-14').
+source(terra_winding, 'historical/reviews/2026-11-03_terra_check_08_13_14.md', 'lemma-14').
 attempted_by(terra_winding, terra_6_1).
 checked_by(terra_winding, claude_opus_5_5, by_hand).
 
@@ -826,7 +826,7 @@ attempted_by(l16_twistor, claude_opus_5_5).
 checked_by(l16_twistor, claude_opus_5_5, python("numpy: real dimensions 16 and 32, j, the structure on k = 4")).
 checked_by(l16_twistor, terra_6_1, by_hand).
 addresses(t0b, l16_two_sheets).  addresses(t0b, l16_twistor).
-%% Astra job 18 (T5b). Referee: reviews/2026-11-03_terra_check_18_16b.md
+%% Astra job 18 (T5b). Referee: historical/reviews/2026-11-03_terra_check_18_16b.md
 claim(l18_kernel, theorem, proved, "Theorem 1, Lemma 2, Corollary 3", "Exact quadratic kernel of the spectral action for a transverse vector about constant V_0, for f a Laplace transform of a positive measure with moment conditions; gauge invariance through the Goldstone orbit; the asymptotic expansion reproduces Proposition 13.5 and the CCM relation.").
 source(l18_kernel, 'lemmas/18_heavy_limit_near_cutoff.md', '').
 depends(l18_kernel, l03_weights).
@@ -905,7 +905,7 @@ attempted_by(l18_sum_rule, claude_opus_5_5).
 checked_by(l18_sum_rule, claude_opus_5_5, python("agreement with equation (18) to rounding, for x from 1e-3 to 1e3")).
 checked_by(l18_sum_rule, terra_6_1, by_hand).  % report paper_note, items 13 to 15
 addresses(t5b, l18_sum_rule).
-%% Lemma 19 (T0b, step 1). Referee: reviews/2026-11-03_terra_check_nogo_19.md
+%% Lemma 19 (T0b, step 1). Referee: historical/reviews/2026-11-03_terra_check_nogo_19.md
 claim(l19_fluct, theorem, proved, "Theorem 19.1", "On the two-point data the inner fluctuation of arXiv:1304.7583 factorizes: m |Phi|^2 sigma_1 with pointwise J, and link m Phi^2 with the reflection J (KO-6 signs).").
 source(l19_fluct, 'lemmas/19_fluctuations_without_order_one.md', 'the-fluctuated-operator').
 attempted_by(l19_fluct, claude_opus_5_5).
@@ -924,7 +924,7 @@ depends(l19_parent, l13_compression).
 attempted_by(l19_parent, claude_opus_5_5).
 checked_by(l19_parent, terra_6_1, by_hand).
 addresses(t0b, l19_fluct).  addresses(t0b, l19_parent).
-%% Lemma 20 (T0b, T11). Astra 6; referee: reviews/2026-11-03_terra_check_20_21.md
+%% Lemma 20 (T0b, T11). Astra 6; referee: historical/reviews/2026-11-03_terra_check_20_21.md
 claim(l20_blocks, theorem, proved, "Theorem 20.1", "A block T : E -> E* added to a sheet-diagonal D_F keeps the signs iff T = tau(T), h T + T g = 0, and has order one on B iff T pi_1(a) - pi_2(a) T intertwines the opposite actions; the maximal B are the maximal A(R) over odd R with T = R + tau(R).").
 source(l20_blocks, 'lemmas/20_connecting_operator.md', '').
 attempted_by(l20_blocks, astra6).
@@ -959,7 +959,7 @@ checked_by(l20_hw, terra_6_1, by_hand).
 addresses(t0b, l20_blocks).  addresses(t0b, l20_rank_one).  addresses(t0b, l20_parent).  addresses(t0b, l20_no_selection).
 addresses(t11, l20_hw).
 %% Consensus checks by Astra 6 in lemma 20, Results 9 to 11.
-%% Lemma 22 (T0, T0b, T10, T13). Claude; referee: reviews/2026-11-03_terra_check_22.md
+%% Lemma 22 (T0, T0b, T10, T13). Claude; referee: historical/reviews/2026-11-03_terra_check_22.md
 claim(l22_window, theorem, proved, "Theorem 22.1", "Finite data of signs (+,+,-) with l ||D_F|| < pi/2 are exactly the lowest window of the derivative on an interval with coupling tan(l D_F); D, J and Gamma all exact; next level at least (pi - l ||D_F||)/l.").
 source(l22_window, 'lemmas/22_dirac_operator_as_boundary_condition.md', 'the-window').
 attempted_by(l22_window, claude_opus_5_5).
@@ -996,7 +996,7 @@ depends(l22_family, l22_window).
 attempted_by(l22_family, claude_opus_5_5).
 checked_by(l22_family, terra_6_1, by_hand).
 addresses(t10, l22_family).  addresses(t0b, l22_transport).  addresses(t13, l22_window).  addresses(t13, l22_family).
-%% Lemma 23 (T0b, T5b, T10, T13). Claude; referee: reviews/2026-11-03_terra_check_23.md
+%% Lemma 23 (T0b, T5b, T10, T13). Claude; referee: historical/reviews/2026-11-03_terra_check_23.md
 claim(l23_gradings, theorem, proved, "Theorem 23.1", "The derivative on an interval with a grading at each wall has D_F = (1/2l) Gamma_0 log(Gamma_1 Gamma_0), with singular values the principal angles over l; real structure from an antiunitary J_1, J_1^2 = -1, anticommuting with both gradings.").
 source(l23_gradings, 'lemmas/23_two_gradings_interval.md', 'two-gradings').
 depends(l23_gradings, l22_window).
@@ -1024,7 +1024,7 @@ attempted_by(l23_theta, claude_opus_5_5).
 checked_by(l23_theta, claude_opus_5_5, python("Poisson and triple product identities")).
 checked_by(l23_theta, terra_6_1, by_hand).
 addresses(t0b, l23_aligned).  addresses(t13, l23_gradings).  addresses(t13, l23_radial).  addresses(t5b, l23_wz).  addresses(t5b, l23_theta).
-%% Lemma 25 (T5b, T13, T1). Claude; referee: reviews/2026-11-03_terra_check_25.md
+%% Lemma 25 (T5b, T13, T1). Claude; referee: historical/reviews/2026-11-03_terra_check_25.md
 claim(l25_unfold, proposition, proved, "Proposition 25.1", "Unfolded, the parent is -i d/dx (x) 1 + 1 (x) D_F on a circle of length 2l; the tower is D_F shifted by n pi/l; an even constant generator is 1 (x) T.").
 source(l25_unfold, 'lemmas/25_sum_rule_effective_dimension.md', 'unfolding').
 depends(l25_unfold, l22_window).
@@ -1044,7 +1044,7 @@ attempted_by(l25_sum_rule, claude_opus_5_5).
 checked_by(l25_sum_rule, claude_opus_5_5, python("top-only family and neutral direction")).
 checked_by(l25_sum_rule, terra_6_1, by_hand).
 addresses(t5b, l25_mass).  addresses(t5b, l25_sum_rule).  addresses(t13, l25_sum_rule).
-%% Lemma 24 (T0, T0b). Astra 6; referee: reviews/2026-11-03_terra_check_24.md
+%% Lemma 24 (T0, T0b). Astra 6; referee: historical/reviews/2026-11-03_terra_check_24.md
 claim(l24_spectral, theorem, proved, "Theorem 24.1", "On CP^3 x I, spectral walls with finite gradings on the level-one kernel give an exact reduction to the two-gradings operator, with the other modes above Delta_K/r.").
 source(l24_spectral, 'lemmas/24_commutative_parent.md', '').
 attempted_by(l24_spectral, astra6).
@@ -1065,7 +1065,7 @@ attempted_by(l24_no_minimum, astra6).
 checked_by(l24_no_minimum, claude_opus_5_5, python("monotonicity of H and e on grids")).
 checked_by(l24_no_minimum, terra_6_1, by_hand).
 addresses(t0, l24_spectral).  addresses(t0b, l24_two_stage).  addresses(t13, l24_no_minimum).
-%% Lemma 21 (T12). Referee: reviews/2026-11-03_terra_check_20_21.md
+%% Lemma 21 (T12). Referee: historical/reviews/2026-11-03_terra_check_20_21.md
 claim(l21_removal, proposition, proved, "Proposition 21.1", "Among single charged species, only an up-type quark can be removed while keeping cos^2 theta_NC = 5/8 and the photon/gluon ratio 8/3; a down-type gives 59/92 and 46/15, a charged lepton 17/28 and 7/3; d + e together contribute as u.").
 source(l21_removal, 'lemmas/21_top_counting.md', 'removal-identities').
 depends(l21_removal, l18_angles).
@@ -1091,7 +1091,7 @@ attempted_by(l23_potential, terra_6_1).
 checked_by(l23_potential, claude_opus_5_5, python("grids and quadrature")).
 checked_by(l23_potential, astra6, by_hand).
 prior_work(l25_sum_rule, partial, "m_t = 2 M_W in flat gauge-Higgs models with suitable representations: hep-ph/0510366, section 5; arXiv:1804.06012, Eq. (3.23). Coefficient (3 - d_eff)/24 and crossover not found in the records inspected.").
-%% Lemma 17 (T10, routine part). Referee: reviews/2026-11-03_terra_check_17.md
+%% Lemma 17 (T10, routine part). Referee: historical/reviews/2026-11-03_terra_check_17.md
 claim(l17_action, theorem, proved, "Theorem 17.1", "The fermion action of M x F on the Gamma = +1 subspace equals (1/2) <jj psi, (D_M + gamma_5 d) psi> on an unconstrained spinor, with jj = J_M (x) j for s = +1 and gamma_5 J_M (x) j for s = -1.").
 source(l17_action, 'lemmas/17_explicit_masses_chiral_limit.md', 'the-reduced-action').
 depends(l17_action, l08_reconcile).
@@ -1145,7 +1145,7 @@ strategy(t3, settled, "Chirality from boundary conditions; the boundary Yukawa i
 strategy(t4, open, "Gauge sector of the towerless interval: fixed compression is not gauge covariant and the finite spectral action does not reproduce the tower mass.").
 strategy(t4b, open, "Gauge-covariant reduction: matching with the tower only via a sum rule (tuned bulk mass, tower-scale fermion); impossible with bounded light fermions in the collapse.").
 strategy(t5, settled, "Heavy W forces a heavy Dirac fermion (conditional on the CCM relation).").
-strategy(t14, partial, "The massless electroweak limit as a joint limit: m_weak << E_eps << Delta_KK -> 0, finite states at the moving scale and a divergent count at fixed energy; this holds on the interval, the cylinder and, for a fermion window, the disc bundle; the vector poles on the disc bundle, gauge couplings and dynamics are open. The 11D line (11D/README.md) adds the circle form of the interval, Witten spaces as a hypercharge quotient, and a heterotic and type I-prime dictionary, as propositions and proposals.").
+strategy(t14, partial, "The massless electroweak limit as a joint limit: m_weak << E_eps << Delta_KK -> 0, finite states at the moving scale and a divergent count at fixed energy; this holds on the interval, the cylinder and, for a fermion window, the disc bundle; the vector poles on the disc bundle, gauge couplings and dynamics are open. The 11D line (historical/11D/README.md) adds the circle form of the interval, Witten spaces as a hypercharge quotient, and a heterotic and type I-prime dictionary, as propositions and proposals.").
 strategy(t13, open, "Mass generation from D = 9 to D = 4 and the anchoring of the QCD and condensation scales to the Fermi scale; speculative steer for the next paper, in d9_masses_fermi_qcd_steer.md.").
 strategy(t12, open, "The separate role of the top: removal identities, SO(30) from the five other quarks, inside SO(32), Seiberg duality with emergent supersymmetry, and the two families of 84 states against C_3, M2 and M5.").
 strategy(t11, open, "Horava-Witten as a two-sheet geometry: walls as sheets, wall algebras as summands, bulk as connecting operator; compare the chiralities of the walls first.").
@@ -1162,7 +1162,7 @@ addresses(t5, l11_bounds).  addresses(t5, l11_nogo).  addresses(t5, l11_top).
 addresses(t7, l02_invariant).
 addresses(t8, l12_towerless).  addresses(t8, l12_graded).  addresses(t8, l12_mixing).
 
-%% ---------------------------------------------------------------- DUPLICATES.md section 5
+%% ---------------------------------------------------------------- historical/DUPLICATES.md section 5
 contradiction(1, "canonical 11.1", "CP^3 index statement named the Kahler operator twisted by O(3)", "corrected: spin Dirac twisted by O(3) = Dolbeault on O(1)", resolved).
 contradiction(2, "canonical 13.1", "e^2/g_3^2 labelled checked; no script computes it", "relabelled Conditional; 8 eta^2 and 32 eta^2 belong to two charge generators", resolved).
 contradiction(3, "canonical 4", "Toeplitz identities labelled checked; no script computes them", "proved in lemma 10", resolved).
@@ -1231,9 +1231,9 @@ addresses(t13, l26_wall_mass).  addresses(t13, l26_neutral).  addresses(t13, l26
 prior_work(l26_lr, partial, "Nomura-Smith-Weiner hep-ph/0104041 (differential running); Carena-Tait-Wagner hep-ph/0207056 (boundary terms)").
 prior_work(l26_meeting, partial, "Abe-Goto-Kawamura PTEP 2018 103B01 (interval Pati-Salam near 10^13 GeV, other content)").
 prior_work(l26_wall_mass, partial, "Cacciapaglia-Csaki-Park hep-ph/0510366; Adachi-Maru 1804.06012; Hosotani-Oda-Ohnuma-Sakamura 0806.0480").
-referee_report('lemmas/26_interior_vacuum_matching_scale.md', 'reviews/2026-11-03_terra_check_26.md').
-referee_report('lemmas/26_interior_vacuum_matching_scale.md', 'reviews/2026-11-03_terra_check_27.md').
-referee_report('lemmas/27_anomaly_reduced_action.md', 'reviews/2026-11-03_terra_check_27.md').
+referee_report('lemmas/26_interior_vacuum_matching_scale.md', 'historical/reviews/2026-11-03_terra_check_26.md').
+referee_report('lemmas/26_interior_vacuum_matching_scale.md', 'historical/reviews/2026-11-03_terra_check_27.md').
+referee_report('lemmas/27_anomaly_reduced_action.md', 'historical/reviews/2026-11-03_terra_check_27.md').
 
 %% ---------------------------------------------------------------- lemma 27
 claim(l27_trace, theorem, proved, "Theorem 27.1, Proposition 27.3", "On D_M(A) + gamma_5 d with T, d and A commuting, gamma_5 = +1 on S^+: Tr(gamma_5 T f(DD^2/Lambda^2)) = sum_f tau_f f(m_f^2/Lambda^2) ind_f at every Lambda, and the mass insertion with the same regularization equals it; a Ward identity under that common regularization.").
@@ -1337,22 +1337,22 @@ claim(l28_prescribed, theorem, proved, "Theorem 28.21", "Explicit prescribed ran
 source(l28_prescribed, 'lemmas/28_two_walls_connected_parent.md', '').
 attempted_by(l28_prescribed, astra6).
 checked_by(l28_prescribed, claude_opus_5_5, by_hand).
-referee_report('lemmas/28_two_walls_connected_parent.md', 'reviews/2026-11-03_terra_check_28.md').
-outside_referee(l28_twist, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
-outside_referee(l28_core, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
-outside_referee(l28_endpoints, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
-outside_referee(l28_operator, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
-outside_referee(l28_slices, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
-outside_referee(l28_normal, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
-outside_referee(l28_mixing, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
-outside_referee(l28_criterion, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
-outside_referee(l28_compression, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
-outside_referee(l28_symmetry, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
-outside_referee(l28_generation, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
-outside_referee(l28_conjugation, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
-outside_referee(l28_tunnelling, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
-outside_referee(l28_doubled, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
-outside_referee(l28_prescribed, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see reviews/2026-11-03_astra_job_28.md").
+referee_report('lemmas/28_two_walls_connected_parent.md', 'historical/reviews/2026-11-03_terra_check_28.md').
+outside_referee(l28_twist, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see historical/reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_core, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see historical/reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_endpoints, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see historical/reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_operator, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see historical/reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_slices, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see historical/reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_normal, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see historical/reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_mixing, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see historical/reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_criterion, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see historical/reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_compression, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see historical/reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_symmetry, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see historical/reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_generation, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see historical/reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_conjugation, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see historical/reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_tunnelling, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see historical/reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_doubled, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see historical/reviews/2026-11-03_astra_job_28.md").
+outside_referee(l28_prescribed, "the Terra report on lemma 28 covers Proposition 28.13 and the numerics; this result was refereed by Astra 6 or checked by Claude Opus 5.5, see historical/reviews/2026-11-03_astra_job_28.md").
 addresses(t0, l28_prescribed).  addresses(t0b, l28_prescribed).
 addresses(t0, l28_window).  addresses(t0b, l28_window).
 claim(l29_splitting, proposition, proved, "Proposition 29.1", "On the tube with flat fibres and the pull-back connection, T_M = T_0 + R with |R| <= C_R |y|, and T_0^* T_0 = D_H^2 + Q^* Q exactly, by K-equivariance of the fibre operator.").
@@ -1431,7 +1431,7 @@ checked_by(l29_tunnelling, terra_6_1, by_hand).
 checked_by(l29_compression, terra_6_1, by_hand).
 checked_by(l29_wall_a, terra_6_1, by_hand).
 checked_by(l29_window_a, terra_6_1, by_hand).
-referee_report('lemmas/29_window_on_the_disc_bundle.md', 'reviews/2026-11-04_terra_check_29.md').
+referee_report('lemmas/29_window_on_the_disc_bundle.md', 'historical/reviews/2026-11-04_terra_check_29.md').
 claim_amended(l28_window, l29_window_b).
 claim_amended(l28_window, l29_window_a).
 addresses(t0, l29_window_b).  addresses(t0, l29_window_a).  addresses(t0, l29_compression).  addresses(t0b, l29_compression).
@@ -1481,7 +1481,7 @@ checked_by(l30_cylinder, terra_6_1, by_hand).
 checked_by(l30_disc, terra_6_1, by_hand).
 checked_by(l30_defect_bound, terra_6_1, by_hand).
 checked_by(l30_defect, terra_6_1, by_hand).
-referee_report('lemmas/30_massless_limit_as_a_joint_limit.md', 'reviews/2026-11-04_terra_check_30_note.md').
+referee_report('lemmas/30_massless_limit_as_a_joint_limit.md', 'historical/reviews/2026-11-04_terra_check_30_note.md').
 addresses(t14, l30_interval).  addresses(t14, l30_localized).  addresses(t14, l30_disc).
 
 %% ---------------------------------------------------------------- steer note, items 9 and 11
@@ -1505,31 +1505,31 @@ checked_by(steer_item11, claude_opus_5_5, python("scipy LSODA integration of the
 checked_by(steer_item11, astra6, python("independent integration of the linear equation for 1/y^2, with controls")).  % Astra validation, 3 Nov 2026, items 7 and 8
 
 %% ---------------------------------------------------------------- referees
-referee_report('lemmas/05_deconstruction_interval.md', 'reviews/2026-11-03_terra_check_nogo_19.md').
-referee_report('lemmas/05_deconstruction_interval.md', 'reviews/2026-11-03_terra_check_08_13_14.md').
-referee_report('lemmas/06_vectorlike_odd_factorization.md', 'reviews/2026-11-03_terra_check_nogo_19.md').
-referee_report('lemmas/08_product_selects_ko.md', 'reviews/2026-11-03_terra_check_08_13_14.md').
+referee_report('lemmas/05_deconstruction_interval.md', 'historical/reviews/2026-11-03_terra_check_nogo_19.md').
+referee_report('lemmas/05_deconstruction_interval.md', 'historical/reviews/2026-11-03_terra_check_08_13_14.md').
+referee_report('lemmas/06_vectorlike_odd_factorization.md', 'historical/reviews/2026-11-03_terra_check_nogo_19.md').
+referee_report('lemmas/08_product_selects_ko.md', 'historical/reviews/2026-11-03_terra_check_08_13_14.md').
 referee_report('lemmas/09_massive_chiral_interval.md', 'lemmas/09_massive_chiral_interval.md').
 referee_report('lemmas/10_toeplitz_twistor.md', 'lemmas/10_toeplitz_twistor.md').
 referee_report('lemmas/11_spectral_action_heavy_w.md', 'lemmas/11_spectral_action_heavy_w.md').
 referee_report('lemmas/12_boundary_yukawa_interval.md', 'lemmas/12_boundary_yukawa_interval.md').
-referee_report('lemmas/13_gauge_sector_truncation.md', 'reviews/2026-11-03_terra_check_08_13_14.md').
-referee_report('lemmas/14_gauge_covariant_reduction.md', 'reviews/2026-11-03_terra_check_08_13_14.md').
-referee_report('lemmas/15_propinquity_collapse.md', 'reviews/2026-11-03_terra_check_15_16.md').
-referee_report('lemmas/16_coarse_truncation.md', 'reviews/2026-11-03_terra_check_15_16.md').
-referee_report('lemmas/16_coarse_truncation.md', 'reviews/2026-11-03_terra_check_18_16b.md').
-referee_report('lemmas/17_explicit_masses_chiral_limit.md', 'reviews/2026-11-03_terra_check_17.md').
-referee_report('lemmas/18_heavy_limit_near_cutoff.md', 'reviews/2026-11-03_terra_check_18_16b.md').
-referee_report('lemmas/19_fluctuations_without_order_one.md', 'reviews/2026-11-03_terra_check_nogo_19.md').
-referee_report('lemmas/20_connecting_operator.md', 'reviews/2026-11-03_terra_check_20_21.md').
-referee_report('lemmas/21_top_counting.md', 'reviews/2026-11-03_terra_check_20_21.md').
-referee_report('lemmas/22_dirac_operator_as_boundary_condition.md', 'reviews/2026-11-03_terra_check_22.md').
-referee_report('lemmas/23_two_gradings_interval.md', 'reviews/2026-11-03_terra_check_23.md').
-referee_report('lemmas/24_commutative_parent.md', 'reviews/2026-11-03_terra_check_24.md').
-referee_report('lemmas/25_sum_rule_effective_dimension.md', 'reviews/2026-11-03_terra_check_25.md').
+referee_report('lemmas/13_gauge_sector_truncation.md', 'historical/reviews/2026-11-03_terra_check_08_13_14.md').
+referee_report('lemmas/14_gauge_covariant_reduction.md', 'historical/reviews/2026-11-03_terra_check_08_13_14.md').
+referee_report('lemmas/15_propinquity_collapse.md', 'historical/reviews/2026-11-03_terra_check_15_16.md').
+referee_report('lemmas/16_coarse_truncation.md', 'historical/reviews/2026-11-03_terra_check_15_16.md').
+referee_report('lemmas/16_coarse_truncation.md', 'historical/reviews/2026-11-03_terra_check_18_16b.md').
+referee_report('lemmas/17_explicit_masses_chiral_limit.md', 'historical/reviews/2026-11-03_terra_check_17.md').
+referee_report('lemmas/18_heavy_limit_near_cutoff.md', 'historical/reviews/2026-11-03_terra_check_18_16b.md').
+referee_report('lemmas/19_fluctuations_without_order_one.md', 'historical/reviews/2026-11-03_terra_check_nogo_19.md').
+referee_report('lemmas/20_connecting_operator.md', 'historical/reviews/2026-11-03_terra_check_20_21.md').
+referee_report('lemmas/21_top_counting.md', 'historical/reviews/2026-11-03_terra_check_20_21.md').
+referee_report('lemmas/22_dirac_operator_as_boundary_condition.md', 'historical/reviews/2026-11-03_terra_check_22.md').
+referee_report('lemmas/23_two_gradings_interval.md', 'historical/reviews/2026-11-03_terra_check_23.md').
+referee_report('lemmas/24_commutative_parent.md', 'historical/reviews/2026-11-03_terra_check_24.md').
+referee_report('lemmas/25_sum_rule_effective_dimension.md', 'historical/reviews/2026-11-03_terra_check_25.md').
 
 %% ---------------------------------------------------------------- 11D line (branch 11D)
-:- include('11D/ledger_11d.pl').
+:- include('ledger_11d.pl').
 
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
@@ -1551,7 +1551,7 @@ self_checked_only(C) :-
     findall(A, checked_by(C, A, _), Cs), Cs \== [],
     forall(member(A, Cs), attempted_by(C, A)).
 
-%% Draft use of the unchecked claims, 4 Nov 2026 (reviews/2026-11-04_unchecked_claims_audit.md).
+%% Draft use of the unchecked claims, 4 Nov 2026 (historical/reviews/2026-11-04_unchecked_claims_audit.md).
 stated_in_draft(paper_1_1, 'paper/towerless_intervals.tex').
 stated_in_draft(paper_1_1, 'paper/chiral_limit_note.tex').
 stated_in_draft(paper_3_1, 'paper/towerless_intervals.tex').
@@ -1626,9 +1626,9 @@ test(claims_outside_the_corpus_have_a_checker) :-
     forall(( claim(C, _, S, _, _), memberchk(S, [proved, conditional]), \+ attempted_by(C, corpus) ), checked_by(C, _, _)).
 test(self_checks_are_corpus_only) :-
     forall(( self_checked_only(C), \+ claim(C, _, numerical, _, _), \+ referee_pending(C) ), attempted_by(C, corpus)).
-%% Checks only that each ledger number has a row in DUPLICATES.md ending in its state.
+%% Checks only that each ledger number has a row in historical/DUPLICATES.md ending in its state.
 test(contradictions_match_duplicates) :-
-    read_file_to_string('DUPLICATES.md', Text, []),
+    read_file_to_string('historical/DUPLICATES.md', Text, []),
     split_string(Text, "\n", "", Lines),
     forall(contradiction(N, _, _, _, State),
            ( format(string(P), "| ~d |", [N]), format(string(Q), "| ~w |", [State]),

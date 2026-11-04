@@ -22,29 +22,25 @@ Facts: `claim/5`, `source/3`, `depends/2`, `hypothesis/2`, `attempted_by/2`, `ch
 
 ## Reading order
 
-1. `canonical_research.md`: the consolidated paper *Nine, Ten and Eleven Dimensions* (2 Nov 2026; historical record). Claims are labelled Proved, Conditional or Conjectural; numerical checks name their language (Python) and the section of `research_checks_knowledge.md` that records them.
-2. `research_limits/`: its derivation appendices (`research_note.md`, `solidification.md`, `nine_dimensional_construction.md`; historical record).
-3. `research_checks_knowledge.md`: the finite checks behind the paper (constructions, formulas, recorded outputs; historical record).
-4. `connes_kk_research_state.md`: the parallel line on lens lattices, the Fermi scale and KK theory (state-of-research notes; the LaTeX paper condensing them was merged into them; historical record).
-   `CORPUS_SALVAGE.md`: the full reading of items 1 to 4 (4 Nov 2026), section by section: what the lemmas carry, what stands as record, and the ideas carried forward into STRATEGY.md.
-5. `transcripts/`: text of the four chat printouts (the ChatGPT conversation "Connes Electrodynamics Model" and the Astra / Sol / Terra next-step reviews), with the cited links of each page.
-6. `lemmas/`: short proofs by Astra 6 (`gpt-6-astra` via codex, one job at a time) and by Claude, with the Astra prompts in `lemmas/prompts/`.
-7. `STRATEGY.md`: which theorems to prove first (11/10/9 limits, towerless KK), and why.
-8. `DUPLICATES.md`: which files and sections duplicated each other, and what was removed.
-9. `paper/towerless_intervals.tex`: draft paper on finite spectral triples as towerless intervals (REVTeX; `make` in `paper/` builds the Phys Rev two-column PDF and a one-column PDF of the same width for phones). `paper/chiral_limit_note.tex`: short note from lemma 17.
-10. `LITERATURE.md`: prior work for each claim, with verdicts known / partial / not found. `NCG_HISTORY.md`: a dated record of noncommutative geometry in particle physics and its ramifications, to November 2026, beside the closure of the Kaluza-Klein programme (Claude Opus 5.5, 4 Nov 2026; every identifier checked, labels say how far each item was read).
-    `current_framework.md`: background note on the current Connes et al. framework, and what truncation reaches (STRATEGY T0b).
-11. `evaluation2026-11-03.md` and `reviews/`: the dated evaluation of the project and the external review of it, with our response.
-12. `11D/` (branch `11D`): eleven dimensions from massless W and Z, the hypercharge quotient and its conditional M^{111} comparison, and proposed M2/M5 readings of lemma 21; start at [11D/README.md](11D/README.md). Its ledger facts are in `11D/ledger_11d.pl`, included by `ledger.pl`.
+The live set, read by agents and by readers:
+
+1. `STRATEGY.md`: the question, hypothesis H, the ranked items and what would count against H.
+2. `lemmas/`: the proofs, one file per lemma (01 to 40; 31 to 40 are the eleven-dimensional line, moved here on 4 Nov 2026), with [lemmas/README.md](lemmas/README.md) as the table of their main statements; every proved statement is a row of `ledger.pl`.
+3. `results/`: one file per result, with statement, hypotheses, scope, status and the place of the proof ([results/README.md](results/README.md)).
+4. `paper/`: the papers and notes (REVTeX; `make` builds the Phys Rev two-column PDF and a one-column PDF of the same width for phones; `make docs` rebuilds `docs/`), the Supplemental Material built from `lemmas/`, `results/` and `paper/` only, and the two literature records: `paper/LITERATURE.md` (prior work for each claim, with verdicts known / partial / not found) and `paper/NCG_HISTORY.md` (noncommutative geometry in particle physics and its ramifications, to November 2026, beside the closure of the Kaluza-Klein programme).
+5. `current_framework.md`: background note on the current Connes et al. framework, and what truncation reaches (STRATEGY T0b). `d9_masses_fermi_qcd_steer.md`: the steer for the next paper (T13).
+6. `INDEX.md`: the index of the live set by topic.
+
+`historical/` is never read into context (AGENTS.md). It holds, as provenance: `historical/corpus/` (the files the project started from: the consolidated paper *Nine, Ten and Eleven Dimensions*, its three appendices, the finite checks and the research-state notes, all read in full on 4 Nov 2026 with the outcome in `historical/CORPUS_SALVAGE.md`); `historical/reviews/` (the referee reports, verbatim; what they established is written into the lemmas and `results/`); `historical/prompts/` (the prompts of the Astra and Terra jobs); `historical/transcripts/` (the four chat printouts); `historical/11D/` (the plan, the README with the results table and the unfinished file 06 of the eleven-dimensional line); the two dated evaluations and `DUPLICATES.md`.
 
 ## Removed sources
 
-The folder holds text only, apart from the built PDFs in [docs/](docs/index.html), which GitHub Pages serves (`make docs` in `paper/`, run at milestones). Binaries, code and duplicated developments were removed after their content was written out (details and recovery commits in [DUPLICATES.md](DUPLICATES.md)):
+The folder holds text only, apart from the built PDFs in [docs/](docs/index.html), which GitHub Pages serves (`make docs` in `paper/`, run at milestones). Binaries, code and duplicated developments were removed after their content was written out (details and recovery commits in [historical/DUPLICATES.md](historical/DUPLICATES.md)):
 
-- zips: unpacked; zip A tree in commit 54445a4, zip B tree in `research_limits/`;
-- chat PDFs: `transcripts/`, checked against the PDFs (see the header of each transcript);
-- mobile PDF of the paper: typeset copy of `canonical_research.md`;
-- check scripts: `research_checks_knowledge.md`, code in commit 54445a4;
-- JSON check records and figures: `research_checks_knowledge.md` §7 and text descriptions in place of the figures;
-- the LaTeX paper `connes_kk_9_10_11_mobile.tex`: a condensation of `connes_kk_research_state.md`, into which its unique sentences and references were merged;
+- zips: unpacked; zip A tree in commit 54445a4, zip B tree in `historical/corpus/`;
+- chat PDFs: `historical/transcripts/`, checked against the PDFs (see the header of each transcript);
+- mobile PDF of the paper: typeset copy of `historical/corpus/canonical_research.md`;
+- check scripts: `historical/corpus/research_checks_knowledge.md`, code in commit 54445a4;
+- JSON check records and figures: `historical/corpus/research_checks_knowledge.md` §7 and text descriptions in place of the figures;
+- the LaTeX paper `connes_kk_9_10_11_mobile.tex`: a condensation of `historical/corpus/connes_kk_research_state.md`, into which its unique sentences and references were merged;
 - conversion and duplicate-finding tools: `git show 24bb2c6:tools/pdf2ascii.py`, `git show 24bb2c6:tools/find_duplicates.py`.

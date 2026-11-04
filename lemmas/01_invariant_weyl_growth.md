@@ -66,7 +66,7 @@ N_r(K)=\sum_{b=0}^{K-q}m_{K,b+q}m_{K,b}.
 \]
 Each factor is at least \(m_{K-q,b}\), giving the lower bound. Cauchy–Schwarz gives the upper bound \(N_r(K)\le N_0(K)\). The asserted asymptotic follows by squeezing. If \(K<q\), the count is zero.
 
-**Verdict on corpus claim:** **Correct as stated.** The representation-theoretic identification and fixed-character assertion in [section 2](../research_limits/nine_dimensional_construction.md#2-verify-five-dimensional-spectral-growth) hold exactly.
+**Verdict on corpus claim:** **Correct as stated.** The representation-theoretic identification and fixed-character assertion in [section 2](../historical/corpus/nine_dimensional_construction.md#2-verify-five-dimensional-spectral-growth) hold exactly.
 
 ### Lemma 2 — Invariant spectral dimension five
 
@@ -156,7 +156,7 @@ Choosing \(m\) proportional to \(\Lambda\) proves the lower bound. This uses Dir
 
 Only one free patch is needed for this lower bound. Freeness can be weakened to a principal patch with one-dimensional orbits and a nonzero isotropy-fixed fibre bundle. Without that fibre condition, invariant sections can vanish identically.
 
-**Verdict on corpus claim:** **Correct with amendment:** explicitly require positive rank and the equivariant self-adjoint realization. The [comparison sketch](../research_limits/nine_dimensional_construction.md#2-verify-five-dimensional-spectral-growth) then proves the claimed exponent. The zero-rank bundle would give \(N_{\mathrm{inv}}=0\).
+**Verdict on corpus claim:** **Correct with amendment:** explicitly require positive rank and the equivariant self-adjoint realization. The [comparison sketch](../historical/corpus/nine_dimensional_construction.md#2-verify-five-dimensional-spectral-growth) then proves the claimed exponent. The zero-rank bundle would give \(N_{\mathrm{inv}}=0\).
 
 ### Lemma 3 — Resolvent collapse
 
@@ -230,4 +230,4 @@ The first term is bounded, and \(\Gamma\) is fibrewise unitary, so
 \]
 This proves necessity; if \(Kf=0\), the commutator equals \([D,f]\), proving sufficiency.
 
-**Verdict on corpus claim:** **Correct as stated in its twisted-spin setting**, where \(\Gamma\) is the Hermitian bundle grading and the [self-adjoint closure is specified](../research_limits/nine_dimensional_construction.md#1-an-operator-family-that-actually-lowers-dimension). The four algebraic identities alone are insufficient as abstract hypotheses: the Hermitian, domain, and scalar-commutation conditions above are essential to this argument.
+**Verdict on corpus claim:** **Correct as stated in its twisted-spin setting**, where \(\Gamma\) is the Hermitian bundle grading and the [self-adjoint closure is specified](../historical/corpus/nine_dimensional_construction.md#1-an-operator-family-that-actually-lowers-dimension). The four algebraic identities alone are insufficient as abstract hypotheses: the Hermitian, domain, and scalar-commutation conditions above are essential to this argument.

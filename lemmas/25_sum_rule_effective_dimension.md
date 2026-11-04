@@ -1,6 +1,6 @@
 # The weak-boson sum rule and the effective dimension of the interval
 
-For STRATEGY T5b, T13 and T1, following [lemma 18](18_heavy_limit_near_cutoff.md), [lemma 22](22_dirac_operator_as_boundary_condition.md) and [lemma 23](23_two_gradings_interval.md). Proved by Claude Opus 5.5, with checks in Python (section "Numerical check"). Refereed by Terra 6.1 (effort max, 3 Nov 2026; [report](../reviews/2026-11-03_terra_check_25.md)): two errors and two gaps as first written, and amendments, all incorporated below.
+For STRATEGY T5b, T13 and T1, following [lemma 18](18_heavy_limit_near_cutoff.md), [lemma 22](22_dirac_operator_as_boundary_condition.md) and [lemma 23](23_two_gradings_interval.md). Proved by Claude Opus 5.5, with checks in Python (section "Numerical check"). Refereed by Terra 6.1 (effort max, 3 Nov 2026; [report](../historical/reviews/2026-11-03_terra_check_25.md)): two errors and two gaps as first written, and amendments, all incorporated below.
 
 **Outcome.** Unfolded, the interval parent is a circle of length 2l, and the parent operator is -i d/dx (x) 1 + 1 (x) D_F: the tower is D_F shifted by the momenta k_n = n pi/l. So the exact quadratic kernel of lemma 18 applies termwise over the tower. For small masses, at leading order, for the heat cutoff, the Taylor mass of a vector with constant profile in the transported frame is
 

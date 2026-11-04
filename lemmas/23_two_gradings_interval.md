@@ -1,6 +1,6 @@
 # Two gradings on an interval: masses as principal angles, the Higgs modulus, and exact W and Z masses
 
-For STRATEGY T0b, T5b, T10 and T13, following [lemma 22](22_dirac_operator_as_boundary_condition.md). Proved by Claude Opus 5.5, with the identities checked in Python (section "Numerical check"). Refereed by Terra 6.1 (effort max, 3 Nov 2026; [report](../reviews/2026-11-03_terra_check_23.md)): four errors and one gap as first written, and amendments, all incorporated below. The simpler form of the mass formulas, and the proof of item 3 of Theorem 23.6, are by the referee.
+For STRATEGY T0b, T5b, T10 and T13, following [lemma 22](22_dirac_operator_as_boundary_condition.md). Proved by Claude Opus 5.5, with the identities checked in Python (section "Numerical check"). Refereed by Terra 6.1 (effort max, 3 Nov 2026; [report](../historical/reviews/2026-11-03_terra_check_23.md)): four errors and one gap as first written, and amendments, all incorporated below. The simpler form of the mass formulas, and the proof of item 3 of Theorem 23.6, are by the referee.
 
 **Outcome.** A self-adjoint boundary condition for the derivative on an interval is a grading at each wall. The whole finite Dirac operator is then the relative position of two gradings: its singular values are the principal angles between them, divided by l, and
 

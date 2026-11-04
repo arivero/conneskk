@@ -211,7 +211,7 @@ K_W=3\cdot\tfrac12+\tfrac12=2,
 K_Y=6(1/6)^2+3(2/3)^2+3(1/3)^2+2(1/2)^2+1
 =\frac{10}{3},
 \]
-reproducing the conventions in [section 14.3](../canonical_research.md).
+reproducing the conventions in [section 14.3](../historical/corpus/canonical_research.md).
 
 ---
 
@@ -471,7 +471,7 @@ exactly reproducing Part B's photon coefficient on the particle space.
 
 **Verdict on corpus claim.**
 
-[Item 1](../transcripts/Review_Next_Steps_Sol.txt) states: “The centralizer and compressed resolvent do not determine the surviving gauge kinetic terms.” The calculation confirms that qualification.
+[Item 1](../historical/transcripts/Review_Next_Steps_Sol.txt) states: “The centralizer and compressed resolvent do not determine the surviving gauge kinetic terms.” The calculation confirms that qualification.
 
 - **The full inherited kinetic form survives** the joint limit \(m_h\to\infty\), \(\Lambda\to\infty\), \(m_h/\Lambda\to0\).
 - **Finite nonzero ratios produce threshold weights.** When \(m_h/\Lambda\to\infty\), the residual kinetic form is the light-sector trace. For the specified up-quark removals, photon and gluon coefficients retain their ratio but acquire the common reductions \(1/2\) or \(5/6\).

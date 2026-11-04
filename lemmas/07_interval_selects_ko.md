@@ -1,6 +1,6 @@
 # Does the chiral interval select 9 or 11?
 
-Questions 1-3 of [prompts/07](prompts/07_interval_selects_ko.md). The Astra job stopped on the codex usage limit before producing output, so these are Claude Opus 5.5's proofs, checked by hand. Astra job 08 confirmed Lemmas 1-3 under the pointwise reality hypothesis of Lemma 1 and answered Question 4: see [lemma 08](08_product_selects_ko.md) and the amendments below.
+Questions 1-3 of [prompts/07](../historical/prompts/07_interval_selects_ko.md). The Astra job stopped on the codex usage limit before producing output, so these are Claude Opus 5.5's proofs, checked by hand. Astra job 08 confirmed Lemmas 1-3 under the pointwise reality hypothesis of Lemma 1 and answered Question 4: see [lemma 08](08_product_selects_ko.md) and the amendments below.
 
 Let I_l = [0, l], H = L^2(I_l, C^2) with psi = (L, R), D = E d/dx with E = [[0, 1], [-1, 0]], Dom D = {psi in H^1 : R(0) = 0, L(l) = 0}, Gamma = diag(1, -1) (job 05). D and Gamma are real.
 

@@ -1,6 +1,6 @@
 # The massless limit as a joint limit: a finite window and an opening tower
 
-Written by Claude Opus 5.5 on 4 November 2026, for STRATEGY T14. Theorem 30.1, Corollary 30.2, Proposition 30.3, Corollary 30.4 and Proposition 30.6 were proposed in an audit of commit b2ddf98 by Astra 6 (assessment in [the review](../reviews/2026-11-04_outside_audit_assessment.md)); the proofs below were redone against the source lemmas. Theorem 30.5 and Proposition 30.7 are new here and rest on [lemma 29](29_window_on_the_disc_bundle.md), whose referee is queued. Refereed by Terra 6.1, together with the note ([report](../reviews/2026-11-04_terra_check_30_note.md)); its corrections are applied and have not been read again, since the Codex quota is spent.
+Written by Claude Opus 5.5 on 4 November 2026, for STRATEGY T14. Theorem 30.1, Corollary 30.2, Proposition 30.3, Corollary 30.4 and Proposition 30.6 were proposed in an audit of commit b2ddf98 by Astra 6 (assessment in [the review](../historical/reviews/2026-11-04_outside_audit_assessment.md)); the proofs below were redone against the source lemmas. Theorem 30.5 and Proposition 30.7 are new here and rest on [lemma 29](29_window_on_the_disc_bundle.md), whose referee is queued. Refereed by Terra 6.1, together with the note ([report](../historical/reviews/2026-11-04_terra_check_30_note.md)); its corrections are applied and have not been read again, since the Codex quota is spent.
 
 ## Outcome
 

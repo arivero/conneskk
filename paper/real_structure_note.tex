@@ -1,4 +1,4 @@
-% The real structure of a massless block: SO(30) in the finite geometry. Short note expanding one section of the dictionary note, from lemmas 06, 21, 22 and the 11D files 08, 09, 11
+% The real structure of a massless block: SO(30) in the finite geometry. Short note expanding one section of the dictionary note, from lemmas 06, 21, 22 and the eleven-dimensional lemmas (files 08, 09, 11
 \ifdefined\mobile
 \documentclass[aps,prd,reprint,onecolumn,nofootinbib,amsmath,amssymb,floatfix]{revtex4-2}
 \usepackage[paperwidth=270pt,paperheight=585pt,textwidth=246pt,textheight=545pt,top=18pt,left=12pt,headheight=0pt,headsep=0pt,footskip=14pt]{geometry}
@@ -17,7 +17,6 @@
 \renewcommand{\H}{\mathbb H}
 \newcommand{\CP}{\mathbb{CP}}
 \newcommand{\supp}[1]{Supplemental Material, part #1}
-\newcommand{\file}[1]{Supplemental Material, 11D file #1}
 
 \begin{document}
 
@@ -38,7 +37,7 @@ A paper of 2024 \cite{Rivero2024} classifies the scalars of a supersymmetric Sta
 \end{equation}
 The counting goes back to \cite{Rivero2005}, which finds neither $SO(30)$ nor a role for $SO(32)$ (\supp{21}).
 
-A reading of the LaTeX source of \cite{Rivero2024} (\file{09}, section 1) records the following. The paper reaches $SO(30)$ and $SO(32)$ from $SU(16)\times U(1)\supset SU(15)\supset SU(5)\times SU(3)$ by adding singlets. Its postulates force the quark that does not bind to be up-type, and the top is favoured with the remark ``we have not a concrete argument''. So the binding mechanism, the identity of the top as the quark that stays out, and the fermion partner of the three scalars of charge $+4/3$ are open there.
+A reading of the LaTeX source of \cite{Rivero2024} (\supp{36}, section 1) records the following. The paper reaches $SO(30)$ and $SO(32)$ from $SU(16)\times U(1)\supset SU(15)\supset SU(5)\times SU(3)$ by adding singlets. Its postulates force the quark that does not bind to be up-type, and the top is favoured with the remark ``we have not a concrete argument''. So the binding mechanism, the identity of the top as the quark that stays out, and the fermion partner of the three scalars of charge $+4/3$ are open there.
 
 Independently, in the exact quadratic spectral action of \supp{18}, among single charged species only an up-type quark can be removed while keeping $\cos^2\theta_{\rm NC}=5/8$ and the ratio $8/3$ of the photon and gluon coefficients (\supp{21}, for the classical bosonic trace with three generations). Removing the top leaves $30=(5,3)\oplus(\bar5,\bar3)$, with
 \begin{equation}\label{eq:branching}
@@ -47,7 +46,7 @@ Independently, in the exact quadratic spectral action of \supp{18}, among single
 &+(10,6)+(15,\bar3)+\text{conjugates of the last two},
 \end{split}
 \end{equation}
-and $496\to(435,1)+(1,1)+(30,2)$ under $SO(30)\times SO(2)\subset SO(32)$. The two selections of an up-type quark are independent arguments with the same outcome (\file{09}).
+and $496\to(435,1)+(1,1)+(30,2)$ under $SO(30)\times SO(2)\subset SO(32)$. The two selections of an up-type quark are independent arguments with the same outcome (\supp{36}).
 
 We ask where $SO(30)$ lives in the finite geometry. Section~\ref{sec:sign} places it as the symmetry of the massless light block under the real structure for $s=+1$. Section~\ref{sec:J} excludes the counts~\eqref{eq:counts} from finite fluctuations within one multiplet. Sections~\ref{sec:interval} and~\ref{sec:window} find them in the connection along the interval of the parent of the finite Dirac operator $D_F$, and $(3,6,1)$ in its compression to the window. Results carry the numbers of the parts that prove them.
 
@@ -62,24 +61,24 @@ Let $(A,H,D,J,\gamma)$ be a finite real spectral triple of KO-dimension six. An 
 \end{equation}
 $s=\pm1$. It writes the triple as a product of an odd triple of KO-dimension 7 ($s=+1$, label 11) or 5 ($s=-1$, label 9) with a Clifford point \cite{DD2011,towerlesspaper}. On $H_+$, $d=(UD)|_{H_+}$ and $j=(UJ)|_{H_+}$ satisfy $j^2=s$ and $jd=s\,dj$ (\supp{06}, Theorem 2).
 
-\smallskip\noindent\textit{Proposition 8.1} (\file{08}). Let $E$ be an eigenspace of $d^2$ in $H_+$, of dimension $n$. The unitaries of $E$ that commute with $j$ form $O(n)$ if $s=+1$, and $USp(n)$ if $s=-1$, in which case $n$ is even.
+\smallskip\noindent\textit{Proposition 8.1} (\supp{35}). Let $E$ be an eigenspace of $d^2$ in $H_+$, of dimension $n$. The unitaries of $E$ that commute with $j$ form $O(n)$ if $s=+1$, and $USp(n)$ if $s=-1$, in which case $n$ is even.
 \smallskip
 
 Here $j$ is a real structure for $s=+1$ and a quaternionic structure for $s=-1$. The symmetries of the pair $(j,d)$ are smaller, $O(n_+)\times O(n_-)$ for $s=+1$, with $n_\pm$ the dimensions of the eigenspaces of $d$ at $\pm\mu$ in $E$, and $U(n/2)$ for $s=-1$, since then $j$ exchanges these eigenspaces; on a massless block $d=0$.
 
 Let $V=\C^5\otimes\C^3$, with $Q=2/3$ on $u,c$ and $Q=-1/3$ on $d,s,b$. For the five light quarks, $H_+=\{q_L\}\oplus\{\overline{q_R}\}=V\oplus\bar V$, of dimension 30. Let $Uq_L=q_R$, $U\overline{q_R}=s\,\overline{q_L}$ and $j=U^{-1}J|_{H_+}$; then $j^2=s$, $j\,q_L=s\,\overline{q_R}$ and $j\,\overline{q_R}=q_L$.
 
-\smallskip\noindent\textit{Proposition 11.1} (\file{11}). Let $s=+1$ and $j(v,w)=(K^{-1}w,Kv)$, with $K$ the coordinatewise conjugation. The skew-Hermitian $a$ with $jaj^{-1}=a$ are
+\smallskip\noindent\textit{Proposition 11.1} (\supp{38}). Let $s=+1$ and $j(v,w)=(K^{-1}w,Kv)$, with $K$ the coordinatewise conjugation. The skew-Hermitian $a$ with $jaj^{-1}=a$ are
 \begin{equation}\label{eq:block}
 a=\begin{pmatrix}\alpha&B\\ \bar B&\bar\alpha\end{pmatrix},\qquad\alpha^*=-\alpha,\quad B^T=-B,
 \end{equation}
 so they form $\mathfrak{so}(30)=\mathfrak u(15)\oplus\Lambda^2V$, with $\mathfrak u(15)$ the commutant of the complex structure $I=(i,-i)$, which is quark number. A Hermitian generator $H=ia$ satisfies $jHj^{-1}=-H$. For $s=-1$ the same computation gives $\mathfrak{usp}(30)=\mathfrak u(15)\oplus S^2V$.
 \smallskip
 
-With $\Lambda^2V=(S^25,\bar3)\oplus(\Lambda^25,6)$ and $S^2V=(S^25,6)\oplus(\Lambda^25,\bar3)$ (\file{09}, Proposition 9.2), the two signs give Table~\ref{tab:counts}.
+With $\Lambda^2V=(S^25,\bar3)\oplus(\Lambda^25,6)$ and $S^2V=(S^25,6)\oplus(\Lambda^25,\bar3)$ (\supp{36}, Proposition 9.2), the two signs give Table~\ref{tab:counts}.
 
 \begin{table}
-\caption{\label{tab:counts}The off-diagonal block of the commutant of $j$ on the massless light block (\file{11}).}
+\caption{\label{tab:counts}The off-diagonal block of the commutant of $j$ on the massless light block (\supp{38}).}
 \begin{ruledtabular}
 \begin{tabular}{lccc}
 &antitriplet&$(-\frac23,+\frac13,+\frac43)$&sextet\\
@@ -94,12 +93,12 @@ So the $SO(30)$ of \cite{Rivero2024} and \supp{21} is the symmetry of the massle
 
 \section{\texorpdfstring{$J$}{J}-compatible operators and gauge generators}\label{sec:J}
 
-\smallskip\noindent\textit{Proposition 9.3} (\file{09}). Let $J$ be an antiunitary on $V\oplus\bar V$ exchanging the summands, with $J^2=\epsilon$, let $X$ be Hermitian with $JX=\epsilon'XJ$, and let $B\in V\otimes V$ be its block from $\bar V$ to $V$. Then $B=\epsilon\epsilon'B^T$. In the KO-dimensions 5, 6, 7 of the labels 9, 10, 11, $\epsilon\epsilon'=+1$ \cite{Connes2006}, so $B\in S^2V$, whose antitriplet has the counts $(3,6,1)$. For a connection on a circle whose real structure is complex conjugation, of KO-dimension 1 with $(\epsilon,\epsilon')=(+1,-1)$, the block lies in $\Lambda^2V$, with the counts~\eqref{eq:counts}.
+\smallskip\noindent\textit{Proposition 9.3} (\supp{36}). Let $J$ be an antiunitary on $V\oplus\bar V$ exchanging the summands, with $J^2=\epsilon$, let $X$ be Hermitian with $JX=\epsilon'XJ$, and let $B\in V\otimes V$ be its block from $\bar V$ to $V$. Then $B=\epsilon\epsilon'B^T$. In the KO-dimensions 5, 6, 7 of the labels 9, 10, 11, $\epsilon\epsilon'=+1$ \cite{Connes2006}, so $B\in S^2V$, whose antitriplet has the counts $(3,6,1)$. For a connection on a circle whose real structure is complex conjugation, of KO-dimension 1 with $(\epsilon,\epsilon')=(+1,-1)$, the block lies in $\Lambda^2V$, with the counts~\eqref{eq:counts}.
 \smallskip
 
 The signs permit all of $S^2V$; the algebra, grading and order conditions of a given triple select a subspace. A Hermitian generator of $\mathfrak{so}(30)$ anticommutes with $j$ instead, with an antisymmetric block for $s=+1$ and a symmetric one for $s=-1$.
 
-So, within one multiplet $V$ and in the labels 9 to 11, the particle-antiparticle block of a finite Hermitian operator compatible with $J$, such as an inner fluctuation, cannot have the counts~\eqref{eq:counts}. This is the finite form of the symmetry of a Majorana mass matrix, and of the Fermi-statistics constraint on a Lorentz-scalar bilinear of one Weyl multiplet without derivatives (recalled in \file{09}). The known escapes are three: a connection along a circle or an interval, as in the last statement above; blocks between two distinct multiplets, which $J$ pairs with their transposes and otherwise leaves free; and derivative couplings. The first is taken up next; the second is open (Section~\ref{sec:open}).
+So, within one multiplet $V$ and in the labels 9 to 11, the particle-antiparticle block of a finite Hermitian operator compatible with $J$, such as an inner fluctuation, cannot have the counts~\eqref{eq:counts}. This is the finite form of the symmetry of a Majorana mass matrix, and of the Fermi-statistics constraint on a Lorentz-scalar bilinear of one Weyl multiplet without derivatives (recalled in \supp{36}). The known escapes are three: a connection along a circle or an interval, as in the last statement above; blocks between two distinct multiplets, which $J$ pairs with their transposes and otherwise leaves free; and derivative couplings. The first is taken up next; the second is open (Section~\ref{sec:open}).
 
 \section{The interval parent}\label{sec:interval}
 
@@ -111,12 +110,12 @@ Q_l(ET)=-\frac1l\int_0^l\sin(x\,\mathrm{ad}_{D_F})(T(x))\,dx
 
 On the light block take $D_F=0$. Let $C_0,C_l\ni1$ be subalgebras of $A=M_{30}(\mathbb R)$, the elements of $\mathrm{End}\,H_+$ commuting with $j$ for $s=+1$, and let $A_l$ be the smooth $f:[0,l]\to A$ with $f(0)\in C_0$ and $f(l)\in C_l$, acting by $\pi(f)=f$ on the $H_+$ components and by $0$ on the others.
 
-\smallskip\noindent\textit{Proposition 11.2} (\file{11}). (i) $\pi(f)$ preserves the domain for all $C_0,C_l$, and order zero and order one hold on this block. (ii) The self-adjoint one-forms are exactly $Ea_x$ on the $H_+$ components, with $a_x\in C^\infty([0,l],\mathfrak{so}(30))$ free at the walls, and $D_A=E\,(d/dx+a_x\oplus Ua_xU^{-1})$. (iii) The real structure acts on them with the sign $+$ of KO-dimension six. The block of $a_x$ between $\bar V$ and $V$ is antisymmetric, and the block of the Hermitian operator $Ea_x$ is symmetric, as Proposition 9.3 requires, with $E$ carrying the other sign.
+\smallskip\noindent\textit{Proposition 11.2} (\supp{38}). (i) $\pi(f)$ preserves the domain for all $C_0,C_l$, and order zero and order one hold on this block. (ii) The self-adjoint one-forms are exactly $Ea_x$ on the $H_+$ components, with $a_x\in C^\infty([0,l],\mathfrak{so}(30))$ free at the walls, and $D_A=E\,(d/dx+a_x\oplus Ua_xU^{-1})$. (iii) The real structure acts on them with the sign $+$ of KO-dimension six. The block of $a_x$ between $\bar V$ and $V$ is antisymmetric, and the block of the Hermitian operator $Ea_x$ is symmetric, as Proposition 9.3 requires, with $E$ carrying the other sign.
 \smallskip
 
 So the interval component reaches $\Lambda^2V$ through the first escape. For a mass block $M\neq0$, order one fails in the window, through the blocks $-UbU^{-1}Ma$ and $-aM^*UbU^{-1}$ of $[[D_F,\pi(a)],J\pi(b)J^{-1}]$; the parent keeps order one (\supp{22}, Theorem 22.3), but its wall algebra shrinks to the commutant of $D_F$, which is zero for invertible $M$. The masses need a treatment without order one, as in \supp{19}.
 
-\smallskip\noindent\textit{Theorem 11.3} (\file{11}). Let $k_0,k_l$ be the skew parts of $C_0,C_l$, and assume a five-dimensional Yang-Mills action on a flat product with $M^4$, as in Proposition 22.8.
+\smallskip\noindent\textit{Theorem 11.3} (\supp{38}). Let $k_0,k_l$ be the skew parts of $C_0,C_l$, and assume a five-dimensional Yang-Mills action on a flat product with $M^4$, as in Proposition 22.8.
 (i) The massless four-dimensional scalars from $a_x$ form the orthogonal complement of $k_0+k_l$ in $\mathfrak{so}(30)$.
 (ii) In the parent of \supp{22}, $C_0=A$, and there are none.
 (iii) For $C_0=C_l=M_{15}(\C)$, the commutant of quark number, they are exactly $\Lambda^2V\oplus\Lambda^2\bar V$, with the counts~\eqref{eq:counts}, and the massless vectors are $\mathfrak u(15)$.
@@ -126,11 +125,11 @@ So the interval component reaches $\Lambda^2V$ through the first escape. For a m
 
 Item (iv) holds in free five-dimensional Yang-Mills at trivial background; its escapes are a circle without walls, a nontrivial holonomy, brane-localized terms and further internal dimensions. The wall algebra in (iii) is an input: at $D_F=0$ every $f$ preserves the domain, and the choice says that the walls conserve quark number and the bulk does not. By (v), the antisquark counts appear as scalars and the slepton counts, contained in $(24,1)+(1,1)$ (\supp{21}), as vectors, so with these walls they are not scalars on an interval.
 
-On a circle every generator has both a massless vector and a massless scalar, and all of $\Lambda^2(30)$ appears; a wall condition, or the reflection-even algebra of \file{01}, removes half. With holonomy $I$ on the circle, diquarks are massive and mesons have massless scalars; on the interval with parity $\mathrm{Ad}(I)$, diquarks have massless scalars and mesons have none (\file{11}). The proposals of 11D files 06 to 09 read these groups and counts as type I$'$ Chan-Paton data, with the circle with holonomy $I$ as a stack of D8-branes off an O8 plane; nothing here depends on them.
+On a circle every generator has both a massless vector and a massless scalar, and all of $\Lambda^2(30)$ appears; a wall condition, or the reflection-even algebra of \supp{31}, removes half. With holonomy $I$ on the circle, diquarks are massive and mesons have massless scalars; on the interval with parity $\mathrm{Ad}(I)$, diquarks have massless scalars and mesons have none (\supp{38}). The proposals of 11D files 06 to 09 read these groups and counts as type I$'$ Chan-Paton data, with the circle with holonomy $I$ as a stack of D8-branes off an O8 plane; nothing here depends on them.
 
 \section{The compression to the window}\label{sec:window}
 
-\smallskip\noindent\textit{Proposition 11.4} (\file{11}). Let $s=+1$, let $D_F$ have the mass block $M=U\Lambda$ with $\Lambda$ real for $j$ and symmetric, and let $a_{\rm tot}=a\oplus UaU^{-1}$ be constant.
+\smallskip\noindent\textit{Proposition 11.4} (\supp{38}). Let $s=+1$, let $D_F$ have the mass block $M=U\Lambda$ with $\Lambda$ real for $j$ and symmetric, and let $a_{\rm tot}=a\oplus UaU^{-1}$ be constant.
 (i) $[D_F,a_{\rm tot}]$ has the off-diagonal blocks $US$ and $SU^{-1}$, with $S=[\Lambda,a]$ real and symmetric.
 (ii) For $\Lambda=\mathrm{diag}(m_i)$ on flavours, the compression~\eqref{eq:compression} of $Ea_{\rm tot}$ acts as a change of $\Lambda$, symmetric as Proposition 9.3 requires, with
 \begin{equation}\label{eq:shadow}
@@ -150,13 +149,13 @@ For a constant connection $h$, the moving window of \supp{22}, Corollary 22.6, g
 
 \textit{Masses.} The quadratic terms of \supp{19} for this algebra, where order one fails.
 
-\textit{Sleptons.} Scalars in $(24,1)+(1,1)$ need components along further internal directions, such as the base of \file{02}.
+\textit{Sleptons.} Scalars in $(24,1)+(1,1)$ need components along further internal directions, such as the base of \supp{32}.
 
 \textit{Sextets.} The $(10,6)$ comes with the antitriplets, and nothing in this construction removes it.
 
 \textit{The top.} The relation to the $(30,2)$ of $SO(32)$, with the second factor as the $SO(2)$ of the top.
 
-\textit{Two multiplets.} Whether the $(15,\bar3)$ of \cite{Rivero2024} can be read as bilinears of two distinct multiplets, which Proposition 9.3 does not constrain. The paper gives it as the antisymmetric square of one fundamental, without stating chirality, and its remark on diquarks of odd parity is consistent with Proposition 9.3 (\file{09}).
+\textit{Two multiplets.} Whether the $(15,\bar3)$ of \cite{Rivero2024} can be read as bilinears of two distinct multiplets, which Proposition 9.3 does not constrain. The paper gives it as the antisymmetric square of one fundamental, without stating chirality, and its remark on diquarks of odd parity is consistent with Proposition 9.3 (\supp{36}).
 
 No negative statement above closes an item. Proposition 9.3 points to the interval and to two multiplets, Theorem 11.3 to the walls and to further internal directions, and No-go theorem 22.7 to the wall, the odd directions and more dimensions.
 
