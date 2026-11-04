@@ -45,6 +45,18 @@ So the four-family sets 128 − T(0) and 128 − N(1, 2, 3), each of 116 roots, 
 
 The search found further signed permutations with the same effect on the two blocks; P itself maps T(0) onto N(1, 2, 3) up to conjugation, and M = J ∘ P, with J = −1 the real structure of Proposition 4.6.
 
+## Proposition 5.3 (the flip in a four-family finite geometry)
+
+**Statement.** Let H_f = (C^2_L ⊕ C^2_R) ⊗ C^4_c ⊗ C^4_f, H = H_f ⊕ conj(H_f), with J the antilinear exchange of the two summands and γ equal to +1 on C^2_L and −1 on C^2_R in H_f and to its negative on conj(H_f), the signs of KO-dimension six. Fix an isomorphism ι: C^4_c -> C^4_f sending the lepton line ℓ to the family line e_0 and the colour space C^3 onto the span of e_1, e_2, e_3, and let F be the flip x ⊗ y -> ι^{-1}(y) ⊗ ι(x) on C^4_c ⊗ C^4_f, extended by the identity on C^2_L ⊕ C^2_R and to conj(H_f) by J F J^{-1}. Then:
+
+1. F is unitary, F^2 = 1, and F commutes with γ and J.
+2. For the up-type Dirac blocks T_top = Y ⊗ P_q ⊗ P_0 and T_ν = Y ⊗ P_ℓ ⊗ (1 − P_0), where Y maps the up state of C^2_L to the up state of C^2_R (and Y^* back), P_ℓ and P_q = 1 − P_ℓ are the lepton and quark projectors of C^4_c and P_0 the projector on e_0, one has F T_top F^{-1} = T_ν, and likewise for the down-type blocks of family 0 and the charged leptons of families 1, 2, 3.
+3. So the heavy limits D + t T_top and D + t T_ν, for D commuting with F, are conjugate by F: their light spaces, of 116 states each, correspond. The light algebras A ∩ {T}' correspond when the algebra is invariant under F; the Pati-Salam and Standard Model algebras act on C^4_c alone and are not.
+
+**Proof.** F acts on the factor C^4_c ⊗ C^4_f only, where it conjugates a ⊗ b to ι^{-1} b ι ⊗ ι a ι^{-1}, so P_q ⊗ P_0 goes to P_ℓ ⊗ (1 − P_0) by the choice of ι. γ and Y act on the other factor, and J F J^{-1} on conj(H_f) is the conjugate flip. ∎
+
+This is the finite-geometry form of Proposition 5.2. It also makes reading 2 below precise: F exchanges the projector P_ℓ, which the Majorana direction selects in colour space, with P_0, which the top Yukawa coupling selects in family space; as operators, it maps the top Yukawa block to the Dirac blocks of the neutrinos of families 1, 2, 3, and it does not map the Majorana block to a Dirac block, since the Majorana block joins H_f to conj(H_f).
+
 ## Readings (proposals)
 
 1. **Three families are the obstruction.** The exchange of lemma 21 is a symmetry of the E8 geometry exactly in the four-family completion, where the colour-family square is 4 x 4 and the top belongs to the family paired with the lepton colour. With three families the square is 4 x 3 and the exchange is not an isometry (Proposition 5.1). Lemma 21's 96 = 84 + 12 in two ways is the three-family shadow of 128 = 116 + 12 in two ways, exchanged by M.

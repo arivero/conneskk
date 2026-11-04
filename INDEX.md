@@ -525,6 +525,7 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 - [Setting](11D/05_colour_family_exchange.md#setting)
 - [Proposition 5.1 (the two families of 84 are not isometric)](11D/05_colour_family_exchange.md#proposition-51-the-two-families-of-84-are-not-isometric)
 - [Proposition 5.2 (four families: the transposition of colour and family)](11D/05_colour_family_exchange.md#proposition-52-four-families-the-transposition-of-colour-and-family)
+- [Proposition 5.3 (the flip in a four-family finite geometry)](11D/05_colour_family_exchange.md#proposition-53-the-flip-in-a-four-family-finite-geometry)
 - [Readings (proposals)](11D/05_colour_family_exchange.md#readings-proposals)
 - [What remains open](11D/05_colour_family_exchange.md#what-remains-open)
 - [Plan of the 11D line (handover file)](11D/PLAN.md#plan-of-the-11d-line-handover-file)

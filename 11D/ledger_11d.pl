@@ -204,6 +204,13 @@ attempted_by(d11_transposition, claude).
 checked_by(d11_transposition, claude, by_hand).
 referee_pending(d11_transposition).
 
+claim(d11_flip, proposition, proved, "Proposition 5.3", "In a four-family finite geometry on (C^2_L + C^2_R) x C^4_colour x C^4_family with KO-6 signs, the flip of colour and family (lepton line to family 0) commutes with gamma and J and conjugates the top Dirac block into the Dirac blocks of the neutrinos of families 1, 2, 3, so the two heavy limits are conjugate; the Pati-Salam and Standard Model algebras are not flip-invariant.").
+source(d11_flip, '11D/05_colour_family_exchange.md', 'proposition-53-the-flip-in-a-four-family-finite-geometry').
+depends(d11_flip, d11_transposition).
+attempted_by(d11_flip, claude).
+checked_by(d11_flip, claude, by_hand).
+referee_pending(d11_flip).
+
 claim(d11_two_heavy, conjecture, conjectural, "Readings 1-4 (proposals)", "Three families are the obstruction to the exchange, M exchanges the two heavy directions of the algebra chain, and the 128 of four families is 44 + 84 under Spin(9).").
 source(d11_two_heavy, '11D/05_colour_family_exchange.md', 'readings-proposals').
 depends(d11_two_heavy, d11_transposition).
@@ -222,4 +229,4 @@ addresses(t12, d11_colour84).  addresses(t12, d11_two_completions).  addresses(t
 addresses(t14, d11_blocks).  addresses(t14, d11_colour_families).  addresses(t14, d11_e8_grading).  addresses(t14, d11_yukawa_brackets).  addresses(t14, d11_m2m5_is_j).  addresses(t14, d11_nu_gravity).  addresses(t14, d11_discrete_z3).
 addresses(t12, d11_blocks).  addresses(t12, d11_m2m5_is_j).
 addresses(t14, d11_no_isometry).  addresses(t14, d11_transposition).  addresses(t14, d11_two_heavy).
-addresses(t12, d11_no_isometry).  addresses(t12, d11_transposition).
+addresses(t12, d11_no_isometry).  addresses(t14, d11_flip).  addresses(t12, d11_transposition).

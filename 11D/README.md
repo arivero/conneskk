@@ -49,6 +49,7 @@ There are two ways to complete 4 + 6 by one dimension, and they correspond to th
 | 4 §7, §8 | nu^c as the gravitational state selects t = +1/2; a discrete Z_3 from the M-grading | Proposal; Remark | [04](04_two_families_m2_m5.md) |
 | 5.1 | As configurations of E8 roots the two families of 84 have equal pair counts but are not isometric (the neutrino of the top's own family carries the obstruction), so no element of W(E8) exchanges them | Negative result in scope, pending check | [05](05_colour_family_exchange.md) |
 | 5.2 | With four families, M = -P in W(E8) transposes Pati-Salam colour with family and maps the up-type quark of family 0 onto the neutrinos of families 1, 2, 3 | Proposition, proved | [05](05_colour_family_exchange.md) |
+| 5.3 | In a four-family finite geometry the colour-family flip commutes with gamma and J and conjugates the heavy-top limit into the heavy Dirac-neutrino limit of the other three families; the Pati-Salam and Standard Model algebras are not flip-invariant | Proposition, proved | [05](05_colour_family_exchange.md) |
 | 5 Readings | Three families as the obstruction; M exchanges the two heavy directions of the algebra chain; 128 = 44 + 84 under Spin(9) | Proposals | [05](05_colour_family_exchange.md) |
 
 The checks are in [checks_11d.py](checks_11d.py) (Python 3, exact fractions; every check asserts; about 20 s).
