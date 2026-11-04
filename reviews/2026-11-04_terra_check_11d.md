@@ -1303,6 +1303,31 @@ for direct comparison. The occurrence of \(\mathbb{CP}^2\) and
 \(\mathbb{CP}^1\) in the separate six-dimensional base does not by
 itself identify that compactification with local \(dP_2\).
 
+## File 09, section 5: Weyl action on a Wilson line
+
+**Verdict: Correct with clarification.** A Weyl transformation of
+\(E_8\) acts by conjugation on an \(E_8\) holonomy and gives a lattice
+automorphism in the heterotic circle frame. Whether it acts as a
+symmetry of a fixed compactification depends on all of its background
+and boundary data.
+
+Let \(T\subset E_8\) be a maximal torus. An element
+\(w\in W(E_8)=N(T)/T\) has a representative \(g\in N(T)\), and a
+constant gauge transformation sends \(W\in T\) to \(gWg^{-1}\).
+Thus the holonomy alone determines the same gauge orbit. The
+corresponding isometry \(w\oplus1\) of
+\(E_8\oplus E_8\oplus II_{1,1}\) is an element of the
+nine-dimensional Narain lattice automorphism group. Proposition 5.2
+places the displayed transposition in that Weyl group.
+
+If a bundle, defect, algebra embedding or distinguished set of
+zero modes is held fixed, the same \(g\) need not preserve it.
+Transforming the entire configuration produces a gauge-equivalent
+description when the transformation is allowed; an exchange relative
+to fixed colour and family structures needs an explicit action on
+those structures. The root no-go applies to its stated three-slot
+configuration, while bundle zero modes remain an open escape.
+
 ## Proposition 6.1: the SO(32) Wilson-line spectrum
 
 **Verdict: Correct with amendments.** The charged momentum progressions

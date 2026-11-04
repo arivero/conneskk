@@ -355,10 +355,11 @@ depends(d11_dp_walls, d11_e_walls).
 attempted_by(d11_dp_walls, claude).
 checked_by(d11_dp_walls, terra_6_1, by_hand).
 
-claim(d11_transposition_tduality, conjecture, conjectural, "Section 4, item 2 (proposal)", "The colour-family transposition of 05 is a nine-dimensional T-duality, which by itself is a gauge relabelling of Wilson lines.").
+claim(d11_transposition_tduality, conjecture, conjectural, "Section 5, item 2 (referee clarification)", "The colour-family Weyl transposition conjugates an E8 holonomy and is a Narain lattice automorphism. An exchange relative to fixed physical structures requires compatibility with the full background.").
 source(d11_transposition_tduality, '11D/09_dilaton_spectral_and_so32.md', '5-two-more-dualities-between-9-and-11-recalled-proposals').
 depends(d11_transposition_tduality, d11_transposition).
 attempted_by(d11_transposition_tduality, claude).
+checked_by(d11_transposition_tduality, terra_6_1, by_hand).
 
 %% ---------------------------------------------------------------- strategy
 strategy(t14, open, "Eleven dimensions from massless W and Z: the interval of H as an antiperiodic circle and as the M-theory circle; Witten's space M^{111} as the hypercharge quotient of the 5-bar; hypercharge from C_3, matter from wrapped branes, the Higgs as the M2 position; the magnetic completion AdS5 x CP^2 x S^2; the 84 of lemma 21 against C_3.").
