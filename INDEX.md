@@ -112,7 +112,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
 
 The interval of H as an antiperiodic circle and as the M-theory circle; Witten's space M^{111} as the hypercharge quotient of the 5-bar, the Z_6 and chirality from fluxes; hypercharge from C_3, matter from wrapped branes, the Higgs as the M2 position, the magnetic completion AdS5 x CP^2 x S^2, and the 84 of lemma 21 against C_3.
 
-[11D README](11D/README.md) · [11D §1](11D/01_interval_and_eleventh_dimension.md) · [11D §2](11D/02_witten_spaces_hypercharge_quotient.md) · [11D §3](11D/03_branes_hypercharge_and_the_84.md) · [strategy, Ranked list (T14)](STRATEGY.md#ranked-list) · [Astra audit §3-§4, joint family](reviews/2026-11-03_astra_audit_d11.md#3-a-positive-joint-limit-result-from-the-exact-interval) · [11D §4, two families and M2/M5](11D/04_two_families_m2_m5.md)
+[11D README](11D/README.md) · [11D §1](11D/01_interval_and_eleventh_dimension.md) · [11D §2](11D/02_witten_spaces_hypercharge_quotient.md) · [11D §3](11D/03_branes_hypercharge_and_the_84.md) · [strategy, Ranked list (T14)](STRATEGY.md#ranked-list) · [Astra audit §3-§4, joint family](reviews/2026-11-03_astra_audit_d11.md#3-a-positive-joint-limit-result-from-the-exact-interval) · [11D §4, two families and M2/M5](11D/04_two_families_m2_m5.md) · [11D §5, colour-family exchange](11D/05_colour_family_exchange.md)
 
 ## Part 2. Documents
 
@@ -521,6 +521,12 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 - [8. Remark: a discrete symmetry from the M-grading](11D/04_two_families_m2_m5.md#8-remark-a-discrete-symmetry-from-the-m-grading)
 - [9. What remains open](11D/04_two_families_m2_m5.md#9-what-remains-open)
 - [References for this file](11D/04_two_families_m2_m5.md#references-for-this-file)
+- [The exchange of the top and the neutrinos as a colour-family transposition in E8](11D/05_colour_family_exchange.md#the-exchange-of-the-top-and-the-neutrinos-as-a-colour-family-transposition-in-e8)
+- [Setting](11D/05_colour_family_exchange.md#setting)
+- [Proposition 5.1 (the two families of 84 are not isometric)](11D/05_colour_family_exchange.md#proposition-51-the-two-families-of-84-are-not-isometric)
+- [Proposition 5.2 (four families: the transposition of colour and family)](11D/05_colour_family_exchange.md#proposition-52-four-families-the-transposition-of-colour-and-family)
+- [Readings (proposals)](11D/05_colour_family_exchange.md#readings-proposals)
+- [What remains open](11D/05_colour_family_exchange.md#what-remains-open)
 - [Plan of the 11D line (handover file)](11D/PLAN.md#plan-of-the-11d-line-handover-file)
 - [State (4 Nov 2026)](11D/PLAN.md#state-4-nov-2026)
 - [Question of this round](11D/PLAN.md#question-of-this-round)

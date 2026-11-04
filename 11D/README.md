@@ -47,6 +47,9 @@ There are two ways to complete 4 + 6 by one dimension, and they correspond to th
 | 4.5 | Up-type Yukawa couplings lie inside the C_3 sector, the others have one field per sector; the top mass is the wedge Lambda^3 -> Lambda^6 | Proposition, proved | [04](04_two_families_m2_m5.md) |
 | 4.6 | The M2/M5 exchange is the Chevalley involution, acting as the real structure J; it preserves both families and does not exchange the top with the neutrinos | Negative result in scope, pending check | [04](04_two_families_m2_m5.md) |
 | 4 §7, §8 | nu^c as the gravitational state selects t = +1/2; a discrete Z_3 from the M-grading | Proposal; Remark | [04](04_two_families_m2_m5.md) |
+| 5.1 | As configurations of E8 roots the two families of 84 have equal pair counts but are not isometric (the neutrino of the top's own family carries the obstruction), so no element of W(E8) exchanges them | Negative result in scope, pending check | [05](05_colour_family_exchange.md) |
+| 5.2 | With four families, M = -P in W(E8) transposes Pati-Salam colour with family and maps the up-type quark of family 0 onto the neutrinos of families 1, 2, 3 | Proposition, proved | [05](05_colour_family_exchange.md) |
+| 5 Readings | Three families as the obstruction; M exchanges the two heavy directions of the algebra chain; 128 = 44 + 84 under Spin(9) | Proposals | [05](05_colour_family_exchange.md) |
 
 The checks are in [checks_11d.py](checks_11d.py) (Python 3, exact fractions; every check asserts; about 20 s).
 
@@ -70,7 +73,7 @@ The angle-dependent one-loop term (Proposition 1.4) is minimized at the massless
 4. **The 9D reduction of Proposition 2.6**: with SU(2)_R broken by wall data, derive the mass basis of u and d against the charge basis, and the vectorlike limit at the 9 label, where the left-handed interactions are off.
 5. **Fermionic zero modes of wrapped fivebranes** (Conjecture 3.3) at N = 1, and three generations.
 6. **The magnetic completion**: flux quantization, stability and the two C_3 vectors of AdS5 x CP^2 x S^2 against the fluxed pair (chi, B - L) of Proposition 2.6.
-7. **The colour-family exchange in E8 ⊃ SU(3)^4** (PLAN, step 4): the remaining candidate for the exchange of the top and the neutrinos, since Proposition 4.6 excludes the M2/M5 exchange.
+7. **A four-family completion with the fourth family decoupled** (PLAN, steps 4-5): a finite geometry or Hořava-Witten configuration in which the colour-family transposition M of Proposition 5.2 is a symmetry, so that the three-family statement of lemma 21 follows as a limit; Proposition 5.1 shows that with three families the exchange is not an isometry.
 
 ## The Astra 6 audit of 3 Nov 2026
 
@@ -104,6 +107,7 @@ Prior work for the observation of Theorem 2.1, that the weights of M^{111} are t
 - [02_witten_spaces_hypercharge_quotient.md](02_witten_spaces_hypercharge_quotient.md): the "6 + 1" of Witten's spaces, the Z_6, chirality from fluxes.
 - [03_branes_hypercharge_and_the_84.md](03_branes_hypercharge_and_the_84.md): C_3, M2, M5 and the 84.
 - [04_two_families_m2_m5.md](04_two_families_m2_m5.md): the two 12-state blocks, the two gradings of E8, Yukawa couplings as brackets, the M2/M5 exchange as J.
+- [05_colour_family_exchange.md](05_colour_family_exchange.md): the two families as E8 root configurations, the colour-family transposition with four families.
 - [PLAN.md](PLAN.md): the handover plan of the line.
 - [checks_11d.py](checks_11d.py): exact checks.
 - [ledger_11d.pl](ledger_11d.pl): ledger facts, included by [../ledger.pl](../ledger.pl).
