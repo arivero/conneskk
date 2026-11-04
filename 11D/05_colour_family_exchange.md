@@ -57,6 +57,20 @@ The search found further signed permutations with the same effect on the two blo
 
 This is the finite-geometry form of Proposition 5.2. It also makes reading 2 below precise: F exchanges the projector P_ℓ, which the Majorana direction selects in colour space, with P_0, which the top Yukawa coupling selects in family space; as operators, it maps the top Yukawa block to the Dirac blocks of the neutrinos of families 1, 2, 3, and it does not map the Majorana block to a Dirac block, since the Majorana block joins H_f to conj(H_f).
 
+## Proposition 5.4 (no three-slot assignment admits the exchange)
+
+**Statement.** Place the top in slot 0, and let the up-type quarks, the down-type quarks, the charged leptons and the neutrinos each occupy three of the four family slots, independently (the up-type quarks in slots containing 0). This includes the aligned families of Proposition 5.1 and the configurations of the 9 label, where SU(2)_L is off and does not tie the slots of up-type and down-type quarks. For none of the 192 configurations S is there an isometry of R^8 mapping S − T onto S − N. In every case S − N has d = 19 and d = 20 only, while S − T has d = 16 on the neutrino roots of one slot and d = 22 on those of the two others.
+
+**Proof.** Exhaustive computation of the neighbour counts d (Python, exact fractions, scratch script not kept); the counts of S − T and S − N differ for every configuration, so no isometry exists. ∎ This is a computer-assisted statement; Proposition 5.1 is its hand-proved aligned case.
+
+**Scope.** It assumes that each family occupies one slot, so that every state is a single root. Four slots then cannot be reduced to three while keeping the exchange as an isometry of the roots.
+
+## Proposal 5.5 (four slots, three zero modes)
+
+In heterotic compactifications on a Calabi-Yau threefold with E8 ⊃ SO(10) × SU(4), 248 = (45, 1) + (1, 15) + (16, 4) + (16bar, 4bar) + (10, 6), the SU(4) is the structure group of a rank-four bundle V, and the families are the zero modes, the 16s coming from H^1(X, V); their number is the index |c_3(V)|/2, which is 3 in the heterotic Standard Models built on SU(4) bundles (Braun, He, Ovrut and Pantev, hep-th/0501070; recalled, not reread). In that reading the four slots of this file are the fibre of V, and the three families are not three of the slots: a zero mode is a section of V and in general involves all four. Propositions 5.1 and 5.4 do not apply to it, since they assume one slot per family.
+
+The transposition M of Proposition 5.2 then exchanges the Pati-Salam SU(4), a gauge group, with the structure group SU(4) of V: colour and holonomy trade places, and SO(10) goes to the commutant SO(10)' of the other SU(4). The top-neutrino exchange becomes a statement about the fibre, which an index map must carry to the zero modes. The test is an explicit bundle. For a split bundle V = L_0 + L_1 + L_2 + L_3 (line-bundle models), slot i carries n_i = −χ(L_i) families with n_0 + ... + n_3 = 3; such models have aligned families and fall under Proposition 5.1. A non-split V, whose zero modes are spread over the slots, is the case to compute.
+
 ## Readings (proposals)
 
 1. **Three families are the obstruction.** The exchange of lemma 21 is a symmetry of the E8 geometry exactly in the four-family completion, where the colour-family square is 4 x 4 and the top belongs to the family paired with the lepton colour. With three families the square is 4 x 3 and the exchange is not an isometry (Proposition 5.1). Lemma 21's 96 = 84 + 12 in two ways is the three-family shadow of 128 = 116 + 12 in two ways, exchanged by M.
