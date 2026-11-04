@@ -82,6 +82,7 @@ HDR=paper/.supp_header.tex
 cat > "$HDR" <<'H'
 \usepackage{mathtools}
 \usepackage{fvextra}
+\usepackage{slashed}
 \usepackage{unicode-math}
 \setmathfont{Latin Modern Math}
 \newfontfamily\fallback{DejaVu Serif}
