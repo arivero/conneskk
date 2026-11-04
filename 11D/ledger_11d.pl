@@ -382,14 +382,14 @@ depends(d11_orientifold_scalars, d11_diquark_strings).
 depends(d11_orientifold_scalars, d11_orientifold_sign).
 attempted_by(d11_orientifold_scalars, claude).
 
-claim(d11_so32_comparison, claim, conditional, "Section 1 (full-paper comparison pending)", "The detailed comparison with A. Rivero, Eur. Phys. J. C 84 (2024) 1058 (arXiv:2407.05397), was read through a summarizing fetch. The archived original abstract also specifies an extra chiral +4/3 quark per generation; the full primary text remains to be checked.").
+claim(d11_so32_comparison, claim, proved, "Section 1 (comparison with the full text)", "Comparison with A. Rivero, Eur. Phys. J. C 84 (2024) 1058 (arXiv:2407.05397), read from the LaTeX source on 4 Nov 2026. The diquark counts (6, 6, 3) and the meson counts (6, 6, 12 neutral, one singlet left over) agree with lemma 21 and Proposition 9.2. The paper has colour singlets only for mesons, no sextet counts, no SO(2) for the top and no D-branes; the top is favoured, not derived, and the postulates make the non-binding quark up-type. Its footnote has the 84 + 12 split and SU(9) for M2 and M5, and its abstract specifies a chiral +4/3 quark per generation.").
 source(d11_so32_comparison, '11D/09_dilaton_spectral_and_so32.md', '1-the-so32-of-a-rivero-eur-phys-j-c-84-2024-1058-arxiv240705397').
 depends(d11_so32_comparison, l21_so30).
 depends(d11_so32_comparison, d11_heterotic_route).
 attempted_by(d11_so32_comparison, claude).
 checked_by(d11_so32_comparison, claude, by_hand).
-referee_pending(d11_so32_comparison).
-prior_work(d11_so32_comparison, partial, "The chain and the composite counts are known (the EPJC paper; hep-ph/0512065); the type I' realization (the top as a displaced D8-brane, the 30 as Chan-Paton labels on an O8^- wall) was not found there.").
+checked_by(d11_so32_comparison, sonnet_5_5, by_hand).
+prior_work(d11_so32_comparison, known, "The chain SU(16) x U(1) to SU(5) x SU(3), the counts (6, 6, 3) and 24, the elephant rule and the 84 + 12 and SU(9) footnote are in the EPJC paper; the type I-prime realization (the top as a displaced D8-brane, the 30 as Chan-Paton labels on an O8^- wall) is not.").
 
 claim(d11_so32_algebra, proposition, proved, "Section 1 (referee algebra)", "Under SU(16) x U(1), the complex SO(32) adjoint is 120 + 120bar + 255 + 1; under SU(5) x SU(3), the 105 contains (15, 3bar) + (10, 6). Matching these representations does not identify physical composites.").
 source(d11_so32_algebra, '11D/09_dilaton_spectral_and_so32.md', '1-the-so32-of-a-rivero-eur-phys-j-c-84-2024-1058-arxiv240705397').
