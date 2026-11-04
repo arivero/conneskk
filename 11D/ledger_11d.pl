@@ -224,10 +224,11 @@ attempted_by(d11_misaligned, claude).
 checked_by(d11_misaligned, claude, python("exhaustive neighbour counts over 192 slot assignments, exact fractions, not kept")).
 checked_by(d11_misaligned, terra_6_1, by_hand).
 
-claim(d11_four_slots, conjecture, conjectural, "Proposal 5.5", "If the families are the zero modes of an SU(4) bundle, the four slots are the fibre and three families are an index, so Propositions 5.1 and 5.4 do not apply as stated.").
+claim(d11_four_slots, conjecture, conjectural, "Proposal 5.5 (referee amendments)", "If the families are zero modes of an SU(4) bundle rather than single fibre roots, Propositions 5.1 and 5.4 do not apply as stated. The index gives net chirality; exact zero-mode counts and a compatible Weyl action remain to be established.").
 source(d11_four_slots, '11D/05_colour_family_exchange.md', 'proposal-55-four-slots-three-zero-modes').
 depends(d11_four_slots, d11_transposition).
 attempted_by(d11_four_slots, claude).
+checked_by(d11_four_slots, terra_6_1, by_hand).
 
 %% ---------------------------------------------------------------- 06: the main point and the heterotic route
 claim(d11_wilson_top, proposition, proved, "Proposition 6.1", "The top channel of lemma 22 is an SO(32) Wilson-line channel with m_t = a/R.").

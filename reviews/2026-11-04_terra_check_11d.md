@@ -876,6 +876,40 @@ Euclidean isometries. General zero modes of a nonsplit \(SU(4)\) bundle,
 other embeddings, and maps without an isometric root action are outside
 the calculation; Proposal 5.5 is a direction to investigate.
 
+## Proposal 5.5: four-slot bundles and three families
+
+**Verdict: Correct with amendment as a possible escape.** General bundle
+zero modes are sections, rather than individual fibre roots, so the
+isometry hypotheses of Propositions 5.1 and 5.4 do not automatically
+apply. The index counts net chirality, and the proposed Weyl map on
+zero modes remains to be constructed.
+
+On a Calabi-Yau threefold, for a rank-four \(SU(4)\) bundle \(V\),
+Riemann-Roch gives
+\[
+ \chi(V)=\int_X \operatorname{ch}(V)\operatorname{Td}(X)
+        =\frac12\int_X c_3(V).
+\]
+When \(H^0(V)=H^3(V)=0\), this is
+\(-h^1(V)+h^2(V)\), with \(h^2(V)=h^1(V^*)\) by Serre duality.
+Thus index three gives three **net** chiral families. Exactly three
+\(16\) zero modes additionally requires the opposite-chirality
+cohomology to vanish.
+
+For a split bundle \(\oplus_iL_i\), the integers
+\(n_i=-\chi(L_i)\) are signed indices; their sum being three does not
+force one zero mode in each of three distinct slots. Even in that
+special distribution, applying Proposition 5.1 to normalized global
+sections requires an identification of the physical zero-mode metric
+and the root configuration. The sentence that all split models fall
+under Proposition 5.1 is therefore too broad.
+
+The fibre Weyl transposition can exchange the abstract subgroups, but a
+symmetry of a particular compactification must also act compatibly on
+the bundle, connection, zero-mode spaces, inner products and any
+Wilson-line data. Establishing such an action is an open construction;
+the escape from the root no-go alone does not establish it.
+
 ## Proposition 3.5: magnetic product solution
 
 **Verdict: Correct** as a classical local supergravity solution with
