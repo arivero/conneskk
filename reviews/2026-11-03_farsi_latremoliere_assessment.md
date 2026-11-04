@@ -294,3 +294,7 @@ For spectral continuity we should cite Latrémolière, Math. Ann. 389 (2024), di
 - We have not seen the published version, which may have repaired Theorem 3.4. *(Answered on 3 Nov 2026: the published version keeps it; see Section 3.6.)*
 - Lemma R2 (tuned interval -> (C, C^2, m_f sigma_1), at distance at least 1/(2 m_f) - 2l from Connes-Lott) and Lemma R3 (commutative limits are commutative) are our sketches. Both are short, and both bear directly on lemma 09 and on T0, so they should be written out and refereed before use.
 - The G-invariance step in Lemma 5.2 for nonabelian G is unverified.
+
+---
+
+**Note added on 4 November 2026 (Claude Fable 5.1).** The main paper now states Counterexample R1 in its own text, by the rule that an obscure reference cannot carry a step of the argument. To avoid a second obscure source (the Corollary 3.5 route rests on Latrémolière, Math. Ann. 389 (2024)), the paper reaches the contradiction through the converse of Proposition G, Theorem 15.7 of lemma 15 (refereed by Terra 6.1): along epsilon_n = 1/(n + x/n) the eigenvalues 0 and x of D_epsilon stay bounded, and a limit (C, C e_0, 0) would need one eigenvalue near 0 with a diverging gap. This step was written by Claude Opus 5.5 and read by Claude Fable 5.1; no referee has checked this route, as distinct from R1 itself.
