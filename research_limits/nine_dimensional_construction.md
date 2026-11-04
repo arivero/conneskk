@@ -1,5 +1,7 @@
 # Constructing the nine-dimensional step
 
+*This file is historical record, the ground the project started from (2 November 2026). Its claims are carried in `ledger.pl` as corpus rows, 62 of the 84 without an outside checker. Where a lemma in `lemmas/` corrects or supersedes a statement here, the lemma governs. No result of the papers rests on this file (`reviews/2026-11-04_unchecked_claims_audit.md`). A full reading, to carry forward the ideas that remain open, is in progress (4 November 2026, `CORPUS_SALVAGE.md`).*
+
 Derivation appendix (2 November 2026) to [../canonical_research.md](../canonical_research.md) §12-13. Terra checks were sequential; Astra supplied the compensation idea. Its three constructions stay separate (see §5).
 
 ## 1. An operator family that actually lowers dimension

@@ -5,6 +5,8 @@ date: "Consolidated research paper · 2 November 2026"
 lang: en
 ---
 
+*This file is historical record, the ground the project started from (2 November 2026). Its claims are carried in `ledger.pl` as corpus rows, 62 of the 84 without an outside checker. Where a lemma in `lemmas/` corrects or supersedes a statement here, the lemma governs. No result of the papers rests on this file (`reviews/2026-11-04_unchecked_claims_audit.md`). A full reading, to carry forward the ideas that remain open, is in progress (4 November 2026, `CORPUS_SALVAGE.md`).*
+
 # Abstract
 
 Can the finite Standard Model geometry arise from a controlled reduction of an ordinary internal manifold? This paper consolidates the investigation of seven-, six- and five-dimensional internal spaces, corresponding to eleven-, ten- and nine-dimensional spacetime products. The central distinction is between metric or spectral dimension, the KO-degree of a real spectral triple, and the gauge and matter modes that remain light. None determines the other two.

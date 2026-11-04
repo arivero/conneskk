@@ -1,5 +1,7 @@
 # Heavy-mass limits, boundary geometry and the M-theory connection
 
+*This file is historical record, the ground the project started from (before 3 November 2026). Its claims are carried in `ledger.pl` as corpus rows, 62 of the 84 without an outside checker. Where a lemma in `lemmas/` corrects or supersedes a statement here, the lemma governs. No result of the papers rests on this file (`reviews/2026-11-04_unchecked_claims_audit.md`). A full reading, to carry forward the ideas that remain open, is in progress (4 November 2026, `CORPUS_SALVAGE.md`).*
+
 Derivation appendix (second stage) to [../canonical_research.md](../canonical_research.md), read with [research_note.md](research_note.md). Results labelled as calculations are elementary derivations or explicit matrix checks; they claim no priority. One Terra agent checked them, sequentially.
 
 ## 1. What a theory of limits must retain

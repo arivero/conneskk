@@ -140,6 +140,10 @@ From [lemma 21](lemmas/21_top_counting.md) and the [11D line](11D/README.md), fi
 
 From lemmas 06, 21 and 22 and the 11D files 08, 09 and 11: SO(30) as the commutant of the real structure on the massless light block for s = +1, the symmetric block of J-compatible operators against the antisymmetric block of the connection along the interval, and the compression of the latter to the window, with the comparison to the EPJC paper. Draft.
 
+### Historical record (the corpus the project started from)
+
+*These files are historical record, the ground the project started from (the files below carry their own dates, 1 to 2 November 2026, or precede 3 November 2026). Their claims are carried in `ledger.pl` as corpus rows, 62 of the 84 without an outside checker. Where a lemma in `lemmas/` corrects or supersedes a statement in them, the lemma governs. No result of the papers rests on these files (`reviews/2026-11-04_unchecked_claims_audit.md`). A full reading, to carry forward the ideas that remain open, is in progress (4 November 2026, `CORPUS_SALVAGE.md`).*
+
 ### Paper: *Nine, Ten and Eleven Dimensions*: [canonical_research.md](canonical_research.md)
 
 - [Abstract](canonical_research.md#abstract)

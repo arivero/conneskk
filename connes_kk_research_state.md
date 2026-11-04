@@ -1,5 +1,7 @@
 # Connes–Kaluza–Klein research: consolidated state
 
+*This file is historical record, the ground the project started from (2 November 2026). Its claims are carried in `ledger.pl` as corpus rows, 62 of the 84 without an outside checker. Where a lemma in `lemmas/` corrects or supersedes a statement here, the lemma governs. No result of the papers rests on this file (`reviews/2026-11-04_unchecked_claims_audit.md`). A full reading, to carry forward the ideas that remain open, is in progress (4 November 2026, `CORPUS_SALVAGE.md`).*
+
 **Research state:** 2 November 2026  
 **Purpose:** one canonical account of the nine-, ten- and eleven-dimensional geometric, electroweak and spectral questions. Section 9 organizes the conclusions by dimension; preceding sections contain assumptions, calculations and tests.
 

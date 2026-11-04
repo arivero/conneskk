@@ -26,8 +26,9 @@ supplements:
 	cd .. && for t in $(PAPERS); do sh paper/build_supplement.sh $$t && sh paper/build_supplement.sh $$t mobile || exit 1; done
 
 # Copy all PDFs to the folder served by GitHub Pages. Run at milestones, since PDFs are binaries in git.
-docs: all supplement
+docs: all supplement supplements
 	cp $(PAPERS:%=%.pdf) $(PAPERS:%=%_mobile.pdf) supplemental.pdf supplemental_mobile.pdf ../docs/
+	for t in $(PAPERS); do n=$$t; [ $$t = towerless_intervals ] && n=towerless; cp supplemental_$$n.pdf supplemental_$${n}_mobile.pdf ../docs/; done
 
 clean:
 	rm -f *.aux *.log *.bbl *.blg *.out *Notes.bib
