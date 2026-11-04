@@ -25,11 +25,14 @@
 %% refuted_by(Claim, Counterexample)
 %% prior_work(Claim, Verdict, Reference)   Verdict: known | partial | not_found  (from LITERATURE.md)
 %% claim_amended(Claim, By): Claim stands, with an amendment proved in By
+%% stated_in_draft(Claim, File)        a draft in paper/ states Claim (mapping in reviews/2026-11-04_unchecked_claims_audit.md)
+%% covered_by(Claim, Lemma)             the content of a corpus Claim is proved in the checked row Lemma
 
 :- discontiguous refuted_by/2.
 :- discontiguous prior_work/3.
 :- discontiguous claim/5, source/3, depends/2, hypothesis/2, attempted_by/2, checked_by/3, overturn/2, addresses/2, strategy/3.
 :- discontiguous referee_report/2, outside_referee/2, referee_pending/1.
+:- discontiguous stated_in_draft/2, covered_by/2.
 :- use_module(library(lists)).
 :- use_module(library(readutil)).
 
@@ -1416,6 +1419,29 @@ self_checked_only(C) :-
     findall(A, checked_by(C, A, _), Cs), Cs \== [],
     forall(member(A, Cs), attempted_by(C, A)).
 
+%% Draft use of the unchecked claims, 4 Nov 2026 (reviews/2026-11-04_unchecked_claims_audit.md).
+stated_in_draft(paper_1_1, 'paper/towerless_intervals.tex').
+stated_in_draft(paper_1_1, 'paper/chiral_limit_note.tex').
+stated_in_draft(paper_3_1, 'paper/towerless_intervals.tex').
+stated_in_draft(paper_3_1, 'paper/boundary_condition_note.tex').
+stated_in_draft(paper_4_1, 'paper/towerless_intervals.tex').
+stated_in_draft(paper_4_1, 'paper/boundary_condition_note.tex').
+stated_in_draft(rs_N4, 'paper/towerless_intervals.tex').
+stated_in_draft(rs_F4, 'paper/boundary_condition_note.tex').
+stated_in_draft(l12_mixing, 'paper/towerless_intervals.tex').
+covered_by(paper_3_1, l20_rank_one).
+covered_by(paper_4_1, l16_twistor).
+covered_by(rs_N4, l16_standard_nogo).
+covered_by(rs_F4, l22_family).
+checked_by(paper_1_1, claude_opus_5_5, by_hand).
+checked_by(rs_F4, claude_opus_5_5, by_hand).
+
+%% draft_claim_unchecked(-C): a draft states C, and neither an outside check nor a checked lemma stands behind it.
+draft_claim_unchecked(C) :-
+    stated_in_draft(C, _),
+    \+ covered_by(C, _),
+    \+ ( checked_by(C, W, _), W \== corpus ).
+
 %% unchecked(-C): proved or conditional, with no recorded checker (corpus claims included).
 unchecked(C) :- claim(C, _, S, _, _), memberchk(S, [proved, conditional]), \+ checked_by(C, _, _).
 
@@ -1457,6 +1483,9 @@ test(amendments_resolve) :- forall(claim_amended(C, B), (claim(C, _, _, _, _), c
 test(prior_work_resolves) :- forall(prior_work(C, V, _), (claim(C, _, _, _, _), memberchk(V, [known, partial, not_found]))).
 test(every_nogo_has_two_models) :- forall(nogo_models(_, Ms), (length(Ms, N), N >= 2)).
 test(addresses_resolve) :- forall(addresses(T, C), (strategy(T, _, _), claim(C, _, _, _, _))).
+test(draft_claims_have_a_check) :- \+ draft_claim_unchecked(_).
+test(coverage_targets_are_checked) :- forall(covered_by(C, L), (claim(C, _, _, _, _), checked_by(L, W, _), W \== corpus)).
+test(draft_files_exist) :- forall(stated_in_draft(_, F), exists_file(F)).
 test(referee_reports_exist) :- forall(referee_report(F, R), (exists_file(F), exists_file(R))).
 test(refereed_claims_have_review_bookkeeping) :-
     forall(( referee_report(F, _), source(C, F, _), claim(C, _, S, _, _), memberchk(S, [proved, conditional]) ),
