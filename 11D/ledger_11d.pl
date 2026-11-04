@@ -435,6 +435,25 @@ addresses(t14, d11_ads5).  addresses(t14, d11_two_completions).  addresses(t14, 
 addresses(t12, d11_colour84).  addresses(t12, d11_two_completions).  addresses(t11, d11_circle).
 addresses(t14, d11_blocks).  addresses(t14, d11_colour_families).  addresses(t14, d11_e8_grading).  addresses(t14, d11_yukawa_brackets).  addresses(t14, d11_m2m5_is_j).  addresses(t14, d11_nu_gravity).  addresses(t14, d11_discrete_z3).
 addresses(t12, d11_blocks).  addresses(t12, d11_m2m5_is_j).
+
+%% ---------------------------------------------------------------- 05, reading 3b (4 Nov 2026, on master)
+claim(d11_spin9_colour, no_go, proved, "Reading 3b (b)", "The regular colour SU(3) of the root table lies in no Spin(9) in SO(16) with 128 -> 44 + 84: the vector 16 is 3 + 3bar + 10 (1) under colour, and the Spin(9) spinor restricted to SU(3) in Spin(9) is 16 (1), 2 (3 + 3bar) + 4 (1) or 8 + 8. The stabilizer of the split in so(16) is spin(9), so the split 44 + 84 is not colour-covariant, and the fit 44 = 32 + 12 of the four-family count is numerical. Scope: this colour embedding and this class; escapes: other embeddings, non-equivariant identifications.").
+source(d11_spin9_colour, '11D/05_colour_family_exchange.md', 'readings-proposals').
+depends(d11_spin9_colour, d11_colour84).
+attempted_by(d11_spin9_colour, claude_opus_5_5).
+checked_by(d11_spin9_colour, claude_opus_5_5, by_hand).
+checked_by(d11_spin9_colour, sonnet_5_5, by_hand).
+claim(d11_44_sets, proposition, proved, "Reading 3b (b), strengthening", "No isometry of R^8 maps the 44 roots of (fourth family + top block) onto those of (fourth family + neutrino block): up to family permutations the degree multisets are {10^16, 12^12, 13^16} and {10^24, 13^16, 16^4}.").
+source(d11_44_sets, '11D/05_colour_family_exchange.md', 'readings-proposals').
+depends(d11_44_sets, d11_no_isometry).
+attempted_by(d11_44_sets, claude_opus_5_5).
+checked_by(d11_44_sets, sonnet_5_5, python("degree multisets over W(D8) and family permutations, exact integers, not kept")).
+claim(d11_spin9_conjugate, proposition, proved, "Reading 3b (c)", "The so(9) fixed by the Chevalley involution on sl(9) (file 04) is conjugate in E8 to the Spin(9) of reading 3, with k = so(9) + 84 and p = 44 + 84; involutions with a 120-dimensional fixed algebra form one class, and the spinor embeddings with 128 -> 44 + 84 one SO(16)-class.").
+source(d11_spin9_conjugate, '11D/05_colour_family_exchange.md', 'readings-proposals').
+attempted_by(d11_spin9_conjugate, sonnet_5_5).
+checked_by(d11_spin9_conjugate, sonnet_5_5, by_hand).
+referee_pending(d11_spin9_conjugate).
+addresses(t14, d11_spin9_colour).  addresses(t14, d11_44_sets).  addresses(t14, d11_spin9_conjugate).
 addresses(t14, d11_no_isometry).  addresses(t14, d11_transposition).  addresses(t14, d11_two_heavy).
 addresses(t12, d11_no_isometry).  addresses(t14, d11_flip).  addresses(t12, d11_transposition).
 addresses(t14, d11_misaligned).  addresses(t14, d11_four_slots).  addresses(t14, d11_wilson_top).  addresses(t14, d11_heterotic_route).
