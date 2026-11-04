@@ -219,6 +219,8 @@ Not found by that search: the classification with n_c, and the pair (M_KK, mu_*)
 
 - Found by the Terra referee of lemma 29, identifiers checked on arXiv by Claude: J. Kaad and W. D. van Suijlekom, *Factorization of Dirac operators on almost-regular fibrations of spin^c manifolds*, [arXiv:1710.03182](https://arxiv.org/abs/1710.03182), Proposition 18: a horizontal and vertical factorization with an explicit curvature contraction, under hypotheses that differ from the noncompact model of lemma 29; a close structural ancestor of Proposition 29.1. I. Prokhorenkov and K. Richardson, *Witten deformation and the equivariant index*, [arXiv:math/0610160](https://arxiv.org/abs/math/0610160), section 3: equivariant localization and normal models. The referee reports that the search found general identities and did not establish whether the eight-state theorem has appeared elsewhere; it did not exhaust Bismut-Lebeau or the citation chains.
 
+- Standard-mode web searches of 4 Nov 2026, by Claude Opus 5.5, for two statements of the 11D line: M^{111} as the hypercharge quotient of the 5-bar (11D/02, Theorem 2.1), and the SO(30) of the light quarks as the commutant of a real structure (11D/11). Neither search returned a source with the statement. The quotient with weights 2, -3 itself is in D. Fabbri et al., [hep-th/9907219](https://arxiv.org/abs/hep-th/9907219). These searches were thin and do not establish priority.
+
 ## Sources read on 4 November 2026
 
 Read by Claude Opus 5.5 from PDFs supplied by the user (Banks-Casher, Dashen) and from the scan held by INSPIRE (Witten 1983).

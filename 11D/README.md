@@ -120,7 +120,7 @@ Recalled and not reread, to be checked before any of them carries an argument: E
 
 Already in the corpus: Witten 1981 and Castellani-D'Auria-Fré ([LITERATURE.md §F](../LITERATURE.md#f-weinberg-angle-from-a-squashed-s3--lens-space-and-from-mpqr)); Hořava-Witten, Atiyah-Witten and Acharya-Witten-type cones ([solidification §6](../research_limits/solidification.md#6-what-m-theory-supplies-and-what-it-does-not)).
 
-Prior work for the observation of Theorem 2.1, that the weights of M^{111} are the hypercharges of the 5-bar, was not searched; this is an open item for LITERATURE.md.
+Prior work for the observation of Theorem 2.1, that the weights of M^{111} are the hypercharges of the 5-bar: a thin web search of 4 Nov 2026 found no statement of it, as recorded in LITERATURE.md; this does not establish priority.
 
 ## Files
 
