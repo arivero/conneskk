@@ -2,6 +2,8 @@
 
 Part of the 11D line of research ([README](README.md), [PLAN](PLAN.md)). Attempted by Claude (Anthropic), 4 Nov 2026. Propositions 4.1 to 4.3 and Theorem 4.4 and Propositions 4.5, 4.6 are proved here by hand (branching rules and counting); the negative results 4.3 and 4.6 await an independent check; readings are labelled as proposals. Referee pending.
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The colour obstructions in Propositions 4.2(a) and 4.3 are independently checked. The tensor-factor conclusion of 4.2(b) needs a factor-preserving map, and the "exactly" clause in 4.3 also needs nonzero triplets: the trivial nine-dimensional representation gives 84 singlets. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#propositions-42-and-43-complex-colour-representations). Other results remain pending.
+
 ## The question
 
 [Lemma 21](../lemmas/21_top_counting.md), Proposition 21.3: with three generations and Dirac neutrinos, dim H_F = 96 = 84 + 12 in two ways,

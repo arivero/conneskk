@@ -146,12 +146,12 @@ attempted_by(d11_blocks, claude).
 checked_by(d11_blocks, claude, by_hand).
 referee_pending(d11_blocks).
 
-claim(d11_colour_families, proposition, proved, "Propositions 4.2, 4.3 (negative results, pending check)", "The colour contents of F1 and F2 differ, so no colour-commuting unitary exchanges them, and for every SU(3) -> SU(9) the space Lambda^3 C^9 is never either family, only 3 + 6 (1) giving triplets only, with content 15 (3) + 6 (3bar) + 21 (1).").
+claim(d11_colour_families, no_go, proved, "Propositions 4.2(a), 4.3 (independently checked with amendments)", "The colour contents of F1 and F2 differ, so no colour-commuting unitary exchanges them; for every SU(3) -> SU(9), Lambda^3 C^9 is neither family. With nonzero triplets and no other nontrivial irreducibles, C^9 is 3 + 6 (1) or its conjugate, giving 15 (3) + 6 (3bar) + 21 (1), or its conjugate.").
 source(d11_colour_families, '11D/04_two_families_m2_m5.md', '2-colour-obstructions').
 depends(d11_colour_families, d11_colour84).
 attempted_by(d11_colour_families, claude).
 checked_by(d11_colour_families, claude, by_hand).
-referee_pending(d11_colour_families).
+checked_by(d11_colour_families, terra_6_1, by_hand).
 
 claim(d11_e8_grading, theorem, proved, "Lemma 4.A, Theorem 4.4", "The two commuting order-3 gradings of e8, by SU(9) (brane level mod 3, giving gravity, C_3 and C_6 sectors) and by SU(3) x E6 (families), place the 10 and H_u in the C_3 sector and (d^c, L) and nu^c in the C_6 and gravity sectors according to a sign t.").
 source(d11_e8_grading, '11D/04_two_families_m2_m5.md', '4-placement-of-the-generation').

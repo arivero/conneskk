@@ -124,3 +124,67 @@ linear real nine-dimensional colour representation; the second concerns
 tensor modes on the stated quotient with the stated action. Colour acting
 on other internal spaces, nonlinear or brane realizations, and maps without
 colour equivariance remain open directions.
+
+## Propositions 4.2 and 4.3: complex colour representations
+
+**Verdict: Correct with amendments.** The nonisomorphism of \(F_1,F_2\)
+and the exclusion of both as \(\Lambda^3\mathbb C^9\) are correct. Two
+additional statements need narrower wording.
+
+For Proposition 4.2(a), the colour multiplicities are
+\[
+ F_1=10(3+\bar3)+24\,1,\qquad
+ F_2=12(3+\bar3)+12\,1 .
+\]
+An intertwiner preserves the isotypic components, so no colour-commuting
+unitary exchanges them. Even a colour-group automorphism preserves the
+dimension of the invariant subspace, which is \(24\) for \(F_1\) and
+\(12\) for \(F_2\).
+
+For Proposition 4.2(b), the stated conclusion holds for a
+**tensor-factor-preserving** bijection identifying the top's colour
+factor with the neutrinos' family factor. Linearity in each index alone
+does not imply this: every linear map on the tensor product is multilinear
+in its arguments, and a unitary may entangle the three-dimensional index
+with the four-dimensional chirality/conjugation index. Such a unitary
+need not be a flip of tensor factors.
+
+For Proposition 4.3, the sentence claiming that the exterior cube
+contains only \(1,3,\bar3\) *exactly* for
+\(3+6\,1\) or its conjugate has a counterexample: the trivial
+homomorphism gives \(\mathbb C^9=9\,1\) and
+\(\Lambda^3\mathbb C^9=84\,1\). The corrected statement adds the
+requirement that the exterior cube contain a nonzero triplet.
+
+**Independent proof of the corrected Proposition 4.3.** The possible
+irreducible dimensions up to nine are \(1,3,6,8\), including conjugates.
+An \(8+1\) contains a \(10\) in \(\Lambda^2 8\), as in the preceding
+check. For \(6+3\,1\), the exterior cube has a \(6\) summand. For
+\(6+3\) or \(6+\bar3\), \(\Lambda^3 6\) contains both \(10\) and
+\(\bar{10}\): in \(6=\operatorname{Sym}^2\mathbb C^3\), the highest
+weight vectors
+\[
+ x^2\wedge xy\wedge xz,\qquad x^2\wedge xy\wedge y^2
+\]
+have weights \((3,0)\) and \((0,3)\), respectively. Their dimensions
+already sum to \(\binom63=20\). The conjugate cases are analogous.
+
+With two triplets and three singlets, the cube contains
+\(T\otimes T'\), hence a \(6,\bar6\), or \(8\). With three triplets,
+\(T\otimes T'\otimes T''\) contains a \(10,\bar{10},15\), or
+\(\bar{15}\). With one triplet and six singlets,
+\[
+ \Lambda^3(3+6\,1)
+ =\Lambda^3 3+6\Lambda^2 3+15\,3+20\,1
+ =15\,3+6\,\bar3+21\,1 .
+\]
+Its conjugate has the multiplicities of \(3,\bar3\) reversed. The
+remaining case is the trivial representation \(9\,1\). None gives either
+target: both targets contain equally many \(3\) and \(\bar3\), as well
+as nonzero triplets.
+
+**Scope and direction.** This concerns the full exterior cube of a
+complex nine-dimensional linear \(SU(3)\) representation and the stated
+colour action on \(F_1,F_2\). Other dimensions, non-equivariant
+identifications, nonlinear or brane constructions, and maps that do not
+preserve the colour action remain possible directions.
