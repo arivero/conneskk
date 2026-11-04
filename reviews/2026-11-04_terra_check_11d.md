@@ -943,6 +943,37 @@ three Einstein constants. Here “round factors” means the standard
 scaled Fubini-Study metric on \(\mathbb{CP}^2\) and round metric on
 \(S^2\).
 
+## Proposition 6.1: the SO(32) Wilson-line spectrum
+
+**Verdict: Correct with amendments.** The charged momentum progressions
+match a channel of Lemma 22 after the stated identification of
+parameters. The \(SO(32)\) charged sector has 30 copies of that channel,
+and \(a/R\) is the lowest positive mass only on the chosen fundamental
+interval \(0\leq a\leq1/2\).
+
+Complexifying the defining representation gives
+\(30\oplus1_{+1}\oplus1_{-1}\), hence
+\[
+ \mathfrak{so}(32)_\mathbb C
+ =\mathfrak{so}(30)_\mathbb C\oplus1_0
+  \oplus30_{+1}\oplus30_{-1}.
+\]
+The dimensions are \(435+1+30+30=496\).
+The charged holonomies shift the momenta to
+\((n\pm a)/R\). With \(\ell=\pi R\) and \(\theta=\pi a\), these
+are \((n\pi\pm\theta)/\ell\), with multiplicity 30 for each
+progression before spacetime polarizations are counted. The light mass
+is \(\operatorname{dist}(a,\mathbb Z)/R\); in the interval
+\([0,1/2]\) it is \(a/R\). Lemma 22's nondegenerate window uses the
+interior, with the endpoint understood as a limit.
+
+This is a spectral comparison. It does not identify a quark with the
+charged gauge-sector fields, their spin or multiplicity. For an
+\(SO(32)\) Wilson line, \(a\mapsto a+1\) is literally periodic; the
+global form and additional spinor sectors of the heterotic gauge group
+must be specified before extending that periodicity to the full string
+spectrum.
+
 ## Proposition 9.3: real-structure constraint on diquark blocks
 
 **Verdict: Correct with amendment.** The block-symmetry constraint and

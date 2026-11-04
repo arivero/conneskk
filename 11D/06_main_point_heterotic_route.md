@@ -39,6 +39,8 @@ This is the pattern of hypothesis H: vectorlike at 9, chiral and KO-6 at 10, chi
 
 ## 4. Proposition 6.1 (the top channel as an SO(32) Wilson line)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The momentum progressions agree; the SO(32) charged sector has 30 copies, and \(m=a/R\) is the light mass on \(0\leq a\leq1/2\). The field identification remains a proposal. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-61-the-so32-wilson-line-spectrum).
+
 **Statement.** On a circle of radius R, take the SO(32) Wilson line W = 1_30 ⊕ R(2 pi a) (rotation by the angle 2 pi a in the last two directions). The adjoint 496 decomposes under SO(30) x SO(2) as (435, 1)_0 + (1, 1)_0 + (30, 2), where (30, 2) = (30)_{+1} + (30)_{-1}; the Kaluza-Klein masses are n/R on the first two pieces and |n ± a|/R on (30)_{±1}, n in Z. With l = pi R and theta = pi a this is the spectrum (n pi ± theta)/l of a channel of lemma 22 (Theorem 22.1) and of the circle form of lemma 25, with mass parameter m = theta/l = a/R; so the top channel of lemma 22 and the SO(32)-charged states of this Wilson line have the same free spectrum when m_t = a/R.
 
 **Proof.** The Wilson line commutes with SO(30) x SO(2) and acts on the vector 2 of SO(2) by e^{±2 pi i a} in the complex basis; a field of charge q on the circle with holonomy e^{2 pi i q a} has momenta (n + q a)/R. Substitution of l = pi R and theta = pi a. ∎

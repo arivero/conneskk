@@ -231,13 +231,13 @@ attempted_by(d11_four_slots, claude).
 checked_by(d11_four_slots, terra_6_1, by_hand).
 
 %% ---------------------------------------------------------------- 06: the main point and the heterotic route
-claim(d11_wilson_top, proposition, proved, "Proposition 6.1", "The top channel of lemma 22 is an SO(32) Wilson-line channel with m_t = a/R.").
+claim(d11_wilson_top, proposition, proved, "Proposition 6.1 (referee amendments)", "The SO(32) Wilson-line charged sector has 30 copies of the lemma-22 channel progressions; the light mass is a/R on 0 <= a <= 1/2. The physical field identification remains a proposal.").
 source(d11_wilson_top, '11D/06_main_point_heterotic_route.md', '4-proposition-61-the-top-channel-as-an-so32-wilson-line').
 depends(d11_wilson_top, l22_window).
 depends(d11_wilson_top, l21_so30).
 attempted_by(d11_wilson_top, claude).
 checked_by(d11_wilson_top, claude, by_hand).
-referee_pending(d11_wilson_top).
+checked_by(d11_wilson_top, terra_6_1, by_hand).
 prior_work(d11_wilson_top, known, "Hosotani 1983 (momenta (n + q a)/R with a Wilson line); SO(32) -> SO(30) x U(1) Wilson line T-dual to fifteen D8-branes plus one displaced (hep-th/9711098, hep-th/0108135); the interval-circle equality is the circle form of lemma 25. The assignment of the top to the displaced brane was not found.").
 
 claim(d11_heterotic_route, conjecture, conjectural, "Sections 2, 3 and 5 (proposals)", "The heterotic web with its regimes 9, 10 and 11 realizes the target: D_F as a Wilson line, lemma 21's SO(30) x SO(2) as fifteen D8-branes and one displaced, and the composite scalars as open strings on the stack.").
