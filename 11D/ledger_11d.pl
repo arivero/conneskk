@@ -25,12 +25,12 @@ attempted_by(d11_casimir, claude).
 checked_by(d11_casimir, claude, python("11D/checks_11d.py sections F, F2: series against quadrature")).
 referee_pending(d11_casimir).
 
-claim(d11_scale_free, proposition, proved, "Proposition 1.5", "For V = l^-4 G(theta): with the angle free, V is monotone in l unless G = 0, so l runs away by the sign of min G; with theta = l m, stationary lengths have l m = theta_* independent of m, so M_W l is constant (alpha = 1). A joint family with alpha < 1 needs a second scale in the action; in the flat one-loop family the electroweak term is m^2/l^2.").
+claim(d11_scale_free, proposition, conditional, "Proposition 1.5 (referee amendment)", "For V = l^-4 G(theta), a nonzero angular minimum gives a runaway in l; with theta = l m, an isolated stationary angle gives l proportional to 1/m. A flat direction such as G(theta) = theta^4 allows other stationary paths without selecting one. The specified flat one-loop determinant has no positive stationary angles tending to zero when n_f != 54/5.").
 source(d11_scale_free, '11D/01_interval_and_eleventh_dimension.md', 'proposition-15-a-scale-free-potential-fixes-the-path-with-m_w-l-constant').
 depends(d11_scale_free, d11_casimir).
 attempted_by(d11_scale_free, claude).
 checked_by(d11_scale_free, claude, by_hand).
-referee_pending(d11_scale_free).
+checked_by(d11_scale_free, terra_6_1, by_hand).
 
 %% the two families of the Astra 6 audit of 3 Nov 2026 (reviews/2026-11-03_astra_audit_d11.md), used by 01
 claim(a11_joint_limit, proposition, proved, "Audit, section 3", "D_F = epsilon D_*, l = l_* epsilon^-alpha, 0 < alpha < 1: exact window epsilon D_*, gap >= pi/l - epsilon ||D_*||, compression error O(epsilon^{2(1-alpha)}); a cutoff epsilon^beta, alpha < beta < 1, holds exactly the r finite states, while N(E) ~ 2 r l E/pi diverges at fixed E.").

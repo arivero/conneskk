@@ -83,6 +83,8 @@ Near t = 0, 𝒱'(0) = (6 + 24/5 - n_f) J(0) with J(0) = int x^3/sinh^2 x dx = (
 
 ## Proposition 1.5 (a scale-free potential fixes the path with M_W l constant)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The derivative identity is correct, and an isolated stationary angle gives \(l\propto1/m\). The universal conclusion has a flat-direction counterexample \(G(\theta)=\theta^4\); for the displayed one-loop determinant the small-angle obstruction is recovered when \(n_f\ne54/5\). See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-15-scale-free-potentials-and-the-joint-path).
+
 **Statement.** Let V(l, theta) = l^{-4} G(theta) with G of class C^1, the form of every one-loop potential of a flat interval whose only scales are l and the wall angles (lemmas 23 and 24, with a_0 included in G).
 
 1. If the angle is free, V is monotone in l at every fixed theta with G(theta) != 0. At the minimizing angle theta_min the length runs away: to l -> infinity if G(theta_min) > 0, to l -> 0 if G(theta_min) < 0. Stationary points exist only on the set G = G' = 0.

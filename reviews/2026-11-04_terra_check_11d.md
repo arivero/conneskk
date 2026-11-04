@@ -9,6 +9,61 @@ the scoped no-go results. The ledger flags fewer than three model
 identifiers as below its general-consensus threshold; a third independent
 check remains open.
 
+## Proposition 1.5: scale-free potentials and the joint path
+
+**Verdict: Error in the universal conclusion; correct with amendment for
+isolated stationary angles.** The derivative identities are correct.
+They do not imply that every stationary family has constant angle or that
+a second scale is necessary for the *existence* of a joint family.
+
+At fixed \(m>0\), put \(\theta=\ell m\). The derivative is
+\[
+ \partial_\ell V=\ell^{-5}\bigl(\theta G'(\theta)-4G(\theta)\bigr).
+\]
+If a continuous stationary branch chooses an isolated positive root
+\(\theta_*\), then \(\theta_*\) is constant and
+\(\ell=\theta_*/m\). A root interval gives a flat direction instead.
+
+**Counterexample.** Let \(G(\theta)=\theta^4\) on a neighbourhood
+\(0\leq\theta<\delta\), with a \(C^1\) extension to the angle domain.
+There
+\[
+ V(\ell,\ell m)=\ell^{-4}(\ell m)^4=m^4
+\]
+is independent of \(\ell\). For any \(0<\alpha<1\), the family
+\(m=\varepsilon,\ \ell=\varepsilon^{-\alpha}\) is stationary for all
+sufficiently small \(\varepsilon\), and \(\ell m\to0\). The vector
+mass formula of Theorem 23.6 gives \(M_W\ell\sim\sqrt2\,\ell m\to0\).
+The potential leaves this path undetermined; it does not dynamically
+select it. A smooth extension can also be chosen with
+\(G(\theta)\geq\theta^4\) on the rest of the fundamental interval, so
+the example can be made a flat family of minima.
+
+For the **specified flat one-loop determinant**, the small-angle result
+of Proposition 1.4 gives
+\[
+ G(\theta)=a_0+c\theta^2+o(\theta^2),\qquad
+ \theta G'(\theta)-4G(\theta)
+ =-4a_0-2c\theta^2+o(\theta^2),
+\]
+where \(c\) is proportional to \(54/5-n_f\). If \(c\ne0\), there is
+no sequence of positive stationary angles tending to zero, whether or
+not \(a_0=0\). In particular this covers integer \(n_f\) under the
+displayed determinant. The tuned case \(c=0\) requires its higher-order
+term to be checked. The comparison with the audit's \(q>0\) ansatz is
+correct: the displayed quadratic contribution is \(c m^2/\ell^2\).
+
+For a free angle, \(\partial_\ell V=-4\ell^{-5}G\); a nonzero
+minimized \(G\) produces the stated runaway. A zero minimum leaves the
+length flat. At an endpoint of a constrained angle interval the
+stationarity condition on \(G'\) must be understood one-sided.
+
+**Scope and direction.** The corrected fixed-angle result concerns
+isolated stationary roots of a scale-free \(C^1\) potential. A flat
+modulus, a tuned higher-order potential, or additional dimensionful
+terms leave other families possible. A mechanism that *selects* a
+joint path with finite gauge couplings remains to be constructed.
+
 ## Proposition 2.5: hypercharge and B - L fluxes
 
 **Verdict: Correct with amendment.** The exclusion of a generation follows
