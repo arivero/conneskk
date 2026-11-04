@@ -306,13 +306,13 @@ depends(d11_orientifold_reading, d11_wall_multiplicity).
 attempted_by(d11_orientifold_reading, claude).
 
 %% ---------------------------------------------------------------- 09: the dilaton as a spectral function, SO(32) of the EPJC paper
-claim(d11_dilaton_spectral, proposition, proved, "Proposition 9.1", "The type I' function z is z(0) plus c Tr g_x(l |D_F|) over sixteen channels, and infinite coupling at the far wall holds iff z(0) = (2cL/pi)(4 pi - l Sigma m_k), proved from the recalled slope rule.").
+claim(d11_dilaton_spectral, proposition, conditional, "Proposition 9.1 (referee clarification)", "Given the recalled slope rule and sixteen selected channel values m_k, z is z(0) plus c Tr g_x(l |D_F|) over that channel space, and the far-wall zero condition is z(0) = (2cL/pi)(4 pi - l Sigma m_k). The full physical trace has additional multiplicities.").
 source(d11_dilaton_spectral, '11D/09_dilaton_spectral_and_so32.md', '2-proposition-91-the-type-i-coupling-function-is-a-trace-of-a-function-of-the-finite-dirac-operator').
 depends(d11_dilaton_spectral, d11_angle_interval).
 depends(d11_dilaton_spectral, d11_e_walls).
 attempted_by(d11_dilaton_spectral, claude).
 checked_by(d11_dilaton_spectral, claude, by_hand).
-referee_pending(d11_dilaton_spectral).
+checked_by(d11_dilaton_spectral, terra_6_1, by_hand).
 
 claim(d11_diquark_strings, proposition, proved, "Proposition 9.2", "The colour-antitriplet diquark counts of lemma 21 (-2/3: 6, +1/3: 6, +4/3: 3) are the strings between the fifteen-brane stack and its image on an O8^- plane; an O8^+ plane gives (3, 6, 1); a single brane has no string to its own image on O8^-, proved from representation theory and the recalled orientifold projections.").
 source(d11_diquark_strings, '11D/09_dilaton_spectral_and_so32.md', '3-proposition-92-diquarks-as-strings-between-the-stack-and-its-image').

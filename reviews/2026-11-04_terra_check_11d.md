@@ -1149,6 +1149,41 @@ Direct access to the cited primary sources was unavailable; their
 normalization and the string-theory enhancement are not independently
 verified here.
 
+## Proposition 9.1: integrated coupling profile
+
+**Verdict: Correct with amendment, conditional on the recalled
+slope rule.** The integration and far-wall condition are correct.
+The trace is over the sixteen selected channel values, rather than an
+unqualified trace over the full finite Hilbert space.
+
+Let \(N(x)=\sum_k1_{\{x_k<x\}}\). Integrating
+\(z'=c(8-N)\) almost everywhere gives
+\[
+ z(x)=z(0)+c\left(8x-\sum_{k=1}^{16}(x-x_k)_+\right)
+     =z(0)+c\sum_{k=1}^{16}\min(x/2,x_k-x/2).
+\]
+At \(x=L\) this becomes
+\[
+ z(L)=z(0)-c(8L-\sum_kx_k).
+\]
+With \(x_k=2\ell Lm_k/\pi\), the zero condition is
+\(z(0)=(2cL/\pi)(4\pi-\ell\sum_km_k)\), as stated.
+The nonincreasing slopes make \(z\) concave; if \(z(0)>0\) and
+\(z(L)=0\), it is positive on \([0,L)\).
+
+The equality with a spectral trace assumes a chosen sixteen-dimensional
+channel space with eigenvalues \(m_k\), or an explicitly normalized
+projection selecting those values. The physical \(D_F\) has additional
+chirality, conjugation, colour and generation multiplicities, which
+cannot be dropped from its full trace without specifying that
+projection. The assignment of the sixteen brane positions to those
+channels is also part of the proposal. This profile alone does not
+derive a stabilizing term for the interval modulus.
+
+The Polchinski-Witten source could not be accessed directly; the
+slope, coordinate and \(e^\phi\)-to-\(z\) conventions remain
+conditional on the recalled rule.
+
 ## Proposition 6.1: the SO(32) Wilson-line spectrum
 
 **Verdict: Correct with amendments.** The charged momentum progressions

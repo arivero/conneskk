@@ -12,6 +12,8 @@ That paper uses the adjoint of SO(32) to classify the scalars of a supersymmetri
 
 ## 2. Proposition 9.1 (the type I' coupling function is a trace of a function of the finite Dirac operator)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The integration is independently checked conditional on the recalled slope rule. The trace is over sixteen selected channels, not automatically the full physical \(D_F\) Hilbert space; direct comparison with the cited source was unavailable. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-91-integrated-coupling-profile).
+
 **Setting.** Type I' on an interval [0, L], in the conformal coordinate x, with sixteen D8-branes at x_1, ..., x_16 and O8^- planes at the ends. Recalled rule (Polchinski and Witten, hep-th/9510169): the dilaton is e^{phi} = z^{−5/6} for a function z that is continuous and piecewise linear in x, with slope c (8 − N(x)), where N(x) is the number of D8-branes to the left of x and c > 0; the coupling diverges where z vanishes. Dictionary (06, 07): x_k = (2L/pi) θ_k with θ_k = l m_k the angles of sixteen channels of the finite Dirac operator (fifteen light-quark channels with colour, and the top).
 
 **Statement.**
