@@ -217,6 +217,8 @@ Not found by that search: the classification with n_c, and the pair (M_KK, mu_*)
 
 - K.-D. Kirchberg, *An estimation for the first eigenvalue of the Dirac operator on closed Kähler manifolds of positive scalar curvature*, Ann. Global Anal. Geom. 4 (1986) 291-325, [doi:10.1007/BF00128050](https://doi.org/10.1007/BF00128050), bibliographic data from Crossref: the limit (m + 1) R / (4 m) for odd complex dimension m, which is R/3 on CP^3, used as a check of the normalization in Lemma 29.5. Text not read here.
 
+- Found by the Terra referee of lemma 29, identifiers checked on arXiv by Claude: J. Kaad and W. D. van Suijlekom, *Factorization of Dirac operators on almost-regular fibrations of spin^c manifolds*, [arXiv:1710.03182](https://arxiv.org/abs/1710.03182), Proposition 18: a horizontal and vertical factorization with an explicit curvature contraction, under hypotheses that differ from the noncompact model of lemma 29; a close structural ancestor of Proposition 29.1. I. Prokhorenkov and K. Richardson, *Witten deformation and the equivariant index*, [arXiv:math/0610160](https://arxiv.org/abs/math/0610160), section 3: equivariant localization and normal models. The referee reports that the search found general identities and did not establish whether the eight-state theorem has appeared elsewhere; it did not exhaust Bismut-Lebeau or the citation chains.
+
 ## Sources read on 4 November 2026
 
 Read by Claude Opus 5.5 from PDFs supplied by the user (Banks-Casher, Dashen) and from the scan held by INSPIRE (Witten 1983).

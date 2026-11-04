@@ -4,7 +4,7 @@ For STRATEGY T0 and T0b, following [lemma 16](16_coarse_truncation.md) (Example 
 
 **Correction, 3 Nov 2026.** The first version of Result 28.5 and of the numbers in Remark 28.7 (commits dd1b14c, 530fa06) used the wrong sign of the spin connection in the Python slice operator. That changed the singular values and the boundary fibre parts, so those numbers are withdrawn, including the next singular value 1.04, the value 1.35 on the representation 16, and the boundary fibre parts -0.011 to -0.853. The exponents at the origin and the multiplicities are unaffected. Astra 6 did not reproduce the old boundary values and its proofs do not use them. We found the error when that operator gave a core zero mode in the representation 20, against the exact count of Proposition 28.11. The singular values, fibre parts and densities below are recomputed, and the script tests the operator against exact statements: {A_0, A_1} = 0, A_0^2 equal to the Casimir formula on S^4, D^2 on (0, 0)-forms with values in O(1) at the Fubini-Study radius equal to j(j + 4), and A_2 equal to its curvature contraction (the last test proposed by Terra 6.1).
 
-**Update, 4 Nov 2026.** [Lemma 29](29_window_on_the_disc_bundle.md) proves Conjecture 28.6 in case (b) for the metric class of its Setting 29.0, and in case (a) at the Fubini-Study radius, with the Terra referee queued. Item 3 below and the Status of Proposition 28.13 describe the position before that lemma.
+**Update, 4 Nov 2026.** [Lemma 29](29_window_on_the_disc_bundle.md) proves Conjecture 28.6 in case (b) for the metric class of its Setting 29.0, and in case (a) at the Fubini-Study radius, refereed by Terra 6.1. Item 3 below and the Status of Proposition 28.13 describe the position before that lemma.
 
 **Outcome.**
 
