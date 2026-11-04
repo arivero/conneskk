@@ -48,18 +48,18 @@ attempted_by(a11_localized, astra6).
 checked_by(a11_localized, claude, python("11D/checks_11d.py section H: secular roots by bisection, the audit table and the identity")).
 
 %% ---------------------------------------------------------------- 02: Witten spaces as the hypercharge quotient
-claim(d11_quotient, theorem, proved, "Theorem 2.1", "M^{111} = Y_{3,2} = (S^9 cap mu_Y^{-1}(0))/U(1)_Y for the 5-bar = (3bar,1)_{1/3} + (1,2)_{-1/2}: a circle bundle of O(3,2) over CP^2 x CP^1, Calabi-Yau cone because tr Y = 0, effective group (U(3) x U(2))/U(1)_Y, whose intersection with SU(3) x SU(2) is the centre Z_6.").
+claim(d11_quotient, theorem, conditional, "Theorem 2.1 (referee amendments)", "Y_{3,2} = (S^9 cap mu_Y^{-1}(0))/U(1)_Y is the circle bundle of O(3,2) over CP^2 x CP^1, with trivial-canonical cone and effective group (U(3) x U(2))/U(1)_Y. Its identification with M^{111} is conditional on the recalled fibration; the Sasaki-Einstein metric requires rescaling the natural quotient metric.").
 source(d11_quotient, '11D/02_witten_spaces_hypercharge_quotient.md', 'theorem-21-m111-is-the-hypercharge-quotient-of-the-5-bar').
 attempted_by(d11_quotient, claude).
 checked_by(d11_quotient, claude, python("11D/checks_11d.py sections A, B: weights, Calabi-Yau condition, Z_6")).
-referee_pending(d11_quotient).
+checked_by(d11_quotient, terra_6_1, by_hand).
 
 claim(d11_unique, proposition, proved, "Proposition 2.2", "Among circle quotients of S^5 x S^3 with coprime weights (b, -a), only (3,2) has a Calabi-Yau cone; a free circle quotient of a moment level in a complex representation of dimension n has dimension 2n - 3, which is 7 only for n = 5 (the 5 and 5-bar of SU(5)).").
 source(d11_unique, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-22-uniqueness-of-the-count-7').
 depends(d11_unique, d11_quotient).
 attempted_by(d11_unique, claude).
 checked_by(d11_unique, claude, python("11D/checks_11d.py section A")).
-referee_pending(d11_unique).
+checked_by(d11_unique, terra_6_1, by_hand).
 
 claim(d11_topology, proposition, proved, "Proposition 2.3", "Circle bundle Y_{a,b} over CP^2 x CP^1, a != 0: H^2 = Z + Z/gcd(a,b), b_3 = 0, H^4 of order a^2 with Smith invariants (gcd, a^2/gcd), spin iff a odd and b even; for (3,2) H^4 = Z/9 and H^2(B) -> H^2(Y) = Z is (x,y) -> 2x - 3y.").
 source(d11_topology, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-23-topology-of-y_ab').
@@ -72,7 +72,7 @@ source(d11_z6, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-24-t
 depends(d11_z6, d11_quotient).
 attempted_by(d11_z6, claude).
 checked_by(d11_z6, claude, python("11D/checks_11d.py section B")).
-referee_pending(d11_z6).
+checked_by(d11_z6, terra_6_1, by_hand).
 
 claim(d11_flux_nogo, no_go, proved, "Proposition 2.5 (independently checked with amendment)", "Ten-dimensional Weyl fermions on CP^2 x CP^1 with one abelian line bundle per Standard Model field and the canonical formal spin^c shift: no generation for fluxes along Y and B - L. Equal u^c and d^c images and unsigned linearity of 2j + 1 require a common ten-dimensional chirality.").
 source(d11_flux_nogo, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-25-no-generation-from-fluxes-along-hypercharge-and-b---l').

@@ -2,7 +2,9 @@
 
 Part of the 11D line of research ([README](README.md)). Theorem 2.1 and Propositions 2.2 to 2.4 and 2.6 are proved here; Proposition 2.5 is a negative result in a stated scope, pending an independent check. Attempted by Claude (Anthropic), 3 Nov 2026, with a remark from the steer of the same day on the mixing of u and d. Checks: [checks_11d.py](checks_11d.py), sections A to D, Python with exact fractions. Referee pending.
 
-**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The exclusion in Proposition 2.5 has an independent analytic proof. The required-bidegrees lemma and the general assertion that \(u^c,d^c\) must have the same flux image require a common ten-dimensional chirality; the exclusion itself also holds without that extra assumption. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-25-hypercharge-and-b---l-fluxes). The other results of this file remain pending.
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The exclusion in Proposition 2.5 has an independent analytic proof. The required-bidegrees lemma and the general assertion that \(u^c,d^c\) must have the same flux image require a common ten-dimensional chirality; the exclusion itself also holds without that extra assumption. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-25-hypercharge-and-b---l-fluxes); other reviewed items are noted separately.
+
+**Referee note on Theorem 2.1 and Propositions 2.2, 2.4 (GPT-6.1 Terra).** The quotient and tensor-centre calculations are independently checked. The cited \(M^{111}\) identification is conditional on the recalled fibration; the original quotient metric needs rescaling to be Sasaki-Einstein, and the action on holomorphic functions is dual to the action on \(U\). See the [report](../reviews/2026-11-04_terra_check_11d.md#theorem-21-and-propositions-22-and-24-quotient-and-tensor-action).
 
 ## Setting
 

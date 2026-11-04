@@ -206,6 +206,74 @@ charges or a common twist, multiple source fields, walls, orbifolds and
 brane states remain possible directions. This is an independent check of
 the scoped obstruction, not a proof about those alternatives.
 
+## Theorem 2.1 and Propositions 2.2 and 2.4: quotient and tensor action
+
+**Verdict: Correct with amendments, conditional on the cited
+\(M^{111}\) identification.** The quotient, its effective group and the
+tensor-mode centre obstruction follow as stated. The holomorphic
+representation needs a dual-action convention, and the natural flat
+quotient metric needs a rescaling before it is Sasaki-Einstein. The
+cited paper could not be independently accessed during this review; the
+identification with its \(M^{111}\) is conditional on its recalled
+description as the circle bundle of class \(3h+2u\).
+
+On the moment level in the unit sphere,
+\(|U|^2=3/5,\ |V|^2=2/5\). Both factors are nonzero and the stabilizer
+of \((\lambda^2U,\lambda^{-3}V)\) has
+\(\lambda^2=\lambda^3=1\), so the action is free. The quotient has
+dimension \(9-1-1=7\) and is simply connected by the homotopy sequence.
+The residual character of the two Hopf phases has primitive weight
+\((3,2)\); its circle bundle over
+\(\mathbb{CP}^2\times\mathbb{CP}^1\) therefore has Euler class
+\(\pm(3h+2u)\). Principal circle bundles over this base are classified
+by their Euler classes, giving the conditional manifold identification.
+The zero sum \(3(2)+2(-3)=0\) gives the Gorenstein, trivial-canonical
+holomorphic cone; it does not by itself prove a Ricci-flat metric.
+
+The kernel of \(U(3)\times U(2)\) on the quotient is the displayed
+weighted circle. Its intersection with \(SU(3)\times SU(2)\) is
+\(\mathbb Z_3\times\mathbb Z_2\), so that subgroup acts through
+\(PSU(3)\times SO(3)\). In particular the colour and weak centres act
+trivially on every tensor bundle, independently of whether the full
+isometry group has additional components. If the background metric and
+flux preserve the displayed action, tensor Kaluza-Klein modes cannot
+carry a colour triplet or a weak doublet. Spinor lifts require separate
+analysis.
+
+The congruence in Proposition 2.4(a) holds on \(U\), where
+\((t,d,6Y)=(-1,0,2)\), and on \(V\), where
+\((t,d,6Y)=(0,1,-3)\), and extends additively to tensor products and
+conjugates. For a neutral monomial, writing \(\Delta_U,\Delta_V\) for
+the differences between the numbers of variables and conjugates gives
+\(2\Delta_U-3\Delta_V=0\). Hence \(3\mid\Delta_U\) and
+\(2\mid\Delta_V\), proving zero triality and integer weak isospin.
+
+If \(U\) is the vector representation \(\bar3\) and projective space
+parametrizes its lines, the conventional pullback action on holomorphic
+coordinate **functions** is the dual \(3\): degree \(3k\) functions
+transform as \(\operatorname{Sym}^{3k}3\). Treating \(U\) as formal
+field components instead gives \(\operatorname{Sym}^{3k}\bar3\).
+The convention must be fixed consistently when identifying the
+\(10\) versus \(\overline{10}\) and the later cohomology table.
+
+With the standard unit-sphere quotient metric, the two transverse
+Fubini-Study factors have relative scales \(3/5,2/5\), and each has
+Ricci constant \(10\). A seven-dimensional Sasaki-Einstein metric needs
+transverse Ricci constant \(8\). The Sasaki metric obtained by the
+standard \(5/4\) transverse homothety has the same underlying circle
+bundle and the required Einstein normalization. Thus the existence of
+the Sasaki-Einstein metric on that manifold is compatible with the
+quotient, while the initial round-sphere quotient metric should not be
+identified with it without the rescaling.
+
+For Proposition 2.2, the charge sum is \(3b-2a\), so the specified
+coprime positive family has the required trivial canonical character
+only at \((a,b)=(3,2)\). A regular moment level and free circle quotient
+of a complex \(n\)-dimensional representation has real dimension
+\(2n-3\). At \(n=5\), the nontrivial \(SU(5)\) representations are
+\(5,\bar5\); the reducible five-dimensional trivial representation
+does not have the required free hypercharge action.
+
 ## Proposition 3.8 and Corollary 3.9: colour and the three-form
 
 **Verdict: Correct.** The conclusions hold for the specified linear colour
