@@ -428,3 +428,63 @@ realization, whole colour multiplets, one root slot per species and
 Euclidean isometries. General zero modes of a nonsplit \(SU(4)\) bundle,
 other embeddings, and maps without an isometric root action are outside
 the calculation; Proposal 5.5 is a direction to investigate.
+
+## Proposition 9.3: real-structure constraint on diquark blocks
+
+**Verdict: Correct with amendment.** The block-symmetry constraint and
+the resulting exclusion of an antisymmetric block in the stated KO signs
+are correct. The signs alone do not prove that every symmetric block or
+the full symmetric representation occurs as an inner fluctuation.
+
+**Independent check.** Choose an antiunitary identification
+\(K:V\to\bar V\) and write
+\[
+ J(v,w)=(\varepsilon K^{-1}w,Kv),\qquad
+ X=\begin{pmatrix}A&B\\B^*&D\end{pmatrix}.
+\]
+The \(V\to V\) component of \(JX=\varepsilon'XJ\) gives
+\[
+ \varepsilon K^{-1}B^*=\varepsilon'BK,
+ \qquad B=\varepsilon\varepsilon' B^T .
+\]
+Thus \(\varepsilon\varepsilon'=+1\) forces
+\(B\in S^2V\), and \(-1\) forces \(B\in\Lambda^2V\). For the
+displayed KO-5, KO-6 and KO-7 conventions the products are all \(+1\).
+The zero block belongs to both subspaces, so an unqualified
+“symmetric iff the sign is \(+1\)” should be read as a statement about
+the symmetry *forced by the sign*.
+
+For \(V=\mathbb C^5\otimes\mathbb C^3\), the flip on \(V^{\otimes2}\)
+gives
+\[
+ S^2V=(S^2\mathbb C^5\otimes6)
+       \oplus(\Lambda^2\mathbb C^5\otimes\bar3).
+\]
+With two flavours of charge \(2/3\) and three of charge \(-1/3\),
+\(\Lambda^2\mathbb C^5\) has multiplicities \(3,6,1\) at charges
+\(-2/3,1/3,4/3\). The corresponding multiplicities in
+\(S^2\mathbb C^5\), and hence in the colour-\(\bar3\) part of
+\(\Lambda^2V\), are \(6,6,3\).
+
+A \(J\)-compatible finite fluctuation can occupy only a subspace of
+\(S^2V\); the algebra, grading and order conditions determine which
+blocks actually occur. For example, with \(D=0\) every inner one-form
+vanishes, despite the above symmetry condition. The KO signs alone
+therefore exclude a nonzero antisymmetric block but do not establish the
+full symmetric scalar spectrum.
+
+For a circle operator \(D=-i\partial_x\) with ordinary conjugation
+\(J\), \(JD=-DJ\). A Hermitian connection satisfying the same sign is
+purely imaginary and antisymmetric in a real basis; the complexified
+\(\mathfrak{so}(30)\) representation contains \(\Lambda^2V\) and its
+conjugate. Whether these components survive the particular interval
+boundary conditions as light scalars requires a separate construction.
+For distinct multiplets, an off-diagonal block \(B_{12}\) may be chosen
+freely, while the full constraint still relates it to
+\(B_{21}=\varepsilon\varepsilon' B_{12}^T\).
+
+**Scope and direction.** The exclusion concerns a Hermitian
+\(J\)-compatible operator between one multiplet and its conjugate, with
+the stated signs. Distinct multiplets, other real structures or signs,
+derivative couplings, and circle or interval connection components remain
+possible directions; each requires its own field and boundary data.

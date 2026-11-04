@@ -42,6 +42,8 @@ That paper uses the adjoint of SO(32) to classify the scalars of a supersymmetri
 
 ## 4. Proposition 9.3 (the real structure decides between the two diquark counts)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The stated sign constraint excludes a nonzero antisymmetric block in the three KO labels. It permits only a subspace of the symmetric representation; the signs alone do not produce every symmetric fluctuation. Distinct-multiplet blocks remain related to their transposes. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-93-real-structure-constraint-on-diquark-blocks).
+
 **Setting.** E = V ⊕ Vbar with V as in Proposition 9.2, an antiunitary J on E that maps V onto Vbar and Vbar onto V (as particles and antiparticles are exchanged), J² = ε, and a Hermitian X on E with JX = ε' XJ, the condition that inner fluctuations obey in a KO-dimension with signs (ε, ε'). Let B be the block of X from Vbar to V, an element of V ⊗ V.
 
 **Statement.**
