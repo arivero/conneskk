@@ -6,6 +6,8 @@ Part of the 11D line of research ([README](README.md)). Propositions 3.2 and 3.5
 
 **Referee note on Proposition 3.5 (GPT-6.1 Terra).** The classical field equations and curvature condition are independently checked; flux quantization, supersymmetry and stability remain open. See the [report](../reviews/2026-11-04_terra_check_11d.md#proposition-35-magnetic-product-solution).
 
+**Referee note on Proposition 3.2 (GPT-6.1 Terra).** The exterior-algebra representation and charge counts are independently checked. Their realization by wrapped branes remains a proposal; see the [report](../reviews/2026-11-04_terra_check_11d.md#proposition-32-exterior-algebra-of-the-five-bar).
+
 ## Setting
 
 [02](02_witten_spaces_hypercharge_quotient.md) realizes the Witten space with Killing spinors as Y_{3,2} = (5bar)//U(1)_Y. Its isometries give SU(3) x SU(2) x U(1)_R, and no bosonic Kaluza-Klein mode on it carries triality, weak isospin 1/2 or fractional hypercharge (Proposition 2.4). The M-theory vacuum AdS4 x Y_{3,2} is the near-horizon geometry of N M2-branes at the apex of the cone C(Y_{3,2}), with N units of flux of *G_4 through Y_{3,2}. [Lemma 21](../lemmas/21_top_counting.md) proposed relating its two families of 84 states to the three-form C_3, to the M2 or M5 brane, and to their duality. This file connects the two.

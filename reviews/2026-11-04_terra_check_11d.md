@@ -356,6 +356,35 @@ is even. For \((a,b)=(3,2)\), the primitive homomorphism
 therefore identifies \(H^2(Y)\) with \(\mathbb Z\); \(H^4(Y)\cong
 \mathbb Z/9\).
 
+## Proposition 3.2: exterior algebra of the five-bar
+
+**Verdict: Correct with a physical-interpretation qualification.**
+The representation and charge count is the standard spinor construction.
+Identifying these algebraic states with wrapped-brane states remains
+conditional on Proposals 3.1 and 3.3.
+
+Write \(\bar5=U\oplus V\), with
+\(U=(\bar3,1)_{1/3}\) and \(V=(1,2)_{-1/2}\).
+The terms of \(\Lambda^3\bar5\) are
+\[
+ \Lambda^3U=e^c,\qquad
+ \Lambda^2U\otimes V=Q,\qquad
+ U\otimes\Lambda^2V=u^c,
+\]
+with respective \(6Y\) charges \(6,1,-4\).
+\(\Lambda^1\bar5=d^c+L\), and
+\(\Lambda^5\bar5=\nu^c\), since the determinant charge is zero.
+The odd degrees therefore have dimension \(5+10+1=16\); the even
+degrees are their conjugates and have dimension \(16\). Three generations
+give \(96\) complex finite-Hilbert-space states. The conventional
+\(SO(10)/SU(5)\) charge \(5-2k\) gives \(3,-1,-5\) on the three
+odd degrees.
+
+The divisor classes from Proposition 2.3 can be added formally with the
+same weights \(2,-3\). A physical identification of those exterior
+generators with fermionic wrapped-fivebrane states requires the proposed
+brane construction and its statistics.
+
 ## Proposition 3.8 and Corollary 3.9: colour and the three-form
 
 **Verdict: Correct.** The conclusions hold for the specified linear colour

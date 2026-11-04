@@ -94,11 +94,11 @@ depends(d11_betti_y, d11_topology).
 depends(d11_betti_y, d11_z6).
 attempted_by(d11_betti_y, claude).
 
-claim(d11_fock, proposition, proved, "Proposition 3.2", "Lambda^odd(5-bar) = 5-bar + 10 + 1 is one generation with nu^c and Lambda^even its conjugate; X = 5 - 2k on Lambda^k; 6Y is the total class of the corresponding baryonic five-cycles.").
+claim(d11_fock, proposition, proved, "Proposition 3.2", "Lambda^odd(5-bar) = 5-bar + 10 + 1 is one generation with nu^c and Lambda^even its conjugate; X = 5 - 2k on Lambda^k. Identifying the formal 6Y divisor-class sum with wrapped-brane states remains a proposal.").
 source(d11_fock, '11D/03_branes_hypercharge_and_the_84.md', 'proposition-32-one-generation-is-the-odd-part-of-the-exterior-algebra-of-the-5-bar').
 attempted_by(d11_fock, claude).
 checked_by(d11_fock, claude, python("11D/checks_11d.py section B")).
-referee_pending(d11_fock).
+checked_by(d11_fock, terra_6_1, by_hand).
 prior_work(d11_fock, known, "The 16 of SO(10) as the odd forms on C^5 (standard).").
 
 claim(d11_fock_branes, conjecture, conjectural, "Conjecture 3.3", "At N = 1 one generation and its conjugate are the exterior algebra of five fermionic zero modes of fivebranes wrapped on the baryonic cycles, with hypercharge the homology class and X the number of fivebranes.").
