@@ -23,7 +23,7 @@ depends(d11_casimir, l24_no_minimum).
 depends(d11_casimir, l23_wz).
 attempted_by(d11_casimir, claude).
 checked_by(d11_casimir, claude, python("11D/checks_11d.py sections F, F2: series against quadrature")).
-referee_pending(d11_casimir).
+checked_by(d11_casimir, terra_6_1, by_hand).
 
 claim(d11_scale_free, proposition, conditional, "Proposition 1.5 (referee amendment)", "For V = l^-4 G(theta), a nonzero angular minimum gives a runaway in l; with theta = l m, an isolated stationary angle gives l proportional to 1/m. A flat direction such as G(theta) = theta^4 allows other stationary paths without selecting one. The specified flat one-loop determinant has no positive stationary angles tending to zero when n_f != 54/5.").
 source(d11_scale_free, '11D/01_interval_and_eleventh_dimension.md', 'proposition-15-a-scale-free-potential-fixes-the-path-with-m_w-l-constant').

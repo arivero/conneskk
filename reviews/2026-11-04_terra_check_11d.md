@@ -52,6 +52,45 @@ that single scalar fibre. The phrase “on the circle ... fibre
 \(\mathbb C^2\)” in the original check would double the count if read
 as an extra circle fibre.
 
+## Proposition 1.4: the one-loop endpoint and small-angle coefficient
+
+**Verdict: Correct** under the hypotheses of Theorem 24.9, including
+\(n_f>0\) and its normalization. The result is relative to
+\(\theta=0\) and leaves the angle-independent Casimir term open.
+
+Let
+\[
+ F(t)=\int_0^\infty x^3\log\!\left(1+\frac{t}{\sinh^2x}\right)dx.
+\]
+Since \(F\) is strictly increasing, and the two gauge terms in
+Theorem 24.9 are nonnegative and vanish at \(t=1\), the fermion term
+\(-n_fF(t)\) makes \(t=1\) the unique global minimum.
+Using
+\[
+ \log\coth x=2\sum_{\substack{k\ge1\\ k\ \mathrm{odd}}}
+ \frac{e^{-2kx}}{k},\qquad
+ \int_0^\infty x^3e^{-2kx}dx=\frac{3!}{(2k)^4},
+\]
+we obtain
+\[
+ F(1)=\frac32\sum_{k\ \mathrm{odd}}k^{-5}
+      =\frac{93}{64}\zeta(5).
+\]
+Division by \(8\pi^2\ell^4\) gives the stated endpoint value.
+
+Likewise,
+\[
+ F'(0)=\int_0^\infty \frac{x^3}{\sinh^2x}\,dx
+ =4\sum_{n\ge1}n\frac{3!}{(2n)^4}
+ =\frac32\zeta(3).
+\]
+The two gauge arguments have derivatives \(2\) and \(16/5\) at
+\(t=0\), with prefactors \(3\) and \(3/2\). Thus the derivative of
+\(\mathcal V\) there is
+\((54/5-n_f)F'(0)\); \(t=\sin^2\theta=\theta^2+o(\theta^2)\)
+gives the claimed coefficient. The exact vector formulas vanish at
+\(\theta=\pi/2\), with the lowest fermion mass \(\pi/(2\ell)\).
+
 ## Proposition 1.5: scale-free potentials and the joint path
 
 **Verdict: Error in the universal conclusion; correct with amendment for
