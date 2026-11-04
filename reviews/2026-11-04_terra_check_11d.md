@@ -1270,6 +1270,39 @@ Direct access to the cited primary papers was unavailable. The
 duality recalls are therefore not certified against those sources by
 this referral.
 
+## File 09, section 5: del Pezzo wall correspondence
+
+**Verdict: Error in the unqualified \(E_1\) surface identification.**
+The two degree-eight surfaces have different canonical-orthogonal
+root lattices. In the usual local engineering description,
+\(\mathbb P^1\times\mathbb P^1\) gives \(E_1\), whereas
+\(dP_1=\mathbb F_1\) gives the distinct \(\widetilde E_1\) theory.
+The \(dP_2\) comparison is compatible with the expected \(A_1\) root;
+the brane-to-geometry map remains conditional on the cited dualities.
+
+On \(dP_1\), let \(H^2=1\), \(E^2=-1\), \(H\cdot E=0\) and
+\(K=-3H+E\). If \(D=aH+bE\) is orthogonal to \(K\), then
+\(b=-3a\) and \(D^2=-8a^2\). There is no integral class with
+\(D^2=-2\). On \(\mathbb P^1\times\mathbb P^1\), the difference
+of the two ruling classes is orthogonal to \(K\) and has square
+\(-2\). These surfaces therefore cannot be interchanged in the
+root-lattice comparison.
+
+For \(dP_2\), with exceptional classes \(E_1,E_2\), the class
+\(E_1-E_2\) is orthogonal to \(K\) and has square \(-2\); the
+orthogonal lattice has rank two, consistent with an \(A_1\) factor
+and an additional abelian direction. This computation alone does
+not construct the corresponding five-dimensional field theory or
+the type-I' duality.
+
+The distinction between the two degree-eight engineering models is
+also stated in the secondary
+[geometric-engineering discussion](https://github.com/bwuebben/global-higgs-branch/blob/d0d815886953bdc051f0c6c28247aa184a896518/papers/01-global-constraints/sections/02_local_sectors.tex#L328-L343).
+The cited Seiberg and Morrison-Seiberg primary sources were unavailable
+for direct comparison. The occurrence of \(\mathbb{CP}^2\) and
+\(\mathbb{CP}^1\) in the separate six-dimensional base does not by
+itself identify that compactification with local \(dP_2\).
+
 ## Proposition 6.1: the SO(32) Wilson-line spectrum
 
 **Verdict: Correct with amendments.** The charged momentum progressions

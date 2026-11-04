@@ -349,10 +349,11 @@ attempted_by(d11_real_structure_diquarks, claude).
 checked_by(d11_real_structure_diquarks, claude, by_hand).
 checked_by(d11_real_structure_diquarks, terra_6_1, by_hand).
 
-claim(d11_dp_walls, conjecture, conjectural, "Section 4, item 1 (recalled; proposal)", "The E-type walls of type I' at infinite coupling have eleven-dimensional descriptions by local del Pezzo surfaces, dP_2 for the top's wall.").
+claim(d11_dp_walls, conjecture, conjectural, "Section 5, item 1 (referee amendment)", "The E-type wall and local del Pezzo correspondence is conditional on the recalled dualities. The usual E_1 and tilde E_1 engineering assignments distinguish P1 x P1 from dP_1; dP_2 has the expected A1 root.").
 source(d11_dp_walls, '11D/09_dilaton_spectral_and_so32.md', '5-two-more-dualities-between-9-and-11-recalled-proposals').
 depends(d11_dp_walls, d11_e_walls).
 attempted_by(d11_dp_walls, claude).
+checked_by(d11_dp_walls, terra_6_1, by_hand).
 
 claim(d11_transposition_tduality, conjecture, conjectural, "Section 4, item 2 (proposal)", "The colour-family transposition of 05 is a nine-dimensional T-duality, which by itself is a gauge relabelling of Wilson lines.").
 source(d11_transposition_tduality, '11D/09_dilaton_spectral_and_so32.md', '5-two-more-dualities-between-9-and-11-recalled-proposals').
