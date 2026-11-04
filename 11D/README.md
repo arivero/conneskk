@@ -54,6 +54,10 @@ There are two ways to complete 4 + 6 by one dimension, and they correspond to th
 | 5.5 | Families as zero modes of an SU(4) bundle: the four slots are the fibre and three families an index | Proposal | [05](05_colour_family_exchange.md) |
 | 6.1 | The top channel of lemma 22 is an SO(32) Wilson-line channel with m_t = a/R | Proposition, proved | [06](06_main_point_heterotic_route.md) |
 | 6 §2, §3, §5 | The heterotic web 9, 10, 11 as the realization of the target; dictionary with D_F as a Wilson line, SO(30) x SO(2) as fifteen D8-branes and one displaced, composite scalars as open strings | Proposals | [06](06_main_point_heterotic_route.md) |
+| 7.1 | The angle of a channel of lemma 22 lives on the interval [0, pi/2], whose ends are the periodic and the antiperiodic spectra | Proposition, proved | [07](07_dualities_9_11.md) |
+| 7.2 | The top channel is the SO(32) Wilson line 1_30 + R(2 pi a); the one-loop minimum of lemma 24 is the far end a = 1/2, the top's D8-brane on the other wall | Proposition, proved | [07](07_dualities_9_11.md) |
+| 7.3 | A torus with flux p, doubled, has KO-6 signs, kernel C^p + conj(C^p) and window M_p(C), the colour form for p = 3 | Proposition, proved | [07](07_dualities_9_11.md) |
+| 7 §2, §4, §5, §6 | Readings of the dualities 1 to 4 for the finite geometry: walls and D8 positions, Landau levels as towers, stacks of D0-branes as the algebra | Proposals; known remark | [07](07_dualities_9_11.md) |
 | 5 Readings | Three families as the obstruction; M exchanges the two heavy directions of the algebra chain; 128 = 44 + 84 under Spin(9) | Proposals | [05](05_colour_family_exchange.md) |
 
 The checks are in [checks_11d.py](checks_11d.py) (Python 3, exact fractions; every check asserts; about 20 s).
@@ -72,6 +76,7 @@ The angle-dependent one-loop term (Proposition 1.4) is minimized at the massless
 ## Next computations, ranked
 
 0a. **The main point** (06, PLAN task B): one family realizing the three regimes; first steps listed in 06 §6 (type I' interval with the D8 configuration 15 + 1 as the parent of the lemma-22 window; Chan-Paton algebras against C + H + M_3(C); inner fluctuations against Λ^2(30)).
+0b. **A nine-dimensional spectral triple on the type I' interval** (07 §7): sixteen D8 positions as the eigenvalues of D_F, and its strong-coupling limit with E8 walls.
 0. **A potential with a second scale that selects alpha < 1** (Proposition 1.5 and audit §7.1): the one-loop potential of the localized family, G(l m, l mu), from the exact secular equations of lemma 09, and the angle-independent Casimir coefficient a_0 of the flat family; then the vector kinetic matrix and mass Hessian along the selected path (audit eq. (17)), with g_4 finite.
 1. **The referee of this folder** ([prompts/terra_check_11d.md](prompts/terra_check_11d.md)): Propositions 1.1, 1.4, 2.1 to 2.6, 3.2, 3.5, 3.8 and Corollary 3.9, with the negative results 2.5 and 3.8 needing the independent check before they are relied on.
 2. **Spinors on Y_{3,2}** ([prompts/astra_11d_01.md](prompts/astra_11d_01.md)): the lift of (U(3) x U(2))/U(1)_Y to the spin bundle, whether fermionic Kaluza-Klein modes can carry triality or isospin 1/2, and which spin structures give the antiperiodic fibre momenta (k + 1/2)/R of Proposition 1.1.
@@ -115,6 +120,7 @@ Prior work for the observation of Theorem 2.1, that the weights of M^{111} are t
 - [04_two_families_m2_m5.md](04_two_families_m2_m5.md): the two 12-state blocks, the two gradings of E8, Yukawa couplings as brackets, the M2/M5 exchange as J.
 - [05_colour_family_exchange.md](05_colour_family_exchange.md): the two families as E8 root configurations, the colour-family transposition with four families.
 - [06_main_point_heterotic_route.md](06_main_point_heterotic_route.md): the main point: target, the heterotic web 9/10/11, dictionary, Proposition 6.1.
+- [07_dualities_9_11.md](07_dualities_9_11.md): dualities between 9 and 11 adapted to the spectral triple: the top angle as a D8 position between two orientifold walls, the one-loop vacuum as the far wall, a torus with flux as the colour form.
 - [PLAN.md](PLAN.md): the handover plan of the line.
 - [checks_11d.py](checks_11d.py): exact checks.
 - [ledger_11d.pl](ledger_11d.pl): ledger facts, included by [../ledger.pl](../ledger.pl).

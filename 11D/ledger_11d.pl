@@ -245,6 +245,37 @@ depends(d11_heterotic_route, d11_wilson_top).
 depends(d11_heterotic_route, d11_circle).
 attempted_by(d11_heterotic_route, claude).
 
+%% ---------------------------------------------------------------- 07: dualities between 9 and 11
+claim(d11_angle_interval, proposition, proved, "Proposition 7.1", "The angle of a channel of lemma 22 lives on the fundamental domain [0, pi/2], whose ends are the periodic and the antiperiodic spectra.").
+source(d11_angle_interval, '11D/07_dualities_9_11.md', '3-proposition-71-the-angle-of-a-channel-lives-on-an-interval').
+depends(d11_angle_interval, l22_window).
+depends(d11_angle_interval, l23_wz).
+attempted_by(d11_angle_interval, claude).
+checked_by(d11_angle_interval, claude, by_hand).
+referee_pending(d11_angle_interval).
+
+claim(d11_far_wall, proposition, proved, "Proposition 7.2", "The top channel is the SO(32) Wilson line 1_30 + R(2 pi a) with a in [0, 1/2], and the one-loop minimum of lemma 24 is the far end a = 1/2, the top's D8-brane on the other wall.").
+source(d11_far_wall, '11D/07_dualities_9_11.md', '4-proposition-72-the-far-end-is-the-displaced-d8-brane-on-the-other-wall').
+depends(d11_far_wall, d11_angle_interval).
+depends(d11_far_wall, d11_wilson_top).
+depends(d11_far_wall, l24_no_minimum).
+attempted_by(d11_far_wall, claude).
+checked_by(d11_far_wall, claude, by_hand).
+referee_pending(d11_far_wall).
+
+claim(d11_torus_flux, proposition, proved, "Proposition 7.3", "A torus with flux p, doubled with J(psi, chi) = (C chi, -C psi), has the KO-6 signs, kernel C^p + conj(C^p) and window M_p(C), the colour form for p = 3.").
+source(d11_torus_flux, '11D/07_dualities_9_11.md', '5-proposition-73-a-torus-with-flux-doubled-has-the-colour-form').
+attempted_by(d11_torus_flux, claude).
+checked_by(d11_torus_flux, claude, by_hand).
+referee_pending(d11_torus_flux).
+prior_work(d11_torus_flux, partial, "Berezin-Toeplitz quantization of the torus (fuzzy torus) is known; the KO-6 doubling with restricted algebra follows lemma 16").
+
+claim(d11_duality_readings, conjecture, conjectural, "Sections 2, 4 (reading), 5 (reading), 6 (proposals and a known remark)", "The dualities between 9 and 11 give the finite geometry two orientifold walls with D_F as D8 positions, Landau levels of a torus with flux as towers, and stacks of D0-branes as the algebra, as proposals.").
+source(d11_duality_readings, '11D/07_dualities_9_11.md', '2-what-each-one-offers-the-finite-geometry').
+depends(d11_duality_readings, d11_far_wall).
+depends(d11_duality_readings, d11_torus_flux).
+attempted_by(d11_duality_readings, claude).
+
 %% ---------------------------------------------------------------- strategy
 strategy(t14, open, "Eleven dimensions from massless W and Z: the interval of H as an antiperiodic circle and as the M-theory circle; Witten's space M^{111} as the hypercharge quotient of the 5-bar; hypercharge from C_3, matter from wrapped branes, the Higgs as the M2 position; the magnetic completion AdS5 x CP^2 x S^2; the 84 of lemma 21 against C_3.").
 addresses(t14, d11_circle).  addresses(t14, d11_m_circle).  addresses(t14, d11_casimir).  addresses(t14, d11_scale_free).
@@ -260,3 +291,5 @@ addresses(t14, d11_no_isometry).  addresses(t14, d11_transposition).  addresses(
 addresses(t12, d11_no_isometry).  addresses(t14, d11_flip).  addresses(t12, d11_transposition).
 addresses(t14, d11_misaligned).  addresses(t14, d11_four_slots).  addresses(t14, d11_wilson_top).  addresses(t14, d11_heterotic_route).
 addresses(t12, d11_heterotic_route).
+addresses(t14, d11_angle_interval).  addresses(t14, d11_far_wall).  addresses(t14, d11_torus_flux).  addresses(t14, d11_duality_readings).
+addresses(t12, d11_far_wall).  addresses(t0, d11_torus_flux).
