@@ -276,6 +276,33 @@ depends(d11_duality_readings, d11_far_wall).
 depends(d11_duality_readings, d11_torus_flux).
 attempted_by(d11_duality_readings, claude).
 
+%% ---------------------------------------------------------------- 08: the orientifold sign
+claim(d11_orientifold_sign, proposition, proved, "Proposition 8.1", "The descended antiunitary j of lemma 06 with j^2 = s gives O(n) or USp(n) as the commutant on every eigenspace of d^2, according to the sign s.").
+source(d11_orientifold_sign, '11D/08_orientifold_sign.md', '2-proposition-81-the-factorization-sign-fixes-orthogonal-or-symplectic-symmetry').
+depends(d11_orientifold_sign, l06_factorization).
+attempted_by(d11_orientifold_sign, claude).
+checked_by(d11_orientifold_sign, claude, by_hand).
+referee_pending(d11_orientifold_sign).
+
+claim(d11_wall_multiplicity, proposition, proved, "Proposition 8.2", "Wall channels of the parent come with doubled multiplicity relative to bulk channels, from Proposition 7.1.").
+source(d11_wall_multiplicity, '11D/08_orientifold_sign.md', '3-proposition-82-wall-channels-come-with-doubled-multiplicity').
+depends(d11_wall_multiplicity, d11_angle_interval).
+attempted_by(d11_wall_multiplicity, claude).
+checked_by(d11_wall_multiplicity, claude, by_hand).
+referee_pending(d11_wall_multiplicity).
+
+claim(d11_e_walls, conjecture, conjectural, "Remark 8.3 (conditional on recalled rules and the dictionary of 06)", "In the configuration 15 + 1 with the top's brane on the far wall, that wall enhances to SU(2) x U(1) at infinite coupling while the light-quark wall keeps SO(30), conditional on recalled type I' rules.").
+source(d11_e_walls, '11D/08_orientifold_sign.md', '4-remark-83-e8-walls-from-15--1-conditional').
+depends(d11_e_walls, d11_heterotic_route).
+depends(d11_e_walls, d11_far_wall).
+attempted_by(d11_e_walls, claude).
+
+claim(d11_orientifold_reading, conjecture, conjectural, "Readings of sections 2 and 3", "The odd factorizations of labels 11 and 9 have the symmetry types of O^- and O^+ orientifold planes, and wall channels carry the Chan-Paton counts of D8-branes on the planes.").
+source(d11_orientifold_reading, '11D/08_orientifold_sign.md', '2-proposition-81-the-factorization-sign-fixes-orthogonal-or-symplectic-symmetry').
+depends(d11_orientifold_reading, d11_orientifold_sign).
+depends(d11_orientifold_reading, d11_wall_multiplicity).
+attempted_by(d11_orientifold_reading, claude).
+
 %% ---------------------------------------------------------------- strategy
 strategy(t14, open, "Eleven dimensions from massless W and Z: the interval of H as an antiperiodic circle and as the M-theory circle; Witten's space M^{111} as the hypercharge quotient of the 5-bar; hypercharge from C_3, matter from wrapped branes, the Higgs as the M2 position; the magnetic completion AdS5 x CP^2 x S^2; the 84 of lemma 21 against C_3.").
 addresses(t14, d11_circle).  addresses(t14, d11_m_circle).  addresses(t14, d11_casimir).  addresses(t14, d11_scale_free).
@@ -293,3 +320,5 @@ addresses(t14, d11_misaligned).  addresses(t14, d11_four_slots).  addresses(t14,
 addresses(t12, d11_heterotic_route).
 addresses(t14, d11_angle_interval).  addresses(t14, d11_far_wall).  addresses(t14, d11_torus_flux).  addresses(t14, d11_duality_readings).
 addresses(t12, d11_far_wall).  addresses(t0, d11_torus_flux).
+addresses(t14, d11_orientifold_sign).  addresses(t14, d11_wall_multiplicity).  addresses(t14, d11_e_walls).  addresses(t14, d11_orientifold_reading).
+addresses(t2c, d11_orientifold_sign).

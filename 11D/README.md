@@ -58,6 +58,9 @@ There are two ways to complete 4 + 6 by one dimension, and they correspond to th
 | 7.2 | The top channel is the SO(32) Wilson line 1_30 + R(2 pi a); the one-loop minimum of lemma 24 is the far end a = 1/2, the top's D8-brane on the other wall | Proposition, proved | [07](07_dualities_9_11.md) |
 | 7.3 | A torus with flux p, doubled, has KO-6 signs, kernel C^p + conj(C^p) and window M_p(C), the colour form for p = 3 | Proposition, proved | [07](07_dualities_9_11.md) |
 | 7 §2, §4, §5, §6 | Readings of the dualities 1 to 4 for the finite geometry: walls and D8 positions, Landau levels as towers, stacks of D0-branes as the algebra | Proposals; known remark | [07](07_dualities_9_11.md) |
+| 8.1 | The descended antiunitary of lemma 06 with j^2 = s gives O(n) or USp(n) on every eigenspace of d^2 | Proposition, proved | [08](08_orientifold_sign.md) |
+| 8.2 | Wall channels of the parent come with doubled multiplicity relative to bulk channels | Proposition, proved | [08](08_orientifold_sign.md) |
+| 8.3, 8 readings | O^- for label 11 and O^+ for label 9; E8 walls from 15 + 1, with the far wall enhancing to SU(2) x U(1) at infinite coupling | Remark conditional on recalled rules; proposals | [08](08_orientifold_sign.md) |
 | 5 Readings | Three families as the obstruction; M exchanges the two heavy directions of the algebra chain; 128 = 44 + 84 under Spin(9) | Proposals | [05](05_colour_family_exchange.md) |
 
 The checks are in [checks_11d.py](checks_11d.py) (Python 3, exact fractions; every check asserts; about 20 s).
@@ -121,6 +124,7 @@ Prior work for the observation of Theorem 2.1, that the weights of M^{111} are t
 - [05_colour_family_exchange.md](05_colour_family_exchange.md): the two families as E8 root configurations, the colour-family transposition with four families.
 - [06_main_point_heterotic_route.md](06_main_point_heterotic_route.md): the main point: target, the heterotic web 9/10/11, dictionary, Proposition 6.1.
 - [07_dualities_9_11.md](07_dualities_9_11.md): dualities between 9 and 11 adapted to the spectral triple: the top angle as a D8 position between two orientifold walls, the one-loop vacuum as the far wall, a torus with flux as the colour form.
+- [08_orientifold_sign.md](08_orientifold_sign.md): the sign of lemma 06 as an orientifold type (O^- for label 11, O^+ for label 9); E8 walls from 15 + 1: the far wall with the top's brane enhances to SU(2) x U(1) at infinite coupling.
 - [PLAN.md](PLAN.md): the handover plan of the line.
 - [checks_11d.py](checks_11d.py): exact checks.
 - [ledger_11d.pl](ledger_11d.pl): ledger facts, included by [../ledger.pl](../ledger.pl).

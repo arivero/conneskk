@@ -112,7 +112,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
 
 The interval of H as an antiperiodic circle and as the M-theory circle; Witten's space M^{111} as the hypercharge quotient of the 5-bar, the Z_6 and chirality from fluxes; hypercharge from C_3, matter from wrapped branes, the Higgs as the M2 position, the magnetic completion AdS5 x CP^2 x S^2, and the 84 of lemma 21 against C_3.
 
-[11D README](11D/README.md) · [11D §1](11D/01_interval_and_eleventh_dimension.md) · [11D §2](11D/02_witten_spaces_hypercharge_quotient.md) · [11D §3](11D/03_branes_hypercharge_and_the_84.md) · [strategy, Ranked list (T14)](STRATEGY.md#ranked-list) · [Astra audit §3-§4, joint family](reviews/2026-11-03_astra_audit_d11.md#3-a-positive-joint-limit-result-from-the-exact-interval) · [11D §4, two families and M2/M5](11D/04_two_families_m2_m5.md) · [11D §5, colour-family exchange](11D/05_colour_family_exchange.md) · [11D §6, main point and heterotic route](11D/06_main_point_heterotic_route.md) · [11D §7, dualities between 9 and 11](11D/07_dualities_9_11.md)
+[11D README](11D/README.md) · [11D §1](11D/01_interval_and_eleventh_dimension.md) · [11D §2](11D/02_witten_spaces_hypercharge_quotient.md) · [11D §3](11D/03_branes_hypercharge_and_the_84.md) · [strategy, Ranked list (T14)](STRATEGY.md#ranked-list) · [Astra audit §3-§4, joint family](reviews/2026-11-03_astra_audit_d11.md#3-a-positive-joint-limit-result-from-the-exact-interval) · [11D §4, two families and M2/M5](11D/04_two_families_m2_m5.md) · [11D §5, colour-family exchange](11D/05_colour_family_exchange.md) · [11D §6, main point and heterotic route](11D/06_main_point_heterotic_route.md) · [11D §7, dualities between 9 and 11](11D/07_dualities_9_11.md) · [11D §8, orientifold sign](11D/08_orientifold_sign.md)
 
 ## Part 2. Documents
 
@@ -547,6 +547,12 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 - [6. A remark on duality 4 (known)](11D/07_dualities_9_11.md#6-a-remark-on-duality-4-known)
 - [6b. The three labels in type I' variables (proposal)](11D/07_dualities_9_11.md#6b-the-three-labels-in-type-i-variables-proposal)
 - [7. What this adds, and what remains open](11D/07_dualities_9_11.md#7-what-this-adds-and-what-remains-open)
+- [The sign of lemma 06 as an orientifold type, and E8 walls from the configuration 15 + 1](11D/08_orientifold_sign.md#the-sign-of-lemma-06-as-an-orientifold-type-and-e8-walls-from-the-configuration-15--1)
+- [1. Setting](11D/08_orientifold_sign.md#1-setting)
+- [2. Proposition 8.1 (the factorization sign fixes orthogonal or symplectic symmetry)](11D/08_orientifold_sign.md#2-proposition-81-the-factorization-sign-fixes-orthogonal-or-symplectic-symmetry)
+- [3. Proposition 8.2 (wall channels come with doubled multiplicity)](11D/08_orientifold_sign.md#3-proposition-82-wall-channels-come-with-doubled-multiplicity)
+- [4. Remark 8.3 (E8 walls from 15 + 1; conditional)](11D/08_orientifold_sign.md#4-remark-83-e8-walls-from-15--1-conditional)
+- [5. What remains open](11D/08_orientifold_sign.md#5-what-remains-open)
 - [Plan of the 11D line (handover file)](11D/PLAN.md#plan-of-the-11d-line-handover-file)
 - [State (4 Nov 2026)](11D/PLAN.md#state-4-nov-2026)
 - [Question of this round](11D/PLAN.md#question-of-this-round)
