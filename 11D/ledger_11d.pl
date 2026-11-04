@@ -237,6 +237,7 @@ depends(d11_wilson_top, l21_so30).
 attempted_by(d11_wilson_top, claude).
 checked_by(d11_wilson_top, claude, by_hand).
 referee_pending(d11_wilson_top).
+prior_work(d11_wilson_top, known, "Hosotani 1983 (momenta (n + q a)/R with a Wilson line); SO(32) -> SO(30) x U(1) Wilson line T-dual to fifteen D8-branes plus one displaced (hep-th/9711098, hep-th/0108135); the interval-circle equality is the circle form of lemma 25. The assignment of the top to the displaced brane was not found.").
 
 claim(d11_heterotic_route, conjecture, conjectural, "Sections 2, 3 and 5 (proposals)", "The heterotic web with its regimes 9, 10 and 11 realizes the target: D_F as a Wilson line, lemma 21's SO(30) x SO(2) as fifteen D8-branes and one displaced, and the composite scalars as open strings on the stack.").
 source(d11_heterotic_route, '11D/06_main_point_heterotic_route.md', '3-dictionary-proposal').
