@@ -2,6 +2,8 @@
 
 Part of the 11D line of research ([README](README.md)). Theorem 2.1 and Propositions 2.2 to 2.4 and 2.6 are proved here; Proposition 2.5 is a negative result in a stated scope, pending an independent check. Attempted by Claude (Anthropic), 3 Nov 2026, with a remark from the steer of the same day on the mixing of u and d. Checks: [checks_11d.py](checks_11d.py), sections A to D, Python with exact fractions. Referee pending.
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The exclusion in Proposition 2.5 has an independent analytic proof. The required-bidegrees lemma and the general assertion that \(u^c,d^c\) must have the same flux image require a common ten-dimensional chirality; the exclusion itself also holds without that extra assumption. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-25-hypercharge-and-b---l-fluxes). The other results of this file remain pending.
+
 ## Setting
 
 Witten's spaces M^{pqr} = G/H, with G = SU(3) x SU(2) x U(1) and H = SU(2) x U(1) x U(1), are the seven-dimensional spaces of least dimension with the isometry group of the Standard Model, so 4 + 7 = 11 (Witten 1981; [LITERATURE.md §F](../LITERATURE.md#f-weinberg-angle-from-a-squashed-s3--lens-space-and-from-mpqr)). Castellani, D'Auria and Fré gave them Einstein metrics; Killing spinors exist only for p = q, where the AdS4 vacuum has N = 2 and the space is M^{111} (Fabbri, Fré, Gualtieri, Termonia, hep-th/9903036). Fabbri et al. (hep-th/9907219, §4) write the cone over M^{111} as the Kähler quotient of C^5 by a circle acting with weights 2 on a triplet U and -3 on a doublet V, with D-term 2|U|^2 = 3|V|^2, and M^{111} as a circle bundle over P^2 x P^1. In later notation it is M^{3,2}.

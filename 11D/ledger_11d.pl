@@ -1,8 +1,7 @@
 %% 11D/ledger_11d.pl -- ledger facts of the 11D line (branch 11D), included by ../ledger.pl.
 %% Same predicates and conventions as ledger.pl. Agent atom `claude`: Claude (Anthropic), the author of every claim here.
-%% Every proved claim below is checked only by its author and carries referee_pending/1; the referee request is
-%% 11D/prompts/terra_check_11d.md. The two negative results (d11_flux_nogo, d11_colour84) are entered as propositions
-%% until a second model has checked them; they become no_go claims when it has.
+%% Claims still awaiting an independent check carry referee_pending/1; the referee request is
+%% 11D/prompts/terra_check_11d.md. Completed checks are recorded in reviews/2026-11-04_terra_check_11d.md.
 
 %% ---------------------------------------------------------------- 01: the interval as the eleventh dimension
 claim(d11_circle, proposition, proved, "Proposition 1.1", "The chiral interval of lemma 05, eq. (8), is unitarily the antiperiodic circle of radius R = l/pi: D_l goes to -i d/dx, the grading to the reflection x -> -x, the walls to its fixed points, scalar functions to reflection-even functions; m = pi/(2l) = 1/(2R).").
@@ -74,11 +73,11 @@ attempted_by(d11_z6, claude).
 checked_by(d11_z6, claude, python("11D/checks_11d.py section B")).
 referee_pending(d11_z6).
 
-claim(d11_flux_nogo, proposition, proved, "Proposition 2.5 (negative result, pending check)", "Ten-dimensional Weyl fermions on CP^2 x CP^1 with abelian fluxes, canonical spin^c root, one ten-dimensional field per Standard Model field: no generation for fluxes along Y and B - L; in general u^c and d^c need the same line bundle and 2j + 1 must be linear in the fluxed charges.").
+claim(d11_flux_nogo, no_go, proved, "Proposition 2.5 (independently checked with amendment)", "Ten-dimensional Weyl fermions on CP^2 x CP^1 with one abelian line bundle per Standard Model field and the canonical formal spin^c shift: no generation for fluxes along Y and B - L. Equal u^c and d^c images and unsigned linearity of 2j + 1 require a common ten-dimensional chirality.").
 source(d11_flux_nogo, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-25-no-generation-from-fluxes-along-hypercharge-and-b---l').
 attempted_by(d11_flux_nogo, claude).
 checked_by(d11_flux_nogo, claude, python("11D/checks_11d.py section D: required bidegrees, span test, search over a third charge in [-3,3]^6")).
-referee_pending(d11_flux_nogo).
+checked_by(d11_flux_nogo, terra_6_1, by_hand).
 
 claim(d11_flux_fit, proposition, proved, "Proposition 2.6", "With fluxed charges F (universal), chi (+1 on Q, L; -1 on the conjugates) and B - L, one generation with nu^c is the exact index content; u^c, d^c share O(1,0) and e^c, nu^c share one line bundle, so the flux sees SU(2)_R doublets and leaves T_3R unfluxed.").
 source(d11_flux_fit, '11D/02_witten_spaces_hypercharge_quotient.md', 'proposition-26-one-generation-from-a-universal-charge-the-grading-and-b---l').
