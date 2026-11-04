@@ -335,13 +335,23 @@ checked_by(d11_so32_comparison, claude, by_hand).
 referee_pending(d11_so32_comparison).
 prior_work(d11_so32_comparison, partial, "The chain and the composite counts are known (the EPJC paper; hep-ph/0512065); the type I' realization (the top as a displaced D8-brane, the 30 as Chan-Paton labels on an O8^- wall) was not found there.").
 
+claim(d11_real_structure_diquarks, proposition, proved, "Proposition 9.3", "For an antiunitary J exchanging V and Vbar with J^2 = eps and a Hermitian X with JX = eps' XJ, the diquark block is symmetric iff eps eps' = +1 and antisymmetric iff eps eps' = -1; labels 9, 10, 11 all have eps eps' = +1, so finite inner fluctuations give S^2 V with counts (3, 6, 1), and the counts (6, 6, 3) of lemma 21 come from Lambda^2 V, as for a connection component along a circle or interval (KO-1 type). Scope: blocks between particles and antiparticles of one multiplet in the three labels; escapes: connection components along a circle or interval, blocks between two distinct multiplets, derivative couplings.").
+source(d11_real_structure_diquarks, '11D/09_dilaton_spectral_and_so32.md', '4-proposition-93-the-real-structure-decides-between-the-two-diquark-counts').
+depends(d11_real_structure_diquarks, d11_diquark_strings).
+depends(d11_real_structure_diquarks, l06_factorization).
+depends(d11_real_structure_diquarks, l21_so30).
+depends(d11_real_structure_diquarks, d11_wilson_top).
+attempted_by(d11_real_structure_diquarks, claude).
+checked_by(d11_real_structure_diquarks, claude, by_hand).
+referee_pending(d11_real_structure_diquarks).
+
 claim(d11_dp_walls, conjecture, conjectural, "Section 4, item 1 (recalled; proposal)", "The E-type walls of type I' at infinite coupling have eleven-dimensional descriptions by local del Pezzo surfaces, dP_2 for the top's wall.").
-source(d11_dp_walls, '11D/09_dilaton_spectral_and_so32.md', '4-two-more-dualities-between-9-and-11-recalled-proposals').
+source(d11_dp_walls, '11D/09_dilaton_spectral_and_so32.md', '5-two-more-dualities-between-9-and-11-recalled-proposals').
 depends(d11_dp_walls, d11_e_walls).
 attempted_by(d11_dp_walls, claude).
 
 claim(d11_transposition_tduality, conjecture, conjectural, "Section 4, item 2 (proposal)", "The colour-family transposition of 05 is a nine-dimensional T-duality, which by itself is a gauge relabelling of Wilson lines.").
-source(d11_transposition_tduality, '11D/09_dilaton_spectral_and_so32.md', '4-two-more-dualities-between-9-and-11-recalled-proposals').
+source(d11_transposition_tduality, '11D/09_dilaton_spectral_and_so32.md', '5-two-more-dualities-between-9-and-11-recalled-proposals').
 depends(d11_transposition_tduality, d11_transposition).
 attempted_by(d11_transposition_tduality, claude).
 
@@ -366,3 +376,4 @@ addresses(t14, d11_orientifold_sign).  addresses(t14, d11_wall_multiplicity).  a
 addresses(t2c, d11_orientifold_sign).
 addresses(t14, d11_dilaton_spectral).  addresses(t14, d11_diquark_strings).  addresses(t14, d11_orientifold_scalars).  addresses(t14, d11_so32_comparison).  addresses(t14, d11_dp_walls).  addresses(t14, d11_transposition_tduality).
 addresses(t2c, d11_orientifold_scalars).
+addresses(t14, d11_real_structure_diquarks).
