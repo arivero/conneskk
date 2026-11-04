@@ -968,6 +968,36 @@ massless electroweak vectors at that endpoint are a further conclusion
 of the specified two-grading model of Lemma 23, rather than a property
 of an arbitrary isolated channel.
 
+## Proposition 7.2: Wilson-line endpoint and one-loop minimum
+
+**Verdict: Correct with amendment.** The centralizer at
+\(a=1/2\) has an additional disconnected component. The location of
+the minimum is correct for the particular determinant and
+\(n_f>0\); the D8 interpretation is conditional on the proposed
+dictionary.
+
+For \(0<a<1/2\), the nonreal conjugate rotation eigenvalues force a
+commuting orthogonal transformation to preserve the two-plane and act
+there by a rotation. Its centralizer in \(SO(32)\) is
+\(SO(30)\times SO(2)\). At \(a=1/2\), the holonomy is
+\(\operatorname{diag}(1_{30},-1_2)\), so the full centralizer is
+\[
+ S(O(30)\times O(2))
+ =\{(A,B):\det A\,\det B=1\},
+\]
+with identity component \(SO(30)\times SO(2)\). At \(a=0\) the
+centralizer is \(SO(32)\). Conjugation by a reflection in each
+subspace sends \(a\) to \(-a\), and \(a\mapsto a+1\) leaves this
+\(SO(32)\) holonomy unchanged.
+
+For the determinant of Lemma 24, write \(t=\sin^2\theta\). Its two
+gauge terms are nonnegative and vanish at \(t=1\); the fermion term
+\(-n_fF(t)\) is strictly decreasing for \(n_f>0\). Thus the unique
+global minimum is \(t=1\), or \(a=1/2\). This conclusion assumes the
+flat massless determinant, its stated field content and wall
+conditions, and no additional angle-dependent term. It does not derive
+a force on a supersymmetric type-I' brane.
+
 ## Proposition 6.1: the SO(32) Wilson-line spectrum
 
 **Verdict: Correct with amendments.** The charged momentum progressions

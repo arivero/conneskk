@@ -255,14 +255,14 @@ attempted_by(d11_angle_interval, claude).
 checked_by(d11_angle_interval, claude, by_hand).
 checked_by(d11_angle_interval, terra_6_1, by_hand).
 
-claim(d11_far_wall, proposition, proved, "Proposition 7.2", "The top channel is the SO(32) Wilson line 1_30 + R(2 pi a) with a in [0, 1/2], and the one-loop minimum of lemma 24 is the far end a = 1/2, the top's D8-brane on the other wall.").
+claim(d11_far_wall, proposition, proved, "Proposition 7.2 (referee amendment)", "The SO(32) endpoint Wilson line has full centralizer S(O(30) x O(2)); the lemma-24 one-loop minimum is a = 1/2 under its stated hypotheses. The D8 interpretation remains a proposal.").
 source(d11_far_wall, '11D/07_dualities_9_11.md', '4-proposition-72-the-far-end-is-the-displaced-d8-brane-on-the-other-wall').
 depends(d11_far_wall, d11_angle_interval).
 depends(d11_far_wall, d11_wilson_top).
 depends(d11_far_wall, l24_no_minimum).
 attempted_by(d11_far_wall, claude).
 checked_by(d11_far_wall, claude, by_hand).
-referee_pending(d11_far_wall).
+checked_by(d11_far_wall, terra_6_1, by_hand).
 
 claim(d11_torus_flux, proposition, proved, "Proposition 7.3", "A torus with flux p, doubled with J(psi, chi) = (C chi, -C psi), has the KO-6 signs, kernel C^p + conj(C^p) and window M_p(C), the colour form for p = 3.").
 source(d11_torus_flux, '11D/07_dualities_9_11.md', '5-proposition-73-a-torus-with-flux-doubled-has-the-colour-form').

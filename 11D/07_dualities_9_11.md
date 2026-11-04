@@ -35,6 +35,8 @@ So the parameter space of one channel of the finite Dirac operator, for a given 
 
 ## 4. Proposition 7.2 (the far end is the displaced D8-brane on the other wall)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** At \(a=1/2\) the full \(SO(32)\) centralizer is \(S(O(30)\times O(2))\), whose identity component is \(SO(30)\times SO(2)\). The stated one-loop minimum uses the hypotheses of lemma 24 and \(n_f>0\); the D8 dictionary remains a proposal. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-72-wilson-line-endpoint-and-one-loop-minimum).
+
 **Statement.** Put a = θ/pi in [0, 1/2]. By Proposition 6.1 the channel spectrum is that of the states (30)_{±1} of SO(32) on a circle of radius R = l/pi with the Wilson line W_a = 1_30 ⊕ R(2 pi a). The interval [0, 1/2] is the moduli interval of one Wilson-line eigenvalue modulo a -> −a and a -> a + 1; the unbroken group is SO(32) at a = 0 and SO(30) x SO(2) for 0 < a <= 1/2; at a = 1/2 the holonomy is −1 on the plane of SO(2), W_{1/2} = diag(1_30, −1_2), and the (30)_{±1} tower is (n + 1/2)/R, the antiperiodic tower of Proposition 1.1. The one-loop minimum of [lemma 24](../lemmas/24_commutative_parent.md), Theorem 9, θ = pi/2, is the point a = 1/2.
 
 **Proof.** Proposition 6.1 and Proposition 7.1 with θ = pi a; the commutant of W_a in SO(32) for 0 < a < 1/2 is SO(30) x SO(2), and at a = 1/2 its identity component is still SO(30) x SO(2), since only two eigenvalues are −1. Lemma 24, Theorem 9, item 1, places the minimum at t = sin^2 θ = 1. ∎
