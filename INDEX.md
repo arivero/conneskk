@@ -249,6 +249,7 @@ A dated record to November 2026 in nine sections: origins beside the Kaluza-Klei
 - [Inner fluctuations of the interval parent with an SO(30) algebra](lemmas/38_so30_fluctuations.md#inner-fluctuations-of-the-interval-parent-with-an-so30-algebra)
 - [Hypercharge from the three-form, matter from branes, and the two families of 84](lemmas/39_branes_hypercharge_and_the_84.md#hypercharge-from-the-three-form-matter-from-branes-and-the-two-families-of-84)
 - [Dualities between nine and eleven dimensions, adapted to the spectral triple](lemmas/40_dualities_9_11.md#dualities-between-nine-and-eleven-dimensions-adapted-to-the-spectral-triple)
+- [The axioms and the lift along the chain Pati-Salam, Standard Model, colour and electromagnetism](lemmas/41_axioms_along_the_chain.md#the-axioms-and-the-lift-along-the-chain-pati-salam-standard-model-colour-and-electromagnetism)
 
 ### Results: [results/README.md](results/README.md)
 

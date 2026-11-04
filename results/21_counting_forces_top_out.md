@@ -1,0 +1,18 @@
+# If the antisquarks of three generations are symmetric diquarks of the light quarks, their counts force (n_u, n_d) = (2, 3), with the top out, and leave three antitriplets of charge +4/3, half of a chiral-multiplet pairing and anomalous as superpartners
+
+**Status.** Proposition (Proposition 21.4), with Corollary 21.5. Stated by the user and Claude Fable 5.1 in conversation on 4 November 2026; checked by Claude Fable 5.1 by hand (the arithmetic; the anomaly traces are standard). No referee has read it: the ledger marks the row referee_pending. Ledger row `l21_exotic` (depending on `l21_so30`). Stated in the section on the charge-4/3 antitriplets of paper/real_structure_note.tex ("\supp{21}").
+
+**Setting.** Let n_u up-type and n_d down-type light quarks in three colours span the vector of SO(3(n_u + n_d)). The colour antitriplet of its adjoint contains the symmetric diquarks S^2(n_u + n_d) (x) 3-bar. Three generations of antisquarks need 6 states of charge -2/3 and 6 of charge +1/3 (21_so30_branching.md).
+
+**Statement.**
+
+1. The symmetric diquarks have n_d(n_d + 1)/2 states of charge -2/3, n_u n_d of charge +1/3 and n_u(n_u + 1)/2 of charge +4/3.
+2. The antisquark counts 6 and 6 have the unique solution (n_u, n_d) = (2, 3) in nonnegative integers, so the top is out, and the charge +4/3 count is 3. With the top, (3, 3) gives (6, 9, 6), and the vector would need 36 = 30 + 6 real dimensions, against the 32 of SO(32), whose extra plane is colour-neutral.
+3. (Corollary 21.5) A Dirac quark of charge 4/3 in each generation needs two complex scalars, so three generations need 6, and the three antitriplets are half of a chiral-multiplet pairing. Read as superpartners, their fermions are three left-handed Weyl fields in (3-bar, 4/3), SU(2) singlets, anomalous on their own: the SU(3)^2 U(1), U(1)^3 and gravitational U(1) traces are nonzero, and the meson sector, with charges 0 and +-1, cancels none of them.
+4. The readings compatible with the counting are (a) the three scalars have no fermion partner, as the Higgs doublet has none in the Standard Model, so supersymmetry is a property of the (6, 6) part alone; or (b) the top is included, which completes the exotic to 6 and breaks the +1/3 count to 9. In the window of the interval parent (lemma 38, the shadow B_ij -> (m_i - m_j) B_ij) the same-flavour pairs uu, cc drop out, and one state of charge +4/3 remains, u (x) c antisymmetrized, in either reading.
+
+*Scope.* The premise of the whole counting is that five light quarks generate every squark and slepton as a composite, scalars that the finite geometry of Connes et al. does not contain. Under that premise the corollary records a conflict between the count of three generations and the anomaly of the exotic sector.
+
+**Proof.** Lemma 21, Proposition 21.4 and its proof: n_d(n_d + 1)/2 = 6 gives n_d = 3, then n_u n_d = 6 gives n_u = 2, and 2 x 3/2 = 3; a coloured quark adds 6 real dimensions, and 32 - 30 = 2. Corollary 21.5 is counting with the standard anomaly traces.
+
+**What it leaves open.** An independent check by a referee. The remark that the top cannot form the diquarks is from hep-ph/0512065, and the reading of the charge-4/3 states as an additional quark per generation, with the half-multiplet problem, is in the abstract of the EPJC paper (Rivero 2024) (lemma 21, Provenance). Identifying the states with physical scalar partners, in either reading, needs a field construction, spin and chirality assignments, interactions and dynamics.

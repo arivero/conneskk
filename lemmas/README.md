@@ -52,6 +52,8 @@ Priorities come from [../STRATEGY.md](../STRATEGY.md). Each job runs alone throu
 
 Canonical 8 and 15 present the flux-(1,2,3) failure as decisive; Theorem 02-A confirms it only for the canonical (block-diagonal) Berry connection. The invariant connection modelled on C^3 (x) C^2 has parallel algebra M_3(C) and su(2)+u(1) holonomy on the doublet, reorganizing fluxes 1, 2 and 3 as triplet times doublet. Section 9 already shows how off-diagonal Berry connections can be engineered. Whether this connection comes from an admissible horizontal distribution with a supporting field configuration is open.
 
+| [41](41_axioms_along_the_chain.md) | T17: the axioms and the lift along the chain Pati-Salam -> Standard Model -> colour + electromagnetism | **Theorem** 41.2: the trace forms along the chain have ranks 2, 2, 0, so Poincaré duality fails at every step, at the last because the light block is vectorlike (the form is the bimodule index). **Proposition** 41.4: orientability holds at Pati-Salam (explicit cycle) and fails at the two later steps (nu_R; a nonzero mass commuting with the algebra). **Proposition** 41.5: unimodularity traces (4, 12), (1, 6), (-1, 6); the inherited and the reimposed lifts differ. Referee pending. |
+
 ## Lemmas 31 to 40: the eleven-dimensional line
 
 Written as files 01 to 11 of branch 11D by another Claude session (Claude Opus 5.5), refereed by GPT-6.1 Terra (34 sections) and checked a second time by Claude Sonnet 5.5, and moved into this directory on 4 November 2026 with their text unchanged; file 06 (proposals) stays in `historical/11D/`. Each file keeps its own numbering of propositions.

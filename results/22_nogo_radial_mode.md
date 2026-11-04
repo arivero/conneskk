@@ -1,0 +1,15 @@
+# On one interval with fixed wall coupling, no bulk mass and even scalar inner fluctuations on the moving window, the singular values of the finite Dirac operator are fixed, so this parent has no radial Higgs mode
+
+**Status.** No-go theorem in its scope (No-go theorem 22.7). Proved by Claude Opus 5.5, with an independent endpoint-preserving proof by Terra 6.1 (historical/reviews/2026-11-03_terra_check_22.md); checked by Claude Opus 5.5 by hand, by Terra 6.1 by hand, and by Astra 6 by hand, whose recheck is No-go theorem 7 of lemma 24. Ledger row `l22_no_radial` (depending on `l22_transport`). Stated in the section on fluctuations of paper/boundary_condition_note.tex ("\supp{22}"); cited in paper/connes_kk_dictionary_note.tex and paper/real_structure_note.tex ("No-go theorem 22.7 of \supp{22}").
+
+**Setting.** The parent of Theorem 22.3 on one interval: fixed X, no bulk masses, scalar inner fluctuations E h from the even algebra A_l with h\* = -h, and the moving spectral window. For real fluctuations the conjugate one-form is included, under the order-zero representation.
+
+**Statement.** Every fluctuated finite operator, pi(w)\* D_F pi(w) or U_w\* D_F U_w in the notation of 22_fluctuations_by_transport.md, has the same singular values as D_F. This is an exact finite-amplitude spectral statement, with no action and no loop expansion. In the usual Standard Model representation with nonzero Yukawa data, the normalized shifted Higgs quaternion runs through the unit quaternions, a three-dimensional gauge orbit, with no radial mode; degenerate data can have a smaller orbit.
+
+*Hypotheses.* One interval, fixed X, no bulk masses, even scalar fluctuations, the moving window. The window has to be named: a fixed compression can change singular values at second order, as for D_F = m sigma_1 and h = i sigma_3, where Q_l(E h) = -((1 - cos(2 m l))/(2 m l)) sigma_2 (lemma 24, Result 7).
+
+*Escapes, as the lemma states them.* The coupling X as a field on the wall, with its own kinetic term and potential; connections odd for the grading, as in Corollary 22.2 and lemma 23, which change the singular values; bulk masses that do not commute with the gauge action; two or more internal dimensions, where a connection has curvature, although curvature alone does not prove a radial mode; an additional composite or other degree of freedom; a fluctuation of the finite data alone, as with the radial parameter of lemma 19, which is not the moving window. A quantum effective action on the same configuration space does not by itself add a radial coordinate.
+
+**Proof.** Lemma 22, No-go theorem 22.7, from Theorem 22.5: D_F and pi(w)\* D_F pi(w) are unitarily equivalent, and the same holds with U_w.
+
+**What it leaves open.** The result points to the wall, to odd directions or to more dimensions for the physical Higgs modulus, and at the 10 -> 9 endpoint it agrees with T10, where the Higgs is frozen. The odd escape is realized in 23_odd_fluctuations_radial_mode.md. The K x I_l parent of lemma 24 has tangential directions and tangential one-forms, so this theorem does not decide its full fluctuation space (lemma 24, Result 7).

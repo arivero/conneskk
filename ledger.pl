@@ -76,6 +76,12 @@ depends(l05_limits, l05_truncation).
 attempted_by(l05_limits, astra6).
 checked_by(l05_limits, claude_opus_5_5, python("spectra")).
 checked_by(l05_limits, terra_6_1, by_hand).
+claim(l05_chain, theorem, proved, "Parts 1 and 2", "The staggered N-site chain with hopping h_N = (2N-1)/(2l) has spectrum +-2 h_N sin((2r-1) pi/(4N-2)), r = 1..N, and distances abs(i-j)/h_N between sites; as N -> infinity it converges to the chiral interval in spectrum, in heat trace and in Gromov-Hausdorff distance.").
+source(l05_chain, 'lemmas/05_deconstruction_interval.md', '').
+attempted_by(l05_chain, astra6).
+checked_by(l05_chain, claude_opus_5_5, python("spectra and distances of the chain, with the truncation check of l05_truncation")).
+referee_pending(l05_chain).  % row added on 4 Nov 2026 when results/05_chain_converges_to_interval.md found none; no referee read Parts 1 and 2
+addresses(t1, l05_chain).
 claim(l06_factorization, theorem, proved, "Theorem", "A KO-6 triple factors as (KO-7) x P_7 or (KO-5) x P_1 iff there is a grading-reversing involution U commuting with a, a°, D and UJ = sJU (s = +1: 11, s = -1: 9).").
 source(l06_factorization, 'lemmas/06_vectorlike_odd_factorization.md', '').
 attempted_by(l06_factorization, astra6).
@@ -1093,6 +1099,24 @@ checked_by(l21_exotic, claude_fable_5_1, by_hand).  % arithmetic; the anomaly tr
 depends(l21_exotic, l21_so30).
 addresses(t12, l21_exotic).
 referee_pending(l21_exotic).  % added on 4 Nov 2026, after the Terra report on lemma 21
+claim(l41_forms, theorem, proved, "Lemma 41.1 and Theorem 41.2", "For a finite real KO-6 triple with order zero the trace form Q_ij = Tr(gamma p_i p_j^o) is skew. Along the chain A_PS -> A_SM -> C + M_3(C) of lemma 20 and lemma 06 (one generation, Dirac neutrinos) the forms are [[0,0,-2],[0,0,2],[2,-2,0]], [[0,-2,-2],[2,0,2],[2,-2,0]] and 0, of ranks 2, 2, 0: the trace-form Poincare duality fails at every step, at the last because the light block is vectorlike (the form is the bimodule index).").
+source(l41_forms, 'lemmas/41_axioms_along_the_chain.md', 'poincare-duality').
+attempted_by(l41_forms, claude_fable_5_1).
+checked_by(l41_forms, claude_fable_5_1, python("the three matrices on the 32-state representation, not kept")).
+depends(l41_forms, l20_rank_one).  depends(l41_forms, l06_nuL).
+referee_pending(l41_forms).
+claim(l41_orient, proposition, proved, "Proposition 41.4", "The Pati-Salam data are orientable, with the cycle gamma = rho(p_L' - p_R') rho(1_4)^o - rho(1_4) rho(p_L' - p_R')^o; the Standard Model data with nu_R are not (nu_R and J nu_R share both characters with opposite gradings); the light block of the third step is not, since its nonzero mass blocks commute with B (a nonzero D commuting with both actions forbids every orientation cycle, the corpus statement rs_N9, proved here).").
+source(l41_orient, 'lemmas/41_axioms_along_the_chain.md', 'orientability').
+attempted_by(l41_orient, claude_fable_5_1).
+checked_by(l41_orient, claude_fable_5_1, python("the Pati-Salam cycle on the 32-state representation, not kept")).
+depends(l41_orient, l17_no_higgs).
+referee_pending(l41_orient).
+claim(l41_unimod, proposition, proved, "Proposition 41.5", "The left-action traces of the abelian generator of C and of the common colour phase are (4i, 12i) on the full space, (i, 6i) after the removal of the up-type pair with nu_R kept, and (-i, 6i) on the light block of the third step; the unimodularity condition inherited from the parent and the one reimposed on the light block give different relations between the two abelian phases.").
+source(l41_unimod, 'lemmas/41_axioms_along_the_chain.md', 'unimodularity').
+attempted_by(l41_unimod, claude_fable_5_1).
+checked_by(l41_unimod, claude_fable_5_1, python("the six traces, not kept")).
+referee_pending(l41_unimod).
+addresses(t17, l41_forms).  addresses(t17, l41_orient).  addresses(t17, l41_unimod).
 claim(l23_potential, no_go, proved, "Proposition 23.8", "Flat massless family, this gauge content, fermions of frequency 1, one loop: theta = pi/2 is the unique global minimum for n_f > 0, and V is strictly decreasing for n_f >= 10.8; for smaller n_f, no interior minimum on grids (Python). Escapes: general bulk masses with a completion, warping, wall scalar with a potential, wall terms, fermions of frequency 2.").
 source(l23_potential, 'lemmas/23_two_gradings_interval.md', 'the-one-loop-potential-in-the-same-family').
 attempted_by(l23_potential, claude_opus_5_5).
@@ -1158,6 +1182,9 @@ strategy(t14, partial, "The massless electroweak limit as a joint limit: m_weak 
 strategy(t13, open, "Mass generation from D = 9 to D = 4 and the anchoring of the QCD and condensation scales to the Fermi scale; speculative steer for the next paper, in d9_masses_fermi_qcd_steer.md.").
 strategy(t12, open, "The separate role of the top: removal identities, SO(30) from the five other quarks, inside SO(32), Seiberg duality with emergent supersymmetry, and the two families of 84 states against C_3, M2 and M5.").
 strategy(t11, open, "Horava-Witten as a two-sheet geometry: walls as sheets, wall algebras as summands, bulk as connecting operator; compare the chiralities of the walls first.").
+strategy(t15, open, "Engineered connections on a vertical kernel: which unitary connections on the kernel bundle of a fibrewise Dirac family are the Berry connections of a horizontal connection on the coefficient bundle (the device of lemma 29 case (b) and lemma 38; corpus canonical section 9); the integer Wilson-line condition eta^2 in Z on the Berger family of S^5 as a test case (CORPUS_SALVAGE items 1, 2)").
+strategy(t16, open, "The finite triple as a crossed product by the Weyl group: A_F as a corner of C(T^6) x (S_3 x Z_2) with a regular left-right bimodule and a spin-c or twisted lift; obstacles: no equivariant spin lift at the transposition fixed point, the geometric J fails order zero (CORPUS_SALVAGE items 4, 10)").
+strategy(t17, partial, "The axioms and the lift along the chain Pati-Salam -> Standard Model -> colour + electromagnetism: lemma 41 gives the trace forms (ranks 2, 2, 0: Poincare duality fails at every step, the last because the light block is vectorlike), orientability (holds at Pati-Salam, fails at the two later steps) and the unimodularity traces ((4,12), (1,6), (-1,6)); open: the answers as rows of the dictionary note, a referee, and the Kasparov form of the duality question").
 strategy(t6, open, "Metric-compatible towerless limits (operator-system truncations).").
 strategy(t7, open, "Towerless S^2, CP^2 to H, M_3(C) with the right real structure.").
 strategy(t8, partial, "Fermion masses as internal momenta: towerless Yukawa textures; mixing pattern numerical only.").
