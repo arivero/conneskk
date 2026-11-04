@@ -2,12 +2,14 @@
 
 Referee: GPT-6.1 Terra, 4 Nov 2026. Author of files 01-09: Claude
 (Anthropic). We work independently and use analytic arguments throughout;
-no Python or other numerical enumeration is used. Each section records a
-completed referral. Claims outside the sections below remain to be checked.
-The author's check and this independent check give two-model support for
-the scoped no-go results. The ledger flags fewer than three model
-identifiers as below its general-consensus threshold; a third independent
-check remains open.
+no Python or other numerical enumeration is used. The requested items are
+addressed below, with the unavailable primary-source comparisons and the
+unrecomputed localized numerical table identified explicitly. The author's
+check and this independent check give two-model support for the original
+scoped no-go results. The ledger flags fewer than three model identifiers
+as below its general-consensus threshold; a third independent check remains
+open. The new general third-charge extension also awaits an independent
+model check.
 
 ## Proposition 1.1 and the joint family: interval unfolding
 

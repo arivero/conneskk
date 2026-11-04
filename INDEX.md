@@ -110,7 +110,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
 
 ### 1.18 Eleven dimensions from massless W and Z (branch 11D)
 
-The interval of H as an antiperiodic circle and as the M-theory circle; Witten's space M^{111} as the hypercharge quotient of the 5-bar, the Z_6 and chirality from fluxes; hypercharge from C_3, matter from wrapped branes, the Higgs as the M2 position, the magnetic completion AdS5 x CP^2 x S^2, and the 84 of lemma 21 against C_3.
+The interval of H as an antiperiodic circle; the hypercharge quotient of the 5-bar and its conditional comparison with M^{111}; Z_6 and flux-index calculations; and proposed C_3, brane and Higgs readings. The independent [referee report](reviews/2026-11-04_terra_check_11d.md) gives the checked scopes, amendments and remaining source comparisons.
 
 [11D README](11D/README.md) · [11D §1](11D/01_interval_and_eleventh_dimension.md) · [11D §2](11D/02_witten_spaces_hypercharge_quotient.md) · [11D §3](11D/03_branes_hypercharge_and_the_84.md) · [strategy, Ranked list (T14)](STRATEGY.md#ranked-list) · [Astra audit §3-§4, joint family](reviews/2026-11-03_astra_audit_d11.md#3-a-positive-joint-limit-result-from-the-exact-interval) · [11D §4, two families and M2/M5](11D/04_two_families_m2_m5.md) · [11D §5, colour-family exchange](11D/05_colour_family_exchange.md) · [11D §6, main point and heterotic route](11D/06_main_point_heterotic_route.md) · [11D §7, dualities between 9 and 11](11D/07_dualities_9_11.md) · [11D §8, orientifold sign](11D/08_orientifold_sign.md) · [11D §9, dilaton as spectral function and the SO(32) of the EPJC paper](11D/09_dilaton_spectral_and_so32.md)
 
@@ -472,6 +472,8 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 
 ### 11D line: [11D/README.md](11D/README.md)
 
+The headings below preserve the authored records. Current statuses and qualifications are in the [11D results table](11D/README.md#results) and the [referee report](reviews/2026-11-04_terra_check_11d.md).
+
 - [Eleven dimensions from massless W and Z](11D/README.md#eleven-dimensions-from-massless-w-and-z)
 - [The picture](11D/README.md#the-picture)
 - [Results](11D/README.md#results)
@@ -561,6 +563,7 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 - [5. Two more dualities between 9 and 11 (recalled; proposals)](11D/09_dilaton_spectral_and_so32.md#5-two-more-dualities-between-9-and-11-recalled-proposals)
 - [6. Open](11D/09_dilaton_spectral_and_so32.md#6-open)
 - [Plan of the 11D line (handover file)](11D/PLAN.md#plan-of-the-11d-line-handover-file)
+- [Current referee status](11D/PLAN.md#current-referee-status)
 - [State (4 Nov 2026)](11D/PLAN.md#state-4-nov-2026)
 - [Question of this round](11D/PLAN.md#question-of-this-round)
 - [Steps, in order](11D/PLAN.md#steps-in-order)

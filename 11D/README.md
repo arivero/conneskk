@@ -1,8 +1,8 @@
 # Eleven dimensions from massless W and Z
 
-Branch `11D`, opened 3 Nov 2026. This folder holds one line of research: how the limit M_W, M_Z -> 0 of hypothesis H can give an eleven-dimensional theory, related on one side to Witten's family of seven-manifolds with the isometry group of the Standard Model, and on the other to the M2 and M5 details of [lemma 21](../lemmas/21_top_counting.md) and [STRATEGY T12](../STRATEGY.md). All files are new; the only edits outside the folder are pointer lines in README.md, INDEX.md, STRATEGY.md and one include line in ledger.pl, so the branch can be fast-forwarded into master while master has not moved.
+Branch `11D`, opened 3 Nov 2026. This folder studies how the limit M_W, M_Z -> 0 of hypothesis H could give an eleven-dimensional theory, with proposed connections to Witten's seven-manifolds and the M2 and M5 readings of [lemma 21](../lemmas/21_top_counting.md) and [STRATEGY T12](../STRATEGY.md). The branch also contains the independent referee report and related ledger and status updates.
 
-Attempted by Claude (Anthropic) on 3 Nov 2026. The Astra 6 audit of the same day ([reviews/2026-11-03_astra_audit_d11.md](../reviews/2026-11-03_astra_audit_d11.md), of snapshot b2ddf98, before this branch) is used in the second version of the folder: its joint-limit family defines the path along which v -> 0 opens a dimension, and its points corrected Proposition 1.4 and Proposal 1.3; see the section on the audit below. An independent analytic [referee report](../reviews/2026-11-04_terra_check_11d.md) is in progress; claims not covered there remain pending. The checked no-go results have two-model support and remain below the ledger's three-model general-consensus threshold. [prompts/terra_check_11d.md](prompts/terra_check_11d.md) is the referee request. The conversation in which the folder was written is recorded at <https://claude.ai/code/cshk_01BpscANdX3GG8D45SQ1BxsaHviSe7ufxxCLNiNaDv4fWT>.
+Attempted by Claude (Anthropic) on 3 Nov 2026. The Astra 6 audit of the same day ([reviews/2026-11-03_astra_audit_d11.md](../reviews/2026-11-03_astra_audit_d11.md), of snapshot b2ddf98) supplies the joint-limit family and corrections to Proposition 1.4 and Proposal 1.3. GPT-6.1 Terra has addressed the requested items analytically in the [referee report](../reviews/2026-11-04_terra_check_11d.md), with amendments and explicitly conditional source comparisons. The full EPJC paper and several cited primary sources were unavailable, and the original localized-family numerical table was not recomputed. The new general third-charge extension awaits an independent model check. The original scoped no-go results have two-model support and remain below the ledger's three-model general-consensus threshold. Opening statements in the numbered files that say “referee pending” are historical; their adjacent referee notes and the table below give the current status. [prompts/terra_check_11d.md](prompts/terra_check_11d.md) is the referee request. The conversation in which the folder was written is recorded at <https://claude.ai/code/cshk_01BpscANdX3GG8D45SQ1BxsaHviSe7ufxxCLNiNaDv4fWT>.
 
 ## The picture
 
@@ -10,7 +10,7 @@ H reads the two sheets of the finite geometry as the minimal truncation of an in
 
     11 = 4 (spacetime) + 1 (the interval of H) + 6 (B_6).
 
-There are two ways to complete 4 + 6 by one dimension, and they correspond to the two branes of M-theory:
+The following table summarizes two proposed completions of 4 + 6 and their brane readings. The \(M^{111}\) identification uses the recalled fibration, and the physical dictionaries and the single-family construction remain open:
 
 | | electric (M2) completion | magnetic (M5) completion |
 |---|---|---|
@@ -70,7 +70,7 @@ There are two ways to complete 4 + 6 by one dimension, and they correspond to th
 | 9 §5(2) | The E8 Weyl transposition conjugates a Wilson line and acts on the Narain lattice; a physical exchange must preserve the full background | Gauge action independently checked, with background-scope clarification | [09](09_dilaton_spectral_and_so32.md); [referee](../reviews/2026-11-04_terra_check_11d.md#file-09-section-5-weyl-action-on-a-wilson-line) |
 | 5 Readings | Three families as the obstruction; M exchanges the two heavy directions of the algebra chain; 128 = 44 + 84 under Spin(9) | Proposals | [05](05_colour_family_exchange.md) |
 
-The checks are in [checks_11d.py](checks_11d.py) (Python 3, exact fractions; every check asserts; about 20 s).
+The author's numerical checks are in [checks_11d.py](checks_11d.py) (Python 3, exact fractions). The independent referee arguments are analytic.
 
 ## How the massless limit gives eleven dimensions here
 
@@ -86,11 +86,11 @@ The angle-dependent one-loop term (Proposition 1.4) is minimized at the massless
 ## Next computations, ranked
 
 0a. **The main point** (06, PLAN task B): one family realizing the three regimes; first steps listed in 06 §6 (type I' interval with the D8 configuration 15 + 1 as the parent of the lemma-22 window; Chan-Paton algebras against C + H + M_3(C); inner fluctuations against Λ^2(30)).
-0b. **A nine-dimensional spectral triple on the type I' interval** (07 §7): sixteen D8 positions as the eigenvalues of D_F, and its strong-coupling limit with E8 walls; the dilaton as a spectral function and the diquark strings are in 09 (Propositions 9.1, 9.2), and whether the type I' coupling supplies the second scale of Proposition 1.5 is the next question there.
+0b. **A nine-dimensional spectral triple on the type I' interval** (07 §7): sixteen D8 positions as the eigenvalues of D_F, and its strong-coupling limit with E8 walls. File 09 gives a conditional dilaton profile and representation counts; the physical string dictionary and whether the coupling can select the path remain open.
 0. **A potential that selects alpha < 1** (Proposition 1.5, its referee amendment and audit §7.1): the one-loop potential of the localized family, G(l m, l mu), from the exact secular equations of lemma 09, and the angle-independent Casimir coefficient a_0 of the flat family; then the vector kinetic matrix and mass Hessian along the selected path (audit eq. (17)), with g_4 finite.
-1. **The referee of this folder** ([prompts/terra_check_11d.md](prompts/terra_check_11d.md)): Propositions 2.5 and 3.8 and Corollary 3.9 have [independent checks](../reviews/2026-11-04_terra_check_11d.md); the other claims listed in the request remain to be checked.
+1. **Remaining referee work** ([report](../reviews/2026-11-04_terra_check_11d.md)): compare the EPJC paper and cited primary sources when available, check the original localized numerical table if needed, and obtain another model's check of the new general third-charge extension. A third model is also needed for the ledger's general-consensus threshold on the original no-go results.
 2. **Spinors on Y_{3,2}** ([prompts/astra_11d_01.md](prompts/astra_11d_01.md)): the lift of (U(3) x U(2))/U(1)_Y to the spin bundle, whether fermionic Kaluza-Klein modes can carry triality or isospin 1/2, and which spin structures give the antiperiodic fibre momenta (k + 1/2)/R of Proposition 1.1.
-3. **W and Z masses from the resolution**: in the warped resolved cone over Y_{3,2} with the M2-brane on the doublet line, compute the masses of the SU(2) x U(1)_Y vectors broken by the brane position, as functions of zeta and N, and compare M_W/M_Z with the cos^2 theta = 5/8 of the spectral action.
+3. **W and Z masses from the resolution**: specify the partial orbifold resolution, any further smoothing, and the brane background; compute the broken SU(2) x U(1)_Y vector masses as functions of zeta and N and compare M_W/M_Z with the cos^2 theta = 5/8 of the spectral action.
 4. **The 9D reduction of Proposition 2.6**: with SU(2)_R broken by wall data, derive the mass basis of u and d against the charge basis, and the vectorlike limit at the 9 label, where the left-handed interactions are off.
 5. **Fermionic zero modes of wrapped fivebranes** (Conjecture 3.3) at N = 1, and three generations.
 6. **The magnetic completion**: flux quantization, stability and the two C_3 vectors of AdS5 x CP^2 x S^2 against the fluxed pair (chi, B - L) of Proposition 2.6.
@@ -106,7 +106,7 @@ The audit ([reviews/2026-11-03_astra_audit_d11.md](../reviews/2026-11-03_astra_a
 | §3, joint family | restated in circle language in 01, checked against Theorems 22.1 and 22.4; the constant 2 r l E/pi of its Weyl count confirmed (Python, section H) |
 | §3.1, vector poles of the lemma-23 toy | quoted in 01: M_W^2/M_Z^2 -> 5/8 along the family |
 | §4, localized family and tail identity | table of roots and the identity (8) reproduced (Python, section H, bisection), independently of the audit's script |
-| §7.1, modulus target | Proposition 1.5: in the flat family the electroweak term is m^2/l^2 (q = -2), so the ansatz with q > 0 needs a second scale |
+| §7.1, modulus target | In the stated flat one-loop family the electroweak term is m^2/l^2 (q = -2); a second scale could select the audit's q > 0 path. General scale-free potentials can have flat directions |
 | §7.2, gauge normalization | test 2 of Proposal 1.3, and the large-N couplings in 03 |
 | Appendix A, M^{111} | agrees with Theorem 2.1 and Proposition 2.3 for (3, 2), and with the placement of hypercharge in the charged module (03) |
 | §2.1, §5, §6, X and lemma 28 | outside this folder; the 7-dimensional parent X is a third possible completion, M-theory on R^4 x X with the Bryant-Salamon comparison and the circle of solidification §7 as a candidate M-circle, listed as a direction only |
@@ -127,12 +127,12 @@ Prior work for the observation of Theorem 2.1, that the weights of M^{111} are t
 - [01_interval_and_eleventh_dimension.md](01_interval_and_eleventh_dimension.md): the "1".
 - [02_witten_spaces_hypercharge_quotient.md](02_witten_spaces_hypercharge_quotient.md): the "6 + 1" of Witten's spaces, the Z_6, chirality from fluxes.
 - [03_branes_hypercharge_and_the_84.md](03_branes_hypercharge_and_the_84.md): C_3, M2, M5 and the 84.
-- [04_two_families_m2_m5.md](04_two_families_m2_m5.md): the two 12-state blocks, the two gradings of E8, Yukawa couplings as brackets, the M2/M5 exchange as J.
+- [04_two_families_m2_m5.md](04_two_families_m2_m5.md): the two 12-state blocks, two gradings of E8, Yukawa grades, and a proposed M2/M5 reading. An antiunitary J requires more than the complex-linear Chevalley involution.
 - [05_colour_family_exchange.md](05_colour_family_exchange.md): the two families as E8 root configurations, the colour-family transposition with four families.
 - [06_main_point_heterotic_route.md](06_main_point_heterotic_route.md): the main point: target, the heterotic web 9/10/11, dictionary, Proposition 6.1.
-- [07_dualities_9_11.md](07_dualities_9_11.md): dualities between 9 and 11 adapted to the spectral triple: the top angle as a D8 position between two orientifold walls, the one-loop vacuum as the far wall, a torus with flux as the colour form.
-- [08_orientifold_sign.md](08_orientifold_sign.md): the sign of lemma 06 as an orientifold type (O^- for label 11, O^+ for label 9); E8 walls from 15 + 1: the far wall with the top's brane enhances to SU(2) x U(1) at infinite coupling.
-- [09_dilaton_spectral_and_so32.md](09_dilaton_spectral_and_so32.md): the type I' dilaton as a trace of a function of D_F; the SO(32) of the EPJC paper compared with lemma 21; diquarks as strings between the stack and its image on an O8^- plane; del Pezzo walls and the transposition as a T-duality (proposals).
+- [07_dualities_9_11.md](07_dualities_9_11.md): recalled dualities, the proposed D8-position dictionary, the conditional one-loop endpoint, and the doubled flux-torus matrix corner with a unitality amendment.
+- [08_orientifold_sign.md](08_orientifold_sign.md): antiunitary commutants, a proposed orientifold interpretation, and conditional wall-enhancement arithmetic.
+- [09_dilaton_spectral_and_so32.md](09_dilaton_spectral_and_so32.md): a conditional type I' coupling profile, SO(32) branching and diquark counts, and proposed string and del Pezzo readings; the full EPJC comparison remains pending.
 - [PLAN.md](PLAN.md): the handover plan of the line.
 - [checks_11d.py](checks_11d.py): exact checks.
 - [ledger_11d.pl](ledger_11d.pl): ledger facts, included by [../ledger.pl](../ledger.pl).
