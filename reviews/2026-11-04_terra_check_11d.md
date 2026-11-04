@@ -661,6 +661,39 @@ Euclidean isometries. General zero modes of a nonsplit \(SU(4)\) bundle,
 other embeddings, and maps without an isometric root action are outside
 the calculation; Proposal 5.5 is a direction to investigate.
 
+## Proposition 3.5: magnetic product solution
+
+**Verdict: Correct** as a classical local supergravity solution with
+scaled Einstein factors. Flux quantization, global consistency,
+supersymmetry and stability remain separate questions.
+
+Choose an orthonormal frame on \(\mathbb{CP}^2\times S^2\) with
+\(J=e^{12}+e^{34}\) and write
+\[
+ G=f_1e^{1234}+f_2(e^{1256}+e^{3456}).
+\]
+Then \(G^2=24(f_1^2+2f_2^2)\). The contraction
+\(G_{aPQR}G_a{}^{PQR}\) is \(6(f_1^2+f_2^2)\) in a
+\(\mathbb{CP}^2\) direction, \(12f_2^2\) in an \(S^2\) direction,
+and zero in an AdS direction. Substitution in the displayed Einstein
+equation gives
+\[
+ R_{\rm AdS}=-\frac{f_1^2+2f_2^2}{6},\quad
+ R_{\mathbb{CP}^2}=\frac{f_1^2}{3}+\frac{f_2^2}{6},\quad
+ R_{S^2}=\frac{2f_2^2}{3}-\frac{f_1^2}{6}.
+\]
+The forms \(J,\operatorname{vol}_{\mathbb{CP}^2},
+\operatorname{vol}_{S^2}\) and the AdS volume form are parallel, so
+\(dG=d{*G}=0\). Also \(G\wedge G=0\), since it is an eight-form
+entirely on the six-dimensional compact factor.
+
+Positive curvature of the \(S^2\) factor is equivalent to
+\(|f_1|<2|f_2|\). This also makes the other compact curvature positive
+and the AdS curvature negative. The radii are then determined by the
+three Einstein constants. Here “round factors” means the standard
+scaled Fubini-Study metric on \(\mathbb{CP}^2\) and round metric on
+\(S^2\).
+
 ## Proposition 9.3: real-structure constraint on diquark blocks
 
 **Verdict: Correct with amendment.** The block-symmetry constraint and

@@ -116,7 +116,7 @@ claim(d11_ads5, proposition, proved, "Proposition 3.5", "AdS5 x CP^2 x S^2 with 
 source(d11_ads5, '11D/03_branes_hypercharge_and_the_84.md', 'proposition-35-a-magnetic-completion-ads5-x-cp2-x-s2').
 attempted_by(d11_ads5, claude).
 checked_by(d11_ads5, claude, python("11D/checks_11d.py section G: all frame components of the flux bilinear")).
-referee_pending(d11_ads5).
+checked_by(d11_ads5, terra_6_1, by_hand).
 
 claim(d11_two_completions, conjecture, conjectural, "Proposals 3.6, 3.7", "CP^2 x S^2 has an electric completion AdS4 x Y_{3,2} and a magnetic completion AdS5 x CP^2 x S^2, both 4 + 1 + 6 with the 1 as fibre or as AdS5 radius; the M2/M5 exchange acts on hypercharge as electric-magnetic duality and does not permute the 96 states.").
 source(d11_two_completions, '11D/03_branes_hypercharge_and_the_84.md', 'proposal-36-two-completions-of-one-base').

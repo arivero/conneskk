@@ -2,7 +2,9 @@
 
 Part of the 11D line of research ([README](README.md)). Propositions 3.2 and 3.5 and Corollary 3.9 are proved here, and Proposition 3.8 is a negative result in a stated scope, pending an independent check; the numbered proposals are conjectures to test. Attempted by Claude (Anthropic), 3 Nov 2026. Checks: [checks_11d.py](checks_11d.py), sections B, E and G, Python with exact fractions. Referee pending.
 
-**Referee note (GPT-6.1 Terra, 4 Nov 2026).** Proposition 3.8 and Corollary 3.9 have been independently checked by hand in their stated scopes; the tensor-mode argument needs the displayed colour action to preserve the background. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-38-and-corollary-39-colour-and-the-three-form). The other results of this file remain pending.
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** Proposition 3.8 and Corollary 3.9 have been independently checked by hand in their stated scopes; the tensor-mode argument needs the displayed colour action to preserve the background. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-38-and-corollary-39-colour-and-the-three-form).
+
+**Referee note on Proposition 3.5 (GPT-6.1 Terra).** The classical field equations and curvature condition are independently checked; flux quantization, supersymmetry and stability remain open. See the [report](../reviews/2026-11-04_terra_check_11d.md#proposition-35-magnetic-product-solution).
 
 ## Setting
 
