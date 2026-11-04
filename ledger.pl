@@ -1135,6 +1135,18 @@ checked_by(l42_moduli, claude_fable_5_1, by_hand).
 depends(l42_moduli, l20_rank_one).
 referee_pending(l42_moduli).
 addresses(t14, l42_no_higgs_in_window).  addresses(t14, l42_tangent).  addresses(t0, l42_moduli).
+claim(l43_berry, theorem, proved, "Proposition 43.1 and Theorem 43.2", "Changing the coefficient connection by alpha changes the Berry connection on a constant-rank kernel bundle by the fibrewise compression P alpha P; every connection on the kernel bundle is a Berry connection iff the fibrewise compression Gamma(F_b, u(E)) -> u(K_b) is surjective at every point, iff the products s_j s_i^* of a kernel frame are linearly independent over the fibre; then a smooth preimage is C^*(C C^*)^{-1} beta.").
+source(l43_berry, 'lemmas/43_engineered_connections.md', 'statements').
+attempted_by(l43_berry, claude_fable_5_1).
+checked_by(l43_berry, claude_fable_5_1, by_hand).
+referee_pending(l43_berry).
+claim(l43_scalar, corollary, proved, "Corollary 43.3", "Scalar changes attain every connection iff the functions <s_i, s_j> are independent on the fibre: true for H^0(CP^3, O(1)) (sixteen functions z-bar_i z_j/|z|^2, the second-moment identity a bijection of Herm(4)), false for functions pulled back from S^4 (image of real dimension six, Proposition 10.1), so the core copy of lemma 29 needs matrix-valued changes between the summands of E, the collar connection of case (b).").
+source(l43_scalar, 'lemmas/43_engineered_connections.md', 'statements').
+attempted_by(l43_scalar, claude_fable_5_1).
+checked_by(l43_scalar, claude_fable_5_1, by_hand).
+depends(l43_scalar, l43_berry).  depends(l43_scalar, l10_toeplitz).
+referee_pending(l43_scalar).
+addresses(t15, l43_berry).  addresses(t15, l43_scalar).
 claim(l23_potential, no_go, proved, "Proposition 23.8", "Flat massless family, this gauge content, fermions of frequency 1, one loop: theta = pi/2 is the unique global minimum for n_f > 0, and V is strictly decreasing for n_f >= 10.8; for smaller n_f, no interior minimum on grids (Python). Escapes: general bulk masses with a completion, warping, wall scalar with a potential, wall terms, fermions of frequency 2.").
 source(l23_potential, 'lemmas/23_two_gradings_interval.md', 'the-one-loop-potential-in-the-same-family').
 attempted_by(l23_potential, claude_opus_5_5).

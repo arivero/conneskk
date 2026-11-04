@@ -1,0 +1,18 @@
+# For the pull-back connection, the leading wall operator on the representation 4 has a one-dimensional kernel whose compression has fibre part -w(rho), w(rho) = 2(rho^2 + 2)^2/(9 + 2(rho^2 + 2)^2), which reaches the level-one value only as rho -> infinity, while the line-preserving collar connection gives the level-one value at every radius
+
+**Status.** Proposition (Proposition 28.13), with Lemma 28.12. Proposition 28.13 proved by Claude Opus 5.5; checked by Claude Opus 5.5 in Python (matrix elements, and the closed form to ten digits) and by Terra 6.1 by hand, who reproduced the matrix A(rho) in exact symbolic arithmetic from the bracket and Clifford data; the Terra report found three errors of statement and gave three amendments, applied (historical/reviews/2026-11-03_terra_check_28.md). Lemma 28.12 proved by Astra 6, job 28 (historical/reviews/2026-11-03_astra_job_28.md, Lemma 5), and checked by Claude Opus 5.5 in Python against the radial system. Ledger rows `l28_wall` (depending on `l28_mixing`) and `l28_mixing`. The function w(rho) enters case (a) of Theorems 2 and 4 of paper/joint_limit_note.tex.
+
+**Setting.** The operator of 28_self_adjoint_local_wall.md, with the sign of Phi for which the right singular vector of T is at the zero section, and its left singular vector v at the wall, in the domain Z v = +v of T\*. A wall profile exp(q(x - l)), q > 0, for T\* = i Z d/dx + D_6 + i phi tau with phi > 0 has q = -phi Z tau at leading order, so the stable channels of v are (Z, tau) = (+, -3/2) and (+, -1/2) twice, mapping to the channels (-, -1/2) twice. Horizontal scale 1.
+
+**Statement.**
+
+1. (Lemma 28.12) On a product collar, normalized stable profiles for mass eigenvalues M q_i overlap by 2 sqrt(q_i q_j)/(q_i + q_j), independently of M, which is sqrt(3)/2 for q = 1/2, 3/2. So large mass keeps the coupling between the stable channels O(3) and O(1), which in the pull-back connection has order 1/rho.
+2. In unitary bases of the channels, the compression of D_6(rho) with these overlaps is A(rho) = [[3/(2 rho), 1/rho, rho + 1/rho], [0, sqrt(2), -sqrt(2)]], with kernel spanned by c = (-(2/3)(rho^2 + 2), 1, 1).
+3. For the mode c, tr(B Gamma_5)/tr B = -1 and tr(B t-hat)/tr B = -w(rho), for every rho; for horizontal scale h, rho^2 is replaced by rho^2/h^2. So w = 8/17 as rho -> 0, w = 2/3 at the Fubini-Study radius rho = 1, and w -> 1, the level-one value, as rho -> infinity. The nonzero singular values of A at rho = 1 are 1.863 and 2.789. With the opposite sign of Phi the fibre part is +w(rho).
+4. For the connection preserving the line summands, the first row of A is (0, 1/rho, rho + 1/rho), the kernel is (1, 0, 0), so w = 1 for every rho, and the block on tau = -1/2 is invertible for every rho > 0, with D^2 = 3, 6 at rho = 1.
+
+*Scope.* The kernel and the traces are exact for this finite block, the leading formal wall operator; the next correction is O(1/M) and does not change the limiting kernel. In lemma 28 the convergence of the boundary mode of T_M to it is numerical (Result 28.5, Python: the difference falls from 0.037 to 0.009 at wall radius 0.5 and from 0.008 to 0.002 near radius 1, between phi_0 = 16 and 32). The value 2/3 tests the overlap factor sqrt(3)/2, since without it w(1) would be 3/5.
+
+**Proof.** Lemma 28, Proposition 28.13 and Lemma 28.12. The three stable channels all lie in Gamma_5 = -1 and have mutually orthogonal target spaces, so the cross terms vanish in the traces of Proposition 28.4.
+
+**What it leaves open.** Lemma 29 proves the convergence under the kernel condition K(rho): the half-cylinder kernel lies within O(1/m) of the kernel of A(rho) (Proposition 29.10), and K(1) holds, with fibre part -2/3 (29_window_case_a.md). Other radii need K(rho).

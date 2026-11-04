@@ -251,6 +251,7 @@ A dated record to November 2026 in nine sections: origins beside the Kaluza-Klei
 - [Dualities between nine and eleven dimensions, adapted to the spectral triple](lemmas/40_dualities_9_11.md#dualities-between-nine-and-eleven-dimensions-adapted-to-the-spectral-triple)
 - [The axioms and the lift along the chain Pati-Salam, Standard Model, colour and electromagnetism](lemmas/41_axioms_along_the_chain.md#the-axioms-and-the-lift-along-the-chain-pati-salam-standard-model-colour-and-electromagnetism)
 - [The Higgs representation in the window: the tangent of the orbit of the marked lines](lemmas/42_higgs_as_connector_moduli.md#the-higgs-representation-in-the-window-the-tangent-of-the-orbit-of-the-marked-lines)
+- [Which connections on a vertical kernel are Berry connections](lemmas/43_engineered_connections.md#which-connections-on-a-vertical-kernel-are-berry-connections)
 
 ### Results: [results/README.md](results/README.md)
 

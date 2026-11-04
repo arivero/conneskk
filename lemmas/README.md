@@ -56,6 +56,8 @@ Canonical 8 and 15 present the flux-(1,2,3) failure as decisive; Theorem 02-A co
 
 | [42](42_higgs_as_connector_moduli.md) | T14 (ii), T0: the Higgs representation in the window | **Proposition** 42.1: the equivariant window operator is lambda I_4 off the diagonal and carries no Higgs representation. **Proposition** 42.2: the tangent of the orbit of the marked line is (2)_{+-1} + (1)_{+-2}: the Higgs doublet of hypercharge 1/2 (the tangent of S^4 at the marked point) and a charged singlet of hypercharge 1 along the twistor fibre. **Proposition** 42.3: the connector moduli under Sp(2) are the Hermitian and symplectic overlaps of the two marked lines and the coupling. Referee pending. |
 
+| [43](43_engineered_connections.md) | T15: which connections on a vertical kernel are Berry connections | **Theorem** 43.2: a change alpha of the coefficient connection changes the Berry connection by the fibrewise compression P alpha P, and every connection on the kernel bundle is attained iff the compression Gamma(u(E)) -> u(K_b) is surjective, iff the products s_j s_i^* of a kernel frame are independent. **Corollary** 43.3: for H^0(CP^3, O(1)) scalar changes suffice (the second-moment identity); for functions from S^4 the image is six-dimensional, so the core copy of lemma 29 needs the matrix-valued collar connection. Referee pending. |
+
 ## Lemmas 31 to 40: the eleven-dimensional line
 
 Written as files 01 to 11 of branch 11D by another Claude session (Claude Opus 5.5), refereed by GPT-6.1 Terra (34 sections) and checked a second time by Claude Sonnet 5.5, and moved into this directory on 4 November 2026 with their text unchanged; file 06 (proposals) stays in `historical/11D/`. Each file keeps its own numbering of propositions.

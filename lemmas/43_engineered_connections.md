@@ -1,0 +1,39 @@
+# Which connections on a vertical kernel are Berry connections
+
+For STRATEGY T15 (from CORPUS_SALVAGE items 1 and 2), following [lemma 10](10_toeplitz_twistor.md) (Proposition 10.1 and the second-moment identity), [lemma 29](29_window_on_the_disc_bundle.md) (the collar connection of case (b)) and [lemma 38](38_so30_fluctuations.md). Written by Claude Fable 5.1 on 4 November 2026, by hand. Referee pending. The construction was used in the corpus (historical/corpus/canonical_research.md, section 9, on N over S^5 with the flux (1, 1, 2)) and in lemma 29 without a general statement; this lemma supplies it.
+
+**Outcome.** Let a fibrewise Dirac family on a bundle of compact fibres F_b have kernels K_b of constant rank, forming a bundle K over the base B, with the Berry connection induced from a unitary connection on the coefficient bundle E. Changing the coefficient connection by a horizontal one-form alpha changes the Berry connection by the fibrewise compression P alpha P. Every connection on K is a Berry connection of some coefficient connection exactly when the fibrewise compression Gamma(F_b, u(E)) -> u(K_b) is surjective at every point of B, and that holds exactly when the pairwise products s_i s_j^* of a frame of kernel sections are linearly independent as sections of End(E) over the fibre. For scalar changes of the connection the same criterion reads: the pointwise inner products <s_i, s_j> are linearly independent functions on the fibre. On CP^3 with the kernel H^0(O(1)) this holds (sixteen independent functions z-bar_i z_j/|z|^2), so every connection on the rank-four kernel bundle is a Berry connection of an abelian change; for functions pulled back from the base S^4 the compressed image has real dimension six out of sixteen (lemma 10), so there the connection has to be engineered with matrix-valued components between the summands of E, which is what the corpus did and what the collar connection of lemma 29 does.
+
+## Setting
+
+Let pi: P -> B be a fibre bundle with compact fibres F_b and a connection (a horizontal distribution), E -> P a Hermitian vector bundle with a unitary connection nabla, and D = (D_b) a smooth family of fibrewise elliptic self-adjoint operators on L^2(F_b, E|_{F_b}) whose kernels K_b have constant dimension k; P_b denotes the orthogonal projection onto K_b. The Berry connection on the bundle K -> B is nabla^K_X s = P_b nabla_{X^h} s for X in T_b B, with X^h the horizontal lift and s a section of K read as a family of sections of E over the fibres. For a fibre F_b, the compression map is
+
+    C_b : Gamma(F_b, End(E)) -> End(K_b),   C_b(X) = P_b X P_b,
+
+and in a unitary frame s_1, ..., s_k of K_b its matrix elements are C_b(X)_{ij} = int_{F_b} <s_i(y), X(y) s_j(y)> dy. Its adjoint for the L^2 pairing on Gamma(F_b, End(E)) with the Hilbert-Schmidt pairing on End(K_b) is C_b^*(Y) = rho_Y = sum_{ij} Y_{ij} s_j s_i^*, a smooth section of End(E) over F_b (the density of Y).
+
+## Statements
+
+**Proposition 43.1 (the change of the Berry connection).** Let nabla' = nabla + alpha with alpha in Omega^1(P, u(E)). Then the Berry connection of nabla' is nabla^K + beta, where beta_b(X) = C_b(alpha(X^h)|_{F_b}): the compression of the horizontal component of alpha, fibre by fibre. The vertical components of alpha and the change of the operators D_b do not enter at this order; if the family D_b depends on the connection (a twisted Dirac family), the statement holds for the family with the kernels held fixed, and the kernels move by the ordinary perturbation of the family, which is a separate effect.
+
+*Proof.* nabla'_{X^h} s = nabla_{X^h} s + alpha(X^h) s, and P_b of the second term is C_b(alpha(X^h)) s. ∎
+
+**Theorem 43.2 (which connections are Berry connections).** The following are equivalent for the family (P, E, D):
+
+1. Every unitary connection on K -> B is the Berry connection of nabla + alpha for some alpha in Omega^1(P, u(E)).
+2. C_b : Gamma(F_b, u(E)) -> u(K_b) is surjective for every b in B.
+3. For every b and every (one, hence every) unitary frame s_1, ..., s_k of K_b, the k^2 sections s_j s_i^* of End(E) over F_b are linearly independent.
+
+When these hold, a preimage can be chosen smoothly: alpha(X^h) = C_b^*(C_b C_b^*)^{-1} beta_b(X) is a smooth u(E)-valued form on the horizontal distribution, and any vertical component can be added.
+
+*Proof.* (1) implies (2): a connection whose difference from nabla^K at b is a prescribed Y in u(K_b) must have Y in the image of C_b. (2) implies (3): C_b is surjective iff C_b^* is injective, and C_b^*(Y) = sum Y_{ij} s_j s_i^*, which vanishes for a nonzero Y exactly when the sections s_j s_i^* are dependent (the complex spans agree with the real ones here, since Y ranges over u(K_b) and the s_j s_i^* for i != j pair into Hermitian and anti-Hermitian combinations). (3) implies (1): with C_b surjective, C_b C_b^* is a positive invertible operator on u(K_b) depending smoothly on b, so for a given beta in Omega^1(B, u(K)) the form alpha(X^h) = C_b^*(C_b C_b^*)^{-1} beta_b(X) is smooth, u(E)-valued, and C_b(alpha(X^h)) = beta_b(X); by Proposition 43.1 the Berry connection of nabla + alpha is nabla^K + beta. ∎
+
+**Corollary 43.3 (scalar changes).** Restricting alpha to scalar forms (alpha = i a (x) 1_E, a real), the attainable changes are the compressions of real functions, and every connection on K is attained by a scalar change iff the k^2 functions <s_i, s_j> on F_b are linearly independent. For the kernel H^0(CP^3, O(1)) of the Dolbeault-Dirac operator twisted by O(1), with s_i = z_i/|z| in the unitary frame, <s_i, s_j> = z-bar_i z_j/|z|^2, sixteen linearly independent functions, so the criterion holds and every connection on the rank-four kernel bundle is the Berry connection of an abelian change of the coefficient connection; in matrix form, Q(<w, B w>/<w, w>) = (B + tr B)/5 (lemma 10, the second-moment identity), a bijection of Hermitian matrices. For functions pulled back from the base S^4 of the twistor fibration, the compressed image is the real span of 1 and Gamma_1, ..., Gamma_5, of dimension six (Proposition 10.1), so scalar changes along the base attain only the connections whose difference from nabla^K lies in that span; the complementary ten directions need matrix-valued alpha with components between the summands of E, as in the corpus construction and in the collar connection of lemma 29, case (b).
+
+*Proof.* The first sentence is Theorem 43.2 with the scalar subalgebra in place of Gamma(u(E)). The CP^3 statement is the second-moment identity, which maps Herm(4) onto itself; the S^4 statement is Proposition 10.1 together with the dimension count. ∎
+
+**Remark 43.4 (the test case of the corpus).** On the Berger family of S^5 with the kernel of flux (1, 1, 2) the corpus engineered a connection with a prescribed Berry connection and found that all three coefficient lines keep a circle zero mode exactly when eta^2 is an integer; that calculation rests on stated spin lifts and was checked for its phase arithmetic only (historical/corpus/canonical_research.md, section 9, and research_checks, section 4.7). Theorem 43.2 says when such engineering is possible; it does not redo that calculation, and the integrality statement stays a record.
+
+## Scope
+
+Constant-rank kernels, compact fibres, unitary connections; the Berry connection as the compressed horizontal derivative; first order in the change of the connection, with the kernels held fixed. The theorem is linear algebra fibre by fibre and a smoothness remark; its content for the project is the criterion of item 3, which separates the two sheets of lemma 29: the wall copy (functions on CP^3) attains every connection by scalar changes, the core copy (functions on S^4) does not, so the collar connection that preserves the line summands is a choice forced by the base, within the class of connections the theorem allows.
