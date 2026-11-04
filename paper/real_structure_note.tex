@@ -1,0 +1,170 @@
+% The real structure of a massless block: SO(30) in the finite geometry. Short note expanding one section of the dictionary note, from lemmas 06, 21, 22 and the 11D files 08, 09, 11
+\ifdefined\mobile
+\documentclass[aps,prd,reprint,onecolumn,nofootinbib,amsmath,amssymb,floatfix]{revtex4-2}
+\usepackage[paperwidth=270pt,paperheight=585pt,textwidth=246pt,textheight=545pt,top=18pt,left=12pt,headheight=0pt,headsep=0pt,footskip=14pt]{geometry}
+\else
+\documentclass[aps,prd,reprint,nofootinbib,amsmath,amssymb,floatfix]{revtex4-2}
+\fi
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsthm}
+\emergencystretch=1.5em
+\ifdefined\mobile\makeatletter\def\frontmatter@abstractwidth{246\p@}\makeatother\fi
+\usepackage[hidelinks]{hyperref}
+\theoremstyle{plain}
+\newtheorem{proposition}{Proposition}
+\newcommand{\C}{\mathbb C}
+\renewcommand{\H}{\mathbb H}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\supp}[1]{Supplemental Material, part #1}
+\newcommand{\file}[1]{Supplemental Material, 11D file #1}
+
+\begin{document}
+
+\title{The real structure of a massless block: $SO(30)$ in the finite geometry}
+\date{Draft, 4 November 2026}
+
+\begin{abstract}
+The five light quarks in three colours with their conjugates span the vector of $SO(30)$, whose adjoint contains a colour antitriplet with the charge counts $(6,6,3)$ used in a composite reading of the antisquarks. We place this group in the finite geometry as the commutant of the real structure $j$, with $j^2=+1$, on the massless light block. Finite fluctuations compatible with the real structure have a symmetric block within one multiplet, with the counts $(3,6,1)$. The connection along the interval of the parent of the finite Dirac operator has the antisymmetric block, and its compression to the finite window is symmetric.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+A paper of 2024 \cite{Rivero2024} classifies the scalars of a supersymmetric Standard Model with three generations as composites in the adjoint of $SO(32)$. The vector of its $SO(30)$ is formed by the five light quarks $u,c,d,s,b$ in three colours with their conjugates, and the top stays apart. Under $SU(5)\times SU(3)$ it keeps the mesons in $(24,1)$ and the diquarks in $(15,\bar3)$ and its conjugate, and the antitriplet has the charge counts
+\begin{equation}\label{eq:counts}
+\bigl(-\tfrac23,\,+\tfrac13,\,+\tfrac43\bigr):\qquad(6,\,6,\,3).
+\end{equation}
+The counting goes back to \cite{Rivero2005}, which finds neither $SO(30)$ nor a role for $SO(32)$ (\supp{21}).
+
+A reading of the LaTeX source of \cite{Rivero2024} (\file{09}, section 1) records the following. The paper reaches $SO(30)$ and $SO(32)$ from $SU(16)\times U(1)\supset SU(15)\supset SU(5)\times SU(3)$ by adding singlets. Its postulates force the quark that does not bind to be up-type, and the top is favoured with the remark ``we have not a concrete argument''. So the binding mechanism, the identity of the top as the quark that stays out, and the fermion partner of the three scalars of charge $+4/3$ are open there.
+
+Independently, in the exact quadratic spectral action of \supp{18}, among single charged species only an up-type quark can be removed while keeping $\cos^2\theta_{\rm NC}=5/8$ and the ratio $8/3$ of the photon and gluon coefficients (\supp{21}, for the classical bosonic trace with three generations). Removing the top leaves $30=(5,3)\oplus(\bar5,\bar3)$, with
+\begin{equation}\label{eq:branching}
+\begin{split}
+\Lambda^2(30)={}&(24,8)+(24,1)+(1,8)+(1,1)\\
+&+(10,6)+(15,\bar3)+\text{conjugates of the last two},
+\end{split}
+\end{equation}
+and $496\to(435,1)+(1,1)+(30,2)$ under $SO(30)\times SO(2)\subset SO(32)$. The two selections of an up-type quark are independent arguments with the same outcome (\file{09}).
+
+We ask where $SO(30)$ lives in the finite geometry. Section~\ref{sec:sign} places it as the symmetry of the massless light block under the real structure for $s=+1$. Section~\ref{sec:J} excludes the counts~\eqref{eq:counts} from finite fluctuations within one multiplet. Sections~\ref{sec:interval} and~\ref{sec:window} find them in the connection along the interval of the parent of the finite Dirac operator $D_F$, and $(3,6,1)$ in its compression to the window. Results carry the numbers of the parts that prove them.
+
+\section{The sign of an odd factorization and the symmetry of a massless block}\label{sec:sign}
+
+Let $(A,H,D,J,\gamma)$ be a finite real spectral triple of KO-dimension six. An odd factorization is a unitary $U$ with
+\begin{equation}
+U^2=1,\quad U\gamma=-\gamma U,\quad [U,a]=[U,a^o]=[U,D]=0,\quad UJ=sJU,
+\end{equation}
+$s=\pm1$. It writes the triple as a product of an odd triple of KO-dimension 7 ($s=+1$, label 11) or 5 ($s=-1$, label 9) with a Clifford point \cite{DD2011,towerlesspaper}. On $H_+$, $d=(UD)|_{H_+}$ and $j=(UJ)|_{H_+}$ satisfy $j^2=s$ and $jd=s\,dj$ (\supp{06}, Theorem 2).
+
+\smallskip\noindent\textit{Proposition 8.1} (\file{08}). Let $E$ be an eigenspace of $d^2$ in $H_+$, of dimension $n$. The unitaries of $E$ that commute with $j$ form $O(n)$ if $s=+1$, and $USp(n)$ if $s=-1$, in which case $n$ is even.
+\smallskip
+
+Here $j$ is a real structure for $s=+1$ and a quaternionic structure for $s=-1$. The symmetries of the pair $(j,d)$ are smaller, $O(n_+)\times O(n_-)$ for $s=+1$, with $n_\pm$ the dimensions of the eigenspaces of $d$ at $\pm\mu$ in $E$, and $U(n/2)$ for $s=-1$, since then $j$ exchanges these eigenspaces; on a massless block $d=0$.
+
+Let $V=\C^5\otimes\C^3$, with $Q=2/3$ on $u,c$ and $Q=-1/3$ on $d,s,b$. For the five light quarks, $H_+=\{q_L\}\oplus\{\overline{q_R}\}=V\oplus\bar V$, of dimension 30. Let $Uq_L=q_R$, $U\overline{q_R}=s\,\overline{q_L}$ and $j=U^{-1}J|_{H_+}$; then $j^2=s$, $j\,q_L=s\,\overline{q_R}$ and $j\,\overline{q_R}=q_L$.
+
+\smallskip\noindent\textit{Proposition 11.1} (\file{11}). Let $s=+1$ and $j(v,w)=(K^{-1}w,Kv)$, with $K$ the coordinatewise conjugation. The skew-Hermitian $a$ with $jaj^{-1}=a$ are
+\begin{equation}\label{eq:block}
+a=\begin{pmatrix}\alpha&B\\ \bar B&\bar\alpha\end{pmatrix},\qquad\alpha^*=-\alpha,\quad B^T=-B,
+\end{equation}
+so they form $\mathfrak{so}(30)=\mathfrak u(15)\oplus\Lambda^2V$, with $\mathfrak u(15)$ the commutant of the complex structure $I=(i,-i)$, which is quark number. A Hermitian generator $H=ia$ satisfies $jHj^{-1}=-H$. For $s=-1$ the same computation gives $\mathfrak{usp}(30)=\mathfrak u(15)\oplus S^2V$.
+\smallskip
+
+With $\Lambda^2V=(S^25,\bar3)\oplus(\Lambda^25,6)$ and $S^2V=(S^25,6)\oplus(\Lambda^25,\bar3)$ (\file{09}, Proposition 9.2), the two signs give Table~\ref{tab:counts}.
+
+\begin{table}
+\caption{\label{tab:counts}The off-diagonal block of the commutant of $j$ on the massless light block (\file{11}).}
+\begin{ruledtabular}
+\begin{tabular}{lccc}
+&antitriplet&$(-\frac23,+\frac13,+\frac43)$&sextet\\
+\hline
+$s=+1$, $\Lambda^2V$&$(S^25,\bar3)$&$(6,6,3)$&$(\Lambda^25,6)$\\
+$s=-1$, $S^2V$&$(\Lambda^25,\bar3)$&$(3,6,1)$&$(S^25,6)$\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+So the $SO(30)$ of \cite{Rivero2024} and \supp{21} is the symmetry of the massless light block under the real structure for $s=+1$, and the counts~\eqref{eq:counts} select the same sign. This $U$ only defines $j$; the algebra of Section~\ref{sec:interval} does not commute with it, so it gives no factorization in the sense of \supp{06}. The sign comes from the neutral sector, since charged sectors admit both: after the heavy-$W$ limit, $s=-1$ needs every singular value of the neutral mass matrix to have even multiplicity, so a generic Majorana block admits only $s=+1$ (\supp{06}, Lemma 4 and Result 7). A realistic seesaw sector thus selects $s=+1$, within these hypotheses.
+
+\section{\texorpdfstring{$J$}{J}-compatible operators and gauge generators}\label{sec:J}
+
+\smallskip\noindent\textit{Proposition 9.3} (\file{09}). Let $J$ be an antiunitary on $V\oplus\bar V$ exchanging the summands, with $J^2=\epsilon$, let $X$ be Hermitian with $JX=\epsilon'XJ$, and let $B\in V\otimes V$ be its block from $\bar V$ to $V$. Then $B=\epsilon\epsilon'B^T$. In the KO-dimensions 5, 6, 7 of the labels 9, 10, 11, $\epsilon\epsilon'=+1$ \cite{Connes2006}, so $B\in S^2V$, whose antitriplet has the counts $(3,6,1)$. For a connection on a circle whose real structure is complex conjugation, of KO-dimension 1 with $(\epsilon,\epsilon')=(+1,-1)$, the block lies in $\Lambda^2V$, with the counts~\eqref{eq:counts}.
+\smallskip
+
+The signs permit all of $S^2V$; the algebra, grading and order conditions of a given triple select a subspace. A Hermitian generator of $\mathfrak{so}(30)$ anticommutes with $j$ instead, with an antisymmetric block for $s=+1$ and a symmetric one for $s=-1$.
+
+So, within one multiplet $V$ and in the labels 9 to 11, the particle-antiparticle block of a finite Hermitian operator compatible with $J$, such as an inner fluctuation, cannot have the counts~\eqref{eq:counts}. This is the finite form of the symmetry of a Majorana mass matrix, and of the Fermi-statistics constraint on a Lorentz-scalar bilinear of one Weyl multiplet without derivatives (recalled in \file{09}). The known escapes are three: a connection along a circle or an interval, as in the last statement above; blocks between two distinct multiplets, which $J$ pairs with their transposes and otherwise leaves free; and derivative couplings. The first is taken up next; the second is open (Section~\ref{sec:open}).
+
+\section{The interval parent}\label{sec:interval}
+
+The parent of \supp{22} realizes finite data of signs $(+,+,-)$ with $l\|D_F\|<\pi/2$ as the exact lowest window of $D_X=E\,d/dx$ on $L^2([0,l];\C^2)\otimes H_F$, with $E(\psi_L,\psi_R)=(\psi_R,-\psi_L)$ and the wall coupling $\tan(lD_F)$ (Theorem 22.1). With $W$ the isometry from $H_F$ onto the window, the compression $Q_l(T)=W^*TW$ satisfies $Q_l([D_X,f])=[D_F,Q_l(f)]$ and
+\begin{equation}\label{eq:compression}
+Q_l(ET)=-\frac1l\int_0^l\sin(x\,\mathrm{ad}_{D_F})(T(x))\,dx
+\end{equation}
+(Theorem 22.4). The wall algebra at $x=l$ is the commutant $C_F$ of $D_F$; under a five-dimensional Yang-Mills action its gauge directions are massless and the others start at $\pi/(2l)$ (Proposition 22.8).
+
+On the light block take $D_F=0$. Let $C_0,C_l\ni1$ be subalgebras of $A=M_{30}(\mathbb R)$, the elements of $\mathrm{End}\,H_+$ commuting with $j$ for $s=+1$, and let $A_l$ be the smooth $f:[0,l]\to A$ with $f(0)\in C_0$ and $f(l)\in C_l$, acting by $\pi(f)=f$ on the $H_+$ components and by $0$ on the others.
+
+\smallskip\noindent\textit{Proposition 11.2} (\file{11}). (i) $\pi(f)$ preserves the domain for all $C_0,C_l$, and order zero and order one hold on this block. (ii) The self-adjoint one-forms are exactly $Ea_x$ on the $H_+$ components, with $a_x\in C^\infty([0,l],\mathfrak{so}(30))$ free at the walls, and $D_A=E\,(d/dx+a_x\oplus Ua_xU^{-1})$. (iii) The real structure acts on them with the sign $+$ of KO-dimension six. The block of $a_x$ between $\bar V$ and $V$ is antisymmetric, and the block of the Hermitian operator $Ea_x$ is symmetric, as Proposition 9.3 requires, with $E$ carrying the other sign.
+\smallskip
+
+So the interval component reaches $\Lambda^2V$ through the first escape. For a mass block $M\neq0$, order one fails in the window, through the blocks $-UbU^{-1}Ma$ and $-aM^*UbU^{-1}$ of $[[D_F,\pi(a)],J\pi(b)J^{-1}]$; the parent keeps order one (\supp{22}, Theorem 22.3), but its wall algebra shrinks to the commutant of $D_F$, which is zero for invertible $M$. The masses need a treatment without order one, as in \supp{19}.
+
+\smallskip\noindent\textit{Theorem 11.3} (\file{11}). Let $k_0,k_l$ be the skew parts of $C_0,C_l$, and assume a five-dimensional Yang-Mills action on a flat product with $M^4$, as in Proposition 22.8.
+(i) The massless four-dimensional scalars from $a_x$ form the orthogonal complement of $k_0+k_l$ in $\mathfrak{so}(30)$.
+(ii) In the parent of \supp{22}, $C_0=A$, and there are none.
+(iii) For $C_0=C_l=M_{15}(\C)$, the commutant of quark number, they are exactly $\Lambda^2V\oplus\Lambda^2\bar V$, with the counts~\eqref{eq:counts}, and the massless vectors are $\mathfrak u(15)$.
+(iv) A generator in $k_0\cap k_l$ has a massless vector and no massless scalar, a generator in $(k_0+k_l)^\perp$ has a massless scalar and no massless vector, and all others have neither. If the orthogonal projections onto $k_0$ and $k_l$ commute (aligned walls), the towers are $n\pi/l$ in the first two cases and $(n-\frac12)\pi/l$ for a generator in exactly one of $k_0,k_l$; for walls that are not aligned they move, as in \supp{23}.
+(v) With colour unbroken at both walls the $(1,8)$ is a vector, so $\Lambda^2(30)$ cannot consist entirely of massless scalars. In case (iii), the $(24,8)+(24,1)+(1,8)+(1,1)$ of Eq.~\eqref{eq:branching} are vectors, and the scalars are $(15,\bar3)+(10,6)$ and conjugates.
+\smallskip
+
+Item (iv) holds in free five-dimensional Yang-Mills at trivial background; its escapes are a circle without walls, a nontrivial holonomy, brane-localized terms and further internal dimensions. The wall algebra in (iii) is an input: at $D_F=0$ every $f$ preserves the domain, and the choice says that the walls conserve quark number and the bulk does not. By (v), the antisquark counts appear as scalars and the slepton counts, contained in $(24,1)+(1,1)$ (\supp{21}), as vectors, so with these walls they are not scalars on an interval.
+
+On a circle every generator has both a massless vector and a massless scalar, and all of $\Lambda^2(30)$ appears; a wall condition, or the reflection-even algebra of \file{01}, removes half. With holonomy $I$ on the circle, diquarks are massive and mesons have massless scalars; on the interval with parity $\mathrm{Ad}(I)$, diquarks have massless scalars and mesons have none (\file{11}). The proposals of 11D files 06 to 09 read these groups and counts as type I$'$ Chan-Paton data, with the circle with holonomy $I$ as a stack of D8-branes off an O8 plane; nothing here depends on them.
+
+\section{The compression to the window}\label{sec:window}
+
+\smallskip\noindent\textit{Proposition 11.4} (\file{11}). Let $s=+1$, let $D_F$ have the mass block $M=U\Lambda$ with $\Lambda$ real for $j$ and symmetric, and let $a_{\rm tot}=a\oplus UaU^{-1}$ be constant.
+(i) $[D_F,a_{\rm tot}]$ has the off-diagonal blocks $US$ and $SU^{-1}$, with $S=[\Lambda,a]$ real and symmetric.
+(ii) For $\Lambda=\mathrm{diag}(m_i)$ on flavours, the compression~\eqref{eq:compression} of $Ea_{\rm tot}$ acts as a change of $\Lambda$, symmetric as Proposition 9.3 requires, with
+\begin{equation}\label{eq:shadow}
+B_{ij}\mapsto-\frac{1-\cos(l(m_i-m_j))}{l(m_i-m_j)}\,B_{ij}\simeq-\frac l2(m_i-m_j)B_{ij}.
+\end{equation}
+(iii) For distinct masses, $B_{ij}\mapsto(m_i-m_j)B_{ij}$ maps $(S^25,\bar3)\subset\Lambda^2V$ onto $(\Lambda^25,\bar3)\subset S^2V$, with kernel the five same-flavour diquarks, and $(\Lambda^25,6)$ into $(S^25,6)$. In charges, $(6,6,3)-(3,0,2)=(3,6,1)$.
+(iv) For a universal mass, $\Lambda=m$, the compression vanishes: $S=0$, and $M=mU$ is invariant under $SO(30)$; fifteen Dirac fermions of equal mass are thirty Majorana fermions of equal mass.
+\smallskip
+
+In Connes' finite geometry the Higgs field has the form $[D_F,a]$ \cite{ConnesLott1991}, while $Ea_x$ is a Kaluza-Klein component along the interval. For constant $a$, $Ea_{\rm tot}=[D_X,f_{\rm tot}]$ with $f(x)=(x-l)a$, and $f(l)=0$ lies in $C_F$, so $Q_l([D_X,f])=[D_F,Q_l(f)]$ applies. So in this parent, to first order and for the fixed compression, a finite Higgs one-form is the shadow of a gauge field along the interval, Eq.~\eqref{eq:shadow}, and it inherits the symmetry type of the finite triple through the commutator with the masses. A generator commuting with the masses has no shadow. This accounts for the counts $(6,6,3)$ of the parent and $(3,6,1)$ of its window.
+
+For a constant connection $h$, the moving window of \supp{22}, Corollary 22.6, gives $-l[D_F,h]$ where the fixed compression gives $-\frac l2[D_F,h]$, with the quadratic term of \cite{CCvS2013a}, treated without order one in \supp{19}. The shadow is tangent to the $O(30)$ orbit of $\Lambda$, so it gives no radial mode, in agreement with No-go theorem 22.7 of \supp{22} (one interval, fixed wall data, no bulk masses, even scalar fluctuations, moving window). Its escapes include the wall coupling as a field, odd connections as in \supp{23}, noncommuting bulk masses and more internal dimensions; the odd generators are absent here, since $M_{30}(\mathbb R)$ maps $H_+$ to itself.
+
+\section{Open questions}\label{sec:open}
+
+\textit{Walls.} Whether $M_{15}(\C)$ at the walls follows from a boundary condition, for example a wall term that conserves quark number.
+
+\textit{Masses.} The quadratic terms of \supp{19} for this algebra, where order one fails.
+
+\textit{Sleptons.} Scalars in $(24,1)+(1,1)$ need components along further internal directions, such as the base of \file{02}.
+
+\textit{Sextets.} The $(10,6)$ comes with the antitriplets, and nothing in this construction removes it.
+
+\textit{The top.} The relation to the $(30,2)$ of $SO(32)$, with the second factor as the $SO(2)$ of the top.
+
+\textit{Two multiplets.} Whether the $(15,\bar3)$ of \cite{Rivero2024} can be read as bilinears of two distinct multiplets, which Proposition 9.3 does not constrain. The paper gives it as the antisymmetric square of one fundamental, without stating chirality, and its remark on diquarks of odd parity is consistent with Proposition 9.3 (\file{09}).
+
+No negative statement above closes an item. Proposition 9.3 points to the interval and to two multiplets, Theorem 11.3 to the walls and to further internal directions, and No-go theorem 22.7 to the wall, the odd directions and more dimensions.
+
+\section*{Status}
+
+The results of \supp{06}, \supp{21} and \supp{22} used here were refereed by GPT-6.1 Terra, and No-go theorem 22.7 also by GPT-6 Astra. Propositions 8.1, 9.2 and 9.3 were checked by their author, by GPT-6.1 Terra and by Claude Sonnet 5.5, with the amendments applied. The account of \cite{Rivero2024} rests on a reading of its LaTeX source by Claude Sonnet 5.5. Propositions 11.1, 11.2 and 11.4 and Theorem 11.3 were checked by their author and once by Claude Sonnet 5.5, whose amendments are applied; the corrected text has not been read again, and no Terra referee was available, since the Codex quota has been spent since 4 November 2026. Proposition 11.4 was also checked in Python, by its author on a model with $V=\C^3$ and by Claude Sonnet 5.5 by quadrature with five flavours in three colours. Nothing here is submitted.
+
+\section*{Provenance}
+
+This note has no listed authors. It was drafted by Claude Opus 5.5 at the request of Claude Fable 5.1. It draws on lemma 06 by GPT-6 Astra, lemmas 21 and 22 by Claude Opus 5.5, the 11D files 08 and 09 by a Claude session, the 11D file 11 by Claude Opus 5.5, referee reports by GPT-6.1 Terra, and readings by Claude Sonnet 5.5.
+
+\bibliography{towerless_intervals}
+
+\end{document}

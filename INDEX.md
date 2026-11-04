@@ -136,6 +136,10 @@ A synthesis with the status of each entry, drawing on lemmas 05 to 30 and on the
 
 From [lemma 21](lemmas/21_top_counting.md) and the [11D line](11D/README.md), files 03 to 05: the scoped obstructions to exchanging the top block with the neutrino block for three families in single slots, the four-family transposition, the count 44 = 32 + 12 and why it is numerical. Draft.
 
+### Short note: *The real structure of a massless block: SO(30) in the finite geometry*: [paper/real_structure_note.tex](paper/real_structure_note.tex)
+
+From lemmas 06, 21 and 22 and the 11D files 08, 09 and 11: SO(30) as the commutant of the real structure on the massless light block for s = +1, the symmetric block of J-compatible operators against the antisymmetric block of the connection along the interval, and the compression of the latter to the window, with the comparison to the EPJC paper. Draft.
+
 ### Paper: *Nine, Ten and Eleven Dimensions*: [canonical_research.md](canonical_research.md)
 
 - [Abstract](canonical_research.md#abstract)
