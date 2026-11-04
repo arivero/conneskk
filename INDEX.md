@@ -545,6 +545,7 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 - [4. Proposition 7.2 (the far end is the displaced D8-brane on the other wall)](11D/07_dualities_9_11.md#4-proposition-72-the-far-end-is-the-displaced-d8-brane-on-the-other-wall)
 - [5. Proposition 7.3 (a torus with flux, doubled, has the colour form)](11D/07_dualities_9_11.md#5-proposition-73-a-torus-with-flux-doubled-has-the-colour-form)
 - [6. A remark on duality 4 (known)](11D/07_dualities_9_11.md#6-a-remark-on-duality-4-known)
+- [6b. The three labels in type I' variables (proposal)](11D/07_dualities_9_11.md#6b-the-three-labels-in-type-i-variables-proposal)
 - [7. What this adds, and what remains open](11D/07_dualities_9_11.md#7-what-this-adds-and-what-remains-open)
 - [Plan of the 11D line (handover file)](11D/PLAN.md#plan-of-the-11d-line-handover-file)
 - [State (4 Nov 2026)](11D/PLAN.md#state-4-nov-2026)
