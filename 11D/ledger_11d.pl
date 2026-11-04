@@ -229,7 +229,7 @@ depends(d11_no_isometry, d11_blocks).
 depends(d11_no_isometry, l21_counts).
 attempted_by(d11_no_isometry, claude).
 checked_by(d11_no_isometry, claude, by_hand).
-checked_by(d11_no_isometry, claude, python("exploratory search of isometries and neighbour counts, exact fractions; rerun kept as tools/check_11d_10_11/s5_e8_prop54.py")).
+checked_by(d11_no_isometry, claude, python("exploratory search of isometries and neighbour counts, exact fractions; rerun on 4 Nov 2026, not kept")).
 checked_by(d11_no_isometry, terra_6_1, by_hand).
 checked_by(d11_no_isometry, sonnet_5_5, python("96 roots rebuilt, degrees, pair counts, 12 slot choices")).
 
@@ -258,7 +258,7 @@ claim(d11_misaligned, no_go, proved, "Proposition 5.4 (independently checked wit
 source(d11_misaligned, '11D/05_colour_family_exchange.md', 'proposition-54-no-three-slot-assignment-admits-the-exchange').
 depends(d11_misaligned, d11_no_isometry).
 attempted_by(d11_misaligned, claude).
-checked_by(d11_misaligned, claude, python("exhaustive neighbour counts over 192 slot assignments, exact integers, tools/check_11d_10_11/s5_e8_prop54.py")).
+checked_by(d11_misaligned, claude, python("exhaustive neighbour counts over 192 slot assignments, exact integers; rerun on 4 Nov 2026, not kept")).
 checked_by(d11_misaligned, terra_6_1, by_hand).
 checked_by(d11_misaligned, sonnet_5_5, python("all 192 configurations rerun")).
 
