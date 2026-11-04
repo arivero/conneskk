@@ -229,14 +229,16 @@ depends(d11_no_isometry, d11_blocks).
 depends(d11_no_isometry, l21_counts).
 attempted_by(d11_no_isometry, claude).
 checked_by(d11_no_isometry, claude, by_hand).
-checked_by(d11_no_isometry, claude, python("exploratory search of isometries and neighbour counts, exact fractions, not kept")).
+checked_by(d11_no_isometry, claude, python("exploratory search of isometries and neighbour counts, exact fractions; rerun kept as tools/check_11d_10_11/s5_e8_prop54.py")).
 checked_by(d11_no_isometry, terra_6_1, by_hand).
+checked_by(d11_no_isometry, sonnet_5_5, python("96 roots rebuilt, degrees, pair counts, 12 slot choices")).
 
 claim(d11_transposition, proposition, proved, "Proposition 5.2", "With four families (the 128 roots of the SO(16) spinor), M = -P is an involution in W(E8) that transposes Pati-Salam colour with family and maps the up-type quark of family 0 onto the neutrinos of families 1, 2, 3.").
 source(d11_transposition, '11D/05_colour_family_exchange.md', 'proposition-52-four-families-the-transposition-of-colour-and-family').
 attempted_by(d11_transposition, claude).
 checked_by(d11_transposition, claude, by_hand).
 checked_by(d11_transposition, terra_6_1, by_hand).
+checked_by(d11_transposition, sonnet_5_5, python("M = -P on all 240 roots")).
 
 claim(d11_flip, proposition, conditional, "Proposition 5.3 (referee amendment)", "In the specified four-family finite geometry, a unitary colour-family identification makes the flip unitary and involutive; it commutes with gamma and J and conjugates the top Dirac block into the Dirac blocks of the other three neutrinos. The displayed Pati-Salam and Standard Model algebras are not flip-invariant.").
 source(d11_flip, '11D/05_colour_family_exchange.md', 'proposition-53-the-flip-in-a-four-family-finite-geometry').
@@ -244,6 +246,7 @@ depends(d11_flip, d11_transposition).
 attempted_by(d11_flip, claude).
 checked_by(d11_flip, claude, by_hand).
 checked_by(d11_flip, terra_6_1, by_hand).
+checked_by(d11_flip, sonnet_5_5, python("unitarity, F^2, commutation, conjugation of the blocks; F against M")).
 
 claim(d11_two_heavy, conjecture, conjectural, "Readings 1-4 (proposals)", "Three families are the obstruction to the exchange, M exchanges the two heavy directions of the algebra chain, and the 128 of four families is 44 + 84 under Spin(9).").
 source(d11_two_heavy, '11D/05_colour_family_exchange.md', 'readings-proposals').
@@ -255,8 +258,9 @@ claim(d11_misaligned, no_go, proved, "Proposition 5.4 (independently checked wit
 source(d11_misaligned, '11D/05_colour_family_exchange.md', 'proposition-54-no-three-slot-assignment-admits-the-exchange').
 depends(d11_misaligned, d11_no_isometry).
 attempted_by(d11_misaligned, claude).
-checked_by(d11_misaligned, claude, python("exhaustive neighbour counts over 192 slot assignments, exact fractions, not kept")).
+checked_by(d11_misaligned, claude, python("exhaustive neighbour counts over 192 slot assignments, exact integers, tools/check_11d_10_11/s5_e8_prop54.py")).
 checked_by(d11_misaligned, terra_6_1, by_hand).
+checked_by(d11_misaligned, sonnet_5_5, python("all 192 configurations rerun")).
 
 claim(d11_four_slots, conjecture, conjectural, "Proposal 5.5 (referee amendments)", "If the families are zero modes of an SU(4) bundle rather than single fibre roots, Propositions 5.1 and 5.4 do not apply as stated. The index gives net chirality; exact zero-mode counts and a compatible Weyl action remain to be established.").
 source(d11_four_slots, '11D/05_colour_family_exchange.md', 'proposal-55-four-slots-three-zero-modes').

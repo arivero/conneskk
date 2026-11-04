@@ -96,7 +96,7 @@ The angle-dependent one-loop term (Proposition 1.4) is minimized at the massless
 4. **The 9D reduction of Proposition 2.6**: with SU(2)_R broken by wall data, derive the mass basis of u and d against the charge basis, and the vectorlike limit at the 9 label, where the left-handed interactions are off.
 5. **Fermionic zero modes of wrapped fivebranes** (Conjecture 3.3) at N = 1, and three generations.
 6. **The magnetic completion**: flux quantization, stability and the two C_3 vectors of AdS5 x CP^2 x S^2 against the fluxed pair (chi, B - L) of Proposition 2.6.
-7. **A four-family completion with the fourth family decoupled** (PLAN, steps 4-5): a finite geometry or Hořava-Witten configuration in which the colour-family transposition M of Proposition 5.2 is a symmetry, so that the three-family statement of lemma 21 follows as a limit; Proposition 5.1 shows that with three families the exchange is not an isometry.
+7. **A four-family completion with the fourth family decoupled** (PLAN, steps 4-5): a finite geometry or Hořava-Witten configuration in which the colour-family transposition M of Proposition 5.2 is a symmetry, so that the three-family statement of lemma 21 follows as a limit; Propositions 5.1 and 5.4 (one root per state) show that with three families the exchange is not an isometry.
 
 ## The Astra 6 audit of 3 Nov 2026
 

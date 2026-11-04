@@ -71,3 +71,37 @@ C. Scripts (Python): b2_ext5bar_blocks.py (A1, A2); b2_su3_cases.py (A3, A4, B2)
 ### Assessment
 
 Checked by Claude Opus 5.5. Correction 1: from Theorem 4.4 with b -> -b for conjugates, conj(nu_L) has b = -2 = 1 for t = +1/2, so it lies in C_3; the counts (6, 6, 0) and (3, 3, 6) follow per colour and per generation, for both signs of t. Correction 2: C^9 = 3 + 3 + 3 (1) has 3 x 3 = 6 + 3bar inside Lambda^2, so the condition belongs on Lambda^3 C^9; the trivial 9 (1) gives 84 singlets, as Terra noted. Corrections 3 to 7: applied as stated; the section 6 heading of 04 is now "The Chevalley involution and the real structure J", with the INDEX link updated. The ledger records sonnet_5_5 on the eleven rows of files 03 and 04, and the 11D README now says that the checked no-go results have three model identifiers, each in its scope.
+
+## Batch 3: file 05
+
+### Report
+
+A. Verdicts
+
+1. 5.1 AGREE. d = 22 on all 96 roots; F2: d = 20 (36 roots), 19 (48); F1: 16 (4), 22 (8), 20 (24), 19 (48); pair counts 42/816/1812/816; Terra 4x4 table and 12 slot/top choices reproduced. "Isometry of R^8" is the right notion (distance-preserving bijections extend; W(E8) is a subgroup). "Canonical up to W(E8)" holds for the chain E8 > SO(10) x SU(4) only (C2).
+2. 5.2 AGREE. M = -P has 8 sign changes, lies in W(D8), M^2 = 1 on all 240 roots; T(0) <-> N(1,2,3), D(0) <-> E(1,2,3); nu_L, e_L of family 0 fixed; u^c, d^c, nu^c, e^c go to conjugate roots.
+3. 5.3 PARTLY. Unitarity amendment and all stated properties confirmed (F^2 = 1, [F,gamma] = [F,J] = 0, rank 12, kernel 116). Missing: F differs from M (C1).
+4. 5.4 AGREE. All 192 rerun; Terra formulas hold root by root; S - N: {19,20} in 48, {13,17,19,20} in 144 configurations; S - T pattern (16,16,22) in 96. The 11D/10 sentence is right.
+5. 5.5 AGREE. No proved statement is contradicted; Props 5.1 and 5.4 concern E8-torus weights, which an irreducible SU(4) bundle lacks (argument). For aligned split bundles with n_i >= 0, sum 3, the obstruction persists (C3). Labels "recalled" (BHOP, Spin(9)) honest; 128 = 44 + 84 confirmed.
+
+B. Corrections (11D/05 unless stated)
+
+1. Line 66, "This is the finite-geometry form of Proposition 5.2." -> "F equals M on left-handed states and M followed by particle-antiparticle exchange on right-handed ones; F exchanges T_top and T_nu but lies outside W(E8); M flips gamma on 64 states." Reading 2 (line 91) likewise.
+2. Line 72: replace "In every case S - N has d = 19 and d = 20 only, ..." by "S - N has d in {13,17,19,20} ({19,20} iff the down-quark and charged-lepton slot sets coincide, 48 of 192); each neutrino root of S - T has d = 16 + 6(1_A(f) - 1_{0}(f))." Line 74 ("scratch script not kept"): cite tools/check_11d_10_11/s5_e8_prop54.py and the referee proof.
+3. Lines 84, 86: "their number" -> "their net number"; "fall under Proposition 5.1" -> "only for n = (1,1,1,0) up to order; for n_i >= 0 the obstruction persists (C3)".
+4. Line 46 item 3 -> "nu_L, e_L of family 0 fixed; nu^c, e^c to negatives; u^c, d^c to conjugates". Line 58: "Fix an isomorphism" -> "Fix a unitary isomorphism". Line 36: "canonical up to the Weyl group of E8" -> "unique up to W(E8) for the aligned (16,3)+(16bar,3bar)".
+5. Line 3: "pending an independent check", "Referee pending." -> "refereed by GPT-6.1 Terra and checked a second time by Claude Sonnet 5.5".
+6. Line 78, Reading 1 (line 90), 11D/README.md line 99: "three families" results stated beyond the proved scope (single roots, three of four slots); cite 5.1 and 5.4.
+7. 11D/ledger_11d.pl: add checked_by(_, sonnet_5_5, python(...)) to d11_no_isometry, d11_transposition, d11_flip, d11_misaligned (dry run: tests pass; both no-go rows reach three models); replace "not kept" in d11_misaligned by the kept script. d11_flip: conditional without a named hypothesis, README row 5.3 says independently checked. Referee notes and README rows 5.1-5.5 match Terra.
+
+C. Derivations
+
+C1 (b3_flip_vs_M.py): uR, dR are negatives of the u^c, d^c roots. F = M on the 64 left-handed states, F = -M on the 64 right-handed. F changes 3072 of 16384 ordered root inner products, M none. M sends gamma to -gamma on 64 states, so the T_top pair (uL, uR) goes to (nu_L, conjugate nu_R), violating gamma(s1) = -gamma(s2); F keeps it.
+C2 (b3_embedding.py, b3_classes.py): the 96 roots are the spinor-type roots among the 162 of (27,3)+(27bar,3bar); the 7560 A3 subsystems of E8 form one W(E8)-orbit with complement D5; the 192 placements give 3 invariant classes.
+C3 (b3_multiset.py): S has n_f copies of the 32 roots of slot f; degree multisets of S - T and S - N differ in all 40 (n, top slot) cases.
+C4 (b3_prop53.py, numpy): iota unitary, scaled unitary, diag(2,1,1,1) and a non-unitary GL(3) block; F unitary only in the first two; all other properties hold in all four.
+Others (Python 3): b3_prop51.py, b3_prop52.py, b3_prop54.py, b3_spin9.py.
+
+### Assessment
+
+Checked by Claude Fable 5.1 (the dialogue model from this batch on). Correction 1 is right and matters: M = -P sends t^c = (-c | ++ | 1) to the negative of a nu^c root, that is to an antiparticle state, while F of Proposition 5.3 acts inside H_f and keeps particles as particles; so F agrees with M only on the left-handed states, and "the finite-geometry form of Proposition 5.2" overstated it. Applied, with Reading 2 qualified. Correction 2: the values {13, 17, 19, 20} agree with the rerun recorded in 11D/10; applied, with the formula for the neutrino degrees. Corrections 3 to 6: applied. Correction 7: the four rows carry sonnet_5_5 with the method named, and the "not kept" entries now cite the kept script. The ledger row d11_flip stays conditional on the unitary identification, which the file now names.
