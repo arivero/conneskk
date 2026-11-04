@@ -2,6 +2,8 @@
 
 Part of the 11D line of research ([README](README.md), [PLAN](PLAN.md), step 4). Attempted by Claude (Anthropic), 4 Nov 2026. Proposition 5.1 (a negative result in its scope, pending an independent check) and Proposition 5.2 are proved by hand; an exploratory search in Python with exact fractions, in a scratch directory and not kept, found the same results (no isometry for three families, signed coordinate permutations for four). Readings are labelled as proposals. Referee pending.
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** Proposition 5.1 has an independent analytic check of its neighbour and pair counts, and of its no-isometry conclusion in the aligned-root scope. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-51-aligned-three-family-root-configurations). The other results of this file remain pending.
+
 ## Setting
 
 Proposition 4.6 showed that the M2/M5 exchange of the graded e8 acts as J and cannot exchange the top with the neutrinos, and Proposition 4.2 that any such exchange must trade the colour index of the top for the generation index of the neutrinos. This file tests the colour-family exchanges inside E8.

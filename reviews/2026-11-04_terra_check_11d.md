@@ -4,6 +4,10 @@ Referee: GPT-6.1 Terra, 4 Nov 2026. Author of files 01-09: Claude
 (Anthropic). We work independently and use analytic arguments throughout;
 no Python or other numerical enumeration is used. Each section records a
 completed referral. Claims outside the sections below remain to be checked.
+The author's check and this independent check give two-model support for
+the scoped no-go results. The ledger flags fewer than three model
+identifiers as below its general-consensus threshold; a third independent
+check remains open.
 
 ## Proposition 2.5: hypercharge and B - L fluxes
 
@@ -249,3 +253,66 @@ described. Automorphisms that do not preserve or invert the family
 grading, other embeddings or state spaces, and dualities not represented
 by such an automorphism remain open directions. A physical M2/M5
 identification also requires its action on the fields and finite triple.
+
+## Proposition 5.1: aligned three-family root configurations
+
+**Verdict: Correct.** The neighbour-degree obstruction and all stated
+pair counts hold for the specified aligned roots and Euclidean
+isometries of \(\mathbb R^8\).
+
+**Independent analytic check.** Write a root as \((s\mid f)/2\), with
+five colour/weak signs \(s\) and a family sign pattern \(f\). Distinct
+family patterns have dot product \(-1\); identical ones have dot product
+\(3\). For two particle roots in the same slot, inner product \(+1\)
+means that the five-sign patterns have Hamming distance two. For distinct
+slots, a particle root is a \(+1\) neighbour precisely when the five-sign
+patterns are equal, and an antiparticle root is a \(+1\) neighbour
+precisely when their five-sign patterns have distance four. No
+antiparticle in the same slot is a \(+1\) neighbour.
+
+Let \(U,D,E,N\) denote the up-quark, down-quark, charged-lepton and
+neutrino blocks in one slot, including their antiparticles. The following
+entries are the numbers of \(+1\) neighbours of one root in the row
+block among all roots in a column block. Each entry gives the count for
+the same slot followed by the count for a different slot:
+
+| source | \(U\) | \(D\) | \(E\) | \(N\) |
+|---|---:|---:|---:|---:|
+| \(U\) | 4 / 2 | 3 / 3 | 1 / 1 | 2 / 0 |
+| \(D\) | 3 / 3 | 4 / 2 | 2 / 0 | 1 / 1 |
+| \(E\) | 3 / 3 | 6 / 0 | 0 / 2 | 1 / 1 |
+| \(N\) | 6 / 0 | 3 / 3 | 1 / 1 | 0 / 2 |
+
+These entries follow directly from the root types and colour choices
+listed in file 05 and the Hamming criterion. For example, a
+neutrino has six same-slot up-quark neighbours and none in a different
+slot; a charged lepton has six same-slot down-quark neighbours and none
+in a different slot. In three aligned slots each row sums to
+\(10+2\cdot6=22\), giving the degree in \(H_F\).
+
+Remove all three neutrino blocks. The table gives degree \(20\) on the
+\(36\) up-quark roots and degree \(19\) on the \(48\) down-quark and
+charged-lepton roots. Remove the top block instead. The neutrinos in its
+own slot have degree \(22-6=16\), while the other eight neutrino roots
+retain degree \(22\). The other roots have degree \(20\) on the \(24\)
+remaining up-quark roots and \(19\) on the \(48\) down-quark and
+charged-lepton roots. Thus \(F_1\) has degrees \(16,22\) absent from
+\(F_2\). Both sets are closed under negation and have centroid zero, so
+an affine Euclidean isometry between them would fix the origin and
+preserve the degrees. No such isometry exists.
+
+The sums of the degrees are
+\[
+4(16)+48(19)+24(20)+8(22)
+=48(19)+36(20)=1632.
+\]
+Each set therefore has \(816\) unordered pairs at inner product \(+1\).
+Negation preserves each set, giving \(816\) pairs at \(-1\), and the
+\(42\) antipodal pairs have inner product \(-2\). The remaining
+\(\binom{84}{2}-42-2(816)=1812\) pairs have inner product zero.
+
+**Scope and direction.** This concerns the indicated \(E_8\) half-root
+embedding, three aligned family slots, complete species blocks and
+Euclidean isometries. State bijections without such an isometry, other
+embeddings or larger representations, and a fourth family remain possible
+directions.

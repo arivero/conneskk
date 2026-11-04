@@ -188,14 +188,14 @@ checked_by(d11_discrete_z3, claude, by_hand).
 referee_pending(d11_discrete_z3).
 
 %% ---------------------------------------------------------------- 05: the colour-family exchange
-claim(d11_no_isometry, proposition, proved, "Proposition 5.1 (negative result, pending check)", "As configurations of E8 roots the two families of 84 of lemma 21 have equal pair counts but are not isometric, so no element of W(E8) maps F1 onto F2 and no isometry of H_F maps the top block onto the neutrino block.").
+claim(d11_no_isometry, no_go, proved, "Proposition 5.1 (independently checked)", "As configurations of E8 roots in the specified aligned three-family embedding, the two families of 84 have equal pair counts but are not isometric, so no element of W(E8) maps F1 onto F2 and no isometry of H_F maps the top block onto the neutrino block.").
 source(d11_no_isometry, '11D/05_colour_family_exchange.md', 'proposition-51-the-two-families-of-84-are-not-isometric').
 depends(d11_no_isometry, d11_blocks).
 depends(d11_no_isometry, l21_counts).
 attempted_by(d11_no_isometry, claude).
 checked_by(d11_no_isometry, claude, by_hand).
 checked_by(d11_no_isometry, claude, python("exploratory search of isometries and neighbour counts, exact fractions, not kept")).
-referee_pending(d11_no_isometry).
+checked_by(d11_no_isometry, terra_6_1, by_hand).
 
 claim(d11_transposition, proposition, proved, "Proposition 5.2", "With four families (the 128 roots of the SO(16) spinor), M = -P is an involution in W(E8) that transposes Pati-Salam colour with family and maps the up-type quark of family 0 onto the neutrinos of families 1, 2, 3.").
 source(d11_transposition, '11D/05_colour_family_exchange.md', 'proposition-52-four-families-the-transposition-of-colour-and-family').
