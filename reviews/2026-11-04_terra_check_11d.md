@@ -385,6 +385,32 @@ same weights \(2,-3\). A physical identification of those exterior
 generators with fermionic wrapped-fivebrane states requires the proposed
 brane construction and its statistics.
 
+## Proposition 4.1: ratio-preserving twelve-state blocks
+
+**Verdict: Correct** for whole Dirac species, three generations and the
+two ratios defined in Proposition 21.1.
+
+A twelve-state block consists either of one quark species or of three
+lepton species. The cited charge table gives the up-quark contribution
+\((1,5/3;16/3,2)\), proportional to the total
+\((6,10;32,12)\), so removing it preserves both ratios. Removing a
+down-quark species gives \(59/92\) for the angle instead of \(5/8\).
+
+If the three removed leptons include \(k\) charged species, their
+neutral-current contributions are \(k(1/2,3/2)\). The resulting angle
+is
+\[
+ \frac{10-3k/2}{16-2k}.
+\]
+Equating this to \(5/8\) gives \(k=0\). The three neutrinos then
+contribute zero to both the photon and colour coefficients, so the
+second ratio is also unchanged.
+
+The conclusion concerns removal of complete species, with all colours,
+both chiralities and particle-antiparticle states. Partial multiplets,
+other coefficient definitions or different matter content require
+separate analysis.
+
 ## Proposition 3.8 and Corollary 3.9: colour and the three-form
 
 **Verdict: Correct.** The conclusions hold for the specified linear colour

@@ -145,7 +145,7 @@ source(d11_blocks, '11D/04_two_families_m2_m5.md', '1-what-singles-out-the-two-b
 depends(d11_blocks, l21_removal).
 attempted_by(d11_blocks, claude).
 checked_by(d11_blocks, claude, by_hand).
-referee_pending(d11_blocks).
+checked_by(d11_blocks, terra_6_1, by_hand).
 
 claim(d11_colour_families, no_go, proved, "Propositions 4.2(a), 4.3 (independently checked with amendments)", "The colour contents of F1 and F2 differ, so no colour-commuting unitary exchanges them; for every SU(3) -> SU(9), Lambda^3 C^9 is neither family. With nonzero triplets and no other nontrivial irreducibles, C^9 is 3 + 6 (1) or its conjugate, giving 15 (3) + 6 (3bar) + 21 (1), or its conjugate.").
 source(d11_colour_families, '11D/04_two_families_m2_m5.md', '2-colour-obstructions').
