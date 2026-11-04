@@ -47,7 +47,7 @@ This identifies spectra, which is all it does. The physical identification needs
 
 ## 5. Supersymmetry hidden as composite scalars (the steer's second remark)
 
-In the type I' form the adjoint scalars of the D8 stack are open strings with two Chan-Paton ends, so they are bilinear in the labels that the dictionary assigns to the five light quarks in three colours: the composites of lemma 21 (15 diquarks and 25 mesons per flavour structure, and the SO(30) adjoint containing the squark and slepton counts). The theory on the D8-branes has sixteen supercharges, which pair these adjoint scalars with gauge fields and gauginos. A finite spectral triple in which the scalars of the inner fluctuations are such bilinears would carry the supersymmetry in hidden form. The test is to compute the inner fluctuations of a finite triple whose algebra is the Chan-Paton algebra of the stack, and to compare them with Λ^2(30).
+In the type I' form the adjoint scalars of the D8 stack are open strings with two Chan-Paton ends, so they are bilinear in the labels that the dictionary assigns to the five light quarks in three colours: the composites of lemma 21 (the 15 diquarks and 25 mesons of five flavours recorded there, and the SO(30) adjoint containing the squark and slepton counts). The theory on the D8-branes has sixteen supercharges, which pair these adjoint scalars with gauge fields and gauginos. A finite spectral triple in which the scalars of the inner fluctuations are such bilinears would carry the supersymmetry in hidden form. The test is to compute the inner fluctuations of a finite triple whose algebra is the Chan-Paton algebra of the stack, and to compare them with Λ^2(30).
 
 ## 6. What would make this a theorem, and the first steps
 
