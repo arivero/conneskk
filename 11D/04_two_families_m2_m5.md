@@ -2,6 +2,10 @@
 
 Part of the 11D line of research ([README](README.md), [PLAN](PLAN.md)). Attempted by Claude (Anthropic), 4 Nov 2026. Propositions 4.1 to 4.3 and Theorem 4.4 and Propositions 4.5, 4.6 are proved here by hand (branching rules and counting); the negative results 4.3 and 4.6 await an independent check; readings are labelled as proposals. Referee pending.
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** Proposition 4.1 and the colour obstructions in Propositions 4.2(a) and 4.3 are independently checked. The tensor-factor conclusion of 4.2(b) needs a factor-preserving map, and the "exactly" clause in 4.3 also needs nonzero triplets: the trivial nine-dimensional representation gives 84 singlets. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#propositions-42-and-43-complex-colour-representations); the other checked results are noted below.
+
+**Referee note on Proposition 4.6 (GPT-6.1 Terra).** The stated sector and block obstructions hold in the scopes in the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-46-the-graded-e8-exchange). The Chevalley involution is complex-linear; an antiunitary \(J\) needs an additional conjugation. Its identification with physical M2/M5 duality remains a proposal.
+
 ## The question
 
 [Lemma 21](../lemmas/21_top_counting.md), Proposition 21.3: with three generations and Dirac neutrinos, dim H_F = 96 = 84 + 12 in two ways,
@@ -61,6 +65,8 @@ Let SU(5) ⊂ SU(6) ⊂ E6 be the Georgi-Glashow group, with 15 = 10 + 5 and 6ba
 
 **Theorem 4.4 (the generation in the three sectors).** For the generation 16 ⊂ 27 of family grade a = 1:
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The branching and counts are independently checked. The fields \(t_L,t^c\) are in the left-handed basis; \(t^c\) is an antitop field, so the top particle's two chiralities occupy different sectors. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#lemma-4a-and-theorem-44-the-two-e8-gradings).
+
 1. the 10 = (Q, u^c, e^c) and the 5 = (D, H_u) lie in g_{1,1}, the C_3 sector;
 2. (d^c, L) and N lie in g_{1,1+2t}, and (D^c, H_d) and nu^c lie in g_{1,1-2t}: one pair in the C_6 sector and the other in the gravity sector, according to the sign t; the two choices differ by the Weyl reflection of SU(2)_I;
 3. the antiparticles lie in the conjugate pieces g_{2,-b}.
@@ -72,6 +78,8 @@ So every top state of a particle (t_L in Q, t^c in u^c), and the up-type Higgs, 
 ## 5. Yukawa couplings as brackets
 
 **Proposition 4.5.** Suppose the cubic couplings of the matter come from the structure constants of e8, as in heterotic and Hořava-Witten compactifications, and both gradings are symmetries, so that a coupling needs grades summing to (0, 0) mod 3. Take H_u in the 5 ⊂ g_{1,1} and H_d in 5bar_10 ⊂ g_{1,1-2t}. Then, for either sign t:
+
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The grade selection and bracket targets are independently checked. In the literal exact \(SU(3)_f\) triplet realization, the family tensor is antisymmetric and does not by itself give an isolated top mass; the physical Yukawa matrix needs additional data. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-45-yukawa-grades-and-family-dependence).
 
 1. the up-type Yukawa couplings Q u^c H_u have all three fields in the C_3 sector;
 2. the down-type, charged-lepton and Dirac-neutrino couplings Q d^c H_d, L e^c H_d and L nu^c H_u have one field in each of the three sectors;

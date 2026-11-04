@@ -2,6 +2,10 @@
 
 Part of the 11D line of research ([README](README.md)). Propositions 1.1, 1.4 and 1.5 are proved here; Proposal 1.3 is a dictionary to be tested. The joint-limit family of the section of that name is from the Astra 6 audit of 3 Nov 2026 ([reviews/2026-11-03_astra_audit_d11.md](../reviews/2026-11-03_astra_audit_d11.md), §3 and §4), restated here in circle language and checked. Attempted by Claude (Anthropic), 3 Nov 2026; checks in Python, [checks_11d.py](checks_11d.py), sections F, F2 and H. Referee pending.
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** Proposition 1.1 and the joint family's Weyl constant are independently checked; the unfolded circle is scalar, and even extensions of arbitrary smooth interval functions need not be smooth at the fixed points. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-11-and-the-joint-family-interval-unfolding). Proposition 1.5 is amended at its statement below.
+
+**Referee note on Proposition 1.4 (GPT-6.1 Terra).** The endpoint value, minimum and small-angle coefficient are independently checked under the stated one-loop hypotheses; see the [report](../reviews/2026-11-04_terra_check_11d.md#proposition-14-the-one-loop-endpoint-and-small-angle-coefficient).
+
 **Correction (3 Nov 2026).** There was an error in the first version of Proposition 1.4: it read the potential of lemma 24 as the whole energy of the walls, but that potential is taken relative to theta = 0 and omits the theta-independent Casimir energy. The corrected statement is below; the reading "the walls attract" is withdrawn. The first version of Proposal 1.3 also placed the W at the bottom of the tower, M_W ~ 1/(2R), along every path to v = 0; after the audit (its §2.2), that holds only on the scale-free path of Proposition 1.5.
 
 ## Setting
@@ -82,6 +86,8 @@ Near t = 0, 𝒱'(0) = (6 + 24/5 - n_f) J(0) with J(0) = int x^3/sinh^2 x dx = (
 **Reading.** The θ-independent Casimir energy of the towers, a_0/l^4, is not part of this potential and is not computed in lemmas 23 or 24; the direction in which l moves depends on the sign of a_0 - 93 zeta(5) n_f/(512 pi^2). The minimum over the angle is the point with massless W and Z at fixed l, which opens no dimension (lemma 23 already notes that it is not the physical point).
 
 ## Proposition 1.5 (a scale-free potential fixes the path with M_W l constant)
+
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The derivative identity is correct, and an isolated stationary angle gives \(l\propto1/m\). The universal conclusion has a flat-direction counterexample \(G(\theta)=\theta^4\); for the displayed one-loop determinant the small-angle obstruction is recovered when \(n_f\ne54/5\). See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-15-scale-free-potentials-and-the-joint-path).
 
 **Statement.** Let V(l, theta) = l^{-4} G(theta) with G of class C^1, the form of every one-loop potential of a flat interval whose only scales are l and the wall angles (lemmas 23 and 24, with a_0 included in G).
 

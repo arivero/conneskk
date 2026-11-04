@@ -12,6 +12,8 @@ That paper uses the adjoint of SO(32) to classify the scalars of a supersymmetri
 
 ## 2. Proposition 9.1 (the type I' coupling function is a trace of a function of the finite Dirac operator)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The integration is independently checked conditional on the recalled slope rule. The trace is over sixteen selected channels, not automatically the full physical \(D_F\) Hilbert space; direct comparison with the cited source was unavailable. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-91-integrated-coupling-profile).
+
 **Setting.** Type I' on an interval [0, L], in the conformal coordinate x, with sixteen D8-branes at x_1, ..., x_16 and O8^- planes at the ends. Recalled rule (Polchinski and Witten, hep-th/9510169): the dilaton is e^{phi} = z^{−5/6} for a function z that is continuous and piecewise linear in x, with slope c (8 − N(x)), where N(x) is the number of D8-branes to the left of x and c > 0; the coupling diverges where z vanishes. Dictionary (06, 07): x_k = (2L/pi) θ_k with θ_k = l m_k the angles of sixteen channels of the finite Dirac operator (fifteen light-quark channels with colour, and the top).
 
 **Statement.**
@@ -27,6 +29,8 @@ That paper uses the adjoint of SO(32) to classify the scalars of a supersymmetri
 **Reading (proposal).** With the light quarks near θ = 0, Σ_k m_k ≈ m_t and the condition is z(0) ≈ (2cL/pi)(4 pi − θ_t): 7cL at label 9 (θ_t = pi/2) and 8cL at label 11 (θ_t -> 0). The coupling therefore varies along the interval on a scale set by the spectrum of D_F, which is the kind of second scale that Proposition 1.5 requires to select a joint family; whether the type I' coupling can play that role in the corpus's flat family is the next question. Since the slope decreases with x, z is concave, so z > 0 on [0, L) once z(0) > 0 and z(L) = 0; positivity of z(0) gives l Σ_k m_k < 4 pi, a bound on the trace of |D_F| in units of the tower scale, met when only the top is heavy (θ_t <= pi/2).
 
 ## 3. Proposition 9.2 (diquarks as strings between the stack and its image)
+
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The representation and charge counts are independently checked, conditional on the recalled projections. The shifts describe the specified gauge-field channels; \(\Lambda^2\) of a line excludes that component, not all open-string states or strings to other branes. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-92-diquark-representations-and-string-channels).
 
 **Setting.** V = C^5 ⊗ C^3, five light flavours in three colours, with Q = 2/3 on u, c and Q = −1/3 on d, s, b; the 30 of lemma 21 is V ⊕ Vbar. Fifteen D8-branes on an O8 plane carry the Chan-Paton space 30 (branes and images), with group SO(30) on an O8^- and USp(30) on an O8^+, and U(15) when the stack is moved off the plane (recalled).
 
@@ -44,6 +48,8 @@ That paper uses the adjoint of SO(32) to classify the scalars of a supersymmetri
 
 ## 4. Proposition 9.3 (the real structure decides between the two diquark counts)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The stated sign constraint excludes a nonzero antisymmetric block in the three KO labels. It permits only a subspace of the symmetric representation; the signs alone do not produce every symmetric fluctuation. Distinct-multiplet blocks remain related to their transposes. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-93-real-structure-constraint-on-diquark-blocks).
+
 **Setting.** E = V ⊕ Vbar with V as in Proposition 9.2, an antiunitary J on E that maps V onto Vbar and Vbar onto V (as particles and antiparticles are exchanged), J² = ε, and a Hermitian X on E with JX = ε' XJ, the condition that inner fluctuations obey in a KO-dimension with signs (ε, ε'). Let B be the block of X from Vbar to V, an element of V ⊗ V.
 
 **Statement.**
@@ -59,6 +65,8 @@ Item 2 is a negative statement with the following scope: the blocks of J-compati
 **Reading (proposal).** The counts of lemma 21 and of the EPJC paper, (6, 6, 3), belong to the antisymmetric block. In the corpus's setting this block arises as the component of an SO(30) connection along the circle or interval: the Wilson-line moduli of the type I' stack, whose stack-image part is Proposition 9.2. The finite triple alone, in any of the three labels, gives the symmetric block and the counts (3, 6, 1). So the composite scalars with the counts of lemma 21 point to the interval parent of lemma 22 and its gauge field, and the selection of O8^- in Proposition 9.2 concerns these connection components. This narrows the spin gap of Propositions 6.1 and 9.2: the Λ²V states are scalars as circle components of a nine-dimensional gauge field, and they come with that field's vector and gaugino partners.
 
 ## 5. Two more dualities between 9 and 11 (recalled; proposals)
+
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The \(E_1\) alternatives need correction: the canonical-orthogonal root lattices distinguish \(\mathbb P^1\times\mathbb P^1\) from \(dP_1=\mathbb F_1\), and the usual local engineering assigns the latter to \(\widetilde E_1\). The \(dP_2\) and brane duality claims remain conditional on the unavailable primary sources. The Weyl action is a gauge relabelling of a holonomy, subject to the full background data. See the report on the [del Pezzo comparison](../reviews/2026-11-04_terra_check_11d.md#file-09-section-5-del-pezzo-wall-correspondence) and [Weyl action](../reviews/2026-11-04_terra_check_11d.md#file-09-section-5-weyl-action-on-a-wilson-line).
 
 1. **E-type walls and del Pezzo surfaces.** The E_{n+1} symmetry of an O8^- plane with n D8-branes at infinite coupling is the symmetry of the five-dimensional theory on a D4-brane probe, which M-theory realizes on a Calabi-Yau threefold with a shrinking del Pezzo surface dP_{n+1} (Seiberg, hep-th/9608111; Morrison and Seiberg, hep-th/9609070; Intriligator, Morrison and Seiberg, hep-th/9702198). So the far wall with the top's brane (n = 1, E_2 = SU(2) x U(1)) has an eleven-dimensional description by a local dP_2, and the empty far wall (E_1 = SU(2)) by dP_1 or P^1 x P^1; the light-quark wall (n = 15) has none. The Witten base CP^2 x CP^1 of 02 is built from the same pieces (CP^2 = dP_0, and P^1 factors).
 2. **Colour-flavour exchange as a T-duality.** In the heterotic string on S^1, the Weyl group of the gauge group acts on the Wilson lines as part of the T-duality group O(17, 1; Z). The colour-family transposition M of [05](05_colour_family_exchange.md) is an element of the Weyl group of E8, so it is a T-duality of the nine-dimensional E8 x E8 string, and through Hořava-Witten a symmetry of the E8 holonomy on a wall in eleven dimensions. As a Weyl element it acts as a global gauge transformation, so by itself it relabels gauge-equivalent vacua; it exchanges colour and family physically only relative to a structure that tells them apart, such as the placement of H_F in 05. The four-family requirement of Propositions 5.1 and 5.4 remains.

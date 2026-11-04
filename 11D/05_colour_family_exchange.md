@@ -2,6 +2,8 @@
 
 Part of the 11D line of research ([README](README.md), [PLAN](PLAN.md), step 4). Attempted by Claude (Anthropic), 4 Nov 2026. Proposition 5.1 (a negative result in its scope, pending an independent check) and Proposition 5.2 are proved by hand; an exploratory search in Python with exact fractions, in a scratch directory and not kept, found the same results (no isometry for three families, signed coordinate permutations for four). Readings are labelled as proposals. Referee pending.
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** Proposition 5.1 has an independent analytic check of its neighbour and pair counts, and of its no-isometry conclusion in the aligned-root scope. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-51-aligned-three-family-root-configurations). Proposition 5.4 is addressed at its statement below.
+
 ## Setting
 
 Proposition 4.6 showed that the M2/M5 exchange of the graded e8 acts as J and cannot exchange the top with the neutrinos, and Proposition 4.2 that any such exchange must trade the colour index of the top for the generation index of the neutrinos. This file tests the colour-family exchanges inside E8.
@@ -33,6 +35,8 @@ F1 has roots with d = 16 and d = 22, and F2 has none. The sums of d agree, 4·16
 
 ## Proposition 5.2 (four families: the transposition of colour and family)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The Weyl map and block exchange are independently checked. Family-zero lepton species blocks are fixed setwise; \(\nu^c\) and \(e^c\) individually go to their negatives. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-52-four-family-colour-family-transposition).
+
 **Statement.** Let P be the permutation of coordinates that exchanges the three colour coordinates with the three family coordinates and the two weak coordinates with each other, and M = −P. Then M is an involution in the Weyl group of E8 that preserves the 128 roots of the four families and SU(2)_L, and acts on the up-type and down-type states as the transposition of the four Pati-Salam colours (r, g, b, lepton) with the four families (1, 2, 3, 0), with the lepton paired with family 0 and the colour c paired with the family −c. In particular:
 
 1. the up-type quark of family 0 (t_L and t^c, three colours, with conjugates) goes onto the neutrinos of families 1, 2, 3 (ν_L and the conjugate of ν^c), and back;
@@ -47,6 +51,8 @@ The search found further signed permutations with the same effect on the two blo
 
 ## Proposition 5.3 (the flip in a four-family finite geometry)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** Choose the factor isomorphism \(\iota\) unitary, or unitary up to a common scalar. An arbitrary isomorphism need not make \(F\) unitary. With this amendment the flip and block calculation are independently checked; see the [report](../reviews/2026-11-04_terra_check_11d.md#proposition-53-finite-geometry-flip).
+
 **Statement.** Let H_f = (C^2_L ⊕ C^2_R) ⊗ C^4_c ⊗ C^4_f, H = H_f ⊕ conj(H_f), with J the antilinear exchange of the two summands and γ equal to +1 on C^2_L and −1 on C^2_R in H_f and to its negative on conj(H_f), the signs of KO-dimension six. Fix an isomorphism ι: C^4_c -> C^4_f sending the lepton line ℓ to the family line e_0 and the colour space C^3 onto the span of e_1, e_2, e_3, and let F be the flip x ⊗ y -> ι^{-1}(y) ⊗ ι(x) on C^4_c ⊗ C^4_f, extended by the identity on C^2_L ⊕ C^2_R and to conj(H_f) by J F J^{-1}. Then:
 
 1. F is unitary, F^2 = 1, and F commutes with γ and J.
@@ -59,6 +65,8 @@ This is the finite-geometry form of Proposition 5.2. It also makes reading 2 bel
 
 ## Proposition 5.4 (no three-slot assignment admits the exchange)
 
+**Referee note (GPT-6.1 Terra).** The no-isometry conclusion is correct by an independent analytic argument, but the neighbour counts in the statement below are false for misaligned slots. The corrected formulas and a counterexample are in the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-54-misaligned-three-slot-configurations).
+
 **Statement.** Place the top in slot 0, and let the up-type quarks, the down-type quarks, the charged leptons and the neutrinos each occupy three of the four family slots, independently (the up-type quarks in slots containing 0). This includes the aligned families of Proposition 5.1 and the configurations of the 9 label, where SU(2)_L is off and does not tie the slots of up-type and down-type quarks. For none of the 192 configurations S is there an isometry of R^8 mapping S − T onto S − N. In every case S − N has d = 19 and d = 20 only, while S − T has d = 16 on the neutrino roots of one slot and d = 22 on those of the two others.
 
 **Proof.** Exhaustive computation of the neighbour counts d (Python, exact fractions, scratch script not kept); the counts of S − T and S − N differ for every configuration, so no isometry exists. ∎ This is a computer-assisted statement; Proposition 5.1 is its hand-proved aligned case.
@@ -68,6 +76,8 @@ This is the finite-geometry form of Proposition 5.2. It also makes reading 2 bel
 **Scope.** It assumes that each family occupies one slot, so that every state is a single root. Four slots then cannot be reduced to three while keeping the exchange as an isometry of the roots.
 
 ## Proposal 5.5 (four slots, three zero modes)
+
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** General bundle zero modes are outside the root-slot hypotheses. The index gives net chirality, and split bundles do not automatically reduce to three distinct root slots; the Weyl action on a specified bundle and its zero modes remains open. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposal-55-four-slot-bundles-and-three-families).
 
 In heterotic compactifications on a Calabi-Yau threefold with E8 ⊃ SO(10) × SU(4), 248 = (45, 1) + (1, 15) + (16, 4) + (16bar, 4bar) + (10, 6), the SU(4) is the structure group of a rank-four bundle V, and the families are the zero modes, the 16s coming from H^1(X, V); their number is the index |c_3(V)|/2, which is 3 in the heterotic Standard Models built on SU(4) bundles (Braun, He, Ovrut and Pantev, hep-th/0501070; recalled, not reread). In that reading the four slots of this file are the fibre of V, and the three families are not three of the slots: a zero mode is a section of V and in general involves all four. Propositions 5.1 and 5.4 do not apply to it, since they assume one slot per family.
 

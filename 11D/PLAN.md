@@ -8,7 +8,7 @@ Conversation record of the session that wrote files 01 to 09 (3 and 4 Nov 2026):
 
 ## State (4 Nov 2026)
 
-- 01: chiral interval = antiperiodic circle; joint family (Astra audit); Proposition 1.4 corrected; Proposition 1.5 (scale-free potentials give alpha = 1).
+- 01: chiral interval = antiperiodic circle; joint family (Astra audit); Proposition 1.4 corrected; Proposition 1.5 (isolated stationary angles give alpha = 1; flat directions allow other paths, by the referee amendment).
 - 02: M^{111} = hypercharge quotient of the 5-bar; Z_6; flux index on CP^2 x CP^1.
 - 03: hypercharge as the C_3 (Betti) vector; brane matter; AdS5 x CP^2 x S^2; colour no-go for the 84.
 - 04: the two families of 84 and the M2/M5 sides in E8 (the Hořava-Witten wall group); the M2/M5 exchange acts as J.

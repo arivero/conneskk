@@ -8,6 +8,8 @@ In type I' the two ends of the interval are orientifold planes. A stack of n Cha
 
 ## 2. Proposition 8.1 (the factorization sign fixes orthogonal or symplectic symmetry)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The antiunitary commutants are independently checked. They need not preserve \(d\) or the remaining data, and the Chan-Paton identification is a proposal. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-81-antiunitary-commutants).
+
 **Statement.** Let E be an eigenspace of d^2 in H_+, of dimension n. The unitaries of E that commute with j form O(n) if s = +1, and USp(n) if s = −1, in which case n is even.
 
 **Proof.** j preserves E because it commutes with d^2. An antiunitary with j^2 = +1 is a real structure: E = E_R ⊗ C with E_R its fixed points, and a unitary commutes with j exactly when it preserves E_R, which gives O(n). An antiunitary with j^2 = −1 is a quaternionic structure: E is a right H-module of quaternionic dimension n/2, and the unitaries commuting with j form USp(n). ∎
@@ -18,6 +20,8 @@ The even dimension for s = −1 is lemma 06's own statement (Kramers degeneracy 
 
 ## 3. Proposition 8.2 (wall channels come with doubled multiplicity)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The stated count is for one signed eigenvalue. The lowest \(|D|\) multiplicity is \(2k\) in the interior and at zero, and \(4k\) at \(\pi/2\); interpreting the signed count as Chan-Paton labels requires further data. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-82-endpoint-channel-multiplicities).
+
 **Statement.** In the parent of lemma 22, k channels at a common angle θ contribute, at the eigenvalue θ/l of the window, an eigenspace of dimension k if 0 < θ < pi/2 and of dimension 2k at the ends θ = 0 and θ = pi/2.
 
 **Proof.** By Proposition 7.1 each channel has the spectrum {(n pi ± θ)/l}; the value θ/l occurs once (n = 0, sign +) for 0 < θ < pi/2, and twice at the ends: at θ = 0 as the zero mode of multiplicity two, at θ = pi/2 as (0 + pi/2)/l = (pi − pi/2)/l. ∎
@@ -27,6 +31,8 @@ The even dimension for s = −1 is lemma 06's own statement (Kramers degeneracy 
 ## 4. Remark 8.3 (E8 walls from 15 + 1; conditional)
 
 *Correction (4 Nov 2026).* The far-wall group is reached at the string-scale radius R = R_*, with the tower fixed, and only its charged states are D0-branes. See [10](10_dilaton_and_second_scale.md).
+
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The brane and slope arithmetic is independently checked conditional on the recalled rule. Wall enhancement requires tuning \(z=0\); for \(7+7\) the two bulk positions must sum to \(L\). The \(E_2\) identification with the physical electroweak sector needs further data. The cited primary sources were unavailable for direct checking. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#remark-83-wall-bookkeeping-and-enhancements).
 
 Conditions: the dictionary of 06 (fifteen D8-branes for the five light quarks in three colours, the sixteenth for the top) and the recalled rule that an O8^- plane with n <= 7 D8-branes on it, at infinite coupling, carries E_{n+1} (E_4 = SU(5), E_5 = SO(10), E_6, E_7, E_8), while n >= 8 admits no such point (Seiberg, hep-th/9608111; Bergman, Gaberdiel and Lifschytz, hep-th/9711098; recalled).
 

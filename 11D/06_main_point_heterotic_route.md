@@ -16,6 +16,8 @@ What exists: the exact window for D_F, J and gamma on an interval parent (lemma 
 
 ## 2. The heterotic web has the shape 9, 10, 11
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The nine-dimensional duality involves specified Wilson lines and radii; the finite-triple dictionary and field identification remain proposals. The cited primary papers were unavailable for direct checking. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#files-06-and-07-recalled-dualities).
+
 Recalled facts (Polchinski and Witten, hep-th/9510169; Hořava and Witten, hep-th/9510209 and hep-th/9603142; Bergman, Gaberdiel and Lifschytz, hep-th/9711098; to be checked before use):
 
 - **9:** the heterotic strings on a circle. SO(32) and E8 × E8 are T-dual there, joined through the moduli space of Wilson lines; the theory is non-chiral, nine being odd. Its type I' form is an interval with two orientifold walls (O8) and sixteen D8-branes, whose positions are the Wilson-line eigenvalues.
@@ -38,6 +40,8 @@ This is the pattern of hypothesis H: vectorlike at 9, chiral and KO-6 at 10, chi
 | v -> 0 opens the eleventh dimension (Proposal 1.3) | strong coupling: the interval of Hořava-Witten grows |
 
 ## 4. Proposition 6.1 (the top channel as an SO(32) Wilson line)
+
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The momentum progressions agree; the SO(32) charged sector has 30 copies, and \(m=a/R\) is the light mass on \(0\leq a\leq1/2\). The field identification remains a proposal. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-61-the-so32-wilson-line-spectrum).
 
 **Statement.** On a circle of radius R, take the SO(32) Wilson line W = 1_30 ⊕ R(2 pi a) (rotation by the angle 2 pi a in the last two directions). The adjoint 496 decomposes under SO(30) x SO(2) as (435, 1)_0 + (1, 1)_0 + (30, 2), where (30, 2) = (30)_{+1} + (30)_{-1}; the Kaluza-Klein masses are n/R on the first two pieces and |n ± a|/R on (30)_{±1}, n in Z. With l = pi R and theta = pi a this is the spectrum (n pi ± theta)/l of a channel of lemma 22 (Theorem 22.1) and of the circle form of lemma 25, with mass parameter m = theta/l = a/R; so the top channel of lemma 22 and the SO(32)-charged states of this Wilson line have the same free spectrum when m_t = a/R.
 
