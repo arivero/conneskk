@@ -1145,6 +1145,7 @@ strategy(t3, settled, "Chirality from boundary conditions; the boundary Yukawa i
 strategy(t4, open, "Gauge sector of the towerless interval: fixed compression is not gauge covariant and the finite spectral action does not reproduce the tower mass.").
 strategy(t4b, open, "Gauge-covariant reduction: matching with the tower only via a sum rule (tuned bulk mass, tower-scale fermion); impossible with bounded light fermions in the collapse.").
 strategy(t5, settled, "Heavy W forces a heavy Dirac fermion (conditional on the CCM relation).").
+strategy(t14, partial, "The massless electroweak limit as a joint limit: m_weak << E_eps << Delta_KK -> 0, finite states at the moving scale and the parent at fixed energy; the hierarchy holds on the interval, the cylinder and the disc bundle, and the vector poles on the disc bundle, gauge couplings and dynamics are open.").
 strategy(t13, open, "Mass generation from D = 9 to D = 4 and the anchoring of the QCD and condensation scales to the Fermi scale; speculative steer for the next paper, in d9_masses_fermi_qcd_steer.md.").
 strategy(t12, open, "The separate role of the top: removal identities, SO(30) from the five other quarks, inside SO(32), Seiberg duality with emergent supersymmetry, and the two families of 84 states against C_3, M2 and M5.").
 strategy(t11, open, "Horava-Witten as a two-sheet geometry: walls as sheets, wall algebras as summands, bulk as connecting operator; compare the chiralities of the walls first.").
@@ -1433,6 +1434,53 @@ checked_by(l29_window_a, claude_opus_5_5, python("block norms; the 2 x 3 block o
 claim_amended(l28_window, l29_window_b).
 claim_amended(l28_window, l29_window_a).
 addresses(t0, l29_window_b).  addresses(t0, l29_window_a).  addresses(t0, l29_compression).  addresses(t0b, l29_compression).
+claim(l30_interval, theorem, proved, "Theorem 30.1", "On the interval with D_F = eps D_* and l = l_* eps^-alpha: exact finite data, gap at least (pi/l_*) eps^alpha - eps ||D_*||, compression error O(eps^{2(1-alpha)}), r states below E_* eps^beta, and N(E) ~ (2 r l_* E/pi) eps^-alpha at fixed E.").
+source(l30_interval, 'lemmas/30_massless_limit_as_a_joint_limit.md', '').
+depends(l30_interval, l22_family).
+attempted_by(l30_interval, claude_opus_5_5).
+referee_pending(l30_interval).
+claim(l30_poles, corollary, proved, "Corollary 30.2", "In the toy of lemma 23 along this family, M_W^2 = 2 m^2 and M_Z^2 = (16/5) m^2 to leading order; the factor (3 - d_eff)/2 of lemma 25 connects them to the coefficients 3 and 24/5 of the finite action.").
+source(l30_poles, 'lemmas/30_massless_limit_as_a_joint_limit.md', '').
+depends(l30_poles, l30_interval).
+attempted_by(l30_poles, claude_opus_5_5).
+referee_pending(l30_poles).
+claim(l30_localized, proposition, proved, "Proposition 30.3", "With mu = mu_* eps^alpha and mu l = (1 - alpha) log(1/eps) + c_0: m ~ 2 mu_* exp(-c_0) eps, Delta ~ mu_* eps^alpha, width/l -> 0, and the exact identity r = (m/(mu + kappa))^2 for the opposite-wall coefficient r.").
+source(l30_localized, 'lemmas/30_massless_limit_as_a_joint_limit.md', '').
+attempted_by(l30_localized, claude_opus_5_5).
+referee_pending(l30_localized).
+claim(l30_cylinder, corollary, proved, "Corollary 30.4", "On the cylinder of lemma 24 the cutoff E_* eps^beta isolates the prescribed window, and the count at fixed energy has seven-dimensional Weyl growth.").
+source(l30_cylinder, 'lemmas/30_massless_limit_as_a_joint_limit.md', '').
+depends(l30_cylinder, l30_interval).
+attempted_by(l30_cylinder, claude_opus_5_5).
+referee_pending(l30_cylinder).
+claim(l30_disc, theorem, proved, "Theorem 30.5", "On the disc bundle, with M = c log(1/eps) and R = eps^-alpha: exactly eight eigenvalues in (-delta eps^alpha, delta eps^alpha), of size at most C eps, compression converging to the endpoint maps, and N(E) ~ C_X E^7 eps^(-7 alpha) at fixed E.").
+source(l30_disc, 'lemmas/30_massless_limit_as_a_joint_limit.md', '').
+depends(l30_disc, l29_window_b).
+depends(l30_disc, l29_window_a).
+depends(l30_disc, l29_tunnelling).
+depends(l30_disc, l29_compression).
+attempted_by(l30_disc, claude_opus_5_5).
+referee_pending(l30_disc).
+claim(l30_defect_bound, proposition, proved, "Proposition 30.6", "||Q(f) - P_H Q(f)|| <= 2 eta_t for real f with ||f|| <= 1, and 2 k eta_t for products of k such compressions.").
+source(l30_defect_bound, 'lemmas/30_massless_limit_as_a_joint_limit.md', '').
+depends(l30_defect_bound, l28_symmetry).
+attempted_by(l30_defect_bound, claude_opus_5_5).
+referee_pending(l30_defect_bound).
+claim(l30_defect, proposition, proved, "Proposition 30.7", "eta_t <= C exp(-(1 - eta) M int f dr), twice the rate of the bound on lambda, since C commutes with T_M and the wall alone breaks it.").
+source(l30_defect, 'lemmas/30_massless_limit_as_a_joint_limit.md', '').
+depends(l30_defect, l29_tunnelling).
+depends(l30_defect, l28_conjugation).
+depends(l30_defect, l30_defect_bound).
+attempted_by(l30_defect, claude_opus_5_5).
+referee_pending(l30_defect).
+checked_by(l30_interval, claude_opus_5_5, by_hand).
+checked_by(l30_poles, claude_opus_5_5, by_hand).
+checked_by(l30_localized, claude_opus_5_5, python("exact secular roots, by Claude Sonnet 5.5")).
+checked_by(l30_cylinder, claude_opus_5_5, by_hand).
+checked_by(l30_disc, claude_opus_5_5, by_hand).
+checked_by(l30_defect_bound, claude_opus_5_5, by_hand).
+checked_by(l30_defect, claude_opus_5_5, by_hand).
+addresses(t14, l30_interval).  addresses(t14, l30_localized).  addresses(t14, l30_disc).
 
 %% ---------------------------------------------------------------- steer note, items 9 and 11
 claim(steer_tower_coefficients, proposition, proved, "Steer note, item 9", "One Kaluza-Klein level of all Standard Model fields in the bulk has one-loop coefficients (81/10, 7/6, -5/2): a massive vector (-7/2 C_2), two Weyl fermions for each Standard Model Weyl fermion, and one complex Higgs doublet.").

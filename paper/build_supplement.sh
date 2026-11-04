@@ -7,7 +7,7 @@ cd "$(dirname "$0")/.."
 OUT=paper/supplemental.md
 : > "$OUT"
 part() { printf '\n\n# Part %s\n\n' "$1" >> "$OUT"; sed -E 's/^(#{1,5}) /#\1 /' "$2" >> "$OUT"; }
-for n in 03 05 06 07 08 09 10 11 12 13 14 15 16 18; do part "$n" lemmas/${n}_*.md; done
+for n in 03 05 06 07 08 09 10 11 12 13 14 15 16 17 18; do part "$n" lemmas/${n}_*.md; done
 part 19 lemmas/19_*.md
 part 20 lemmas/20_*.md
 part 21 lemmas/21_*.md
