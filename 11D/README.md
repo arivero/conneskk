@@ -41,6 +41,12 @@ There are two ways to complete 4 + 6 by one dimension, and they correspond to th
 | 3.5 | AdS5 x CP^2 x S^2 with G_4 = f_1 vol(CP^2) + f_2 J ∧ vol(S^2) solves eleven-dimensional supergravity iff abs(f_1) < 2 abs(f_2) | Proposition, proved | [03](03_branes_hypercharge_and_the_84.md) |
 | 3.6, 3.7 | Two completions of one base; the M2/M5 exchange as the electric-magnetic duality of hypercharge, which does not permute the 96 states | Proposals | [03](03_branes_hypercharge_and_the_84.md) |
 | 3.8, 3.9 | The 84 of C_3 is not colour-equivariantly either family of 84, neither through the little group nor as Kaluza-Klein modes on Y_{3,2} | Negative result in scope, pending check; Corollary | [03](03_branes_hypercharge_and_the_84.md) |
+| 4.1 | The two 12-state blocks of lemma 21 are exactly the ratio-preserving blocks of whole species: one up-type quark, or the three neutrinos | Proposition, proved | [04](04_two_families_m2_m5.md) |
+| 4.2, 4.3 | The colour contents of F1 and F2 differ, and for every SU(3) -> SU(9) the space Lambda^3 C^9 is never either family (only 3 + 6 (1) gives triplets only) | Negative results in scope, pending check | [04](04_two_families_m2_m5.md) |
+| 4.A, 4.4 | Two commuting order-3 gradings of e8, by SU(9) (brane level mod 3: gravity, C_3, C_6) and by SU(3) x E6 (families); the 10 and H_u lie in the C_3 sector, (d^c, L) and nu^c in the C_6 and gravity sectors according to a sign t | Theorem, proved | [04](04_two_families_m2_m5.md) |
+| 4.5 | Up-type Yukawa couplings lie inside the C_3 sector, the others have one field per sector; the top mass is the wedge Lambda^3 -> Lambda^6 | Proposition, proved | [04](04_two_families_m2_m5.md) |
+| 4.6 | The M2/M5 exchange is the Chevalley involution, acting as the real structure J; it preserves both families and does not exchange the top with the neutrinos | Negative result in scope, pending check | [04](04_two_families_m2_m5.md) |
+| 4 §7, §8 | nu^c as the gravitational state selects t = +1/2; a discrete Z_3 from the M-grading | Proposal; Remark | [04](04_two_families_m2_m5.md) |
 
 The checks are in [checks_11d.py](checks_11d.py) (Python 3, exact fractions; every check asserts; about 20 s).
 
@@ -64,6 +70,7 @@ The angle-dependent one-loop term (Proposition 1.4) is minimized at the massless
 4. **The 9D reduction of Proposition 2.6**: with SU(2)_R broken by wall data, derive the mass basis of u and d against the charge basis, and the vectorlike limit at the 9 label, where the left-handed interactions are off.
 5. **Fermionic zero modes of wrapped fivebranes** (Conjecture 3.3) at N = 1, and three generations.
 6. **The magnetic completion**: flux quantization, stability and the two C_3 vectors of AdS5 x CP^2 x S^2 against the fluxed pair (chi, B - L) of Proposition 2.6.
+7. **The colour-family exchange in E8 ⊃ SU(3)^4** (PLAN, step 4): the remaining candidate for the exchange of the top and the neutrinos, since Proposition 4.6 excludes the M2/M5 exchange.
 
 ## The Astra 6 audit of 3 Nov 2026
 
@@ -96,6 +103,8 @@ Prior work for the observation of Theorem 2.1, that the weights of M^{111} are t
 - [01_interval_and_eleventh_dimension.md](01_interval_and_eleventh_dimension.md): the "1".
 - [02_witten_spaces_hypercharge_quotient.md](02_witten_spaces_hypercharge_quotient.md): the "6 + 1" of Witten's spaces, the Z_6, chirality from fluxes.
 - [03_branes_hypercharge_and_the_84.md](03_branes_hypercharge_and_the_84.md): C_3, M2, M5 and the 84.
+- [04_two_families_m2_m5.md](04_two_families_m2_m5.md): the two 12-state blocks, the two gradings of E8, Yukawa couplings as brackets, the M2/M5 exchange as J.
+- [PLAN.md](PLAN.md): the handover plan of the line.
 - [checks_11d.py](checks_11d.py): exact checks.
 - [ledger_11d.pl](ledger_11d.pl): ledger facts, included by [../ledger.pl](../ledger.pl).
 - [prompts/](prompts/): the referee request and the first Astra job.

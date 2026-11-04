@@ -139,6 +139,55 @@ attempted_by(d11_kk_triality, claude).
 checked_by(d11_kk_triality, claude, by_hand).
 referee_pending(d11_kk_triality).
 
+%% ---------------------------------------------------------------- 04: the two families and the M2/M5 sides in E8
+claim(d11_blocks, proposition, proved, "Proposition 4.1", "Among blocks of 12 states made of whole Dirac species, exactly one up-type quark or the three neutrinos together keep both spectral-action values of lemma 21 (cos^2 theta_NC = 5/8 and kappa_em/kappa_s = 8/3) on removal.").
+source(d11_blocks, '11D/04_two_families_m2_m5.md', '1-what-singles-out-the-two-blocks').
+depends(d11_blocks, l21_removal).
+attempted_by(d11_blocks, claude).
+checked_by(d11_blocks, claude, by_hand).
+referee_pending(d11_blocks).
+
+claim(d11_colour_families, proposition, proved, "Propositions 4.2, 4.3 (negative results, pending check)", "The colour contents of F1 and F2 differ, so no colour-commuting unitary exchanges them, and for every SU(3) -> SU(9) the space Lambda^3 C^9 is never either family, only 3 + 6 (1) giving triplets only, with content 15 (3) + 6 (3bar) + 21 (1).").
+source(d11_colour_families, '11D/04_two_families_m2_m5.md', '2-colour-obstructions').
+depends(d11_colour_families, d11_colour84).
+attempted_by(d11_colour_families, claude).
+checked_by(d11_colour_families, claude, by_hand).
+referee_pending(d11_colour_families).
+
+claim(d11_e8_grading, theorem, proved, "Lemma 4.A, Theorem 4.4", "The two commuting order-3 gradings of e8, by SU(9) (brane level mod 3, giving gravity, C_3 and C_6 sectors) and by SU(3) x E6 (families), place the 10 and H_u in the C_3 sector and (d^c, L) and nu^c in the C_6 and gravity sectors according to a sign t.").
+source(d11_e8_grading, '11D/04_two_families_m2_m5.md', '4-placement-of-the-generation').
+attempted_by(d11_e8_grading, claude).
+checked_by(d11_e8_grading, claude, by_hand).
+referee_pending(d11_e8_grading).
+
+claim(d11_yukawa_brackets, proposition, proved, "Proposition 4.5", "If the cubic couplings come from the structure constants of e8, the up-type Yukawa couplings lie inside the C_3 sector, the other Yukawa couplings have one field in each sector, and the top mass is the wedge Lambda^3 -> Lambda^6.").
+source(d11_yukawa_brackets, '11D/04_two_families_m2_m5.md', '5-yukawa-couplings-as-brackets').
+depends(d11_yukawa_brackets, d11_e8_grading).
+attempted_by(d11_yukawa_brackets, claude).
+checked_by(d11_yukawa_brackets, claude, by_hand).
+referee_pending(d11_yukawa_brackets).
+
+claim(d11_m2m5_is_j, proposition, proved, "Proposition 4.6 (negative result, pending check)", "In e8 with these two gradings the M2/M5 exchange is the Chevalley involution acting as the real structure J, which preserves both families and so does not exchange the top with the neutrinos.").
+source(d11_m2m5_is_j, '11D/04_two_families_m2_m5.md', '6-in-this-realization-the-m2m5-exchange-is-the-real-structure-j').
+depends(d11_m2m5_is_j, d11_e8_grading).
+attempted_by(d11_m2m5_is_j, claude).
+checked_by(d11_m2m5_is_j, claude, by_hand).
+referee_pending(d11_m2m5_is_j).
+
+claim(d11_nu_gravity, conjecture, conjectural, "Section 7 (proposal)", "The state nu^c is the gravitational state, which agrees with its placement in the gravity sector of e8 for t = +1/2 and selects that sign.").
+source(d11_nu_gravity, '11D/04_two_families_m2_m5.md', '7-agreement-with-files-02-and-03-and-the-finite-geometry').
+depends(d11_nu_gravity, d11_e8_grading).
+depends(d11_nu_gravity, d11_z6).
+depends(d11_nu_gravity, d11_betti_y).
+attempted_by(d11_nu_gravity, claude).
+
+claim(d11_discrete_z3, claim, proved, "Remark, section 8", "For t = +1/2 the element s_M of the M-grading gives a discrete Z_3 symmetry that allows the Yukawa couplings, the Majorana mass and the Weinberg operator and forbids the mu term and the dimension-five proton-decay operators.").
+source(d11_discrete_z3, '11D/04_two_families_m2_m5.md', '8-remark-a-discrete-symmetry-from-the-m-grading').
+depends(d11_discrete_z3, d11_e8_grading).
+attempted_by(d11_discrete_z3, claude).
+checked_by(d11_discrete_z3, claude, by_hand).
+referee_pending(d11_discrete_z3).
+
 %% ---------------------------------------------------------------- strategy
 strategy(t14, open, "Eleven dimensions from massless W and Z: the interval of H as an antiperiodic circle and as the M-theory circle; Witten's space M^{111} as the hypercharge quotient of the 5-bar; hypercharge from C_3, matter from wrapped branes, the Higgs as the M2 position; the magnetic completion AdS5 x CP^2 x S^2; the 84 of lemma 21 against C_3.").
 addresses(t14, d11_circle).  addresses(t14, d11_m_circle).  addresses(t14, d11_casimir).  addresses(t14, d11_scale_free).
@@ -148,3 +197,5 @@ addresses(t14, d11_flux_nogo).  addresses(t14, d11_flux_fit).
 addresses(t14, d11_betti_y).  addresses(t14, d11_fock).  addresses(t14, d11_fock_branes).  addresses(t14, d11_higgs_m2).
 addresses(t14, d11_ads5).  addresses(t14, d11_two_completions).  addresses(t14, d11_colour84).  addresses(t14, d11_kk_triality).
 addresses(t12, d11_colour84).  addresses(t12, d11_two_completions).  addresses(t11, d11_circle).
+addresses(t14, d11_blocks).  addresses(t14, d11_colour_families).  addresses(t14, d11_e8_grading).  addresses(t14, d11_yukawa_brackets).  addresses(t14, d11_m2m5_is_j).  addresses(t14, d11_nu_gravity).  addresses(t14, d11_discrete_z3).
+addresses(t12, d11_blocks).  addresses(t12, d11_m2m5_is_j).

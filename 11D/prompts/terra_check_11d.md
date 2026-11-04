@@ -1,6 +1,6 @@
 You are an independent mathematical referee. Work ALONE: do not spawn subagents and do not delegate. Follow AGENTS.md in the repository root. The repository is read-only for you. You may run Python in memory, and you may run `python3 11D/checks_11d.py` (about 20 s). If you compute, name the language and say what was computed. A computation never replaces a proof.
 
-Files under review: 11D/01_interval_and_eleventh_dimension.md, 11D/02_witten_spaces_hypercharge_quotient.md, 11D/03_branes_hypercharge_and_the_84.md, and the script 11D/checks_11d.py. Author: Claude (Anthropic). Context: STRATEGY.md (hypothesis H), reviews/2026-11-03_astra_audit_d11.md (sections 2.2 to 4 and 7), lemmas/05_deconstruction_interval.md (eq. (8) and Part 4), lemmas/21_top_counting.md (the two families of 84), lemmas/24_commutative_parent.md (Theorem 9), LITERATURE.md section F.
+Files under review: 11D/01_interval_and_eleventh_dimension.md, 11D/02_witten_spaces_hypercharge_quotient.md, 11D/03_branes_hypercharge_and_the_84.md, 11D/04_two_families_m2_m5.md, and the script 11D/checks_11d.py. Author: Claude (Anthropic). Context: STRATEGY.md (hypothesis H), reviews/2026-11-03_astra_audit_d11.md (sections 2.2 to 4 and 7), lemmas/05_deconstruction_interval.md (eq. (8) and Part 4), lemmas/21_top_counting.md (the two families of 84), lemmas/24_commutative_parent.md (Theorem 9), LITERATURE.md section F.
 
 Check these items, and for each answer Correct, Correct with amendment, or Error, with the reason.
 
@@ -12,6 +12,7 @@ Check these items, and for each answer Correct, Correct with amendment, or Error
 6. The lemma on required bidegrees and Propositions 2.5 and 2.6: the cohomology of O(alpha, beta), the canonical spin^c root (-3/2, -1), the sign conventions for right-handed conjugates, the proof of 2.5 and the explicit solutions of 2.6. This is a negative result: give an independent check, and state its scope and the escapes you see.
 7. Proposition 3.5: the Ricci components and the condition abs(f_1) < 2 abs(f_2), with the convention R_MN = (G_MPQR G_N^PQR - g_MN G^2/12)/12; the closure of *G_4 and the vanishing of G_4 ∧ G_4.
 8. Proposition 3.8 and Corollary 3.9: the list of real nine-dimensional representations of SU(3), the decompositions used, and the scope. This is a negative result: give an independent check.
-9. Wording: flag any place where a proposal is stated as a result, and any sentence of the forms excluded by AGENTS.md.
+9. File 04: Proposition 4.1 (the enumeration of 12-state blocks), Proposition 4.3 (the case analysis for complex nine-dimensional representations), Lemma 4.A (the branching table, including b = a + 2 T_3), Theorem 4.4 (the sign t, the SU(2)_I doublets and the counts 45 + 45 + 6 and 33 + 33 + 30), Proposition 4.5 and Proposition 4.6. The negative results 4.3 and 4.6 need an independent check.
+10. Wording: flag any place where a proposal is stated as a result, and any sentence of the forms excluded by AGENTS.md.
 
 Write the report to reviews/2026-11-03_terra_check_11d.md only if the instructions of the run allow writing; otherwise return it as text.

@@ -112,7 +112,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
 
 The interval of H as an antiperiodic circle and as the M-theory circle; Witten's space M^{111} as the hypercharge quotient of the 5-bar, the Z_6 and chirality from fluxes; hypercharge from C_3, matter from wrapped branes, the Higgs as the M2 position, the magnetic completion AdS5 x CP^2 x S^2, and the 84 of lemma 21 against C_3.
 
-[11D README](11D/README.md) · [11D §1](11D/01_interval_and_eleventh_dimension.md) · [11D §2](11D/02_witten_spaces_hypercharge_quotient.md) · [11D §3](11D/03_branes_hypercharge_and_the_84.md) · [strategy, Ranked list (T14)](STRATEGY.md#ranked-list) · [Astra audit §3-§4, joint family](reviews/2026-11-03_astra_audit_d11.md#3-a-positive-joint-limit-result-from-the-exact-interval)
+[11D README](11D/README.md) · [11D §1](11D/01_interval_and_eleventh_dimension.md) · [11D §2](11D/02_witten_spaces_hypercharge_quotient.md) · [11D §3](11D/03_branes_hypercharge_and_the_84.md) · [strategy, Ranked list (T14)](STRATEGY.md#ranked-list) · [Astra audit §3-§4, joint family](reviews/2026-11-03_astra_audit_d11.md#3-a-positive-joint-limit-result-from-the-exact-interval) · [11D §4, two families and M2/M5](11D/04_two_families_m2_m5.md)
 
 ## Part 2. Documents
 
@@ -509,3 +509,20 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 - [Proposition 3.8 (no colour-equivariant identification of the 84 with the three-form)](11D/03_branes_hypercharge_and_the_84.md#proposition-38-no-colour-equivariant-identification-of-the-84-with-the-three-form)
   - [Corollary 3.9 (the coloured states of the 84 are not Kaluza-Klein modes of C_3 on Y_{3,2})](11D/03_branes_hypercharge_and_the_84.md#corollary-39-the-coloured-states-of-the-84-are-not-kaluza-klein-modes-of-c_3-on-y_32)
 - [Summary of the direction](11D/03_branes_hypercharge_and_the_84.md#summary-of-the-direction)
+- [The two families of 84 and the M2 and M5 sides](11D/04_two_families_m2_m5.md#the-two-families-of-84-and-the-m2-and-m5-sides)
+- [The question](11D/04_two_families_m2_m5.md#the-question)
+- [1. What singles out the two blocks](11D/04_two_families_m2_m5.md#1-what-singles-out-the-two-blocks)
+- [2. Colour obstructions](11D/04_two_families_m2_m5.md#2-colour-obstructions)
+- [3. Two commuting gradings of E8](11D/04_two_families_m2_m5.md#3-two-commuting-gradings-of-e8)
+- [4. Placement of the generation](11D/04_two_families_m2_m5.md#4-placement-of-the-generation)
+- [5. Yukawa couplings as brackets](11D/04_two_families_m2_m5.md#5-yukawa-couplings-as-brackets)
+- [6. In this realization the M2/M5 exchange is the real structure J](11D/04_two_families_m2_m5.md#6-in-this-realization-the-m2m5-exchange-is-the-real-structure-j)
+- [7. Agreement with files 02 and 03, and the finite geometry](11D/04_two_families_m2_m5.md#7-agreement-with-files-02-and-03-and-the-finite-geometry)
+- [8. Remark: a discrete symmetry from the M-grading](11D/04_two_families_m2_m5.md#8-remark-a-discrete-symmetry-from-the-m-grading)
+- [9. What remains open](11D/04_two_families_m2_m5.md#9-what-remains-open)
+- [References for this file](11D/04_two_families_m2_m5.md#references-for-this-file)
+- [Plan of the 11D line (handover file)](11D/PLAN.md#plan-of-the-11d-line-handover-file)
+- [State (4 Nov 2026)](11D/PLAN.md#state-4-nov-2026)
+- [Question of this round](11D/PLAN.md#question-of-this-round)
+- [Steps, in order](11D/PLAN.md#steps-in-order)
+- [How to continue](11D/PLAN.md#how-to-continue)
