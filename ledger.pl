@@ -1086,6 +1086,13 @@ checked_by(l21_so30, claude_opus_5_5, python("exact counting")).
 prior_work(l21_so30, partial, "hep-ph/0512065, Tables 1-2, an early preprint: the 15 diquarks and 25 mesons, the 4/3 states, and the top unable to form them; neither SO(30) nor a role for SO(32)").
 addresses(t12, l21_removal).  addresses(t12, l21_counts).  addresses(t12, l21_so30).
 checked_by(l21_so30, terra_6_1, by_hand).
+claim(l21_exotic, proposition, proved, "Proposition 21.4 and Corollary 21.5", "For n_u up-type and n_d down-type light quarks the symmetric diquark antitriplets number n_d(n_d+1)/2, n_u n_d, n_u(n_u+1)/2 at charges -2/3, 1/3, 4/3; the antisquark counts 6 and 6 of three generations force (n_u, n_d) = (2, 3), the top out, and leave 3 states of charge 4/3, half of a chiral-multiplet pairing; as superpartners their fermions would be three Weyl (3bar, 4/3) singlets, anomalous alone. Readings: partnerless scalars, or the top in with the 1/3 count broken to 9 and SO(36) in place of SO(32). In the window of lemma 38 one state remains.").
+source(l21_exotic, 'lemmas/21_top_counting.md', 'so30').
+attempted_by(l21_exotic, claude_fable_5_1).
+checked_by(l21_exotic, claude_fable_5_1, by_hand).  % arithmetic; the anomaly traces are standard
+depends(l21_exotic, l21_so30).
+addresses(t12, l21_exotic).
+referee_pending(l21_exotic).  % added on 4 Nov 2026, after the Terra report on lemma 21
 claim(l23_potential, no_go, proved, "Proposition 23.8", "Flat massless family, this gauge content, fermions of frequency 1, one loop: theta = pi/2 is the unique global minimum for n_f > 0, and V is strictly decreasing for n_f >= 10.8; for smaller n_f, no interior minimum on grids (Python). Escapes: general bulk masses with a completion, warping, wall scalar with a potential, wall terms, fermions of frequency 2.").
 source(l23_potential, 'lemmas/23_two_gradings_interval.md', 'the-one-loop-potential-in-the-same-family').
 attempted_by(l23_potential, claude_opus_5_5).
@@ -1623,7 +1630,7 @@ test(draft_files_exist) :- forall(stated_in_draft(_, F), exists_file(F)).
 test(referee_reports_exist) :- forall(referee_report(F, R), (exists_file(F), exists_file(R))).
 test(refereed_claims_have_review_bookkeeping) :-
     forall(( referee_report(F, _), source(C, F, _), claim(C, _, S, _, _), memberchk(S, [proved, conditional]) ),
-           ( checked_by(C, terra_6_1, _) ; attempted_by(C, terra_6_1) ; outside_referee(C, _) )).
+           ( checked_by(C, terra_6_1, _) ; attempted_by(C, terra_6_1) ; outside_referee(C, _) ; referee_pending(C) )).  % a row added to a refereed file after its report waits for its own referee
 test(claims_outside_the_corpus_have_a_checker) :-
     forall(( claim(C, _, S, _, _), memberchk(S, [proved, conditional]), \+ attempted_by(C, corpus) ), checked_by(C, _, _)).
 test(self_checks_are_corpus_only) :-
