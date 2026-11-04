@@ -316,6 +316,10 @@ A synthesis with the status of each entry, drawing on lemmas 05 to 30 and on the
 - [Ranked list](STRATEGY.md#ranked-list)
 - [What would count against H](STRATEGY.md#what-would-count-against-h)
 
+### History of the field: [NCG_HISTORY.md](NCG_HISTORY.md)
+
+A dated record to November 2026 in nine sections: origins beside the Kaluza-Klein closure (with the finding that no founding text cites the chirality obstruction), the 1990s, 2003-2012, 2013-2019, 2020-2026 (including what exists on finite triples as limits of geometries), ramifications, comparison with the author table to 2003, relevance to the project, and what is unverified.
+
 ### Literature check of claims A-I: [LITERATURE.md](LITERATURE.md)
 
 - [A. Connes-Lott as the minimal spectral truncation of a chiral interval](LITERATURE.md#a-connes-lott-as-the-minimal-spectral-truncation-of-a-chiral-interval)

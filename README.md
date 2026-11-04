@@ -31,7 +31,7 @@ Facts: `claim/5`, `source/3`, `depends/2`, `hypothesis/2`, `attempted_by/2`, `ch
 7. `STRATEGY.md`: which theorems to prove first (11/10/9 limits, towerless KK), and why.
 8. `DUPLICATES.md`: which files and sections duplicated each other, and what was removed.
 9. `paper/towerless_intervals.tex`: draft paper on finite spectral triples as towerless intervals (REVTeX; `make` in `paper/` builds the Phys Rev two-column PDF and a one-column PDF of the same width for phones). `paper/chiral_limit_note.tex`: short note from lemma 17.
-10. `LITERATURE.md`: prior work for each claim, with verdicts known / partial / not found.
+10. `LITERATURE.md`: prior work for each claim, with verdicts known / partial / not found. `NCG_HISTORY.md`: a dated record of noncommutative geometry in particle physics and its ramifications, to November 2026, beside the closure of the Kaluza-Klein programme (Claude Opus 5.5, 4 Nov 2026; every identifier checked, labels say how far each item was read).
     `current_framework.md`: background note on the current Connes et al. framework, and what truncation reaches (STRATEGY T0b).
 11. `evaluation2026-11-03.md` and `reviews/`: the dated evaluation of the project and the external review of it, with our response.
 12. `11D/` (branch `11D`): eleven dimensions from massless W and Z, the hypercharge quotient and its conditional M^{111} comparison, and proposed M2/M5 readings of lemma 21; start at [11D/README.md](11D/README.md). Its ledger facts are in `11D/ledger_11d.pl`, included by `ledger.pl`.
