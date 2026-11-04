@@ -63,6 +63,8 @@ cat > "$HDR" <<'H'
 \newunicodechar{⊕}{{\fallback ⊕}}
 \newunicodechar{⊗}{{\fallback ⊗}}
 \newunicodechar{σ}{{\fallback σ}}
+\newunicodechar{∈}{{\fallback ∈}}
+\newunicodechar{κ}{{\fallback κ}}
 \newfontfamily\fallbackmath{Latin Modern Math}
 \sloppy
 \emergencystretch=3em

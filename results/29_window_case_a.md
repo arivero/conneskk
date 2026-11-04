@@ -1,0 +1,18 @@
+# With the pull-back connection throughout, Conjecture 28.6 holds at the Fubini-Study wall radius, where the kernel condition K(1) holds and the wall mode has fibre part -2/3, and at another radius it holds under the kernel condition K(rho)
+
+**Status.** Theorem (Theorem 29.11), with Proposition 29.10. Proved by Claude Opus 5.5; checked by Claude Opus 5.5 by hand (Proposition 29.10) and in Python (the block norms and the 2 x 3 block on the 4), and by Terra 6.1 by hand, whose report on lemma 29 found two errors in case (a), the definition of A_eff and the sign of the fibre part, both corrected (historical/reviews/2026-11-04_terra_check_29.md). A fresh reading in the referee report on lemma 30 found one more sign and one missing step in Proposition 29.10; these are corrected, and the corrections have not been read again (historical/reviews/2026-11-04_terra_check_30_note.md). Ledger rows `l29_window_a` (depending on `l29_wall_a`) and `l29_wall_a`; the ledger records `l28_window` as amended by `l29_window_a`. Theorem 2 of paper/joint_limit_note.tex, case (a).
+
+**Setting.** Setting 29.0 of 29_window_case_b.md, with the pull-back connection throughout. On the collar A = A_d + A_o, where A_d = D_line preserves the lines and A_o = A_E/rho has order zero, with [A_o, q] != 0; in Python the block of A_E between q = 3/2 and q = 1/2 has norm sqrt(3) and ||A_E|| = 2. P projects onto {sum_{q > 0} p_q g_q : Z g_q = -g_q}, p_q = sqrt(2 m q) exp(m q (x - l)), Y is the same with Z = +1, and F = Pi_Y (A_d + A_o) P. A_eff, with blocks F and F\*, is identified with D_3(rho) (+) D_1(rho) + (sqrt(3)/2) B(rho) on sections over CP^3 of the lines q > 0, with B(rho) of norm sqrt(3)/rho; kappa_a(rho) > 0 is the gap of its nonzero spectrum, uniform in V. Condition K(rho): the kernel of A_eff(rho) is exactly one copy of the 4, in Z = +1.
+
+**Statement.**
+
+1. (Proposition 29.10) Under K(rho), the wall estimates of Lemma 29.6 hold with the constant 3 replaced by kappa_a(rho)^2 - O(1/m), and the half-cylinder kernel of T_M\* is exactly one copy of the 4 for m large, within O(1/m) of (-(2/3)(rho^2 + 2), 1, 1), with fibre part tending to -w(rho) at rate O(1/m).
+2. (Theorem 29.11) K(1) holds. For delta < min(2, kappa_a(1)) and M large, the conclusion of Theorem 29.7 holds at the Fubini-Study radius, with the wall modes replaced by the kernel of Proposition 29.10 and the fibre part tending to -w(1) = -2/3.
+3. kappa_a(1) >= sqrt(5) - 3/2 off the 4, and kappa_a(1) = 1.863 on the 4, where the squared values are (45 +- 3 sqrt(33))/8.
+4. At another wall radius the same conclusion holds under K(rho).
+
+*Scope.* At other radii only finitely many V can carry a kernel, those with |D_3(rho) (+) D_1(rho)| <= 3/(2 rho), by ellipticity. In Python, on the 16, 20 and 40 and for rho in [0.2, 4], the compressed block has smallest singular value at least 1.30. A check of K(rho) on all relevant V at a given radius needs a lower bound for D_line(rho) on all V, which lemma 29 does not write down away from rho = 1.
+
+**Proof.** Lemma 29, Proposition 29.10 and Theorem 29.11; the proofs are there. T_d = i Z d/dx + A_d + i m q preserves the block structure, and eliminating the complement of P gives (1 + 2 ||A_o||/m) ||T_M w|| >= ||F w_1|| - (2 ||A_o||^2/m) ||w||; the Schur complement differs from F\* by at most ||A_o||^2/(m/2 - ||A_o||). For K(1): off the 4, |D_3 (+) D_1| >= sqrt(5) while ||(sqrt(3)/2) B(1)|| = 3/2; on the 4, F\* is A(1) of Proposition 28.13, with kernel (-2, 1, 1).
+
+**What it leaves open.** K(rho) away from rho = 1, other metrics, and a further independent reading of the corrections to Proposition 29.10. The compression in case (a), with fibre part -w(rho), is 29_compression_to_endpoint_maps.md.
