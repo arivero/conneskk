@@ -58,6 +58,8 @@ Canonical 8 and 15 present the flux-(1,2,3) failure as decisive; Theorem 02-A co
 
 | [43](43_engineered_connections.md) | T15: which connections on a vertical kernel are Berry connections | **Theorem** 43.2: a change alpha of the coefficient connection changes the Berry connection by the fibrewise compression P alpha P, and every connection on the kernel bundle is attained iff the compression Gamma(u(E)) -> u(K_b) is surjective, iff the products s_j s_i^* of a kernel frame are independent. **Corollary** 43.3: for H^0(CP^3, O(1)) scalar changes suffice (the second-moment identity); for functions from S^4 the image is six-dimensional, so the core copy of lemma 29 needs the matrix-valued collar connection. Referee pending. |
 
+| [44](44_seesaw_scaling_retained_algebra.md) | T2c: the retained algebra along the seesaw scaling | **Proposition** 44.1: with the Majorana block heavy and the neutrino Dirac block growing as t^alpha, alpha > 0, the retained algebra is C + M_3(C); only a bounded Dirac coupling keeps C + H + M_3(C). **Proposition** 44.2: the light mass is -y^2 t^{2 alpha - 1}, finite exactly at alpha = 1/2. **Corollary** 44.3: the finite seesaw and the Standard Model algebra are two different limits. Remark 44.4: in nine dimensions the Majorana block is wall data (dimension 8k + 1). Referee pending. |
+
 ## Lemmas 31 to 40: the eleven-dimensional line
 
 Written as files 01 to 11 of branch 11D by another Claude session (Claude Opus 5.5), refereed by GPT-6.1 Terra (34 sections) and checked a second time by Claude Sonnet 5.5, and moved into this directory on 4 November 2026 with their text unchanged; file 06 (proposals) stays in `historical/11D/`. Each file keeps its own numbering of propositions.

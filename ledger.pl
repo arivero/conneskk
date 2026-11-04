@@ -1147,6 +1147,18 @@ checked_by(l43_scalar, claude_fable_5_1, by_hand).
 depends(l43_scalar, l43_berry).  depends(l43_scalar, l10_toeplitz).
 referee_pending(l43_scalar).
 addresses(t15, l43_berry).  addresses(t15, l43_scalar).
+claim(l44_algebra, proposition, proved, "Proposition 44.1 and Corollary 44.3", "For D_t = t T_R + t^alpha V_nu + S with the Majorana block T_R and the neutrino Dirac block V_nu, the algebra retained by bounded commutators is C + H + M_3(C) for alpha = 0 and {(lambda, Q_lambda, m)} = C + M_3(C) for alpha > 0; a finite seesaw mass (alpha = 1/2) and the Standard Model algebra belong to two different limits of the family.").
+source(l44_algebra, 'lemmas/44_seesaw_scaling_retained_algebra.md', 'statements').
+attempted_by(l44_algebra, claude_fable_5_1).
+checked_by(l44_algebra, claude_fable_5_1, by_hand).
+depends(l44_algebra, l20_rank_one).
+referee_pending(l44_algebra).
+claim(l44_light_mass, proposition, proved, "Proposition 44.2", "On the neutral block the light eigenvalue is -2 t^{2 alpha} y^2/(t + sqrt(t^2 + 4 t^{2 alpha} y^2)) ~ -y^2 t^{2 alpha - 1}: zero for alpha < 1/2, -y^2 at alpha = 1/2, divergent for alpha > 1/2.").
+source(l44_light_mass, 'lemmas/44_seesaw_scaling_retained_algebra.md', 'statements').
+attempted_by(l44_light_mass, claude_fable_5_1).
+checked_by(l44_light_mass, claude_fable_5_1, by_hand).
+referee_pending(l44_light_mass).
+addresses(t2c, l44_algebra).  addresses(t2c, l44_light_mass).
 claim(l23_potential, no_go, proved, "Proposition 23.8", "Flat massless family, this gauge content, fermions of frequency 1, one loop: theta = pi/2 is the unique global minimum for n_f > 0, and V is strictly decreasing for n_f >= 10.8; for smaller n_f, no interior minimum on grids (Python). Escapes: general bulk masses with a completion, warping, wall scalar with a potential, wall terms, fermions of frequency 2.").
 source(l23_potential, 'lemmas/23_two_gradings_interval.md', 'the-one-loop-potential-in-the-same-family').
 attempted_by(l23_potential, claude_opus_5_5).

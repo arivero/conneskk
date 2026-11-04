@@ -252,6 +252,7 @@ A dated record to November 2026 in nine sections: origins beside the Kaluza-Klei
 - [The axioms and the lift along the chain Pati-Salam, Standard Model, colour and electromagnetism](lemmas/41_axioms_along_the_chain.md#the-axioms-and-the-lift-along-the-chain-pati-salam-standard-model-colour-and-electromagnetism)
 - [The Higgs representation in the window: the tangent of the orbit of the marked lines](lemmas/42_higgs_as_connector_moduli.md#the-higgs-representation-in-the-window-the-tangent-of-the-orbit-of-the-marked-lines)
 - [Which connections on a vertical kernel are Berry connections](lemmas/43_engineered_connections.md#which-connections-on-a-vertical-kernel-are-berry-connections)
+- [The retained algebra along the seesaw scaling](lemmas/44_seesaw_scaling_retained_algebra.md#the-retained-algebra-along-the-seesaw-scaling)
 
 ### Results: [results/README.md](results/README.md)
 
