@@ -316,3 +316,60 @@ embedding, three aligned family slots, complete species blocks and
 Euclidean isometries. State bijections without such an isometry, other
 embeddings or larger representations, and a fourth family remain possible
 directions.
+
+## Proposition 5.4: misaligned three-slot configurations
+
+**Verdict: Correct with amendment.** The no-isometry conclusion holds for
+all 192 assignments, by the analytic argument below. The universal
+neighbour counts stated in the proposition are false when slots are
+misaligned; the omitted scratch computation cannot support those counts.
+
+Let \(A,B,C,D\) be the three-slot sets for up quarks, down quarks,
+charged leptons and neutrinos, respectively, and let \(0\in A\) be the
+top's slot. The table in the preceding section applies independently
+to every slot assignment. For a root in slot \(f\), after removing all
+neutrinos it gives
+\[
+\begin{array}{c|c}
+\text{source} & d_{S-N}\\ \hline
+ U,\ f\in A & 20\\
+ D,\ f\in B & 17+2\,\mathbf1_C(f)\\
+ E,\ f\in C & 13+6\,\mathbf1_B(f).
+\end{array}
+\]
+For example, the down-quark degree is
+\(3|A|+[4+2(|B|-1)]+2\mathbf1_C(f)
+ =17+2\mathbf1_C(f)\).
+Thus \(S-N\) has degrees in \(\{13,17,19,20\}\), and the degrees
+\(16,22\) are absent.
+
+After removing the top, every neutrino root in slot \(f\in D\) has
+\[
+ d_{S-T}=16+6\bigl(\mathbf1_A(f)-\mathbf1_{\{0\}}(f)\bigr)
+ \in\{16,22\}.
+\]
+Indeed, all three down-quark slots contribute \(9\), all three
+charged-lepton slots contribute \(3\), the two other neutrino slots
+contribute \(4\), and up quarks contribute six exactly when
+\(f\in A\), less six for the removed top when \(f=0\). Since both
+sets are closed under negation, their centroids are zero. Any Euclidean
+isometry between them would preserve the displayed degrees, which is
+impossible. The argument covers all \(3\cdot4^3=192\) choices without
+enumerating them.
+
+**Counterexample to the stated counts.** Take
+\[
+ A=C=\{0,1,2\},\qquad B=D=\{0,1,3\}.
+\]
+In \(S-N\), down-quark roots in slot \(3\) have degree \(17\), and
+charged-lepton roots in slot \(2\) have degree \(13\). In \(S-T\), the
+neutrino degrees in slots \(0,1,3\) are \(16,22,16\), respectively.
+This contradicts both the assertion that \(S-N\) has only degrees
+\(19,20\) and the assertion that precisely one neutrino slot has degree
+\(16\).
+
+**Scope and direction.** This concerns the specific half-root
+realization, whole colour multiplets, one root slot per species and
+Euclidean isometries. General zero modes of a nonsplit \(SU(4)\) bundle,
+other embeddings, and maps without an isometric root action are outside
+the calculation; Proposal 5.5 is a direction to investigate.

@@ -216,12 +216,12 @@ depends(d11_two_heavy, d11_transposition).
 depends(d11_two_heavy, d11_no_isometry).
 attempted_by(d11_two_heavy, claude).
 
-claim(d11_misaligned, proposition, proved, "Proposition 5.4 (computer-assisted, negative result, pending check)", "For none of the 192 assignments of the four types to three of the four family slots, aligned or misaligned as at the 9 label, is there an isometry of R^8 mapping S - T onto S - N.").
+claim(d11_misaligned, no_go, proved, "Proposition 5.4 (independently checked with amendment)", "For none of the 192 assignments of the four types to three of the four family slots, aligned or misaligned, is there an isometry of R^8 mapping S - T onto S - N. The original universal neighbour counts are false for some misaligned assignments; the referee gives corrected formulas.").
 source(d11_misaligned, '11D/05_colour_family_exchange.md', 'proposition-54-no-three-slot-assignment-admits-the-exchange').
 depends(d11_misaligned, d11_no_isometry).
 attempted_by(d11_misaligned, claude).
 checked_by(d11_misaligned, claude, python("exhaustive neighbour counts over 192 slot assignments, exact fractions, not kept")).
-referee_pending(d11_misaligned).
+checked_by(d11_misaligned, terra_6_1, by_hand).
 
 claim(d11_four_slots, conjecture, conjectural, "Proposal 5.5", "If the families are the zero modes of an SU(4) bundle, the four slots are the fibre and three families are an index, so Propositions 5.1 and 5.4 do not apply as stated.").
 source(d11_four_slots, '11D/05_colour_family_exchange.md', 'proposal-55-four-slots-three-zero-modes').

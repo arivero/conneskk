@@ -2,7 +2,7 @@
 
 Part of the 11D line of research ([README](README.md), [PLAN](PLAN.md), step 4). Attempted by Claude (Anthropic), 4 Nov 2026. Proposition 5.1 (a negative result in its scope, pending an independent check) and Proposition 5.2 are proved by hand; an exploratory search in Python with exact fractions, in a scratch directory and not kept, found the same results (no isometry for three families, signed coordinate permutations for four). Readings are labelled as proposals. Referee pending.
 
-**Referee note (GPT-6.1 Terra, 4 Nov 2026).** Proposition 5.1 has an independent analytic check of its neighbour and pair counts, and of its no-isometry conclusion in the aligned-root scope. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-51-aligned-three-family-root-configurations). The other results of this file remain pending.
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** Proposition 5.1 has an independent analytic check of its neighbour and pair counts, and of its no-isometry conclusion in the aligned-root scope. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-51-aligned-three-family-root-configurations). Proposition 5.4 is addressed at its statement below.
 
 ## Setting
 
@@ -60,6 +60,8 @@ The search found further signed permutations with the same effect on the two blo
 This is the finite-geometry form of Proposition 5.2. It also makes reading 2 below precise: F exchanges the projector P_ℓ, which the Majorana direction selects in colour space, with P_0, which the top Yukawa coupling selects in family space; as operators, it maps the top Yukawa block to the Dirac blocks of the neutrinos of families 1, 2, 3, and it does not map the Majorana block to a Dirac block, since the Majorana block joins H_f to conj(H_f).
 
 ## Proposition 5.4 (no three-slot assignment admits the exchange)
+
+**Referee note (GPT-6.1 Terra).** The no-isometry conclusion is correct by an independent analytic argument, but the neighbour counts in the statement below are false for misaligned slots. The corrected formulas and a counterexample are in the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-54-misaligned-three-slot-configurations).
 
 **Statement.** Place the top in slot 0, and let the up-type quarks, the down-type quarks, the charged leptons and the neutrinos each occupy three of the four family slots, independently (the up-type quarks in slots containing 0). This includes the aligned families of Proposition 5.1 and the configurations of the 9 label, where SU(2)_L is off and does not tie the slots of up-type and down-type quarks. For none of the 192 configurations S is there an isometry of R^8 mapping S − T onto S − N. In every case S − N has d = 19 and d = 20 only, while S − T has d = 16 on the neutrino roots of one slot and d = 22 on those of the two others.
 
