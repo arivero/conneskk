@@ -154,11 +154,11 @@ attempted_by(d11_colour_families, claude).
 checked_by(d11_colour_families, claude, by_hand).
 checked_by(d11_colour_families, terra_6_1, by_hand).
 
-claim(d11_e8_grading, theorem, proved, "Lemma 4.A, Theorem 4.4", "The two commuting order-3 gradings of e8, by SU(9) (brane level mod 3, giving gravity, C_3 and C_6 sectors) and by SU(3) x E6 (families), place the 10 and H_u in the C_3 sector and (d^c, L) and nu^c in the C_6 and gravity sectors according to a sign t.").
+claim(d11_e8_grading, theorem, proved, "Lemma 4.A, Theorem 4.4 (referee amendment)", "The two commuting order-3 gradings of e8 place the left-handed 10 and H_u in grade b=1 and (d^c, L) and nu^c in the b=2 and b=0 sectors according to a sign t. The top and antitop each have chiral components in both b=1 and b=2.").
 source(d11_e8_grading, '11D/04_two_families_m2_m5.md', '4-placement-of-the-generation').
 attempted_by(d11_e8_grading, claude).
 checked_by(d11_e8_grading, claude, by_hand).
-referee_pending(d11_e8_grading).
+checked_by(d11_e8_grading, terra_6_1, by_hand).
 
 claim(d11_yukawa_brackets, proposition, proved, "Proposition 4.5", "If the cubic couplings come from the structure constants of e8, the up-type Yukawa couplings lie inside the C_3 sector, the other Yukawa couplings have one field in each sector, and the top mass is the wedge Lambda^3 -> Lambda^6.").
 source(d11_yukawa_brackets, '11D/04_two_families_m2_m5.md', '5-yukawa-couplings-as-brackets').

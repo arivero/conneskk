@@ -65,6 +65,8 @@ Let SU(5) ⊂ SU(6) ⊂ E6 be the Georgi-Glashow group, with 15 = 10 + 5 and 6ba
 
 **Theorem 4.4 (the generation in the three sectors).** For the generation 16 ⊂ 27 of family grade a = 1:
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The branching and counts are independently checked. The fields \(t_L,t^c\) are in the left-handed basis; \(t^c\) is an antitop field, so the top particle's two chiralities occupy different sectors. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#lemma-4a-and-theorem-44-the-two-e8-gradings).
+
 1. the 10 = (Q, u^c, e^c) and the 5 = (D, H_u) lie in g_{1,1}, the C_3 sector;
 2. (d^c, L) and N lie in g_{1,1+2t}, and (D^c, H_d) and nu^c lie in g_{1,1-2t}: one pair in the C_6 sector and the other in the gravity sector, according to the sign t; the two choices differ by the Weyl reflection of SU(2)_I;
 3. the antiparticles lie in the conjugate pieces g_{2,-b}.

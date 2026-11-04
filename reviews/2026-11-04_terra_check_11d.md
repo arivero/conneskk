@@ -535,6 +535,49 @@ colour action on \(F_1,F_2\). Other dimensions, non-equivariant
 identifications, nonlinear or brane constructions, and maps that do not
 preserve the colour action remain possible directions.
 
+## Lemma 4.A and Theorem 4.4: the two E8 gradings
+
+**Verdict: Correct with amendment.** The branching, grading relation and
+dimension counts are correct. The placement is in a left-handed Weyl
+basis: \(t^c\) is an antitop field, while the right-handed top is its
+conjugate. The physical identification of the named sectors remains
+additional input.
+
+Let \(9=(3,1)_{-2}\oplus(1,6)_1\). Direct exterior-power expansion gives
+\[
+ \Lambda^3 9=(1,1)_{-6}\oplus(\bar3,6)_{-3}
+ \oplus(3,15)_0\oplus(1,20)_3.
+\]
+The adjoint contains
+\((8,1)_0\oplus(1,35)_0\oplus(1,1)_0
+\oplus(3,\bar6)_{-3}\oplus(\bar3,6)_3\), and
+\(\Lambda^6 9\) is the conjugate of \(\Lambda^3 9\). The family
+centre gives grade \(a=1\) on \(3\), \(a=2\) on \(\bar3\), and
+\(a=0\) on singlets. Comparing the three columns yields
+\(b=a+q/3=a+2T_3\pmod3\), including the singlet terms of charges
+\(\pm6\). The grade-zero dimensions are \(8+78\), and the grade-one
+pieces form \(3\otimes27\), in agreement with the stated
+\(SU(6)\times SU(2)\subset E_6\) branching.
+
+Under \(SU(5)\), \(15=10+5\) has \(T_3=0\).
+In the quoted \(E_6\) charge normalization,
+\(T_3=(\psi+\chi)/8\) gives \(+1/2\) on
+\(\bar5_{16},N\) and \(-1/2\) on
+\(\bar5_{10},\nu^c\); reversing the \(SU(2)_I\) Cartan exchanges the
+two signs. With \(t=+1/2\), the left-handed \(16\) has grades
+\(10_{b=1}\oplus\bar5_{b=2}\oplus1_{b=0}\). Adding its conjugate
+gives \(15,15,2\) states per family in grades \(1,2,0\), hence
+\(45+45+6\). With \(t=-1/2\) the corresponding counts are
+\(11,11,10\), hence \(33+33+30\).
+
+Both \(t_L\in Q\) and \(t^c\in u^c\) lie in \(b=1\), but \(t^c\)
+is the left-handed conjugate of \(t_R\). The right-handed top state
+lies in \(b=2\), and the antitop likewise has chiral components in both
+sectors. Consequently the phrase “every top state of a particle” in
+the original statement needs the left-handed-basis qualification. The
+labels \(C_3,C_6\) express this algebraic grading; a physical
+M2/M5 identification requires the corresponding field construction.
+
 ## Proposition 4.6: the graded E8 exchange
 
 **Verdict: Correct with amendment.** The dimension obstruction, the
