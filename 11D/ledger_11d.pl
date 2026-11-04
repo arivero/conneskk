@@ -46,6 +46,7 @@ source(a11_localized, 'reviews/2026-11-03_astra_audit_d11.md', '4-a-localized-fa
 depends(a11_localized, l09_lightpair).
 attempted_by(a11_localized, astra6).
 checked_by(a11_localized, claude, python("11D/checks_11d.py section H: secular roots by bisection, the audit table and the identity")).
+checked_by(a11_localized, terra_6_1, by_hand).
 
 %% ---------------------------------------------------------------- 02: Witten spaces as the hypercharge quotient
 claim(d11_quotient, theorem, conditional, "Theorem 2.1 (referee amendments)", "Y_{3,2} = (S^9 cap mu_Y^{-1}(0))/U(1)_Y is the circle bundle of O(3,2) over CP^2 x CP^1, with trivial-canonical cone and effective group (U(3) x U(2))/U(1)_Y. Its identification with M^{111} is conditional on the recalled fibration; the Sasaki-Einstein metric requires rescaling the natural quotient metric.").

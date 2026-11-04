@@ -52,6 +52,38 @@ that single scalar fibre. The phrase “on the circle ... fibre
 \(\mathbb C^2\)” in the original check would double the count if read
 as an extra circle fibre.
 
+## Audit section 4 and file 01: localized joint family
+
+**Verdict: Correct with clarification.** The asymptotic light mass,
+gap, localization ratio and exact tail identity follow analytically
+from the interval equations. The localized length includes a
+logarithmic factor and differs from the pure-power length of the
+preceding boundary-angle family.
+
+Let \(c=\mu\ell\), \(s=\kappa\ell\), and \(s=c\tanh s\). As
+\(c\to\infty\), the positive solution has \(s/c\to1\), and
+\(0<c-s= c(1-\tanh s)\leq2ce^{-2s}\to0\). Therefore
+\[
+ m=\mu\operatorname{sech}s
+   \sim2\mu e^{-c}.
+\]
+With \(\mu=\mu_*\varepsilon^\alpha\) and
+\(c=(1-\alpha)\log(1/\varepsilon)+c_0\), this gives
+\(m\sim2\mu_*e^{-c_0}\varepsilon\) and
+\(\ell=c/(\mu_*\varepsilon^\alpha)\). The localization width
+is \(1/\kappa\), so its ratio to \(\ell\) is \(1/s\sim1/c\).
+
+The first oscillatory root satisfies
+\(\pi<k_1\ell<3\pi/2\), whence the gap above the light pair is
+\[
+ \Delta=\mu\sqrt{1+(k_1\ell/c)^2}\sim\mu
+       =\mu_*\varepsilon^\alpha.
+\]
+Finally, \(\mu=\kappa\coth s\) and \(m=\kappa/\sinh s\)
+give \(m/(\mu+\kappa)=e^{-s}\) and
+\(m^2=(\mu-\kappa)(\mu+\kappa)\), proving both displayed tail
+identities. The numerical table in file 01 was not recomputed.
+
 ## Proposition 1.4: the one-loop endpoint and small-angle coefficient
 
 **Verdict: Correct** under the hypotheses of Theorem 24.9, including
