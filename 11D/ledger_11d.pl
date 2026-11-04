@@ -314,13 +314,13 @@ attempted_by(d11_dilaton_spectral, claude).
 checked_by(d11_dilaton_spectral, claude, by_hand).
 checked_by(d11_dilaton_spectral, terra_6_1, by_hand).
 
-claim(d11_diquark_strings, proposition, proved, "Proposition 9.2", "The colour-antitriplet diquark counts of lemma 21 (-2/3: 6, +1/3: 6, +4/3: 3) are the strings between the fifteen-brane stack and its image on an O8^- plane; an O8^+ plane gives (3, 6, 1); a single brane has no string to its own image on O8^-, proved from representation theory and the recalled orientifold projections.").
+claim(d11_diquark_strings, proposition, conditional, "Proposition 9.2 (referee amendments)", "The antitriplet counts are (6, 6, 3) in the antisymmetric block and (3, 6, 1) in the symmetric block; the single-line antisymmetric component vanishes. The orientifold projections and physical string identification are conditional.").
 source(d11_diquark_strings, '11D/09_dilaton_spectral_and_so32.md', '3-proposition-92-diquarks-as-strings-between-the-stack-and-its-image').
 depends(d11_diquark_strings, l21_so30).
 depends(d11_diquark_strings, d11_wilson_top).
 attempted_by(d11_diquark_strings, claude).
 checked_by(d11_diquark_strings, claude, by_hand).
-referee_pending(d11_diquark_strings).
+checked_by(d11_diquark_strings, terra_6_1, by_hand).
 
 claim(d11_orientifold_scalars, conjecture, conjectural, "Reading of section 3 (proposal)", "The seesaw sign of Proposition 8.1 and the scalar counts of Proposition 9.2 select the same orientifold type, O8^-.").
 source(d11_orientifold_scalars, '11D/09_dilaton_spectral_and_so32.md', '3-proposition-92-diquarks-as-strings-between-the-stack-and-its-image').

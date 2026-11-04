@@ -1184,6 +1184,52 @@ The Polchinski-Witten source could not be accessed directly; the
 slope, coordinate and \(e^\phi\)-to-\(z\) conventions remain
 conditional on the recalled rule.
 
+## Proposition 9.2: diquark representations and string channels
+
+**Verdict: Correct with amendments, conditional on the recalled
+orientifold projections.** The plethysm and charge counts are
+correct. The momentum shifts concern the specified gauge-field
+channels, and the absence of \(\Lambda^2\) of a line excludes a
+particular Chan-Paton component, rather than every possible open-string
+state.
+
+For \(V=\mathbb C^5\otimes\mathbb C^3\), the symmetric and alternating
+projectors on the two tensor factors give
+\[
+ \begin{aligned}
+ \Lambda^2V&=(S^2\mathbb C^5\otimes\bar3)
+              \oplus(\Lambda^2\mathbb C^5\otimes6),\\
+ S^2V&=(S^2\mathbb C^5\otimes6)
+              \oplus(\Lambda^2\mathbb C^5\otimes\bar3).
+ \end{aligned}
+\]
+Their dimensions are \(45+60=105\) and \(90+30=120\).
+Splitting the flavour space into two charge-\(2/3\) and three
+charge-\(-1/3\) directions gives antitriplet counts
+\((6,6,3)\) in \(S^2\mathbb C^5\) and \((3,6,1)\) in
+\(\Lambda^2\mathbb C^5\), ordered by charges
+\((-2/3,1/3,4/3)\). The full adjoints have dimensions
+\(2(105)+225=435\) and \(2(120)+225=465\).
+
+For the assumed Wilson-line action, the antisymmetric or symmetric
+block has weights \(a_i+a_j\); the mixed block has weights
+\(a_i-a_j\). Hence their field-theory Kaluza-Klein momenta have the
+displayed shifts. This calculation does not give the complete
+open-string spectrum, which also includes oscillator states and their
+orientifold projections. The \(i=j\) sum-weight component is absent
+in \(\Lambda^2\) and present in \(S^2\); neutral diagonal modes
+remain. The literal claim that a single brane has no string to its
+image needs this sector restriction. Absence of the same-line
+component also does not exclude strings between the top brane and
+other branes.
+
+Moving all stack branes by the same angle makes the mixed-block
+differences vanish; different individual positions can give nonzero
+differences. Identifying the resulting Chan-Paton modes with the
+proposed composites is an additional physical construction. The
+O8-minus/O8-plus projection and global tadpole conditions were not
+independently verified from the unavailable primary sources.
+
 ## Proposition 6.1: the SO(32) Wilson-line spectrum
 
 **Verdict: Correct with amendments.** The charged momentum progressions

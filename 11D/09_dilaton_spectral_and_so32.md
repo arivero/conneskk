@@ -28,6 +28,8 @@ That paper uses the adjoint of SO(32) to classify the scalars of a supersymmetri
 
 ## 3. Proposition 9.2 (diquarks as strings between the stack and its image)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The representation and charge counts are independently checked, conditional on the recalled projections. The shifts describe the specified gauge-field channels; \(\Lambda^2\) of a line excludes that component, not all open-string states or strings to other branes. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-92-diquark-representations-and-string-channels).
+
 **Setting.** V = C^5 ⊗ C^3, five light flavours in three colours, with Q = 2/3 on u, c and Q = −1/3 on d, s, b; the 30 of lemma 21 is V ⊕ Vbar. Fifteen D8-branes on an O8 plane carry the Chan-Paton space 30 (branes and images), with group SO(30) on an O8^- and USp(30) on an O8^+, and U(15) when the stack is moved off the plane (recalled).
 
 **Statement.**
