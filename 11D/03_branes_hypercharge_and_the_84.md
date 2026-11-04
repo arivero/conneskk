@@ -1,6 +1,6 @@
 # Hypercharge from the three-form, matter from branes, and the two families of 84
 
-Part of the 11D line of research ([README](README.md)). Propositions 3.2 and 3.5 and Corollary 3.9 are proved here, and Proposition 3.8 is a negative result in a stated scope, pending an independent check; the numbered proposals are conjectures to test. Attempted by Claude (Anthropic), 3 Nov 2026. Checks: [checks_11d.py](checks_11d.py), sections B, E and G, Python with exact fractions. Referee pending.
+Part of the 11D line of research ([README](README.md)). Propositions 3.2 and 3.5 and Corollary 3.9 are proved here, and Proposition 3.8 is a negative result in a stated scope, refereed by GPT-6.1 Terra and checked a second time by Claude Sonnet 5.5; the numbered proposals are conjectures to test. Attempted by Claude (Anthropic), 3 Nov 2026. Checks: [checks_11d.py](checks_11d.py), sections B, E and G, Python with exact fractions. Referee pending.
 
 **Referee note (GPT-6.1 Terra, 4 Nov 2026).** Proposition 3.8 and Corollary 3.9 have been independently checked by hand in their stated scopes; the tensor-mode argument needs the displayed colour action to preserve the background. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-38-and-corollary-39-colour-and-the-three-form).
 
@@ -22,7 +22,7 @@ In AdS4 x M^{111} the massless vectors are those of the isometries, SU(3) x SU(2
 
 thirteen vectors, the Standard Model group and one R-symmetry. With massless W and Z this is the eleven-dimensional vacuum of the v -> 0 limit; the identification is consistent with three facts already established:
 
-1. Kaluza-Klein modes have Y = 0, as they must by Proposition 2.4, which leaves them only PSU(3) x SO(3) representations.
+1. Tensor Kaluza-Klein modes on an invariant background have Y = 0, as they must by Proposition 2.4, which leaves them only PSU(3) x SO(3) representations; spinors are open.
 2. The states with Y != 0 are non-perturbative: M5-branes wrapped on five-cycles and M2-branes wrapped on the two-cycle.
 3. The M5 baryons of Fabbri et al. are det U on one five-cycle and det V on the other, with baryonic charges 2N and -3N and representations Sym^N(3bar) and Sym^N(2). For N = 1 they are U in (3bar, 1)_{1/3} and V in (1, 2)_{-1/2}: d^c and L, the 5-bar.
 
@@ -102,7 +102,7 @@ In AdS4, M2-branes on the two-cycle and M5-branes on five-cycles are electric an
 
 ### Corollary 3.9 (the coloured states of the 84 are not Kaluza-Klein modes of C_3 on Y_{3,2})
 
-Under the quotient realization, every Kaluza-Klein mode of C_3 (or of the metric) on Y_{3,2} carries a representation of PSU(3) x SO(3) (Proposition 2.4), so none is a colour triplet. The 60 coloured states of the first family, and the 72 of the second, are therefore not modes of C_3 on Y_{3,2}. Together with Proposition 3.8 this closes the two direct routes, the little group and the Kaluza-Klein tower, for a colour-equivariant identification, in their stated scopes. The route left open is the brane one: wrapped M5 and M2 states, which carry triality through their hypercharge class (Proposition 2.4 (a)).
+Under the quotient realization, on a background invariant under the displayed action, every tensor Kaluza-Klein mode of C_3 (or of the metric) on Y_{3,2} carries a representation of PSU(3) x SO(3) (Proposition 2.4), so none is a colour triplet; spinor modes are open. The 60 coloured states of the first family, and the 72 of the second, are therefore not modes of C_3 on Y_{3,2}. Together with Proposition 3.8 this excludes, in their stated scopes, the two direct routes, the little group and the tensor Kaluza-Klein tower, for a colour-equivariant identification. The route left open is the brane one: wrapped M5 and M2 states, which carry triality through their hypercharge class (Proposition 2.4 (a)).
 
 ## Summary of the direction
 

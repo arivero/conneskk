@@ -1,6 +1,6 @@
 # The two families of 84 and the M2 and M5 sides
 
-Part of the 11D line of research ([README](README.md), [PLAN](PLAN.md)). Attempted by Claude (Anthropic), 4 Nov 2026. Propositions 4.1 to 4.3 and Theorem 4.4 and Propositions 4.5, 4.6 are proved here by hand (branching rules and counting); the negative results 4.3 and 4.6 await an independent check; readings are labelled as proposals. Referee pending.
+Part of the 11D line of research ([README](README.md), [PLAN](PLAN.md)). Attempted by Claude (Anthropic), 4 Nov 2026. Propositions 4.1 to 4.3 and Theorem 4.4 and Propositions 4.5, 4.6 are proved here by hand (branching rules and counting); the negative results 4.3 and 4.6 were refereed by GPT-6.1 Terra and checked a second time by Claude Sonnet 5.5, with the amendments below; readings are labelled as proposals.
 
 **Referee note (GPT-6.1 Terra, 4 Nov 2026).** Proposition 4.1 and the colour obstructions in Propositions 4.2(a) and 4.3 are independently checked. The tensor-factor conclusion of 4.2(b) needs a factor-preserving map, and the "exactly" clause in 4.3 also needs nonzero triplets: the trivial nine-dimensional representation gives 84 singlets. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#propositions-42-and-43-complex-colour-representations); the other checked results are noted below.
 
@@ -25,17 +25,17 @@ where 4 counts chirality and particle/antiparticle. The two families overlap in 
 
 ## 2. Colour obstructions
 
-**Proposition 4.2.** (a) As representations of colour SU(3), F1 = 10 (3 + 3bar) + 24 (1) and F2 = 12 (3 + 3bar) + 12 (1); they are not isomorphic. Hence no unitary of H_F commuting with colour maps F1 onto F2, and no automorphism of the finite spectral triple of the Standard Model does. (b) Any bijection of the top block onto the neutrino block that is linear in each index exchanges the colour index of the top (r, g, b) with the generation index of the neutrinos (e, mu, tau).
+**Proposition 4.2.** (a) As representations of colour SU(3), F1 = 10 (3 + 3bar) + 24 (1) and F2 = 12 (3 + 3bar) + 12 (1); they are not isomorphic. Hence no unitary of H_F commuting with colour maps F1 onto F2, and no automorphism of the finite spectral triple of the Standard Model does. (b) Any tensor-factor-preserving bijection of the top block onto the neutrino block that is linear in each index exchanges the colour index of the top (r, g, b) with the generation index of the neutrinos (e, mu, tau).
 
 **Proof.** (a) Counting: F1 has the five quarks other than the top (5 x 2 triplet pairs, counting chirality) and 24 leptonic states; F2 has the six quarks and 12 charged-lepton states. Colour acts through A_F. (b) The top block is C^3_colour ⊗ e_3 ⊗ C^4 (third generation, 4 for chirality and conjugation) and the neutrino block is e_lepton ⊗ C^3_generation ⊗ C^4 in the Pati-Salam form C^4_colour ⊗ C^3_generation of the up-type sector; a map of the first onto the second that respects the tensor factors sends C^3_colour to C^3_generation. ∎
 
-So the exchange cannot be a symmetry of any structure in which colour acts and generations do not; it needs a structure in which colour and generation can be exchanged.
+So an exchange needs a structure in which colour and generation can be exchanged; a structure in which colour acts and generations do not admits none.
 
-**Proposition 4.3 (complex case of Proposition 3.8).** For every homomorphism SU(3) -> SU(9), the colour content of Λ^3 C^9 is not that of F1 or F2. Λ^3 C^9 contains only 1, 3 and 3bar exactly when C^9 = 3 + 6 (1) or its conjugate, and then Λ^3 C^9 = 15 (3) + 6 (3bar) + 21 (1).
+**Proposition 4.3 (complex case of Proposition 3.8).** For every homomorphism SU(3) -> SU(9), the colour content of Λ^3 C^9 is not that of F1 or F2. Λ^3 C^9 contains only 1, 3 and 3bar exactly when C^9 is 9 (1), 3 + 6 (1) or 3bar + 6 (1); for 3 + 6 (1), Λ^3 C^9 = 15 (3) + 6 (3bar) + 21 (1), and for 9 (1) it is 84 (1).
 
 **Proof.** C^9 is a sum of irreducibles of dimensions 1, 3, 6, 8 with total 9. With a sextet: 6 + 3 (1) has the 6 in Λ^1(6) ⊗ Λ^2(3 (1)); 6 + 3 has Λ^3(6) = 10 + 10bar. With an octet: 8 + 1 has Λ^3(8) = 1 + 8 + 10 + 10bar + 27. With two triplets T, T' (each 3 or 3bar) and three singlets: Λ^1(T) ⊗ Λ^1(T') ⊗ Λ^1(1) contains T ⊗ T', which is 6 + 3bar, 6bar + 3 or 8 + 1. With three triplets: T ⊗ T' ⊗ T'' contains a 10, a 10bar, a 15 or a 15bar. With nine singlets there is no triplet. With one triplet and six singlets, Λ^3(3 + 6 (1)) = Λ^3(3) + 6 Λ^2(3) + 15 (3) + 20 (1) = 15 (3) + 6 (3bar) + 21 (1). Neither family has unequal numbers of 3 and 3bar. ∎
 
-Together with Proposition 3.8 (real nine-dimensional representations) this closes the colour-equivariant route through Λ^3 of a linear nine-dimensional space, in that scope. The positive construction below places the two blocks instead of identifying the two families.
+Together with Proposition 3.8 (real nine-dimensional representations) this excludes, in that scope, the colour-equivariant route through Λ^3 of a linear nine-dimensional space. The positive construction below places the two blocks instead of identifying the two families.
 
 ## 3. Two commuting gradings of E8
 
@@ -71,7 +71,7 @@ Let SU(5) ⊂ SU(6) ⊂ E6 be the Georgi-Glashow group, with 15 = 10 + 5 and 6ba
 2. (d^c, L) and N lie in g_{1,1+2t}, and (D^c, H_d) and nu^c lie in g_{1,1-2t}: one pair in the C_6 sector and the other in the gravity sector, according to the sign t; the two choices differ by the Weyl reflection of SU(2)_I;
 3. the antiparticles lie in the conjugate pieces g_{2,-b}.
 
-So every top state of a particle (t_L in Q, t^c in u^c), and the up-type Higgs, lie in the C_3 sector, and the anti-top in the C_6 sector. The particle neutrinos lie outside the C_3 sector, nu_L and nu^c in different sectors (C_6 and gravity). With three families and antiparticles, the 96 states of H_F split as 45 (C_3) + 45 (C_6) + 6 (gravity: nu^c and its conjugate) for t = +1/2, and 33 + 33 + 30 for t = -1/2.
+So every top state of a particle (t_L in Q, t^c in u^c), and the up-type Higgs, lie in the C_3 sector, and the anti-top in the C_6 sector. The left-handed particle fields of the neutrinos (a = 1) lie outside the C_3 sector, nu_L and nu^c in different sectors (C_6 and gravity); their conjugates do not, since conj(nu_L) lies in C_3 for t = +1/2. With conjugates, the top block has (C_3, C_6, gravity) = (6, 6, 0) and the neutrino block (3, 3, 6), for both signs of t; a conjugation-closed block always has equal C_3 and C_6 counts. With three families and antiparticles, the 96 states of H_F split as 45 (C_3) + 45 (C_6) + 6 (gravity: nu^c and its conjugate) for t = +1/2, and 33 + 33 + 30 for t = -1/2.
 
 **Proof.** b ≡ a + 2 T_3, with T_3 = 0 on the 10 and the 5, and T_3 = ±t on the doublet members; for antiparticles a = 2 and T_3 changes sign. The counts follow per family: for t = +1/2, C_3 holds the 10 and the 5 of antiparticles (15), C_6 their conjugates, gravity nu^c and its conjugate; for t = -1/2, C_3 holds the 10 and the conjugate of nu^c (11), C_6 their conjugates, gravity the 5bar and the 5 (10). ∎
 
@@ -91,7 +91,7 @@ The family grading alone allows only epsilon_{ijk} in exact family SU(3); in com
 
 **Reading (proposal).** The up-type Yukawa couplings are the only Standard Model Yukawa couplings inside one sector, and that sector's bracket is the C_3 ∧ C_3 -> C_6 term, metric-independent; the other couplings use one field of each sector, including the gravity sector. The top, the only fermion with a Yukawa coupling of order one and the one singled out by the spectral action in lemma 21, takes its mass from the C_3 bracket.
 
-## 6. In this realization the M2/M5 exchange is the real structure J
+## 6. The Chevalley involution and the real structure J
 
 **Proposition 4.6.**
 
@@ -102,17 +102,19 @@ The family grading alone allows only epsilon_{ijk} in exact family SU(3); in com
 
 **Proof.** (1) Dimensions. (2) -1 acts on a Cartan subalgebra by -1, so it inverts every element of the maximal torus containing s_f and s_M, and maps the joint eigenspace for (omega^a, omega^b) to that for (omega^{-a}, omega^{-b}); it maps the root system A_8 of SU(9) to itself. (3) Immediate. (4) The reflection inverts T_3 and commutes with SU(3) × SU(6). ∎
 
-**Negative result (scope: e8 with these two gradings, automorphisms preserving the pair up to inversion).** The M2/M5 exchange does not exchange the top with the neutrinos; it exchanges each block with its conjugate. The exchange of lemma 21 must therefore come from an automorphism that does not preserve the family grading. The colour-family exchanges inside E8 ⊃ SU(3)^4, where the four SU(3) factors are permuted by the normalizer, are the remaining candidates (PLAN, step 4). What the gradings do give is a placement: the top on the M2 side, the neutrinos on the M5 and gravity sides.
+**Negative result (scope: e8 with these two gradings, automorphisms preserving the pair up to inversion).** The Chevalley involution, read as the M2/M5 exchange (a proposal), maps each block to its conjugate and leaves the top and neutrino blocks in place. An exchange as in lemma 21 must therefore come from an automorphism that neither preserves nor inverts the family grading; for aligned families, Proposition 5.1 also excludes every element of W(E8) mapping F1 onto F2. The colour-family exchanges inside E8 ⊃ SU(3)^4, where the four SU(3) factors are permuted by the normalizer, are the remaining candidates (PLAN, step 4). What the gradings do give is a placement of the left-handed fields (a = 1): the top on the M2 side, the neutrinos on the M5 and gravity sides; with conjugates the counts are those after Theorem 4.4.
 
 ## 7. Agreement with files 02 and 03, and the finite geometry
 
 - **nu^c as the gravitational state.** nu^c is the only Standard Model state with Y = 0, so on the Witten space it is the only one that can be a Kaluza-Klein mode (Proposition 2.4 with Proposal 3.1), while every hypercharged state is a brane state. In e8 with t = +1/2 it is the only Standard Model state in the gravity sector, and every hypercharged state lies in the C_3 or C_6 sector. The two placements agree for t = +1/2; for t = -1/2 the gravity sector holds (d^c, L) instead. We take the agreement as selecting t = +1/2 (proposal).
 - **The finite geometry.** On H_F, the family grading is the chirality, the Chevalley involution is J, and the Yukawa blocks of D_F are brackets with the Higgs: the top block maps the C_3 sector to the C_6 sector, the Majorana block acts inside the gravity sector (nu^c with nu^c, t = +1/2). A finite triple built on the graded e8, with D_F = ad(Higgs), is the construction to attempt next (PLAN, step 5).
-- **The two families.** F1 removes a block of the C_3 sector (with its conjugate in C_6): the states joined by the cubic C_3 coupling. F2 removes the block that meets the gravity sector. In this sense the top belongs to the M2 side and the neutrinos to the M5 and gravity sides, which is the correspondence lemma 21 asked for, at the level of the removed blocks. The two families of 84 are not themselves the 84 of C_3 and the 84 of C_6 (Propositions 3.8, 4.3, 4.6).
+- **The two families.** F1 removes a block of the C_3 sector (with its conjugate in C_6): the states joined by the cubic C_3 coupling. F2 removes the block that meets the gravity sector. In this sense, for the left-handed fields, the top belongs to the M2 side and the neutrinos to the M5 and gravity sides, which is the correspondence lemma 21 asked for, at the level of the removed blocks; with conjugates the blocks have counts (6, 6, 0) and (3, 3, 6). The two families of 84 are not themselves the 84 of C_3 and the 84 of C_6 (Propositions 3.8, 4.3, 4.6).
 
 ## 8. Remark: a discrete symmetry from the M-grading
 
 For t = +1/2, s_M acts on the 27 by omega^b: omega on the 10 and on the 5 (H_u, D), omega^2 on (d^c, L) and N, and 1 on (D^c, H_d) and nu^c. It allows Q u^c H_u, Q d^c H_d, L e^c H_d, L nu^c H_u, N H_u H_d, the Majorana mass of nu^c and the Weinberg operator L L H_u H_u, and forbids the mu term H_u H_d, the dimension-five operators Q Q Q L and u^c u^c d^c e^c, and the trilinear couplings L L e^c, L Q d^c, u^c d^c d^c; the bilinear L H_u is allowed. This is the pattern of E6-inspired models in which the singlet N supplies the mu term. It is a symmetry of the low-energy theory only if the breaking of E6 commutes with s_M; for t = -1/2 the charges change. Stated as a remark, not used above.
+
+*Scope of the remark (second check, 4 Nov 2026).* The selection rule is that of the single element s_M, and it is a symmetry only if the breaking of E6 commutes with s_M. The family grading would forbid (nu^c)^2, L L H_u H_u and L H_u, which s_M allows, since their family grades are 2, 1 and 2.
 
 ## 9. What remains open
 

@@ -109,6 +109,7 @@ source(d11_fock, '11D/03_branes_hypercharge_and_the_84.md', 'proposition-32-one-
 attempted_by(d11_fock, claude).
 checked_by(d11_fock, claude, python("11D/checks_11d.py section B")).
 checked_by(d11_fock, terra_6_1, by_hand).
+checked_by(d11_fock, sonnet_5_5, by_hand).
 prior_work(d11_fock, known, "The 16 of SO(10) as the odd forms on C^5 (standard).").
 
 claim(d11_fock_branes, conjecture, conjectural, "Conjecture 3.3", "At N = 1 one generation and its conjugate are the exterior algebra of five fermionic zero modes of fivebranes wrapped on the baryonic cycles, with hypercharge the homology class and X the number of fivebranes.").
@@ -122,11 +123,12 @@ source(d11_higgs_m2, '11D/03_branes_hypercharge_and_the_84.md', 'proposal-34-the
 depends(d11_higgs_m2, d11_betti_y).
 attempted_by(d11_higgs_m2, claude).
 
-claim(d11_ads5, proposition, proved, "Proposition 3.5", "AdS5 x CP^2 x S^2 with G_4 = f_1 vol(CP^2) + f_2 J ^ vol(S^2) solves eleven-dimensional supergravity with R_AdS = -(f_1^2 + 2 f_2^2)/6, R_CP2 = f_1^2/3 + f_2^2/6, R_S2 = 2 f_2^2/3 - f_1^2/6; round factors iff abs(f_1) < 2 abs(f_2). Supersymmetry and stability not checked.").
+claim(d11_ads5, proposition, proved, "Proposition 3.5", "AdS5 x CP^2 x S^2 with G_4 = f_1 vol(CP^2) + f_2 J ^ vol(S^2) solves eleven-dimensional supergravity with R_AdS = -(f_1^2 + 2 f_2^2)/6, R_CP2 = f_1^2/3 + f_2^2/6, R_S2 = 2 f_2^2/3 - f_1^2/6; round factors iff abs(f_1) < 2 abs(f_2). Supersymmetry, stability and flux quantization not checked.").
 source(d11_ads5, '11D/03_branes_hypercharge_and_the_84.md', 'proposition-35-a-magnetic-completion-ads5-x-cp2-x-s2').
 attempted_by(d11_ads5, claude).
 checked_by(d11_ads5, claude, python("11D/checks_11d.py section G: all frame components of the flux bilinear")).
 checked_by(d11_ads5, terra_6_1, by_hand).
+checked_by(d11_ads5, sonnet_5_5, by_hand).
 
 claim(d11_two_completions, conjecture, conjectural, "Proposals 3.6, 3.7", "CP^2 x S^2 has an electric completion AdS4 x Y_{3,2} and a magnetic completion AdS5 x CP^2 x S^2, both 4 + 1 + 6 with the 1 as fibre or as AdS5 radius; the M2/M5 exchange acts on hypercharge as electric-magnetic duality and does not permute the 96 states.").
 source(d11_two_completions, '11D/03_branes_hypercharge_and_the_84.md', 'proposal-36-two-completions-of-one-base').
@@ -140,14 +142,16 @@ depends(d11_colour84, l21_counts).
 attempted_by(d11_colour84, claude).
 checked_by(d11_colour84, claude, python("11D/checks_11d.py section E: weights of Lambda^3")).
 checked_by(d11_colour84, terra_6_1, by_hand).
+checked_by(d11_colour84, sonnet_5_5, by_hand).
 
-claim(d11_kk_triality, corollary, proved, "Corollary 3.9", "Under the quotient realization no Kaluza-Klein mode of C_3 or of the metric on Y_{3,2} is a colour triplet, so the coloured states of either family of 84 are not modes of C_3 on Y_{3,2}.").
+claim(d11_kk_triality, corollary, proved, "Corollary 3.9", "Under the quotient realization, on a background invariant under the displayed action, no tensor Kaluza-Klein mode of C_3 or of the metric on Y_{3,2} is a colour triplet (spinors open), so the coloured states of either family of 84 are not modes of C_3 on Y_{3,2}.").
 source(d11_kk_triality, '11D/03_branes_hypercharge_and_the_84.md', 'corollary-39-the-coloured-states-of-the-84-are-not-kaluza-klein-modes-of-c_3-on-y_32').
 depends(d11_kk_triality, d11_z6).
 depends(d11_kk_triality, d11_colour84).
 attempted_by(d11_kk_triality, claude).
 checked_by(d11_kk_triality, claude, by_hand).
 checked_by(d11_kk_triality, terra_6_1, by_hand).
+checked_by(d11_kk_triality, sonnet_5_5, by_hand).
 
 %% ---------------------------------------------------------------- 04: the two families and the M2/M5 sides in E8
 claim(d11_blocks, proposition, proved, "Proposition 4.1", "Among blocks of 12 states made of whole Dirac species, exactly one up-type quark or the three neutrinos together keep both spectral-action values of lemma 21 (cos^2 theta_NC = 5/8 and kappa_em/kappa_s = 8/3) on removal.").
@@ -156,19 +160,22 @@ depends(d11_blocks, l21_removal).
 attempted_by(d11_blocks, claude).
 checked_by(d11_blocks, claude, by_hand).
 checked_by(d11_blocks, terra_6_1, by_hand).
+checked_by(d11_blocks, sonnet_5_5, by_hand).
 
-claim(d11_colour_families, no_go, proved, "Propositions 4.2(a), 4.3 (independently checked with amendments)", "The colour contents of F1 and F2 differ, so no colour-commuting unitary exchanges them; for every SU(3) -> SU(9), Lambda^3 C^9 is neither family. With nonzero triplets and no other nontrivial irreducibles, C^9 is 3 + 6 (1) or its conjugate, giving 15 (3) + 6 (3bar) + 21 (1), or its conjugate.").
+claim(d11_colour_families, no_go, proved, "Propositions 4.2(a), 4.3 (independently checked with amendments)", "The colour contents of F1 and F2 differ, so no colour-commuting unitary exchanges them; for every SU(3) -> SU(9), Lambda^3 C^9 is neither family. Lambda^3 C^9 contains only 1, 3 and 3bar exactly when C^9 is 9 (1), 3 + 6 (1) or 3bar + 6 (1); the last two give 15 (3) + 6 (3bar) + 21 (1) or its conjugate.").
 source(d11_colour_families, '11D/04_two_families_m2_m5.md', '2-colour-obstructions').
 depends(d11_colour_families, d11_colour84).
 attempted_by(d11_colour_families, claude).
 checked_by(d11_colour_families, claude, by_hand).
 checked_by(d11_colour_families, terra_6_1, by_hand).
+checked_by(d11_colour_families, sonnet_5_5, by_hand).
 
 claim(d11_e8_grading, theorem, proved, "Lemma 4.A, Theorem 4.4 (referee amendment)", "The two commuting order-3 gradings of e8 place the left-handed 10 and H_u in grade b=1 and (d^c, L) and nu^c in the b=2 and b=0 sectors according to a sign t. The top and antitop each have chiral components in both b=1 and b=2.").
 source(d11_e8_grading, '11D/04_two_families_m2_m5.md', '4-placement-of-the-generation').
 attempted_by(d11_e8_grading, claude).
 checked_by(d11_e8_grading, claude, by_hand).
 checked_by(d11_e8_grading, terra_6_1, by_hand).
+checked_by(d11_e8_grading, sonnet_5_5, by_hand).
 
 claim(d11_yukawa_brackets, proposition, conditional, "Proposition 4.5 (referee amendment)", "If the stated gradings are symmetries, the up-type Yukawa grades lie inside the C_3 sector and the other Yukawa triples use one field in each sector. The physical top mass requires further family or compactification data; in the exact SU(3) family triplet the one-Higgs family tensor is antisymmetric.").
 source(d11_yukawa_brackets, '11D/04_two_families_m2_m5.md', '5-yukawa-couplings-as-brackets').
@@ -176,6 +183,7 @@ depends(d11_yukawa_brackets, d11_e8_grading).
 attempted_by(d11_yukawa_brackets, claude).
 checked_by(d11_yukawa_brackets, claude, by_hand).
 checked_by(d11_yukawa_brackets, terra_6_1, by_hand).
+checked_by(d11_yukawa_brackets, sonnet_5_5, by_hand).
 
 claim(d11_m2m5_is_j, no_go, proved, "Proposition 4.6 (independently checked with amendment)", "In the specified aligned three-family embedding, a complex e8 automorphism preserving or inverting the family grading cannot exchange the top and neutrino blocks. The complex-linear Chevalley involution preserves both families; an antiunitary J requires an additional conjugation, and its identification with physical M2/M5 duality is a proposal.").
 source(d11_m2m5_is_j, '11D/04_two_families_m2_m5.md', '6-in-this-realization-the-m2m5-exchange-is-the-real-structure-j').
@@ -183,6 +191,7 @@ depends(d11_m2m5_is_j, d11_e8_grading).
 attempted_by(d11_m2m5_is_j, claude).
 checked_by(d11_m2m5_is_j, claude, by_hand).
 checked_by(d11_m2m5_is_j, terra_6_1, by_hand).
+checked_by(d11_m2m5_is_j, sonnet_5_5, by_hand).
 
 claim(d11_nu_gravity, conjecture, conjectural, "Section 7 (proposal)", "The state nu^c is the gravitational state, which agrees with its placement in the gravity sector of e8 for t = +1/2 and selects that sign.").
 source(d11_nu_gravity, '11D/04_two_families_m2_m5.md', '7-agreement-with-files-02-and-03-and-the-finite-geometry').
@@ -191,12 +200,13 @@ depends(d11_nu_gravity, d11_z6).
 depends(d11_nu_gravity, d11_betti_y).
 attempted_by(d11_nu_gravity, claude).
 
-claim(d11_discrete_z3, claim, proved, "Remark, section 8", "For t = +1/2 the element s_M of the M-grading gives a discrete Z_3 symmetry that allows the Yukawa couplings, the Majorana mass and the Weinberg operator and forbids the mu term and the dimension-five proton-decay operators.").
+claim(d11_discrete_z3, claim, proved, "Remark, section 8", "For t = +1/2 the element s_M of the M-grading gives a discrete Z_3 symmetry that allows the Yukawa couplings, the Majorana mass and the Weinberg operator and forbids the mu term and the dimension-five proton-decay operators. A selection rule of the single element s_M, a symmetry only if the breaking of E6 commutes with it; the family grading would forbid (nu^c)^2, L L H_u H_u and L H_u.").
 source(d11_discrete_z3, '11D/04_two_families_m2_m5.md', '8-remark-a-discrete-symmetry-from-the-m-grading').
 depends(d11_discrete_z3, d11_e8_grading).
 attempted_by(d11_discrete_z3, claude).
 checked_by(d11_discrete_z3, claude, by_hand).
 checked_by(d11_discrete_z3, terra_6_1, by_hand).
+checked_by(d11_discrete_z3, sonnet_5_5, by_hand).
 
 %% ---------------------------------------------------------------- 05: the colour-family exchange
 claim(d11_no_isometry, no_go, proved, "Proposition 5.1 (independently checked)", "As configurations of E8 roots in the specified aligned three-family embedding, the two families of 84 have equal pair counts but are not isometric, so no element of W(E8) maps F1 onto F2 and no isometry of H_F maps the top block onto the neutrino block.").

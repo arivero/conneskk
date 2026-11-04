@@ -524,7 +524,7 @@ A synthesis with the status of each entry, drawing on lemmas 05 to 30 and on the
 - [3. Two commuting gradings of E8](11D/04_two_families_m2_m5.md#3-two-commuting-gradings-of-e8)
 - [4. Placement of the generation](11D/04_two_families_m2_m5.md#4-placement-of-the-generation)
 - [5. Yukawa couplings as brackets](11D/04_two_families_m2_m5.md#5-yukawa-couplings-as-brackets)
-- [6. In this realization the M2/M5 exchange is the real structure J](11D/04_two_families_m2_m5.md#6-in-this-realization-the-m2m5-exchange-is-the-real-structure-j)
+- [6. The Chevalley involution and the real structure J](11D/04_two_families_m2_m5.md#6-the-chevalley-involution-and-the-real-structure-j)
 - [7. Agreement with files 02 and 03, and the finite geometry](11D/04_two_families_m2_m5.md#7-agreement-with-files-02-and-03-and-the-finite-geometry)
 - [8. Remark: a discrete symmetry from the M-grading](11D/04_two_families_m2_m5.md#8-remark-a-discrete-symmetry-from-the-m-grading)
 - [9. What remains open](11D/04_two_families_m2_m5.md#9-what-remains-open)

@@ -39,3 +39,35 @@ Scripts (Python): s1_oneloop.py, s2_flux.py, s3_topology_spectra.py, s4_periodic
 ### Assessment
 
 Checked against the sources by Claude Opus 5.5. Correction 1: lemma 25, Proposition 25.1, is stated on the circle with periodic conditions, while Proposition 1.1 concerns the chiral interval, which is antiperiodic; applied in 11D/01 and in the dictionary note. Correction 2: G = theta^4 gives V = m^4, constant in l, so every l is stationary; applied, with the heading changed and the INDEX link updated. Correction 3: in the span of 6Y and 3(B - L), Q has charges (1, 1) and L has (-3, -3), so the chirality-free argument holds; added as a scope note. Corrections 4, 5, 7 (first part) and 8: applied. Correction 6: the tensor and function spans are now distinguished; the colour-convention point for Proposition 2.6 was already in the referee note of 11D/02. The Lipschitz point is in the referee note of 11D/01. The ledger records sonnet_5_5 as a second checker on the ten rows of files 01 and 02.
+
+## Batch 2: files 03 and 04
+
+### Report
+
+Second check of Terra sections on 11D files 03 and 04 (Claude Sonnet 5.5; Python 3 scripts). Ledger and README rows otherwise match Terra.
+
+A. Verdicts
+1. Prop 3.2: AGREE. Odd Lambda^k(5bar) = SM Weyl fields, even = conjugates, X = 3, -1, -5.
+2. Prop 4.1: AGREE. Lemma 21 sums rebuilt from SM charges; among 12-state whole-species blocks only u, c, t and the three neutrinos keep (5/8, 8/3).
+3. Prop 3.8, Cor 3.9: AGREE. All 17 nine-dimensional SU(3) representations decomposed; self-conjugate ones are 9(1), 3+3bar+3(1), 8+1; centre trivial on Y_{3,2}.
+4. Props 4.2, 4.3: AGREE with both amendments. None of the 17 Lambda^3 equals F1 or F2; only 9(1), 3+6(1), 3bar+6(1) give {1,3,3bar}; 4.2(b) needs a factor-preserving map.
+5. Lemma 4.A, Thm 4.4: PARTLY. Table, 45+45+6 and 33+33+30 reproduced from explicit E8 roots in two models; the chirality amendment covers only the top (B1).
+6. Prop 4.5: AGREE. At root level Q u^c H_u, Q d^c H_d, L e^c H_d, L nu^c H_u all carry family tensor eps_ijk; Y = eps.h has singular values (|h|, |h|, 0).
+7. Section 8: AGREE; 14 operator grades redone.
+8. Prop 4.6: AGREE. Dimension and Schur arguments sound; the blocks are congruent in R^8, so the grading carries the obstruction; the orbit of the top block under <W(A2 x E6), -1> (810 sets) misses the neutrino block.
+9. Prop 3.5: AGREE. Normalization R_MN = (1/12)(G_MPQR G_N^PQR - g_MN G^2/12) (action R - G^2/48, mostly plus), checked on AdS4 x S7 and AdS7 x S4; all components and |f1| < 2|f2| redone.
+
+B. Corrections, by severity
+1. 04 lines 74, 105, 111: the chirality amendment also applies to the neutrinos. For t = +1/2, nu_L is in C_6, nu^c and nu_R in gravity, conj(nu_L) in C_3. Complete blocks give (C_3, C_6, gravity) = (6,6,0) for the top, (3,3,6) for the neutrinos, both signs of t (conjugation-closed blocks always have equal C_3 and C_6 counts). Restrict "the top on the M2 side, the neutrinos on the M5 and gravity sides" and "The particle neutrinos lie outside the C_3 sector" to the a = 1 fields and add these counts.
+2. 04 line 34: the false "exactly" clause stays in Proposition 4.3; write "exactly when C^9 is 9(1), 3+6(1) or 3bar+6(1)". Ledger d11_colour_families and README row 4.2/4.3 ("With nonzero triplets and no other nontrivial irreducibles, C^9 is ...") apply the condition to C^9, which 3+3+3(1) satisfies; apply it to Lambda^3 C^9. Line 28: add "tensor-factor-preserving" to 4.2(b).
+3. 03 line 105, ledger d11_kk_triality, README row 3.8/3.9: add "tensor", "on a background invariant under the displayed action", "spinors open" (as 8b92f59 for d11_z6); likewise 03 line 25, 04 line 109.
+4. 04 line 105: "does not preserve the family grading" -> "neither preserves nor inverts it". The proved scope, phi(s_f) = s_f^{+-1}, contains every automorphism normalizing <s_f, s_M>. Add that Proposition 5.1 excludes any W(E8) element mapping F1 onto F2 for aligned families. STRATEGY.md T14 repeats the claim ("must come from a colour-family exchange").
+5. Stale: 03 and 04 line 3 ("Referee pending", "pending an independent check"); STRATEGY.md T14 ("referee pending", "(pending check)"); 11D/README.md lines 5, 92.
+6. Section 8 (ledger d11_discrete_z3, plus a note in 04): selection rule of the single element s_M, a symmetry only if the E6 breaking commutes with it; (nu^c)^2, LLH_uH_u and LH_u, allowed by s_M, are forbidden by the family Z_3 (a = 2, 1, 2).
+7. Wording: "closes" (03 line 105, 04 line 38) -> "excludes, in that scope"; two negation-first contrasts in 04 (lines 32, 105); 04 section 6 heading states a proposal as a result (fix INDEX.md line 527 with it); ledger d11_ads5: add flux quantization to "not checked".
+
+C. Scripts (Python): b2_ext5bar_blocks.py (A1, A2); b2_su3_cases.py (A3, A4, B2); b2_e8_gradings.py (A5, A7, B1, B6; 240 roots, grades from Bourbaki marks and from b = a + 2T_3); b2_yukawa_family.py (A6); b2_blocks_weyl.py and b2_z3_group.py (A8, B4); b2_ads5.py (A9). Recalled-fact labels are honest; no conflict with 11D/10 or 11D/11. After B2 and B4, recording sonnet_5_5 gives d11_colour84, d11_colour_families, d11_m2m5_is_j three identifiers.
+
+### Assessment
+
+Checked by Claude Opus 5.5. Correction 1: from Theorem 4.4 with b -> -b for conjugates, conj(nu_L) has b = -2 = 1 for t = +1/2, so it lies in C_3; the counts (6, 6, 0) and (3, 3, 6) follow per colour and per generation, for both signs of t. Correction 2: C^9 = 3 + 3 + 3 (1) has 3 x 3 = 6 + 3bar inside Lambda^2, so the condition belongs on Lambda^3 C^9; the trivial 9 (1) gives 84 singlets, as Terra noted. Corrections 3 to 7: applied as stated; the section 6 heading of 04 is now "The Chevalley involution and the real structure J", with the INDEX link updated. The ledger records sonnet_5_5 on the eleven rows of files 03 and 04, and the 11D README now says that the checked no-go results have three model identifiers, each in its scope.
