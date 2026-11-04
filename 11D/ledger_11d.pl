@@ -12,17 +12,40 @@ attempted_by(d11_circle, claude).
 checked_by(d11_circle, claude, by_hand).
 referee_pending(d11_circle).
 
-claim(d11_m_circle, conjecture, conjectural, "Proposal 1.3", "The circle of H is the M-theory circle: v -> 0 is strong coupling with the D0 (momentum) tower becoming light; v -> infinity is a shrinking circle with antiperiodic fermions and no bulk fermions, as in type 0 strings; light fermions of the 9 endpoint come from branes or walls.").
+claim(d11_m_circle, conjecture, conjectural, "Proposal 1.3", "The circle of H is the M-theory circle: v -> 0 along the joint family (weak masses below a descending tower, Wilson-line angles -> 0) is strong coupling with the D0 (momentum) tower becoming light; v -> infinity is a shrinking circle with antiperiodic fermions and no bulk fermions, as in type 0 strings; light fermions of the 9 endpoint come from branes or walls.").
 source(d11_m_circle, '11D/01_interval_and_eleventh_dimension.md', 'proposal-13-the-circle-of-h-as-the-m-theory-circle').
 depends(d11_m_circle, d11_circle).
+depends(d11_m_circle, a11_joint_limit).
 attempted_by(d11_m_circle, claude).
 
-claim(d11_casimir, proposition, proved, "Proposition 1.4", "Under the hypotheses of Theorem 24.9, the one-loop potential at its minimum theta = pi/2 is -93 zeta(5) n_f/(512 pi^2 l^4), so the walls attract and the energy drives l -> 0 (the 9 label); F(1) = 93 zeta(5)/64.").
-source(d11_casimir, '11D/01_interval_and_eleventh_dimension.md', 'proposition-14-the-one-loop-energy-at-the-vacuum-angle-attracts-the-walls').
+claim(d11_casimir, proposition, proved, "Proposition 1.4 (corrected)", "Under the hypotheses of Theorem 24.9, the angle-dependent one-loop term, relative to theta = 0, is -93 zeta(5) n_f/(512 pi^2 l^4) at its minimum theta = pi/2, where M_W = M_Z = 0 at fixed l, and (3 zeta(3)/(16 pi^2))(54/5 - n_f) theta^2/l^4 near theta = 0. The angle-independent Casimir energy is not included. (The first version read the term as the whole wall energy and concluded that the walls attract; that reading is withdrawn.)").
+source(d11_casimir, '11D/01_interval_and_eleventh_dimension.md', 'proposition-14-the-angle-dependent-one-loop-term-at-the-vacuum-angle').
 depends(d11_casimir, l24_no_minimum).
+depends(d11_casimir, l23_wz).
 attempted_by(d11_casimir, claude).
-checked_by(d11_casimir, claude, python("11D/checks_11d.py section F: series against quadrature")).
+checked_by(d11_casimir, claude, python("11D/checks_11d.py sections F, F2: series against quadrature")).
 referee_pending(d11_casimir).
+
+claim(d11_scale_free, proposition, proved, "Proposition 1.5", "For V = l^-4 G(theta): with the angle free, V is monotone in l unless G = 0, so l runs away by the sign of min G; with theta = l m, stationary lengths have l m = theta_* independent of m, so M_W l is constant (alpha = 1). A joint family with alpha < 1 needs a second scale in the action; in the flat one-loop family the electroweak term is m^2/l^2.").
+source(d11_scale_free, '11D/01_interval_and_eleventh_dimension.md', 'proposition-15-a-scale-free-potential-fixes-the-path-with-m_w-l-constant').
+depends(d11_scale_free, d11_casimir).
+attempted_by(d11_scale_free, claude).
+checked_by(d11_scale_free, claude, by_hand).
+referee_pending(d11_scale_free).
+
+%% the two families of the Astra 6 audit of 3 Nov 2026 (reviews/2026-11-03_astra_audit_d11.md), used by 01
+claim(a11_joint_limit, proposition, proved, "Audit, section 3", "D_F = epsilon D_*, l = l_* epsilon^-alpha, 0 < alpha < 1: exact window epsilon D_*, gap >= pi/l - epsilon ||D_*||, compression error O(epsilon^{2(1-alpha)}); a cutoff epsilon^beta, alpha < beta < 1, holds exactly the r finite states, while N(E) ~ 2 r l E/pi diverges at fixed E.").
+source(a11_joint_limit, 'reviews/2026-11-03_astra_audit_d11.md', '3-a-positive-joint-limit-result-from-the-exact-interval').
+depends(a11_joint_limit, l22_window).
+depends(a11_joint_limit, l22_compression).
+attempted_by(a11_joint_limit, astra6).
+checked_by(a11_joint_limit, claude, python("11D/checks_11d.py section H: window, gap and Weyl constant on exact spectra")).
+
+claim(a11_localized, proposition, proved, "Audit, section 4", "Bulk mass mu = mu_* epsilon^alpha with mu l = (1 - alpha) log(1/epsilon) + c_0: light mass ~ 2 mu_* e^{-c_0} epsilon, gap ~ mu_* epsilon^alpha, localization width over l -> 0; exact tail identity e^{-2 kappa l} = (m/(mu + kappa))^2.").
+source(a11_localized, 'reviews/2026-11-03_astra_audit_d11.md', '4-a-localized-family-with-the-same-hierarchy').
+depends(a11_localized, l09_lightpair).
+attempted_by(a11_localized, astra6).
+checked_by(a11_localized, claude, python("11D/checks_11d.py section H: secular roots by bisection, the audit table and the identity")).
 
 %% ---------------------------------------------------------------- 02: Witten spaces as the hypercharge quotient
 claim(d11_quotient, theorem, proved, "Theorem 2.1", "M^{111} = Y_{3,2} = (S^9 cap mu_Y^{-1}(0))/U(1)_Y for the 5-bar = (3bar,1)_{1/3} + (1,2)_{-1/2}: a circle bundle of O(3,2) over CP^2 x CP^1, Calabi-Yau cone because tr Y = 0, effective group (U(3) x U(2))/U(1)_Y, whose intersection with SU(3) x SU(2) is the centre Z_6.").
@@ -84,7 +107,7 @@ depends(d11_fock_branes, d11_fock).
 depends(d11_fock_branes, d11_betti_y).
 attempted_by(d11_fock_branes, claude).
 
-claim(d11_higgs_m2, conjecture, conjectural, "Proposal 3.4", "The Higgs is the M2 position on the doublet line of the resolved cone (fixed by SU(3) and T_3 + Y on the brane coordinates); v -> 0 is the apex, with near-horizon AdS4 x Y_{3,2} and the Standard Model group unbroken.").
+claim(d11_higgs_m2, conjecture, conjectural, "Proposal 3.4", "The Higgs is the M2 position on the doublet line of the resolved cone (fixed by SU(3) and T_3 + Y on the brane coordinates); v -> 0 is the apex, with near-horizon AdS4 x Y_{3,2} and the Standard Model group unbroken. At fixed N this restores the group at a fixed tower; opening a dimension needs N -> infinity, against N = 1 for the matter of Proposal 3.1.").
 source(d11_higgs_m2, '11D/03_branes_hypercharge_and_the_84.md', 'proposal-34-the-higgs-is-the-position-of-the-m2-brane-and-the-massless-limit-is-the-apex').
 depends(d11_higgs_m2, d11_betti_y).
 attempted_by(d11_higgs_m2, claude).
@@ -118,7 +141,8 @@ referee_pending(d11_kk_triality).
 
 %% ---------------------------------------------------------------- strategy
 strategy(t14, open, "Eleven dimensions from massless W and Z: the interval of H as an antiperiodic circle and as the M-theory circle; Witten's space M^{111} as the hypercharge quotient of the 5-bar; hypercharge from C_3, matter from wrapped branes, the Higgs as the M2 position; the magnetic completion AdS5 x CP^2 x S^2; the 84 of lemma 21 against C_3.").
-addresses(t14, d11_circle).  addresses(t14, d11_m_circle).  addresses(t14, d11_casimir).
+addresses(t14, d11_circle).  addresses(t14, d11_m_circle).  addresses(t14, d11_casimir).  addresses(t14, d11_scale_free).
+addresses(t14, a11_joint_limit).  addresses(t14, a11_localized).
 addresses(t14, d11_quotient).  addresses(t14, d11_unique).  addresses(t14, d11_topology).  addresses(t14, d11_z6).
 addresses(t14, d11_flux_nogo).  addresses(t14, d11_flux_fit).
 addresses(t14, d11_betti_y).  addresses(t14, d11_fock).  addresses(t14, d11_fock_branes).  addresses(t14, d11_higgs_m2).

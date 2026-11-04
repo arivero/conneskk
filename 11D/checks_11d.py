@@ -326,6 +326,65 @@ F_at_1 = F1()
 zeta5 = sum(1.0 / k ** 5 for k in range(1, 200000))
 assert abs(F_at_1 - 93 * zeta5 / 64) < 1e-6           # F(1) = 93 zeta(5)/64
 
+# ---------------------------------------------------------------- F2. small-angle coefficient and the scale-free path
+def J0(N=200000, X=40.0):
+    h = X / N; s_ = 0.0
+    for i in range(1, N + 1):
+        x = (i - 0.5) * h
+        s_ += x ** 3 / math.sinh(x) ** 2
+    return s_ * h
+zeta3 = sum(1.0 / k ** 3 for k in range(1, 200000))
+J_at_0 = J0()
+assert abs(J_at_0 - 1.5 * zeta3) < 1e-6                 # J(0) = (3/2) zeta(3)
+assert Fr(6) + Fr(24, 5) == Fr(54, 5)                    # V'(0) = (6 + 24/5 - n_f) J(0)
+# scale-free: V = l^-4 G(l m) is stationary in l iff theta G'(theta) = 4 G(theta); example G = a0 + c theta^2
+def stationary_theta(a0, c):
+    # theta G' - 4G = 2 c theta^2 - 4 a0 - 4 c theta^2 = -2 c theta^2 - 4 a0
+    t2 = Fr(-2) * a0 / c
+    return t2 if t2 > 0 else None
+for m in (Fr(1), Fr(1, 10), Fr(1, 1000)):
+    t2 = stationary_theta(Fr(1), Fr(-3))
+    # l = theta_*/m, so l*m independent of m
+    assert t2 == Fr(2, 3)
+
+# ---------------------------------------------------------------- H. the joint family and the localized family (audit, sections 3 and 4)
+def bisect(f, a, b, n=200):
+    fa = f(a)
+    for _ in range(n):
+        mid = (a + b) / 2; fm = f(mid)
+        if (fm > 0) == (fa > 0): a, fa = mid, fm
+        else: b = mid
+    return (a + b) / 2
+audit_table = {1e-2: (2.71049e-3, 0.134573), 1e-4: (2.70677e-5, 0.0114223),
+               1e-6: (2.70671e-7, 0.00107515), 1e-8: (2.70671e-9, 0.000104600)}
+loc_rows = []
+for eps, (m_aud, next_aud) in audit_table.items():
+    mu = eps ** 0.5; c = 0.5 * math.log(1 / eps) + 2.0; l = c / mu
+    s_ = bisect(lambda s: s - c * math.tanh(s), 0.5, c + 1.0)          # s = c tanh s, nonzero root
+    m = mu / math.cosh(s_); kappa = s_ / l
+    y = bisect(lambda y: math.tan(y) - y / c, math.pi + 1e-12, 1.5 * math.pi - 1e-9)   # tan y = y/c
+    nxt = math.sqrt(mu ** 2 + (y / l) ** 2)
+    assert abs(m / m_aud - 1) < 1e-4 and abs(nxt / next_aud - 1) < 1e-4
+    r_ = math.exp(-2 * kappa * l)
+    assert abs(r_ / (m / (mu + kappa)) ** 2 - 1) < 1e-9 and abs((mu - kappa) / (m ** 2 / (mu + kappa)) - 1) < 1e-6
+    loc_rows.append((eps, l, m, nxt))
+# joint family on the exact spectra (n pi + theta_k)/l of Theorem 22.1: window, gap, count
+import random
+random.seed(1)
+sing = [random.uniform(0.05, 1) for _ in range(3)]      # singular values of M_*; r = dim H_F = 6
+r_dim = 2 * len(sing)
+alpha_, beta_ = 0.5, 0.75
+for eps in (1e-2, 1e-4, 1e-6):
+    l = eps ** (-alpha_); E_eps = eps ** beta_
+    spec = [(n * math.pi + sg * l * eps * s_k) / l for s_k in sing for sg in (1, -1) for n in range(-4000, 4001)]
+    window = [x for x in spec if abs(x) <= E_eps]
+    assert len(window) == r_dim                            # exactly the r finite states (+-sigma_k)
+    gap = min(abs(x) for x in spec if abs(x) > E_eps)
+    assert gap >= math.pi / l - eps * max(sing) - 1e-12
+    E = 1.0
+    N = sum(1 for x in spec if abs(x) <= E)
+    assert abs(N - 2 * r_dim * l * E / math.pi) <= 2 * r_dim   # N(E) = 2 r l E/pi + O(r), the audit's constant
+
 # ---------------------------------------------------------------- G. AdS5 x CP^2 x S^2 with magnetic G_4 (eleven-dimensional supergravity)
 # orthonormal frame: 0..4 AdS5 (0 timelike), 5..8 CP^2 with J = e56 + e78, 9..10 S^2.
 # G = f1 e5678 + f2 (e56 + e78) e9,10.   R_MN = (1/12)(G_MPQR G_N^PQR - (1/12) eta_MN G^2).
@@ -373,4 +432,7 @@ if __name__ == "__main__":
     for ok, cc, rows in expl: print("D2 (F, chi, B-L) pairing c0, c1 =", cc, "bidegrees:", {k: (str(a), str(b)) for k, (a, b) in rows.items()})
     print("E  Lambda^3 of every real 9-dim SU(3) rep differs from both families of 84 (weights)")
     print("F  F(1) = int x^3 log(1 + 1/sinh^2 x) dx =", round(F_at_1, 6), "= 93 zeta(5)/64")
+    print("F2 J(0) =", round(J_at_0, 6), "= (3/2) zeta(3); small-angle coefficient (54/5 - n_f) J(0); scale-free stationary l m fixed")
+    for row in loc_rows: print("H  localized family eps, l, m, next:", "%.0e %.3f %.6g %.6g" % row)
+    print("H  joint family: window = r states, gap >= pi/l - eps|D*|, N(E) = 2 r l E/pi + O(r)")
     print("G  AdS5 x CP^2 x S^2: R_AdS = -(f1^2+2f2^2)/6, R_CP2 = f1^2/3 + f2^2/6, R_S2 = 2f2^2/3 - f1^2/6")

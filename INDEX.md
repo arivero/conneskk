@@ -112,7 +112,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
 
 The interval of H as an antiperiodic circle and as the M-theory circle; Witten's space M^{111} as the hypercharge quotient of the 5-bar, the Z_6 and chirality from fluxes; hypercharge from C_3, matter from wrapped branes, the Higgs as the M2 position, the magnetic completion AdS5 x CP^2 x S^2, and the 84 of lemma 21 against C_3.
 
-[11D README](11D/README.md) · [11D §1](11D/01_interval_and_eleventh_dimension.md) · [11D §2](11D/02_witten_spaces_hypercharge_quotient.md) · [11D §3](11D/03_branes_hypercharge_and_the_84.md) · [strategy, Ranked list (T14)](STRATEGY.md#ranked-list)
+[11D README](11D/README.md) · [11D §1](11D/01_interval_and_eleventh_dimension.md) · [11D §2](11D/02_witten_spaces_hypercharge_quotient.md) · [11D §3](11D/03_branes_hypercharge_and_the_84.md) · [strategy, Ranked list (T14)](STRATEGY.md#ranked-list) · [Astra audit §3-§4, joint family](reviews/2026-11-03_astra_audit_d11.md#3-a-positive-joint-limit-result-from-the-exact-interval)
 
 ## Part 2. Documents
 
@@ -431,6 +431,7 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 - [Terra referee report on lemma 23](reviews/2026-11-03_terra_check_23.md)
 - [Terra referee report on lemma 25](reviews/2026-11-03_terra_check_25.md)
 - [Terra referee report on lemma 24](reviews/2026-11-03_terra_check_24.md)
+- [Astra 6 audit of b2ddf98 and a route from the massless electroweak limit to eleven dimensions](reviews/2026-11-03_astra_audit_d11.md) (used in the 11D line)
 
 ### Transcript: [transcripts/Connes_Electrodynamics_ModelMd.txt](transcripts/Connes_Electrodynamics_ModelMd.txt)
 
@@ -476,13 +477,16 @@ From [lemma 17](lemmas/17_explicit_masses_chiral_limit.md) (STRATEGY T10), built
 - [Results](11D/README.md#results)
 - [How the massless limit gives eleven dimensions here](11D/README.md#how-the-massless-limit-gives-eleven-dimensions-here)
 - [Next computations, ranked](11D/README.md#next-computations-ranked)
+- [The Astra 6 audit of 3 Nov 2026](11D/README.md#the-astra-6-audit-of-3-nov-2026)
 - [References used here](11D/README.md#references-used-here)
 - [Files](11D/README.md#files)
 - [The interval of H as an eleventh dimension](11D/01_interval_and_eleventh_dimension.md#the-interval-of-h-as-an-eleventh-dimension)
 - [Setting](11D/01_interval_and_eleventh_dimension.md#setting)
 - [Proposition 1.1 (the chiral interval is the antiperiodic circle)](11D/01_interval_and_eleventh_dimension.md#proposition-11-the-chiral-interval-is-the-antiperiodic-circle)
+- [The joint family: weak masses below a descending tower](11D/01_interval_and_eleventh_dimension.md#the-joint-family-weak-masses-below-a-descending-tower)
 - [Proposal 1.3 (the circle of H as the M-theory circle)](11D/01_interval_and_eleventh_dimension.md#proposal-13-the-circle-of-h-as-the-m-theory-circle)
-- [Proposition 1.4 (the one-loop energy at the vacuum angle attracts the walls)](11D/01_interval_and_eleventh_dimension.md#proposition-14-the-one-loop-energy-at-the-vacuum-angle-attracts-the-walls)
+- [Proposition 1.4 (the angle-dependent one-loop term at the vacuum angle)](11D/01_interval_and_eleventh_dimension.md#proposition-14-the-angle-dependent-one-loop-term-at-the-vacuum-angle)
+- [Proposition 1.5 (a scale-free potential fixes the path with M_W l constant)](11D/01_interval_and_eleventh_dimension.md#proposition-15-a-scale-free-potential-fixes-the-path-with-m_w-l-constant)
 - [What remains open here](11D/01_interval_and_eleventh_dimension.md#what-remains-open-here)
 - [Witten spaces as the hypercharge quotient of the five-dimensional representation](11D/02_witten_spaces_hypercharge_quotient.md#witten-spaces-as-the-hypercharge-quotient-of-the-five-dimensional-representation)
 - [Setting](11D/02_witten_spaces_hypercharge_quotient.md#setting)
