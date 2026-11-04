@@ -1,6 +1,6 @@
 # 9 and 11 as limits of the modern spectral triple: the target, and a route through the heterotic strings
 
-Part of the 11D line of research ([README](README.md), [PLAN](PLAN.md), task B). Attempted by Claude (Anthropic), 4 Nov 2026, prompted by two remarks in the steer of the same day: that SO(32) against E8 × E8 resembles non-chiral against chiral, and that the SO(32) of lemma 21 was mainly scalars, a way in which supersymmetry could be hidden in the finite geometry as scalar composites. Proposition 6.1 is proved; everything else is a proposal, and the string-theory facts used are recalled, not reread (marked). Referee pending.
+Part of the 11D line of research ([README](README.md), [PLAN](PLAN.md), task B). Attempted by Claude (Anthropic), 4 Nov 2026, prompted by two remarks in the steer of the same day: that SO(32) against E8 × E8 resembles non-chiral against chiral, and that the SO(32) of lemma 21 was mainly scalars, a way in which supersymmetry could be hidden in the finite geometry as scalar composites. Proposition 6.1 is proved; everything else is a proposal, and the string-theory facts used are recalled, not reread (marked). Refereed by GPT-6.1 Terra and checked a second time by Claude Sonnet 5.5 (reviews/2026-11-04_terra_check_11d.md, reviews/2026-11-04_sonnet_second_check_11d.md).
 
 ## 1. The target
 
@@ -16,7 +16,7 @@ What exists: the exact window for D_F, J and gamma on an interval parent (lemma 
 
 ## 2. The heterotic web has the shape 9, 10, 11
 
-**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The nine-dimensional duality involves specified Wilson lines and radii; the finite-triple dictionary and field identification remain proposals. The cited primary papers were unavailable for direct checking. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#files-06-and-07-recalled-dualities).
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The nine-dimensional duality involves specified Wilson lines and radii; the finite-triple dictionary and field identification remain proposals. The cited primary papers were unavailable to the referee; Polchinski-Witten and Bergman-Gaberdiel-Lifschytz were read later on master ([10](10_dilaton_and_second_scale.md)) and the second check confirmed the Wilson-line map, the winding duality and the slope rule against them. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#files-06-and-07-recalled-dualities).
 
 Recalled facts (Polchinski and Witten, hep-th/9510169; Hořava and Witten, hep-th/9510209 and hep-th/9603142; Bergman, Gaberdiel and Lifschytz, hep-th/9711098; to be checked before use):
 
@@ -31,7 +31,7 @@ This is the pattern of hypothesis H: vectorlike at 9, chiral and KO-6 at 10, chi
 | corpus | heterotic web |
 |---|---|
 | the two sheets of the finite geometry | the two walls of the interval (O8 planes in type I', E8 walls in Hořava-Witten) |
-| D_F as a constant connection on the circle (lemma 25) | a Wilson line on the heterotic circle, T-dual to D8 positions on the interval |
+| D_F as a constant connection on the circle (lemma 25) | a Wilson line on the heterotic circle, T-dual to D8 positions on the interval (the map from angles to positions is linear only at constant dilaton: [10](10_dilaton_and_second_scale.md), Proposition 10.1) |
 | the chiral interval as the antiperiodic circle (Proposition 1.1) | the interval as the orbifold S^1/Z_2 of that circle |
 | lemma 21: removing the top keeps 5/8 and 8/3 and leaves SO(30) x SO(2) ⊂ SO(32) | fifteen D8-branes at one wall and the sixteenth displaced: the gauge group on the D8-branes is SO(30) x U(1) |
 | the 30 = (5, 3) + (5bar, 3bar): five light quarks in three colours | the Chan-Paton labels of the fifteen-brane stack, with images |
@@ -59,10 +59,10 @@ In the type I' form the adjoint scalars of the D8 stack are open strings with tw
 
 **Referee note (GPT-6.1 Terra, 4 Nov 2026).** The proposed dictionary needs a physical construction. Proposition 1.5 allows flat directions; a second scale is a candidate for selecting a joint path, rather than a universal requirement. See the [wording audit](../reviews/2026-11-04_terra_check_11d.md#wording-audit-results-and-proposals).
 
-1. **One family, three regimes.** Realize T_s as the type I' interval with D8-branes in the configuration 15 + 1, with the corpus parent (lemma 22) as its low-energy window: the window must reproduce the modern D_F, J and gamma (lemma 22 does this for any finite data), the tower must open along a joint family as the interval grows (strong coupling, 11), and the collapse must give the non-chiral nine-dimensional theory (9).
+1. **One family, three regimes.** Realize T_s as the type I' interval with D8-branes in the configuration 15 + 1, with the corpus parent (lemma 22) as its low-energy window: the window must reproduce the modern D_F, J and gamma (lemma 22 does this for any finite data), the tower must open along a joint family as the interval grows (strong coupling, 11; but the length of H and the type I' length are T-dual, [10](10_dilaton_and_second_scale.md), Proposition 10.3), and the collapse must give the non-chiral nine-dimensional theory (9).
 2. **The algebra.** The Chan-Paton algebras of orientifold stacks are of the types O(n), Sp(n), U(n); the Connes algebra C + H + M_3(C) has the form of stacks of one brane, two branes with a symplectic projection, and three branes. Decide whether the modern algebra is the Chan-Paton algebra of a stack configuration on the interval (for the colour factor, lemma 21 puts colour inside SO(30), on the same stack as the light flavours).
 3. **The six dimensions and chirality.** Ten-dimensional chirality and the KO-6 class must come from the internal six dimensions (02: CP^2 x S^2 with fluxes, or a Calabi-Yau with an SU(4) bundle as in Proposal 5.5).
-4. **The path.** Proposition 1.5 requires a second scale when the stationary angle is isolated; in the heterotic web the dilaton gradient of type I' (whose slope depends on the D8 positions) is a candidate; Proposition 9.1 of [09](09_dilaton_spectral_and_so32.md) writes it as a trace of a function of |D_F|.
+4. **The path.** Proposition 1.5 requires a second scale when the stationary angle is isolated; in the heterotic web the dilaton gradient of type I' (whose slope depends on the D8 positions) was a candidate, excluded in the scope of [10](10_dilaton_and_second_scale.md), Propositions 10.5 and 10.6; Proposition 9.1 of [09](09_dilaton_spectral_and_so32.md) writes it as a trace of a function of |D_F|.
 
 ## References for this file
 

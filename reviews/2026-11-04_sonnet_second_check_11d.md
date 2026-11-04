@@ -105,3 +105,43 @@ Others (Python 3): b3_prop51.py, b3_prop52.py, b3_prop54.py, b3_spin9.py.
 ### Assessment
 
 Checked by Claude Fable 5.1 (the dialogue model from this batch on). Correction 1 is right and matters: M = -P sends t^c = (-c | ++ | 1) to the negative of a nu^c root, that is to an antiparticle state, while F of Proposition 5.3 acts inside H_f and keeps particles as particles; so F agrees with M only on the left-handed states, and "the finite-geometry form of Proposition 5.2" overstated it. Applied, with Reading 2 qualified. Correction 2: the values {13, 17, 19, 20} agree with the rerun recorded in 11D/10; applied, with the formula for the neutrino degrees. Corrections 3 to 6: applied. Correction 7: the four rows carry sonnet_5_5 with the method named, and the "not kept" entries now cite the kept script. The ledger row d11_flip stays conditional on the unitary identification, which the file now names.
+
+## Batch 4: files 06, 07 and 08
+
+### Report
+
+A. Verdicts
+
+1. Prop 6.1: AGREE. Ad(W_a) on so(32): eigenvalue 1 on 436 = 435+1, e^{±2 pi i a} on 30 each; (n±a)/R = (n pi ± theta)/l; light mass a/R on [0,1/2].
+2. Prop 7.1: AGREE. Wall determinant gives lambda l = n pi ± theta; nullity 2 at theta = 0 and, as X -> infinity, pi/2.
+3. Prop 7.2: AGREE. Centralizer S(O(30) x O(2)), two components, Lie dimension 436; minimum at t = 1 (n_f = 1, 6, 16, 48). Scope gap: B2.
+4. Prop 7.3: AGREE with Terra. h^0(L S_0) = h^1(L^-1 S_0) = p; C^2 = -1 gives (+,+,-); rho(1) has rank p of 2p. M_p + C is unital, order zero, and is lemma 16, Corollary 16.8 with (k_X, k_Y) = (p, 1). Berezin-Toeplitz step: true (Gaussian times Weyl word, exactly; p = 2..5, four spin structures, rank p^2), unproved in the file.
+5. 07 §6 remark: AGREE (no Terra check). Commutant dimension 14 for stacks 1, 2, 3; spectrum 0, ±|x_a - x_b|.
+6. Prop 8.1: AGREE (j-commutant dimensions n(n-1)/2, n(n+1)/2 for s = +1, -1).
+7. Prop 8.2: AGREE (k, 2k; lowest |D|: 2k, 2k, 4k).
+8. Remark 8.3: AGREE on arithmetic (15+1: z(0) = 7cL; 7+7: x_1 + x_2 = L; 7+6+triple: x_b = 2L/3). PARTLY on sources: B4.
+9. Recalled dualities: AGREE, labels honest. PW and BGL confirm positions = Wilson lines (wilmap), heterotic KK = type I' winding, the slope rule, E_{n+1} (Table 1); others unchecked.
+
+B. Corrections, by severity
+
+1. 11D/10 is right on 10.1 to 10.3 (rechecked; 10.4 to 10.6 unchecked) and conflicts with 07 §4 Reading "distance proportional to a", 06 §3 last row, 06 §6 items 1 and 4, 08 §5 bullet 2. Only 07 §6b and 08 §4 point to 10. Append "(proportional only at constant dilaton; see 10, Proposition 10.1)" and equivalents.
+2. 07 §4 note, append: "in SO(32). In Spin(32)/Z_2 the det -1 component sends the lift of W_{1/2} to its negative, so the heterotic centralizer is connected; a -> a+1 holds for SO(32) matrices, the lift has period 2."
+3. 08 line 43 ("is not available with colour-respecting moves; E8 x E7 is:"): unapplied Terra replacement: "With colour triples, the proposed E8 x E7 arrangement has seven and six branes at the walls and a bulk triple at 2L/3. Two E8 walls require relaxing the colour-triple rule."
+4. 08 §4 item 1: "7 + 7 for E8 x E8" is in neither PW (E8 x E8 left open) nor BGL (E8 x E8 at N = 0, R_h -> 0). Write "extrapolated from the single-wall rule".
+5. 07 §5: cite lemma 16, Corollary 16.8; state the Gaussian formula in step (3).
+6. 08 §2 Reading: add the (j, d) refinement and the label tension (label 9 with O^+ against the far O8^- wall).
+7. 07 §6: "8 n_a n_b per ordered block, 16 n_a n_b per pair".
+8. Stale: line 3 of 06, 07, 08 ends "Referee pending." (02, 03 too); README row 8.3 and the 06 §2, 08 §4 notes still call PW and BGL unavailable.
+9. Records: add sonnet_5_5 checkers to d11_wilson_top, d11_angle_interval, d11_far_wall, d11_torus_flux, d11_orientifold_sign, d11_wall_multiplicity, d11_e_walls, d11_duality_readings. Notes, ledger rows and README rows otherwise match Terra. Also add the unitality amendment at paper/connes_kk_dictionary_note.tex lines 54, 104.
+
+C. Derivations
+
+B1: PW: lambda = W(x)/(2W(L)), W = int z^{-1/3}. For 15+1, z(L) = 0, rho = (z(x_t)/z(0))^{2/3}: theta = 4 pi (1-rho)/(8-rho), R^2 = 14(8-rho^2)/(8-rho)^2 (as 10.2); x_t/L = 1/2 gives theta = 0.5859 against pi/4.
+B2: lifts W~ = G_{2n-1}G_{2n}, g~ = G_1 G_{2n-1} (2n = 8, 12): g~ W~ g~^-1 = -W~. Only these enter, so 2n = 32 agrees; -1 differs from 1 and from the volume element.
+B5: rho(a, lambda) = a (+) lambda commutes with J rho(b, mu)^* J^-1 = mu (+) b^T; a unital M_3 on C^6 has commutant M_2, too small for M_3^op.
+B6: for s = -1, j swaps the ±mu eigenspaces of d, so the symmetries of (j, d) form U(n/2); s = +1 gives O(n_+) x O(n_-).
+Scripts (Python, not kept): b4_walls, b4_spin_lift, b4_so32_wilson, b4_unital, b4_torus, b4_commutant_j, b4_channel, b4_matrix_theory, b4_oneloop.
+
+### Assessment
+
+Checked by Claude Fable 5.1. Correction 1: the conflicts with 11D/10 are real, since Proposition 10.1 is the statement of the sources and the four readings predate it; pointers added at each place. Correction 2: the lift of diag(1_30, -1_2) to Spin(32) is Gamma_31 Gamma_32, which the lift of a reflection pair in the determinant -1 component conjugates to its negative, so the connectedness statement holds; added to the note of 07 §4. Correction 3: the Terra replacement had not been applied on the branch; applied. Correction 4: neither source read on master states the 7 + 7 configuration for E8 x E8; marked as extrapolated. Correction 5: Corollary 16.8 of lemma 16 gives the unital datum with (k_X, k_Y) = (p, 1), and the Gaussian form of the compressed characters is recorded as checked and unproved. Corrections 6 to 9: applied, with the dictionary note's table and text amended for the unital datum. Terra's error verdict on the unital triple of Proposition 7.3 stands, and the row keeps the status conditional.

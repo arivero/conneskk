@@ -276,6 +276,7 @@ depends(d11_wilson_top, l21_so30).
 attempted_by(d11_wilson_top, claude).
 checked_by(d11_wilson_top, claude, by_hand).
 checked_by(d11_wilson_top, terra_6_1, by_hand).
+checked_by(d11_wilson_top, sonnet_5_5, by_hand).
 prior_work(d11_wilson_top, known, "Hosotani 1983 (momenta (n + q a)/R with a Wilson line); SO(32) -> SO(30) x U(1) Wilson line T-dual to fifteen D8-branes plus one displaced (hep-th/9711098, hep-th/0108135); the interval-circle equality is the circle form of lemma 25. The assignment of the top to the displaced brane was not found.").
 
 claim(d11_heterotic_route, conjecture, conjectural, "Sections 2, 3 and 5 (proposals)", "The heterotic web with its regimes 9, 10 and 11 realizes the target: D_F as a Wilson line, lemma 21's SO(30) x SO(2) as fifteen D8-branes and one displaced, and the composite scalars as open strings on the stack.").
@@ -293,6 +294,7 @@ depends(d11_angle_interval, l23_wz).
 attempted_by(d11_angle_interval, claude).
 checked_by(d11_angle_interval, claude, by_hand).
 checked_by(d11_angle_interval, terra_6_1, by_hand).
+checked_by(d11_angle_interval, sonnet_5_5, by_hand).
 
 claim(d11_far_wall, proposition, proved, "Proposition 7.2 (referee amendment)", "The SO(32) endpoint Wilson line has full centralizer S(O(30) x O(2)); the lemma-24 one-loop minimum is a = 1/2 under its stated hypotheses. The D8 interpretation remains a proposal.").
 source(d11_far_wall, '11D/07_dualities_9_11.md', '4-proposition-72-the-far-end-is-the-displaced-d8-brane-on-the-other-wall').
@@ -302,12 +304,14 @@ depends(d11_far_wall, l24_no_minimum).
 attempted_by(d11_far_wall, claude).
 checked_by(d11_far_wall, claude, by_hand).
 checked_by(d11_far_wall, terra_6_1, by_hand).
+checked_by(d11_far_wall, sonnet_5_5, by_hand).
 
 claim(d11_torus_flux, proposition, conditional, "Proposition 7.3 (referee amendment)", "A doubled flux torus has KO-6 signs, a 2p-dimensional kernel and a generated M_p(C) corner. The displayed action is nonunital on the doubled space; adding a scalar summand yields a unital order-zero finite datum.").
 source(d11_torus_flux, '11D/07_dualities_9_11.md', '5-proposition-73-a-torus-with-flux-doubled-has-the-colour-form').
 attempted_by(d11_torus_flux, claude).
 checked_by(d11_torus_flux, claude, by_hand).
 checked_by(d11_torus_flux, terra_6_1, by_hand).
+checked_by(d11_torus_flux, sonnet_5_5, by_hand).
 prior_work(d11_torus_flux, partial, "Berezin-Toeplitz quantization of the torus (fuzzy torus) is known; the KO-6 doubling with restricted algebra follows lemma 16").
 
 claim(d11_duality_readings, conjecture, conjectural, "Sections 2, 4 (reading), 5 (reading), 6 (proposals and a known remark)", "The dualities between 9 and 11 give the finite geometry two orientifold walls with D_F as D8 positions, Landau levels of a torus with flux as towers, and stacks of D0-branes as the algebra, as proposals.").
@@ -316,6 +320,7 @@ depends(d11_duality_readings, d11_far_wall).
 depends(d11_duality_readings, d11_torus_flux).
 attempted_by(d11_duality_readings, claude).
 checked_by(d11_duality_readings, terra_6_1, by_hand).
+checked_by(d11_duality_readings, sonnet_5_5, by_hand).
 
 %% ---------------------------------------------------------------- 08: the orientifold sign
 claim(d11_orientifold_sign, proposition, proved, "Proposition 8.1 (referee clarification)", "The descended antiunitary j with j^2 = s gives O(n) or USp(n) as its unitary commutant on each eigenspace of d^2. Preservation of d, the algebra and physical Chan-Paton data requires further conditions.").
@@ -324,6 +329,7 @@ depends(d11_orientifold_sign, l06_factorization).
 attempted_by(d11_orientifold_sign, claude).
 checked_by(d11_orientifold_sign, claude, by_hand).
 checked_by(d11_orientifold_sign, terra_6_1, by_hand).
+checked_by(d11_orientifold_sign, sonnet_5_5, by_hand).
 
 claim(d11_wall_multiplicity, proposition, proved, "Proposition 8.2 (referee clarification)", "For k channels, the signed eigenvalue theta/l has multiplicity k in the interior and 2k at the endpoints; the lowest absolute eigenvalue has multiplicities 2k, 2k and 4k at interior, zero and pi/2 respectively.").
 source(d11_wall_multiplicity, '11D/08_orientifold_sign.md', '3-proposition-82-wall-channels-come-with-doubled-multiplicity').
@@ -331,6 +337,7 @@ depends(d11_wall_multiplicity, d11_angle_interval).
 attempted_by(d11_wall_multiplicity, claude).
 checked_by(d11_wall_multiplicity, claude, by_hand).
 checked_by(d11_wall_multiplicity, terra_6_1, by_hand).
+checked_by(d11_wall_multiplicity, sonnet_5_5, by_hand).
 
 claim(d11_e_walls, conjecture, conjectural, "Remark 8.3 (referee amendments)", "The wall slope arithmetic is conditional on the recalled type I' rule; enhancements require tuned coupling, and 7 + 7 needs two bulk positions summing to L. The E_2 physical electroweak identification remains open.").
 source(d11_e_walls, '11D/08_orientifold_sign.md', '4-remark-83-e8-walls-from-15--1-conditional').
@@ -338,6 +345,7 @@ depends(d11_e_walls, d11_heterotic_route).
 depends(d11_e_walls, d11_far_wall).
 attempted_by(d11_e_walls, claude).
 checked_by(d11_e_walls, terra_6_1, by_hand).
+checked_by(d11_e_walls, sonnet_5_5, by_hand).
 
 claim(d11_orientifold_reading, conjecture, conjectural, "Readings of sections 2 and 3", "The odd factorizations of labels 11 and 9 have the symmetry types of O^- and O^+ orientifold planes, and wall channels carry the Chan-Paton counts of D8-branes on the planes.").
 source(d11_orientifold_reading, '11D/08_orientifold_sign.md', '2-proposition-81-the-factorization-sign-fixes-orthogonal-or-symplectic-symmetry').
