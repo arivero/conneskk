@@ -998,6 +998,68 @@ flat massless determinant, its stated field content and wall
 conditions, and no additional angle-dependent term. It does not derive
 a force on a supersymmetric type-I' brane.
 
+## Proposition 7.3: doubled torus and the finite algebra
+
+**Verdict: Error in the stated unital finite triple.** The KO signs,
+kernel dimensions and matrix-algebra generation check out. The
+represented algebra acts by zero on the second summand, so its unit
+is a proper projection. A unital repair adds a scalar summand. A
+nontrivial spin structure also twists the displayed cohomology.
+
+Let \(S_0\) be the flat spin line, with \(S_0^2\simeq\mathcal O\).
+The two zero-mode spaces are
+\[
+ H^0(L\otimes S_0),\qquad H^1(L^{-1}\otimes S_0).
+\]
+The first has dimension \(p\), because a negative-degree line bundle
+has no holomorphic sections and Riemann-Roch on a genus-one curve gives
+\(\chi(L\otimes S_0)=p\). Serre duality identifies the second with
+the dual of the first, hence with its complex conjugate after choosing
+the inner product. With the stated orientation these have opposite
+gradings. The untwisted formula in the proposition is literal for the
+trivial spin structure; the dimensions hold for all four.
+
+The assumed charge conjugation intertwines the two coupled Dirac
+operators and reverses the grading. Consequently the displayed \(J\)
+satisfies \(J^2=1\), \(JD=DJ\), and \(J\gamma=-\gamma J\).
+In a constant field \(B=2\pi p/A\), the nonzero Dirac levels have
+magnitudes \(\sqrt{2|B|n}\), \(n\geq1\), in the standard Dirac
+normalization.
+
+For a reciprocal lattice vector \(k\), projecting multiplication by
+\(e^{ik\cdot x}\) onto the lowest Landau level gives the nonzero
+Gaussian factor \(e^{-|k|^2/(4|B|)}\) times a guiding-centre
+translation. This follows by splitting the position operator into
+oscillator and guiding-centre parts and taking the oscillator-vacuum
+matrix element. For primitive reciprocal vectors, the translations
+form a clock-and-shift pair with commutator \(e^{\pm2\pi i/p}\);
+their \(p^2\) products span \(M_p(\mathbb C)\). Flat spin and
+connection holonomies change phases, not the nonzero Gaussian.
+Compression generates this algebra; it is not itself a
+homomorphism from the function algebra.
+
+On \(V\oplus\bar V\), the generated representation is
+\(\rho(a)=a\oplus0\). Thus \(\rho(1)=1_V\oplus0\), and both the
+parent and finite representations are degenerate on the second
+summand. They do not have the unital representation required in the
+finite-data setting of Lemma 22. In particular, for \(p=3\), no
+complex-linear unital \(M_3(\mathbb C)\) representation on
+\(\mathbb C^3\oplus\overline{\mathbb C^3}\) can satisfy order zero
+with a unital opposite action: it would make this six-dimensional
+space a module for \(M_3\otimes M_3^{op}\cong M_9\), whose nonzero
+modules have dimensions divisible by nine.
+
+One repair is to unitize the represented corner:
+\[
+ A=M_p(\mathbb C)\oplus\mathbb C,\qquad
+ \rho(a,\lambda)=a\oplus\lambda I_{\bar V}.
+\]
+In conjugate bases \(J\rho(b,\mu)^*J^{-1}=\mu I_V\oplus b^T\),
+which commutes with \(\rho(a,\lambda)\). This yields a unital
+finite KO-6 datum with \(D=0\) and order zero. It has an additional
+scalar summand; deriving the full Standard Model algebra and its
+representation remains open.
+
 ## Proposition 6.1: the SO(32) Wilson-line spectrum
 
 **Verdict: Correct with amendments.** The charged momentum progressions

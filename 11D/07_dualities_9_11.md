@@ -47,6 +47,8 @@ Under the strong-coupling duality of item 2 of section 1, the D8 position is a W
 
 ## 5. Proposition 7.3 (a torus with flux, doubled, has the colour form)
 
+**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The signs, kernel dimensions and generated matrix corner check out, with a spin-line twist for nontrivial spin structures. The displayed action is degenerate and nonunital on the doubled Hilbert space, so the claimed unital finite triple needs an extra scalar summand. See the [referee report](../reviews/2026-11-04_terra_check_11d.md#proposition-73-doubled-torus-and-the-finite-algebra).
+
 **Statement.** Let T^2 be a flat torus of area A with a spin structure, L a line bundle of degree p >= 1 with a connection of constant curvature, and Lbar = L^{-1} with the conjugate connection. On H = L^2(S ⊗ L) ⊕ L^2(S ⊗ Lbar) put D = D_L ⊕ D_Lbar, gamma = gamma_S ⊕ gamma_S, and J(ψ, χ) = (Cχ, −Cψ), where C is the charge conjugation of the spin structure (antiunitary, C^2 = −1, C D = D C, C gamma_S = −gamma_S C, mapping S ⊗ Lbar to S ⊗ L). Let C^infinity(T^2) act by multiplication on the first summand only. Then:
 
 1. J^2 = 1, J D = D J and J gamma = −gamma J, the signs of KO-dimension six, and the algebra satisfies order zero;

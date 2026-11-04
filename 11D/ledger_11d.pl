@@ -264,11 +264,11 @@ attempted_by(d11_far_wall, claude).
 checked_by(d11_far_wall, claude, by_hand).
 checked_by(d11_far_wall, terra_6_1, by_hand).
 
-claim(d11_torus_flux, proposition, proved, "Proposition 7.3", "A torus with flux p, doubled with J(psi, chi) = (C chi, -C psi), has the KO-6 signs, kernel C^p + conj(C^p) and window M_p(C), the colour form for p = 3.").
+claim(d11_torus_flux, proposition, conditional, "Proposition 7.3 (referee amendment)", "A doubled flux torus has KO-6 signs, a 2p-dimensional kernel and a generated M_p(C) corner. The displayed action is nonunital on the doubled space; adding a scalar summand yields a unital order-zero finite datum.").
 source(d11_torus_flux, '11D/07_dualities_9_11.md', '5-proposition-73-a-torus-with-flux-doubled-has-the-colour-form').
 attempted_by(d11_torus_flux, claude).
 checked_by(d11_torus_flux, claude, by_hand).
-referee_pending(d11_torus_flux).
+checked_by(d11_torus_flux, terra_6_1, by_hand).
 prior_work(d11_torus_flux, partial, "Berezin-Toeplitz quantization of the torus (fuzzy torus) is known; the KO-6 doubling with restricted algebra follows lemma 16").
 
 claim(d11_duality_readings, conjecture, conjectural, "Sections 2, 4 (reading), 5 (reading), 6 (proposals and a known remark)", "The dualities between 9 and 11 give the finite geometry two orientifold walls with D_F as D8 positions, Landau levels of a torus with flux as towers, and stacks of D0-branes as the algebra, as proposals.").
