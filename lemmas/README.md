@@ -60,6 +60,8 @@ Canonical 8 and 15 present the flux-(1,2,3) failure as decisive; Theorem 02-A co
 
 | [44](44_seesaw_scaling_retained_algebra.md) | T2c: the retained algebra along the seesaw scaling | **Proposition** 44.1: with the Majorana block heavy and the neutrino Dirac block growing as t^alpha, alpha > 0, the retained algebra is C + M_3(C); only a bounded Dirac coupling keeps C + H + M_3(C). **Proposition** 44.2: the light mass is -y^2 t^{2 alpha - 1}, finite exactly at alpha = 1/2. **Corollary** 44.3: the finite seesaw and the Standard Model algebra are two different limits. Remark 44.4: in nine dimensions the Majorana block is wall data (dimension 8k + 1). Referee pending. |
 
+| [45](45_weyl_crossed_product_two_sheets.md) | T16: the Weyl crossed product and the two-sheet bimodule | **Proposition** 45.1: the fibres of C(T^6) x (S_3 x Z_2) at the fixed point and at a three-point orbit are C*(W) and M_3(C)^4, and a selection gives C + M_2(C) + M_3(C). **Theorem** 45.2: the 18-state orientable KO-6 bimodule of the corpus is Corollary 16.8 over the two orbit types, with the grading from the sheet sign and the central difference of the fixed-point fibre, so no spin lift is used. Open: the real form H, a Dirac operator from the geometry, the selection of the representations. Referee pending. |
+
 ## Lemmas 31 to 40: the eleven-dimensional line
 
 Written as files 01 to 11 of branch 11D by another Claude session (Claude Opus 5.5), refereed by GPT-6.1 Terra (34 sections) and checked a second time by Claude Sonnet 5.5, and moved into this directory on 4 November 2026 with their text unchanged; file 06 (proposals) stays in `historical/11D/`. Each file keeps its own numbering of propositions.

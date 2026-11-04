@@ -1159,6 +1159,18 @@ attempted_by(l44_light_mass, claude_fable_5_1).
 checked_by(l44_light_mass, claude_fable_5_1, by_hand).
 referee_pending(l44_light_mass).
 addresses(t2c, l44_algebra).  addresses(t2c, l44_light_mass).
+claim(l45_fibres, proposition, proved, "Proposition 45.1", "For B = C(T^6) x W, W = S_3 x Z_2 the Weyl group of SU(3) x SU(2): evaluation at the fixed point maps B onto C*(W) = C^4 + M_2(C)^2; restriction to a three-point orbit maps B onto M_3(C*(S_2 x Z_2)) = M_3(C)^4; selecting the trivial character, the standard representation of S_3 and one character of the stabilizer gives B -> C + M_2(C) + M_3(C), the complexified finite algebra, the corpus row rs_N18 proved structurally.").
+source(l45_fibres, 'lemmas/45_weyl_crossed_product_two_sheets.md', 'statements').
+attempted_by(l45_fibres, claude_fable_5_1).
+checked_by(l45_fibres, claude_fable_5_1, by_hand).
+referee_pending(l45_fibres).
+claim(l45_two_sheets, theorem, proved, "Theorem 45.2", "Corollary 16.8 with the sheets V_X = C + C^2 (algebra C + M_2(C), grading diag(1,-1,-1), d_X = D_v) and V_Y = C^3 (algebra M_3(C), d_Y = 0) gives the 18-state bimodule of the corpus (rs_N6) with KO-6 signs, order zero, order one, nonzero one-forms and the real orientability relation; its intersection form is skew of rank 2 with kernel (2, 1, 0). The two sheets are the two orbit types of the Weyl action.").
+source(l45_two_sheets, 'lemmas/45_weyl_crossed_product_two_sheets.md', 'statements').
+attempted_by(l45_two_sheets, claude_fable_5_1).
+checked_by(l45_two_sheets, claude_fable_5_1, by_hand).
+depends(l45_two_sheets, l16_two_sheets).  depends(l45_two_sheets, l45_fibres).
+referee_pending(l45_two_sheets).
+addresses(t16, l45_fibres).  addresses(t16, l45_two_sheets).
 claim(l23_potential, no_go, proved, "Proposition 23.8", "Flat massless family, this gauge content, fermions of frequency 1, one loop: theta = pi/2 is the unique global minimum for n_f > 0, and V is strictly decreasing for n_f >= 10.8; for smaller n_f, no interior minimum on grids (Python). Escapes: general bulk masses with a completion, warping, wall scalar with a potential, wall terms, fermions of frequency 2.").
 source(l23_potential, 'lemmas/23_two_gradings_interval.md', 'the-one-loop-potential-in-the-same-family').
 attempted_by(l23_potential, claude_opus_5_5).

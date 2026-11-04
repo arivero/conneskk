@@ -253,6 +253,7 @@ A dated record to November 2026 in nine sections: origins beside the Kaluza-Klei
 - [The Higgs representation in the window: the tangent of the orbit of the marked lines](lemmas/42_higgs_as_connector_moduli.md#the-higgs-representation-in-the-window-the-tangent-of-the-orbit-of-the-marked-lines)
 - [Which connections on a vertical kernel are Berry connections](lemmas/43_engineered_connections.md#which-connections-on-a-vertical-kernel-are-berry-connections)
 - [The retained algebra along the seesaw scaling](lemmas/44_seesaw_scaling_retained_algebra.md#the-retained-algebra-along-the-seesaw-scaling)
+- [The Weyl crossed product and the two-sheet bimodule](lemmas/45_weyl_crossed_product_two_sheets.md#the-weyl-crossed-product-and-the-two-sheet-bimodule)
 
 ### Results: [results/README.md](results/README.md)
 
