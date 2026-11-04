@@ -56,7 +56,7 @@ In the type I' form the adjoint scalars of the D8 stack are open strings with tw
 1. **One family, three regimes.** Realize T_s as the type I' interval with D8-branes in the configuration 15 + 1, with the corpus parent (lemma 22) as its low-energy window: the window must reproduce the modern D_F, J and gamma (lemma 22 does this for any finite data), the tower must open along a joint family as the interval grows (strong coupling, 11), and the collapse must give the non-chiral nine-dimensional theory (9).
 2. **The algebra.** The Chan-Paton algebras of orientifold stacks are of the types O(n), Sp(n), U(n); the Connes algebra C + H + M_3(C) has the form of stacks of one brane, two branes with a symplectic projection, and three branes. Decide whether the modern algebra is the Chan-Paton algebra of a stack configuration on the interval (for the colour factor, lemma 21 puts colour inside SO(30), on the same stack as the light flavours).
 3. **The six dimensions and chirality.** Ten-dimensional chirality and the KO-6 class must come from the internal six dimensions (02: CP^2 x S^2 with fluxes, or a Calabi-Yau with an SU(4) bundle as in Proposal 5.5).
-4. **The path.** Proposition 1.5 requires a second scale; in the heterotic web the dilaton gradient of type I' (whose slope depends on the D8 positions) is a candidate.
+4. **The path.** Proposition 1.5 requires a second scale; in the heterotic web the dilaton gradient of type I' (whose slope depends on the D8 positions) is a candidate; Proposition 9.1 of [09](09_dilaton_spectral_and_so32.md) writes it as a trace of a function of |D_F|.
 
 ## References for this file
 
