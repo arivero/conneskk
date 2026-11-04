@@ -20,9 +20,9 @@ The proof is short because Sp(2)-equivariance gives exact sums of squares at the
 - (H1) g = dr^2 + pi^* g_{S^4} + rho(r)^2 g_{S^2}, with S^4 of radius 1, rho(r) = r on [0, 2e], and rho constant, equal to rho_l, on the collar [l - 2a, l]. Case (b) and Theorem 29.11 take rho_l = 1, the Fubini-Study metric.
 - (H2) f(r) = r on [0, 2e], f = f_0 > 0 on the collar, and f > 0 on (0, l]. This is M b(|v|^2) v . J with b positive.
 - (H3) The connection on E is the pull-back connection on r <= 2e. In case (b) it preserves the four line summands on the collar, with any invariant interpolation in between. In case (a) it is the pull-back connection throughout. We use radial parallel gauge: nabla_{d/dr} = d/dr. An invariant dr-component a(r) q could otherwise be added to a line-preserving connection; it is removed by radial parallel transport, which changes the displayed formulas by a phase on each line.
-- (H4) eps = -gamma_b, where gamma_b is the chirality of Sigma_4 whose K-type is (1, 2). This is the sign of Proposition 28.13: its right singular vector is at the zero section. The opposite sign exchanges T_M and T_M^* throughout. In the convention of tools/lemma28_radial.py, gamma_b = +1.
+- (H4) eps = -gamma_b, where gamma_b is the chirality of Sigma_4 whose K-type is (1, 2). This is the sign of Proposition 28.13: its right singular vector is at the zero section. The opposite sign exchanges T_M and T_M^* throughout. In the convention of the radial computation of lemma 28, gamma_b = +1.
 
-On the collar put q = eps n . J, with eigenvalues +-3/2, +-1/2 on the line summands, and m = M f_0. In general q = -gamma_b n . J. In the notation of Proposition 28.13 and tools/lemma28_radial.py, q = -tau, and T_M = i Z d/dx + A + i m q on the collar, with x increasing towards the wall. The line q = +3/2 is the summand O(3), and q > 0 are the stable channels of Proposition 28.13.
+On the collar put q = eps n . J, with eigenvalues +-3/2, +-1/2 on the line summands, and m = M f_0. In general q = -gamma_b n . J. In the notation of Proposition 28.13 and of the radial computation of lemma 28, q = -tau, and T_M = i Z d/dx + A + i m q on the collar, with x increasing towards the wall. The line q = +3/2 is the summand O(3), and q > 0 are the stable channels of Proposition 28.13.
 
 Let C_R = ||A_2||, the norm on Sigma_6 (x) E of the curvature contraction A_2 = -(i/8) sum C_ab^alpha c_a c_b c_alpha; it does not depend on V, and C_R = 1 in Python. Let mu_1 > 0 be the smallest positive eigenvalue of Q^* Q for Q = sigma . d_y + y . J of Proposition 28.11. It is positive since the resolvent is compact, because (y . J)^2 >= |y|^2 / 4, and ker Q = 0. Python gives 1.02.
 
@@ -40,7 +40,7 @@ with D_H^2 commuting with Q^^* Q^ and Q^ Q^^*.
 
 and likewise for T_0 T_0^*. Finally D_H Q^^* Q^ = Q^ Q^^* D_H, so D_H^2 commutes with both. ∎
 
-*In radial form.* T_0 = i Z d/dx + A_0 + A_1/rho + i phi q, and the cross terms vanish by {A_0, Z} = 0, [A_0, tau] = 0 and {A_0, A_1} = 0. tools/lemma28_radial.py asserts these three identities on the representations 4, 16, 20, 40 (Python).
+*In radial form.* T_0 = i Z d/dx + A_0 + A_1/rho + i phi q, and the cross terms vanish by {A_0, Z} = 0, [A_0, tau] = 0 and {A_0, A_1} = 0. these three identities were asserted on the representations 4, 16, 20, 40 (Python, script not kept).
 
 **Proposition 29.2 (the model spectrum).** On the total space of N, with f = r and T_0 as above, let Pi be the projection onto ker T_0. Then:
 
@@ -176,7 +176,7 @@ Eliminating ||w_2||, one gets (1 + 2 ||A_o|| / m) ||T_M w|| >= ||F w_1|| - (2 ||
 
 ## Numerical check
 
-Python (numpy, scipy): tools/lemma29_window.py. It asserts that [A, q] = 0 and {A, Z} = 0 at rho = 1 with the line-preserving connection, the values of Lemma 29.5 against the formula, and the norms used above; tools/lemma28_radial.py asserts the identities of Proposition 29.1. The direct solve is a test of the prediction: the limit values below were fixed by Proposition 29.2 and Lemma 29.5 before the run, and a failure would have refuted the argument. Setting: rho(x) = x for x <= 0.4, rho(x) = 1 for x >= 1.2, phi = M rho, l = 3, with the connection switched on [0.6, 1.2], and P1 elements at 2500 cells. Lowest singular values of T_M:
+Python (numpy, scipy), scripts not kept by the rule of the project. The exact inputs were asserted: [A, q] = 0 and {A, Z} = 0 at rho = 1 with the line-preserving connection, the values of Lemma 29.5 against the formula, the norms used above, and the identities of Proposition 29.1. The direct solve is a test of the prediction: the limit values below were fixed by Proposition 29.2 and Lemma 29.5 before the run, and a failure would have refuted the argument. Setting: rho(x) = x for x <= 0.4, rho(x) = 1 for x >= 1.2, phi = M rho, l = 3, with the connection switched on [0.6, 1.2], and P1 elements at 2500 cells. Lowest singular values of T_M:
 
 | V | M = 8 | M = 16 | M = 32 | predicted limit |
 |---|---|---|---|---|

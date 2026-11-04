@@ -1275,7 +1275,7 @@ attempted_by(l28_window, claude_opus_5_5).
 claim(l28_numerics, claim, numerical, "Result 28.5", "Radial system, h = 1, with the corrected spin connection (the singular values and fibre parts of the first version had the wrong sign of the spin connection and are withdrawn): lowest singular value on the 4 falling with the constant-coefficient exponent, next value 1.86 at rho = 1; on the 16, 20, 40 the core values near sqrt 5, sqrt 8, sqrt 12 and wall values above 1.9; both modes with Q(x_a) = -Gamma_a/5; boundary fibre part approaching -w(rho), and -1 for the collar connection; at resolved sample points the core mode has a nonzero density breaking the quaternionic structure, integrated value empirically of order lambda^2.").
 source(l28_numerics, 'lemmas/28_two_walls_connected_parent.md', 'setting').
 attempted_by(l28_numerics, claude_opus_5_5).
-checked_by(l28_numerics, claude_opus_5_5, python("tools/lemma28_radial.py: P1 form of T^* T on a graded grid; exact tests against Casimir and Kodaira spectra")).
+checked_by(l28_numerics, claude_opus_5_5, python("P1 form of T^* T on a graded grid; exact tests against Casimir and Kodaira spectra; script not kept")).
 checked_by(l28_numerics, terra_6_1, python("reran the tables; separate test of A_2")).
 claim(l28_endpoints, proposition, proved, "Proposition 28.8", "Restriction of smooth functions on X to S^4 and CP^3 is surjective, with a(y, v) = a(y, 0) + O(|v|).").
 source(l28_endpoints, 'lemmas/28_two_walls_connected_parent.md', '').
