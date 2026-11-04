@@ -377,3 +377,41 @@ addresses(t2c, d11_orientifold_sign).
 addresses(t14, d11_dilaton_spectral).  addresses(t14, d11_diquark_strings).  addresses(t14, d11_orientifold_scalars).  addresses(t14, d11_so32_comparison).  addresses(t14, d11_dp_walls).  addresses(t14, d11_transposition_tduality).
 addresses(t2c, d11_orientifold_scalars).
 addresses(t14, d11_real_structure_diquarks).
+
+%% ---------------------------------------------------------------- 10, 11: dilaton test and SO(30) fluctuations (Claude Opus 5.5, unrefereed)
+claim(d11_angle_map, proposition, proved, "Proposition 10.1", "The Wilson-line angle of a D8-brane is theta = (pi/2) W(x)/W(L), W = int z^(-1/3) dx; the linear dictionary of Proposition 9.1 holds only for constant z or large R.").
+source(d11_angle_map, '11D/10_dilaton_and_second_scale.md', '').
+attempted_by(d11_angle_map, claude_opus_5_5).
+checked_by(d11_angle_map, claude_opus_5_5, by_hand).
+referee_pending(d11_angle_map).
+addresses(t14, d11_angle_map).
+claim(d11_romans, proposition, proved, "Proposition 10.4", "On a segment with N != 8, proper length is linear in the inverse coupling, so 15 + 1 has no region both strongly coupled and resolved in eleven-dimensional units.").
+source(d11_romans, '11D/10_dilaton_and_second_scale.md', '').
+attempted_by(d11_romans, claude_opus_5_5).
+checked_by(d11_romans, claude_opus_5_5, by_hand).
+referee_pending(d11_romans).
+addresses(t14, d11_romans).
+claim(d11_gradient, proposition, proved, "Propositions 10.5, 10.6", "In scope: the dilaton gradient falls as 6/R^2 along an opening path and enters as powers of alpha'/l^2, so it is the second scale only if a_0 = 0; 8 pi^2 a_0 = (3 zeta(5)/16)(4 n_D' - 3 n_v - n_s - 5 n_g).").
+source(d11_gradient, '11D/10_dilaton_and_second_scale.md', '').
+attempted_by(d11_gradient, claude_opus_5_5).
+checked_by(d11_gradient, claude_opus_5_5, by_hand).
+referee_pending(d11_gradient).
+addresses(t14, d11_gradient).
+claim(d11_so30_block, proposition, proved, "Propositions 11.1, 11.2", "so(30) = u(15) + Lambda^2 V is the commutant of j on the massless block for s = +1, and the fluctuation along the interval is an so(30) connection with antisymmetric block.").
+source(d11_so30_block, '11D/11_so30_fluctuations.md', '').
+attempted_by(d11_so30_block, claude_opus_5_5).
+checked_by(d11_so30_block, claude_opus_5_5, by_hand).
+referee_pending(d11_so30_block).
+addresses(t14, d11_so30_block).
+claim(d11_so30_zero, theorem, proved, "Theorem 11.3", "Under a five-dimensional Yang-Mills action, massless interval scalars form (k_0 + k_l)^perp: none in lemma 22's parent, Lambda^2 V + conjugate for M_15(C) at both walls; a generator has a massless vector or scalar, never both.").
+source(d11_so30_zero, '11D/11_so30_fluctuations.md', '').
+attempted_by(d11_so30_zero, claude_opus_5_5).
+checked_by(d11_so30_zero, claude_opus_5_5, by_hand).
+referee_pending(d11_so30_zero).
+addresses(t14, d11_so30_zero).
+claim(d11_shadow, proposition, proved, "Proposition 11.4", "The compression of the interval connection to the window acts by B_ij -> (m_i - m_j) B_ij, mapping (S^2 5, 3bar) onto (Lambda^2 5, 3bar), counts (3, 6, 1).").
+source(d11_shadow, '11D/11_so30_fluctuations.md', '').
+attempted_by(d11_shadow, claude_opus_5_5).
+checked_by(d11_shadow, claude_opus_5_5, by_hand).
+referee_pending(d11_shadow).
+addresses(t14, d11_shadow).

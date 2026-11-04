@@ -1,0 +1,126 @@
+%% Layout rules for the Supplemental Material PDFs.
+%% Included by paper/build_supplement.sh through pandoc -H; works together with supplement_layout.lua.
+%% Every rule keeps the text width of the page and changes only how material wider than the line is set.
+
+\usepackage{graphicx}
+\usepackage{fvextra}
+
+%% Code blocks: pandoc (with --no-highlight) writes the plain verbatim environment, which never breaks a line.
+%% The environment is redefined through fvextra so that long lines wrap, at spaces when possible and inside a
+%% long token otherwise; a hooked arrow marks each continuation line.
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{%
+  breaklines=true, breakanywhere=true, breakautoindent=true,
+  breaksymbolleft=\raisebox{0.4ex}{\tiny\ensuremath{\hookrightarrow}},
+  fontsize=\small}
+
+\makeatletter
+%% ------------------------------------------------------------------------------------------------
+%% Displayed formulas wider than the line.
+%% \suppdisplay{formula}{tag} replaces \[ formula \tag{tag} \] (the Lua filter writes the call).
+%%  - a formula that fits is set as an ordinary display;
+%%  - a formula at most 10 percent too wide is scaled to the line;
+%%  - a wider formula is set as a paragraph of inline math, which TeX breaks at relations, binary operators and
+%%    the glue of \quad and \qquad, with a hanging indent on the continuation lines and the tag at the end;
+%%  - if some unbreakable piece (matrix, fraction, \left...\right group) is wider than the line, the paragraph
+%%    is set at the width of that piece and the whole block is scaled to the line.
+%% Each case that scales writes a line "supp: ..." to the log.
+\newbox\supp@box
+\newbox\supp@tmp
+\newbox\supp@line
+\newdimen\supp@w
+\newdimen\supp@max
+\newdimen\supp@min
+\newdimen\supp@indent
+\newdimen\supp@tgt
+\supp@indent=1.5em\relax
+\def\supp@scale{1}
+\newif\ifsupp@tagused
+\newcommand\suppbr{\penalty900\relax}
+\newcommand\suppsep{\penalty\z@\relax}
+
+\def\supp@natural#1{\setbox\supp@box\hbox{$\displaystyle#1$}\supp@w=\wd\supp@box\relax}
+
+%% width of the widest line of the vbox register #1, result in \supp@max (global)
+\def\supp@maxline#1{%
+  \global\supp@max=\z@
+  \setbox\supp@tmp\vbox{\unvcopy#1\supp@lineloop}}
+\def\supp@lineloop{%
+  \unskip\unpenalty\unskip
+  \setbox\supp@line\lastbox
+  \ifvoid\supp@line\else
+    \setbox\supp@line\hbox{\unhbox\supp@line\unskip}%
+    \ifdim\wd\supp@line>\supp@max\global\supp@max=\wd\supp@line\fi
+    \expandafter\supp@lineloop
+  \fi}
+
+%% width of the widest unbreakable piece of the formula #1, result in \supp@min
+\def\supp@mincontent#1{%
+  \setbox\supp@box\vbox{%
+    \hsize=\z@ \parindent=\z@ \leftskip=\z@ \rightskip=\z@ \parfillskip=\z@ \hangindent=\z@
+    \tolerance=\@M \pretolerance=-1 \hbadness=\@M \vbadness=\@M \hfuzz=\maxdimen
+    \emergencystretch=\z@
+    \noindent$\displaystyle#1$\par}%
+  \supp@maxline\supp@box
+  \supp@min=\supp@max\relax}
+
+\def\supp@tagline#1{%
+  \ifx\relax#1\relax\else
+    \hskip 1em plus 1fill\null\hfill\hbox{\normalfont\textup{(#1)}}%
+  \fi}
+\def\supp@amstag#1{\ifx\relax#1\relax\else\tag{#1}\fi}
+
+%% paragraph of width #3 holding the formula #1 and the tag #2, result in \supp@box
+\def\supp@wrapbox#1#2#3{%
+  \setbox\supp@box\vbox{%
+    \hsize=#3\relax \parindent=\z@ \parskip=\z@ \leftskip=\z@ \parfillskip=\z@
+    \rightskip=\z@ plus 1fil \hangindent=\supp@indent \hangafter=1
+    \tolerance=\@M \pretolerance=-1 \hbadness=\@M \emergencystretch=\z@
+    \noindent$\displaystyle#1$\supp@tagline{#2}\par}%
+  \supp@tagusedtrue}
+
+%% formula #1 and tag #2 fitted to width #3 (a dimen expression); result in \supp@box, natural width known in \supp@w
+\def\supp@fit#1#2#3{%
+  \supp@tgt=\dimexpr#3\relax
+  \ifdim\supp@w>\supp@tgt
+    \ifdim\supp@w<\dimexpr\supp@tgt*11/10\relax
+      \edef\supp@scale{\fpeval{round(\supp@tgt/\supp@w,4)}}%
+      \typeout{supp: page \thepage, scaled by \supp@scale\space(natural width \the\supp@w, line \the\supp@tgt)}%
+      \setbox\supp@box\hbox{\scalebox{\supp@scale}{$\displaystyle#1$}}%
+    \else
+      \supp@mincontent{#1}%
+      \ifdim\dimexpr\supp@min+\supp@indent\relax>\supp@tgt
+        \edef\supp@scale{\fpeval{round(\supp@tgt/(\supp@min+\supp@indent),4)}}%
+        \typeout{supp: page \thepage, wrapped and scaled by \supp@scale\space(unbreakable piece \the\supp@min, line \the\supp@tgt): \detokenize{#1}}%
+        \supp@wrapbox{#1}{#2}{\dimexpr\supp@min+\supp@indent\relax}%
+        \setbox\supp@box\hbox{\scalebox{\supp@scale}{\box\supp@box}}%
+      \else
+        \typeout{supp: page \thepage, wrapped (natural width \the\supp@w, line \the\supp@tgt)}%
+        \supp@wrapbox{#1}{#2}{\supp@tgt}%
+      \fi
+    \fi
+  \else
+    \setbox\supp@box\hbox{$\displaystyle#1$}%
+  \fi}
+
+\newcommand\suppdisplay[2]{%
+  \supp@natural{#1}%
+  \ifdim\supp@w>\linewidth
+    \supp@tagusedfalse
+    \supp@fit{#1}{#2}{\linewidth}%
+    \[\vcenter{\box\supp@box}\ifsupp@tagused\else\supp@amstag{#2}\fi\]%
+  \else
+    \[#1\supp@amstag{#2}\]%
+  \fi}
+
+%% \boxed{...} (amsmath) is an unbreakable box; a boxed formula wider than the line is set as a framed paragraph.
+\renewcommand\boxed[1]{%
+  \begingroup
+  \supp@natural{#1}%
+  \ifdim\dimexpr\supp@w+2\fboxsep+2\fboxrule\relax>\linewidth
+    \supp@fit{#1}{}{\linewidth-2\fboxsep-2\fboxrule}%
+    \fbox{\box\supp@box}%
+  \else
+    \fbox{\m@th$\displaystyle#1$}%
+  \fi
+  \endgroup}
+\makeatother

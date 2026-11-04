@@ -2,6 +2,9 @@
 # Assemble the Supplemental Material from the lemma files and referee reports, which stay the single source.
 # Usage: build_supplement.sh         (letter page)
 #        build_supplement.sh mobile  (same column width as the mobile papers)
+# Code blocks, tables and displayed formulas wider than the text block are wrapped or scaled to it by
+# paper/supplement_layout.tex (macros) and paper/supplement_layout.lua (pandoc filter); the text is unchanged.
+# TW is the width of the text block in pt, which the filter needs to size the tables.
 set -e
 cd "$(dirname "$0")/.."
 OUT=paper/supplemental.md
@@ -41,8 +44,6 @@ HDR=paper/.supp_header.tex
 cat > "$HDR" <<'H'
 \usepackage{mathtools}
 \usepackage{fvextra}
-\DefineVerbatimEnvironment{Verbatim}{Verbatim}{breaklines=true,breakanywhere=true,fontsize=\footnotesize}
-\fvset{breaklines=true,breakanywhere=true}
 \usepackage{unicode-math}
 \setmathfont{Latin Modern Math}
 \newfontfamily\fallback{DejaVu Serif}
@@ -60,12 +61,13 @@ cat > "$HDR" <<'H'
 \allowdisplaybreaks
 H
 if [ "$1" = mobile ]; then
-  GEO="paperwidth=270pt,paperheight=585pt,textwidth=246pt,textheight=540pt,top=18pt,left=12pt,headheight=0pt,headsep=0pt,footskip=14pt"; NAME=supplemental_mobile
+  GEO="paperwidth=270pt,paperheight=585pt,textwidth=246pt,textheight=540pt,top=18pt,left=12pt,headheight=0pt,headsep=0pt,footskip=14pt"; NAME=supplemental_mobile; TW=246
 else
-  GEO="letterpaper,margin=1in"; NAME=supplemental
+  GEO="letterpaper,margin=1in"; NAME=supplemental; TW=469.75
 fi
 pandoc "$OUT" -f markdown+tex_math_single_backslash+tex_math_double_backslash-raw_tex-implicit_figures \
-  --pdf-engine=xelatex --no-highlight --toc --toc-depth=1 -H "$HDR" \
+  --pdf-engine=xelatex --no-highlight --toc --toc-depth=1 -H "$HDR" -H paper/supplement_layout.tex \
+  --lua-filter=paper/supplement_layout.lua -M supp_textwidth=$TW \
   -V documentclass=article -V fontsize=10pt -V geometry:"$GEO" -V mainfont="Latin Modern Roman" -V colorlinks=false \
   -M title="Supplemental Material: Finite spectral triples as towerless intervals" -M date="Draft, 3 November 2026" \
   -o paper/$NAME.pdf

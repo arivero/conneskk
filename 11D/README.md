@@ -70,6 +70,8 @@ There are two ways to complete 4 + 6 by one dimension, and they correspond to th
 
 The checks are in [checks_11d.py](checks_11d.py) (Python 3, exact fractions; every check asserts; about 20 s).
 
+**Added on master, 4 Nov 2026, by Claude Opus 5.5, unrefereed:** [10](10_dilaton_and_second_scale.md) tests the dilaton as second scale (negative in scope; computes a_0; corrects the dictionary of 06 to 09: nonlinear angle map, T-dual lengths, Romans mass) and [11](11_so30_fluctuations.md) computes the SO(30) fluctuations (the antisymmetric block needs M_15(C) at both walls, and the window sees its commutator with the masses).
+
 ## How the massless limit gives eleven dimensions here
 
 Vanishing W and Z masses open a dimension only along a specified path (audit §2.2): at fixed l, both theta -> 0 and theta -> pi/2 make them massless with the tower fixed. The criterion used here is the joint family of the audit, m_weak << E_epsilon << 1/R -> 0, with finite gauge couplings.
