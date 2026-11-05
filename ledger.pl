@@ -1229,6 +1229,37 @@ checked_by(l48_real_two_sheets, claude_fable_5_1, by_hand).
 depends(l48_real_two_sheets, l48_spinorial_algebras).  depends(l48_real_two_sheets, l45_two_sheets).  depends(l48_real_two_sheets, l16_two_sheets).
 checked_by(l48_real_two_sheets, claude_opus_5_5, python("the fibres of the spinorial crossed product at the two orbits; the bimodule axioms and the intersection form on the 18 states")).  % 5 Nov 2026: corner/quotient choice stated; selection restated as the forcing of the orbit types
 addresses(t16, l48_spin_lift).  addresses(t16, l48_spinorial_algebras).  addresses(t16, l48_real_two_sheets).
+claim(l49_sheet_is_spinor_fibre, proposition, proved, "Proposition 49.1", "The spinor fibre Sigma_4 of the flat four-torus A with the Clifford action c(e_a) (a = 1..4), the chirality Gamma and the quaternionic structure j is the sheet W = H^2 of Example 16.9 with axis p = e_5: the chirality is the grading axis, the two chiralities are L_p and L_p^perp, Spin(4) is K_p, and v -> c(v)|_{Sigma_+} is a Spin(4)-equivariant isomorphism from T A = R^4 onto Hom_H(Sigma_+, Sigma_-) = T_p S^4; the even algebra is End_H(Sigma_+) + End_H(Sigma_-) = H_R + H_L.").
+source(l49_sheet_is_spinor_fibre, 'lemmas/49_spinor_fibre_is_the_quaternionic_sheet.md', 'statements').
+attempted_by(l49_sheet_is_spinor_fibre, claude_fable_5_1).
+checked_by(l49_sheet_is_spinor_fibre, claude_fable_5_1, python("Cl(4) with chirality as Cl(5); j commuting with all generators; not kept")).
+depends(l49_sheet_is_spinor_fibre, l46_odd_blocks).
+referee_pending(l49_sheet_is_spinor_fibre).
+claim(l49_hypercharge_is_transposition, proposition, proved, "Proposition 49.2", "The lifted stabilizer Dic_3 of the orbit type (a, a, a) acts on one chirality Sigma_R through Z_4 (the three-cycles trivially, the lifted transposition x with eigenvalues +-i) and on the other Sigma_L through its faithful representation; the real algebra it generates on Sigma_4 is C + H with C = span(1, x|Sigma_R) acting as (lambda, conj lambda), the Cartan of H_R, and H = End_H(Sigma_L): the Standard Model subalgebra of the Pati-Salam pair, and the torus U(1)_b of lemma 42 (and of Corollary 46.4 under the eigenline condition) is the circle of the lifted transposition.").
+source(l49_hypercharge_is_transposition, 'lemmas/49_spinor_fibre_is_the_quaternionic_sheet.md', 'statements').
+attempted_by(l49_hypercharge_is_transposition, claude_fable_5_1).
+checked_by(l49_hypercharge_is_transposition, claude_fable_5_1, python("the lifts in Cl(4), their eigenvalues on the two chiralities, the real span of dimension 6; not kept")).
+depends(l49_hypercharge_is_transposition, l48_spin_lift).  depends(l49_hypercharge_is_transposition, l48_spinorial_algebras).  depends(l49_hypercharge_is_transposition, l42_tangent).
+referee_pending(l49_hypercharge_is_transposition).
+claim(l49_invariant_yukawa, proposition, proved, "Proposition 49.3", "With x acting as L_i on both chiralities, the odd Hermitian blocks commuting with x are X = diag(y_1, y_2) in the bases (1, j), complex dimension two, the Y_u and Y_d of the spectral Standard Model; X = L_a + i L_c with a = (y_1 + conj y_2)/2 and c = (y_1 - conj y_2)/(2i), the quaternionic ones having y_2 = conj y_1; no nonzero odd block commutes with all of Dic_3.").
+source(l49_invariant_yukawa, 'lemmas/49_spinor_fibre_is_the_quaternionic_sheet.md', 'statements').
+attempted_by(l49_invariant_yukawa, claude_fable_5_1).
+checked_by(l49_invariant_yukawa, claude_fable_5_1, python("complex dimensions 2 and 0 of the commuting blocks; not kept")).
+depends(l49_invariant_yukawa, l49_hypercharge_is_transposition).  depends(l49_invariant_yukawa, l46_doublet_masses).
+referee_pending(l49_invariant_yukawa).
+claim(l49_orbit_types_groups, proposition, proved, "Proposition 49.4", "The stabilizers in S_3 of the points of A are S_3 at the nine points (a, a, a) with 3a = 0, <tau> on the mirror planes and trivial elsewhere; the lifted stabilizer algebras on Sigma_4 are C + H, C (the circle of the lifted transposition on both chiralities, the common unbroken circle of Corollary 46.4 for a diagonal block with distinct moduli and a weight line) and R, with unitary groups U(1) x SU(2), U(1) and 1; the Clifford element of a displacement along a mirror is a quaternionic block commuting with x.").
+source(l49_orbit_types_groups, 'lemmas/49_spinor_fibre_is_the_quaternionic_sheet.md', 'statements').
+attempted_by(l49_orbit_types_groups, claude_fable_5_1).
+checked_by(l49_orbit_types_groups, claude_fable_5_1, by_hand).
+depends(l49_orbit_types_groups, l49_hypercharge_is_transposition).  depends(l49_orbit_types_groups, l46_hypercharge_direction).
+referee_pending(l49_orbit_types_groups).
+claim(l49_quark_generation, proposition, proved, "Proposition 49.5", "Corollary 16.8 with V_X = Sigma_4, A_{F,X} = C + H, grading the chirality of A, d_X an odd block, and V_Y = C^3 with M_3(C) gives a 24-state bimodule over C + H + M_3(C) with the KO-6 signs, order zero, order one, nonzero one-forms and the orientability relation: the quark sector of one generation of the spectral Standard Model, with intersection form [[0,0,2],[0,0,-2],[-2,2,0]] of rank 2; the 18-state bimodule of Theorem 48.3 is its restriction to one character.").
+source(l49_quark_generation, 'lemmas/49_spinor_fibre_is_the_quaternionic_sheet.md', 'statements').
+attempted_by(l49_quark_generation, claude_fable_5_1).
+checked_by(l49_quark_generation, claude_fable_5_1, by_hand).  % the referee of lemma 48 checked the axioms numerically as a lead
+depends(l49_quark_generation, l48_real_two_sheets).  depends(l49_quark_generation, l16_two_sheets).
+referee_pending(l49_quark_generation).
+addresses(t14, l49_sheet_is_spinor_fibre).  addresses(t14, l49_hypercharge_is_transposition).  addresses(t14, l49_invariant_yukawa).  addresses(t16, l49_quark_generation).  addresses(t0, l49_orbit_types_groups).
 claim(l23_potential, no_go, proved, "Proposition 23.8", "Flat massless family, this gauge content, fermions of frequency 1, one loop: theta = pi/2 is the unique global minimum for n_f > 0, and V is strictly decreasing for n_f >= 10.8; for smaller n_f, no interior minimum on grids (Python). Escapes: general bulk masses with a completion, warping, wall scalar with a potential, wall terms, fermions of frequency 2.").
 source(l23_potential, 'lemmas/23_two_gradings_interval.md', 'the-one-loop-potential-in-the-same-family').
 attempted_by(l23_potential, claude_opus_5_5).
