@@ -1527,6 +1527,8 @@ checked_by(l29_window_a, terra_6_1, by_hand).
 %% Second Terra reading of lemma 29, 5 Nov 2026 (historical/reviews/2026-11-05_terra_check_29_second_reading.md), with the first reports withheld: two errors repaired in the text (quantifiers of delta in l29_window_b and l29_window_a; the Clifford-commutator sign in the IMS step of l29_window_b), amendments to l29_splitting, l29_model, l29_bulk, l29_lines, l29_wall, l29_tunnelling, l29_wall_a applied; no counterexample to the corrected theorems; l28_criterion now carries its proof in lemma 28.
 referee_report('lemmas/29_window_on_the_disc_bundle.md', 'historical/reviews/2026-11-04_terra_check_29.md').
 referee_report('lemmas/29_window_on_the_disc_bundle.md', 'historical/reviews/2026-11-05_terra_check_29_second_reading.md').
+referee_report('lemmas/37_dilaton_and_second_scale.md', 'historical/reviews/2026-11-05_terra_check_37_38.md').
+referee_report('lemmas/38_so30_fluctuations.md', 'historical/reviews/2026-11-05_terra_check_37_38.md').
 claim_amended(l28_window, l29_window_b).
 claim_amended(l28_window, l29_window_a).
 addresses(t0, l29_window_b).  addresses(t0, l29_window_a).  addresses(t0, l29_compression).  addresses(t0b, l29_compression).

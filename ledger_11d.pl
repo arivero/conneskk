@@ -468,39 +468,45 @@ addresses(t2c, d11_orientifold_scalars).
 addresses(t14, d11_real_structure_diquarks).
 
 %% ---------------------------------------------------------------- 10, 11: dilaton test and SO(30) fluctuations (Claude Opus 5.5, unrefereed)
-claim(d11_angle_map, proposition, proved, "Proposition 10.1", "The Wilson-line angle of a D8-brane is theta = (pi/2) W(x)/W(L), W = int z^(-1/3) dx; the linear dictionary of Proposition 9.1 holds only for constant z or large R.").
+claim(d11_angle_map, proposition, proved, "Proposition 10.1", "The Wilson-line angle of a D8-brane is theta = (pi/2) W(x)/W(L), W = int z^(-1/3) dx; the linear dictionary of Proposition 9.1 holds as a function of every position only for constant z, and asymptotically for large R.").
 source(d11_angle_map, 'lemmas/37_dilaton_and_second_scale.md', '').
 attempted_by(d11_angle_map, claude_opus_5_5).
 checked_by(d11_angle_map, claude_opus_5_5, by_hand).
 checked_by(d11_angle_map, sonnet_5_5, by_hand).
+checked_by(d11_angle_map, terra_6_1, by_hand).  % 5 Nov 2026: sources reread; the qualification of exactly-when added
 addresses(t14, d11_angle_map).
-claim(d11_romans, proposition, proved, "Proposition 10.4", "On a segment with N != 8, proper length is linear in the inverse coupling, so the classical 15 + 1 profile has no region both strongly coupled and resolved in eleven-dimensional units.").
+claim(d11_romans, proposition, proved, "Proposition 10.4", "On a segment with N != 8, proper length is linear in the inverse coupling, so the classical 15 + 1 profile has no region both strongly coupled and resolved at the formal local scale g^(1/3) l_s; no eleven-dimensional lift is established for the massive background.").
 source(d11_romans, 'lemmas/37_dilaton_and_second_scale.md', '').
 attempted_by(d11_romans, claude_opus_5_5).
 checked_by(d11_romans, claude_opus_5_5, by_hand).
 checked_by(d11_romans, sonnet_5_5, by_hand).
+checked_by(d11_romans, terra_6_1, by_hand).  % 5 Nov 2026: coefficient and bound confirmed; orientation, N = 8 and the formal eleven-dimensional scale amended
 addresses(t14, d11_romans).
-claim(d11_gradient, proposition, proved, "Propositions 10.5, 10.6", "In scope: the dilaton gradient falls as 6/R^2 along an opening path and enters as powers of alpha'/l^2, so it is the second scale only if a_0 = 0; 8 pi^2 a_0 = (3 zeta(5)/16)(4 n_D' - 3 (n_i - (15/16) n_h) - n_s - 5 n_g), with n_i = 16, n_h = 9 for sp(2) + su(4).").
+claim(d11_gradient, proposition, proved, "Propositions 10.5, 10.6", "In scope (a regular joint expansion in theta and alpha'/l^2): the relative variation of the dilaton profile is bounded by 6/R^2 along an opening path, and the gradient is the second scale only if a_0 = 0, and with a_1 = 0 only if b = 0 (counterexample G_0 = theta^6, G_1 = theta^2 at b = 0); 8 pi^2 a_0 = (3 zeta(5)/16)(4 n_D' - 3 (n_i - (15/16) n_h) - n_s - 5 n_g), with n_i = 16, n_h = 9 for sp(2) + su(4).").
 source(d11_gradient, 'lemmas/37_dilaton_and_second_scale.md', '').
 attempted_by(d11_gradient, claude_opus_5_5).
 checked_by(d11_gradient, claude_opus_5_5, by_hand).
 checked_by(d11_gradient, sonnet_5_5, by_hand).
+checked_by(d11_gradient, terra_6_1, python("A_0 = 32.9184, the sample radius and the stationary angles in SciPy; the error in Proposition 10.6, item 3, found with the counterexample at b = 0")).  % 5 Nov 2026
 addresses(t14, d11_gradient).
 claim(d11_so30_block, proposition, proved, "Propositions 11.1, 11.2", "so(30) = u(15) + Lambda^2 V is the commutant of j on the massless block for s = +1, and the fluctuation along the interval is an so(30) connection with antisymmetric block.").
 source(d11_so30_block, 'lemmas/38_so30_fluctuations.md', '').
 attempted_by(d11_so30_block, claude_opus_5_5).
 checked_by(d11_so30_block, claude_opus_5_5, by_hand).
 checked_by(d11_so30_block, sonnet_5_5, by_hand).
+checked_by(d11_so30_block, terra_6_1, by_hand).  % 5 Nov 2026: blocks and counts confirmed; real-vector-space decomposition; nonunital representation noted
 addresses(t14, d11_so30_block).
-claim(d11_so30_zero, theorem, proved, "Theorem 11.3", "Under a five-dimensional Yang-Mills action, massless interval scalars form (k_0 + k_l)^perp: none in lemma 22's parent, Lambda^2 V + conjugate for M_15(C) at both walls; a generator has a massless vector or scalar, never both.").
+claim(d11_so30_zero, theorem, proved, "Theorem 11.3", "Under a five-dimensional Yang-Mills action at trivial background, with the gauge action from a unital completion of the corner representation, massless interval scalars form (k_0 + k_l)^perp and vectors k_0 cap k_l: none in lemma 22's parent, Lambda^2 V + conjugate (210 real) with u(15) vectors (225 real) for M_15(C) at both walls; a generator has a massless vector or scalar, never both; tree-level counts.").
 source(d11_so30_zero, 'lemmas/38_so30_fluctuations.md', '').
 attempted_by(d11_so30_zero, claude_opus_5_5).
 checked_by(d11_so30_zero, claude_opus_5_5, by_hand).
 checked_by(d11_so30_zero, sonnet_5_5, by_hand).
+checked_by(d11_so30_zero, terra_6_1, by_hand).  % 5 Nov 2026: zero-mode calculation confirmed once the gauge action and the boundary problem are specified; the corner representation alone supplies no gauge group; counts 210 and 225
 addresses(t14, d11_so30_zero).
-claim(d11_shadow, proposition, proved, "Proposition 11.4", "The compression of the interval connection to the window acts by B_ij -> (m_i - m_j) B_ij, mapping (S^2 5, 3bar) onto (Lambda^2 5, 3bar), counts (3, 6, 1).").
+claim(d11_shadow, proposition, proved, "Proposition 11.4", "The compression of a constant interval connection to the window acts by B_ij -> -((1 - cos(l(m_i - m_j)))/(l(m_i - m_j))) B_ij, mapping (S^2 5, 3bar) onto (Lambda^2 5, 3bar) as vector spaces, counts (3, 6, 1); its realization as an inner fluctuation at nonzero mass needs a unital completion of the corner algebra.").
 source(d11_shadow, 'lemmas/38_so30_fluctuations.md', '').
 attempted_by(d11_shadow, claude_opus_5_5).
 checked_by(d11_shadow, claude_opus_5_5, by_hand).
 checked_by(d11_shadow, sonnet_5_5, by_hand).
+checked_by(d11_shadow, terra_6_1, by_hand).  % 5 Nov 2026: compression identity confirmed; the perturbation is not an inner one-form of the nonunital corner algebra at nonzero mass
 addresses(t14, d11_shadow).
