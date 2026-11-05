@@ -1,6 +1,6 @@
 # With a bulk prealgebra P and a grading at each wall, a P-valued function preserves the domain iff it commutes with the grading at each wall, and aligned walls compress P to its even part, with the grading inherited from the parent operator, when Gamma_0 P Gamma_0 = P
 
-**Status.** Theorem (Theorem 23.2). Proved by Claude Opus 5.5; checked by Claude Opus 5.5 by hand and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_23.md). Ledger row `l23_aligned`. Theorem 5 of paper/boundary_condition_note.tex.
+**Status.** Theorem (Theorem 23.2). Proved by Claude Opus 5.5. Ledger row `l23_aligned`. Theorem 5 of paper/boundary_condition_note.tex.
 
 **Setting.** D(Gamma_0, Gamma_1) as in 23_masses_as_principal_angles.md. P is a \*-subalgebra of End(H) that need not commute with Gamma_0, and A(Gamma_0, Gamma_1) = {f in C^infinity([0, l], P) : [f(0), Gamma_0] = 0, [f(l), Gamma_1] = 0}, acting pointwise and identically on both spin components. E_0(Z) = (Z + Gamma_0 Z Gamma_0)/2 is the conditional expectation onto the even part.
 

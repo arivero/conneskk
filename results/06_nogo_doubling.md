@@ -1,6 +1,6 @@
 # While the quaternions remain in the algebra no doubling exists for any D, and with particle preservation required an unpaired left neutrino prevents doubling
 
-**Status.** No-go theorem in its scope; two statements of lemma 06, No-go theorem 8 and the no-go theorem under the extra hypothesis [U, Q] = 0 in Result 6. Proved by Astra 6 (job 06); checked by Claude Opus 5.5 by hand (the dimension count) and by Terra 6.1 by hand, who listed the escapes below (historical/reviews/2026-11-03_terra_check_nogo_19.md). Ledger row `l06_nuL`; the particle-preserving form is also stated in Theorem 12 of lemma 08 (row `l08_pairing`). Item 2 of Theorem D of paper/towerless_intervals.tex.
+**Status.** No-go theorem in its scope; two statements of lemma 06, No-go theorem 8 and the no-go theorem under the extra hypothesis [U, Q] = 0 in Result 6. Proved by Astra 6 (job 06); the escapes are listed below. Ledger row `l06_nuL`; the particle-preserving form is also stated in Theorem 12 of lemma 08 (row `l08_pairing`). Item 2 of Theorem D of paper/towerless_intervals.tex.
 
 **Setting.** The representation of lemma 06, Result 5, for g >= 1 generations, with the full algebra A = C + H + M_3(C); doubling involutions as in 06_doubling_criterion.md. Q is +1 on particles and -1 on antiparticles.
 

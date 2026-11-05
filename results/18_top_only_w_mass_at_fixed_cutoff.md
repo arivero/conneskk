@@ -1,6 +1,6 @@
 # In the three-generation Standard Model with only the top massive, the W mass at fixed cutoff tends to zero as M_W^2 ~ Lambda^4/m_t^2 for both the Taylor and the pole definitions, with M_W^2 <= Lambda^2/e
 
-**Status.** Proposition 4 and Theorem 5 of lemma 18. Proved by Astra 6 (job 18); checked by Claude Opus 5.5 in Python (closed forms, limits, the bound, the root of the pole equation) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_18_16b.md). Ledger row `l18_taylor`. Item 1 of Proposition E.1 of paper/towerless_intervals.tex.
+**Status.** Proposition 4 and Theorem 5 of lemma 18. Proved by Astra 6 (job 18). Ledger row `l18_taylor`. Item 1 of Proposition E.1 of paper/towerless_intervals.tex.
 
 **Setting.** The full three-generation Standard Model representation with charge conjugates; zero Majorana matrix; every Dirac mass zero except one up-type colour triplet of mass m = mu Lambda; x = mu^2, r = e^{-x}; heat cutoff f(z) = e^{-z}. H(y) = int_0^1 exp(-y u(1 - u)) du, g(y) = (2 + y) H(y) - 2, h_x(y) = (2 + x + y) int_0^1 exp(-xu - yu(1 - u)) du - 1 - e^{-x}, A(x) = 2[1 - (1 + x) e^{-x}]/x, w(x) = 3 int_0^1 u^2 e^{-xu} du.
 

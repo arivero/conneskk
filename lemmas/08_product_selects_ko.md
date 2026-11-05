@@ -1,8 +1,8 @@
 # Product real structures and the choice between 9 and 11
 
-Prompt: [prompts/08](../historical/prompts/08_product_selects_ko.md) (Task A: check Lemmas 07.1-07.3; Task B: Conjecture 07.4). Attempted by gpt-6-astra (codex 0.164, xhigh, 3 Nov 2026), working alone. Checked by Claude Opus 5.5: by hand (results 1-3, 4 second part, 8, 12) and numerically in Python (results 5, 6, 7, 11 and 8; section at the end).
+Prompt: [prompts/08](../historical/prompts/08_product_selects_ko.md) (Task A: check Lemmas 07.1-07.3; Task B: Conjecture 07.4). Attempted by gpt-6-astra (3 Nov 2026). Results 5, 6, 7, 8 and 11 have a numerical check in Python (section at the end).
 
-Refereed by Terra 6.1 (gpt-6.1-terra, effort max, 3 Nov 2026; [report](../historical/reviews/2026-11-03_terra_check_08_13_14.md)): all 12 numbered statements are correct. Two points of scope: the case t = -1 in Result 1 uses the extended convention 0_-, since the standard KO-0 signs have t = +1; and Theorem 7 concerns the scalar-algebra truncation, since the full compressed two-sheet algebra with its inherited real structure fails first order (Counterexample 4).
+**Scope.** The case t = -1 in Result 1 uses the extended convention 0_-, since the standard KO-0 signs have t = +1; and Theorem 7 concerns the scalar-algebra truncation, since the full compressed two-sheet algebra with its inherited real structure fails first order (Counterexample 4).
 
 **Outcome.** Lemmas 07.1-07.3 hold under the pointwise reality hypothesis. Conjecture 07.4 is false as stated: Counterexample 11 fixes the physical D_F, J_F, Gamma_F and particle number Q and still admits admissible involutions of both signs. What holds instead: in the standard internal-first KO-6 product, the bare interval reflection always has s = -1 (Theorem 5, formally 4+5 = 9); the product is exactly T_5(m) x P_1 with d_5 = D_0 + m Gamma_0 (Theorem 7); particle preservation pairs the two signs whenever [Q, D] = 0 (Theorem 12); and the literal collapse of the massless interval leaves no light sector (No-go theorem 8).
 
@@ -550,7 +550,7 @@ Conversely, particle-preserving doubling requires the particle spaces of opposit
 
 Lemmas 07.1–07.3 hold under pointwise reality, but their proposed physical consequence does not follow. For the internal-first standard KO-6 product, the required grading twist gives the bare interval reflection \(s=-1\), hence a KO-5 reduction and formal \(4+5=9\). Changing the interval's even real-structure convention consistently does not change this result. A fixed spacetime charge conjugation \(J_M\), and even particle-number preservation, can coexist with both reductions; choosing the lift of L/R reflection remains additional data. Finally, literal collapse of this chiral interval leaves no light fermions, so neither 9 nor 11 has been established as the dimension of a surviving heavy-W/Z limit.
 
-## Independent numerical check (Claude, 3 Nov 2026)
+## Numerical check
 
 Python (numpy), antiunitaries represented as J = M K, with J X J^-1 = M conj(X) M^-1, J^2 = M conj(M), and U J = s J U iff U M = s M conj(U). F_0: H_0 = C^2 (+) C^2 with Gamma_0 = diag(g, -g), D_0 = diag(d, conj(d)) (d off-diagonal, random complex entry), J_0 = block swap times K; KO-6 signs verified. Interval truncation D_I = m sigma_1 (m = 0.7), Gamma_I = sigma_3, J_I = diag(t, 1) K.
 

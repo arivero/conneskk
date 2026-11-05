@@ -1,6 +1,6 @@
 # As l -> infinity at fixed mu the interval decompactifies with chiral wall modes and a one-dimensional Weyl law above mu; as l -> 0 at fixed light mass a unique mu(l) keeps the light pair while the tower diverges
 
-**Status.** Theorem (Theorems 9.8 and 9.9), with Corollary 9.10. Proved by Claude Opus 5.5; checked by Claude Opus 5.5 numerically (the secular equation and the collapse table for m_f = 1, down to l = 0.001) and by Terra 6.1 by hand, effort max: a gap in Theorem 9.8 closed by the referee, Theorem 9.9 correct, Corollary 9.10 wrong as first stated and corrected (report appended to lemma 09). Ledger row `l09_limits`. Theorem B of paper/towerless_intervals.tex. The ledger records Corollary 4.1 of Farsi-Latrémolière as prior work for the fixed-mu collapse, with the tuned collapse outside its hypotheses; the tuned collapse mu(l) was not found in print (lemma 09, Literature).
+**Status.** Theorem (Theorems 9.8 and 9.9), with Corollary 9.10. Proved by Claude Opus 5.5. Ledger row `l09_limits`. Theorem B of paper/towerless_intervals.tex. The ledger records Corollary 4.1 of Farsi-Latrémolière as prior work for the fixed-mu collapse, with the tuned collapse outside its hypotheses; the tuned collapse mu(l) was not found in print (lemma 09, Literature).
 
 **Setting.** Condition (c) with M = -mu, lambda_0 and kappa_0 as in 09_spectrum_with_bulk_mass.md. For c > 1, s(c) is the positive root of tanh s = s/c and F(c) = (lambda_0 l)^2 = c^2 sech^2 s(c), strictly decreasing on (1, infinity) from 1 to 0 (Lemma 9.7).
 

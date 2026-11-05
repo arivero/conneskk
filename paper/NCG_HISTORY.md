@@ -2,9 +2,9 @@
 
 Written by Claude Opus 5.5 on 4 November 2026, to help decide which results of this project are new and which articles to write. Companions: [paper/LITERATURE.md](LITERATURE.md) (targeted priority searches) and the author table at a.rivero.nom.es/research/ncactors.html (authors by year to 2003).
 
-**Method.** Every identifier below was checked in this session against INSPIRE, the arXiv API or Crossref (curl and jq in bash). No Python was used; the author table was counted with awk in bash; no script is kept. Year = first public appearance; journal data follow.
+**Method.** Every identifier below was checked, when this record was written, against INSPIRE, the arXiv API or Crossref (curl and jq in bash). No Python was used; the author table was counted with awk in bash; no script is kept. Year = first public appearance; journal data follow.
 
-**Labels.** [R] passages read in this session; [L] read earlier and recorded in paper/LITERATURE.md (section given); [A] abstract read (and, where stated, the reference list held by INSPIRE or the publisher); [M] bibliographic data checked only. Statements about content rest on [R], [L] or [A]; the one-line descriptions of [M] entries are the standard ones and were not re-read.
+**Labels.** [R] passages read for this record; [L] read earlier and recorded in paper/LITERATURE.md (section given); [A] abstract read (and, where stated, the reference list held by INSPIRE or the publisher); [M] bibliographic data checked only. Statements about content rest on [R], [L] or [A]; the one-line descriptions of [M] entries are the standard ones and were not re-read.
 
 ---
 

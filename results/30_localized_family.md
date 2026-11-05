@@ -1,6 +1,6 @@
 # With bulk mass mu_eps = mu_\* eps^alpha and length c_eps/mu_eps, c_eps = (1 - alpha) log(1/eps) + c_0, the light pair of the interval has mass m_eps ~ 2 mu_\* e^{-c_0} eps, the gap is ~ mu_\* eps^alpha, the localization width over the length tends to zero, and the opposite-wall coefficient is exactly (m/(mu + kappa))^2
 
-**Status.** Proposition (Proposition 30.3). Proposed in the Astra 6 audit of commit b2ddf98 (historical/reviews/2026-11-04_outside_audit_assessment.md), with the proof redone by Claude Opus 5.5; checked by Claude Opus 5.5 in Python (exact secular roots, recomputed by Claude Sonnet 5.5: for mu_\* = 1, alpha = 1/2, c_0 = 2 and eps = 10^-2, c = 4.3026 and m = 2.710 x 10^-3, against the asymptotic 2.707 x 10^-3) and by Terra 6.1 by hand (historical/reviews/2026-11-04_terra_check_30_note.md). Ledger row `l30_localized`. Stated in the section on the interval of paper/joint_limit_note.tex.
+**Status.** Proposition (Proposition 30.3). Proposed by Astra 6 in an audit of commit b2ddf98; proved by Claude Opus 5.5. Ledger row `l30_localized`. Stated in the section on the interval of paper/joint_limit_note.tex.
 
 **Setting.** Bulk mass M = -mu with the mixed conditions of lemma 09, mu_\* > 0, 0 < alpha < 1, mu_eps = mu_\* eps^alpha and the length l^loc_eps = c_eps/mu_eps, c_eps = (1 - alpha) log(1/eps) + c_0, which differs from the l_eps of Theorem 30.1. s = kappa l is the root of s = c tanh s, and m = mu sech s is the light mass.
 

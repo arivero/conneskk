@@ -1,6 +1,6 @@
 # The heavy-W prescription with every fermion mass fixed is incompatible with the CCM relation, and a heavy-W limit forces m_max -> infinity
 
-**Status.** No-go theorem in its scope (Corollary 11.2), conditional on the CCM relation. Proved by Claude Opus 5.5; checked by Claude Opus 5.5 by hand, by Terra 6.1 by hand (effort max; the conclusion as first written was too strong and was corrected; report appended to lemma 11) and by Astra 6 by hand (lemma 20, Result 9, a consensus check). Ledger row `l11_nogo`, depending on `l11_bounds`. Proposition E of paper/towerless_intervals.tex.
+**Status.** No-go theorem in its scope (Corollary 11.2), conditional on the CCM relation. Proved by Claude Opus 5.5; Result 9 of lemma 20 (Astra 6) treats the same statement. Ledger row `l11_nogo`, depending on `l11_bounds`. Proposition E of paper/towerless_intervals.tex.
 
 **Setting.** The heavy-W prescription of canonical 14.1 and research_state 9: v -> infinity with y_f v fixed for every fermion and the gauge couplings fixed, so that the Yukawa couplings tend to zero. The CCM relation and the bounds of 11_heavy_w_mass_bounds.md, with N_g generations.
 

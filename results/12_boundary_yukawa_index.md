@@ -1,6 +1,6 @@
 # With a boundary Yukawa matrix X between a doublet-type and a singlet-type field on the interval, D_X is self-adjoint, its kernel is ker X^dagger + ker X, and ind D_X = N_Q - N_U for every X; equivariantly the index is [rho_Q] - [rho_U]
 
-**Status.** Theorem (Lemma 12.1, Theorem 12.2 and the index part of Corollary 12.3). Proved by Claude Opus 5.5; checked by Claude Opus 5.5 by hand and by Terra 6.1 by hand, effort max: Lemma 12.1 and Theorem 12.2 correct, Corollary 12.3 correct with one amendment (report appended to lemma 12). Ledger row `l12_index`, depending on `l09_index`. Theorem C of paper/towerless_intervals.tex.
+**Status.** Theorem (Lemma 12.1, Theorem 12.2 and the index part of Corollary 12.3). Proved by Claude Opus 5.5. Ledger row `l12_index`, depending on `l09_index`. Theorem C of paper/towerless_intervals.tex.
 
 **Setting.** A doublet-type field Q in L^2(I; C^2) (x) C^{N_Q} and a singlet-type field U in L^2(I; C^2) (x) C^{N_U}, components (L, R), grading Gamma = diag(1, -1) on each, bulk operator (D psi)_L = R' + M R, (D psi)_R = -L' + M L with diagonal M_Q, M_U. For a complex N_Q x N_U matrix X, D_X acts on the H^1 functions with
 

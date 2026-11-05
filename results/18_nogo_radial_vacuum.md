@@ -1,6 +1,6 @@
 # For cutoffs in the positive Laplace class and without an added potential or constraint, no finite c > 0 is stationary along a radial ray V = c V_\* of the spectral action
 
-**Status.** No-go theorem in its scope (No-go theorem 9 of lemma 18). Proved by Astra 6 (job 18); checked by Claude Opus 5.5 by hand and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_18_16b.md). Ledger row `l18_radial`.
+**Status.** No-go theorem in its scope (No-go theorem 9 of lemma 18). Proved by Astra 6 (job 18). Ledger row `l18_radial`.
 
 **Setting.** f in class (4): a Laplace transform of a nonzero positive measure nu with 0 < f(0) < infinity and int (s^{-2} + s^2) d nu < infinity. Scalar configurations V = c V_\*, c > 0, V_\* != 0, with A = 0; the literal spectral action on R^4, or on a finite flat torus before its positive momentum sum.
 

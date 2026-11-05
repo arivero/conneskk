@@ -1,6 +1,6 @@
 # Literal collapse of the massless chiral interval in its product with a finite KO-6 triple leaves an empty light sector at every fixed cutoff
 
-**Status.** No-go theorem in its scope (No-go theorem 8 of lemma 08). Proved by Astra 6 (job 08); checked by Claude Opus 5.5 in Python (D_F^2 = D_0^2 (x) 1 + 1 (x) D_I^2 exactly) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger row `l08_nogo`, depending on `l05_limits`. Part of Proposition A.1 of paper/towerless_intervals.tex.
+**Status.** No-go theorem in its scope (No-go theorem 8 of lemma 08). Proved by Astra 6 (job 08). Ledger row `l08_nogo`, depending on `l05_limits`. Part of Proposition A.1 of paper/towerless_intervals.tex.
 
 **Setting.** The heavy-limit model with exactly the product Dirac operator of Result 5, D_F = D_0 (x) 1 + Gamma_0 (x) D_I, with the massless chiral interval or its minimal truncation and m = pi/(2l); a fixed energy cutoff Lambda.
 

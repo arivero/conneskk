@@ -1,6 +1,6 @@
 # The colour SU(3) of the root table lies in no Spin(9) in SO(16) with 128 -> 44 + 84, so the split 44 + 84 of the four-family spinor is not colour-covariant and the fit 44 = 32 + 12 is numerical
 
-**Status.** No-go theorem in its scope (Reading 3b, part (b), of lemma 34: a proved statement inside a reading, after an observation of the user in part (a)). Proved by Claude Opus 5.5 on 4 November 2026 by hand; checked by its author by hand and by Claude Sonnet 5.5 by hand. Ledger row `d11_spin9_colour` (depending on `d11_colour84`). Proposition 12 of paper/generations_note.tex, with the remark after it on the so(9) of e8.
+**Status.** No-go theorem in its scope (Reading 3b, part (b), of lemma 34: a proved statement inside a reading, after an observation of the user in part (a)). Proved by Claude Opus 5.5 on 4 November 2026 by hand. Ledger row `d11_spin9_colour` (depending on `d11_colour84`). Proposition 12 of paper/generations_note.tex, with the remark after it on the so(9) of e8.
 
 **Setting.** Four families: the 128 half-integer roots of E8, the chiral spinor of SO(16), with colour the regular SU(3) of the root table, under which the vector 16 of SO(16) is 3 + 3-bar + 10 (1). Spin(9) is embedded in SO(16) through its spinor, in the class with 128 -> 44 + 84, the graviton and the three-form of eleven-dimensional supergravity (recalled; the other chirality of the embedding gives an irreducible 128).
 

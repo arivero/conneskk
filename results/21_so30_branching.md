@@ -1,6 +1,6 @@
 # For the five quarks other than the top, 30 = (5, 3) + (5-bar, 3-bar), and the adjoint of SO(30) contains in (15, 3-bar) and (24, 1) + (1, 1) exactly the charged scalar-partner counts of three generations, plus three triplets of charge +4/3 and one neutral state
 
-**Status.** Proposition (a representation and charge count, unnumbered in lemma 21; the ledger records it as kind claim). Computed by Claude Opus 5.5; checked by Claude Opus 5.5 in Python (exact counting: 435 = 224 + 1 + 105 + 105, with 105 = 60 + 45 and 224 = 192 + 24 + 8) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_20_21.md). Ledger row `l21_so30`, with prior work recorded as partial: hep-ph/0512065, Tables 1-2. Cited in paper/real_structure_note.tex ("\supp{21}"), in its section on the sign of an odd factorization and in its section on the charge-4/3 antitriplets.
+**Status.** Proposition (a representation and charge count, unnumbered in lemma 21; the ledger records it as kind claim). Computed by Claude Opus 5.5. Ledger row `l21_so30`, with prior work recorded as partial: hep-ph/0512065, Tables 1-2. Cited in paper/real_structure_note.tex ("\supp{21}"), in its section on the sign of an odd factorization and in its section on the charge-4/3 antitriplets.
 
 **Setting.** SU(5) x SU(3) inside SO(30), acting on 30 = (5, 3) + (5-bar, 3-bar). On the 5, Q = diag(3/5, 3/5, -2/5, -2/5, -2/5) + (1/15) I_5, that is Q = 2/3 for u, c and Q = -1/3 for d, s, b, which includes the U(1) commuting with SU(5).
 

@@ -1,6 +1,6 @@
 # The scalar inner fluctuations of the interval parent are pure gauge under its allowed endpoint gauge group and act on the moving window by the gauge orbit of D_F, which reproduces on that orbit the quadratic term of Chamseddine-Connes-van Suijlekom
 
-**Status.** Theorem (Theorem 22.5), with Corollary 22.6. Proved by Claude Opus 5.5; checked by Claude Opus 5.5 in Python (on the two-point data with J = sigma_1 K, D + A_(1) + A~_(1) + A_(2) = U D U\* to 4 x 10^-16, and the link of U_w\* D U_w) and by Terra 6.1 by hand, who contributed the gauge equivalence under the allowed endpoint gauge group (historical/reviews/2026-11-03_terra_check_22.md). Ledger row `l22_transport` (depending on `l22_parent`). Theorem 6 of paper/boundary_condition_note.tex, together with Theorem 23.4; Corollary 22.6 is cited in paper/real_structure_note.tex ("\supp{22}, Corollary 22.6").
+**Status.** Theorem (Theorem 22.5), with Corollary 22.6. Proved by Claude Opus 5.5; the gauge equivalence under the allowed endpoint gauge group is by Terra 6.1. Ledger row `l22_transport` (depending on `l22_parent`). Theorem 6 of paper/boundary_condition_note.tex, together with Theorem 23.4; Corollary 22.6 is cited in paper/real_structure_note.tex ("\supp{22}, Corollary 22.6").
 
 **Setting.** The parent of 22_parent_real_triple_order_one.md. Let h be smooth with values in the anti-Hermitian elements of A_F, u' = -h u, u(0) = 1, and w = u(l), a unitary of A_F.
 

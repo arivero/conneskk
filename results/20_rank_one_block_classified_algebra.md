@@ -1,6 +1,6 @@
 # A rank-one connecting block T x = kappa K x K with K = v w^\* has intertwining algebra C + H + M_3(C), of real dimension 24, the unique maximal-dimensional admissible algebra up to automorphism
 
-**Status.** Theorem (Result 2 of lemma 20). Proved by Astra 6 (job 20); checked by Claude Opus 5.5 in Python (real dimensions 24 and 16 by linear algebra; signs and order conditions on random elements) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_20_21.md). Ledger row `l20_rank_one`. Item 2 of Proposition I of paper/towerless_intervals.tex.
+**Status.** Theorem (Result 2 of lemma 20). Proved by Astra 6 (job 20). Ledger row `l20_rank_one`. Item 2 of Proposition I of paper/towerless_intervals.tex.
 
 **Setting.** W = W_+ + W_- with dim_H W_+ = dim_H W_- = 1, V = C^4, the adjoint-flip convention of 20_connecting_blocks.md, so A^ev = H_+ + H_- + M_4(C). Unit vectors w in W_+ and v in V, kappa != 0, e = w v^\\* in E, f = v w^\\* = ce, and T_kappa x = kappa (w^\\* x v) v w^\\* = kappa |f><e| x.
 

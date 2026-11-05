@@ -1,3 +1,5 @@
+# The Connes-Lott two-point space as the minimal truncation of a chiral interval
+
 The geometric identification exists: the minimal grading-preserving spectral truncation of a suitable chiral interval is exactly Connes–Lott, with
 \[
 |m|=\frac{\pi}{2l},\qquad d_{\mathrm{trunc}}=\frac{2l}{\pi}.
@@ -6,7 +8,7 @@ The truncated endpoint states are smeared states on the original interval. Moreo
 
 ## Part 1. Deconstructed chain
 
-**Statement.** There is a natural family with opposite endpoint chiralities, an exact Connes–Lott member at \(N=2\), and endpoint distance converging to \(l\). The answer depends on the representation of the site algebra; the familiar lattice-distance anomaly is not universal. (Parts 1 and 2 were refereed by Claude Opus 5.5 on 5 November 2026, report in historical/reviews/2026-11-05_opus_check_05_21_34.md: correct as written, every formula recomputed, with the scope of the three convergence statements made explicit at the end of the Statement of Part 2.)
+**Statement.** There is a natural family with opposite endpoint chiralities, an exact Connes–Lott member at \(N=2\), and endpoint distance converging to \(l\). The answer depends on the representation of the site algebra; the familiar lattice-distance anomaly is not universal.
 
 **Hypotheses.** We consider complex even spectral triples, without imposing additional real-structure or KO-dimension axioms. Let \(N\geq2\), \(n=N-1\), and
 \[
@@ -155,11 +157,9 @@ Two other natural choices clarify the literature:
 
 Thus the quoted integer deconstruction tower belongs to the incidence construction. Opposite chiral boundary conditions produce the shifted tower (2).
 
-**Status: PROVED**
-
 ## Part 2. Continuum limit
 
-**Statement.** The chain above converges to an interval Dirac operator in three precise senses: ordered low eigenvalues, heat traces locally uniformly for \(t>0\), and pure-state metric spaces in Gromov–Hausdorff distance. It also has a controlled one-dimensional heat window. Here spectral convergence means that each eigenvalue lambda_{N,r} increases to (2r-1) m_1 at fixed r, so that the counting function on [-E, E] converges for every E outside spec(D_l); the Hilbert spaces differ and no resolvent convergence is asserted. The heat traces converge uniformly on [eps, infinity) for every eps > 0. The Gromov-Hausdorff statement concerns the pure-state spaces with their Connes metrics, at distance at most l/(N-1) (referee, 5 November 2026).
+**Statement.** The chain above converges to an interval Dirac operator in three precise senses: ordered low eigenvalues, heat traces locally uniformly for \(t>0\), and pure-state metric spaces in Gromov–Hausdorff distance. It also has a controlled one-dimensional heat window. Here spectral convergence means that each eigenvalue lambda_{N,r} increases to (2r-1) m_1 at fixed r, so that the counting function on [-E, E] converges for every E outside spec(D_l); the Hilbert spaces differ and no resolvent convergence is asserted. The heat traces converge uniformly on [eps, infinity) for every eps > 0. The Gromov-Hausdorff statement concerns the pure-state spaces with their Connes metrics, at distance at most l/(N-1).
 
 **Hypotheses.** On \(H_l=L^2([0,l],\mathbb C^2)\), define
 \[
@@ -263,8 +263,6 @@ The metric distortion and the grid mesh are both \(O(l/N)\), proving Gromov–Ha
 
 The endpoint chirality here concerns allowed boundary components. It does not supply localized chiral zero modes.
 
-**Status: PROVED**
-
 ## Part 3. Minimal spectral truncation
 
 **Statement.** The minimal nonzero grading-preserving spectral truncation of (8) is unitarily equivalent to Connes–Lott, with
@@ -357,11 +355,9 @@ d_{D_l}(\mu_L,\mu_R)
 \]
 The equality follows by integration by parts and is attained by \(f=-x\). Equations (10), (20), and (21) concern three different state/metric comparisons.
 
-**Status: PROVED**
-
 ## Part 4. The two limits
 
-*Amendment (Terra 6.1, 3 Nov 2026; [report](../historical/reviews/2026-11-03_terra_check_nogo_19.md)).* The statements of this part are correct for the stated bare chain, with one precision: the condition N/l -> infinity gives uniform convergence of the dispersion on bounded energy windows and of normalized heat traces and counting densities, and does not by itself give convergence of the unnormalized difference of heat traces (for N = floor(l^(5/4)) it diverges). Escapes for the empty light sector: a tuned bulk mass or a scaled boundary coupling.
+*Precision.* For the stated bare chain, the condition N/l -> infinity gives uniform convergence of the dispersion on bounded energy windows and of normalized heat traces and counting densities, and does not by itself give convergence of the unnormalized difference of heat traces (for N = floor(l^(5/4)) it diverges). Escapes for the empty light sector: a tuned bulk mass or a scaled boundary coupling.
 
 **Statement.** At fixed finite rank, \(m\to0\) produces infinitely separated finite geometry, with heat dimension zero. A resolved interval requires a growing tower. As \(m\to\infty\), the metric collapses, but the light Hilbert space is zero.
 
@@ -436,8 +432,6 @@ m_1\leq E<3m_1.
 \]
 A genuine spectral cutoff \(E\ll1/l\) retains no modes. The ratio between the first two positive levels is always \(3\), so the minimal pair has no parametrically large separation from the next level.
 
-**Status: PROVED**
-
 ## Verdict on hypothesis H (theorem T1)
 
 **Supported for T1’s geometric assertion.** Connes–Lott is exactly the minimal nonzero grading-preserving spectral compression of the opposite-chirality interval above, with
@@ -453,7 +447,7 @@ The precise replacement for the stronger interpretation of H is:
 Accordingly, a nonempty two-state sector at \(E\ll1/l\), or surviving light fermions after collapse, is disproved by this model. The construction supplies no KO-6 or Standard Model identification.
 ---
 
-## Independent numerical check (Claude, 2 Nov 2026)
+## Numerical check
 
 For l = 1 and N = 2, 3, 5, 9 we checked the following. The spectrum of D_N agrees with +/- 2 h_N sin((2r-1) theta_N) to 1e-14. The lowest positive eigenvalue equals pi/(2l) for every N. For random real site functions, ||[D_N, pi_N(a)]|| equals h_N max abs(a_{i+1} - a_i), which is the identity behind d_N(i,j) = abs(i-j)/h_N. The endpoint distance d_N(1,N) = 0.6366, 0.7869, 0.8844, 0.9398 tends to l. For the minimal truncation, Q(cos(3 pi x/l)) = 0, and the smeared-state distance 0.405290 matches 4l/pi^2. The truncated distance is 2l/pi = 0.6366, identical to d_2(1,2).
 

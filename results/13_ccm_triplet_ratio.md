@@ -1,6 +1,6 @@
 # With the three-generation CCM trace and one massive colour triplet of mass m = pi/(2l), the spectral-action W mass is M_W = sqrt(3/8) m = sqrt(3/8) M_KK, with no interval-overlap correction
 
-**Status.** Corollary (Result 7 of lemma 13), proved under its stated hypotheses; the ledger lists the CCM relation as its hypothesis (`ccm_relation`). Proved by Astra 6 (job 13); checked by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_08_13_14.md); the header of lemma 13 records that it reproduces the standard CCM relation. Ledger row `l13_ccm`, depending on `l13_mass_formula`. Item 3 of Proposition F of paper/towerless_intervals.tex.
+**Status.** Corollary (Result 7 of lemma 13), proved under its stated hypotheses; the ledger lists the CCM relation as its hypothesis (`ccm_relation`). Proved by Astra 6 (job 13); the header of lemma 13 records that it reproduces the standard CCM relation. Ledger row `l13_ccm`, depending on `l13_mass_formula`. Item 3 of Proposition F of paper/towerless_intervals.tex.
 
 **Setting.** The full three-generation Standard Model representation with its usual Higgs doublet; all charged fermion states retained in the spectral trace, including those of vanishing Yukawa mass; one colour-triplet Dirac mass at the vacuum identified with m = pi/(2l), every other Dirac mass zero; the formula of 13_spectral_action_vector_mass_formula.md at the matching scale.
 

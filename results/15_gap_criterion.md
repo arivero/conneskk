@@ -1,6 +1,6 @@
 # A metric spectral triple with a finite spectral block of gap g lies within 1/g^2 + max(delta/2, Delta) + Delta + sqrt(Delta) of (C, C^N, D_F) in the spectral propinquity, with no anticommutation hypothesis
 
-**Status.** Theorem (Theorem 15.3, Lemma R2 of the Farsi-Latrémolière assessment), with Remark 15.4 and Corollaries 15.5 and 15.6. Proved by Claude Opus 5.5; the lower bound of the subagent sketch omitted the cap sqrt(2)/2 and was corrected. Checked by Terra 6.1 by hand, who also restored the cap in Remark 15.4 (historical/reviews/2026-11-03_terra_check_15_16.md). Ledger rows `l15_gap`, `fl_R2` (Corollary 15.5, depending on `l09_limits`) and `l15_yukawa` (Corollary 15.6). Proposition G of paper/towerless_intervals.tex, with its items 1 and 2.
+**Status.** Theorem (Theorem 15.3, Lemma R2 of the Farsi-Latrémolière assessment), with Remark 15.4 and Corollaries 15.5 and 15.6. Proved by Claude Opus 5.5. Ledger rows `l15_gap`, `fl_R2` (Corollary 15.5, depending on `l09_limits`) and `l15_yukawa` (Corollary 15.6). Proposition G of paper/towerless_intervals.tex, with its items 1 and 2.
 
 **Setting.** T = (A, H, D) a metric spectral triple with delta = diam T; Sigma a finite subset of R, P = 1_Sigma(D) of rank N >= 1, Q = 1 - P, and g > 0 with |lambda| >= g on Sp(D) outside Sigma; D_F a Hermitian N x N matrix, W: PH -> C^N unitary (extended by 0), Delta = ||W D W^\\* - D_F||, T_F = (C, C^N, D_F). The spectral propinquity is capped at sqrt(2)/2 and has the units of a length.
 

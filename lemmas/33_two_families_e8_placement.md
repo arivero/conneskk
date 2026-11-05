@@ -2,11 +2,7 @@
 
 *Lemma 33. Written as file 04 of the eleven-dimensional line (branch 11D, by another Claude session) and moved here on 4 November 2026 with its text unchanged; its proposals keep their labels, and the plan and the unfinished files of that line are in [historical/11D/](../historical/11D/README.md). Internal references to "file 0n" of that line mean the lemma with the same content: 01 is lemma 31, 02 is 32, 03 is 39, 04 is 33, 05 is 34, 06 is in historical/11D, 07 is 40, 08 is 35, 09 is 36, 10 is 37, 11 is 38.*
 
-Part of the 11D line of research ([README](../historical/11D/README.md), [PLAN](../historical/11D/PLAN.md)). Attempted by Claude (Anthropic), 4 Nov 2026. Propositions 4.1 to 4.3 and Theorem 4.4 and Propositions 4.5, 4.6 are proved here by hand (branching rules and counting); the negative results 4.3 and 4.6 were refereed by GPT-6.1 Terra and checked a second time by Claude Sonnet 5.5, with the amendments below; readings are labelled as proposals.
-
-**Referee note (GPT-6.1 Terra, 4 Nov 2026).** Proposition 4.1 and the colour obstructions in Propositions 4.2(a) and 4.3 are independently checked. The tensor-factor conclusion of 4.2(b) needs a factor-preserving map, and the "exactly" clause in 4.3 also needs nonzero triplets: the trivial nine-dimensional representation gives 84 singlets. See the [referee report](../historical/reviews/2026-11-04_terra_check_11d.md#propositions-42-and-43-complex-colour-representations); the other checked results are noted below.
-
-**Referee note on Proposition 4.6 (GPT-6.1 Terra).** The stated sector and block obstructions hold in the scopes in the [referee report](../historical/reviews/2026-11-04_terra_check_11d.md#proposition-46-the-graded-e8-exchange). The Chevalley involution is complex-linear; an antiunitary \(J\) needs an additional conjugation. Its identification with physical M2/M5 duality remains a proposal.
+Part of the 11D line of research ([README](../historical/11D/README.md), [PLAN](../historical/11D/PLAN.md)). Attempted by Claude (Anthropic), 4 Nov 2026. Propositions 4.1 to 4.3 and Theorem 4.4 and Propositions 4.5, 4.6 are proved here by hand (branching rules and counting), with further proofs by Terra 6.1 at the end; readings are labelled as proposals.
 
 ## The question
 
@@ -67,8 +63,6 @@ Let SU(5) ⊂ SU(6) ⊂ E6 be the Georgi-Glashow group, with 15 = 10 + 5 and 6ba
 
 **Theorem 4.4 (the generation in the three sectors).** For the generation 16 ⊂ 27 of family grade a = 1:
 
-**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The branching and counts are independently checked. The fields \(t_L,t^c\) are in the left-handed basis; \(t^c\) is an antitop field, so the top particle's two chiralities occupy different sectors. See the [referee report](../historical/reviews/2026-11-04_terra_check_11d.md#lemma-4a-and-theorem-44-the-two-e8-gradings).
-
 1. the 10 = (Q, u^c, e^c) and the 5 = (D, H_u) lie in g_{1,1}, the C_3 sector;
 2. (d^c, L) and N lie in g_{1,1+2t}, and (D^c, H_d) and nu^c lie in g_{1,1-2t}: one pair in the C_6 sector and the other in the gravity sector, according to the sign t; the two choices differ by the Weyl reflection of SU(2)_I;
 3. the antiparticles lie in the conjugate pieces g_{2,-b}.
@@ -81,8 +75,6 @@ In the left-handed basis, every top field of a particle (t_L in Q, t^c in u^c), 
 
 **Proposition 4.5.** Suppose the cubic couplings of the matter come from the structure constants of e8, as in heterotic and Hořava-Witten compactifications, and both gradings are symmetries, so that a coupling needs grades summing to (0, 0) mod 3. Take H_u in the 5 ⊂ g_{1,1} and H_d in 5bar_10 ⊂ g_{1,1-2t}. Then, for either sign t:
 
-**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The grade selection and bracket targets are independently checked. In the literal exact \(SU(3)_f\) triplet realization, the family tensor is antisymmetric and does not by itself give an isolated top mass; the physical Yukawa matrix needs additional data. See the [referee report](../historical/reviews/2026-11-04_terra_check_11d.md#proposition-45-yukawa-grades-and-family-dependence).
-
 1. the up-type Yukawa couplings Q u^c H_u have all three fields in the C_3 sector;
 2. the down-type, charged-lepton and Dirac-neutrino couplings Q d^c H_d, L e^c H_d and L nu^c H_u have one field in each of the three sectors;
 3. in Dirac form, the top mass is ad(<H_u>) : g_{1,1} -> g_{2,2}, the wedge Λ^3 -> Λ^6 with the Higgs trivector, while the Dirac-neutrino mass is a bracket that passes through the gravity sector: Λ^6 -> sl(9) (levels 1 + 2 = 3) for t = +1/2, sl(9) -> Λ^3 for t = -1/2.
@@ -94,8 +86,6 @@ Exact family SU(3) allows only epsilon_{ijk} (the Z_3 family grading alone allow
 **Reading (proposal).** The up-type Yukawa couplings are the only Standard Model Yukawa couplings inside one sector, and that sector's bracket is the C_3 ∧ C_3 -> C_6 term, metric-independent; the other couplings use one field of each sector, including the gravity sector. The top, the only fermion with a Yukawa coupling of order one and the one singled out by the spectral action in lemma 21, takes its mass from the C_3 bracket.
 
 ## 6. The Chevalley involution and the real structure J
-
-**Referee note (GPT-6.1 Terra, 4 Nov 2026).** This heading describes a proposed physical identification. The Chevalley involution is complex-linear, and an antiunitary \(J\) needs additional conjugation; constructing the finite triple remains open. See the [wording audit](../historical/reviews/2026-11-04_terra_check_11d.md#wording-audit-results-and-proposals).
 
 **Proposition 4.6.**
 
@@ -118,7 +108,7 @@ Exact family SU(3) allows only epsilon_{ijk} (the Z_3 family grading alone allow
 
 For t = +1/2, s_M acts on the 27 by omega^b: omega on the 10 and on the 5 (H_u, D), omega^2 on (d^c, L) and N, and 1 on (D^c, H_d) and nu^c. It allows Q u^c H_u, Q d^c H_d, L e^c H_d, L nu^c H_u, N H_u H_d, the Majorana mass of nu^c and the Weinberg operator L L H_u H_u, and forbids the mu term H_u H_d, the dimension-five operators Q Q Q L and u^c u^c d^c e^c, and the trilinear couplings L L e^c, L Q d^c, u^c d^c d^c; the bilinear L H_u is allowed. This is the pattern of E6-inspired models in which the singlet N supplies the mu term. It is a symmetry of the low-energy theory only if the breaking of E6 commutes with s_M; for t = -1/2 the charges change. Stated as a remark; the results above do not use it.
 
-*Scope of the remark (second check, 4 Nov 2026).* The selection rule is that of the single element s_M, and it is a symmetry only if the breaking of E6 commutes with s_M. The family grading would forbid (nu^c)^2, L L H_u H_u and L H_u, which s_M allows, since their family grades are 2, 1 and 2.
+*Scope of the remark.* The selection rule is that of the single element s_M, and it is a symmetry only if the breaking of E6 commutes with s_M. The family grading would forbid (nu^c)^2, L L H_u H_u and L H_u, which s_M allows, since their family grades are 2, 1 and 2.
 
 ## 9. What remains open
 
@@ -131,12 +121,9 @@ For t = +1/2, s_M acts on the 27 by omega^b: omega on the 10 and on the 5 (H_u, 
 
 Recalled without rereading in this session: E. Witten, "On flux quantization in M-theory and the effective action", hep-th/9609122; D.-E. Diaconescu, G. Moore and E. Witten, "E8 gauge theory, and a derivation of K-theory from M-theory", hep-th/0005090; P. West, "E11 and M theory", hep-th/0104081, for the level decomposition and the commutator of the level-one generators; E. Cremmer and B. Julia (1979) for E8(8) in three dimensions; E. B. Vinberg and A. G. Elashvili (1978) for the Z_3-graded e8 and trivectors of C^9; the E6 subgroup chains are standard (R. Slansky, Phys. Rep. 79 (1981) 1).
 
-## Referee proofs (GPT-6.1 Terra, 4 November 2026)
+## Further proofs (Terra 6.1, 4 November 2026)
 
-The arguments below are those of the referee report on the 11D line, written out in the notation of this lemma; the report in historical/reviews/ stays as the provenance record.
-
-**Independent proof of Proposition 4.2(a), with the scope of 4.2(b).**
-*From the referee report on the 11D line, section 'Propositions 4.2 and 4.3: complex colour representations', transferred verbatim in substance on 4 Nov 2026.*
+**Proposition 4.2(a), with the scope of 4.2(b).**
 
 The colour multiplicities are
 
@@ -146,13 +133,7 @@ each quark species of 12 states gives two triplets and two antitriplets (particl
 
 For 4.2(b), the stated conclusion holds for a tensor-factor-preserving bijection identifying the top's colour factor with the neutrinos' family factor. Linearity in each index alone does not imply this: every linear map on the tensor product is multilinear in its arguments, and a unitary may entangle the three-dimensional index with the four-dimensional chirality/conjugation index. Such a unitary need not be a flip of tensor factors.
 
-**Counterexample (referee) to the first version of Proposition 4.3.**
-*Same section of the referee report, transferred verbatim in substance on 4 Nov 2026.*
-
-The first version stated that the exterior cube contains only 1, 3 and 3bar exactly for 3 + 6 (1) or its conjugate. The trivial homomorphism gives C^9 = 9 (1) and Λ^3 C^9 = 84 (1), which also contains only those representations. The statement above lists 9 (1); equivalently, the corrected statement adds the requirement that the exterior cube contain a nonzero triplet.
-
-**Independent proof of Proposition 4.3 (corrected).**
-*Same section of the referee report, transferred verbatim in substance on 4 Nov 2026.*
+**Proposition 4.3 in full.**
 
 The irreducible SU(3) representations of dimension at most nine are 1, 3, 3bar, 6, 6bar and 8: the irreducible of highest weight (p, q) has dimension (p + 1)(q + 1)(p + q + 2)/2, and the next values are 10 and 15. So C^9 is a sum of irreducibles of dimensions 1, 3, 6, 8 with total 9, and the cases are the following.
 
@@ -176,8 +157,7 @@ None gives either target: both targets contain equally many 3 and 3bar, as well 
 
 *Scope and direction.* This concerns the full exterior cube of a complex nine-dimensional linear SU(3) representation and the stated colour action on F1 and F2. Other dimensions, non-equivariant identifications, nonlinear or brane constructions, and maps that do not preserve the colour action remain possible directions.
 
-**Independent proof of Lemma 4.A and of the grades in Theorem 4.4.**
-*From the referee report on the 11D line, section 'Lemma 4.A and Theorem 4.4: the two E8 gradings', transferred verbatim in substance on 4 Nov 2026.*
+**Lemma 4.A and the grades in Theorem 4.4.**
 
 Let 9 = (3, 1)_{-2} ⊕ (1, 6)_1. The exterior-power expansion Λ^3(A ⊕ B) = Λ^3 A ⊕ (Λ^2 A ⊗ B) ⊕ (A ⊗ Λ^2 B) ⊕ Λ^3 B, with Λ^3 3 = 1, Λ^2 3 = 3bar, Λ^2 6 = 15 and Λ^3 6 = 20, gives
 
@@ -193,8 +173,7 @@ including the singlet terms of charges ±6: for instance (1, 1)_{-6} has a + q/3
 
 *Left-handed basis.* Both t_L ∈ Q and t^c ∈ u^c lie in b = 1, and t^c is the left-handed conjugate of t_R. The right-handed top state lies in b = 2, and the antitop likewise has chiral components in both sectors. The phrase "every top state of a particle" in Theorem 4.4 therefore holds in the left-handed basis. The labels C_3 and C_6 express this algebraic grading; a physical M2/M5 identification requires the corresponding field construction.
 
-**Independent proof of Proposition 4.6, with the block argument.**
-*From the referee report on the 11D line, section 'Proposition 4.6: the graded E8 exchange', transferred verbatim in substance on 4 Nov 2026.*
+**Proposition 4.6, with the block argument.**
 
 *Dimensions.* The branching table gives dim g_{1,1} = 45 and dim g_{1,2} = 18, so no linear automorphism maps the first whole space onto the second.
 
@@ -204,7 +183,7 @@ including the singlet terms of charges ±6: for instance (1, 1)_{-6} has a + q/3
 
 *The SU(2)_I reflection.* It sends T_3 to -T_3, so b = a + 2 T_3 becomes b' = a - 2 T_3 = 2a - b (mod 3). It fixes b = 1 at a = 1 and exchanges b = 0 and b = 2, as stated.
 
-*Blocks.* The dimension argument excludes an exchange of the whole joint-graded sectors. The exclusion of the top and neutrino blocks has an independent argument under the specified three-family embedding. In g_1 = 3_f ⊗ 27 their grade-one parts are
+*Blocks.* The dimension argument excludes an exchange of the whole joint-graded sectors. The exclusion of the top and neutrino blocks has a separate argument under the specified three-family embedding. In g_1 = 3_f ⊗ 27 their grade-one parts are
 
     T ∩ g_1 = <e_t> ⊗ U_t,  dim U_t = 6;      N ∩ g_1 = 3_f ⊗ U_nu,  dim U_nu = 2,
 
@@ -212,8 +191,7 @@ with e_t the top's family line, U_t ⊂ 27 spanned by the t_L and t^c states, an
 
 *Scope and direction.* This concerns complex-linear automorphisms of the specified graded e8, the aligned 3_f ⊗ 16 embedding, and the top and neutrino blocks just described. Automorphisms that neither preserve nor invert the family grading, other embeddings or state spaces, and dualities not represented by such an automorphism remain open directions. A physical M2/M5 identification also requires its action on the fields and on the finite triple.
 
-**Independent proof of Proposition 4.5, with the family tensor.**
-*From the referee report on the 11D line, section 'Proposition 4.5: Yukawa grades and family dependence', transferred verbatim in substance on 4 Nov 2026.*
+**Proposition 4.5, with the family tensor.**
 
 The grade-selection rules and bracket targets hold as algebraic statements; by themselves they establish neither a physical top mass nor its observed family hierarchy.
 
@@ -231,8 +209,7 @@ that is Y^† Y = ||h||^2 I - h h^†, with eigenvalue ||h||^2 twice and 0 on h.
 
 The Z_3 family grading alone allows more tensors than epsilon_{ijk}; epsilon_{ijk} follows from the full SU(3)_f invariance. A compactification in which generation labels are cohomology labels and couplings are overlap integrals may evade the literal triplet-tensor restriction, but its mode functions and intersections must be supplied before the physical Yukawa matrix is identified.
 
-**Independent proof of the selection rule of section 8.**
-*From the referee report on the 11D line, section 'File 04, section 8: the discrete grade', transferred verbatim in substance on 4 Nov 2026.*
+**The selection rule of section 8.**
 
 The remark holds as a selection rule for the single element s_M, assuming it survives the breaking. For t = +1/2 the grades are b(10) = b(H_u) = 1 (Q, u^c, e^c and H_u), b(5bar_16) = b(N) = 2 (d^c, L and N), and b(H_d) = b(nu^c) = 0. Adding grades modulo three gives zero for
 

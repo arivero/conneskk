@@ -1,3 +1,5 @@
+# Gauge kinetic terms with heavy fermions and cos^2 theta_W = 5/8 in the heavy-up limit
+
 **Part A. Statement.**
 
 For a constant finite operator commuting with the gauge connection, the Yang–Mills term is
@@ -217,7 +219,7 @@ reproducing the conventions in [section 14.3](../historical/corpus/canonical_res
 
 **Part C. Statement.**
 
-For broken generators, a mass-dependent “\(F^2\) coefficient” requires a prescription for separating gauge and Higgs derivative terms. I use the **integrated quadratic transverse kinetic coefficient**: expand about zero gauge field with \(D_F\) held constant, remove the gauge-field mass term, and extract the coefficient of \(q^2|a_T(q)|^2\). Since
+For broken generators, a mass-dependent “\(F^2\) coefficient” requires a prescription for separating gauge and Higgs derivative terms. We use the **integrated quadratic transverse kinetic coefficient**: expand about zero gauge field with \(D_F\) held constant, remove the gauge-field mass term, and extract the coefficient of \(q^2|a_T(q)|^2\). Since
 \[
 F_{\mu\nu}(q)^*F_{\mu\nu}(q)=2q^2|a_T(q)|^2,
 \]
@@ -478,7 +480,7 @@ exactly reproducing Part B's photon coefficient on the particle space.
 - **The corpus's \(5/8\) is a valid electroweak matching condition** when the full module is light relative to the matching cutoff, or when that condition is imposed before taking the heavy limit. The broken action does not retain one universal weak angle. Its neutral-current angle happens to remain \(5/8\) in this family, whereas the continued charged-\(W\)/hypercharge matching ratio changes as above. At the strict \(SU(3)\times U(1)_{\rm em}\) endpoint, a weak angle requires reference to such an earlier matching prescription.
 ---
 
-## Independent checks (Claude, 2 Nov 2026)
+## Checks
 
 - Part A: (1/12) tr_S 1 + (1/2)(1/4) tr_S(gamma^{mu nu} gamma^{rho sigma}) F F gives (1/3 - 1) tr F^2 = -(2/3) tr F^2. Dividing by 16 pi^2 gives -1/(24 pi^2), the standard spectral-action Yang-Mills coefficient.
 - Part B: the per-generation traces tr Q^2 = 8/3 (u), 2/3 (d), 2 (e) and color index 1, 1, 0 were rechecked by hand.

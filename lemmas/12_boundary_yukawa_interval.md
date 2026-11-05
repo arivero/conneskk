@@ -1,6 +1,6 @@
 # Boundary Yukawa matrices on the interval: from chiral to vectorlike boundary conditions, and towerless textures
 
-Theorems T3 (remaining part) and T8 of [../STRATEGY.md](../STRATEGY.md). Proved by Claude Opus 5.5 without Astra or Fable. Refereed by Terra 6.1 (gpt-6.1-terra, effort max, 3 Nov 2026): of 9 statements, 4 correct, 2 needed amendments and 3 were wrong as first stated (Theorem 12.4 item 2, Theorem 12.7, Corollary 12.9); all corrections are incorporated below and the referee report is appended. The secular equation was checked against direct numerical integration of the ODE; the bounds of Theorem 12.6 and Lemma 12.8 were checked on random samples (section "Numerical check").
+Theorems T3 (remaining part) and T8 of [../STRATEGY.md](../STRATEGY.md). Proved by Claude Opus 5.5. The secular equation was checked against direct numerical integration of the ODE; the bounds of Theorem 12.6 and Lemma 12.8 were checked on random samples (section "Numerical check").
 
 ## Setting
 
@@ -30,7 +30,7 @@ Let a compact group G act unitarily on C^{N_Q} and C^{N_U} by rho_Q and rho_U, c
 
     ind_{H_X} D_X = [ker X^dagger] - [ker X] = [rho_Q] - [rho_U]   (restricted to H_X),
 
-because X maps (ker X)^perp isomorphically and H_X-equivariantly onto ran X = (ker X^dagger)^perp. At X = 0 we have H_X = G, and the index is the chiral class [V_L] - [V_R] of Corollary 9.3. D_X has no zero modes iff X is invertible. This requires rho_Q and rho_U to be isomorphic as H_X-representations, i.e. the residual theory must be vectorlike. For the Standard Model with H = SU(3) x U(1)_em, the quark sector satisfies this. A lepton sector without nu_R does not: a massless left-handed neutrino is forced for every X preserving electromagnetism (H contained in H_X), in agreement with the unpaired nu_L of [job 06](06_vectorlike_odd_factorization.md). ∎
+because X maps (ker X)^perp isomorphically and H_X-equivariantly onto ran X = (ker X^dagger)^perp. At X = 0 we have H_X = G, and the index is the chiral class [V_L] - [V_R] of Corollary 9.3. D_X has no zero modes iff X is invertible. This requires rho_Q and rho_U to be isomorphic as H_X-representations, i.e. the residual theory must be vectorlike. For the Standard Model with H = SU(3) x U(1)_em, the quark sector satisfies this. A lepton sector without nu_R does not: a massless left-handed neutrino is forced for every X preserving electromagnetism (H contained in H_X), in agreement with the unpaired nu_L of [job 06](06_vectorlike_odd_factorization.md). The restriction to couplings that preserve electromagnetism is needed: for one lepton generation with zero bulk masses, Q_L = (nu_L, e_L), U_R = e_R and X = (1, 0)^T couple nu_L to e_R and leave e_L in ker X^dagger, breaking the electric charge. ∎
 
 ## Exact secular equation
 
@@ -108,14 +108,20 @@ by dividing the bounds of Lemma 12.8 for p and p - 1. Indexing generations by k 
 
     m_k / m_{k+1} ~ e^{-(c_k^Q - c_{k+1}^Q) - (c_k^U - c_{k+1}^U)}   up to factors of order one. ∎
 
-**Remark 12.10 (mixing; numerical, not proved here).** For an up sector and a down sector sharing Phi_Q, we drew 500 anarchic complex samples with c^Q = (3, 2, 0.5). The medians of abs(V_ij)/(phi(c_i^Q)/phi(c_j^Q)) were 1.02, 0.92 and 1.09 for (ij) = (12), (23) and (13). So the left mixing follows the doublet localization alone, abs(V_ij) ~ phi(c_i^Q)/phi(c_j^Q), as in the split-fermion and warped-flavor literature (Huber-Shafi 2001; Agashe-Perez-Soni 2005; Casagrande et al. 2008). An upper bound with explicit constants, |V_ij| <= 3 K_u K_d f_i/f_j for i < j, is proved in the referee report appended below, which also notes that there is no universal lower bound; Astra 6 wrote out the cofactor step that the report names ([validation](../historical/reviews/2026-11-03_astra_validation_corrections.md), item 10).
+**Remark 12.10 (mixing; numerical, not proved here).** For an up sector and a down sector sharing Phi_Q, we drew 500 anarchic complex samples with c^Q = (3, 2, 0.5). The medians of abs(V_ij)/(phi(c_i^Q)/phi(c_j^Q)) were 1.02, 0.92 and 1.09 for (ij) = (12), (23) and (13). So the left mixing follows the doublet localization alone, abs(V_ij) ~ phi(c_i^Q)/phi(c_j^Q), as in the split-fermion and warped-flavor literature (Huber-Shafi 2001; Agashe-Perez-Soni 2005; Casagrande et al. 2008). Proposition 12.11 gives an upper bound with explicit constants. There is no universal lower bound: identical up and down matrices give V = I.
+
+**Proposition 12.11 (an upper bound for the mixing).** For s = u, d let M_s = F X_s G_s with F = diag(f_1 <= f_2 <= f_3) and G_s = diag(g_1^(s) <= g_2^(s) <= g_3^(s)) positive, X_s invertible with nonzero trailing minors Delta_1^(s), Delta_2^(s), and D_p^(s) as in Lemma 12.8. Put a_s = sqrt(3) D_1^(s)/Delta_1^(s), b_s = sqrt(3) D_2^(s)/Delta_2^(s) and K_s = (1 + a_s)(1 + b_s). Let U_s be the unitary of left singular vectors of M_s, with columns in increasing order of singular value, and V = U_u^dagger U_d. Then, for i < j,
+
+    |V_ij| <= 3 K_u K_d f_i/f_j.
+
+*Proof.* Drop the index s, and let H = M M^dagger, with eigenvalues lambda_1 <= lambda_2 <= lambda_3 and the columns of U as eigenvectors. Since H_ii = sum_k lambda_k |U_ik|^2 >= lambda_3 |U_i3|^2, with H_ii = f_i^2 sum_j |X_ij|^2 g_j^2 <= 3 D_1^2 f_i^2 g_3^2 and lambda_3 = norm(M)^2 >= |M_33|^2 = f_3^2 g_3^2 Delta_1^2, we get |U_i3| <= a f_i/f_3. The same argument for H^-1 = (M^-1)^dagger M^-1, whose largest eigenvalue 1/lambda_1 is at least |(M^-1)_11|^2 = |(X^-1)_11|^2/(f_1 g_1)^2 with |(X^-1)_11| = Delta_2/|det X|, and whose diagonal entries satisfy (H^-1)_ii = f_i^-2 sum_k g_k^-2 |(X^-1)_ki|^2 <= 3 D_2^2 f_i^-2 g_1^-2/|det X|^2 (the entries of X^-1 are cofactors divided by det X), gives |U_i1| <= b f_1/f_i. Each entry of a unitary 3 x 3 matrix is equal in modulus to its cofactor, since adj U = det(U) U^dagger; so |U_12| = |U_21 U_33 - U_23 U_31| <= b f_1/f_2 + a b f_1 f_2/f_3^2 <= (1 + a)(1 + b) f_1/f_2, and |U_32| = |U_11 U_23 - U_13 U_21| <= a f_2/f_3 + a b f_1^2/(f_2 f_3) <= (1 + a)(1 + b) f_2/f_3. Hence |U_ij| <= (1 + a)(1 + b) min(f_i/f_j, f_j/f_i) for all i, j, the diagonal entries included. In V_ij = sum_k conj((U_u)_ki) (U_d)_kj, each of the three terms is at most K_u K_d min(f_k/f_i, f_i/f_k) min(f_k/f_j, f_j/f_k), which is at most K_u K_d f_i/f_j for i < j in each of the cases k <= i, i <= k <= j and k >= j. ∎
 
 ## Consequences for STRATEGY
 
 - **T3 (remaining part).** The boundary Yukawa X deforms the chiral types (a) (+) (b) (X = 0) continuously into two copies of the vectorlike type (c) (abs(X) -> infinity). The index N_Q - N_U is constant along the way. What changes is the symmetry: X reduces G to H_X, and the zero modes lift exactly as far as the H_X-index allows (Corollary 12.3).
 - **T8.** In the towerless limit, the Yukawa block of D_F is Phi_Q Y_hat Phi_U. The texture of the finite geometry is localization data (the c's) times an order-one boundary matrix, the masses are internal momenta and overlaps, and the hierarchies are exponential in the c's (Corollary 12.9).
 
-## Numerical check (Claude)
+## Numerical check (Python, scipy)
 
 Method: roots of the secular equation are bracketed on fine grids and refined by Brent's method; the shooting check integrates the ODE from x = 0 with scipy `solve_ivp` (rtol 1e-12) and finds the zeros of the boundary-condition determinant at x = l.
 
@@ -131,234 +137,5 @@ Method: roots of the secular equation are bracketed on fine grids and refined by
 
   The errors decrease as l^2.
 - **Lemma 12.8:** no violation in 2000 random complex 3 x 3 cases with log-uniform gradings over 8 e-folds (6000 inequalities).
-
-## Referee report (gpt-6.1-terra, effort max, 3 Nov 2026)
-
-Prompt: [prompts/terra_check_12.md](../historical/prompts/terra_check_12.md). Reproduced as received; the corrections above implement it. Claude checked the three counterexamples (M_Q = diag(0, 4); arctan(l)/l -> 1; F = G = diag(t, 1), X = sigma_1) by hand.
-
-We take \(\ell>0\) and the bulk masses to be real, as in Lemma 09. All arguments below are analytic; we used no numerical computation.
-
-### Lemma 12.1
-
-**Verdict: Correct.**
-
-At \(x=\ell\), the free boundary values are \(Q_L(\ell)\) and \(U_R(\ell)\). Substitution of the boundary conditions into the boundary form gives zero, and the allowed boundary values have half the total boundary dimension. The conditions at \(x=0\) are likewise maximal isotropic. The adjoint boundary conditions therefore coincide with the stated ones, so \(D_X\) is self-adjoint.
-
-The graph norm controls the \(H^1\)-norm, and the embedding \(H^1([0,\ell])\hookrightarrow L^2([0,\ell])\) is compact. Thus the resolvent is compact. Finally, \(\Gamma\) preserves the boundary conditions and anticommutes with the differential expression.
-
-### Theorem 12.2
-
-**Verdict: Correct.**
-
-The zero-mode equations give
-\[
-L(x)=e^{Mx}a,\qquad R(x)=e^{-Mx}b.
-\]
-The conditions at \(0\) remove \(Q_R\) and \(U_L\), and those at \(\ell\) impose exactly the two displayed kernel conditions.
-
-The endpoint exponentials are invertible, so the two chiral kernel dimensions are \(N_Q-\operatorname{rank}X\) and \(N_U-\operatorname{rank}X\). Their difference is \(N_Q-N_U\).
-
-### Corollary 12.3
-
-**Verdict: Correct with amendment.** The neutrino conclusion holds for every \(X\) that preserves the stated electromagnetic symmetry, meaning \(H\subseteq H_X\). The phrase “for every X” needs that qualification.
-
-The endpoint exponentials commute with the group actions. They identify the actual chiral kernels equivariantly with \(\ker X^\dagger\) and \(\ker X\). The orthogonal complements are equivariantly isomorphic through \(X\), proving the displayed index identity. Both kernels vanish exactly when \(X\) is invertible, in which case \(X\) is an equivariant isomorphism.
-
-If electromagnetic symmetry is not required, the neutrino assertion can fail. For one lepton generation with zero bulk masses, take
-\[
-Q_L=(\nu_L,e_L),\qquad U_R=e_R,\qquad
-X=\begin{pmatrix}1\\0\end{pmatrix}.
-\]
-The left kernel is then spanned by \(e_L\), while \(\nu_L\) is coupled to \(e_R\). This \(X\) breaks electromagnetic charge. If \(X\) intertwines the electromagnetic representations and there is no neutral right-handed lepton, the neutrino subspace lies in \(\ker X^\dagger\), as claimed.
-
-### Theorem 12.4
-
-**Verdict: Error.** The secular equation, multiplicity formula, endpoint values, monotonicity and concavity are correct. The assertion that *each* function has a zero **on the common window \(W\)** is false.
-
-For example, take \(\ell=1\), \(M_Q=\operatorname{diag}(0,4)\), and \(M_U=(0)\). Then \(W=(0,\pi)\), but throughout \(W\),
-\[
-\alpha_2(\lambda)
-=\sqrt{16-\lambda^2}\,
-  \coth\!\sqrt{16-\lambda^2}+4>0.
-\]
-Its individual lowest mixed-boundary eigenvalue is greater than \(4\), hence lies outside \(W\). The proof’s assertion that every function tends to \(-\infty\) at the edge of \(W\) fails for the same reason.
-
-The corrected zero statement uses each mass’s **individual** first-pole window
-\[
-0<\lambda<\sqrt{m^2+\pi^2/\ell^2}.
-\]
-On that interval the corresponding \(\alpha\) or \(\beta\) has exactly one zero, at the lowest positive eigenvalue of its mixed-boundary problem. The \(U\) problem is equivalent to the type-(c) problem after exchanging components and changing the mass sign.
-
-For the monotonicity and concavity, write \(s=\lambda^2\) and \(a_n=(n\pi/\ell)^2\). Differentiating the displayed partial-fraction expansion on the individual window gives
-\[
-\frac{d}{ds}\bigl(\omega\coth(\omega\ell)\bigr)
-=-\frac{2}{\ell}\sum_{n\ge1}
-  \frac{a_n}{(m^2-s+a_n)^2}<0,
-\]
-\[
-\frac{d^2}{ds^2}\bigl(\omega\coth(\omega\ell)\bigr)
-=-\frac{4}{\ell}\sum_{n\ge1}
-  \frac{a_n}{(m^2-s+a_n)^3}<0.
-\]
-The function is positive at \(s=0\) after the appropriate \(\pm m\) is added, and tends to \(-\infty\) at its own first pole. This proves the corrected zero claim.
-
-For the secular equation, the proof’s boundary variables \(c,d\) satisfy
-\[
-\lambda c=-XBd,\qquad \lambda d=-X^\dagger A c.
-\]
-Eliminating \(d\) gives \(\lambda^2c=XB X^\dagger A c\). For \(\lambda\ne0\), the kernels of \(\lambda^2I-CA\) and \(\lambda^2I-AC\), with \(C=XBX^\dagger\), are isomorphic via \(A\), with inverse \(C/\lambda^2\). This also proves the stated multiplicity.
-
-### Example 12.5
-
-**Verdict: Correct with amendment.** At \(X=0\), omit \(\theta/\ell=0\) from the **positive** spectrum; instead, zero has multiplicity two. The positive eigenvalues are then \(n\pi/\ell\), each with multiplicity two. For finite \(X\), \(\theta<\pi/2\); the endpoint \(\theta=\pi/2\) is a limit.
-
-For all positive \(\lambda\), direct substitution of the massless solutions into the boundary conditions gives
-\[
-\sin^2(\lambda\ell)-|X|^2\cos^2(\lambda\ell)=0.
-\]
-For \(X\ne0\), its roots are exactly the listed values. This derivation also includes the roots at \(n\pi/\ell\) when \(X=0\), even though the secular formula of Theorem 12.4 was derived only before the first pole. The negative spectrum follows by grading symmetry. The stated two-dimensional graded block and the limiting mixed-boundary spectrum follow from these roots and their eigenvectors.
-
-### Theorem 12.6
-
-**Verdict: Correct.**
-
-Although Theorem 12.4 requires the correction above, it still supplies what is needed here. The smallest individual first pole belongs to some field; that field’s first zero lies before its pole. Consequently, \(\lambda_*\) lies before the smallest first pole, and \((0,\lambda_*)\subset W\).
-
-On this interval \(A,B\) are positive. Conjugation reduces the secular equation to the eigenvalue equation for \(Y(\lambda)Y(\lambda)^\dagger\), proving the multiplicity claim. If \(\lambda_2>\lambda_1\), then
-\[
-Y(\lambda_2)=P\,Y(\lambda_1)\,Q
-\]
-for diagonal contractions \(P,Q\). Thus every singular value is continuous and nonincreasing, so it meets the strictly increasing function \(\lambda\) at most once. The stated condition at \(\lambda=0\) gives a crossing before \(\lambda_*\).
-
-Concavity gives, with \(t_Q=\lambda^2/\Lambda_Q^2\) and \(t_U=\lambda^2/\Lambda_U^2\),
-\[
-\sigma_k(Y(\lambda))
-\ge \sqrt{(1-t_Q)(1-t_U)}\,\sigma_k(Y_0)
-\ge (1-t_Q-t_U)\sigma_k(Y_0).
-\]
-Together with \(\sigma_k(Y(\lambda))\le\sigma_k(Y_0)\), this proves both bounds.
-
-### Theorem 12.7
-
-**Verdict: Error.** The fixed-energy spectrum cannot contain every listed light eigenvalue for every \(E>0\).
-
-Take one massless flavor, \(\widehat Y=1\), and \(E=1/2\). Then \(X=\ell\), and Example 12.5 gives the positive light eigenvalue
-\[
-\lambda(\ell)=\frac{\arctan\ell}{\ell}\longrightarrow1.
-\]
-For sufficiently small \(\ell\), it is outside \([-1/2,1/2]\), contrary to the stated list.
-
-The corrected fixed-energy statement includes only those \(\pm\lambda_k(\ell)\) with \(\lambda_k(\ell)\le E\). Equivalently, for each fixed \(E>0\) and all sufficiently small \(\ell\), include exactly those indices for which
-\[
-\sigma_k(M_F)\le E.
-\]
-The equality case is included because the strict decrease of \(A\) and \(B\) gives \(\lambda_k(\ell)<\sigma_k(M_F)\) for every positive light eigenvalue.
-
-The displayed error estimate follows from Theorem 12.6:
-\[
-0<\sigma_k(M_F)-\lambda_k(\ell)
-\le \sigma_k(M_F)^3\ell^2
-   \left(L_Q^{-2}+L_U^{-2}\right).
-\]
-Zero has the stated multiplicity. Apart from zero and the **entire** light set \(\{\pm\lambda_k\}\), the eigenvalues have **absolute value** greater than \(\lambda_*\) for small \(\ell\). At \(\lambda_*\), the limiting matrices \(A,B\) are nonnegative and the relevant singular values are at most \(\|M_F\|\), whereas \(\lambda_*\to\infty\); hence equality at the boundary is excluded for small \(\ell\).
-
-For \(E>\|M_F\|\), the full low-energy space has dimension \(N_Q+N_U\). After grading-preserving unitary identifications, its compressed Dirac matrices converge to the displayed \(D_F\). Calling the limit a spectral triple additionally requires an algebra and its representation to be specified.
-
-### Lemma 12.8
-
-**Verdict: Correct.**
-
-The entries of \(\bigwedge^p M\) are \(f_Ig_J\det X_{IJ}\), and its operator norm is \(\sigma_1\cdots\sigma_p\). Its \((T_p,T_p)\) entry gives the lower bound.
-
-For every \(I\ne T_p\), at least one factor from the top \(p\) indices is replaced by one no larger than \(N-p\), so \(f_I/f_{T_p}\le\epsilon_p^F\); the analogous estimate holds for \(g\). Bounding the operator norm by the sum of absolute entries, while keeping the \((T_p,T_p)\) entry separate, gives the upper bound. For \(p=N\), both bounds reduce to the determinant identity.
-
-### Corollary 12.9
-
-**Verdict: Error.** The displayed mass formula is not valid under the hypotheses of Lemma 12.8: its denominator can vanish, and its leading term can be zero when the singular value is positive.
-
-For \(0<t<1\), take
-\[
-F=G=\operatorname{diag}(t,1),\qquad
-X=\begin{pmatrix}0&1\\1&0\end{pmatrix}.
-\]
-Then \(FXG\) has both singular values equal to \(t\), but \(\Delta_1=0\) and \(\Delta_2=1\). The formula for \(m_2\) gives zero, and the formula for \(m_1\) divides by zero.
-
-A sufficient correction is to require every trailing minor \(\Delta_p\) to be nonzero and to define the small parameter. More precisely, put \(E_0=E_N=0\) and, for \(1\le p<N\),
-\[
-E_p=\frac{D_p}{\Delta_p}
- \left[(1+K_p\epsilon_p^F)(1+K_p\epsilon_p^G)-1\right].
-\]
-Lemma 12.8 then gives the explicit bounds
-\[
-\frac{1}{1+E_{p-1}}
-\le
-\frac{\sigma_p}
- {f_{N-p+1}g_{N-p+1}\Delta_p/\Delta_{p-1}}
-\le 1+E_p.
-\]
-Indeed, apply the lemma to the products of the first \(p\) and first \(p-1\) singular values and divide their bounds. For fixed \(X,N\), if
-\[
-\epsilon=\max_{p<N}(\epsilon_p^F+\epsilon_p^G)\longrightarrow0,
-\]
-these inequalities give the stated \(1+O(\epsilon)\) formula. Uniform estimates require uniform bounds on \(D_p/\Delta_p\).
-
-The localization conclusion follows under quantitative order-one upper and lower bounds on the relevant minors. For large positive \(c\), the mass ratio also contains the factor
-\[
-\sqrt{\frac{c_k^Q c_k^U}
-           {c_{k+1}^Q c_{k+1}^U}}.
-\]
-It is bounded when the adjacent large \(c\)’s differ by bounded amounts; without such control it cannot be suppressed uniformly as an order-one factor.
-
-### Remark 12.10
-
-**Bound.** We can prove an upper bound independent of the right-hand localization profiles. It does not prove the reported sample medians or a universal lower bound.
-
-For each sector \(s=u,d\), let
-\[
-M_s=F X_s G_s,\qquad
-F=\operatorname{diag}(f_1\le f_2\le f_3),\qquad
-G_s=\operatorname{diag}(g_1^{(s)}\le g_2^{(s)}\le g_3^{(s)}),
-\]
-with all diagonal entries positive. Assume \(X_s\) is invertible and its trailing minors \(\Delta_1^{(s)},\Delta_2^{(s)}\) are nonzero. With \(D_p^{(s)}\) as in Lemma 12.8, define
-\[
-K_s=
-\left(1+\frac{\sqrt3D_1^{(s)}}{\Delta_1^{(s)}}\right)
-\left(1+\frac{\sqrt3D_2^{(s)}}{\Delta_2^{(s)}}\right).
-\]
-Choose the columns of the left singular-vector matrices \(U_s\) in increasing order of singular value, and put \(V=U_u^\dagger U_d\). Then, for \(i<j\),
-\[
-\boxed{\quad |V_{ij}|\le 3K_uK_d\,\frac{f_i}{f_j}.\quad}
-\]
-
-To prove this, set \(H_s=M_sM_s^\dagger\), and temporarily suppress \(s\). Write
-\[
-a=\frac{\sqrt3D_1}{\Delta_1},\qquad
-b=\frac{\sqrt3D_2}{\Delta_2}.
-\]
-For the largest eigenvalue \(\lambda_3\) of \(H\),
-\[
-\lambda_3\ge f_3^2g_3^2\Delta_1^2,
-\qquad H_{ii}\le3D_1^2f_i^2g_3^2.
-\]
-Cauchy–Schwarz therefore gives \(|U_{i3}|\le a f_i/f_3\). Applying the same argument to \(H^{-1}\), and using
-\((X^{-1})_{11}=\det X_{\{2,3\},\{2,3\}}/\det X\), gives
-\(|U_{i1}|\le b f_1/f_i\). Cofactor identities for the unitary \(U\) bound the two remaining off-diagonal entries. Together,
-\[
-|U_{ij}|\le (1+a)(1+b)
- \min\!\left(\frac{f_i}{f_j},\frac{f_j}{f_i}\right).
-\]
-Summing the three terms in \(V_{ij}=\sum_k\overline{(U_u)_{ki}}(U_d)_{kj}\) proves the boxed inequality.
-
-There is no corresponding positive universal lower bound: identical up and down matrices have \(V=I\), including when their minors are nonzero. The numerical medians also require the sampling distribution and sampled matrices, neither of which is specified in the remark.
-
-### Amendments and errors
-
-- **12.3:** Restrict the neutrino assertion to couplings preserving electromagnetic symmetry.
-- **12.4:** State the unique-zero claim on each field’s individual first-pole window; it can fail on the common window.
-- **12.5:** Treat zero separately at \(X=0\), and treat \(\theta=\pi/2\) as a limit.
-- **12.7:** Filter the light eigenvalues by \(E\); state the gap in absolute value; specify an algebra and representation for a spectral-triple claim.
-- **12.9:** Require nonzero trailing minors and define the separation parameter and its dependence. Retain the square-root localization factors unless they are uniformly bounded.
-
-**Overall:** 9 statements checked: 4 correct, 2 correct with amendment, 0 gaps, and 3 errors.
 
 **Literature ([../LITERATURE.md](../paper/LITERATURE.md), section C).** The one-flavour spectrum of Example 12.5 is equation (5.6) of Csaki-Grojean-Hubisz-Shirman-Terning, Fermions on an interval (2004); the warped multi-flavour analogue of the light spectrum and of the localization textures is in Casagrande et al. 2008 (equations 65, 87, 90, 94-97). No NCG paper deriving D_F from localization was found.

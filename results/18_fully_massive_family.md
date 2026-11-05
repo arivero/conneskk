@@ -1,6 +1,6 @@
 # With one common Dirac mass m for every species and no Majorana masses, the W and Z pole masses diverge at fixed cutoff, 2x < z_W < 2x + 2 and 16x/5 < z_Z < 16x/5 + 2, with M_W^2/M_Z^2 -> 5/8 at both ends and no light fermions
 
-**Status.** Proposition (Proposition 14 of lemma 18). Sketch by Terra 6.1 in the referee report on lemma 18 (historical/reviews/2026-11-03_terra_check_18_16b.md); the ratio added by Claude Opus 5.5; complete proof by Astra 6, who checked it by hand and whose proof is written into the lemma from its validation report (historical/reviews/2026-11-03_astra_validation_corrections.md, item 11); checked by Claude Opus 5.5 in Python (the direct doublet kernel from equation (1), the pole equations, the ratio). Ledger row `l18_fully_massive`. Stated after Proposition E.1 of paper/towerless_intervals.tex and cited in paper/boundary_condition_note.tex ("\supp{18}").
+**Status.** Proposition (Proposition 14 of lemma 18). Sketch by Terra 6.1; the ratio added by Claude Opus 5.5; complete proof by Astra 6, written into the lemma. Ledger row `l18_fully_massive`. Stated after Proposition E.1 of paper/towerless_intervals.tex and cited in paper/boundary_condition_note.tex ("\supp{18}").
 
 **Setting.** Heat cutoff; three generations with right-handed neutrinos; no Majorana masses; one common Dirac mass m > 0 for every Standard Model species; x = m^2/Lambda^2; z_W and z_Z the charged and massive neutral poles in units of Lambda^2; H and g as in Proposition 4; v = (1, -1).
 

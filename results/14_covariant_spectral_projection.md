@@ -1,6 +1,6 @@
 # A gapped spectral projection of the fluctuated interval operator is gauge covariant and carries an induced Grassmannian connection on the light-fermion bundle, and the compressed operator is the Dirac operator of that bundle
 
-**Status.** Theorem (Theorems 1 and 2 of lemma 14). Proved by Astra 6 (job 14); checked by Terra 6.1 by hand, with an amendment to Theorem 1 on the double-coset statement (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger row `l14_covariant`. Cited after Proposition F of paper/towerless_intervals.tex ("\supp{14}").
+**Status.** Theorem (Theorems 1 and 2 of lemma 14). Proved by Astra 6 (job 14). Ledger row `l14_covariant`. Cited after Proposition F of paper/towerless_intervals.tex ("\supp{14}").
 
 **Setting.** I = [0, l], E = [[0, 1], [-1, 0]], Gamma = diag(1, -1); the vertical operator D_{A_5, M, B} = E (d/dx + i A_5) + [[0, M], [M, 0]] with Hermitian matrix functions A_5 and M and a self-adjoint boundary domain B; gauge transformations act in the same representation on both chiralities. A family smooth in y in the norm-resolvent sense, after local identification of domains, whose selected light cluster is separated from the rest of the spectrum and contains complete eigenspaces; P_A(y) its spectral projection. On a closed Riemannian spin four-manifold, D_A = -i gamma^mu (nabla_mu^S + d_mu + i A_mu) + gamma_5 D_{I,A_5}.
 

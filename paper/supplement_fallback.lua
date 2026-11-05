@@ -1,10 +1,11 @@
 -- Characters missing from Latin Modern Roman and Latin Modern Mono, in running text and in code.
 -- Math is left alone: unicode-math with Latin Modern Math has them.
 local serif = {}
-for _, c in ipairs{'∘','∧','∫','≈','≡','⊂','⊃','⊠','⊥','γ','ε','θ','ι','ν','φ','χ','ψ'} do serif[c] = true end
+for _, c in ipairs{'∘','∧','∫','≈','≡','⊂','⊃','⊠','⊥','γ','δ','ε','η','θ','ι','λ','μ','ν','ρ','φ','χ','ψ','ω'} do serif[c] = true end
 local mathfont = {['𝟙']=true, ['𝒜']=true, ['𝒱']=true, ['≅']=true, ['ℓ']=true}
 local code = {['∧']='^', ['⊥']='perp', ['𝒜']='A', ['𝒱']='V', ['𝟙']='1', ['∘']='o', ['∫']='int', ['⊂']='<', ['⊃']='>',
               ['θ']='theta', ['ν']='nu', ['ε']='eps', ['γ']='gamma', ['φ']='phi', ['χ']='chi', ['ψ']='psi', ['ι']='iota',
+              ['δ']='delta', ['η']='eta', ['λ']='lambda', ['μ']='mu', ['ρ']='rho', ['ω']='omega',
               ['≅']='~=', ['≈']='~', ['≡']='==', ['ℓ']='l', ['⊠']='[x]'}
 
 local function pieces(s)

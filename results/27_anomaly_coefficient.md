@@ -1,6 +1,6 @@
 # As Lambda -> infinity on the reduced action, the axial anomaly of a traceless flavour generator has only the electromagnetic term, with coefficient 2 N_c tr(T^3 Q^2) = 1 for two flavours, while at fixed cutoff a heavy top weights it as (4 e^{-x} - 1)/3 for the heat cutoff
 
-**Status.** Corollary (Corollary 27.2), with Proposition 27.4. Proved by Claude Opus 5.5; checked by Claude Opus 5.5 in Python (exact fractions for 2 N_c tr(T^3 Q^2) = 1 and tr T^3 = 0; the third-generation coefficient for the heat cutoff at x = 0, 0.1, 1, 5, 50, which is 1.0000, 0.8731, 0.1572, -0.3243, -0.3333) and by Terra 6.1 by hand, who corrected an error of interpretation in Proposition 27.4 (historical/reviews/2026-11-03_terra_check_27.md, items 2 and 4). Ledger row `l27_anomaly` (depending on `l27_trace`). Proposition 5 of paper/chiral_limit_note.tex, together with Theorem 27.1.
+**Status.** Corollary (Corollary 27.2), with Proposition 27.4. Proved by Claude Opus 5.5. Ledger row `l27_anomaly` (depending on `l27_trace`). Proposition 5 of paper/chiral_limit_note.tex, together with Theorem 27.1.
 
 **Setting.** As in 27_regulated_axial_trace.md, with f continuous at 0 and Lambda -> infinity at fixed masses, the flavours in the same colour bundle. The normalization f(0) = 1 is the usual convention for a regulator, and the value that makes the Jacobian the anomaly. For Proposition 27.4: the doublet (t, b) with T = T^3, m_b/Lambda -> 0 and x = m_t^2/Lambda^2.
 

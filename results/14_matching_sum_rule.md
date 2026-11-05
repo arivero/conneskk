@@ -1,6 +1,6 @@
 # At leading spectral-action order, equality of the spectral-action vector masses with the Kaluza-Klein masses on a common profile space is an explicit trace-and-overlap sum rule
 
-**Status.** Theorem (Theorem 5 of lemma 14). Proved by Astra 6 (job 14); checked by Claude Opus 5.5 by hand (both mass matrices as quadratic forms) and by Terra 6.1 by hand, with an amendment requiring a common profile space (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger row `l14_sum_rule`. Cited after Proposition F of paper/towerless_intervals.tex.
+**Status.** Theorem (Theorem 5 of lemma 14), with a common profile space as hypothesis. Proved by Astra 6 (job 14). Ledger row `l14_sum_rule`. Cited after Proposition F of paper/towerless_intervals.tex.
 
 **Setting.** Five-dimensional Yang-Mills with no boundary kinetic or mass terms and positive invariant form <,>_5 including its couplings; retained transverse vectors A_mu = sum_a a_mu^a(y) F_a(x) with fixed Hermitian profiles F_a obeying the chosen gauge boundary conditions; G^(5)_ab = int <F_a, F_b>_5 dx, H^(5)_ab = int <F_a', F_b'>_5 dx. A light frame U_0 at the background, T_a = U_0^dagger F_a U_0, V_0 = U_0^dagger D_I U_0; the literal spectral trace through a_4, f_0 > 0, no independent kinetic terms; Q and K as in 13_spectral_action_vector_mass_formula.md; eta = f_0/(24 pi^2).
 

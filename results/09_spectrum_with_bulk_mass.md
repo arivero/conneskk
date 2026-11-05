@@ -1,6 +1,6 @@
 # For the mixed condition with bulk mass -mu and mu l > 1, the chiral interval has exactly one light pair lambda_0 = mu sech(kappa_0 l), about 2 mu e^{-mu l}, below the bulk threshold mu
 
-**Status.** Theorem (Theorem 9.4, with Lemma 9.5). Proved by Claude Opus 5.5; checked by Claude Opus 5.5 against a first-order discretization (N = 4000; table in lemma 09; at mu = 6, 2 mu e^{-mu l} = 0.029745 against lambda_0 = 0.029747) and by Terra 6.1 by hand, effort max: Theorem 9.4 correct with amendment (root indices, mu > 0, the case M = 0), and a gap in Lemma 9.5 closed by the referee (report appended to lemma 09). Ledger row `l09_lightpair`, shared with Theorem 9.6. Theorem B of paper/towerless_intervals.tex.
+**Status.** Theorem (Theorem 9.4, with Lemma 9.5). Proved by Claude Opus 5.5. Ledger row `l09_lightpair`, shared with Theorem 9.6. Theorem B of paper/towerless_intervals.tex.
 
 **Setting.** Condition (c) of lemma 09, R(0) = 0 and L(l) = 0, with D_M as in 09_index_from_boundary_conditions.md; c = mu l.
 

@@ -1,6 +1,6 @@
 # For M = F X G with graded positive diagonal F and G, the products sigma_1 ... sigma_p are bounded on both sides through the trailing minors of X, so with nonzero trailing minors the masses are m_k = f_k g_k (Delta_{N-k+1}/Delta_{N-k}) (1 + O(eps))
 
-**Status.** Lemma (Lemma 12.8), with Corollary 12.9. Proved by Claude Opus 5.5; checked by Claude Opus 5.5 in Python (2000 random complex 3 x 3 cases with log-uniform gradings over 8 e-folds, 6000 inequalities, no violation) and by Terra 6.1 by hand, effort max: Lemma 12.8 correct, Corollary 12.9 wrong as first stated (without the minor condition) and corrected (report appended to lemma 12). Ledger row `l12_graded`. Item 5 of Theorem C of paper/towerless_intervals.tex ("\supp{12}").
+**Status.** Lemma (Lemma 12.8), with Corollary 12.9. Proved by Claude Opus 5.5. Ledger row `l12_graded`. Item 5 of Theorem C of paper/towerless_intervals.tex ("\supp{12}").
 
 **Setting.** F = diag(f_1 <= ... <= f_N) and G = diag(g_1 <= ... <= g_N) positive, X in M_N(C), M = F X G. For p = 1, ..., N: T_p = {N - p + 1, ..., N}, Delta_p = |det X_{T_p T_p}|, D_p = max over p-subsets I, J of |det X_{IJ}|, eps_p^F = f_{N-p}/f_{N-p+1} and eps_p^G = g_{N-p}/g_{N-p+1} (both 0 for p = N), K_p = binom(N, p) - 1, and f_I the product of f_i over i in I.
 

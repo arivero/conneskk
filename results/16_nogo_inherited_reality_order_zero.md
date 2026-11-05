@@ -1,6 +1,6 @@
 # With an inherited pointwise real structure J_0 a J_0^{-1} = a^\*, compressed data satisfy order zero if and only if the generated algebra is commutative
 
-**Status.** No-go theorem in its scope (Proposition 16.1). Proved by Claude Opus 5.5; checked by Terra 6.1 by hand, with an amendment incorporated (historical/reviews/2026-11-03_terra_check_15_16.md), and by Astra 6 by hand (lemma 20, Result 10, a consensus check). Ledger row `l16_standard_nogo`. Item 2 of Proposition H of paper/towerless_intervals.tex; cited as "\supp{16}, Proposition 16.1" in paper/connes_kk_dictionary_note.tex.
+**Status.** No-go theorem in its scope (Proposition 16.1). Proved by Claude Opus 5.5; Result 10 of lemma 20 (Astra 6) treats the same statement. Ledger row `l16_standard_nogo`. Item 2 of Proposition H of paper/towerless_intervals.tex; cited as "\supp{16}, Proposition 16.1" in paper/connes_kk_dictionary_note.tex.
 
 **Setting.** The compression setting of 16_compressed_algebras_noncommutative.md, with a real structure J_0 on H_0 (antiunitary, J_0^2 = +-1, with the grading sign) such that J_0 a J_0^{-1} = a^\\* for all a in A_0 and J_0 D_0 = eps' D_0 J_0; J_F = J_0 restricted to V, which J_0 preserves because Sigma = -Sigma.
 

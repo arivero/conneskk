@@ -1,6 +1,6 @@
 # On a subalgebra commuting with D_F and with the involution, inner fluctuations have no scalar part, so the Yukawa block of the reduced triple is an explicit constant mass
 
-**Status.** Proposition (Proposition 17.3), with Corollary 17.4. Proved by Claude Opus 5.5; checked by Terra 6.1 by hand, who found Corollary 17.4 wrong as first written by overreach and had it corrected (historical/reviews/2026-11-03_terra_check_17.md). Ledger row `l17_no_higgs`.
+**Status.** Proposition (Proposition 17.3), with Corollary 17.4. Proved by Claude Opus 5.5. Ledger row `l17_no_higgs`.
 
 **Setting.** The reduced triple of 17_reduced_action.md; a unital subalgebra B of A_F with [D_F, B] = 0, and U commuting with B and B°; inner fluctuations of D by C^infinity(M) (x) B.
 

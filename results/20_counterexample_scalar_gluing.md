@@ -1,6 +1,6 @@
 # Full scalar gluing f_Q(l) = f_U(l) on the one-flavour boundary-coupled interval gives a parent with signs (+, +, -), order zero and order one whose lowest window C + C, m sigma_1, sigma_1 K fails order one
 
-**Status.** Counterexample (Result 4 of lemma 20). Proved by Astra 6 (job 20); checked by Claude Opus 5.5 (the eigenvectors, J and the commutator by hand; the compression by quadrature in Python) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_20_21.md). Ledger row `l20_gluing_fails`. Item 5 of Proposition I of paper/towerless_intervals.tex.
+**Status.** Counterexample (Result 4 of lemma 20). Proved by Astra 6 (job 20). Ledger row `l20_gluing_fails`. Item 5 of Proposition I of paper/towerless_intervals.tex.
 
 **Setting.** Lemma 12 with N_Q = N_U = 1, both bulk masses zero and X = t > 0; theta = arctan t in (0, pi/2), m = theta/l. The full domain-preserving scalar algebra A_glue = {(f_Q, f_U) : f_Q(l) = f_U(l)} (Lemma 3 of lemma 20); Gamma(Q_L, Q_R; U_L, U_R) = (Q_L, -Q_R; U_L, -U_R) and J(Q_L, Q_R; U_L, U_R) = (conj U_R, -conj U_L; -conj Q_R, conj Q_L).
 

@@ -1,6 +1,6 @@
 # A grading inherited by compression from an even parent commutes with all compressed functions, so the grading Gamma_5 of the twistor-level-one data cannot come from the stated even parent
 
-**Status.** No-go theorem in its scope (the grading statement of Example 16.9). From the second referee report on lemma 16 by Terra 6.1 (historical/reviews/2026-11-03_terra_check_18_16b.md); checked by Claude Opus 5.5 by hand and by Astra 6 by hand (lemma 20, Result 11, a consensus check). Ledger row `l16_grading_not_even`. Stated in the discussion after Proposition H of paper/towerless_intervals.tex.
+**Status.** No-go theorem in its scope (the grading statement of Example 16.9). Proved by Terra 6.1; Result 11 of lemma 20 (Astra 6) treats the same statement. Ledger row `l16_grading_not_even`. Stated in the discussion after Proposition H of paper/towerless_intervals.tex.
 
 **Setting.** A parent grading gamma, a finite-rank projection P, and the retained observables of Example 16.9 (16_twistor_level_one_m2h_m4c.md), which include Q(x_a) = Gamma_a/5.
 

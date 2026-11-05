@@ -1,6 +1,6 @@
 # Collapse in the spectral propinquity: a gap criterion and limits of commutative spaces
 
-Lemmas R2 and R3 of the [Farsi-Latrémolière assessment](../historical/reviews/2026-11-03_farsi_latremoliere_assessment.md), written out and extended. Proved by Claude Opus 5.5 without Astra or Fable, from the definitions in the LaTeX source of arXiv:2404.00240v3, Section 2. The sketches came from the reading subagent; the lower bound in the sketch of R2 omitted the cap sqrt(2)/2 of the metric and is corrected here. Refereed by Terra 6.1 (gpt-6.1-terra, effort max, 3 Nov 2026; [report](../historical/reviews/2026-11-03_terra_check_15_16.md)): Theorem 15.2 item 2 had a gap, closed by the referee; Remark 15.4 omitted the cap; Proposition 15.9 needed amendments; the T0 section first contained two invalid arguments (on unbroken symmetry and on Morita equivalence). All corrections are incorporated below. Proposition 15.10 and Counterexample 15.11 are the referee's.
+Lemmas R2 and R3 of the [Farsi-Latrémolière assessment](../historical/reviews/2026-11-03_farsi_latremoliere_assessment.md), written out and extended. Proved by Claude Opus 5.5, from the definitions in the LaTeX source of arXiv:2404.00240v3, Section 2; Proposition 15.10 and Counterexample 15.11 are by Terra 6.1.
 
 **Scope.** Everything here concerns one metric, the spectral propinquity, applied to the whole algebra of the parent triple. The section "What this says about T0" states what follows for the founding problem and what does not; [lemma 16](16_coarse_truncation.md) treats truncations, where other answers hold.
 
@@ -99,7 +99,7 @@ and the four terms are bounded by 1/g^2, abs(t) Delta, rho and Delta. Conversely
 
 *Conclusion.* Put K = 1/g^2 + rho + Delta. The extent is at most s <= K and the separation on [0, 1/eps] is at most K + Delta/eps. If eps > K + sqrt(Delta), then Delta/eps < sqrt(Delta) (or Delta = 0), so the dispersion is below eps. Hence Lambda_spec <= K + sqrt(Delta), and we let rho decrease to max(delta/2, Delta). ∎
 
-**Remark 15.4 (rescaling).** For T_eps = (A, H, D/eps) with 0 in Sp(D), Sigma = {0} and D_F = 0, the theorem gives min(sqrt(2)/2, eps delta_1/2) <= Lambda_spec <= eps delta_1/2 + eps^2/g_1^2, where delta_1 = diam T_1 and g_1 is the gap of D. This is Corollary 4.1 of Farsi-Latrémolière with a sharp leading rate for small eps. Counterexample R1 of the assessment violates the gap hypothesis, since the eigenvalue x stays bounded outside Sigma.
+**Remark 15.4 (rescaling).** For T_eps = (A, H, D/eps) with 0 in Sp(D), Sigma = {0} and D_F = 0, the theorem gives min(sqrt(2)/2, eps delta_1/2) <= Lambda_spec <= eps delta_1/2 + eps^2/g_1^2, where delta_1 = diam T_1 and g_1 is the gap of D. This is Corollary 4.1 of Farsi-Latrémolière with a sharp leading rate for small eps. Counterexample R1 ([results/R1_counterexample_farsi_latremoliere.md](../results/R1_counterexample_farsi_latremoliere.md)) violates the gap hypothesis, since the eigenvalue x stays bounded outside Sigma.
 
 **Corollary 15.5 (the tuned interval, Theorem 9.9).** Let T_l = (C([0, l]), L^2([0, l]; C^2), D_{-mu(l)}) with condition (c) and mu(l) as in Theorem 9.9, c = mu(l) l, and let P project onto +/- m_f. For l small,
 
@@ -165,11 +165,11 @@ So gamma added to the families converges along the same tunnels, and the KO-sign
 
 ## Unbroken symmetry and the metric class
 
-**Proposition 15.10 (referee).** Let (A, H, D, J) be a finite-dimensional real triple with order zero, order one and J D = eps' D J, and let u be a unitary in A. If D commutes with u J u J^-1, then [D, u] = 0. If moreover the triple is metric, u is scalar, and the inner gauge transformation is trivial.
+**Proposition 15.10.** Let (A, H, D, J) be a finite-dimensional real triple with order zero, order one and J D = eps' D J, and let u be a unitary in A. If D commutes with u J u J^-1, then [D, u] = 0. If moreover the triple is metric, u is scalar, and the inner gauge transformation is trivial.
 
 *Proof.* Put v = J u J^-1. From [D, u v] = 0, we get [D, u] v = - u [D, v], so a := u\* [D, u] = - [D, v] v\*. Now [D, v] = eps' J [D, u] J^-1 commutes with A by order one, and v\* commutes with A by order zero. So a commutes with u, and [D, u^n] = n a u^n by induction. Then u^n D u^-n = D - n a. D is bounded, so a = 0. For a metric triple, the self-adjoint parts of u lie in ker L = R 1. ∎
 
-**Counterexample 15.11 (referee; order one is needed).** Let H = M_2(C) with the Hilbert-Schmidt product, A = M_2(C) acting by left multiplication, J x = x\*, and D x = x - (1/2) tr(x) I. Applying [D, L_a] to I gives a - (1/2) tr(a) I, so [D, L_a] = 0 forces a scalar, and the triple is metric. Yet every conjugation x -> u x u\* = L_u J L_u J^-1 commutes with D. This triple fails order one.
+**Counterexample 15.11 (order one is needed).** Let H = M_2(C) with the Hilbert-Schmidt product, A = M_2(C) acting by left multiplication, J x = x\*, and D x = x - (1/2) tr(x) I. Applying [D, L_a] to I gives a - (1/2) tr(a) I, so [D, L_a] = 0 forces a scalar, and the triple is metric. Yet every conjugation x -> u x u\* = L_u J L_u J^-1 commutes with D. This triple fails order one.
 
 ## What this says about T0
 

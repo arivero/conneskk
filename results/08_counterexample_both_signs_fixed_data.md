@@ -1,6 +1,6 @@
 # A scalar-interval product with fixed D_F, J_F, Gamma_F and particle number admits particle-preserving involutions of both signs, so Conjecture 07.4 is false as stated
 
-**Status.** Counterexample (Result 11 of lemma 08) to Conjecture 07.4. The conjecture is by Claude Opus 5.5 (lemma 07, Question 4); the counterexample is by Astra 6 (job 08), checked by Claude Opus 5.5 in Python (KO-6 signs, order zero and first order, both involutions admissible with s = -1 and s = +1) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger rows `l08_both_signs` and `conj07_4` (status refuted; refuted_by(conj07_4, l08_both_signs)). Item 5 of Theorem D of paper/towerless_intervals.tex.
+**Status.** Counterexample (Result 11 of lemma 08) to Conjecture 07.4. The conjecture is by Claude Opus 5.5 (lemma 07, Question 4); the counterexample is by Astra 6 (job 08). Ledger rows `l08_both_signs` and `conj07_4` (status refuted; refuted_by(conj07_4, l08_both_signs)). Item 5 of Theorem D of paper/towerless_intervals.tex.
 
 **The conjecture.** For F = F_0 x (collapsing chiral interval) with the product conventions of lemma 06, the induced U = 1 (x) sigma has UJ = sJU with s fixed by eps' of the interval and the product grading twist, and the choice between 9 and 11 is fixed by whether J_M or J_M gamma_5 represents physical charge conjugation.
 

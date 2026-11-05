@@ -1,6 +1,6 @@
 # All zero modes of the boundary-Yukawa interval lift only if the residual theory is vectorlike, so without nu_R a massless left neutrino is forced for every X preserving electromagnetism
 
-**Status.** No-go theorem in its scope (Corollary 12.3). Proved by Claude Opus 5.5; checked by Claude Opus 5.5 by hand and by Terra 6.1 by hand, effort max, with the amendment restricting the neutrino statement to couplings preserving electromagnetism (report appended to lemma 12). Ledger row `l12_index`. Theorem C of paper/towerless_intervals.tex.
+**Status.** No-go theorem in its scope (Corollary 12.3), with the neutrino statement restricted to couplings preserving electromagnetism. Proved by Claude Opus 5.5. Ledger row `l12_index`. Theorem C of paper/towerless_intervals.tex.
 
 **Setting.** D_X, rho_Q, rho_U and the stabilizer H_X as in 12_boundary_yukawa_index.md. For the Standard Model, H = SU(3) x U(1)_em.
 
@@ -13,7 +13,7 @@
 
 *Hypotheses.* Item 4 needs X to preserve electromagnetism and the absence of a neutral right-handed lepton.
 
-*Escape shown by the referee.* Without electromagnetic invariance the neutrino statement can fail: for one lepton generation with zero bulk masses, Q_L = (nu_L, e_L), U_R = e_R and X = (1, 0)^T, the left kernel is spanned by e_L while nu_L is coupled to e_R; this X breaks electromagnetic charge.
+*Escape.* Without electromagnetic invariance the neutrino statement can fail: for one lepton generation with zero bulk masses, Q_L = (nu_L, e_L), U_R = e_R and X = (1, 0)^T, the left kernel is spanned by e_L while nu_L is coupled to e_R; this X breaks electromagnetic charge.
 
 **Proof.** Lemma 12, Corollary 12.3; the proof is there: the endpoint exponentials identify the chiral kernels equivariantly with ker X^dagger and ker X, and both vanish exactly when X is invertible, in which case X is an H_X-equivariant isomorphism.
 

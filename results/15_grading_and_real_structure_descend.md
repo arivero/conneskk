@@ -1,6 +1,6 @@
 # For a symmetric spectral block the grading and the real structure of the parent descend to the block with their signs, and the tunnel of the gap criterion controls the grading
 
-**Status.** Proposition (Proposition 15.9). Proved by Claude Opus 5.5; checked by Terra 6.1 by hand, with amendments incorporated (historical/reviews/2026-11-03_terra_check_15_16.md). Ledger row `l15_grading`. Item 4 of Proposition G of paper/towerless_intervals.tex.
+**Status.** Proposition (Proposition 15.9). Proved by Claude Opus 5.5. Ledger row `l15_grading`. Item 4 of Proposition G of paper/towerless_intervals.tex.
 
 **Setting.** Theorem 15.3 (15_gap_criterion.md) with Sigma = -Sigma. D anticommutes with a grading gamma and satisfies J D = eps' D J for an antiunitary J with J^2 = eps and J gamma = eps'' gamma J. D_B = W D W^\\*, and rho, c = 1/(1 + Delta) as in the proof of Theorem 15.3.
 

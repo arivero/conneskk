@@ -32,7 +32,7 @@
 :- discontiguous prior_work/3.
 :- discontiguous claim/5, source/3, depends/2, hypothesis/2, attempted_by/2, checked_by/3, overturn/2, addresses/2, strategy/3.
 :- discontiguous referee_report/2, outside_referee/2, referee_pending/1.
-:- discontiguous stated_in_draft/2, covered_by/2.
+:- discontiguous stated_in_draft/2, covered_by/2, claim_amended/2.
 :- use_module(library(lists)).
 :- use_module(library(readutil)).
 
@@ -610,7 +610,7 @@ claim(rs_N7, claim, proved, "proved under the trace-pairing definition", "The or
 source(rs_N7, 'historical/corpus/connes_kk_research_state.md', '65-an-orientable-real-bimodule-from-the-1oplus2oplus3-spaces').
 overturn(rs_N7, "A different real Kasparov duality or multi-class construction is not decided by this matrix.").
 attempted_by(rs_N7, corpus).
-claim(rs_N8, claim, proved, "proved for the colour-preserving bridge exchange (Terra 6.1 referee)", "An orientable four-summand parent can reduce to a nonorientable, faithful three-summand finite triple with nonzero one-forms, while preserving first-order throughout: explicit 32D finite-matrix model.").
+claim(rs_N8, claim, proved, "proved for the colour-preserving bridge exchange", "An orientable four-summand parent can reduce to a nonorientable, faithful three-summand finite triple with nonzero one-forms, while preserving first-order throughout: explicit 32D finite-matrix model.").
 source(rs_N8, 'historical/corpus/connes_kk_research_state.md', '66-orientation-loss-under-a-heavy-centralizer-and-spectral-projection').
 source(rs_N8, 'results/orientability_under_heavy_centralizer.md', '').  % statement and the proof by hand of Terra 6.1, written out on 4 Nov 2026
 overturn(rs_N8, "Projection alone preserves orientability and makes the two scalar states infinitely distant; the algebra restriction and the geometric justification remain independent requirements.").
@@ -808,7 +808,7 @@ source(paper_14_3_1, 'historical/corpus/canonical_research.md', '143-the-angle-t
 attempted_by(paper_14_3_1, corpus).
 checked_by(paper_14_3_1, corpus, python("see historical/corpus/research_checks_knowledge.md")).
 %% Referee of lemmas 08, 13 and 14 (Terra 6.1, 3 Nov 2026): historical/reviews/2026-11-03_terra_check_08_13_14.md
-claim(terra_two_neutral_pairs, counterexample, proved, "Referee's counterexample to the unqualified D.2", "H = C^2 (x) C^2, A = C, D = 0, Gamma = 1 (x) sigma_3, J = (1 (x) sigma_1) K: two unpaired neutral states, no Majorana term, with involutions 1 (x) sigma_1 and sigma_2 (x) sigma_1 of opposite signs.").
+claim(terra_two_neutral_pairs, counterexample, proved, "Counterexample to the unqualified D.2", "H = C^2 (x) C^2, A = C, D = 0, Gamma = 1 (x) sigma_3, J = (1 (x) sigma_1) K: two unpaired neutral states, no Majorana term, with involutions 1 (x) sigma_1 and sigma_2 (x) sigma_1 of opposite signs.").
 source(terra_two_neutral_pairs, 'historical/reviews/2026-11-03_terra_check_08_13_14.md', 'section-6-theorem-d').
 attempted_by(terra_two_neutral_pairs, terra_6_1).
 checked_by(terra_two_neutral_pairs, claude_opus_5_5, python("numpy: both involutions and their signs")).
@@ -816,7 +816,7 @@ claim(paper_D2_unqualified, claim, refuted, "First version of Theorem D item 2",
 source(paper_D2_unqualified, 'historical/reviews/2026-11-03_terra_check_08_13_14.md', 'section-6-theorem-d').
 attempted_by(paper_D2_unqualified, claude_opus_5_5).
 refuted_by(paper_D2_unqualified, terra_two_neutral_pairs).
-claim(terra_winding, counterexample, proved, "Referee's counterexample to the global form of Theorem 14.3", "On S^1 x S^3, the fixed-singular-value link lambda exp(i theta) is not attained, since every globally smooth real A_5 gives zero winding.").
+claim(terra_winding, counterexample, proved, "Counterexample to the global form of Theorem 14.3", "On S^1 x S^3, the fixed-singular-value link lambda exp(i theta) is not attained, since every globally smooth real A_5 gives zero winding.").
 source(terra_winding, 'historical/reviews/2026-11-03_terra_check_08_13_14.md', 'lemma-14').
 attempted_by(terra_winding, terra_6_1).
 checked_by(terra_winding, claude_opus_5_5, by_hand).
@@ -897,7 +897,7 @@ source(l18_not_unbroken, 'lemmas/18_heavy_limit_near_cutoff.md', '').
 depends(l18_not_unbroken, l18_angles).
 attempted_by(l18_not_unbroken, terra_6_1).
 checked_by(l18_not_unbroken, claude_opus_5_5, by_hand).
-claim(l16_ce_centre, counterexample, proved, "Referee's counterexample in Corollary 16.8", "V_X = C^2, gamma_X = sigma_3, d_X = sigma_1, A_X = C + C and V_Y = C: the central (diag(1, 0), 0) does not commute with D_F.").
+claim(l16_ce_centre, counterexample, proved, "Counterexample in Corollary 16.8", "V_X = C^2, gamma_X = sigma_3, d_X = sigma_1, A_X = C + C and V_Y = C: the central (diag(1, 0), 0) does not commute with D_F.").
 source(l16_ce_centre, 'lemmas/16_coarse_truncation.md', 'two-sheets-the-form-of-the-classification').
 attempted_by(l16_ce_centre, terra_6_1).
 checked_by(l16_ce_centre, claude_opus_5_5, by_hand).
@@ -1101,7 +1101,7 @@ depends(l21_exotic, l21_so30).
 addresses(t12, l21_exotic).
 checked_by(l21_exotic, claude_opus_5_5, python("exhaustive diquark counts, the window counts, all eight anomaly assignments; the window clause corrected for reading (b)")).  % refereed 5 Nov 2026
 claim(l41_forms, theorem, proved, "Lemma 41.1 and Theorem 41.2", "For a finite real KO-6 triple with order zero the trace form Q_ij = Tr(gamma p_i p_j^o) is skew. Along the chain A_PS -> A_SM -> C + M_3(C) of lemma 20 and lemma 06 (one generation, Dirac neutrinos) the forms are [[0,0,-2],[0,0,2],[2,-2,0]], [[0,-2,-2],[2,0,2],[2,-2,0]] and 0, of ranks 2, 2, 0: the trace-form Poincare duality fails at every step, at the last because every range rho(p_i) rho(p_j)^o of the light block has graded dimension zero (the bimodule balance of lemma 06, weaker than vectorlikeness: the unpaired nu_L coexists with Q_B = 0).").
-source(l41_forms, 'lemmas/41_axioms_along_the_chain.md', 'poincare-duality').
+source(l41_forms, 'lemmas/41_axioms_along_the_chain.md', 'poincaré-duality').
 attempted_by(l41_forms, claude_fable_5_1).
 checked_by(l41_forms, claude_fable_5_1, python("the three matrices on the 32-state representation, not kept")).
 depends(l41_forms, l20_rank_one).  depends(l41_forms, l06_nuL).
@@ -1446,12 +1446,12 @@ attempted_by(l26_plane, claude_opus_5_5).
 checked_by(l26_plane, claude_opus_5_5, by_hand).
 checked_by(l26_plane, terra_6_1, by_hand).  % report 26, item 3
 claim(l26_lr, proposition, proved, "Propositions 26.4 and 26.5", "In the step-threshold model (4), differences of the inverse couplings do not depend on a common F, and alpha_R^-1 - alpha_2^-1 has no power of S: 61.69 at S = 1 for M_KK = 321 GeV, closing near 2 x 10^24 GeV, one loop. The model omits frequency-2 multiplets and boundary counterterms.").
-source(l26_lr, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-tower-of-the-parent').
+source(l26_lr, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-tower-of-the-parent-in-the-step-threshold-model').
 attempted_by(l26_lr, claude_opus_5_5).
 checked_by(l26_lr, claude_opus_5_5, python("exact fractions for the coefficients; equation (4) against equation (3) to 13 digits")).
 checked_by(l26_lr, terra_6_1, by_hand).  % report 26, item 4
 claim(l26_meeting, claim, numerical, "Result 26.6", "One-loop model (4), Standard Model below M_KK, without frequency-2 multiplets: alpha_1 = alpha_2 = alpha_3 at mu_* = 2.21 x 10^14 GeV with M_KK = 3.15 x 10^13 GeV, S = 7.04, the only solution with S >= 1. Conditional on the spectrum and the matching prescription.").
-source(l26_meeting, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-tower-of-the-parent').
+source(l26_meeting, 'lemmas/26_interior_vacuum_matching_scale.md', 'the-tower-of-the-parent-in-the-step-threshold-model').
 depends(l26_meeting, l26_lr).
 attempted_by(l26_meeting, claude_opus_5_5).
 checked_by(l26_meeting, claude_opus_5_5, python("nested root finding, with input shifts")).

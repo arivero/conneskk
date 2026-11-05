@@ -1,6 +1,6 @@
 # Scalar changes of the coefficient connection attain every connection on the kernel bundle exactly when the functions <s_i, s_j> are independent on the fibre, which holds for H^0(CP^3, O(1)) and fails for functions pulled back from S^4, whose compressed image has real dimension six
 
-**Status.** Corollary (Corollary 43.3). Proved by Claude Fable 5.1 on 4 November 2026 by hand. Refereed by Claude Opus 5.5 (effort max, 4 November 2026; report in historical/reviews/2026-11-04_opus_check_41_45.md): both computations confirmed; the last clause of the first version, which read the collar connection of lemma 29 as an instance of the matrix-valued case, was an error and is withdrawn (that connection acts at the wall, on the CP^3 copy, and moves the kernel). Ledger row `l43_scalar` (depending on `l43_berry` and `l10_toeplitz`). The table row on the connection on the window of paper/connes_kk_dictionary_note.tex.
+**Status.** Corollary (Corollary 43.3). Proved by Claude Fable 5.1 on 4 November 2026 by hand. The collar connection of lemma 29 is not an instance of the matrix-valued case: it acts at the wall, on the CP^3 copy, and moves the kernel. Ledger row `l43_scalar` (depending on `l43_berry` and `l10_toeplitz`). The table row on the connection on the window of paper/connes_kk_dictionary_note.tex.
 
 **Setting.** The family of 43_berry_connection_criterion.md with alpha restricted to scalar horizontal forms, alpha = i a (x) 1_E with a real; the kernel H^0(CP^3, O(1)) of the Dolbeault-Dirac operator twisted by O(1), with unitary frame s_i = z_i/abs(z); and the twistor fibration CP^3 -> S^4.
 
@@ -14,4 +14,4 @@
 
 **Proof.** Lemma 43, Corollary 43.3: Theorem 43.2 with the scalar subalgebra in place of Gamma(u(E)); the second-moment identity maps Herm(4) onto itself, and Example 16.9 with Proposition 10.1 gives the statement for S^4.
 
-**What it leaves open.** A second independent reading. The collar connection of lemma 29 is outside the statement, so the question of STRATEGY T15, whether that connection is a choice or a construction, stays open; the compression of the twistor coordinates used in item 3 is 10_toeplitz_twistor_coordinates.md.
+**What it leaves open.** The collar connection of lemma 29 is outside the statement, so the question of STRATEGY T15, whether that connection is a choice or a construction, stays open; the compression of the twistor coordinates used in item 3 is 10_toeplitz_twistor_coordinates.md.

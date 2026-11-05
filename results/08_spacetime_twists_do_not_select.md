@@ -1,6 +1,6 @@
 # The spacetime grading twists J_M versus J_M gamma_M in the two odd reductions do not select the finite involution, since both reconstructions use the same J_M
 
-**Status.** Proposition (Result 9 of lemma 08), with Proposition 10 on the identification of charge conjugation. Proved by Astra 6 (job 08); checked by Claude Opus 5.5 by hand and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger rows `l08_spacetime` and `l08_chargeconj`. First sentence of item 5 of Theorem D of paper/towerless_intervals.tex.
+**Status.** Proposition (Result 9 of lemma 08), with Proposition 10 on the identification of charge conjugation. Proved by Astra 6 (job 08). Ledger rows `l08_spacetime` and `l08_chargeconj`. First sentence of item 5 of Theorem D of paper/towerless_intervals.tex.
 
 **Setting.** A four-dimensional Euclidean spacetime triple with J_M^2 = -1, J_M D_M = D_M J_M, J_M gamma_M = gamma_M J_M; an odd reduction (d, j_s) with j_s^2 = s, j_s d = s d j_s of a finite KO-6 triple F = T_s x P_k with J_F = j_s (x) (B_s K), B_- = -i sigma_2, B_+ = sigma_1; D_{M x T_s} = D_M (x) 1 + gamma_M (x) d.
 

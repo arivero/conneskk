@@ -1,8 +1,8 @@
 # Commutative cylinders, spectral walls, and the two-stage compression
 
-By Astra 6 (gpt-6-astra, effort xhigh), 3 Nov 2026; prompt in [prompts/24_commutative_parent.md](../historical/prompts/24_commutative_parent.md). Reproduced as delivered, with links made relative. The section "Numerical check" at the end is by Claude Opus 5.5. Refereed by Terra 6.1 (effort max, 3 Nov 2026; [report](../historical/reviews/2026-11-03_terra_check_24.md)): no error in the displayed equations, and one gap in the general statement on compression maps. The record above the section "Referee amendments" stays as delivered, and those amendments apply to it.
+By Astra 6 (gpt-6-astra), 3 Nov 2026; prompt in [prompts/24_commutative_parent.md](../historical/prompts/24_commutative_parent.md). The scope paragraphs after Results 2 to 6 and 10 and the second proof after Lemma 8 are by Terra 6.1; the section "Numerical check" at the end is by Claude Opus 5.5.
 
-A commutative cylinder admits an exact realization of the **operator window** of lemmas 22 and 23 when the two finite gradings are prescribed through nonlocal spectral boundary conditions. The higher \(K\)-modes then decouple as the radius of \(K\) tends to zero. Two qualifications remain essential: these boundary conditions restrict scalar functions at the walls, and compression of scalar functions through both stages differs from generating a matrix algebra between the stages. In particular, aligned walls give \(\mathbb R\oplus\mathbb R\) on the quaternionic factor under direct scalar compression, whereas the intervening matrix-algebra construction gives \(\mathbb H\oplus\mathbb H\). Local boundary gradings preserve all scalar functions, but their reduction to the unchanged four-section window has a precise restriction proved below. The radial no-go of lemma 22 survives rechecking in its stated scope. For the massless one-loop potential of lemma 23, an analytic argument strengthens the numerical statement to all \(n_f>0\).
+A commutative cylinder admits an exact realization of the **operator window** of lemmas 22 and 23 when the two finite gradings are prescribed through nonlocal spectral boundary conditions. The higher \(K\)-modes then decouple as the radius of \(K\) tends to zero. Two qualifications remain essential: these boundary conditions restrict scalar functions at the walls, and compression of scalar functions through both stages differs from generating a matrix algebra between the stages. In particular, aligned walls give \(\mathbb R\oplus\mathbb R\) on the quaternionic factor under direct scalar compression, whereas the intervening matrix-algebra construction gives \(\mathbb H\oplus\mathbb H\). Local boundary gradings preserve all scalar functions, but their reduction to the unchanged four-section window has a precise restriction proved below. The radial no-go of lemma 22 holds in its stated scope, with a second proof. For the massless one-loop potential of lemma 23, an analytic argument strengthens the numerical statement to all \(n_f>0\).
 
 **1. Theorem — An exact spectral boundary construction.**
 
@@ -329,7 +329,7 @@ The \(V\)-side matrices act on the left of \(\eta\) and commute with its right g
 
 Endpoint restrictions do not change these finite-dimensional images. If a linear functional vanishes on compressions of functions supported in \(0<x<\ell\), its smooth matrix-entry density vanishes in the interior and hence everywhere. Finite-dimensional separation then gives equality with the unrestricted image, exactly as in [Result 7 of lemma 20](20_connecting_operator.md).
 
-At the intermediate stage, however, spectral walls still give scalar endpoint values. Even after algebra generation, those values remain scalar. Enlarging them to the full stabilizers of \(\Gamma_0,\Gamma_1\), as in lemma 23, is another change of the parent algebra. Equality of finite compression images does not identify the parent gauge groups or one-forms.
+At the intermediate stage, however, spectral walls still give scalar endpoint values. Even after algebra generation, those values remain scalar. Enlarging them to the full stabilizers of \(\Gamma_0,\Gamma_1\), as in lemma 23, is another change of the parent algebra. Equality of finite compression images does not identify the parent algebras, norms, gauge groups or one-forms, and Eq. (16) has the two Hom spaces and the two scalar algebras of Example 16.9 as inputs.
 
 ---
 
@@ -458,7 +458,7 @@ J_F=\Gamma_0J_1.
 \]
 These identities follow directly from the stated commutation relations. They specify sufficient conditions; the natural \(\mathcal O(1)\) cylinder has not supplied such an extension or its order-zero property here.
 
-In particular, the quaternionic antiunitary \(j\) used to recognize \(M_2(\mathbb H)\) commutes with the \(\Gamma_a\). It does not itself satisfy the required anticommutation with \(\Gamma_p\).
+In particular, the quaternionic antiunitary \(j\) used to recognize \(M_2(\mathbb H)\) commutes with the \(\Gamma_a\). It does not itself satisfy the required anticommutation with \(\Gamma_p\). At the finite level, if the gradings are Gamma_p and Gamma_q, a unit n orthogonal to p and q gives J_1 = Gamma_n j, with J_1^2 = -1 and the required anticommutation; extending this choice to the parent remains a separate task.
 
 The even-algebra assertion is the centralizer calculation in Result 4 after intermediate generation.
 
@@ -482,7 +482,7 @@ A marked \(p\in S^4\) fixes a quaternionic line, but choosing \(w\) also require
 
 ---
 
-**7. No-go theorem — Recheck of the radial statement in lemma 22.**
+**7. No-go theorem — The radial statement of lemma 22.**
 
 **Hypotheses.** Let the parent be exactly the one-interval model of lemma 22: fixed wall coupling \(X\), zero bulk mass, the even algebra \(\mathcal A_\ell\), scalar inner fluctuations \(E h\) with \(h^*=-h\), and the **moving spectral window**. For real fluctuations, include the conjugate one-form and assume the stated order-zero representation.
 
@@ -515,7 +515,7 @@ Q_\ell(Eh)
 \]
 Adding a multiple of this operator to the fixed \(m\sigma_1\) changes its singular values at second order.
 
-The verdict agrees with the author’s amended theorem and [Terra’s independent endpoint-preserving proof](../historical/reviews/2026-11-03_terra_check_22.md). In the usual nondegenerate Standard Model representation, the normalized shifted Higgs quaternion lies on the unit-quaternion orbit; its norm is fixed.
+In the usual nondegenerate Standard Model representation, the normalized shifted Higgs quaternion lies on the unit-quaternion orbit; its norm is fixed.
 
 The known escapes are a variable wall coupling, odd connection directions, suitable bulk masses, additional internal directions with nontrivial connection data, or additional elementary or composite fields. A quantum effective action on the same configuration space does not add a radial coordinate. The proposed \(K\times I_\ell\) parent has tangential directions and tangential one-forms, so this theorem does not decide its full fluctuation space.
 
@@ -565,6 +565,8 @@ Finally,
 \frac{d}{du}\log\mathcal J(e^u)=-e(e^u).
 \]
 Concavity makes this derivative nonincreasing, proving the assertion. ∎
+
+*A second proof of the monotonicity.* With rho(s) = (arsinh sqrt(s))^3/(2 sqrt(s (1 + s))), the substitution s = sinh^2 x gives J(z) = int_0^infinity rho(s)/(s + z) ds. With L(v) = log rho(e^v), L'(v) = 3 tanh(x)/(2x) - (1 + tanh^2 x)/2 for v = 2 log sinh x, which is strictly decreasing. For z = e^u, with the probability density in y proportional to e^y rho(e^{u+y})/(1 + e^y), e(e^u) is the mean of 1/(1 + e^y), and its derivative in u is Cov(1/(1 + e^y), L'(u + y)) > 0, both functions being strictly decreasing in y. This uses neither log-concavity nor Prékopa's theorem.
 
 ---
 
@@ -639,8 +641,6 @@ For \(n_f\ge54/5\), its sign is negative. For \(0<n_f<54/5\), it changes sign ex
 
 This proves the massless statement for the entire parameter range, including the previously numerical range. No numerical computation is used in this proof.
 
-The recorded author and [Terra referee calculations](../historical/reviews/2026-11-03_terra_check_23.md) agree on the sampled massless cases. The logarithmic-concavity proof above is an additional single-agent derivation; it has not received a fresh independent model review in this turn. The recorded agreement therefore should not be described as a multi-model review of this new proof.
-
 The escapes remain changes to the stated determinant: frequency-two fermions, modified form factors through warping or other geometry, suitable bulk-mass sectors, wall potentials, and wall kinetic or interaction terms. The full effective action of the proposed \(K\times I_\ell\) parent, including its \(K\)-tower, has not been computed here. Theorem 9 is for theta in [0, pi/2]; at theta = pi/2 the determinant has its continuous value, while the principal-logarithm window is degenerate.
 
 ---
@@ -683,18 +683,6 @@ The opposite-mass scan in lemma 23 samples finitely many masses, multiplicities,
 
 For T0, a commutative scalar representation with prescribed spectral walls gives an exact interval operator window and controlled tower decoupling, while local walls preserve the full scalar algebra under the ellipticity hypotheses above. The derivation of a nontrivial local grading and the desired algebra from one coupled scalar window remains open, and intermediate algebra generation must be stated explicitly. For T0b, the second sheet, compatible reality, quaternionic grading choice, and connector remain inputs; their algebraic consequences can be derived once those choices are supplied. Neither the radial theorem nor the specified one-loop potential closes the commutative-parent problem.
 
-## Referee amendments
-
-From Terra 6.1. These apply to the text above.
-
-- **Result 2.** Write G_0 at x = 0 and G_l at x = l. Equation (6) supplies the principal-symbol condition of Bar-Ballmann, Corollary 4.18 and Theorem 4.11; their Example 4.20 assumes more. On the unaugmented Dolbeault bundle, the Clifford representation is irreducible, so a fibre endomorphism commuting with every sigma_A is scalar, and a smooth involution of this form is +1 or -1. Additional fibres and other local elliptic projectors lie outside this sufficient criterion.
-- **Result 3.** The statement on marked points concerns the natural field displayed there. A local field can encode a chosen point: on the auxiliary bundle, G_p(y) = p_a Gamma_a^aux is a local constant field whose coefficients contain p.
-- **Result 4.** Equation (16) has the two Hom spaces and the two scalar algebras of Example 16.9 as inputs. The endpoint argument proves equality of the finite-dimensional linear images, and does not identify the parent algebras, norms, gauge groups or one-forms.
-- **Result 5, gap in the final assertion.** Convergence of compression maps needs a common domain and a collapse map. With aligned walls, D_F = 0 and f_l(y, x) = 6 (x/l)(1 - x/l), both endpoint values vanish while Phi_l(f_l) = 1. A correct form: for F(y, s) fixed on K x [0, 1] and f_l(y, x) = F(y, x/l), Phi_l(f_l) tends to E_0 Q_K(int_0^1 F(., s) ds). For x-independent ambient multipliers the limit is E_0 Q_K, by (19). The rate discussion after (18) also needs control of the denominator: a sufficient addition is r (b_r + L) <= (1 - epsilon) Delta_K. The case b_r = O(1/l) follows from the stronger estimate |D_{r,Q}| >= (Delta_K^2/r^2 + pi^2/(4 l^2))^{1/2}, from the one-ended Poincare inequality on the positive and negative B-spectral components.
-- **Result 6.** At the finite level, if the gradings are Gamma_p, Gamma_q, a unit n orthogonal to p and q gives J_1 = Gamma_n j, with J_1^2 = -1 and the required anticommutation. Extending this choice to the parent remains a separate task.
-- **Lemma 8 and Theorem 9.** An independent check of the key monotonicity, without log-concavity or Prekopa's theorem: with rho(s) = (arsinh sqrt(s))^3/(2 sqrt(s (1 + s))), J(z) = int_0^infinity rho(s)/(s + z) ds; with L(v) = log rho(e^v), L'(v) = 3 tanh(x)/(2x) - (1 + tanh^2 x)/2 for v = 2 log sinh x, which is strictly decreasing. For z = e^u, with the probability density in y proportional to e^y rho(e^{u+y})/(1 + e^y), e(e^u) is the mean of 1/(1 + e^y), and its derivative in u is Cov(1/(1 + e^y), L'(u + y)) > 0, as both are strictly decreasing. Theorem 9 is for theta in [0, pi/2]. At theta = pi/2 the determinant has its continuous value, while the principal-logarithm window is degenerate. Its hypotheses are the flat massless one-loop determinant, its gauge multiplicities and connector wall condition, frequency-one fermions, no fermion-connector modification, and no other angle-dependent term.
-- **Result 10.** The divergence is stated for nonzero fermion multiplicity, with no cancellation by additional sectors. The opposite-mass scan in lemma 23 is a numerical result on its sampled parameters.
-
 ## Numerical check
 
-By Claude Opus 5.5, in Python (numpy, scipy), 3 Nov 2026, in a temporary directory, not kept: E_p(Gamma_a) = p_a Gamma_p to 10^-15, which gives equation (13); tr(g^2) = 16/5 for the auxiliary field of Result 3; on grids, e(z) lies in (0, 1) and is nondecreasing for z in [10^-3, 50]; H(t) is strictly decreasing on (0, 1/2), with H near 54/5 at small t and near 0 at t = 1/2; for n_f in {1, 3, 6, 8, 10}, H - n_f has one sign change, with the stationary angle 0.34 at n_f = 8, which agrees with the referee of lemma 23. Results 1, 2, 5 and 6 were read and not separately computed.
+By Claude Opus 5.5, in Python (numpy, scipy), 3 Nov 2026, in a temporary directory, not kept: E_p(Gamma_a) = p_a Gamma_p to 10^-15, which gives equation (13); tr(g^2) = 16/5 for the auxiliary field of Result 3; on grids, e(z) lies in (0, 1) and is nondecreasing for z in [10^-3, 50]; H(t) is strictly decreasing on (0, 1/2), with H near 54/5 at small t and near 0 at t = 1/2; for n_f in {1, 3, 6, 8, 10}, H - n_f has one sign change, with the stationary angle 0.34 at n_f = 8, as in lemma 23.

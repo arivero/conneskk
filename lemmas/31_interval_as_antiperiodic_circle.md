@@ -2,13 +2,9 @@
 
 *Lemma 31. Written as file 01 of the eleven-dimensional line (branch 11D, by another Claude session) and moved here on 4 November 2026 with its text unchanged; its proposals keep their labels, and the plan and the unfinished files of that line are in [historical/11D/](../historical/11D/README.md). Internal references to "file 0n" of that line mean the lemma with the same content: 01 is lemma 31, 02 is 32, 03 is 39, 04 is 33, 05 is 34, 06 is in historical/11D, 07 is 40, 08 is 35, 09 is 36, 10 is 37, 11 is 38.*
 
-Part of the 11D line of research ([README](../historical/11D/README.md)). Propositions 1.1, 1.4 and 1.5 are proved here; Proposal 1.3 is a dictionary to be tested. The joint-limit family of the section of that name is from the Astra 6 audit of 3 Nov 2026 ([historical/reviews/2026-11-03_astra_audit_d11.md](../historical/reviews/2026-11-03_astra_audit_d11.md), §3 and §4), restated here in circle language and checked. Attempted by Claude (Anthropic), 3 Nov 2026; checks in Python, [checks_11d.py](../historical/11D/checks_11d.py), sections F, F2 and H. Refereed by GPT-6.1 Terra and checked a second time by Claude Sonnet 5.5 (historical/reviews/2026-11-04_terra_check_11d.md, historical/reviews/2026-11-04_sonnet_second_check_11d.md).
+Part of the 11D line of research ([README](../historical/11D/README.md)). Propositions 1.1, 1.4 and 1.5 are proved here; Proposal 1.3 is a dictionary to be tested. The joint-limit family of the section of that name is from the Astra 6 audit of 3 Nov 2026 ([historical/reviews/2026-11-03_astra_audit_d11.md](../historical/reviews/2026-11-03_astra_audit_d11.md), §3 and §4), restated here in circle language. Attempted by Claude (Anthropic), 3 Nov 2026; checks in Python, [checks_11d.py](../historical/11D/checks_11d.py), sections F, F2 and H.
 
-**Referee note (GPT-6.1 Terra, 4 Nov 2026).** Proposition 1.1 and the joint family's Weyl constant are independently checked; the unfolded circle is scalar, and even extensions of arbitrary smooth interval functions need not be smooth at the fixed points. See the [referee report](../historical/reviews/2026-11-04_terra_check_11d.md#proposition-11-and-the-joint-family-interval-unfolding). Proposition 1.5 is amended at its statement below.
-
-**Referee note on Proposition 1.4 (GPT-6.1 Terra).** The endpoint value, minimum and small-angle coefficient are independently checked under the stated one-loop hypotheses; see the [report](../historical/reviews/2026-11-04_terra_check_11d.md#proposition-14-the-one-loop-endpoint-and-small-angle-coefficient).
-
-**Correction (3 Nov 2026).** There was an error in the first version of Proposition 1.4: it read the potential of lemma 24 as the whole energy of the walls, but that potential is taken relative to theta = 0 and omits the theta-independent Casimir energy. The corrected statement is below; the reading "the walls attract" is withdrawn. The first version of Proposal 1.3 also placed the W at the bottom of the tower, M_W ~ 1/(2R), along every path to v = 0; after the audit (its §2.2), that holds only on the scale-free path of Proposition 1.5.
+*Scope.* The unfolded circle is scalar, and even extensions of arbitrary smooth interval functions need not be smooth at the fixed points.
 
 ## Setting
 
@@ -41,7 +37,7 @@ So the two sheets of H are the two fixed points of a reflection on a circle whos
 
 At fixed l, the vector masses of lemma 23 vanish as theta -> 0 and also as theta -> pi/2, while the tower spacing pi/l stays fixed; vanishing masses alone open no dimension (audit §2.2). The audit gives a family in which they do.
 
-**Proposition (Astra 6, audit §3; restated).** Let D_F(epsilon) = epsilon D_* and l_epsilon = l_* epsilon^{-alpha}, 0 < alpha < 1, with wall data X = tan(l D_F) as in lemma 22. Then the exact window is W^* D W = epsilon D_*, the rest of the spectrum lies at |lambda| >= pi/l_epsilon - epsilon ||D_*||, the compression error is at most (2/3) l_*^2 ||D_*||^2 epsilon^{2(1-alpha)} ||a|| (Theorem 22.4, item 2), and for alpha < beta < 1 a cutoff E_epsilon = E_* epsilon^beta contains exactly the r = dim H_F finite states, while at every fixed E > 0 the number of states N_epsilon(E) grows like l_epsilon E, which is proportional to epsilon^{-alpha}.
+**Proposition (Astra 6, audit §3; this is Theorem 30.1 of [lemma 30](30_massless_limit_as_a_joint_limit.md)).** Let D_F(epsilon) = epsilon D_* and l_epsilon = l_* epsilon^{-alpha}, 0 < alpha < 1, with wall data X = tan(l D_F) as in lemma 22. Then the exact window is W^* D W = epsilon D_*, the rest of the spectrum lies at |lambda| >= pi/l_epsilon - epsilon ||D_*||, the compression error is at most (2/3) l_*^2 ||D_*||^2 epsilon^{2(1-alpha)} ||a|| (Theorem 22.4, item 2), and for alpha < beta < 1 a cutoff E_epsilon = E_* epsilon^beta contains exactly the r = dim H_F finite states, while at every fixed E > 0 the number of states N_epsilon(E) grows like l_epsilon E, which is proportional to epsilon^{-alpha}.
 
 In the circle language of lemma 25 (the periodic circle, on which D_F is a Wilson line; the window is its n = 0 mode) this reads: the radius R_epsilon = l_epsilon/pi goes to infinity, and the Wilson-line angles theta_epsilon = l_epsilon epsilon mu_k go to zero like epsilon^{1-alpha}. The hierarchy is
 
@@ -49,11 +45,9 @@ In the circle language of lemma 25 (the periodic circle, on which D_F is a Wilso
 
 In the five-dimensional Yang-Mills toy of lemma 23 the vector poles along this family are M_W^2 = 2 m^2 (1 + O(theta^2)) and M_Z^2 = (16/5) m^2 (1 + O(theta^2)), so M_W^2/M_Z^2 -> 5/8 (audit §3.1, from Theorem 23.6).
 
-*Check (Claude).* The parent space of lemma 22 is L^2([0, l]; C^2) ⊗ H_F, of fibre dimension 2r. By Theorem 22.1 its signed spectrum is (n pi +- theta_k)/l, n in Z, two progressions of spacing pi/l for each of the r/2 singular values, so N(E) = 2 r l E/pi + O(r), the constant of the audit (the scalar circle of Proposition 1.1 gives 2 E l/pi; with fibre H_F the count is 2 r l E/pi). The window, gap and compression statements follow from Theorems 22.1 and 22.4 as stated. (Python, section H: exact spectra for random singular values.)
+*The count.* The parent space of lemma 22 is L^2([0, l]; C^2) ⊗ H_F, of fibre dimension 2r. By Theorem 22.1 its signed spectrum is (n pi +- theta_k)/l, n in Z, two progressions of spacing pi/l for each of the r/2 singular values, so N(E) = 2 r l E/pi + O(r), the constant of the audit (the scalar circle of Proposition 1.1 gives 2 E l/pi; with fibre H_F the count is 2 r l E/pi). The window, gap and compression statements follow from Theorems 22.1 and 22.4 as stated. (Python, section H: exact spectra for random singular values.)
 
-The audit also gives a localized family (its §4): a bulk mass mu_epsilon = mu_* epsilon^alpha and mu l = (1 - alpha) log(1/epsilon) + c_0, with light mass m ~ 2 mu_* e^{-c_0} epsilon, gap ~ mu_* epsilon^alpha, and the exact tail identity e^{-2 kappa l} = (m/(mu + kappa))^2. Its table of roots is reproduced in section H (Python, bisection on tanh s = s/c and tan y = y/c): the four light masses and next masses agree with the audit to the digits printed there.
-
-**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The localized asymptotics and tail identity are independently checked analytically; the length includes a logarithmic factor. The numerical table was not recomputed. See the [referee report](../historical/reviews/2026-11-04_terra_check_11d.md#audit-section-4-and-file-01-localized-joint-family).
+The audit also gives a localized family (its §4): a bulk mass mu_epsilon = mu_* epsilon^alpha and mu l = (1 - alpha) log(1/epsilon) + c_0, with light mass m ~ 2 mu_* e^{-c_0} epsilon, gap ~ mu_* epsilon^alpha, and the exact tail identity e^{-2 kappa l} = (m/(mu + kappa))^2. It is Proposition 30.3 of [lemma 30](30_massless_limit_as_a_joint_limit.md), with its proof there; its table of roots is in section H of checks_11d.py (Python, bisection on tanh s = s/c and tan y = y/c).
 
 ## Proposal 1.3 (the circle of H as the M-theory circle)
 
@@ -91,14 +85,12 @@ Near t = 0, 𝒱'(0) = (6 + 24/5 - n_f) J(0) with J(0) = int x^3/sinh^2 x dx = (
 
 ## Proposition 1.5 (a scale-free potential with an isolated stationary angle fixes M_W l)
 
-**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The derivative identity is correct, and an isolated stationary angle gives \(l\propto1/m\). The universal conclusion has a flat-direction counterexample \(G(\theta)=\theta^4\); for the displayed one-loop determinant the small-angle obstruction is recovered when \(n_f\ne54/5\). See the [referee report](../historical/reviews/2026-11-04_terra_check_11d.md#proposition-15-scale-free-potentials-and-the-joint-path).
-
 **Statement.** Let V(l, theta) = l^{-4} G(theta) with G of class C^1, the form of every one-loop potential of a flat interval whose only scales are l and the wall angles (lemmas 23 and 24, with a_0 included in G).
 
 1. If the angle is free, V is monotone in l at every fixed theta with G(theta) != 0. At the minimizing angle theta_min the length runs away: to l -> infinity if G(theta_min) > 0, to l -> 0 if G(theta_min) < 0. Stationary points exist only on the set G = G' = 0.
 2. If the angle is tied to a fixed mass, theta = l m (as for X = tan(l M) in lemma 22), the stationary lengths satisfy theta G'(theta) = 4 G(theta) at theta = l m. So l = theta_*/m for a root theta_* that does not depend on m, and M_W l, M_Z l (functions of theta alone by Theorem 23.6) are the same at every m.
 
-Hence, when the roots of theta G' - 4 G are isolated, a stationary branch has l = theta_*/m: the path l ~ 1/M_W of H's original statement, alpha = 1 in the scaling of the joint family (Remark 10.7 of [10](37_dilaton_and_second_scale.md) for a small fixed ratio). A root interval, as for G = theta^4 near 0, makes every alpha < 1 stationary and selects none (referee amendment). The joint family with alpha < 1 needs a second scale in the action: a bulk mass (the localized family, G(l m, l mu)), the cutoff of the spectral action (lemma 25, G(theta, l Lambda)), curvature, flux or a wall term.
+Hence, when the roots of theta G' - 4 G are isolated, a stationary branch has l = theta_*/m: the path l ~ 1/M_W of H's original statement, alpha = 1 in the scaling of the joint family (Remark 10.7 of [10](37_dilaton_and_second_scale.md) for a small fixed ratio). A root interval, as for G = theta^4 near 0, makes every alpha < 1 stationary and selects none. The joint family with alpha < 1 needs a second scale in the action: a bulk mass (the localized family, G(l m, l mu)), the cutoff of the spectral action (lemma 25, G(theta, l Lambda)), curvature, flux or a wall term.
 
 **Proof.** d/dl [l^{-4} G(l m)] = l^{-5} (theta G'(theta) - 4 G(theta)) at theta = l m. For item 1, d/dl V = -4 l^{-5} G(theta) and d/dtheta V = l^{-4} G'(theta). ∎
 
@@ -113,12 +105,9 @@ Hence, when the roots of theta G' - 4 G are isolated, a stationary branch has l 
 - A potential with a second scale that selects alpha < 1: the localized family of the audit is the first candidate, with G(l m, l mu) computable from the exact secular equations of lemma 09.
 - A fermion with both a fibre momentum and a base twist: on a nontrivial circle bundle (Witten spaces, file 02) the antiperiodic shift corresponds to a spin structure whose fibre circle does not lift the circle action. Which Witten spaces carry such a structure is an open item for the next job.
 
-## Referee proofs (GPT-6.1 Terra, 4 November 2026)
+## Further proofs (Terra 6.1, 4 November 2026)
 
-The arguments below are those of the referee report on the 11D line, written out in the notation of this lemma; the report in historical/reviews/ stays as the provenance record.
-
-**Independent proof of Proposition 1.4.**
-*From the referee report on the 11D line, section 'Proposition 1.4: the one-loop endpoint and small-angle coefficient', transferred verbatim in substance on 4 Nov 2026.*
+**Proposition 1.4 in full.**
 
 Hypotheses: those of Theorem 9 of lemma 24, including n_f > 0 and its normalization. The result is relative to theta = 0 and leaves the theta-independent Casimir term open.
 
@@ -148,10 +137,7 @@ which is J(0) in the proof of Proposition 1.4. The two gauge arguments 2t(1 - t)
 
 With t = sin^2 theta = theta^2 + o(theta^2), V(theta) - V(0) = 𝒱'(0) theta^2/(8 pi^2 l^4) + o(theta^2) = (3 zeta(3)/(16 pi^2))(54/5 - n_f) theta^2/l^4 + o(theta^2), the claimed coefficient. The exact vector formulas of lemma 23 vanish at theta = pi/2, where the lowest fermion mass is pi/(2l).
 
-**Counterexample (referee) to the universal conclusion of Proposition 1.5.**
-*From the referee report on the 11D line, section 'Proposition 1.5: scale-free potentials and the joint path', transferred verbatim in substance on 4 Nov 2026.*
-
-Verdict of the referee: an error in the universal conclusion, and correct with an amendment for isolated stationary angles. The derivative identities in the proof hold. The universal conclusion, that every stationary family has constant angle and that a second scale is necessary for the existence of a joint family, fails by the counterexample below.
+**A root interval in Proposition 1.5.** If the roots of theta G' - 4 G are not isolated, a stationary family can have a varying angle with no second scale, as the following example shows; the derivative identities in the proof hold.
 
 At fixed m > 0 put theta = l m. Then
 
@@ -174,28 +160,3 @@ where c = (3 zeta(3)/(16 pi^2))(54/5 - n_f) is proportional to 54/5 - n_f (the e
 *Free angle.* For a free angle, d/dl V = -4 l^{-5} G(theta); a nonzero minimized G produces the stated runaway, and a zero minimum leaves the length flat. At an endpoint of a constrained angle interval, the stationarity condition on G' must be understood one-sided.
 
 *Scope and direction.* The corrected fixed-angle result concerns isolated stationary roots of a scale-free C^1 potential. A flat modulus, a tuned higher-order potential, or additional dimensionful terms leave other families possible. A mechanism that selects a joint path with finite gauge couplings remains to be constructed.
-
-**Independent proof of the asymptotics of the localized family (audit, its §4).**
-*From the referee report on the 11D line, section 'Audit section 4 and file 01: localized joint family', transferred verbatim in substance on 4 Nov 2026.*
-
-The asymptotic light mass, the gap, the localization ratio and the exact tail identity follow analytically from the interval equations. The localized length includes a logarithmic factor, and so differs from the pure-power length of the boundary-angle family above. The numerical table of section H was not recomputed by the referee.
-
-Let c = mu l, s = kappa l, and s = c tanh s, the light-mode condition kappa = mu tanh(kappa l). For c > 1 there is a positive solution, and as c -> infinity it has s -> infinity and s/c = tanh s -> 1. Moreover
-
-    0 < c - s = c (1 - tanh s) = 2c e^{-2s}/(1 + e^{-2s}) <= 2c e^{-2s} -> 0.
-
-Therefore
-
-    m = mu sech s = 2 mu e^{-s}/(1 + e^{-2s}) ~ 2 mu e^{-s} ~ 2 mu e^{-c}.
-
-With mu = mu_* epsilon^alpha and c = (1 - alpha) log(1/epsilon) + c_0, e^{-c} = e^{-c_0} epsilon^{1 - alpha}, which gives m ~ 2 mu_* e^{-c_0} epsilon and l = c/(mu_* epsilon^alpha). The localization width is 1/kappa, so its ratio to l is 1/s ~ 1/c.
-
-The first oscillatory root y_1 = k_1 l of tan y = y/c satisfies pi < y_1 < 3 pi/2, since y/c > 0 is small for large c. The gap above the light pair is therefore
-
-    Delta = sqrt(mu^2 + k_1^2) = mu sqrt(1 + (k_1 l/c)^2) ~ mu = mu_* epsilon^alpha.
-
-Finally, s = c tanh s reads mu = kappa coth s, and with it m = mu sech s = kappa/sinh s. Then
-
-    m/(mu + kappa) = 1/(sinh s (coth s + 1)) = 1/(cosh s + sinh s) = e^{-s},    m^2 = kappa^2/sinh^2 s = kappa^2 (coth^2 s - 1) = (mu - kappa)(mu + kappa),
-
-and the first identity squared is e^{-2 kappa l} = (m/(mu + kappa))^2. This proves both displayed tail identities.

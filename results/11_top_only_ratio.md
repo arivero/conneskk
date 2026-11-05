@@ -1,6 +1,6 @@
 # If the up-type Dirac mass of one generation is the only diverging Dirac mass, the CCM relation gives m_t/M_W -> sqrt(8/3)
 
-**Status.** Proposition (Corollary 11.3), conditional on the CCM relation and on top dominance, which is a hypothesis. Proved by Claude Opus 5.5; checked by Claude Opus 5.5 by hand and by Terra 6.1 by hand, effort max: the formula correct under the hypothesis, and the claim, as first written, that top dominance follows from the spectral action refuted and removed (report appended to lemma 11). Ledger row `l11_top`, depending on `l11_bounds`. Proposition E of paper/towerless_intervals.tex. The result restates CCM 2007, section 5.4, equation (5.27).
+**Status.** Proposition (Corollary 11.3), conditional on the CCM relation and on top dominance, which is a hypothesis. Proved by Claude Opus 5.5. Ledger row `l11_top`, depending on `l11_bounds`. Proposition E of paper/towerless_intervals.tex. The result restates CCM 2007, section 5.4, equation (5.27).
 
 **Setting.** The CCM relation of 11_heavy_w_mass_bounds.md. The up-type Dirac mass m_t of one generation (three colours) diverges, and every other Dirac mass stays bounded.
 

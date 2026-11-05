@@ -1,6 +1,6 @@
 # On the doubled parent H_0 (x) conj(H_0) with the graded flip J the compressed data satisfy order zero and order one for every generated algebra, noncommutative or not, and these two conditions are formal consequences of the tensor square
 
-**Status.** Theorem (Theorem 16.2), with Corollary 16.3 and Remark 16.5. Proved by Claude Opus 5.5; Remark 16.5 comes from the referee's assessment. Checked by Claude Opus 5.5 in Python (numpy on random finite data: all signs, order zero, order one) and by Terra 6.1 by hand, with amendments incorporated (historical/reviews/2026-11-03_terra_check_15_16.md). Ledger rows `l16_coarse`, `l16_truncation` and `l16_formal` (Remark 16.5, attempted by Terra 6.1 and checked by Claude Opus 5.5 by hand). Item 3 of Proposition H of paper/towerless_intervals.tex.
+**Status.** Theorem (Theorem 16.2), with Corollary 16.3 and Remark 16.5. Proved by Claude Opus 5.5; Remark 16.5 is by Terra 6.1. Ledger rows `l16_coarse`, `l16_truncation` and `l16_formal` (Remark 16.5, attempted by Terra 6.1). Item 3 of Proposition H of paper/towerless_intervals.tex.
 
 **Setting.** The coarse correspondence H = H_0 (x) conj(H_0) of A_0 (Connes, Noncommutative Geometry, chapter V), with the conjugate operators gamma^c, D^c and, for homogeneous xi, eta, pi(a) = a (x) 1, DD = D_0 (x) 1 + gamma_0 (x) D^c, Gamma = gamma_0 (x) gamma^c, J(xi (x) eta^c) = (-1)^{|xi||eta|} eta (x) xi^c. For the truncation, P = P_0 (x) conj(P_0) and the window V of 16_compressed_algebras_noncommutative.md.
 

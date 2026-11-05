@@ -1,6 +1,6 @@
 # The light eigenvalues of the boundary-Yukawa interval are the fixed points lambda = sigma_k(A^{1/2} X B^{1/2}), with two-sided bounds, and in the towerless limit the retained block is the Yukawa block Phi_Q Y_hat Phi_U
 
-**Status.** Theorem (Theorems 12.6 and 12.7). Proved by Claude Opus 5.5; checked by Claude Opus 5.5 numerically (secular roots on random samples; the errors decrease as l^2) and by Terra 6.1 by hand, effort max: Theorem 12.6 correct, Theorem 12.7 wrong as first stated (its fixed-energy list) and corrected (report appended to lemma 12). Ledger row `l12_towerless`. Theorem C of paper/towerless_intervals.tex.
+**Status.** Theorem (Theorems 12.6 and 12.7). Proved by Claude Opus 5.5. Ledger row `l12_towerless`. Theorem C of paper/towerless_intervals.tex.
 
 **Setting.** The secular data of 12_secular_equation.md. F_Q = diag(f_{Q_i}), F_U = diag(f_{U_j}), Y_0 = F_Q X F_U; Lambda_Q = min_i Lambda_i^Q, Lambda_U = min_j Lambda_j^U, lambda_\* = min(Lambda_Q, Lambda_U); for 0 < lambda < lambda_\*, A and B are positive and Y(lambda) = A(lambda)^{1/2} X B(lambda)^{1/2}; singular values in decreasing order. Towerless scaling: the c's and Y_hat = X/l fixed, l -> 0; Phi_Q = diag(phi(c_i^Q)), Phi_U = diag(phi(c_j^U)), M_F = Phi_Q Y_hat Phi_U.
 

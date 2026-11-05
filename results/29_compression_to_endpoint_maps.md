@@ -1,6 +1,6 @@
 # On the eight-state window, the compression of a C^1 function on the disc bundle converges to the pair of endpoint maps (Q_B(a|_{S^4}), Q_Y(a|_{CP^3})) with error O(M^{-1/2}), and real functions generate M_2(H) + M_4(C) under the limit map
 
-**Status.** Theorem (Theorem 29.9). Proved by Claude Opus 5.5; checked by Claude Opus 5.5 in Python (fibre and Gamma_5 parts of the wall mode in case (b), both -1.00000 at M = 8, 16, 32) and by Terra 6.1 by hand (historical/reviews/2026-11-04_terra_check_29.md). Ledger row `l29_compression` (depending on `l29_window_b`, `l28_compression` and `l28_endpoints`). Theorem 4 of paper/joint_limit_note.tex; cited in the section on the algebra of paper/connes_kk_dictionary_note.tex.
+**Status.** Theorem (Theorem 29.9). Proved by Claude Opus 5.5. Ledger row `l29_compression` (depending on `l29_window_b`, `l28_compression` and `l28_endpoints`). Theorem 4 of paper/joint_limit_note.tex; cited in the section on the algebra of paper/connes_kk_dictionary_note.tex.
 
 **Setting.** The window of Theorem 29.7 (case (b)) or Theorem 29.11 (case (a) at rho = 1, or at radius rho under K(rho)), with equivariant unitary identifications of the window spaces with the model copies of the 4; a in C^1(X).
 

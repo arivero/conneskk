@@ -1,6 +1,6 @@
 # In a finite real triple with order zero and order one, a unitary u of the algebra whose inner automorphism u J u J^{-1} commutes with D commutes with D itself, so a metric such triple has no nontrivial unbroken inner gauge transformation
 
-**Status.** Proposition (Proposition 15.10). Proved by Terra 6.1 in the referee report on lemma 15 (historical/reviews/2026-11-03_terra_check_15_16.md); checked by Claude Opus 5.5 by hand. Ledger row `l15_first_order`.
+**Status.** Proposition (Proposition 15.10). Proved by Terra 6.1. Ledger row `l15_first_order`.
 
 **Setting.** (A, H, D, J) a finite-dimensional real triple with order zero, order one and J D = eps' D J; u a unitary in A and v = J u J^{-1}. A metric triple has ker L_T = R 1 for L_T(a) = ||[D, a]||.
 

@@ -1,6 +1,6 @@
 # The product of the truncated coarse triple with the Clifford point (C, C^2, 0, sigma_1 K, sigma_3) has the KO-6 signs, order zero, order one and dim H = 2 k^2, and fails finite orientability
 
-**Status.** Corollary (Corollary 16.4). Proved by Claude Opus 5.5; checked by Claude Opus 5.5 in Python (numpy on random finite data: KO-6 signs) and by Terra 6.1 by hand, correct (historical/reviews/2026-11-03_terra_check_15_16.md). Ledger row `l16_truncation`, shared with Corollary 16.3. Item 3 of Proposition H of paper/towerless_intervals.tex.
+**Status.** Corollary (Corollary 16.4). Proved by Claude Opus 5.5. Ledger row `l16_truncation`, shared with Corollary 16.3. Item 3 of Proposition H of paper/towerless_intervals.tex.
 
 **Setting.** The truncation T_F = (A_F, V (x) conj(V), D_F, J_F, Gamma_F) of Corollary 16.3 (16_coarse_correspondence_order_one.md), of dimension k^2, and the Clifford point (C, C^2, 0, sigma_1 K, sigma_3).
 

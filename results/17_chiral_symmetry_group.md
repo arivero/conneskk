@@ -1,6 +1,6 @@
 # The unitaries of the quark sector commuting with the colour actions, the grading, J_F and D_F form G(M) = {(V_L, V_R) : V_L M = M V_R}, with G(0) = U(N_f) x U(N_f)
 
-**Status.** Proposition (Proposition 17.5). Proved by Claude Opus 5.5; checked by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_17.md). Ledger row `l17_symmetry`.
+**Status.** Proposition (Proposition 17.5). Proved by Claude Opus 5.5. Ledger row `l17_symmetry`.
 
 **Setting.** N_f quark flavours, with q_L, q_R in C^{N_f} (x) C^3 and q-bar_L, q-bar_R = J q_L, J q_R; D_F acting on (q_L, q_R) by [[0, M], [M^\\*, 0]] (x) 1_3 and by the complex conjugate block on the antiparticles; M_3(C) acting on the antiparticles on the left and on the particles through its opposite action. G(M) is the group of unitaries on this sector commuting with both actions of M_3(C), gamma_F, J_F and D_F.
 

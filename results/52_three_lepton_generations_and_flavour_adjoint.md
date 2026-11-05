@@ -1,6 +1,6 @@
 # Three lepton generations with nu_R (24 states) and the complexified adjoint of the flavour SU(5) of the five light quarks are isomorphic as representations of U(1)_em, with multiplicities 12, 6, 6; the adjoint is (3, 1)_0 + (1, 8)_0 + (1, 1)_0 + (2, 3-bar)_{+1} + (2-bar, 3)_{-1} under SU(2)_u x SU(3)_d x U(1)_em, and the charged states count (up flavours) x (down flavours) as the charged leptons count (chiralities) x (generations)
 
-**Status.** Proposition 52.3. Proved by Claude Fable 5.1 on 5 November 2026 by hand (charges and dimensions). Refereed by Claude Opus 5.5 (effort max, 5 November 2026; report in historical/reviews/2026-11-05_opus_check_51_52.md): correct with one amendment (the 3 of SU(3)_d for the states of charge -1, the 3-bar for their conjugates). Ledger row `l52_flavour_adjoint`. Not yet in a paper.
+**Status.** Proposition 52.3. Proved by Claude Fable 5.1 on 5 November 2026 by hand (charges and dimensions). The 3 of SU(3)_d is carried by the states of charge -1 and the 3-bar by their conjugates. Ledger row `l52_flavour_adjoint`. Not yet in a paper.
 
 **Setting.** The five light quarks u, c, d, s, b of lemma 21 as the 5 of a flavour SU(5) with Q = diag(2/3, 2/3, -1/3, -1/3, -1/3); the lepton module H_l of Proposition 52.1 tensored with a generation space C^3.
 

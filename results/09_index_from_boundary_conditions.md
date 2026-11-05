@@ -1,6 +1,6 @@
 # On the massive chiral interval the index is +1, -1 or 0 for the boundary types (a), (b), (c), independent of the bulk mass and the length, and equivariantly it is [V_L] - [V_R]
 
-**Status.** Theorem (Theorem 9.2 and Corollary 9.3). Proved by Claude Opus 5.5; checked by Claude Opus 5.5 against a first-order discretization (N = 4000) and by Terra 6.1 by hand, effort max: Theorem 9.2 correct, Corollary 9.3 correct with the amendment below (report appended to lemma 09). Ledger row `l09_index`.
+**Status.** Theorem (Theorem 9.2 and Corollary 9.3). Proved by Claude Opus 5.5. Ledger row `l09_index`.
 
 **Setting.** I = [0, l], H = L^2(I; C^2) with psi = (L, R), Gamma = diag(1, -1), A = -d/dx + M with M real, D_M psi = (A^dagger R, A L), that is (D psi)_L = R' + M R and (D psi)_R = -L' + M L. Boundary types: (a) R(0) = R(l) = 0; (b) L(0) = L(l) = 0; (c) R(0) = 0 and L(l) = 0, the chiral interval of lemma 05. For each type D_M is self-adjoint on the H^1 functions with that condition and has compact resolvent (Lemma 9.1, with the graph-norm estimate ||psi'|| <= ||D_M psi|| + |M| ||psi||).
 

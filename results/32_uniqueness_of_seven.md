@@ -1,6 +1,6 @@
 # Among the circle quotients Y_{a,b} of S^5 x S^3 with coprime weights only (3, 2) has a Calabi-Yau cone, and a free circle quotient of a moment level in a complex representation of dimension n has dimension 2n - 3, which is 7 only for n = 5: for SU(5) with hypercharge, the 5 and the 5-bar
 
-**Status.** Proposition (Proposition 2.2). Proved by Claude Opus 5.5 (branch 11D; ledger agent `claude`); checked by its author in Python (historical/11D/checks_11d.py, section A), by Terra 6.1 by hand and by Claude Sonnet 5.5 by hand (reports: historical/reviews/2026-11-04_terra_check_11d.md, historical/reviews/2026-11-04_sonnet_second_check_11d.md). Ledger row `d11_unique` (depending on `d11_quotient`). Stated in the section on the string dualities of paper/connes_kk_dictionary_note.tex ("11 = 4 + (2 x 5 - 3)", "\supp{32}").
+**Status.** Proposition (Proposition 2.2). Proved by Claude Opus 5.5. Ledger row `d11_unique` (depending on `d11_quotient`). Stated in the section on the string dualities of paper/connes_kk_dictionary_note.tex ("11 = 4 + (2 x 5 - 3)", "\supp{32}").
 
 **Setting.** Y_{a,b} = (S^5 x S^3)/U(1), with weights b on C^3 and -a on C^2, gcd(a, b) = 1 and a, b > 0; and, for item 2, a complex representation of dimension n with a free circle action and its moment map mu.
 

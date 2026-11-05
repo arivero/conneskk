@@ -1,6 +1,6 @@
 # In the top-only limit the vanishing vector masses do not restore SU(2) x U(1) on the light space: the compressed generators on b_L fail the SU(2) relations, and the limiting coefficients have K_W != K_33 and K_3Y != 0
 
-**Status.** Proposition, proved (Remark 15 of lemma 18). From the referee report on lemma 18 by Terra 6.1 (historical/reviews/2026-11-03_terra_check_18_16b.md); checked by Claude Opus 5.5 by hand. Ledger row `l18_not_unbroken` (kind claim, status proved). Item 4 of Proposition E.1 of paper/towerless_intervals.tex.
+**Status.** Proposition, proved (Remark 15 of lemma 18). Proved by Terra 6.1. Ledger row `l18_not_unbroken` (kind claim, status proved). Item 4 of Proposition E.1 of paper/towerless_intervals.tex.
 
 **Setting.** The top-only family of 18_top_only_w_mass_at_fixed_cutoff.md in the limit x -> infinity; P_light the projection off the top mass block. The light space retains b_L after removing t_L.
 

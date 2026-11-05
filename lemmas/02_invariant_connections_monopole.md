@@ -1,3 +1,5 @@
+# Invariant connections on K_1 + K_2 + K_3 and the monopole collapse
+
 **Scope.** All connections below are unitary, and all endomorphism algebras are complex. “Parallel” does not require the endomorphism to be `SU(3)`-invariant. Non-unitary connections are not classified.
 
 The canonical obstruction is correct, but it is evadable by invariant off-diagonal connections. In particular, `K_1 + K_2 + K_3` admits both a flat invariant connection with parallel algebra `M_6(C)` and a nonflat invariant connection with parallel algebra `M_3(C)`.
@@ -382,7 +384,7 @@ These connections use the off-diagonal freedom identified in [section 9](../hist
 The crucial distinction is that a parallel endomorphism need not be invariant under the transitive `SU(3)` action. Applying isotropy Schur’s lemma to every parallel endomorphism would incorrectly exclude the exceptional families.
 ---
 
-## Independent numerical check (Claude, 2 Nov 2026)
+## Numerical check
 
 Wang's closure was computed directly. hol is the real span of the curvature values F(X,Y) = [L X, L Y] - L([X,Y]_m) - rho([X,Y]_h), for X, Y in a basis of m, closed under brackets with W(su(3)). The parallel algebra is its complex commutant in M_6(C). Isotropy SU(2) sits in the upper-left block; m is spanned by Z = i diag(1,1,-2) and the four real off-diagonal directions.
 

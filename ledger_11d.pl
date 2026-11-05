@@ -27,8 +27,8 @@ checked_by(d11_casimir, claude, python("historical/11D/checks_11d.py sections F,
 checked_by(d11_casimir, terra_6_1, by_hand).
 checked_by(d11_casimir, sonnet_5_5, by_hand).
 
-claim(d11_scale_free, proposition, conditional, "Proposition 1.5 (referee amendment)", "For V = l^-4 G(theta), a nonzero angular minimum gives a runaway in l; with theta = l m, an isolated stationary angle gives l proportional to 1/m. A flat direction such as G(theta) = theta^4 allows other stationary paths without selecting one. The specified flat one-loop determinant has no positive stationary angles tending to zero when n_f != 54/5.").
-source(d11_scale_free, 'lemmas/31_interval_as_antiperiodic_circle.md', 'proposition-15-a-scale-free-potential-fixes-the-path-with-m_w-l-constant').
+claim(d11_scale_free, proposition, conditional, "Proposition 1.5", "For V = l^-4 G(theta), a nonzero angular minimum gives a runaway in l; with theta = l m, an isolated stationary angle gives l proportional to 1/m. A flat direction such as G(theta) = theta^4 allows other stationary paths without selecting one. The specified flat one-loop determinant has no positive stationary angles tending to zero when n_f != 54/5.").
+source(d11_scale_free, 'lemmas/31_interval_as_antiperiodic_circle.md', 'proposition-15-a-scale-free-potential-with-an-isolated-stationary-angle-fixes-m_w-l').
 depends(d11_scale_free, d11_casimir).
 attempted_by(d11_scale_free, claude).
 checked_by(d11_scale_free, claude, by_hand).
@@ -54,7 +54,7 @@ checked_by(a11_localized, terra_6_1, by_hand).
 checked_by(a11_localized, sonnet_5_5, by_hand).
 
 %% ---------------------------------------------------------------- 02: Witten spaces as the hypercharge quotient
-claim(d11_quotient, theorem, conditional, "Theorem 2.1 (referee amendments)", "Y_{3,2} = (S^9 cap mu_Y^{-1}(0))/U(1)_Y is the circle bundle of O(3,2) over CP^2 x CP^1, with trivial-canonical cone and effective group (U(3) x U(2))/U(1)_Y. Its identification with M^{111} is conditional on the recalled fibration; the Sasaki-Einstein metric requires rescaling the natural quotient metric.").
+claim(d11_quotient, theorem, conditional, "Theorem 2.1", "Y_{3,2} = (S^9 cap mu_Y^{-1}(0))/U(1)_Y is the circle bundle of O(3,2) over CP^2 x CP^1, with trivial-canonical cone and effective group (U(3) x U(2))/U(1)_Y. Its identification with M^{111} is conditional on the recalled fibration; the Sasaki-Einstein metric requires rescaling the natural quotient metric.").
 source(d11_quotient, 'lemmas/32_witten_spaces_hypercharge_quotient.md', 'theorem-21-m111-is-the-hypercharge-quotient-of-the-5-bar').
 attempted_by(d11_quotient, claude).
 checked_by(d11_quotient, claude, python("historical/11D/checks_11d.py sections A, B: weights, Calabi-Yau condition, Z_6")).
@@ -84,7 +84,7 @@ checked_by(d11_z6, claude, python("historical/11D/checks_11d.py section B")).
 checked_by(d11_z6, terra_6_1, by_hand).
 checked_by(d11_z6, sonnet_5_5, by_hand).
 
-claim(d11_flux_nogo, no_go, proved, "Proposition 2.5 (independently checked with amendment)", "Ten-dimensional Weyl fermions on CP^2 x CP^1 with one abelian line bundle per Standard Model field and the canonical formal spin^c shift: no generation for fluxes along Y and B - L. Equal u^c and d^c images and unsigned linearity of 2j + 1 require a common ten-dimensional chirality.").
+claim(d11_flux_nogo, no_go, proved, "Proposition 2.5", "Ten-dimensional Weyl fermions on CP^2 x CP^1 with one abelian line bundle per Standard Model field and the canonical formal spin^c shift: no generation for fluxes along Y and B - L. Equal u^c and d^c images and unsigned linearity of 2j + 1 require a common ten-dimensional chirality.").
 source(d11_flux_nogo, 'lemmas/32_witten_spaces_hypercharge_quotient.md', 'proposition-25-no-generation-from-fluxes-along-hypercharge-and-b---l').
 attempted_by(d11_flux_nogo, claude).
 checked_by(d11_flux_nogo, claude, python("historical/11D/checks_11d.py section D: required bidegrees, span test, search over a third charge in [-3,3]^6")).
@@ -98,13 +98,13 @@ checked_by(d11_flux_third_bounded, claude, python("historical/11D/checks_11d.py 
 checked_by(d11_flux_third_bounded, terra_6_1, by_hand).
 checked_by(d11_flux_third_bounded, sonnet_5_5, by_hand).
 
-claim(d11_flux_third_general, no_go, proved, "Third-charge extension (Terra; checked by Sonnet)", "In the one-line-bundle setting of Proposition 2.5, adding any real third charge z to Y and B - L, with independent source chiralities, gives no generation: the vectors y, b, p, w have rank 4 for every sign pattern, so no three-dimensional span of charges carries both pairing components. A changed common twist is the case z = F and is covered. Open: fourth charges and nonabelian bundles; the solution of Proposition 2.6 lies outside span(Y, B - L, z).").
+claim(d11_flux_third_general, no_go, proved, "Third-charge extension", "In the one-line-bundle setting of Proposition 2.5, adding any real third charge z to Y and B - L, with independent source chiralities, gives no generation: the vectors y, b, p, w have rank 4 for every sign pattern, so no three-dimensional span of charges carries both pairing components. A changed common twist is the case z = F and is covered. Open: fourth charges and nonabelian bundles; the solution of Proposition 2.6 lies outside span(Y, B - L, z).").
 source(d11_flux_third_general, 'historical/reviews/2026-11-04_terra_check_11d.md', 'proposition-25-adding-a-third-charge').
 attempted_by(d11_flux_third_general, terra_6_1).
 checked_by(d11_flux_third_general, terra_6_1, by_hand).
 checked_by(d11_flux_third_general, sonnet_5_5, python("rank of [y, b, p, w] over all sign patterns, exact fractions; not kept")).
 
-claim(d11_flux_fit, proposition, conditional, "Proposition 2.6 (referee amendments)", "With fluxed charges F, chi and B - L the displayed line bundles give a one-generation index in the stated colour convention. The quotient's colour action conjugates the quark bidegrees, and the global gauge group, charge lattice and spin^c flux quantization must be specified.").
+claim(d11_flux_fit, proposition, conditional, "Proposition 2.6", "With fluxed charges F, chi and B - L the displayed line bundles give a one-generation index in the stated colour convention. The quotient's colour action conjugates the quark bidegrees, and the global gauge group, charge lattice and spin^c flux quantization must be specified.").
 source(d11_flux_fit, 'lemmas/32_witten_spaces_hypercharge_quotient.md', 'proposition-26-one-generation-from-a-universal-charge-the-grading-and-b---l').
 depends(d11_flux_fit, d11_flux_nogo).
 attempted_by(d11_flux_fit, claude).
@@ -133,7 +133,7 @@ depends(d11_fock_branes, d11_fock).
 depends(d11_fock_branes, d11_betti_y).
 attempted_by(d11_fock_branes, claude).
 
-claim(d11_higgs_m2, conjecture, conjectural, "Proposal 3.4 (referee amendment)", "The Higgs as an M2 position is a proposal; the coordinate stabilizer follows from the assumed charges. The nonzero-FI quotient has residual Z_3 or Z_2 stabilizers on its exceptional loci and is a partial orbifold resolution.").
+claim(d11_higgs_m2, conjecture, conjectural, "Proposal 3.4", "The Higgs as an M2 position is a proposal; the coordinate stabilizer follows from the assumed charges. The nonzero-FI quotient has residual Z_3 or Z_2 stabilizers on its exceptional loci and is a partial orbifold resolution.").
 source(d11_higgs_m2, 'lemmas/39_branes_hypercharge_and_the_84.md', 'proposal-34-the-higgs-is-the-position-of-the-m2-brane-and-the-massless-limit-is-the-apex').
 depends(d11_higgs_m2, d11_betti_y).
 attempted_by(d11_higgs_m2, claude).
@@ -153,7 +153,7 @@ depends(d11_two_completions, d11_ads5).
 depends(d11_two_completions, d11_betti_y).
 attempted_by(d11_two_completions, claude).
 
-claim(d11_colour84, no_go, proved, "Proposition 3.8 (independently checked)", "For every homomorphism SU(3) -> SO(9), Lambda^3 R^9 (and Lambda^6 R^9) is not the colour content of either family of 84 of lemma 21: real nine-dimensional representations give only singlets, a 6bar, or 10 + 27.").
+claim(d11_colour84, no_go, proved, "Proposition 3.8", "For every homomorphism SU(3) -> SO(9), Lambda^3 R^9 (and Lambda^6 R^9) is not the colour content of either family of 84 of lemma 21: real nine-dimensional representations give only singlets, a 6bar, or 10 + 27.").
 source(d11_colour84, 'lemmas/39_branes_hypercharge_and_the_84.md', 'proposition-38-no-colour-equivariant-identification-of-the-84-with-the-three-form').
 depends(d11_colour84, l21_counts).
 attempted_by(d11_colour84, claude).
@@ -179,7 +179,7 @@ checked_by(d11_blocks, claude, by_hand).
 checked_by(d11_blocks, terra_6_1, by_hand).
 checked_by(d11_blocks, sonnet_5_5, by_hand).
 
-claim(d11_colour_families, no_go, proved, "Propositions 4.2(a), 4.3 (independently checked with amendments)", "The colour contents of F1 and F2 differ, so no colour-commuting unitary exchanges them; for every SU(3) -> SU(9), Lambda^3 C^9 is neither family. Lambda^3 C^9 contains only 1, 3 and 3bar exactly when C^9 is 9 (1), 3 + 6 (1) or 3bar + 6 (1); the last two give 15 (3) + 6 (3bar) + 21 (1) or its conjugate.").
+claim(d11_colour_families, no_go, proved, "Propositions 4.2(a), 4.3", "The colour contents of F1 and F2 differ, so no colour-commuting unitary exchanges them; for every SU(3) -> SU(9), Lambda^3 C^9 is neither family. Lambda^3 C^9 contains only 1, 3 and 3bar exactly when C^9 is 9 (1), 3 + 6 (1) or 3bar + 6 (1); the last two give 15 (3) + 6 (3bar) + 21 (1) or its conjugate.").
 source(d11_colour_families, 'lemmas/33_two_families_e8_placement.md', '2-colour-obstructions').
 depends(d11_colour_families, d11_colour84).
 attempted_by(d11_colour_families, claude).
@@ -187,14 +187,14 @@ checked_by(d11_colour_families, claude, by_hand).
 checked_by(d11_colour_families, terra_6_1, by_hand).
 checked_by(d11_colour_families, sonnet_5_5, by_hand).
 
-claim(d11_e8_grading, theorem, proved, "Lemma 4.A, Theorem 4.4 (referee amendment)", "The two commuting order-3 gradings of e8 place the left-handed 10 and H_u in grade b=1 and (d^c, L) and nu^c in the b=2 and b=0 sectors according to a sign t. The top and antitop each have chiral components in both b=1 and b=2.").
+claim(d11_e8_grading, theorem, proved, "Lemma 4.A, Theorem 4.4", "The two commuting order-3 gradings of e8 place the left-handed 10 and H_u in grade b=1 and (d^c, L) and nu^c in the b=2 and b=0 sectors according to a sign t. The top and antitop each have chiral components in both b=1 and b=2.").
 source(d11_e8_grading, 'lemmas/33_two_families_e8_placement.md', '4-placement-of-the-generation').
 attempted_by(d11_e8_grading, claude).
 checked_by(d11_e8_grading, claude, by_hand).
 checked_by(d11_e8_grading, terra_6_1, by_hand).
 checked_by(d11_e8_grading, sonnet_5_5, by_hand).
 
-claim(d11_yukawa_brackets, proposition, conditional, "Proposition 4.5 (referee amendment)", "If the stated gradings are symmetries, the up-type Yukawa grades lie inside the C_3 sector and the other Yukawa triples use one field in each sector. The physical top mass requires further family or compactification data; in the exact SU(3) family triplet the one-Higgs family tensor is antisymmetric.").
+claim(d11_yukawa_brackets, proposition, conditional, "Proposition 4.5", "If the stated gradings are symmetries, the up-type Yukawa grades lie inside the C_3 sector and the other Yukawa triples use one field in each sector. The physical top mass requires further family or compactification data; in the exact SU(3) family triplet the one-Higgs family tensor is antisymmetric.").
 source(d11_yukawa_brackets, 'lemmas/33_two_families_e8_placement.md', '5-yukawa-couplings-as-brackets').
 depends(d11_yukawa_brackets, d11_e8_grading).
 attempted_by(d11_yukawa_brackets, claude).
@@ -202,8 +202,8 @@ checked_by(d11_yukawa_brackets, claude, by_hand).
 checked_by(d11_yukawa_brackets, terra_6_1, by_hand).
 checked_by(d11_yukawa_brackets, sonnet_5_5, by_hand).
 
-claim(d11_m2m5_is_j, no_go, proved, "Proposition 4.6 (independently checked with amendment)", "In the specified aligned three-family embedding, a complex e8 automorphism preserving or inverting the family grading cannot exchange the top and neutrino blocks. The complex-linear Chevalley involution preserves both families; an antiunitary J requires an additional conjugation, and its identification with physical M2/M5 duality is a proposal.").
-source(d11_m2m5_is_j, 'lemmas/33_two_families_e8_placement.md', '6-in-this-realization-the-m2m5-exchange-is-the-real-structure-j').
+claim(d11_m2m5_is_j, no_go, proved, "Proposition 4.6", "In the specified aligned three-family embedding, a complex e8 automorphism preserving or inverting the family grading cannot exchange the top and neutrino blocks. The complex-linear Chevalley involution preserves both families; an antiunitary J requires an additional conjugation, and its identification with physical M2/M5 duality is a proposal.").
+source(d11_m2m5_is_j, 'lemmas/33_two_families_e8_placement.md', '6-the-chevalley-involution-and-the-real-structure-j').
 depends(d11_m2m5_is_j, d11_e8_grading).
 attempted_by(d11_m2m5_is_j, claude).
 checked_by(d11_m2m5_is_j, claude, by_hand).
@@ -226,7 +226,7 @@ checked_by(d11_discrete_z3, terra_6_1, by_hand).
 checked_by(d11_discrete_z3, sonnet_5_5, by_hand).
 
 %% ---------------------------------------------------------------- 05: the colour-family exchange
-claim(d11_no_isometry, no_go, proved, "Proposition 5.1 (independently checked)", "As configurations of E8 roots in the specified aligned three-family embedding, the two families of 84 have equal pair counts but are not isometric, so no element of W(E8) maps F1 onto F2 and no isometry of H_F maps the top block onto the neutrino block.").
+claim(d11_no_isometry, no_go, proved, "Proposition 5.1", "As configurations of E8 roots in the specified aligned three-family embedding, the two families of 84 have equal pair counts but are not isometric, so no element of W(E8) maps F1 onto F2 and no isometry of H_F maps the top block onto the neutrino block.").
 source(d11_no_isometry, 'lemmas/34_colour_family_exchange.md', 'proposition-51-the-two-families-of-84-are-not-isometric').
 depends(d11_no_isometry, d11_blocks).
 depends(d11_no_isometry, l21_counts).
@@ -243,7 +243,7 @@ checked_by(d11_transposition, claude, by_hand).
 checked_by(d11_transposition, terra_6_1, by_hand).
 checked_by(d11_transposition, sonnet_5_5, python("M = -P on all 240 roots")).
 
-claim(d11_flip, proposition, conditional, "Proposition 5.3 (referee amendment)", "In the specified four-family finite geometry, a unitary colour-family identification makes the flip unitary and involutive; it commutes with gamma and J and conjugates the top Dirac block into the Dirac blocks of the other three neutrinos. The displayed Pati-Salam and Standard Model algebras are not flip-invariant.").
+claim(d11_flip, proposition, conditional, "Proposition 5.3", "In the specified four-family finite geometry, a unitary colour-family identification makes the flip unitary and involutive; it commutes with gamma and J and conjugates the top Dirac block into the Dirac blocks of the other three neutrinos. The displayed Pati-Salam and Standard Model algebras are not flip-invariant.").
 source(d11_flip, 'lemmas/34_colour_family_exchange.md', 'proposition-53-the-flip-in-a-four-family-finite-geometry').
 depends(d11_flip, d11_transposition).
 attempted_by(d11_flip, claude).
@@ -257,7 +257,7 @@ depends(d11_two_heavy, d11_transposition).
 depends(d11_two_heavy, d11_no_isometry).
 attempted_by(d11_two_heavy, claude).
 
-claim(d11_misaligned, no_go, proved, "Proposition 5.4 (independently checked with amendment)", "For none of the 192 assignments of the four types to three of the four family slots, aligned or misaligned, is there an isometry of R^8 mapping S - T onto S - N. The original universal neighbour counts are false for some misaligned assignments; the referee gives corrected formulas.").
+claim(d11_misaligned, no_go, proved, "Proposition 5.4", "For none of the 192 assignments of the four types to three of the four family slots, aligned or misaligned, is there an isometry of R^8 mapping S - T onto S - N. The original universal neighbour counts are false for some misaligned assignments; the referee gives corrected formulas.").
 source(d11_misaligned, 'lemmas/34_colour_family_exchange.md', 'proposition-54-no-three-slot-assignment-admits-the-exchange').
 depends(d11_misaligned, d11_no_isometry).
 attempted_by(d11_misaligned, claude).
@@ -265,14 +265,14 @@ checked_by(d11_misaligned, claude, python("exhaustive neighbour counts over 192 
 checked_by(d11_misaligned, terra_6_1, by_hand).
 checked_by(d11_misaligned, sonnet_5_5, python("all 192 configurations rerun")).
 
-claim(d11_four_slots, conjecture, conjectural, "Proposal 5.5 (referee amendments)", "If the families are zero modes of an SU(4) bundle rather than single fibre roots, Propositions 5.1 and 5.4 do not apply as stated. The index gives net chirality; exact zero-mode counts and a compatible Weyl action remain to be established.").
+claim(d11_four_slots, conjecture, conjectural, "Proposal 5.5", "If the families are zero modes of an SU(4) bundle rather than single fibre roots, Propositions 5.1 and 5.4 do not apply as stated. The index gives net chirality; exact zero-mode counts and a compatible Weyl action remain to be established.").
 source(d11_four_slots, 'lemmas/34_colour_family_exchange.md', 'proposal-55-four-slots-three-zero-modes').
 depends(d11_four_slots, d11_transposition).
 attempted_by(d11_four_slots, claude).
 checked_by(d11_four_slots, terra_6_1, by_hand).
 
 %% ---------------------------------------------------------------- 06: the main point and the heterotic route
-claim(d11_wilson_top, proposition, proved, "Proposition 6.1 (referee amendments)", "The SO(32) Wilson-line charged sector has 30 copies of the lemma-22 channel progressions; the light mass is a/R on 0 <= a <= 1/2. The physical field identification remains a proposal.").
+claim(d11_wilson_top, proposition, proved, "Proposition 6.1", "The SO(32) Wilson-line charged sector has 30 copies of the lemma-22 channel progressions; the light mass is a/R on 0 <= a <= 1/2. The physical field identification remains a proposal.").
 source(d11_wilson_top, 'historical/11D/06_main_point_heterotic_route.md', '4-proposition-61-the-top-channel-as-an-so32-wilson-line').
 depends(d11_wilson_top, l22_window).
 depends(d11_wilson_top, l21_so30).
@@ -290,7 +290,7 @@ attempted_by(d11_heterotic_route, claude).
 checked_by(d11_heterotic_route, terra_6_1, by_hand).
 
 %% ---------------------------------------------------------------- 07: dualities between 9 and 11
-claim(d11_angle_interval, proposition, proved, "Proposition 7.1 (referee clarification)", "The signed channel spectrum has fundamental domain [0, pi/2], with doubly degenerate periodic and antiperiodic endpoint spectra; the lemma-22 window uses the strict interior.").
+claim(d11_angle_interval, proposition, proved, "Proposition 7.1", "The signed channel spectrum has fundamental domain [0, pi/2], with doubly degenerate periodic and antiperiodic endpoint spectra; the lemma-22 window uses the strict interior.").
 source(d11_angle_interval, 'lemmas/40_dualities_9_11.md', '3-proposition-71-the-angle-of-a-channel-lives-on-an-interval').
 depends(d11_angle_interval, l22_window).
 depends(d11_angle_interval, l23_wz).
@@ -299,7 +299,7 @@ checked_by(d11_angle_interval, claude, by_hand).
 checked_by(d11_angle_interval, terra_6_1, by_hand).
 checked_by(d11_angle_interval, sonnet_5_5, by_hand).
 
-claim(d11_far_wall, proposition, proved, "Proposition 7.2 (referee amendment)", "The SO(32) endpoint Wilson line has full centralizer S(O(30) x O(2)); the lemma-24 one-loop minimum is a = 1/2 under its stated hypotheses. The D8 interpretation remains a proposal.").
+claim(d11_far_wall, proposition, proved, "Proposition 7.2", "The SO(32) endpoint Wilson line has full centralizer S(O(30) x O(2)); the lemma-24 one-loop minimum is a = 1/2 under its stated hypotheses. The D8 interpretation remains a proposal.").
 source(d11_far_wall, 'lemmas/40_dualities_9_11.md', '4-proposition-72-the-far-end-is-the-displaced-d8-brane-on-the-other-wall').
 depends(d11_far_wall, d11_angle_interval).
 depends(d11_far_wall, d11_wilson_top).
@@ -309,7 +309,7 @@ checked_by(d11_far_wall, claude, by_hand).
 checked_by(d11_far_wall, terra_6_1, by_hand).
 checked_by(d11_far_wall, sonnet_5_5, by_hand).
 
-claim(d11_torus_flux, proposition, conditional, "Proposition 7.3 (referee amendment)", "A doubled flux torus has KO-6 signs, a 2p-dimensional kernel and a generated M_p(C) corner. The displayed action is nonunital on the doubled space; adding a scalar summand yields a unital order-zero finite datum.").
+claim(d11_torus_flux, proposition, conditional, "Proposition 7.3", "A doubled flux torus has KO-6 signs, a 2p-dimensional kernel and a generated M_p(C) corner. The displayed action is nonunital on the doubled space; adding a scalar summand yields a unital order-zero finite datum.").
 source(d11_torus_flux, 'lemmas/40_dualities_9_11.md', '5-proposition-73-a-torus-with-flux-doubled-has-the-colour-form').
 attempted_by(d11_torus_flux, claude).
 checked_by(d11_torus_flux, claude, by_hand).
@@ -326,7 +326,7 @@ checked_by(d11_duality_readings, terra_6_1, by_hand).
 checked_by(d11_duality_readings, sonnet_5_5, by_hand).
 
 %% ---------------------------------------------------------------- 08: the orientifold sign
-claim(d11_orientifold_sign, proposition, proved, "Proposition 8.1 (referee clarification)", "The descended antiunitary j with j^2 = s gives O(n) or USp(n) as its unitary commutant on each eigenspace of d^2. Preservation of d, the algebra and physical Chan-Paton data requires further conditions.").
+claim(d11_orientifold_sign, proposition, proved, "Proposition 8.1", "The descended antiunitary j with j^2 = s gives O(n) or USp(n) as its unitary commutant on each eigenspace of d^2. Preservation of d, the algebra and physical Chan-Paton data requires further conditions.").
 source(d11_orientifold_sign, 'lemmas/35_orientifold_sign.md', '2-proposition-81-the-factorization-sign-fixes-orthogonal-or-symplectic-symmetry').
 depends(d11_orientifold_sign, l06_factorization).
 attempted_by(d11_orientifold_sign, claude).
@@ -334,7 +334,7 @@ checked_by(d11_orientifold_sign, claude, by_hand).
 checked_by(d11_orientifold_sign, terra_6_1, by_hand).
 checked_by(d11_orientifold_sign, sonnet_5_5, by_hand).
 
-claim(d11_wall_multiplicity, proposition, proved, "Proposition 8.2 (referee clarification)", "For k channels, the signed eigenvalue theta/l has multiplicity k in the interior and 2k at the endpoints; the lowest absolute eigenvalue has multiplicities 2k, 2k and 4k at interior, zero and pi/2 respectively.").
+claim(d11_wall_multiplicity, proposition, proved, "Proposition 8.2", "For k channels, the signed eigenvalue theta/l has multiplicity k in the interior and 2k at the endpoints; the lowest absolute eigenvalue has multiplicities 2k, 2k and 4k at interior, zero and pi/2 respectively.").
 source(d11_wall_multiplicity, 'lemmas/35_orientifold_sign.md', '3-proposition-82-wall-channels-come-with-doubled-multiplicity').
 depends(d11_wall_multiplicity, d11_angle_interval).
 attempted_by(d11_wall_multiplicity, claude).
@@ -342,7 +342,7 @@ checked_by(d11_wall_multiplicity, claude, by_hand).
 checked_by(d11_wall_multiplicity, terra_6_1, by_hand).
 checked_by(d11_wall_multiplicity, sonnet_5_5, by_hand).
 
-claim(d11_e_walls, conjecture, conjectural, "Remark 8.3 (referee amendments)", "The wall slope arithmetic is conditional on the recalled type I' rule; enhancements require tuned coupling, and 7 + 7 needs two bulk positions summing to L. The E_2 physical electroweak identification remains open.").
+claim(d11_e_walls, conjecture, conjectural, "Remark 8.3", "The wall slope arithmetic is conditional on the recalled type I' rule; enhancements require tuned coupling, and 7 + 7 needs two bulk positions summing to L. The E_2 physical electroweak identification remains open.").
 source(d11_e_walls, 'lemmas/35_orientifold_sign.md', '4-remark-83-e8-walls-from-15--1-conditional').
 depends(d11_e_walls, d11_heterotic_route).
 depends(d11_e_walls, d11_far_wall).
@@ -357,7 +357,7 @@ depends(d11_orientifold_reading, d11_wall_multiplicity).
 attempted_by(d11_orientifold_reading, claude).
 
 %% ---------------------------------------------------------------- 09: the dilaton as a spectral function, SO(32) of the EPJC paper
-claim(d11_dilaton_spectral, proposition, conditional, "Proposition 9.1 (referee clarification; second check)", "Given the slope rule of Polchinski-Witten and sixteen selected channels, z(L) = z(0) - c (8L - sum x_k) exactly in the positions; the reading as a trace of a function of l |D_F| over that channel space holds for constant z, and in general through theta_k = (pi/2) W(x_k)/W(L) (lemma 37, Proposition 10.1). The full physical trace has additional multiplicities.").
+claim(d11_dilaton_spectral, proposition, conditional, "Proposition 9.1", "Given the slope rule of Polchinski-Witten and sixteen selected channels, z(L) = z(0) - c (8L - sum x_k) exactly in the positions; the reading as a trace of a function of l |D_F| over that channel space holds for constant z, and in general through theta_k = (pi/2) W(x_k)/W(L) (lemma 37, Proposition 10.1). The full physical trace has additional multiplicities.").
 source(d11_dilaton_spectral, 'lemmas/36_dilaton_spectral_and_so32.md', '2-proposition-91-the-type-i-coupling-function-is-a-trace-of-a-function-of-the-finite-dirac-operator').
 depends(d11_dilaton_spectral, d11_angle_interval).
 depends(d11_dilaton_spectral, d11_angle_map).
@@ -367,7 +367,7 @@ checked_by(d11_dilaton_spectral, claude, by_hand).
 checked_by(d11_dilaton_spectral, terra_6_1, by_hand).
 checked_by(d11_dilaton_spectral, sonnet_5_5, by_hand).
 
-claim(d11_diquark_strings, proposition, conditional, "Proposition 9.2 (referee amendments)", "The antitriplet counts are (6, 6, 3) in the antisymmetric block and (3, 6, 1) in the symmetric block; the single-line antisymmetric component vanishes. The orientifold projections and physical string identification are conditional.").
+claim(d11_diquark_strings, proposition, conditional, "Proposition 9.2", "The antitriplet counts are (6, 6, 3) in the antisymmetric block and (3, 6, 1) in the symmetric block; the single-line antisymmetric component vanishes. The orientifold projections and physical string identification are conditional.").
 source(d11_diquark_strings, 'lemmas/36_dilaton_spectral_and_so32.md', '3-proposition-92-diquarks-as-strings-between-the-stack-and-its-image').
 depends(d11_diquark_strings, l21_so30).
 depends(d11_diquark_strings, d11_wilson_top).
@@ -391,7 +391,7 @@ checked_by(d11_so32_comparison, claude, by_hand).
 checked_by(d11_so32_comparison, sonnet_5_5, by_hand).
 prior_work(d11_so32_comparison, known, "The chain SU(16) x U(1) to SU(5) x SU(3), the counts (6, 6, 3) and 24, the elephant rule and the 84 + 12 and SU(9) footnote are in the EPJC paper; the type I-prime realization (the top as a displaced D8-brane, the 30 as Chan-Paton labels on an O8^- wall) is not.").
 
-claim(d11_so32_algebra, proposition, proved, "Section 1 (referee algebra)", "Under SU(16) x U(1), the complex SO(32) adjoint is 120 + 120bar + 255 + 1; under SU(5) x SU(3), the 105 contains (15, 3bar) + (10, 6). Matching these representations does not identify physical composites.").
+claim(d11_so32_algebra, proposition, proved, "Section 1", "Under SU(16) x U(1), the complex SO(32) adjoint is 120 + 120bar + 255 + 1; under SU(5) x SU(3), the 105 contains (15, 3bar) + (10, 6). Matching these representations does not identify physical composites.").
 source(d11_so32_algebra, 'lemmas/36_dilaton_spectral_and_so32.md', '1-the-so32-of-a-rivero-eur-phys-j-c-84-2024-1058-arxiv240705397').
 depends(d11_so32_algebra, d11_diquark_strings).
 attempted_by(d11_so32_algebra, claude).
@@ -399,7 +399,7 @@ checked_by(d11_so32_algebra, claude, by_hand).
 checked_by(d11_so32_algebra, terra_6_1, by_hand).
 checked_by(d11_so32_algebra, sonnet_5_5, by_hand).
 
-claim(d11_real_structure_diquarks, no_go, proved, "Proposition 9.3 (independently checked with amendment)", "For an antiunitary J exchanging V and Vbar and a Hermitian J-compatible X, the particle-antiparticle block obeys B = eps eps' B^T. For KO labels 9, 10, 11 the sign is +1, excluding nonzero antisymmetric blocks within one multiplet. The signs permit all of S^2 V; the algebra, grading and order conditions of a triple select a subspace, and interval scalar modes are treated in 11D/11.").
+claim(d11_real_structure_diquarks, no_go, proved, "Proposition 9.3", "For an antiunitary J exchanging V and Vbar and a Hermitian J-compatible X, the particle-antiparticle block obeys B = eps eps' B^T. For KO labels 9, 10, 11 the sign is +1, excluding nonzero antisymmetric blocks within one multiplet. The signs permit all of S^2 V; the algebra, grading and order conditions of a triple select a subspace, and interval scalar modes are treated in 11D/11.").
 source(d11_real_structure_diquarks, 'lemmas/36_dilaton_spectral_and_so32.md', '4-proposition-93-the-real-structure-decides-between-the-two-diquark-counts').
 depends(d11_real_structure_diquarks, d11_diquark_strings).
 depends(d11_real_structure_diquarks, l06_factorization).
@@ -410,14 +410,14 @@ checked_by(d11_real_structure_diquarks, claude, by_hand).
 checked_by(d11_real_structure_diquarks, terra_6_1, by_hand).
 checked_by(d11_real_structure_diquarks, sonnet_5_5, by_hand).
 
-claim(d11_dp_walls, conjecture, conjectural, "Section 5, item 1 (referee amendment)", "The E-type wall and local del Pezzo correspondence is conditional on the recalled dualities. The usual E_1 and tilde E_1 engineering assignments distinguish P1 x P1 from dP_1; dP_2 has the expected A1 root.").
+claim(d11_dp_walls, conjecture, conjectural, "Section 5, item 1", "The E-type wall and local del Pezzo correspondence is conditional on the recalled dualities. The usual E_1 and tilde E_1 engineering assignments distinguish P1 x P1 from dP_1; dP_2 has the expected A1 root.").
 source(d11_dp_walls, 'lemmas/36_dilaton_spectral_and_so32.md', '5-two-more-dualities-between-9-and-11-recalled-proposals').
 depends(d11_dp_walls, d11_e_walls).
 attempted_by(d11_dp_walls, claude).
 checked_by(d11_dp_walls, terra_6_1, by_hand).
 checked_by(d11_dp_walls, sonnet_5_5, by_hand).
 
-claim(d11_transposition_tduality, conjecture, conjectural, "Section 5, item 2 (referee clarification)", "The colour-family Weyl transposition conjugates an E8 holonomy and is a Narain lattice automorphism. An exchange relative to fixed physical structures requires compatibility with the full background.").
+claim(d11_transposition_tduality, conjecture, conjectural, "Section 5, item 2", "The colour-family Weyl transposition conjugates an E8 holonomy and is a Narain lattice automorphism. An exchange relative to fixed physical structures requires compatibility with the full background.").
 source(d11_transposition_tduality, 'lemmas/36_dilaton_spectral_and_so32.md', '5-two-more-dualities-between-9-and-11-recalled-proposals').
 depends(d11_transposition_tduality, d11_transposition).
 attempted_by(d11_transposition_tduality, claude).

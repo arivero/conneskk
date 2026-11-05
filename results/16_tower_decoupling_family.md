@@ -1,6 +1,6 @@
 # On the doubled parent of twisted CP^3 scaled by 1/l, compression and generation give the constant finite data A_F = M_4(C), dim H_F = 16, D_F = 0, while the whole triple converges to (C, C^16, 0)
 
-**Status.** Proposition, proved (Example 16.6 of lemma 16). From the referee's assessment of lemma 16 by Terra 6.1 (historical/reviews/2026-11-03_terra_check_15_16.md); checked by Claude Opus 5.5 by hand. Ledger row `l16_family`.
+**Status.** Proposition, proved (Example 16.6 of lemma 16). Proved by Terra 6.1. Ledger row `l16_family`.
 
 **Setting.** D_0 the Dolbeault-Dirac operator on CP^3 twisted by O(1), with V = ker D_0 = C^4; the doubled parent of 16_coarse_correspondence_order_one.md, scaled as DD_l = DD/l; the Clifford point of 16_ko6_by_clifford_point.md.
 

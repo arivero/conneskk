@@ -1,6 +1,6 @@
 # In the aligned three-family embedding in e8 with its two gradings, no complex automorphism preserving or inverting the family grading maps the top block onto the neutrino block, and the Chevalley involution maps each block to its conjugate
 
-**Status.** No-go theorem in its scope (Proposition 4.6, with the referee amendment). Proved by Claude Opus 5.5 (branch 11D; ledger agent `claude`) by hand; checked by its author by hand, by Terra 6.1 by hand, whose independent proof, with the block argument by Schur's lemma, is written out in the Referee proofs of lemma 33, and by Claude Sonnet 5.5 by hand (reports: historical/reviews/2026-11-04_terra_check_11d.md, historical/reviews/2026-11-04_sonnet_second_check_11d.md). Ledger row `d11_m2m5_is_j` (depending on `d11_e8_grading`). Proposition 6 of paper/generations_note.tex, with the block argument as the proof of its item (3).
+**Status.** No-go theorem in its scope (Proposition 4.6). Proved by Claude Opus 5.5 by hand; a proof with the block argument by Schur's lemma, by Terra 6.1, is written out in the section "Further proofs" of lemma 33. The Chevalley involution theta is complex-linear; the real structure is J = theta kappa, with kappa the conjugation of a real Chevalley basis. Ledger row `d11_m2m5_is_j` (depending on `d11_e8_grading`). Proposition 6 of paper/generations_note.tex, with the block argument as the proof of its item (3).
 
 **Setting.** The two gradings of 33_e8_two_gradings_placement.md, with the aligned embedding 3_f (x) 16 of three families in g_1 = 3_f (x) 27; T and N are the top and neutrino blocks.
 
@@ -15,6 +15,6 @@
 
 *Escapes, as the lemma states them.* Automorphisms that neither preserve nor invert the family grading, such as the colour-family exchanges inside the SU(3)^4 subgroup of E8; other embeddings or state spaces; dualities not represented by such an automorphism.
 
-**Proof.** Lemma 33, Proposition 4.6, and the Referee proofs there. For item 3, phi preserves g_0 = sl_3 + e_6 and its two simple ideals, so by Schur's lemma its restriction to g_1 = 3_f (x) 27 is a multiple of some A (x) B; it maps a subspace supported on one family line to a subspace supported on one family line, while the grade-one part of N spans 3_f.
+**Proof.** Lemma 33, Proposition 4.6, and the section "Further proofs" there. For item 3, phi preserves g_0 = sl_3 + e_6 and its two simple ideals, so by Schur's lemma its restriction to g_1 = 3_f (x) 27 is a multiple of some A (x) B; it maps a subspace supported on one family line to a subspace supported on one family line, while the grade-one part of N spans 3_f.
 
 **What it leaves open.** The result points to automorphisms outside the pair of gradings. For aligned families 34_nogo_families_not_isometric.md also excludes every element of W(E8) mapping F1 onto F2, and with four families the transposition of 34_colour_family_transposition.md exchanges the blocks.

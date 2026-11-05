@@ -1,6 +1,6 @@
 # Fixed spectral compression of the fluctuated chiral interval is not gauge covariant: a gauge-trivial A_5 with trivial Wilson line changes the compressed spectrum
 
-**Status.** No-go theorem in its scope (Result 3 of lemma 13). Proved by Astra 6 (job 13); checked by Claude Opus 5.5 by hand (the value B = -2a/(3 pi) with trivial Wilson line) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger row `l13_not_covariant`. Item 2 of Proposition F of paper/towerless_intervals.tex.
+**Status.** No-go theorem in its scope (Result 3 of lemma 13). Proved by Astra 6 (job 13). Ledger row `l13_not_covariant`. Item 2 of Proposition F of paper/towerless_intervals.tex.
 
 **Setting.** The fixed (unfluctuated) projection P of 13_fixed_compression_gauge_fluctuations.md and its link phi[A_5]. U(1) potentials independent of y, with parallel transport W' = -i A_5 W, W(0) = 1, so that D_{I,A} = W D_I W^\\* and the complete interval spectrum is unchanged.
 

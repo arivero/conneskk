@@ -1,6 +1,6 @@
 # The quadratic spectral action of a transverse vector about a constant finite background has an exact kernel with no expansion in m/Lambda, gauge invariant through the Goldstone orbit, whose small-mass limit gives the mass formula (3/2) Q^{-1/2} K Q^{-1/2} and the CCM relation
 
-**Status.** Theorem (Theorem 1 of lemma 18), with Lemma 2 and Corollary 3. Proved by Astra 6 (job 18); checked by Claude Opus 5.5 in Python by computations independent of the kernel (a direct heat trace with constant a reproduces equation (2) to about 0.03%; a direct heat trace on Fourier modes reproduces the kernel at three values of (m, q) to 0.1-0.3%) and by Terra 6.1 by hand, correct with small amendments (historical/reviews/2026-11-03_terra_check_18_16b.md). Ledger row `l18_kernel`. Proposition E.1 of paper/towerless_intervals.tex.
+**Status.** Theorem (Theorem 1 of lemma 18), with Lemma 2 and Corollary 3. Proved by Astra 6 (job 18). Ledger row `l18_kernel`. Proposition E.1 of paper/towerless_intervals.tex.
 
 **Setting.** D_A = -i gamma^mu (d_mu + i A_mu) + gamma_5 V_0 on R^4, V_0 = V_0^dagger with signed eigenvalues m_i; the literal trace on H_F including every multiplicity; A smooth and compactly supported; the vacuum-subtracted action. A_mu(q) = a_mu(q) T with T = T^dagger and q.a = 0; d_ij = m_i - m_j; I_t(a, b; q^2) = int_0^1 exp(-t[(1 - u)a + ub + u(1 - u)q^2]) du. Cutoff class (4): f(z) = int exp(-sz) d nu(s) with nu positive, 0 < f(0) < infinity and int (s^{-2} + s^2) d nu(s) < infinity.
 

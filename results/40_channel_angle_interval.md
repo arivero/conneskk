@@ -1,6 +1,6 @@
 # The signed spectrum {(n pi +- theta)/l} of one channel of the interval parent depends only on theta modulo theta -> -theta and theta -> theta + pi, with fundamental domain [0, pi/2], whose ends are the periodic spectrum with a double zero mode and the antiperiodic spectrum with every value doubled
 
-**Status.** Proposition (Proposition 7.1, with the referee clarification). Proved by Claude Opus 5.5 (branch 11D; ledger agent `claude`) by hand; checked by its author by hand, by Terra 6.1 by hand, whose independent proof is written out in the Referee proofs of lemma 40, and by Claude Sonnet 5.5 by hand (reports: historical/reviews/2026-11-04_terra_check_11d.md, historical/reviews/2026-11-04_sonnet_second_check_11d.md). Ledger row `d11_angle_interval` (depending on `l22_window` and `l23_wz`). Stated in the section on the finite Dirac operator of paper/connes_kk_dictionary_note.tex ("\supp{40}").
+**Status.** Proposition (Proposition 7.1). Proved by Claude Opus 5.5 by hand; a proof by Terra 6.1 is written out in the section "Further proofs" of lemma 40. Ledger row `d11_angle_interval` (depending on `l22_window` and `l23_wz`). Stated in the section on the finite Dirac operator of paper/connes_kk_dictionary_note.tex ("\supp{40}").
 
 **Setting.** The parent of Theorem 22.1 and a channel with singular value sigma of the Yukawa block, angle theta = l sigma and wall data X = tan(theta).
 
@@ -14,6 +14,6 @@ So the restriction l norm(D_F) < pi/2 of lemma 22 is the choice of the fundament
 
 *Scope.* Theorem 22.1 uses the strict interior, and theta = pi/2 is a boundary-condition limit with a degenerate window, so each end needs its own domain or limit. Equality of one channel spectrum does not identify complete physical backgrounds. The massless electroweak vectors at theta = pi/2 (M_W = M_Z = 0 at fixed l, with the fermion at pi/(2l)) are a statement of the two-grading model of lemma 23 (Theorem 23.6).
 
-**Proof.** Lemma 40, Proposition 7.1, and the Referee proofs there: equality of two such multisets is equivalent to theta' = +-theta mod pi, by comparing the residues modulo pi/l, and n pi + theta = m pi - theta needs 2 theta in pi Z.
+**Proof.** Lemma 40, Proposition 7.1, and the section "Further proofs" there: equality of two such multisets is equivalent to theta' = +-theta mod pi, by comparing the residues modulo pi/l, and n pi + theta = m pi - theta needs 2 theta in pi Z.
 
 **What it leaves open.** The reading of the two ends as the two orientifold walls of type I', with the top angle as the position of the top's D8-brane, is a proposal of lemma 40; its proved part is 40_so32_wilson_line_endpoint.md. The multiplicities of k channels at a common angle are 35_wall_channel_multiplicity.md.

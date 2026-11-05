@@ -1,6 +1,6 @@
 # A metric triple on M_2(C) whose Dirac operator is the traceless projection commutes with every inner conjugation, so Proposition 15.10 needs order one
 
-**Status.** Counterexample (Counterexample 15.11). Proved by Terra 6.1 in the referee report on lemma 15 (historical/reviews/2026-11-03_terra_check_15_16.md); checked by Claude Opus 5.5 by hand. Ledger row `l15_symmetry_ce`. It refutes the first version of the T0 section of lemma 15 (row `t0_unbroken_unrestricted`, status refuted: "A metric spectral triple excludes every unbroken inner gauge symmetry").
+**Status.** Counterexample (Counterexample 15.11). Proved by Terra 6.1. Ledger row `l15_symmetry_ce`. It refutes the claim of row `t0_unbroken_unrestricted` (status refuted): "A metric spectral triple excludes every unbroken inner gauge symmetry". Lemma 15 cites the Farsi-Latrémolière counterexample as results/R1_counterexample_farsi_latremoliere.md.
 
 **Setting.** H = M_2(C) with the Hilbert-Schmidt product, A = M_2(C) acting by left multiplication L_a, J x = x^\\*, and D x = x - (1/2) tr(x) I.
 

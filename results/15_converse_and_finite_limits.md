@@ -1,6 +1,6 @@
 # A sequence of metric spectral triples converges to (C, C^N, D_F) in the spectral propinquity iff the diameter tends to 0, the gap tends to infinity and the light-block error tends to 0, so the finite limits of connected commutative triples are exactly the triples (C, C^N, D_F)
 
-**Status.** Theorem (Theorem 15.7), with Corollary 15.8. Proved by Claude Opus 5.5; checked by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_15_16.md). Ledger rows `l15_converse` and `l15_finite_limits` (depending on `fl_R3`). Proposition G and its item 3 in paper/towerless_intervals.tex; the main paper reaches its contradiction with Theorem 3.4 of Farsi-Latrémolière through Theorem 15.7 (results/R1_counterexample_farsi_latremoliere.md).
+**Status.** Theorem (Theorem 15.7), with Corollary 15.8. Proved by Claude Opus 5.5. Ledger rows `l15_converse` and `l15_finite_limits` (depending on `fl_R3`). Proposition G and its item 3 in paper/towerless_intervals.tex; the main paper reaches its contradiction with Theorem 3.4 of Farsi-Latrémolière through Theorem 15.7 (results/R1_counterexample_farsi_latremoliere.md).
 
 **Setting.** T_n = (A_n, H_n, D_n) metric spectral triples and T_F = (C, C^N, D_F), with the conventions of lemma 15.
 

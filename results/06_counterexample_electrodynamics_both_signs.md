@@ -1,6 +1,6 @@
 # The electrodynamics triple admits doubling involutions of both signs with the same J, so J does not decide between 9 and 11
 
-**Status.** Counterexample. Proved by Astra 6 (job 06, Result 3); checked by Claude Opus 5.5 in Python (m = 0.7: KO-6 signs, both involutions, the descended signs) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_nogo_19.md). Ledger row `l06_counterexample`. Item 2 of Theorem D of paper/towerless_intervals.tex.
+**Status.** Counterexample. Proved by Astra 6 (job 06, Result 3). Ledger row `l06_counterexample`. Item 2 of Theorem D of paper/towerless_intervals.tex.
 
 **Setting.** The electrodynamics triple of van den Dungen-van Suijlekom (section 4.1, equations (4.1)-(4.2)), in the basis (e_L, e_R, bar e_L, bar e_R) after a phase change compatible with A, J and gamma:
 

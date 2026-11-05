@@ -1,6 +1,6 @@
 # In the top-only heat-cutoff family, m_t, M_W and M_Z diverge together only jointly with Lambda -> infinity, and the limit m_t/M_W -> sqrt(8/3) needs m_t/Lambda -> 0
 
-**Status.** Corollary (Corollary 10 of lemma 18). Proved by Astra 6 (job 18); checked by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_18_16b.md). Ledger row `l18_joint`.
+**Status.** Corollary (Corollary 10 of lemma 18). Proved by Astra 6 (job 18). Ledger row `l18_joint`.
 
 **Setting.** The background family and mass definitions of 18_top_only_w_mass_at_fixed_cutoff.md and 18_unbroken_coefficients_and_angles.md, with mu = m_t/Lambda.
 

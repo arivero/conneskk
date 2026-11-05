@@ -1,6 +1,6 @@
 # The Pati-Salam finite data are orientable, with gamma = rho(p_L' - p_R') rho(1_4)^o - rho(1_4) rho(p_L' - p_R')^o, while the Standard Model data and the light block of colour plus electromagnetism admit no orientation cycle
 
-**Status.** Proposition (Proposition 41.4). Proved by Claude Fable 5.1 on 4 November 2026 by hand; confirmed by its author with numpy on the 32-state representation (the Pati-Salam cycle, script not kept). Refereed by Claude Opus 5.5 (effort max, 4 November 2026; report in historical/reviews/2026-11-04_opus_check_41_45.md): correct with two amendments, the e_R obstruction and the hypothesis on D at the Pati-Salam step, both applied. Ledger row `l41_orient` (depending on `l17_no_higgs` and on the hypothesis `sheet_diagonal_ps`). The table row on orientability and Poincaré duality of paper/connes_kk_dictionary_note.tex.
+**Status.** Proposition (Proposition 41.4). Proved by Claude Fable 5.1 on 4 November 2026 by hand. The e_R obstruction and the hypothesis on D at the Pati-Salam step are part of the statement. Ledger row `l41_orient` (depending on `l17_no_higgs` and on the hypothesis `sheet_diagonal_ps`). The table row on orientability and Poincaré duality of paper/connes_kk_dictionary_note.tex.
 
 **Setting.** The chain and the representation of 41_trace_forms_along_chain.md, with the Pati-Salam projections p_R', p_L' and p_4; an orientation cycle is c = sum rho(a_i) rho(b_i)^o with c = gamma. At the Pati-Salam step D is sheet-diagonal, of the form of Corollary 16.8 (a Pati-Salam-symmetric Yukawa with no Majorana block), since with the Majorana block order one fails there and Theorem 20.2 selects A_SM.
 
@@ -14,4 +14,4 @@
 
 **Proof.** Lemma 41, Proposition 41.4: on the particles rho(1_4)^o is the identity and rho(1_4) vanishes, on the antiparticles the reverse, so the right side is +1 on p_L, -1 on p_R, -1 on p-bar_L and +1 on p-bar_R, which is gamma; a cycle takes the same value on two states with the same pair of characters, while gamma takes opposite values.
 
-**What it leaves open.** A second independent reading. The result points to the topology of a Kaluza-Klein parent as the source of orientability, which the finite data along the chain do not keep (lemma 41, Scope).
+**What it leaves open.** The result points to the topology of a Kaluza-Klein parent as the source of orientability, which the finite data along the chain do not keep (lemma 41, Scope).

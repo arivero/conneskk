@@ -1,6 +1,6 @@
 # The axial anomaly on the reduced action, and the two-flavour discrete term
 
-For STRATEGY T10 and T13, following [lemma 17](17_explicit_masses_chiral_limit.md) and open question 6 of the [steer note](../d9_masses_fermi_qcd_steer.md). Proved by Claude Opus 5.5, using the index theorem and Witten 1982 as references. Refereed by Terra 6.1 (effort max, 3 Nov 2026; [report](../historical/reviews/2026-11-03_terra_check_27.md)): two errors of interpretation, in Propositions 27.4 and 27.5, and amendments, all incorporated below.
+For STRATEGY T10 and T13, following [lemma 17](17_explicit_masses_chiral_limit.md) and open question 6 of the [steer note](../d9_masses_fermi_qcd_steer.md). Proved by Claude Opus 5.5, using the index theorem and Witten 1982 as references.
 
 **Outcome.**
 

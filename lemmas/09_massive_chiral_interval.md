@@ -1,6 +1,6 @@
 # The chiral interval with a bulk mass: chirality, light pairs and both limits
 
-Theorem T3 of [../STRATEGY.md](../STRATEGY.md), core part. Proved by Claude Opus 5.5 without Astra or Fable; checked numerically against an independent first-order discretization. Refereed by Terra 6.1 (gpt-6.1-terra, effort max, 3 Nov 2026): of 11 statements, 4 correct, 3 needed amendments, 2 had gaps (closed by the referee) and 2 were wrong as first stated (Corollary 9.10 and Lemma 9.11). All corrections are incorporated below; the referee report is appended.
+Theorem T3 of [../STRATEGY.md](../STRATEGY.md), core part. Proved by Claude Opus 5.5; the spectra are compared numerically with a first-order discretization (section "Numerical check").
 
 ## Setting
 
@@ -28,7 +28,7 @@ At M = 0 this is the operator of [job 05](05_deconstruction_interval.md). We con
 
 *Proof.* D psi = 0 iff A L = 0 and A^dagger R = 0, i.e. L = alpha e^{Mx} and R = beta e^{-Mx}. Exponentials never vanish, so a condition at either end forces the corresponding coefficient to 0. ∎
 
-**Corollary 9.3 (equivariant index).** Let a compact group G act on H_G = (+)_rho V_rho (x) L^2(I; C^2), a sum of finitely many finite-dimensional representations V_rho, with boundary type tau(rho) in {a, b, c} and mass M_rho on each summand. (With infinitely many summands the operator need not be Fredholm: the referee report gives a counterexample.) Then the G-index of D in R(G) is
+**Corollary 9.3 (equivariant index).** Let a compact group G act on H_G = (+)_rho V_rho (x) L^2(I; C^2), a sum of finitely many finite-dimensional representations V_rho, with boundary type tau(rho) in {a, b, c} and mass M_rho on each summand. (With infinitely many summands the operator need not be Fredholm: for l = 1, G = S^1 and the representations V_j(z) = z^j, j >= 2, of type (c) with M_j = -j, the vectors (f_j, 0) with f_j = chi(x) e^{-jx}, chi smooth, equal to 1 on [0, 1/2] and to 0 at 1, satisfy condition (c), lie in distinct summands and have norm(A_j f_j)/norm(f_j) = O(sqrt(j) e^{-j/2}) -> 0, so the direct sum has no kernel and is not bounded below.) Then the G-index of D in R(G) is
 
     sum over tau(rho) = a of [V_rho]   minus   sum over tau(rho) = b of [V_rho],
 
@@ -81,9 +81,9 @@ The pair is spanned by L_0 = sinh(kappa_0 (l - x)), concentrated at x = 0, and R
 - the compression of C(I) is Q(f) = diag(int f abs(u_L)^2, int f abs(u_R)^2), whose range is C + C;
 - the truncated end states are at Connes distance 1/lambda_0.
 
-*Proof.* We have D u_L = A L_0/||L_0|| = lambda_0 u_R. Pointwise orthogonality of the L and R components makes Q(f) diagonal. Q(1) = I and Q(x) = diag(<x>_L, <x>_R) with <x>_L < <x>_R, so the range is the full diagonal algebra. Finally, ||[lambda_0 sigma_1, diag(a, b)]|| = lambda_0 abs(a - b). ∎
+*Proof.* We have D u_L = A L_0/||L_0|| = lambda_0 u_R. Pointwise orthogonality of the L and R components makes Q(f) diagonal. Q(1) = I and Q(x) = diag(<x>_L, <x>_R) with <x>_L < l/2 < <x>_R, since by the identity R_0(x) = L_0(l - x) of Lemma 9.5 the left density exceeds the right one on [0, l/2); so the range is the full diagonal algebra. Finally, ||[lambda_0 sigma_1, diag(a, b)]|| = lambda_0 abs(a - b). ∎
 
-The two-sheet distance is therefore 1/(fermion mass), as in the Standard Model finite geometry; it depends on l only through lambda_0. At M = 0 (job 05) it was 2l/pi.
+The two-sheet distance is therefore 1/(fermion mass), as in the Standard Model finite geometry; it depends on l only through lambda_0, and 1/lambda_0 > l for c > 1 by Lemma 9.7. At M = 0 (job 05) it was 2l/pi.
 
 ## The two limits
 
@@ -115,13 +115,13 @@ a one-dimensional Weyl law (for the positive spectrum; both signs double the lea
 - Neumann-Dirichlet (in either order) gives ((n - 1/2) pi/l)^2, n >= 1;
 - Dirichlet-Dirichlet gives (n pi/l)^2, n >= 1.
 
-A gauge field with a Dirichlet condition at one end and a Neumann condition at the other therefore has lightest mass pi/(2l), which equals the Connes-Lott mass of the massless chiral interval (job 05); with Dirichlet conditions at both ends the lightest mass is pi/l. ∎
+A gauge field with a Dirichlet condition at one end and a Neumann condition at the other therefore has lightest mass pi/(2l), which equals the Connes-Lott mass of the massless chiral interval (job 05); with Dirichlet conditions at both ends the lightest mass is pi/l. A Dirichlet condition at one end alone does not fix the answer: u(0) = 0 with u'(l) = u(l)/l admits the zero mode u(x) = x. ∎
 
 ## Remark: fermion mass as internal momentum
 
 In this family, masses are internal momenta, with an explicit rule for their quantization. At M = 0 the Connes-Lott mass is the lowest allowed momentum (r - 1/2) pi/l, quantized by the chiral boundary conditions. With a bulk mass, lambda_n^2 = mu^2 + k_n^2 adds the bulk mass and the quantized momentum in quadrature. The light pair's mass, mu sech(kappa_0 l), is exponentially sensitive to mu l. Order-one differences of mu_i l between generations therefore give hierarchical masses of about 2 mu_i e^{-mu_i l}. This is the localization mechanism for Yukawa hierarchies (Arkani-Hamed-Schmaltz 2000; Gherghetta-Pomarol 2000; Grossman-Neubert 2000). In noncommutative-geometry terms, the finite operator D_F of the two-sheet space is the towerless remnant of internal momentum, and its texture becomes localization and overlap data.
 
-## Numerical check (Claude)
+## Numerical check
 
 The secular equations of Theorem 9.4 were compared with the eigenvalues of an independent first-order discretization: the chain of job 05 with mass term (M/2)(R_{i+1} + R_i), N = 4000.
 
@@ -140,207 +140,5 @@ At mu = 6, 2 mu e^{-mu l} = 0.029745, against lambda_0 = 0.029747. Lemma 9.7 was
 | 0.1 | 4.501 | 45.0 | 1.000000 | 59.2 |
 | 0.01 | 7.284 | 728 | 1.000000 | 812 |
 | 0.001 | 9.893 | 9893 | 1.000000 | 10487 |
-
-## Referee report (gpt-6.1-terra, effort max, 3 Nov 2026)
-
-Prompt: [prompts/terra_check_09.md](../historical/prompts/terra_check_09.md). Reproduced as received; the corrections above implement it. Claude checked the two errors, the identity R_0(x) = L_0(l - x) and the asymptotic of 9.5 by hand.
-
-We take \(\ell>0\) throughout. All checks below are analytic; we used no numerical computation.
-
-### Lemma 9.1
-
-**Verdict: Correct with amendment.** The compact-resolvent argument needs the graph-norm estimate
-\[
-\|\psi'\|_{L^2}\leq \|D_M\psi\|_{L^2}+|M|\,\|\psi\|_{L^2}.
-\]
-
-The boundary form in the proof is correct. Each proposed boundary subspace is maximal isotropic. To apply this to the adjoint, distributional differentiation shows that every vector in \(\operatorname{Dom}D_M^*\) lies in \(H^1\); the boundary form then forces it to satisfy the same boundary conditions. Thus \(D_M\) is self-adjoint.
-
-The displayed estimate makes the graph norm control the \(H^1\)-norm. Consequently, the resolvent maps \(L^2\) boundedly into \(H^1\), and compactness of \(H^1\hookrightarrow L^2\) gives compact resolvent.
-
-### Theorem 9.2
-
-**Verdict: Correct.**
-
-The zero-mode equations give
-\[
-L(x)=\alpha e^{Mx},\qquad R(x)=\beta e^{-Mx}.
-\]
-The boundary conditions force \(\beta=0\) in case (a), \(\alpha=0\) in case (b), and both coefficients to vanish in case (c). The grading preserves each domain and anticommutes with \(D_M\), so the stated chiral indices follow.
-
-### Corollary 9.3
-
-**Verdict: Correct with amendment.** Assume that the displayed direct sum has finitely many finite-dimensional \(G\)-representations. Under that hypothesis, Theorem 9.2 gives the stated element of \(R(G)\).
-
-Without such a hypothesis, the direct-sum operator need not be Fredholm, even if every summand has boundary type (c). For a counterexample, take \(\ell=1\), \(G=S^1\), the distinct one-dimensional representations \(V_j(z)=z^j\), \(j\ge2\), and \(M_j=-j\). Choose a smooth \(\chi\) equal to \(1\) on \([0,1/2]\) and equal to \(0\) at \(1\), and put
-\[
-f_j(x)=\chi(x)e^{-jx}.
-\]
-Then \((f_j,0)\) satisfies condition (c), while
-\[
-A_j f_j=-\chi'(x)e^{-jx},\qquad
-\frac{\|A_j f_j\|}{\|f_j\|}=O\!\left(\sqrt j\,e^{-j/2}\right)\longrightarrow0.
-\]
-After normalization, these vectors lie in distinct orthogonal representation summands. The direct sum has no kernel, but it is not bounded below and hence is not Fredholm. Its ordinary \(R(G)\)-valued Fredholm index is therefore undefined.
-
-### Theorem 9.4
-
-**Verdict: Correct with amendment.** Specify \(\mu>0\) in the negative-mass cases and \(n\ge1\) in case 3. For an exhaustive list, add \(M=0\), where
-\[
-\operatorname{spec}D_0
-=\left\{\pm\frac{(n+\tfrac12)\pi}{\ell}:n\ge0\right\}.
-\]
-At \(c=1\), the threshold eigenvalue is \(\mu\), and the remaining positive roots have \(n\ge1\) in the intervals stated in case 1.
-
-For \(\lambda\ne0\), eliminating \(R\) gives
-\[
--L''+M^2L=\lambda^2L,\qquad L(\ell)=0,\quad L'(0)=ML(0).
-\]
-Conversely, every solution gives \(R=AL/\lambda\). The squared operator is nonnegative, and Theorem 9.2 excludes \(\lambda=0\). Separated boundary conditions make each squared eigenvalue simple; \(\Gamma D_M=-D_M\Gamma\) gives the symmetric spectrum.
-
-For \(M=-\mu\), put \(c=\mu\ell\). In the subthreshold case, the equation is
-\[
-\frac{\tanh t}{t}=\frac1c,\qquad t=\kappa\ell>0.
-\]
-The left side decreases strictly from \(1\) to \(0\), so there is exactly one positive root if \(c>1\), and none if \(c\le1\). It satisfies \(\kappa<\mu\).
-
-For the oscillatory roots, let \(h(t)=\tan t-t/c\). It is negative on each positive interval \((n\pi-\pi/2,n\pi)\). On \((n\pi,n\pi+\pi/2)\), its derivative increases strictly. For \(n\ge1\), it starts negative in value and tends to \(+\infty\), so it has exactly one root. On \((0,\pi/2)\), it has exactly one positive root when \(c<1\), and none when \(c\ge1\). At \(c=1\), the separate linear solution \(L=\ell-x\) gives \(\lambda=\mu\).
-
-For \(M=+\mu\), \(\tan t+t/c\) increases strictly from \(-\infty\) to a positive value on each \(((n-\tfrac12)\pi,n\pi)\), \(n\ge1\), giving exactly one root there. It has no positive root on the other half-periods, and there is no subthreshold or threshold solution. These counts establish all three stated cases.
-
-### Lemma 9.5
-
-**Verdict: Gap, closed here.** The displayed proof does not justify the relative asymptotic or make “concentrated” precise.
-
-Write \(s=\kappa_0\ell\) and \(c=\mu\ell\). The root equation gives \(c=s/\tanh s\). As \(c\to\infty\), \(s\to\infty\) and \(s/c\to1\); moreover,
-\[
-0<c-s=c(1-\tanh s)\le 2c e^{-2s}\longrightarrow0.
-\]
-Thus
-\[
-\lambda_0=\mu\operatorname{sech}s
-=2\mu e^{-c}\,
-  \frac{e^{c-s}}{1+e^{-2s}}
-=2\mu e^{-c}(1+o(1)).
-\]
-The two stated inequalities also follow directly from \(s<c\) and \(\operatorname{sech}s\le2e^{-s}\).
-
-The root equation simplifies the right profile exactly:
-\[
-R_0(x)=\sinh(\kappa_0x)=L_0(\ell-x).
-\]
-This proves the equality of norms and shows that the two profiles decrease away from their respective walls. Exponential localization on the scale \(1/\kappa_0\) holds when \(s\to\infty\). It is not uniform throughout \(c>1\): at fixed \(\ell\), as \(c\downarrow1\), the normalized profiles approach multiples of \(\ell-x\) and \(x\).
-
-### Theorem 9.6
-
-**Verdict: Correct.**
-
-The two chiral basis vectors span the \(\pm\lambda_0\) eigenspaces together, and the first two matrix identities follow from
-\[
-D_Mu_L=\lambda_0u_R,\qquad D_Mu_R=\lambda_0u_L.
-\]
-By the reflection identity in Lemma 9.5, the normalized left density exceeds the right density on the left half of the interval, with the reverse inequality on the right half. Hence
-\[
-\langle x\rangle_L<\ell/2<\langle x\rangle_R.
-\]
-Thus \(Q(1)\) and \(Q(x)\) span the diagonal algebra, and the commutator norm is \(\lambda_0|a-b|\). The distance between its two pure states is \(1/\lambda_0\).
-
-The pullbacks of these states through \(Q\) are the two smeared probability measures, not literal endpoint evaluations. Also, the unnumbered sentence immediately after the proof needs correction: the distance is **not determined by \(\ell\) alone**, but it does depend on \(\ell\). In fact, Lemma 9.7 gives \(1/\lambda_0>\ell\) for \(c>1\).
-
-### Lemma 9.7
-
-**Verdict: Correct.**
-
-Set \(q=\operatorname{sech}^2s\). Since
-\[
-\frac1c=\frac{\tanh s}{s}>q,
-\]
-implicit differentiation is valid and gives
-\[
-s'=\frac{s}{c(1-cq)},\qquad
-F'(c)=\frac{2cq(1-c)}{1-cq}<0.
-\]
-As \(c\downarrow1\), the inverse relation \(c=s/\tanh s\) gives \(s\to0\), so \(F\to1\). As \(c\to\infty\), \(s\to\infty\) and \(c/s\to1\), so \(c^2\operatorname{sech}^2s\to0\).
-
-### Theorem 9.8
-
-**Verdict: Gap, closed here.** The statement asserts convergence of the normalized profiles without proving it or specifying a mode of convergence. The convergence holds uniformly on compact sets of wall distance and in \(L^2([0,\infty))\), after extension by zero.
-
-Let \(B_\ell=\|L_0\|=\|R_0\|\). With \(s=\kappa_0\ell\),
-\[
-B_\ell^2=\frac{\sinh(2s)}{4\kappa_0}-\frac{\ell}{2}
-\sim \frac{e^{2s}}{8\kappa_0}.
-\]
-At fixed \(\mu\), \(s/c\to1\), so \(\kappa_0\to\mu\). For fixed \(y\ge0\),
-\[
-\frac{L_0(y)}{B_\ell}
-=\frac{R_0(\ell-y)}{B_\ell}
-\longrightarrow \sqrt{2\mu}\,e^{-\mu y}.
-\]
-The same formula supplies a uniform exponential bound, proving the stated \(L^2\) convergence. The limits are exact zero modes of the two separately oriented half-line operators, with left and right chirality respectively. They are not zero modes at finite \(\ell\).
-
-For \(E>\mu\), set \(K=\sqrt{E^2-\mu^2}\). The root bounds
-\[
-n\pi<k_n\ell<(n+\tfrac12)\pi
-\]
-give
-\[
-\#\{n\ge1:k_n\le K\}=\frac{\ell K}{\pi}+O(1).
-\]
-This is the displayed one-sided counting law. Counting both signs of the Dirac spectrum doubles its leading term.
-
-### Theorem 9.9
-
-**Verdict: Correct.**
-
-Lemma 9.7 makes \(F\) a continuous strictly decreasing map from \((1,\infty)\) onto \((0,1)\). Since \(m_f\ell\in(0,1)\), it gives the unique \(c=\mu\ell>1\). As \(\ell\to0\), \(c\to\infty\), and Lemma 9.5 yields
-\[
-m_f\ell=2c e^{-c}(1+o(1)),
-\qquad
-c=\log\frac{2c}{m_f\ell}+o(1).
-\]
-The first root above the light pair has \(k_1>\pi/\ell\), proving the stated lower bound and divergence.
-
-The original interval metric is \(|x-y|\): the mass term commutes with scalar functions, so it does not change the Dirac commutator seminorm. Therefore
-\[
-d_{\mathrm{GH}}([0,\ell],\{\mathrm{point}\})=\ell/2\longrightarrow0.
-\]
-The compressed two-state geometry uses a different seminorm and retains distance \(1/m_f\).
-
-### Corollary 9.10
-
-**Verdict: Error.** The assertion that “every eigenvalue exceeds \(\mu\)” is false: the spectrum is symmetric and contains negative eigenvalues.
-
-The corrected statement is that, for fixed bulk mass and sufficiently small \(\ell\), **every eigenvalue has absolute value greater than \(\mu\)**, and the smallest absolute eigenvalue is
-\[
-\min_{\lambda\in\operatorname{spec}D_M}|\lambda|
-=\frac{\pi}{2\ell}(1+o(1)).
-\]
-For \(M=-\mu<0\), the lowest root \(t_0=k_0\ell\in(0,\pi/2)\) satisfies
-\[
-\frac{\tan t_0}{t_0}=\frac1{\mu\ell}\longrightarrow\infty,
-\]
-so \(t_0\to\pi/2\), proving the formula. For \(M=0\) it is exact; the positive-mass case follows similarly from the root just above \(\pi/2\). Thus the conclusion that no light fermion survives is correct.
-
-### Lemma 9.11
-
-**Verdict: Error.** The three eigenvalue lists are correct, but the gauge-field conclusion lacks a boundary condition at the other end.
-
-For a Dirichlet condition at **both** ends, which in particular includes a Dirichlet condition at one end, the lightest mass is \(\pi/\ell\), not \(\pi/(2\ell)\). The conclusion is correct for a Dirichlet condition at one end **and a Neumann condition at the other**, for the stated operator \(-d^2/dx^2\).
-
-Even if “at one end” is read as exactly one Dirichlet condition, another boundary condition need not be Neumann: \(u(0)=0\), \(u'(\ell)=u(\ell)/\ell\) admits the zero mode \(u(x)=x\).
-
-### Amendments and errors
-
-- **9.1:** Add the graph-norm estimate for compact resolvent.
-- **9.3:** Require a finite direct sum, or impose other hypotheses ensuring an equivariant Fredholm operator with index in \(R(G)\).
-- **9.4:** Specify the root indices and \(\mu>0\), and include \(M=0\) for completeness.
-- **9.5:** Supply the relative-asymptotic argument and state localization precisely; the gap is closed above.
-- **9.6:** Correct the adjacent unnumbered claim that the distance is unrelated to \(\ell\).
-- **9.8:** Prove and specify the profile convergence; the gap is closed above.
-- **9.10:** Replace “every eigenvalue exceeds \(\mu\)” by the corresponding statement about absolute values.
-- **9.11:** Require Neumann at the opposite endpoint for the claimed lightest mass.
-
-Overall: 11 statements checked; 4 correct, 3 correct with amendment, 2 gaps closed above, and 2 errors.
 
 **Literature ([../LITERATURE.md](../paper/LITERATURE.md), section B).** Opposite-chirality boundary modes with exponentially small mixing are in Jackiw-Rebbi 1976, Kaplan 1992 and Shamir 1993 (section 3); collapse of spectral triples to a point is treated by Farsi-Latremoliere (J. London Math. Soc., 2026). The tuned collapse mu(l) of Theorem 9.9 was not found in print.

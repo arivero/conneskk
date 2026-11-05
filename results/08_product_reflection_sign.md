@@ -1,6 +1,6 @@
 # In the internal-first KO-6 product of a finite KO-6 triple with the chiral interval, the bare interval reflection has sign s = -1, formally 4 + 5 = 9, for either interval convention
 
-**Status.** Theorem (Result 5 of lemma 08), with Proposition 6 on the grading and the lift of the reflection. Proved by Astra 6 (job 08); checked by Claude Opus 5.5 in Python (numpy: of the eight choices (t, a, b) exactly two give the KO-6 signs, both with s = -1) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger rows `l08_product` (it amends `l07_reflection`) and `l08_lift`. Item 3 of Theorem D of paper/towerless_intervals.tex.
+**Status.** Theorem (Result 5 of lemma 08), with Proposition 6 on the grading and the lift of the reflection. Proved by Astra 6 (job 08). Ledger rows `l08_product` (it amends `l07_reflection`) and `l08_lift`. Item 3 of Theorem D of paper/towerless_intervals.tex.
 
 **Setting.** F_0 = (A_0, H_0, D_0, J_0, Gamma_0) a finite real KO-6 triple; the interval or its scalar-algebra truncation, with J_I = diag(alpha, beta) K and J_I D_I = t D_I J_I (lemma 07); the internal-first product D_F = D_0 (x) 1 + Gamma_0 (x) D_I, Gamma_F = Gamma_0 (x) Gamma_I, and the grading-twisted real structures J_{a,b} = (J_0 Gamma_0^a) (x) (J_I Gamma_I^b), a, b in {0, 1}.
 

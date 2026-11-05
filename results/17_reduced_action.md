@@ -1,6 +1,6 @@
 # The fermion action of M x F on its physical subspace equals (1/2) <jj psi, (D_M + gamma_5 d) psi> on an unconstrained spinor, and a paired Dirac sector gives one Dirac fermion of explicit mass for either sign s
 
-**Status.** Theorem (Theorem 17.1), with Corollary 17.2. Proved by Claude Opus 5.5. Theorem 17.1 checked by Claude Opus 5.5 in Python (numpy on a random finite model: the bilinear forms agree to about 1e-14 for both signs); both checked by Terra 6.1 by hand, with amendments incorporated (historical/reviews/2026-11-03_terra_check_17.md). Ledger rows `l17_action` (depending on `l08_reconcile`) and `l17_one_dirac`.
+**Status.** Theorem (Theorem 17.1), with Corollary 17.2. Proved by Claude Opus 5.5. Ledger rows `l17_action` (depending on `l08_reconcile`) and `l17_one_dirac`.
 
 **Setting.** M a compact Riemannian spin 4-manifold with (D_M, J_M, gamma_5), J_M^2 = -1, J_M D_M = D_M J_M, J_M gamma_5 = gamma_5 J_M, gamma_5 D_M = -D_M gamma_5; F = (A_F, H_F, D_F, J_F, gamma_F) a finite real triple with the KO-6 signs; D = D_M (x) 1 + gamma_5 (x) D_F, J = J_M (x) J_F, Gamma = gamma_5 (x) gamma_F; the fermion action (1/2) <J xi, D xi> on Grassmann variables xi in H^+ = {Gamma = +1} (Chamseddine-Connes-Marcolli 2007). U an admissible involution of sign s (Theorem D), and on H_0 = {gamma_F = +1}, d = U D_F and j = U J_F, with j^2 = s and jd = s dj.
 

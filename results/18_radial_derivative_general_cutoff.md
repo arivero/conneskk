@@ -1,6 +1,6 @@
 # On flat R^4 the radial derivative of the spectral action is U'(c) = -(c Lambda^2/(2 pi^2)) sum_j lambda_j^2 int_{c^2 lambda_j^2/Lambda^2}^infinity f(z) dz, so nonnegative cutoffs of unbounded support have no finite stationary point and compactly supported ones have a plateau
 
-**Status.** Proposition (Proposition 11 of lemma 18). Proved by Terra 6.1 in the referee report on lemma 18 (historical/reviews/2026-11-03_terra_check_18_16b.md); checked by Claude Opus 5.5 in Python (numerical derivative against the formula for a compact bump). Ledger row `l18_radial_general`.
+**Status.** Proposition (Proposition 11 of lemma 18). Proved by Terra 6.1. Ledger row `l18_radial_general`.
 
 **Setting.** A sufficiently integrable real cutoff f; flat R^4; radial configurations V = c V_\*, c > 0, with lambda_j^2 the eigenvalues of V_\*^2.
 

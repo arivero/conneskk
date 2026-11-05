@@ -1,6 +1,6 @@
 # At fixed rank, m -> 0 separates the two sheets without producing a heat dimension, and m -> infinity collapses the metric with an empty light sector
 
-**Status.** No-go theorem in its scope (labelled Proposition in lemmas/README.md; ledger kind no_go). Proved by Astra 6 (job 05, Part 4); checked by Claude Opus 5.5 in Python (spectra) and by Terra 6.1 by hand, with one precision adopted in the lemma (historical/reviews/2026-11-03_terra_check_nogo_19.md). Ledger row `l05_limits`. Stated, with No-go theorem 8 of lemma 08, as Proposition A.1 of paper/towerless_intervals.tex.
+**Status.** No-go theorem in its scope (labelled Proposition in lemmas/README.md; ledger kind no_go). Proved by Astra 6 (job 05, Part 4). Ledger row `l05_limits`. Stated, with No-go theorem 8 of lemma 08, as Proposition A.1 of paper/towerless_intervals.tex.
 
 **Setting.** The chain D_N of lemma 05, Part 1, with the normalization h_N = pi/(4 l sin theta_N), and the interval D_l of Part 2, with m = m_1 = pi/(2l). Physical energies or heat times are held fixed unless stated otherwise.
 

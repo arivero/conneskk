@@ -1,6 +1,6 @@
 # A finite KO-6 triple factors as T_7 x P_7 or T_5 x P_1 exactly when a grading-reversing involution U commutes with the algebra, its opposite and D, with UJ = JU or UJ = -JU
 
-**Status.** Theorem. Proved by Astra 6 (job 06, Result 2); checked by Claude Opus 5.5 in Python (both involutions on the electrodynamics triple) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_nogo_19.md). Ledger row `l06_factorization`. Item 1 of Theorem D of paper/towerless_intervals.tex; cited as "\supp{06}, Theorem 2" in paper/real_structure_note.tex. The criterion was not found in print (paper/LITERATURE.md, section D).
+**Status.** Theorem. Proved by Astra 6 (job 06, Result 2). Ledger row `l06_factorization`. Item 1 of Theorem D of paper/towerless_intervals.tex; cited as "\supp{06}, Theorem 2" in paper/real_structure_note.tex. The criterion was not found in print (paper/LITERATURE.md, section D).
 
 **Setting.** A finite KO-6 triple (A, H, D, J, gamma), signs (+, +, -), with order zero and first order, and a° = J a^\\* J^{-1}. P_k = (C, C, 0, K), k = 1 or 7, is the odd point (point algebra R for real algebras). Odd-times-odd products use H_1 (x) H_2 (x) C^2 with J = J_1 (x) J_2 (x) (BK) and B from Result 1 of lemma 06, in agreement with Dabrowski-Dossena (equation (25), Table 6). H_L and H_R are the gamma = +1 and -1 subspaces, D = [[0, M^\\*], [M, 0]], and C = J restricted to H_L.
 

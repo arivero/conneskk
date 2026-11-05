@@ -1,6 +1,6 @@
 # Along a gauge orbit the modulus of the link stays fixed for the covariant projection of the parent and for the finite data with the quadratic term, and grows at second order for the fixed compression and for the finite data with linear terms only
 
-**Status.** Proposition (Proposition 19.3), a parallel with no identification. Proved by Claude Opus 5.5; checked by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_nogo_19.md). Ledger row `l19_parent`.
+**Status.** Proposition (Proposition 19.3), a parallel with no identification. Proved by Claude Opus 5.5. Ledger row `l19_parent`.
 
 **Setting.** The chiral interval at M = 0 with m = pi/(2l); the link of the fixed compression (lemma 13, Proposition 13.2; 13_fixed_compression_gauge_fluctuations.md), the link of the covariant projection (lemma 14, Theorem 3; 14_link_fixed_singular_values.md), and the two-point fluctuations of 19_fluctuations_two_point_data.md.
 

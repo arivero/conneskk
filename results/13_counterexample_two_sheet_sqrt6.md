@@ -1,6 +1,6 @@
 # The minimal two-sheet spectral action gives a massless diagonal vector and a relative vector of mass sqrt(6) m, against the Neumann-Dirichlet tower mass m = pi/(2l)
 
-**Status.** Counterexample (Result 6 of lemma 13), with Lemma 4 on the tower mass. Proved by Astra 6 (job 13); checked by Claude Opus 5.5 by hand (the Neumann-Dirichlet mass and the eigenvalues 0 and 6 m^2) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger rows `l13_sqrt6` (depending on `l13_mass_formula` and `l13_kk_mass`) and `l13_kk_mass`. Item 3 of Proposition F of paper/towerless_intervals.tex.
+**Status.** Counterexample (Result 6 of lemma 13), with Lemma 4 on the tower mass. Proved by Astra 6 (job 13). Ledger rows `l13_sqrt6` (depending on `l13_mass_formula` and `l13_kk_mass`) and `l13_kk_mass`. Item 3 of Proposition F of paper/towerless_intervals.tex.
 
 **Setting.** H_F = (C_L^n + C_R^n) (x) C^N, V_0 = m [[0, I_n], [I_n, 0]] (x) I_N; both sheet groups gauged, U(1)_L x U(1)_R for n = 1 or SU(2)_L x SU(2)_R for n = 2; the action of 13_spectral_action_vector_mass_formula.md. Comparison (Lemma 4): the transverse-vector operator -d^2/dx^2 with f'(0) = 0, f(l) = 0 and no boundary kinetic terms has lowest mass M_KK = pi/(2l) = m; Dirichlet conditions at both ends give pi/l, and two Neumann conditions give a zero mode.
 

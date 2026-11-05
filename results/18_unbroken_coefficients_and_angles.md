@@ -1,6 +1,6 @@
 # In the top-only heat-cutoff family the photon and gluon coefficients keep the ratio 8/3 and the neutral-current angle keeps cos^2 theta_NC = 5/8 for every m/Lambda, while M_Z tends to zero exponentially and the matching angle tends to 103/157
 
-**Status.** Proposition (Proposition 6 of lemma 18). Proved by Astra 6 (job 18); checked by Claude Opus 5.5 in Python (the neutral matrix recomputed from Standard Model charges; v^T B_inf^{-1} v = 8/27 with SymPy) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_18_16b.md). Ledger row `l18_angles`. Item 2 of Proposition E.1 of paper/towerless_intervals.tex.
+**Status.** Proposition (Proposition 6 of lemma 18). Proved by Astra 6 (job 18). Ledger row `l18_angles`. Item 2 of Proposition E.1 of paper/towerless_intervals.tex.
 
 **Setting.** The family of 18_top_only_w_mass_at_fixed_cutoff.md; colour generators with tr_3 t_a t_b = (1/2) delta_ab and Q = T_3 + Y; kappa_em, kappa_s the full-trace coefficients of F_em^2 and G_a^2; K the particle-trace neutral q^2 coefficient in the coordinates (A_3, A_Y); v = (1, -1).
 

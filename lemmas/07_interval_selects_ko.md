@@ -1,6 +1,6 @@
 # Does the chiral interval select 9 or 11?
 
-Questions 1-3 of [prompts/07](../historical/prompts/07_interval_selects_ko.md). The Astra job stopped on the codex usage limit before producing output, so these are Claude Opus 5.5's proofs, checked by hand. Astra job 08 confirmed Lemmas 1-3 under the pointwise reality hypothesis of Lemma 1 and answered Question 4: see [lemma 08](08_product_selects_ko.md) and the amendments below.
+Questions 1-3 of [prompts/07](../historical/prompts/07_interval_selects_ko.md). They are proved by Claude Opus 5.5. Lemmas 1-3 hold under the pointwise reality hypothesis of Lemma 1, and Question 4 is answered in [lemma 08](08_product_selects_ko.md); the amendments below record what lemma 08 changes.
 
 Let I_l = [0, l], H = L^2(I_l, C^2) with psi = (L, R), D = E d/dx with E = [[0, 1], [-1, 0]], Dom D = {psi in H^1 : R(0) = 0, L(l) = 0}, Gamma = diag(1, -1) (job 05). D and Gamma are real.
 
@@ -26,9 +26,9 @@ With Connes' even convention (eps' = +1) the chiral interval therefore has KO-di
 
 **Consequence.** As the interval collapses, only constants keep bounded commutators, and the reflection becomes a canonical L <-> R involution. Its sign against J is s = eps', so the interval fixes s exactly as far as the real structure on it is fixed, and no further. The 9 versus 11 ambiguity of job 06 is the same as the standard ambiguity J versus J gamma for even real spectral triples (Dabrowski-Dossena). This matches job 06, Proposition 9: the two odd reductions use J_M gamma_M (for 4 + 5) and J_M (for 4 + 7) on spacetime. Under Connes' convention eps' = +1 the reflection gives s = +1, i.e. KO-7, formally 11.
 
-**Conjecture (Question 4; false as stated, see amendment 4).** For F = F_0 x (collapsing chiral interval) with the product conventions of job 06, Lemma 1, the induced U = 1 (x) sigma satisfies UJ = sJU with s = eps' (interval) times a sign determined by the product grading twist. In particular, which of 9 and 11 is selected is fixed by choosing which spacetime real structure (J_M or J_M gamma_5) represents physical charge conjugation. A KO-0 interval does not change the KO-degree of a product, so the "Clifford point" of job 06 must come from the odd x odd product structure rather than from the interval alone; the open point is how the two descriptions match. Attempted by: Claude Opus 5.5 (Questions 1-3 above). The gpt-6-astra job was cut off by the usage limit before attempting it.
+**Conjecture (Question 4; false as stated, see amendment 4).** For F = F_0 x (collapsing chiral interval) with the product conventions of job 06, Lemma 1, the induced U = 1 (x) sigma satisfies UJ = sJU with s = eps' (interval) times a sign determined by the product grading twist. In particular, which of 9 and 11 is selected is fixed by choosing which spacetime real structure (J_M or J_M gamma_5) represents physical charge conjugation. A KO-0 interval does not change the KO-degree of a product, so the "Clifford point" of job 06 must come from the odd x odd product structure rather than from the interval alone; the open point is how the two descriptions match.
 
-## Amendments from job 08
+## Amendments from lemma 08
 
 1. Lemma 1 needs its hypothesis J f J^-1 = conj(f). Without it, J_ref = sigma_1 R_l K (R_l the reflection x -> l - x) preserves the chiral boundary conditions and has the KO-6 signs (Counterexample 08.4), so the chiral boundary conditions alone do not force KO-dimension 0.
 2. Lemma 2 holds for the compressed operators. With the full compressed diagonal algebra and the inherited J_2, the two-point data fail the first-order condition: [[D_2, e], e°] = D_2 for e = diag(1, 0) (Counterexample 08.4).

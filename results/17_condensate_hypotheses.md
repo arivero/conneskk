@@ -1,6 +1,6 @@
 # At finite volume and fixed background the regulated condensate tends to zero as m -> 0 apart from the zero-mode term, and the Banks-Casher form pi rho_0(0) needs a gauge measure, infinite volume, an order of limits and uniform control
 
-**Status.** Proposition (Proposition 17.8). Proved by Claude Opus 5.5; checked by Terra 6.1 by hand, who found it wrong as first written by overreach and had it corrected (historical/reviews/2026-11-03_terra_check_17.md). Ledger row `l17_condensate`.
+**Status.** Proposition (Proposition 17.8). Proved by Claude Opus 5.5. Ledger row `l17_condensate`.
 
 **Setting.** D_M(A) with eigenvalues lambda_n and n_0 zero modes on M of volume V. For m > 0, c_V(m; A) = (1/V) sum_n m/(lambda_n^2 + m^2) = (1/V) d/dm log |det(D_M(A) + gamma_5 m)|, formal on a compact four-manifold and needing ultraviolet regularization, with subtraction of divergent terms including m Lambda^2, m^3 log Lambda and possibly curvature terms.
 

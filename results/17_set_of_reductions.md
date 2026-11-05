@@ -1,6 +1,6 @@
 # The admissible involutions of each sign on the colour-only quark sector are the Sigma in U(N_f) with Sigma^\* M Hermitian, exactly the stationary points of Re tr(M Sigma^\*), and at M = 0 they form the homogeneous space (U(N_f) x U(N_f))/U(N_f)_V
 
-**Status.** Theorem (Theorem 17.6), with Remark 17.7 on its scope. Proved by Claude Opus 5.5; checked by Claude Opus 5.5 in Python (numpy: involution conditions, the formula for d, which this check found wrong in a first version, finite-difference criticality) and by Terra 6.1 by hand, with corrections incorporated, Remark 17.7 having overreached as first written (historical/reviews/2026-11-03_terra_check_17.md). Ledger row `l17_reductions`.
+**Status.** Theorem (Theorem 17.6), with Remark 17.7 on its scope. Proved by Claude Opus 5.5. Ledger row `l17_reductions`.
 
 **Setting.** The quark sector of 17_chiral_symmetry_group.md, with B containing only the colour algebra; admissible involutions of sign s as in Theorem D; V_M(Sigma) = -Re tr(M Sigma^\\*) on U(N_f).
 

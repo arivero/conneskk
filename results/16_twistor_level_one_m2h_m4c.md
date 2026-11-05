@@ -1,6 +1,6 @@
 # At twistor level one on two sheets, real functions on S^4 and on CP^3 generate M_2(H) + M_4(C) on E + E^\* of dimension 32 with J(x, y) = (y^\*, x^\*), the algebra, bimodule and real structure of Chamseddine-Connes, as abstract finite data
 
-**Status.** Proposition, proved by computation (Example 16.9 of lemma 16). Proved by Claude Opus 5.5; checked by Claude Opus 5.5 in Python (numpy: real dimensions 16 and 32, j^2 = -1 commuting with the Gamma_a, the structure on k = 4) and by Terra 6.1 by hand in the second referee report on lemma 16, which found one error, corrected (historical/reviews/2026-11-03_terra_check_18_16b.md). Ledger row `l16_twistor`. Item 4 of Proposition H of paper/towerless_intervals.tex.
+**Status.** Proposition, proved by computation (Example 16.9 of lemma 16). Proved by Claude Opus 5.5. Ledger row `l16_twistor`. Item 4 of Proposition H of paper/towerless_intervals.tex.
 
 **Setting.** D_0 the Dolbeault-Dirac operator on CP^3 twisted by O(1), with kernel H^0(CP^3, O(1)) = C^4; j the antiunitary with j^2 = -1 commuting with the Gamma_a of Proposition 10.1, which makes C^4 a quaternionic space H^2. The space is used twice: as W, with the functions of S^4 pulled back along the twistor projection, and as V, with the functions of CP^3. Corollary 16.8 applies with the parent gradings, trivial on the kernels.
 

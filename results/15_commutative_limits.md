@@ -1,6 +1,6 @@
 # Limits in the propinquity of commutative quantum compact metric spaces are commutative, and the number of connected components does not increase in the limit
 
-**Status.** Theorem (Theorem 15.2, Lemma R3 of the Farsi-Latrémolière assessment), with Lemma 15.1. Sketch by a Claude reading subagent; proof by Claude Opus 5.5 from the definitions in the LaTeX source of arXiv:2404.00240v3, Section 2; checked by Terra 6.1 by hand, who closed a gap in item 2 (historical/reviews/2026-11-03_terra_check_15_16.md). Ledger row `fl_R3`; Corollary 15.8 (row `l15_finite_limits`) depends on it. Item 3 of Proposition G of paper/towerless_intervals.tex, whose proof also uses Lemma 15.1.
+**Status.** Theorem (Theorem 15.2, Lemma R3 of the Farsi-Latrémolière assessment), with Lemma 15.1. Sketch by a Claude reading subagent; proof by Claude Opus 5.5 from the definitions in the LaTeX source of arXiv:2404.00240v3, Section 2. Ledger row `fl_R3`; Corollary 15.8 (row `l15_finite_limits`) depends on it. Item 3 of Proposition G of paper/towerless_intervals.tex, whose proof also uses Lemma 15.1.
 
 **Setting.** Quantum compact metric spaces (A, L), quantum isometries, tunnels with their extent chi, and the propinquity Lambda, as in the Conventions of lemma 15 (Farsi-Latrémolière, Section 2). The spectral propinquity dominates Lambda up to the cap: Lambda_spec(T_1, T_2) >= min(sqrt(2)/2, Lambda(A_1, A_2)) (consequence (b)).
 

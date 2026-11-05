@@ -1,6 +1,6 @@
 # As m_t -> infinity at fixed cutoff the broken vectors keep a finite nonzero kinetic form and a vanishing mass, so heavy fermions do not select the centralizer by mass decoupling
 
-**Status.** Counterexample (Counterexample 8 of lemma 18). Proved by Astra 6 (job 18); checked by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_18_16b.md). Ledger row `l18_no_centralizer`. Item 4 of Proposition E.1 of paper/towerless_intervals.tex.
+**Status.** Counterexample (Counterexample 8 of lemma 18). Proved by Astra 6 (job 18). Ledger row `l18_no_centralizer`. Item 4 of Proposition E.1 of paper/towerless_intervals.tex.
 
 **Setting.** The data of Proposition 4 of lemma 18 (top-only, heat cutoff; 18_top_only_w_mass_at_fixed_cutoff.md) and the centralizer g_{V_0} = {X in g_SM : [X, V_0] = 0}, which for nonzero top mass is the represented unbroken algebra su(3) + u(1)_em.
 

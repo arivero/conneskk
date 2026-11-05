@@ -1,3 +1,5 @@
+# The spectral dimension of the circle-invariant sector of CP^3
+
 ### Lemma 1 — Exact scalar count
 
 **Statement.** Let \(N_r(K)\) denote the complex dimension of the effective-character-\(r\) part of scalar levels \(0,\ldots,K\). Then

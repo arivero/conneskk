@@ -1,6 +1,6 @@
 # For a marked complex line l in the quaternionic sheet W = H^2 with quaternionic line L over p in S^4, T_L S^4 = (2, 2) = Hom_H(L, L^perp) and T_l CP^3 = (2)_{+-1} + (1)_{+-2} under Sp(1)_a x U(1)_b: the Higgs doublet of hypercharge 1/2 along the base and a charged singlet of hypercharge 1 along the twistor fibre
 
-**Status.** Proposition (Proposition 42.2). Proved by Claude Fable 5.1 on 4 November 2026 by hand; the representation theory is standard and is checked against the isotropy representation stated in lemma 28. Refereed by Claude Opus 5.5 (effort max, 4 November 2026; report in historical/reviews/2026-11-04_opus_check_41_45.md): correct, with the stabilizer dimensions and the ad-eigenvalues recomputed. Ledger row `l42_tangent`. The table row on the Higgs doublet of paper/connes_kk_dictionary_note.tex.
+**Status.** Proposition (Proposition 42.2). Proved by Claude Fable 5.1 on 4 November 2026 by hand; the representation theory is standard and agrees with the isotropy representation stated in lemma 28. Ledger row `l42_tangent`. The table row on the Higgs doublet of paper/connes_kk_dictionary_note.tex.
 
 **Setting.** G = Sp(2) acting on W = H^2 = C^4; K = Sp(1)_a x Sp(1)_b is the stabilizer of a quaternionic line L, with Sp(1)_b acting on L and Sp(1)_a on L^perp, and H = Sp(1)_a x U(1)_b the stabilizer of a complex line l in L, so G/K = S^4, G/H = CP^3 and K/H = S^2 is the twistor fibre (lemma 28). U(1)_b charges are normalized to +-1 on the doublet of Sp(1)_b, and Y = charge/2 as in the first-stage note of the corpus.
 

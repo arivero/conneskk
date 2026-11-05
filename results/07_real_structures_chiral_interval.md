@@ -1,6 +1,6 @@
 # Under pointwise reality the real structures of the chiral interval are diag(alpha, beta) K with signs (+, eps', +), they compress to the two-point truncation, and the reflection x -> l - x has sign s = eps' against them
 
-**Status.** Lemma (Lemmas 1, 2 and 3 of lemma 07), conditional on pointwise reality J f J^{-1} = conj(f). Proved by Claude Opus 5.5 (the Astra job stopped on the usage limit); checked by Claude Opus 5.5 by hand and by Astra 6 by hand in job 08 (lemma 08, Results 1 to 3), which confirmed them under pointwise reality and added the amendments below. Ledger rows `l07_real` (amended by `l08_ce_reality`) and `l07_reflection` (amended by `l08_product`). Item 3 of Theorem D of paper/towerless_intervals.tex.
+**Status.** Lemma (Lemmas 1, 2 and 3 of lemma 07), conditional on pointwise reality J f J^{-1} = conj(f). Proved by Claude Opus 5.5 (the Astra job stopped on the usage limit); Results 1 to 3 of lemma 08 (Astra 6, job 08) treat the statements under pointwise reality and add the amendments below. Ledger rows `l07_real` (amended by `l08_ce_reality`) and `l07_reflection` (amended by `l08_product`). Item 3 of Theorem D of paper/towerless_intervals.tex.
 
 **Setting.** I_l = [0, l], H = L^2(I_l, C^2), D = E d/dx with E = [[0, 1], [-1, 0]], Dom D = {psi in H^1 : R(0) = 0, L(l) = 0}, Gamma = diag(1, -1); D and Gamma are real. J is antiunitary with J f J^{-1} = conj(f) for f in C^infinity(I_l), J Dom D = Dom D, J^2 = eps, JD = eps' DJ, J Gamma = eps'' Gamma J.
 

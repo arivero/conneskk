@@ -1,6 +1,6 @@
 # With only an up-type Dirac mass the finite heat trace is 84 + 12 e^{-x}, and the 96 states of H_F split as 84 + 12 in two ways, by the top and by the neutrinos
 
-**Status.** Propositions (Propositions 21.2 and 21.3); the ledger records them as one row of kind claim. Proved by Claude Opus 5.5; checked by Claude Opus 5.5 in Python (exact counting) and by Terra 6.1 by hand, effort max, who found one error in Proposition 21.2, corrected in the lemma (historical/reviews/2026-11-03_terra_check_20_21.md). Ledger row `l21_counts`. The split 96 = 84 + 12 is stated in the introduction of paper/generations_note.tex ("\supp{21}").
+**Status.** Propositions (Propositions 21.2 and 21.3); the ledger records them as one row of kind claim. Proved by Claude Opus 5.5. Ledger row `l21_counts`. The split 96 = 84 + 12 is stated in the introduction of paper/generations_note.tex ("\supp{21}").
 
 **Setting.** Three generations with nu_R, so dim H_F = 96 (Chamseddine-Connes-Marcolli). The heat cutoff and the constant-background density of lemma 18, with only an up-type Dirac mass m, no Majorana mass, and x = m^2/Lambda^2. For the counts, four states per Dirac fermion and colour, with Dirac neutrinos.
 

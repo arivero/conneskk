@@ -1,6 +1,6 @@
 # In the covariant mixed-interval reduction, M_spec = M_KK holds for some bulk mass 0 < M_\* < 3 pi/(4l), at which the matched fermion sits at the tower scale
 
-**Status.** Proposition (Result 7 of lemma 14). Proved by Astra 6 (job 14); checked by Claude Opus 5.5 by hand (t = 3 pi/4: M = 3 pi/(4l), lambda^2/m^2 = 9/2, normalization l (1/2 + 1/(3 pi)), ratio 27/26, then the intermediate value theorem) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger row `l14_tuned`, depending on `l09_lightpair`. Cited after Proposition F of paper/towerless_intervals.tex.
+**Status.** Proposition (Result 7 of lemma 14). Proved by Astra 6 (job 14). Ledger row `l14_tuned`, depending on `l09_lightpair`. Cited after Proposition F of paper/towerless_intervals.tex.
 
 **Setting.** The gauge and fermion boundary conditions of 14_counterexample_three_fifths.md at fixed l, with the fermion bulk mass varying over 0 <= M <= 3 pi/(4l).
 

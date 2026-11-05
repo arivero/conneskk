@@ -1,6 +1,6 @@
 # For V_0 = m sigma_3 and T = sigma_1 the Taylor kinetic coefficient of the exact quadratic spectral action is negative for m^2 > Lambda^2, while the full form has a unique positive pole with M^2 ~ 4 m^2
 
-**Status.** Counterexample (Counterexample 7 of lemma 18). Proved by Astra 6 (job 18); checked by Claude Opus 5.5 in Python (direct heat trace at nonzero momentum against the kernel) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_18_16b.md). Ledger row `l18_wrong_sign`.
+**Status.** Counterexample (Counterexample 7 of lemma 18). Proved by Astra 6 (job 18). Ledger row `l18_wrong_sign`.
 
 **Setting.** H_F = C^2, V_0 = m sigma_3, T = sigma_1, x = m^2/Lambda^2, with the spacetime and trace conventions of Theorem 1 of lemma 18 (18_exact_quadratic_kernel.md).
 

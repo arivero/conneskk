@@ -1,6 +1,6 @@
 # The centralizer in A_SM of the top-only Dirac operator is C + M_3(C) with the summand C embedded in H along the top's left-handed line: the algebra of the label 9, the retained algebra of lemma 44 and the corpus row rs_F1
 
-**Status.** Proposition 50.4. Proved by Claude Fable 5.1 on 5 November 2026 by hand; the real dimension 20 of the centralizer and the forced embedding were checked with numpy (script not kept). Refereed by Claude Opus 5.5 (effort max, 5 November 2026; report in historical/reviews/2026-11-05_opus_check_50.md): correct with amendments (the gauge group up to a finite group; the transfer of Proposition 41.5 by an Sp(1)_a conjugation; a lepton block on another left line drops the dimension to 19). Ledger row `l50_top_centralizer`. Not yet in a paper.
+**Status.** Proposition 50.4. Proved by Claude Fable 5.1 on 5 November 2026 by hand. The gauge group is determined up to a finite group; Proposition 41.5 transfers by an Sp(1)_a conjugation; a lepton block on another left line drops the dimension to 19. Ledger row `l50_top_centralizer`. Not yet in a paper.
 
 **Setting.** D_F = Y_q (x) (1 - P_v) + S_{T_kappa} on H_F with Y_q = {c(h), P_w}, h != 0, the lepton block zero (the top-only family, one generation), the connector on w and v, and A_SM = A(T_kappa) = {(lambda, q, m)} of Theorem 20.2.
 
@@ -10,4 +10,4 @@
 
 **Proof.** Lemma 50, Proposition 50.4: [Y_q, a_W] on w, jw and L_p^perp; the condition q c(h) w = lambda c(h) w for the normal operator q; j-linearity of q fixes it on j c(h) w; Proposition 41.5 for the charges.
 
-**What it leaves open.** A rank-one lepton block on the same J_w-line gives the same centralizer (dimension 20, referee); for a rank-one lepton block {c(h_l), P_w} whose left line C c(h_l) w differs from C c(h) w, the centralizer drops to R + M_3(C), real dimension 19 (referee): q must have two non-proportional lambda-eigenvectors, which forces lambda to be real, so the alignment of the Higgs vectors of the blocks is what keeps the electromagnetic circle; a dynamical selection, outside the spectral action at fixed cutoff.
+**What it leaves open.** A rank-one lepton block on the same J_w-line gives the same centralizer (dimension 20); for a rank-one lepton block {c(h_l), P_w} whose left line C c(h_l) w differs from C c(h) w, the centralizer drops to R + M_3(C), real dimension 19: q must have two non-proportional lambda-eigenvectors, which forces lambda to be real, so the alignment of the Higgs vectors of the blocks is what keeps the electromagnetic circle; a dynamical selection, outside the spectral action at fixed cutoff.

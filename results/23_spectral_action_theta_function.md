@@ -1,6 +1,6 @@
 # For the heat cutoff and a universal angle theta, the spectral action of an interval channel is a Jacobi theta function, strictly decreasing on [0, pi/2] and stationary at theta = pi/2, the Connes-Lott value m = pi/(2l)
 
-**Status.** Proposition (Proposition 23.7). Proved by Claude Opus 5.5; checked by Claude Opus 5.5 in Python (Poisson summation and the triple product to 10^-16, monotonicity on grids for s = 0.3, 1, 2, and the towerless value at s = 0.3 to five digits) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_23.md). Ledger row `l23_theta`. Proposition 8 of paper/boundary_condition_note.tex.
+**Status.** Proposition (Proposition 23.7). Proved by Claude Opus 5.5. Ledger row `l23_theta`. Proposition 8 of paper/boundary_condition_note.tex.
 
 **Setting.** The channels of Example 23.5 with universal theta, whose eigenvalues are +-(n pi + theta)/l by Theorem 22.1; the heat cutoff; s = l Lambda and x = theta^2/s^2.
 

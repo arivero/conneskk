@@ -1,6 +1,6 @@
 # Matching one vector mass fixes neither the relative gauge couplings nor the scalar kinetic coefficients transverse to the gauge orbit
 
-**Status.** Proposition (Result 9 of lemma 14). Proved by Astra 6 (job 14); checked by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger row `l14_normalizations`.
+**Status.** Proposition (Result 9 of lemma 14). Proved by Astra 6 (job 14). Ledger row `l14_normalizations`.
 
 **Setting.** A finite gauge kinetic form diagonal on two specified factors, Q restricted to g_s equal to q_s I for s = 1, 2, with fixed generator normalizations; five-dimensional couplings g_{5,s} and J_s = int f_s(x)^2 dx; eta = f_0/(24 pi^2). Scalar coordinates phi^i with induced connection A_mu = B_i(phi) d_mu phi^i at vanishing ambient A_mu, and H_i = d_i V + i [B_i, V].
 

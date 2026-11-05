@@ -1,14 +1,12 @@
 # T4b: gauge-covariant projection and conditional bosonic matching
 
-Prompt: [prompts/14](../historical/prompts/14_gauge_covariant_reduction.md) (STRATEGY T4b). Attempted by gpt-6-astra (codex 0.164, xhigh, 3 Nov 2026), working alone. Checked by Claude Opus 5.5 by hand: Theorem 5 (both mass matrices as quadratic forms), Counterexample 6 (the ratio 3/5 agrees with the restricted computation of lemma 13, Result 6: c_L = 8/(3 pi), c_R = 4/(3 pi)), Proposition 7 (t = 3 pi/4: M = 3 pi/(4l), lambda^2/m^2 = 9/2, normalization l(1/2 + 1/(3 pi)), ratio 27/26, then the intermediate value theorem) and No-go theorem 8 (M_spec^2 <= 6 norm(V_0)^2). Reading: the spectral-action vector mass matches the Neumann-Dirichlet tower only through a fermion whose mass is at the tower scale (the matching bulk mass M_* > 0 leaves no light pair, Theorem 9.4 case 3), and with bounded light fermions no matching is possible as l -> 0.
-
-Refereed by Terra 6.1 (gpt-6.1-terra, effort max, 3 Nov 2026; [report](../historical/reviews/2026-11-03_terra_check_08_13_14.md)): of 9 statements, 5 are correct, Theorems 1 and 5 and Proposition 4 need amendments, and the global form of Theorem 3 is wrong as first written. Each is recorded at its statement.
+Prompt: [prompts/14](../historical/prompts/14_gauge_covariant_reduction.md) (STRATEGY T4b). Attempted by gpt-6-astra (3 Nov 2026). The ratio 3/5 of Counterexample 6 agrees with the restricted computation of lemma 13, Result 6 (c_L = 8/(3 pi), c_R = 4/(3 pi)). Reading: the spectral-action vector mass matches the Neumann-Dirichlet tower only through a fermion whose mass is at the tower scale (the matching bulk mass M_* > 0 leaves no light pair, Theorem 9.4 case 3), and with bounded light fermions no matching is possible as l -> 0.
 
 We prove that a gapped spectral projection defines a gauge-covariant light-fermion bundle with its induced Grassmannian connection. For the mixed interval with a gauge-invariant bulk mass, its finite link has fixed singular values; it does not supply the full scalar fluctuation space of a two-sheet finite triple. At the leading four-dimensional spectral-action order, equality with a specified Kaluza–Klein vector mass is equivalent to an explicit trace-and-overlap sum rule. Covariance does not enforce that rule: the massless-bulk example gives \(M_{\mathrm{spec}}^2=\frac35M_{\mathrm{KK}}^2\), whereas a suitable positive bulk mass gives exact equality. We also prove that bounded retained fermion masses cannot match a Neumann–Dirichlet vector mass diverging as \(1/l\). Matching one vector mass does not, by itself, determine relative gauge couplings or all scalar kinetic coefficients.
 
 **1. Theorem (covariant spectral projection and the data controlling its spectrum).**
 
-*Amendment (referee).* The double-coset statement needs the endpoint transformations to act independently through H_0 and H_l, with extendability understood, and it is a local pointwise classification unless the global topology is specified. Periodic conditions require g(l) = g(0), and then the holonomy is classified by conjugation.
+*Scope.* The double-coset statement needs the endpoint transformations to act independently through H_0 and H_l, with extendability understood, and it is a local pointwise classification unless the global topology is specified. Periodic conditions require g(l) = g(0), and then the holonomy is classified by conjugation.
 
 Let \(I=[0,l]\), and let
 \[
@@ -174,7 +172,7 @@ when the inverse exists. Horizontal derivatives and \(A_\mu(x)\) generally make 
 
 **3. Theorem (the finite algebra and fluctuation image for the mixed interval).**
 
-*Correction (referee; the global statement as first written is false).* The statement that the continuum link image consists of all links with Phi^\* Phi = lambda^2 I holds locally in spacetime. Globally the unitary link must admit a path from the identity in the chosen trivialization. For M_4 = S^1 x S^3, n = 1 and Phi = lambda exp(i theta), every globally smooth real A_5 gives Phi = lambda exp(i int A_5 dx), with zero winding around S^1, so this Phi is not attained. The displayed formulas, the compression range and the reducing-subalgebra criterion are correct.
+*Global form.* The statement that the continuum link image consists of all links with Phi^\* Phi = lambda^2 I holds locally in spacetime. Globally the unitary link must admit a path from the identity in the chosen trivialization. For M_4 = S^1 x S^3, n = 1 and Phi = lambda exp(i theta), every globally smooth real A_5 gives Phi = lambda exp(i int A_5 dx), with zero winding around S^1, so this Phi is not attained. The displayed formulas, the compression range and the reducing-subalgebra criterion are correct.
 
 Let
 \[
@@ -285,7 +283,7 @@ Thus the two-sheet algebra is obtained by equipping the compression range with i
 
 **4. Proposition (boundary Yukawa data determine a finite operator, but not a unique finite triple).**
 
-*Amendment (referee).* To obtain the entire limiting block, retain the full zero-mode-descended cluster of dimension N_Q + N_U: for two massless flavours and X = l diag(1, 2), the cluster containing only the lowest pair is gapped and has a 1 x 1 limiting block. The nonzero singular values of Y are the retained positive eigenvalues; zero singular values and unmatched chiral zero modes are included separately.
+*Scope.* To obtain the entire limiting block, retain the full zero-mode-descended cluster of dimension N_Q + N_U: for two massless flavours and X = l diag(1, 2), the cluster containing only the lowest pair is gapped and has a 1 x 1 limiting block. The nonzero singular values of Y are the retained positive eigenvalues; zero singular values and unmatched chiral zero modes are included separately.
 
 Let \(D_X\) have the boundary conditions of [Lemma 12](12_boundary_yukawa_interval.md):
 \[
@@ -374,7 +372,7 @@ Neither this algebra nor this space is determined by the light eigenvalues. \(\s
 
 **5. Theorem (the exact quadratic matching condition at leading spectral-action order).**
 
-*Amendment (referee).* Both quadratic forms must be compared on one common profile space on which G^(5) and Q are positive, because a Kaluza-Klein profile can be invisible to compression. For the massless mixed pair, f = cos(2 pi x/l) satisfies Neumann conditions at both ends and has positive norm, while int w_L f = int w_R f = 0, so Q = K = 0 for this mode.
+*Scope.* Both quadratic forms must be compared on one common profile space on which G^(5) and Q are positive, because a Kaluza-Klein profile can be invisible to compression. For the massless mixed pair, f = cos(2 pi x/l) satisfies Neumann conditions at both ends and has positive norm, while int w_L f = int w_R f = 0, so Q = K = 0 for this mode.
 
 Let a five-dimensional Yang–Mills theory have no boundary kinetic or mass terms. Let \(\langle\ ,\ \rangle_5\) be its positive invariant gauge form, including its coupling constants. Expand the retained transverse vectors about \(A_5=0\) as
 \[

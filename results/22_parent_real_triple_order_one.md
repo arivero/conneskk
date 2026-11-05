@@ -1,6 +1,6 @@
 # On the interval parent a smooth A_F-valued function preserves the domain iff its wall value lies in the commutant C_F of D_F, and the parent is then a real even spectral triple with order zero and order one for any finite data with order zero
 
-**Status.** Theorem (Theorem 22.3). Proved by Claude Opus 5.5; checked by Claude Opus 5.5 by hand and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_22.md). Ledger row `l22_parent` (depending on `l22_window`). Theorem 3 of paper/boundary_condition_note.tex; cited in paper/real_structure_note.tex ("\supp{22}, Theorem 22.3").
+**Status.** Theorem (Theorem 22.3). Proved by Claude Opus 5.5. Ledger row `l22_parent` (depending on `l22_window`). Theorem 3 of paper/boundary_condition_note.tex; cited in paper/real_structure_note.tex ("\supp{22}, Theorem 22.3").
 
 **Setting.** The window of 22_finite_dirac_operator_as_window.md, with an even representation pi = pi_+ (+) pi_- of a unital finite-dimensional real or complex \*-algebra A_F, faithful, unital and with order zero, and pi°(b) = J_F pi(b)\* J_F^-1. Order one is not assumed. Let C_F = {a in A_F : [pi(a), D_F] = 0} and A_l = {f in C^infinity([0, l], A_F) : f(l) in C_F}, with f acting pointwise by pi_+(f(x)) on Q and pi_-(f(x)) on U.
 

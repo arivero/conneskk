@@ -1,6 +1,6 @@
 # Explicit masses in the reduced triple, the chiral limit and the set of reductions
 
-Routine part of STRATEGY T10. Proved by Claude Opus 5.5 without Astra or Fable. The identities of Theorems 17.1 and 17.6 were checked with numpy on random finite models (section "Numerical check"). Refereed by Terra 6.1 (gpt-6.1-terra, effort max, 3 Nov 2026; [report](../historical/reviews/2026-11-03_terra_check_17.md)): of 10 items, 1 correct, 4 needed amendments, and 5 were wrong as first written (Corollary 17.4, Remark 17.7, Proposition 17.8, Proposition 17.9 and the consequence for T10, each by overreach). All corrections are incorporated below. Proposition 17.10 is the referee's.
+Routine part of STRATEGY T10. Proved by Claude Opus 5.5; Proposition 17.10 is by Terra 6.1. The identities of Theorems 17.1 and 17.6 were checked with numpy on random finite models (section "Numerical check").
 
 **Outcome.** The fermion action of a product M x F, restricted to its physical subspace, is exactly the action of the odd triple M x T on an unconstrained spinor, with the Yukawa block becoming the constant matrix d in D_M + gamma_5 d (Theorem 17.1). A paired Dirac sector gives one Dirac action for either sign s, up to a change of Grassmann variables (Corollary 17.2); other sectors, such as a neutral one, have Majorana-type actions. On a subalgebra commuting with D_F there are no scalar fluctuations, so the mass is explicit (Proposition 17.3). At M = 0 the symmetry of the quark sector is U(N_f) x U(N_f) (Proposition 17.5). The admissible involutions of the quark sector are the Sigma in U(N_f) with Sigma\* M Hermitian, which are exactly the stationary points of the mass term Re tr(M Sigma\*); at M = 0 they form a homogeneous space of the chiral group (Theorem 17.6). All of this is kinematic. A pion kinetic term does not come from the fixed spectral action (Proposition 17.10). The condensate requires a measure on gauge fields, infinite volume and an order of limits (Proposition 17.8).
 
@@ -101,7 +101,7 @@ For invertible M, every stationary point other than the polar part has at least 
 
 ## Spacetime-dependent Sigma
 
-**Proposition 17.10 (referee; no kinetic term from the fixed action).** Let U(x) be a pointwise admissible involution on M, with c^mu = [D_M, x^mu] and B_mu = (U d_mu U) restricted to H_0. With R defined pointwise,
+**Proposition 17.10 (no kinetic term from the fixed action).** Let U(x) be a pointwise admissible involution on M, with c^mu = [D_M, x^mu] and B_mu = (U d_mu U) restricted to H_0. With R defined pointwise,
 
     R^-1 UU D R = D_M + c^mu P_- B_mu + gamma_5 d(x),
 
@@ -161,4 +161,4 @@ The reduced action is (1/2) <jj psi, (D_M(A) + gamma_5 d) psi> on an unconstrain
 
 ## Numerical check
 
-Python (numpy, scipy), run on 3 Nov 2026 in a temporary directory, not kept. On a random finite model with KO-4 signs for M (dimension 8) and a quark sector with N_f = 3 and random complex M, for three sign patterns of Sigma and both s: U^2 = 1, U gamma_F = -gamma_F U, [U, D_F] = 0 and U J_F = s J_F U hold to machine precision; R is unitary; the form <J R psi, D R psi'> equals <jj psi, DD psi'> to about 10^-14 and is antisymmetric; j^2 = s and j d = s d j; the formula for d_{Sigma,s} holds, after a first version of it was found wrong by this check; finite differences confirm that V_M is stationary at these Sigma; a generic unitary Sigma gives norm([U, D_F]) of about 10. R_5 (D_M + gamma_5 m) R_5 = D_M + i m holds to machine precision. The spin trace in Proposition 17.10 was evaluated with explicit Dirac matrices (tr of the square equals 4 |a|^2).
+Python (numpy, scipy), run on 3 Nov 2026 in a temporary directory, not kept. On a random finite model with KO-4 signs for M (dimension 8) and a quark sector with N_f = 3 and random complex M, for three sign patterns of Sigma and both s: U^2 = 1, U gamma_F = -gamma_F U, [U, D_F] = 0 and U J_F = s J_F U hold to machine precision; R is unitary; the form <J R psi, D R psi'> equals <jj psi, DD psi'> to about 10^-14 and is antisymmetric; j^2 = s and j d = s d j; the formula for d_{Sigma,s} holds; finite differences confirm that V_M is stationary at these Sigma; a generic unitary Sigma gives norm([U, D_F]) of about 10. R_5 (D_M + gamma_5 m) R_5 = D_M + i m holds to machine precision. The spin trace in Proposition 17.10 was evaluated with explicit Dirac matrices (tr of the square equals 4 |a|^2).

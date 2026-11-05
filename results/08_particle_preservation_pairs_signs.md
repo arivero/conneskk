@@ -1,6 +1,6 @@
 # If a particle-number involution Q commutes with D, Gamma, the algebra and its opposite and anticommutes with J, particle-preserving doubling involutions come in pairs U, QU of opposite sign
 
-**Status.** Theorem (Result 12 of lemma 08). Proved by Astra 6 (job 08); checked by Claude Opus 5.5 by hand and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger row `l08_pairing`. Item 5 of Theorem D of paper/towerless_intervals.tex.
+**Status.** Theorem (Result 12 of lemma 08). Proved by Astra 6 (job 08). Ledger row `l08_pairing`. Item 5 of Theorem D of paper/towerless_intervals.tex.
 
 **Setting.** A standard KO-6 triple and a self-adjoint involution Q, +1 on particles and -1 on antiparticles, with [Q, D] = [Q, Gamma] = [Q, a] = [Q, a°] = 0 and QJ = -JQ. Admissible involutions U as in the factorization criterion (06_doubling_criterion.md).
 

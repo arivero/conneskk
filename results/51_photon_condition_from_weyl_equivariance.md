@@ -1,6 +1,6 @@
 # The torus Dirac operator with a Wilson line and a torsion commutes with the lift of a transposition exactly when both data lie in its mirror plane; then the window block commutes with the lifted transposition on both chiralities, the condition [D_F, C_F] = 0 of Chamseddine, Connes and Marcolli, and these are all the invariant blocks; nonzero data along a mirror break S_3 to that transposition, and no nonzero data are invariant under S_3
 
-**Status.** Proposition 51.2. Proved by Claude Fable 5.1 on 5 November 2026 by hand; the covariance x c(v) x^{-1} = c(d tau v), the commutation exactly for data in the mirror plane and the fixed space of a three-cycle were checked with numpy (script not kept). Refereed by Claude Opus 5.5 (effort max, 5 November 2026; report in historical/reviews/2026-11-05_opus_check_51_52.md): correct with amendments (the Wilson line as a gauge class; the wording on the symmetric points). Ledger row `l51_photon_condition`. Not yet in a paper.
+**Status.** Proposition 51.2. Proved by Claude Fable 5.1 on 5 November 2026 by hand. The Wilson line enters as a gauge class. Ledger row `l51_photon_condition`. Not yet in a paper.
 
 **Setting.** As in Proposition 51.1; tau a transposition of S_3 acting on A = a (x) R^2 by rho(tau) (x) 1, with mirror plane P_tau = n_tau^perp (x) R^2 (the tangent plane of the mirror z_i = z_j, a complex line of A) and lift x of order four (lemma 48), tau-tilde psi(z) = x psi(tau^{-1} z).
 

@@ -1,6 +1,6 @@
 # Two massless interval fields valued in E and E^\* with wall coupling X = t S^\* and constant multipliers B = A(S) give, in the lowest window, finite data with connecting block m S, m = arctan(t)/l, the KO-6 signs, order zero and order one
 
-**Status.** Theorem (Result 5 of lemma 20). Proved by Astra 6 (job 20); checked by Claude Opus 5.5 by hand (including the transport (21) and its compression to m(S + S^\\*)) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_20_21.md). Ledger row `l20_parent`. Items 3 and 4 of Proposition I of paper/towerless_intervals.tex.
+**Status.** Theorem (Result 5 of lemma 20). Proved by Astra 6 (job 20). Ledger row `l20_parent`. Items 3 and 4 of Proposition I of paper/towerless_intervals.tex.
 
 **Setting.** The Hom representation, c, g and h of 20_connecting_blocks.md; k = c g c^{-1}, h = -k; a unit vector e in E with ge = e, f = ce, S = |f><e| and X = t S^\\*: E^\\* -> E with t > 0. Massless interval fields Q valued in E and U valued in E^\\*, with the boundary conditions of lemma 12; constant elements of A^ev acting by pi_1 on Q and by pi_2 on U; Gamma-hat = (g Q_L, -g Q_R; k U_L, -k U_R) and J-hat = (c^{-1} U_R, -c^{-1} U_L; -c Q_R, c Q_L); n = dim_C E, theta = arctan t, m = theta/l, and m < Lambda_0 < (pi - theta)/l.
 

@@ -1,6 +1,6 @@
 # On one interval with fixed wall coupling, no bulk mass and even scalar inner fluctuations on the moving window, the singular values of the finite Dirac operator are fixed, so this parent has no radial Higgs mode
 
-**Status.** No-go theorem in its scope (No-go theorem 22.7). Proved by Claude Opus 5.5, with an independent endpoint-preserving proof by Terra 6.1 (historical/reviews/2026-11-03_terra_check_22.md); checked by Claude Opus 5.5 by hand, by Terra 6.1 by hand, and by Astra 6 by hand, whose recheck is No-go theorem 7 of lemma 24. Ledger row `l22_no_radial` (depending on `l22_transport`). Stated in the section on fluctuations of paper/boundary_condition_note.tex ("\supp{22}"); cited in paper/connes_kk_dictionary_note.tex and paper/real_structure_note.tex ("No-go theorem 22.7 of \supp{22}").
+**Status.** No-go theorem in its scope (No-go theorem 22.7). Proved by Claude Opus 5.5, with an endpoint-preserving proof by Terra 6.1; Astra 6 proves it again as No-go theorem 7 of lemma 24. Ledger row `l22_no_radial` (depending on `l22_transport`). Stated in the section on fluctuations of paper/boundary_condition_note.tex ("\supp{22}"); cited in paper/connes_kk_dictionary_note.tex and paper/real_structure_note.tex ("No-go theorem 22.7 of \supp{22}").
 
 **Setting.** The parent of Theorem 22.3 on one interval: fixed X, no bulk masses, scalar inner fluctuations E h from the even algebra A_l with h\* = -h, and the moving spectral window. For real fluctuations the conjugate one-form is included, under the order-zero representation.
 

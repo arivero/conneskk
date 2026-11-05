@@ -1,8 +1,6 @@
 # T4: gauge fluctuations of the chiral interval
 
-Prompt: [prompts/13](../historical/prompts/13_gauge_sector_truncation.md) (STRATEGY T4). Attempted by gpt-6-astra (codex 0.164, xhigh, 3 Nov 2026), working alone. Checked by Claude Opus 5.5 by hand: Results 2, 3, 4, 5 and 6 (the compression integrals, the counterexample B = -2a/(3 pi) with trivial Wilson line, the Neumann-Dirichlet mass, the 1 : 3 ratio of the a_4 gauge and scalar terms with the canonical normalization, and the eigenvalues 0 and 6m^2); Results 7 and 8 reproduce the standard CCM relations (8 M_W^2 = sum N_f m_f^2, M_W/M_Z = sqrt(5/8) with Q_2 = 12, Q_Y = 20).
-
-Refereed by Terra 6.1 (gpt-6.1-terra, effort max, 3 Nov 2026; [report](../historical/reviews/2026-11-03_terra_check_08_13_14.md)): of 8 statements, 7 are correct and Proposition 8 needs one amendment, recorded there.
+Prompt: [prompts/13](../historical/prompts/13_gauge_sector_truncation.md) (STRATEGY T4). Attempted by gpt-6-astra (3 Nov 2026). Results 7 and 8 reproduce the standard CCM relations (8 M_W^2 = sum N_f m_f^2, M_W/M_Z = sqrt(5/8) with Q_2 = 12, Q_Y = 20).
 
 We prove an exact compression formula, but it does not identify the continuum gauge theory with the full Connes–Lott gauge theory. The fermion boundary conditions impose no boundary conditions on the gauge potentials, and fixed spectral compression produces only links of the form `phi = m I + i B`, with `B` Hermitian. The proposed ratio `M_W/m = sqrt(3/8)` is correct under the three-generation Standard Model CCM normalization, with one massive colour triplet and all other Dirac masses zero. It is not a consequence of the interval alone: the minimal two-sheet spectral action has a different gauge representation and gives a massive relative gauge field of mass `sqrt(6) m`.
 
@@ -440,7 +438,7 @@ If “a coloured doublet” means two massive coloured Dirac species, both of ma
 
 **8. Proposition (electroweak doublet and the neutral-vector ratio).**
 
-*Amendment (referee).* In the last paragraph of this result, the law phi -> g_L phi g_R^\* holds for the link of the independently gauged finite two-sheet completion. The fixed compression of the continuum field does not obey it in general: Result 3 gives an endpoint-fixed gauge transformation that changes phi. The decomposition 1 + 3 under the diagonal SU(2) stays correct.
+*Scope.* In the last paragraph of this result, the law phi -> g_L phi g_R^\* holds for the link of the independently gauged finite two-sheet completion. The fixed compression of the continuum field does not obey it in general: Result 3 gives an endpoint-fixed gauge transformation that changes phi. The decomposition 1 + 3 under the diagonal SU(2) stays correct.
 
 Let an additional electroweak assignment supply one complex Higgs doublet \(h\), with
 \[

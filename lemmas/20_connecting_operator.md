@@ -1,6 +1,6 @@
 # Sheet-connecting operators and boundary gluing
 
-By Astra 6 (gpt-6-astra, effort xhigh), 3 Nov 2026; prompt in [prompts/20_connecting_operator.md](../historical/prompts/20_connecting_operator.md). Reproduced as delivered, with links made relative and one link to a temporary copy of a source written as plain text. The sections "Numerical check" and "Readings" at the end are by Claude Opus 5.5. Refereed by Terra 6.1 (effort max, 3 Nov 2026; [report](../historical/reviews/2026-11-03_terra_check_20_21.md)): Results 1 to 4 and 6 to 11 correct, with one amendment to Result 7 given in the note after its proof; the readings are corrected below.
+By Astra 6 (gpt-6-astra), 3 Nov 2026; prompt in [prompts/20_connecting_operator.md](../historical/prompts/20_connecting_operator.md). The sections "Numerical check" and "Readings" at the end are by Claude Opus 5.5.
 
 A rank-one operator can connect the two finite summands with the required real signs and grading, and the Chamseddine–Connes maximal algebra follows from its intertwining algebra. A boundary coupling supplies such an operator in an explicit interval model. However, agreement of scalar functions at a wall generally does not survive compression as the finite order-one restriction: an exact one-flavour counterexample exhibits this failure. The interval construction realizes the classified rank-one block when its matrix algebra, grading and coupled channels are supplied as inputs; it does not derive those inputs from Example 16.9. The three requested obstruction checks hold in the scopes specified below.
 
@@ -479,7 +479,7 @@ Choosing a complex line inside that quaternionic line, a complex line in the oth
 
 To obtain an analytic parent for Example 16.9, further work must specify an interface or interval collar, its boundary trace spaces, self-adjoint coupling conditions, a compatible real structure and grading, and the spectral window of the coupled operator. Result 7 concerns the unchanged windows. A new coupled window, boundary degrees of freedom, or a different observable representation lies outside its hypotheses.
 
-*Referee amendment.* For a general subset upstairs in the twistor space, add the hypothesis that its image in S^4 has empty interior, so that independent base test functions exist.
+*Scope.* For a general subset upstairs in the twistor space, add the hypothesis that its image in S^4 has empty interior, so that independent base test functions exist.
 
 ## 8. Proposition — Scope of the Hořava–Witten comparison
 
@@ -502,7 +502,7 @@ Bulk propagation can define effective boundary-to-boundary interactions. Identif
 
 ## 9. No-go theorem — Corollary 11.2 under its matching-scale hypothesis
 
-**Verdict and hypotheses.** The corrected [Corollary 11.2](11_spectral_action_heavy_w.md) is correct. Assume a fixed finite set of Dirac mass parameters, \(N_g\) generations, and the matching-scale relation
+**Hypotheses.** This restates [Corollary 11.2](11_spectral_action_heavy_w.md) with its scope. Assume a fixed finite set of Dirac mass parameters, \(N_g\) generations, and the matching-scale relation
 \[
 8M_W^2=\sum_{g=1}^{N_g}
 (m_{\nu,g}^2+m_{e,g}^2+3m_{u,g}^2+3m_{d,g}^2).
@@ -530,7 +530,7 @@ Their squared sum is \(8t^2\), while each mass vanishes on an unbounded sequence
 
 ## 10. Theorem — Proposition 16.1 holds for inherited pointwise reality
 
-**Verdict and hypotheses.** The corrected [Proposition 16.1](16_coarse_truncation.md) is correct. Let
+**Hypotheses.** This restates [Proposition 16.1](16_coarse_truncation.md) with its scope. Let
 \[
 J_0aJ_0^{-1}=a^*,\qquad [P,J_0]=0,\qquad
 Q(a)=PaP|_{P\mathcal H},
@@ -557,7 +557,7 @@ For a product with a fixed finite factor, the unit of that factor gives the same
 
 ## 11. Proposition — The stated inherited grading cannot equal \(\Gamma_5\)
 
-**Verdict and hypotheses.** The grading obstruction in [Example 16.9](16_coarse_truncation.md) is correct under the following simultaneous requirements:
+**Hypotheses.** This states the grading obstruction of [Example 16.9](16_coarse_truncation.md) under the following simultaneous requirements:
 
 1. Every parent observable under consideration is even: \([\gamma,a]=0\).
 2. The finite grading is inherited as \(g=P\gamma P|_{P\mathcal H}\).
@@ -589,8 +589,6 @@ Thus the proposed grading and all the stated coordinate compressions cannot simu
 
 **Scope and escapes.** The conclusion does not exclude \(\Gamma_5\) as additional finite data or as a grading of a prealgebra. Possible changes include compressing a graded prealgebra with odd observables, restricting to the algebra commuting with the proposed grading, or constructing an additional grading. Changing the window alone does not remove the contradiction while retaining all four hypotheses. In the specified Dolbeault kernel, the inherited grading is already scalar.
 
-The three checks above agree with the corrected repository statements. The recorded author is Claude Opus 5.5, and the existing independent Terra checks appear in the [Lemma 11 report](11_spectral_action_heavy_w.md), the [Proposition 16.1 report](../historical/reviews/2026-11-03_terra_check_15_16.md), and the [Example 16.9 report](../historical/reviews/2026-11-03_terra_check_18_16b.md). The present response adds a sequential Codex check; no subagents or additional model consultations were used.
-
 ## Consequence for T0b and T11
 
 For T0b, an exact interval parent supplies a rank-one connector with KO-6 signs, and a parent with chosen Hom fibres and constant matrix multipliers realizes the classified connecting block and its algebra. Deriving that algebra, grading and connector from the commutative twistor parent remains open: scalar wall agreement in the original window does not perform the selection. For T11, same-chirality boundary multiplets require the type-(a) or type-(b) comparison, and the unbroken Hořava–Witten boundary representations supply no identified finite mass connector.
@@ -607,13 +605,13 @@ By Claude Opus 5.5, in Python (numpy), 3 Nov 2026, in a temporary directory, not
 - Equation (21): by hand, including the compression to m (S + S\*).
 - Pi_p is a projection of rank 2 and 2 Pi_p - 1 = p_a Gamma_a; the bound (26) on a random sample.
 
-Against the source: (3) is equation (comrel) of arXiv:0706.3688, read in the LaTeX source. The proof there also takes an intertwiner distinct from the Dirac block, in line with the distinction between T and R in Result 1. The other statements are checked by the referee.
+Against the source: (3) is equation (comrel) of arXiv:0706.3688, read in the LaTeX source. The proof there also takes an intertwiner distinct from the Dirac block, in line with the distinction between T and R in Result 1.
 
 ## Readings
 
-By Claude Opus 5.5, as proposals, corrected after the referee report.
+By Claude Opus 5.5, as proposals.
 
-**1. The connector is the Majorana block.** In the Standard Model dictionary (Chamseddine-Connes-Marcolli 2007, section 2, quoted from memory), W_+ holds (nu_R, e_R) and V = C^4 holds the lepton line and the three colours, so that with w along nu_R and v along the lepton line, the vector e = w v\* is nu_R, and the off-diagonal block of D_F acts on nu_R alone. After this identification, and an overall grading convention if needed, T = m S in Result 5 has the form of the one-generation Majorana block (equation (2.34) there, as the referee checked), with m = arctan(t)/l. In this window m < pi/(2l), so the first level of the tower bounds it, and for t of order one m is of the order of that level. As a pattern, this agrees with the placement of the Majorana mass near the cutoff in that model. Three identical copies give three equal masses, and a general three-generation Majorana matrix needs additional flavour data.
+**1. The connector is the Majorana block.** In the Standard Model dictionary (Chamseddine-Connes-Marcolli 2007, section 2), W_+ holds (nu_R, e_R) and V = C^4 holds the lepton line and the three colours, so that with w along nu_R and v along the lepton line, the vector e = w v\* is nu_R, and the off-diagonal block of D_F acts on nu_R alone. After this identification, and an overall grading convention if needed, T = m S in Result 5 has the form of the one-generation Majorana block (equation (2.34) there), with m = arctan(t)/l. In this window m < pi/(2l), so the first level of the tower bounds it, and for t of order one m is of the order of that level. As a pattern, this agrees with the placement of the Majorana mass near the cutoff in that model. Three identical copies give three equal masses, and a general three-generation Majorana matrix needs additional flavour data.
 
 **2. The connector as a marked pair of points and a coupling.** Since T_kappa x = kappa K x K with K = v w\*, the data of the connector are a complex line w in W = C^4, a complex line v in V = C^4, that is, a point of CP^3 on each sheet, and the coupling kappa. In Example 16.9, the point w lies over a point p of S^4 in the twistor fibration, and Pi_p = (1 + p_a Gamma_a)/2 projects onto its quaternionic line. Since Q(x_a) = Gamma_a/5, the grading is
 

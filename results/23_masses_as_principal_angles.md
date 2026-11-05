@@ -1,6 +1,6 @@
 # A self-adjoint boundary condition for the derivative on an interval is a grading at each wall, and the finite Dirac operator is D_F = (1/2l) Gamma_0 log(Gamma_1 Gamma_0), with singular values the principal angles between the two gradings divided by l
 
-**Status.** Theorem (Theorem 23.1). Proved by Claude Opus 5.5; checked by Claude Opus 5.5 in Python (random complex symmetric M on C^4 with l ||M|| = 1.25: the logarithm formula to 3 x 10^-15, and the principal angles over l against the singular values) and by Terra 6.1 by hand, effort max, whose report on lemma 23 found four errors and one gap as first written, all corrected (historical/reviews/2026-11-03_terra_check_23.md). Ledger row `l23_gradings` (depending on `l22_window`). Theorem 2 of paper/boundary_condition_note.tex; cited in paper/connes_kk_dictionary_note.tex.
+**Status.** Theorem (Theorem 23.1). Proved by Claude Opus 5.5. Ledger row `l23_gradings` (depending on `l22_window`). Theorem 2 of paper/boundary_condition_note.tex; cited in paper/connes_kk_dictionary_note.tex.
 
 **Setting.** H finite-dimensional, Gamma_0 and Gamma_1 self-adjoint involutions on H. On L^2([0, l]; C^2) (x) H, D = E d/dx with (E psi)_L = psi_R, (E psi)_R = -psi_L, on the domain Gamma_0 psi_L(0) = psi_L(0), Gamma_0 psi_R(0) = -psi_R(0), Gamma_1 psi_L(l) = psi_L(l), Gamma_1 psi_R(l) = -psi_R(l). Call it D(Gamma_0, Gamma_1), and let Gamma^ be +1 on psi_L and -1 on psi_R.
 

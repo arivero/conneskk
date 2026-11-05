@@ -1,6 +1,6 @@
 # The gauge-covariant lowest-mode reduction of the massless mixed interval still gives M_spec^2 = (3/5) M_KK^2
 
-**Status.** Counterexample (Result 6 of lemma 14). Proved by Astra 6 (job 14); checked by Claude Opus 5.5 by hand (agreement with lemma 13, Result 6: c_L = 8/(3 pi), c_R = 4/(3 pi)) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger row `l14_three_fifths`. Cited after Proposition F of paper/towerless_intervals.tex.
+**Status.** Counterexample (Result 6 of lemma 14). Proved by Astra 6 (job 14). Ledger row `l14_three_fifths`. Cited after Proposition F of paper/towerless_intervals.tex.
 
 **Setting.** Gauge group U(1), with d_x A_mu(0) = 0, A_mu(l) = 0 and the complementary A_5(0) = 0, d_x A_5(l) = 0; retained A_mu = a_mu(y) cos(kappa x) and A_5 = b(y) sin(kappa x), kappa = pi/(2l). One charge-one fermion with the mixed conditions and scalar bulk mass M; lambda its lowest positive vertical eigenvalue; c_L = int p_L^2 cos(kappa x) dx and c_R = int p_R^2 cos(kappa x) dx.
 

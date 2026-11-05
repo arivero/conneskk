@@ -1,6 +1,6 @@
 # The strict heavy-limit light spectrum of the Standard Model with one or three unpaired left neutrinos admits the KO-7 reduction and excludes the KO-5 reduction
 
-**Status.** Proposition (Propositions 5, 7 and 9 of lemma 06). Proved by Astra 6 (job 06); checked by Claude Opus 5.5 by hand and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_nogo_19.md). Ledger row `l06_nuL`, of kind no_go; the row also records No-go theorem 8, filed as 06_nogo_doubling.md. Item 2 of Theorem D of paper/towerless_intervals.tex.
+**Status.** Proposition (Propositions 5, 7 and 9 of lemma 06). Proved by Astra 6 (job 06). Ledger row `l06_nuL`, of kind no_go; the row also records No-go theorem 8, filed as 06_nogo_doubling.md. Item 2 of Theorem D of paper/towerless_intervals.tex.
 
 **Setting.** The Standard Model representation of lemma 06, Result 5: F = C + C^3, H_p = (C^2 (x) F)_L + (C^2 (x) F)_R, H = H_p + H_pbar, J(p, pbar) = (K pbar, K p), gamma = diag(I_8, -I_8, -I_8, I_8), Dirac block S_p = [[0, Y^\\*], [Y, 0]] (CCM, Proposition 2.4 and Theorem 2.21). The strict projection of canonical section 3 removes nu_R, J nu_R and the complete up-type Dirac sector, restricts to B = {(lambda, Q_lambda, m)} = C + M_3(C), and keeps D_light = PSP on d_L, d_R, e_L, e_R, nu_L and their conjugates. In three generations, removing the three right-neutrino Majorana pairs and the top Dirac sector leaves 96 - 6 - 12 = 78 complex dimensions, and removing all up-type sectors leaves 54.
 

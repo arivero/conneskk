@@ -1,6 +1,6 @@
 # A scale-free potential with G(theta) = theta^4 near theta = 0 is stationary along every family m = eps, l = eps^{-alpha} with 0 < alpha < 1, so a flat direction allows a joint path without selecting it
 
-**Status.** Counterexample, to the universal conclusion of the first version of Proposition 1.5: that every stationary family has constant angle and that a second scale is necessary for a joint family to exist. Constructed by Terra 6.1 in the referee report on the 11D line (historical/reviews/2026-11-04_terra_check_11d.md, section on Proposition 1.5), written out in the Referee proofs of lemma 31; it is part of the ledger row `d11_scale_free`, which Claude Opus 5.5 (the author of lemma 31) and Claude Sonnet 5.5 checked by hand. Stated in the section on the massless limit of paper/connes_kk_dictionary_note.tex ("a flat direction would select nothing (\supp{31})").
+**Status.** Counterexample, to the claim that every stationary family has constant angle and that a second scale is necessary for a joint family to exist (the universal conclusion of Proposition 1.5 of lemma 31). Constructed by Terra 6.1 and written out in the section "Further proofs" of lemma 31; it is part of the ledger row `d11_scale_free`. Stated in the section on the massless limit of paper/connes_kk_dictionary_note.tex ("a flat direction would select nothing (\supp{31})").
 
 **Setting.** V(l, theta) = l^{-4} G(theta) with theta = l m at fixed m > 0, as in item 2 of 31_scale_free_potential.md.
 
@@ -12,6 +12,6 @@
 
 *Scope.* The potential leaves the path undetermined and does not select it dynamically. The specified flat one-loop determinant of lemma 24 has no such flat direction near theta = 0 when n_f != 54/5 (item 3 of 31_scale_free_potential.md).
 
-**Proof.** Lemma 31, Referee proofs, Counterexample (referee) to the universal conclusion of Proposition 1.5: substitution.
+**Proof.** Lemma 31, section "Further proofs", Counterexample to the universal conclusion of Proposition 1.5: substitution.
 
 **What it leaves open.** The result points to an action that selects a joint path with finite gauge couplings, which remains to be constructed. A flat modulus, a tuned higher-order potential or additional dimensionful terms leave other families possible.

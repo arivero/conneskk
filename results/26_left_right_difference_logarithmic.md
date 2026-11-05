@@ -1,6 +1,6 @@
 # In the step-threshold model of the flat parent, differences of the inverse gauge couplings do not depend on a common bulk-fermion term, and the Sp(2) left-right difference alpha_R^-1 - alpha_2^-1 runs only logarithmically, with no power of the tower variable S
 
-**Status.** Propositions (Propositions 26.4 and 26.5). Proved by Claude Opus 5.5; checked by Claude Opus 5.5 in Python (exact fractions for the coefficients, and the difference computed from equation (4) against equation (5) to 13 digits at S = 1000) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_26.md, item 4). Ledger row `l26_lr`, with prior work recorded as partial: Nomura-Smith-Weiner hep-ph/0104041 (differential running) and Carena-Tait-Wagner hep-ph/0207056 (boundary terms). Cited in the section on the gauge sector of paper/boundary_condition_note.tex ("\supp{26}").
+**Status.** Propositions (Propositions 26.4 and 26.5). Proved by Claude Opus 5.5. Ledger row `l26_lr`, with prior work recorded as partial: Nomura-Smith-Weiner hep-ph/0104041 (differential running) and Carena-Tait-Wagner hep-ph/0207056 (boundary terms). Cited in the section on the gauge sector of paper/boundary_condition_note.tex ("\supp{26}").
 
 **Setting.** The conditions of Theorem 23.6 at theta = 0, S = mu/M_KK with M_KK = pi/l; a massive vector, with its fifth component and ghosts, contributes -(7/2) tr Q^2 per level. Above M_KK the model is
 

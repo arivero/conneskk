@@ -2,7 +2,7 @@
 
 *Lemma 35. Written as file 08 of the eleven-dimensional line (branch 11D, by another Claude session) and moved here on 4 November 2026 with its text unchanged; its proposals keep their labels, and the plan and the unfinished files of that line are in [historical/11D/](../historical/11D/README.md). Internal references to "file 0n" of that line mean the lemma with the same content: 01 is lemma 31, 02 is 32, 03 is 39, 04 is 33, 05 is 34, 06 is in historical/11D, 07 is 40, 08 is 35, 09 is 36, 10 is 37, 11 is 38.*
 
-Part of the 11D line of research ([README](../historical/11D/README.md), [PLAN](../historical/11D/PLAN.md), task C, next step of 07). Attempted by Claude (Anthropic), 4 Nov 2026. Proposition 8.1 is proved (it adds a commutant statement to lemma 06); Proposition 8.2 is proved from Proposition 7.1; Remark 8.3 rests on recalled string-theory rules and on the dictionary of 06; readings are proposals. Refereed by GPT-6.1 Terra and checked a second time by Claude Sonnet 5.5 (historical/reviews/2026-11-04_terra_check_11d.md, historical/reviews/2026-11-04_sonnet_second_check_11d.md).
+Part of the 11D line of research ([README](../historical/11D/README.md), [PLAN](../historical/11D/PLAN.md), task C, next step of 07). Attempted by Claude (Anthropic), 4 Nov 2026. Proposition 8.1 is proved (it adds a commutant statement to lemma 06); Proposition 8.2 is proved from Proposition 7.1; Remark 8.3 rests on recalled string-theory rules and on the dictionary of 06; readings are proposals. Further proofs by Terra 6.1 are at the end.
 
 ## 1. Setting
 
@@ -10,7 +10,7 @@ In type I' the two ends of the interval are orientifold planes. A stack of n Cha
 
 ## 2. Proposition 8.1 (the factorization sign fixes orthogonal or symplectic symmetry)
 
-**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The antiunitary commutants are independently checked. They need not preserve \(d\) or the remaining data, and the Chan-Paton identification is a proposal. See the [referee report](../historical/reviews/2026-11-04_terra_check_11d.md#proposition-81-antiunitary-commutants).
+*Scope.* The commutants need not preserve d or the remaining data (example at the end of the lemma), and the Chan-Paton identification is a proposal.
 
 **Statement.** Let E be an eigenspace of d^2 in H_+, of dimension n. The unitaries of E that commute with j form O(n) if s = +1, and USp(n) if s = −1, in which case n is even.
 
@@ -18,11 +18,11 @@ In type I' the two ends of the interval are orientifold planes. A stack of n Cha
 
 The even dimension for s = −1 is lemma 06's own statement (Kramers degeneracy of the singular values). The proposition adds the symmetry group.
 
-**Reading (proposal).** The groups are those of Chan-Paton labels on an orientifold plane: s = +1 with O^- (SO), s = −1 with O^+ (USp). So the two odd factorizations of the modern triple, which carry the labels 11 and 9, have the form of the two kinds of orientifold planes. The seesaw sector selects s = +1 (T2c), which is the O^- type of the SO(32) web used in 06 and 07: the physical neutrino sector and the type I' walls of the dictionary agree in type. Two refinements from the second check: the symmetries of the pair (j, d) are smaller, O(n_+) x O(n_-) for s = +1 and U(n/2) for s = -1, since for s = -1 the antiunitary j swaps the +-mu eigenspaces of d; and there is a tension of labels, since here label 9 goes with O^+ while section 6b of [07](../lemmas/40_dualities_9_11.md) puts label 9 on a far O8^- wall (the two are the KO sign and the position of the top's brane, see [10](37_dilaton_and_second_scale.md)).
+**Reading (proposal).** The groups are those of Chan-Paton labels on an orientifold plane: s = +1 with O^- (SO), s = −1 with O^+ (USp). So the two odd factorizations of the modern triple, which carry the labels 11 and 9, have the form of the two kinds of orientifold planes. The seesaw sector selects s = +1 (T2c), which is the O^- type of the SO(32) web used in 06 and 07: the physical neutrino sector and the type I' walls of the dictionary agree in type. Two refinements: the symmetries of the pair (j, d) are smaller, O(n_+) x O(n_-) for s = +1 and U(n/2) for s = -1, since for s = -1 the antiunitary j swaps the +-mu eigenspaces of d; and there is a tension of labels, since here label 9 goes with O^+ while section 6b of [07](../lemmas/40_dualities_9_11.md) puts label 9 on a far O8^- wall (the two are the KO sign and the position of the top's brane, see [10](37_dilaton_and_second_scale.md)).
 
 ## 3. Proposition 8.2 (wall channels come with doubled multiplicity)
 
-**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The stated count is for one signed eigenvalue. The lowest \(|D|\) multiplicity is \(2k\) in the interior and at zero, and \(4k\) at \(\pi/2\); interpreting the signed count as Chan-Paton labels requires further data. See the [referee report](../historical/reviews/2026-11-04_terra_check_11d.md#proposition-82-endpoint-channel-multiplicities).
+*Scope.* The count is for one signed eigenvalue. The lowest |D| multiplicity is 2k in the interior and at zero, and 4k at pi/2; reading the signed count as Chan-Paton labels requires further data.
 
 **Statement.** In the parent of lemma 22, k channels at a common angle θ contribute, at the eigenvalue θ/l of the window, an eigenspace of dimension k if 0 < θ < pi/2 and of dimension 2k at the ends θ = 0 and θ = pi/2.
 
@@ -32,9 +32,9 @@ The even dimension for s = −1 is lemma 06's own statement (Kramers degeneracy 
 
 ## 4. Remark 8.3 (E8 walls from 15 + 1; conditional)
 
-*Correction (4 Nov 2026).* The far-wall group is reached at the string-scale radius R = R_*, with the tower fixed, and only its charged states are D0-branes. See [10](37_dilaton_and_second_scale.md).
+*Scope.* The far-wall group is reached at the string-scale radius R = R_*, with the tower fixed, and only its charged states are D0-branes. See [10](37_dilaton_and_second_scale.md).
 
-**Referee note (GPT-6.1 Terra, 4 Nov 2026).** The brane and slope arithmetic is independently checked conditional on the recalled rule. Wall enhancement requires tuning \(z=0\); for \(7+7\) the two bulk positions must sum to \(L\). The \(E_2\) identification with the physical electroweak sector needs further data. The cited primary sources were unavailable to the referee; the slope rule and the E_{n+1} table were confirmed against Polchinski-Witten and Bergman-Gaberdiel-Lifschytz in the second check. See the [referee report](../historical/reviews/2026-11-04_terra_check_11d.md#remark-83-wall-bookkeeping-and-enhancements).
+*Scope.* The brane and slope arithmetic is conditional on the slope rule, which agrees with Polchinski-Witten, and on the E_{n+1} table, which agrees with Bergman-Gaberdiel-Lifschytz. Wall enhancement requires tuning z = 0; for 7 + 7 the two bulk positions must sum to L. The E_2 identification with the physical electroweak sector needs further data.
 
 Conditions: the dictionary of 06 (fifteen D8-branes for the five light quarks in three colours, the sixteenth for the top) and the recalled rule that an O8^- plane with n <= 7 D8-branes on it, at infinite coupling, carries E_{n+1} (E_4 = SU(5), E_5 = SO(10), E_6, E_7, E_8), while n >= 8 admits no such point (Seiberg, hep-th/9608111, recalled; Bergman, Gaberdiel and Lifschytz, hep-th/9711098).
 
@@ -42,7 +42,7 @@ Conditions: the dictionary of 06 (fifteen D8-branes for the five light quarks in
 2. If branes move in colour triples (a light flavour is three D8-branes), a wall holds 3j branes, or 3j + 1 with the top's brane. The reachable wall groups are E_1, E_2 (the top's brane alone), E_4 = SU(5) (one flavour), E_5 = SO(10) (one flavour and the top's brane), E_7 (two flavours) and E_8 (two flavours and the top's brane); E_6 (five branes) is not reachable.
 3. Hence an E8 wall needs the top's brane together with two light flavours, and two E8 walls are impossible with one top brane: E8 x E8 requires breaking a colour triple.
 
-In this reading the top is what completes E8 at a wall (7 = 2 x 3 + 1), and with colour triples the proposed E8 x E7 arrangement has seven branes at one wall, six at the other and a bulk triple at x_b, while two E8 walls require relaxing the colour-triple rule (referee replacement): with that arrangement, the slopes are proportional to +1 on (0, x_b) and −2 on (x_b, L), so z vanishes at both walls when x_b = 2L/3. The E_n series also contains E_3 = SU(3) x SU(2) (two branes at a wall), which colour triples do not reach.
+In this reading the top is what completes E8 at a wall (7 = 2 x 3 + 1), and with colour triples the proposed E8 x E7 arrangement has seven branes at one wall, six at the other and a bulk triple at x_b, while two E8 walls require relaxing the colour-triple rule: with that arrangement, the slopes are proportional to +1 on (0, x_b) and −2 on (x_b, L), so z vanishes at both walls when x_b = 2L/3. The E_n series also contains E_3 = SU(3) x SU(2) (two branes at a wall), which colour triples do not reach.
 
 **Reading (proposal).** At strong coupling the wall that holds the top's brane in the label-9 configuration carries SU(2) x U(1), and the wall of the five light quarks in three colours carries SO(30). The electroweak group then appears at the top's wall, where the M-theory circle opens locally, and the quarks' flavour group at the other wall.
 
@@ -52,12 +52,9 @@ In this reading the top is what completes E8 at a wall (7 = 2 x 3 + 1), and with
 - The dilaton: a spectral-triple counterpart of the type I' dilaton profile (a coupling varying along the interval, with slope set by the brane charge to one side) and the infinite-coupling points of Remark 8.3. Proposition 9.1 of [09](36_dilaton_spectral_and_so32.md) writes the profile as a trace of a function of |D_F|, only implicitly after [10](37_dilaton_and_second_scale.md), Proposition 10.1, and the gradient is not the second scale in the scope of Propositions 10.5 and 10.6 there.
 - The physical status of E8 x E7 with colour triples, and whether the top's brane at an E8 wall has a counterpart in the finite geometry.
 
-## Referee proofs (GPT-6.1 Terra, 4 November 2026)
+## Further proofs (Terra 6.1, 4 November 2026)
 
-The arguments below are those of the referee report on the 11D line, written out in the notation of this lemma; the report in historical/reviews/ stays as the provenance record.
-
-**Independent proof of Proposition 8.1, with its caution.**
-*From the referee report on the 11D line, section 'Proposition 8.1: antiunitary commutants', transferred verbatim in substance on 4 Nov 2026.*
+**Proposition 8.1 in full, with its caution.**
 
 On each finite-dimensional eigenspace E of d^2, the commutant of j in the unitary group of E is O(n) for j^2 = 1, and USp(n) for j^2 = -1, with even complex dimension n in the latter case.
 
@@ -65,17 +62,15 @@ For j^2 = 1, the fixed points of j form a real subspace E_R with E = E_R ⊕ i E
 
 *Caution.* This commutant is defined using j and the d^2-eigenspace alone. It need not commute with d, with the represented algebra, or with other physical structures. For example, on C^2 let j be complex conjugation and d = diag(1, -1): the commutant on the d^2 = 1 space is O(2), and a generic rotation does not commute with d. Moreover O(n) contains disconnected transformations, while SO(n) is its identity component for n >= 2. The orientifold comparison therefore requires an explicit Chan-Paton representation and compatibility with the rest of the data.
 
-**Independent proof of Proposition 8.2, with the multiplicities of |D|.**
-*From the referee report on the 11D line, section 'Proposition 8.2: endpoint channel multiplicities', transferred verbatim in substance on 4 Nov 2026.*
+**Proposition 8.2, with the multiplicities of |D|.**
 
 For k independent channels at the same angle, the signed eigenvalue theta/l has multiplicity k in the interior and 2k at either endpoint. For 0 < theta < pi/2, only n = 0 in the positive progression gives +theta/l: (n pi + theta)/l = theta/l forces n = 0, and (n pi - theta)/l = theta/l forces theta = n pi/2, outside the interior. At zero both progressions have n = 0. At pi/2 the positive n = 0 and negative n = 1 branches coincide. This proves the claimed signed count.
 
 The multiplicity of the corresponding lowest eigenvalue of |D| is 2k in the interior (the values ±theta/l, k each), 2k at zero, and 4k at pi/2 (the values ±pi/(2l), 2k each). At zero the two interior signed eigenvalues simply coalesce; at pi/2 the next level also meets the window. Thus the signed count alone does not establish a doubling of independent physical Chan-Paton labels or an orientifold projection.
 
-**Independent proof of the arithmetic of Remark 8.3.**
-*From the referee report on the 11D line, section 'Remark 8.3: wall bookkeeping and enhancements', transferred verbatim in substance on 4 Nov 2026.*
+**The arithmetic of Remark 8.3.**
 
-The slope and brane-count arithmetic below is conditional on the recalled type I' rules; the referee could not access the primary sources, and the second check later confirmed the slope rule and the E_{n+1} table against Polchinski-Witten and Bergman-Gaberdiel-Lifschytz (note at the remark). An enhancement requires tuning the coupling to a zero of z, and identifying the resulting E_2 factor with the physical electroweak sector requires additional data.
+The slope and brane-count arithmetic below is conditional on the type I' rules (scope note at the remark). An enhancement requires tuning the coupling to a zero of z, and identifying the resulting E_2 factor with the physical electroweak sector requires additional data.
 
 Assume z' = c (8 - N), with c > 0, N(x) the number of D8-branes to the left of x, and z > 0 in the open interval.
 

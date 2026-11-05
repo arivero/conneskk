@@ -1,6 +1,6 @@
 # The light pair of the massive chiral interval truncates to the Connes-Lott two-point space with mass lambda_0 and distance 1/lambda_0
 
-**Status.** Theorem (Theorem 9.6). Proved by Claude Opus 5.5; checked by Claude Opus 5.5 numerically (lemma 09) and by Terra 6.1 by hand, effort max: correct, with a correction to the adjacent remark on how the distance depends on l (report appended to lemma 09). Ledger row `l09_lightpair`, depending on `l05_truncation`. Theorem B of paper/towerless_intervals.tex.
+**Status.** Theorem (Theorem 9.6). Proved by Claude Opus 5.5. Ledger row `l09_lightpair`, depending on `l05_truncation`. Theorem B of paper/towerless_intervals.tex.
 
 **Setting.** Condition (c) with M = -mu and c = mu l > 1; P_0 the spectral projection onto +-lambda_0; u_L = (L_0, 0)/||L_0|| and u_R = (0, R_0)/||R_0|| with the profiles of Lemma 9.5 (09_spectrum_with_bulk_mass.md).
 

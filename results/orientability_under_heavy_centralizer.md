@@ -1,6 +1,6 @@
 # Orientability is lost under a heavy centralizer while first order survives
 
-**Status.** Theorem, finite and explicit. Construction by the corpus (historical/corpus/connes_kk_research_state.md, section 6.6, ledger row rs_N8, 2 November 2026); proof by hand by Terra 6.1 on 3 November 2026 (historical/reviews/2026-11-03_terra_check_N8.md), with one clarification that the text adopted: the bridge exchange must be the normalized exchange that preserves the common colour factor. The proof below is Terra's, written out; nothing in it rests on the finite-matrix check the corpus reported. It is the basis of STRATEGY T17 (which axioms the finite triple keeps along the chain of Theorem 20.2).
+**Status.** Theorem, finite and explicit. Construction by the corpus (ledger row rs_N8, 2 November 2026); proof by hand by Terra 6.1 on 3 November 2026, with the bridge exchange taken to be the normalized exchange that preserves the common colour factor. The proof below is Terra's, written out. It is the basis of STRATEGY T17 (which axioms the finite triple keeps along the chain of Theorem 20.2).
 
 **Setting.** Let A_4 = C_1 + H_2 + M_3(C)_3 + C_4 with elements (lambda, q, m, mu), V_1 = V_4 = C, V_2 = C^2, V_3 = C^3, and H_ij = Hom(V_j, V_i) with the Hilbert-Schmidt inner product. Let
 

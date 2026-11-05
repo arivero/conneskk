@@ -1,6 +1,6 @@
 # At leading spectral-action order, bounded light fermions give M_spec^2 <= 6 C^2, so they cannot match the collapsing Neumann-Dirichlet tower mass pi/(2l)
 
-**Status.** No-go theorem in its scope (No-go theorem 8 of lemma 14). Proved by Astra 6 (job 14); checked by Claude Opus 5.5 by hand (M_spec^2 <= 6 ||V_0||^2) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger row `l14_nogo_collapse`. Cited after Proposition F of paper/towerless_intervals.tex.
+**Status.** No-go theorem in its scope (No-go theorem 8 of lemma 14). Proved by Astra 6 (job 14). Ledger row `l14_nogo_collapse`. Cited after Proposition F of paper/towerless_intervals.tex.
 
 **Setting.** A family of induced finite operators with ||V_0(l)|| <= C < infinity; the leading spectral action of 14_matching_sum_rule.md, with no additional vector-mass or kinetic terms. The retained gauge couplings may depend on l, and any finite multiplicities may be included.
 

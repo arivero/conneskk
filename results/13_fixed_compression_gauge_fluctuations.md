@@ -1,6 +1,6 @@
 # The fluctuated product of spacetime with the chiral interval compresses exactly to the lowest pair, with weighted sheet connections and link phi = m + iB, and the image phi + phi^\* = 2m omits part of the Connes-Lott fluctuations
 
-**Status.** Theorem (Result 2 of lemma 13, with Result 1 on the fluctuations). Proved by Astra 6 (job 13); checked by Claude Opus 5.5 by hand (the compression integrals) and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger row `l13_compression`, depending on `l05_truncation`. Item 1 of Proposition F of paper/towerless_intervals.tex.
+**Status.** Theorem (Result 2 of lemma 13, with Result 1 on the fluctuations). Proved by Astra 6 (job 13). Ledger row `l13_compression`, depending on `l05_truncation`. Item 1 of Proposition F of paper/towerless_intervals.tex.
 
 **Setting.** M a closed Riemannian spin four-manifold, Hermitian Euclidean gamma matrices, D_M = -i gamma^mu nabla_mu^S, E = [[0, 1], [-1, 0]], D = D_M (x) 1 + gamma_5 (x) E d/dx on L^2(S_M) (x) L^2([0, l], C^2) (x) C^n with R(y, 0) = 0 and L(y, l) = 0; the algebra acts by the same matrix multiplication on L and R; complex inner fluctuations D + omega, omega = sum a_j [D, b_j] = omega^\\*, with no real structure or extra bimodule. m = pi/(2l), u_L and u_R the lowest pair of lemma 05, P the projection onto their span (tensored with spacetime and gauge factors); w_L = (2/l) cos^2(mx), w_R = (2/l) sin^2(mx), k(x) = (1/l) sin(pi x/l).
 

@@ -1,6 +1,6 @@
 # On the neutral block of the seesaw family the light mass is 2 t^{2 alpha} abs(y)^2 / (t + sqrt(t^2 + 4 t^{2 alpha} abs(y)^2)), zero for alpha < 1/2, abs(y)^2 at alpha = 1/2 and divergent above
 
-**Status.** Proposition (Proposition 44.2). Proved by Claude Fable 5.1 on 4 November 2026, by hand (a 2 x 2 characteristic polynomial). Refereed by Claude Opus 5.5 (effort max, 4 November 2026; report in historical/reviews/2026-11-04_opus_check_41_45.md): confirmed, with the eigenvalues at t = 10^4 for alpha = 1/4, 1/2, 3/4 checked against the asymptotics (Python); amendments on abs(y)^2, on the spectrum as plus and minus the roots, and on the bounded blocks, applied. Ledger row `l44_light_mass`. The cancellation-free form of the root is the one recorded in the corpus (historical/corpus/research_checks_knowledge.md, section 2.6) with m = t^alpha y. Addresses STRATEGY T2c.
+**Status.** Proposition (Proposition 44.2). Proved by Claude Fable 5.1 on 4 November 2026, by hand (a 2 x 2 characteristic polynomial). Ledger row `l44_light_mass`. The cancellation-free form of the root is the one recorded in the corpus (ledger and STRATEGY) with m = t^alpha y. Addresses STRATEGY T2c.
 
 **Setting.** The neutral block spanned by nu_L and nu_R with their conjugates, with the Majorana entry t on (nu_R, J nu_R) and the Dirac entry s = t^alpha y between nu_L and nu_R, as in 44_seesaw_scaling_retained_algebra.md: the symmetric mass matrix [[0, s], [s, t]] of lemma 06, Proposition 6.
 

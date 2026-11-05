@@ -1,3 +1,5 @@
+# Odd factorizations of an even KO-6 triple: the heavy W and top limit, and 9 against 11
+
 The proposed uniqueness is false: **the same KO-6 triple can admit both reductions**. Moreover, under the stated definition, the strict heavy-limit triple is a doubling of KO-7, although it is not a doubling of KO-5. The distinction between the full real Hilbert space and its physical particle subspace is essential.
 
 **1. Lemma — Product convention and necessary correction of the “Clifford point.”**
@@ -8,7 +10,7 @@ P_k=(\mathbb C,\mathbb C,0,K),\qquad k=1\ \text{or}\ 7,
 \]
 together with the auxiliary `C^2` introduced by the odd-times-odd product. For real algebras, use the point algebra `R`, so that the product algebra remains `A`.
 
-I use the following products, with the standard antilinear tensor product of real structures.
+We use the following products, with the standard antilinear tensor product of real structures.
 
 For even × even,
 \[
@@ -347,12 +349,12 @@ J_{4+7}=J_M\otimes j_7.
 Thus even the odd reductions require different product conventions. No finite-dimensional operation here changes heat dimension: a finite internal factor remains spectrally zero-dimensional. Consequently the claimed loss of one dimension is, at most, a chosen Clifford-factor removal—not a proved metric collapse, and not a consequence of vectorlike charged matter alone. ∎
 ---
 
-## Independent numerical check (Claude, 2 Nov 2026)
+## Numerical check
 
 We used the electrodynamics data of Result 3, with m = 0.7, J = [[0, I_2],[I_2, 0]] K and gamma = diag(1,-1,-1,1). The triple has J^2 = 1, JD = DJ and J gamma = -gamma J, so its KO-dimension is 6. Both U_+ = diag(sigma_1, sigma_1) and U_- = diag(sigma_1, -sigma_1) satisfy U^2 = 1 and U gamma = -gamma U. Both commute with random algebra elements, their opposites and D; and U_+ J = J U_+, U_- J = -J U_-. On H_0 = span(e_L, bar e_R), U_+ descends to j^2 = +1 with jd = dj (KO-7) and U_- to j^2 = -1 with jd = -dj (KO-5). For No-go 8 we also rechecked by hand the dimension count dim rho(e_H) H_+ = 8g, dim rho(e_H) H_- = 0 in the representation of Result 5.
 
 **Terminology.** Here "doubling" means the factorization of an even triple as an odd triple times a Clifford point (the doubling of an odd triple in Dabrowski-Dossena's product construction). It is unrelated to the "fermion doubling" of the noncommutative Standard Model (Lizzi-Mangano-Miele-Sparano). Prior work on products and on J versus J gamma: [../LITERATURE.md](../paper/LITERATURE.md), section D; the factorization criterion and the 9/11 results were not found in print.
 
-## Referee note
+## Scope and escapes
 
-Terra 6.1 (3 Nov 2026; [report](../historical/reviews/2026-11-03_terra_check_nogo_19.md)) checked Result 3, Lemma 4, Proposition 5, Result 7, No-go theorem 8 and the no-go under [U, Q] = 0: all correct. One amendment to Result 7: "arbitrary flavor mixing" means arbitrary matrices within the displayed species blocks, with the heavy projection chosen onto the specified top Dirac sector; mixing between inequivalent species is outside the displayed Dirac operator. Escapes: for KO-5, neutral-sector pairing or a symmetry enforcing even multiplicities; for No-go 8, a change of algebra or representation, the even description, and boundary or defect realizations of chirality; for the no-go under [U, Q] = 0, a matching particle bimodule of opposite grading.
+In Result 7, "arbitrary flavor mixing" means arbitrary matrices within the displayed species blocks, with the heavy projection chosen onto the specified top Dirac sector; mixing between inequivalent species is outside the displayed Dirac operator. Escapes: for KO-5, neutral-sector pairing or a symmetry enforcing even multiplicities; for No-go 8, a change of algebra or representation, the even description, and boundary or defect realizations of chirality; for the no-go under [U, Q] = 0, a matching particle bimodule of opposite grading.

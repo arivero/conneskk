@@ -1,6 +1,6 @@
 # Unfolded, the interval parent is -i d/dx (x) 1 + 1 (x) D_F on a circle of length 2l, so its tower is D_F shifted by the momenta n pi/l, D_F is a constant connection, and an even generator constant in the transported frame becomes 1 (x) T
 
-**Status.** Proposition (Proposition 25.1). Proved by Claude Opus 5.5; checked by Claude Opus 5.5 in Python (the level blocks of the interval against the shifted spectrum) and by Terra 6.1 by hand, effort max, whose report on lemma 25 found two errors and two gaps as first written, all corrected (historical/reviews/2026-11-03_terra_check_25.md). Ledger row `l25_unfold` (depending on `l22_window`). Stated before Theorem 9 of paper/boundary_condition_note.tex; the Wilson-line form is cited in paper/connes_kk_dictionary_note.tex ("the periodic circle of \supp{25}").
+**Status.** Proposition (Proposition 25.1). Proved by Claude Opus 5.5. Ledger row `l25_unfold` (depending on `l22_window`). Stated before Theorem 9 of paper/boundary_condition_note.tex; the Wilson-line form is cited in paper/connes_kk_dictionary_note.tex ("the periodic circle of \supp{25}").
 
 **Setting.** D_X = E d/dx is the parent of lemma 22, and D_0 + E Gamma_F D_F its form after the transport of Corollary 22.2, with D_0 the operator at X = 0. On the circle x in [-l, l] with periodic conditions, for psi in the domain of D_0, put Psi_Q(x) = Q_L(|x|) + i sgn(x) Q_R(|x|) and Psi_U(x) = U_R(|x|) - i sgn(x) U_L(|x|).
 

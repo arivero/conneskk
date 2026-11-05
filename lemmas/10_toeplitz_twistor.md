@@ -1,6 +1,6 @@
 # Toeplitz compression of the twistor coordinates on CP^3
 
-Refereed by Terra 6.1 (gpt-6.1-terra, effort max, 3 Nov 2026): the three identities are correct; the displayed fourth moment had an index error (pairing two barred indices), corrected below. This answers Part A of parked job 04 (research_note 4 and canonical 4, which labelled the result "Checked calculation", although no script computes it). Proved by Claude Opus 5.5 without Astra or Fable; Monte Carlo check with 2 x 10^6 samples.
+This answers Part A of parked job 04 (research_note 4 and canonical 4, which labelled the result "Checked calculation", although no script computes it). Proved by Claude Opus 5.5; Monte Carlo check with 2 x 10^6 samples.
 
 Let Gamma_1, ..., Gamma_5 be Hermitian generators of Cl(5) on C^4, so that Gamma_a Gamma_b + Gamma_b Gamma_a = 2 delta_ab. For [w] in CP^3 put x_a([w]) = w* Gamma_a w / w* w, and define the level-one Berezin-Toeplitz compression
 
@@ -25,5 +25,11 @@ First, Q(x_a)_kl = 4 sum_ij (Gamma_a)_ij E[conj(w_i) w_j w_k conj(w_l)] = (4/20)
 Second, Q(x_a^2)_kl = (4/120) sum over matchings of {j, q, k} with {i, p, l} of the corresponding contraction of (Gamma_a)_ij (Gamma_a)_pq. Matchings that contain tr Gamma_a vanish. The remaining three give tr(Gamma_a^2) delta_kl = 4 delta_kl, (Gamma_a^2)_kl = delta_kl and (Gamma_a^2)_kl = delta_kl. The total is 6 delta_kl, so Q(x_a^2) = (24/120) I = I/5.
 
 The middle identity follows from Gamma_a^2 = I. ∎
+
+**Remark 10.2 (general matrices).** The same moments give, for every 4 x 4 matrix B,
+
+    Q(w* B w / w* w) = (tr(B) I + B)/5,     Q((w* B w / w* w)^2) = (((tr B)^2 + tr(B^2)) I + 2 tr(B) B + 2 B^2)/30:
+
+the fourth moment pairs (j, k) with (i, l) in the two ways, and the sixth moment sums the six matchings. For B = Gamma_a, with tr Gamma_a = 0 and Gamma_a^2 = I, these are the first and third identities of Proposition 10.1. The first is the identity used in Example 16.9, item 2, and in Proposition 50.2.
 
 *Numerical check.* With Gamma_a built as Pauli tensor products (Clifford relations verified), the Monte Carlo deviations are max abs(Q(x_a) - Gamma_a/5) <= 0.0009 and max abs(Q(x_a^2) - I/5) <= 0.0006, at a sampling error of about 10^-3.

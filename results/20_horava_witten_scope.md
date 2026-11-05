@@ -1,6 +1,6 @@
 # The same-chirality analogue of the Horava-Witten walls is type (a) at both ends with opposite localization masses, and unbroken E_8 x E_8 allows no bilinear connector between (248, 1) and (1, 248)
 
-**Status.** Proposition (Result 8 of lemma 20). Proved by Astra 6 (job 20); checked by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_20_21.md). Ledger row `l20_hw`. Cited in the discussion after Theorem D of paper/towerless_intervals.tex ("\supp{20}").
+**Status.** Proposition (Result 8 of lemma 20). Proved by Astra 6 (job 20). Ledger row `l20_hw`. Cited in the discussion after Theorem D of paper/towerless_intervals.tex ("\supp{20}").
 
 **Setting.** One common ten-dimensional chirality convention; the unbroken boundary gauge group E_8 x E_8; the boundary types (a), (b), (c) of lemma 09 and the pair of lemma 12 at X = 0.
 

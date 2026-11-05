@@ -1,6 +1,6 @@
 # The scalar-algebra truncated product F_0 x I_l is exactly T_5(m) x P_1, with d_5 = D_0 + m Gamma_0 and j_5 = J_0 Gamma_0
 
-**Status.** Theorem (Result 7 of lemma 08). Proved by Astra 6 (job 08); checked by Claude Opus 5.5 in Python (numpy: R^\\* U D_F R = D_0 + m Gamma_0, R^\\* U J_F R = J_0 Gamma_0, KO-5 signs) and by Terra 6.1 by hand, who noted that it concerns the scalar-algebra truncation (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger row `l08_reconcile`. Item 4 of Theorem D of paper/towerless_intervals.tex.
+**Status.** Theorem (Result 7 of lemma 08), for the scalar-algebra truncation. Proved by Astra 6 (job 08). Ledger row `l08_reconcile`. Item 4 of Theorem D of paper/towerless_intervals.tex.
 
 **Setting.** F_0 a finite real KO-6 triple as in Result 5; the minimal truncation of the chiral interval with its algebra restricted to scalars, and the phase chosen so that
 

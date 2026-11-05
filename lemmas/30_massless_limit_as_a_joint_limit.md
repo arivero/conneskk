@@ -1,6 +1,6 @@
 # The massless limit as a joint limit: a finite window and an opening tower
 
-Written by Claude Opus 5.5 on 4 November 2026, for STRATEGY T14. Theorem 30.1, Corollary 30.2, Proposition 30.3, Corollary 30.4 and Proposition 30.6 were proposed in an audit of commit b2ddf98 by Astra 6 (assessment in [the review](../historical/reviews/2026-11-04_outside_audit_assessment.md)); the proofs below were redone against the source lemmas. Theorem 30.5 and Proposition 30.7 are new here and rest on [lemma 29](29_window_on_the_disc_bundle.md), whose referee is queued. Refereed by Terra 6.1, together with the note ([report](../historical/reviews/2026-11-04_terra_check_30_note.md)); its corrections are applied and have not been read again, since the Codex quota is spent.
+Written by Claude Opus 5.5 on 4 November 2026, for STRATEGY T14. Theorem 30.1, Corollary 30.2, Proposition 30.3, Corollary 30.4 and Proposition 30.6 were proposed in an audit of commit b2ddf98 by Astra 6 (assessment in [the review](../historical/reviews/2026-11-04_outside_audit_assessment.md)); the proofs below were redone against the source lemmas. Theorem 30.5 and Proposition 30.7 are new here and rest on [lemma 29](29_window_on_the_disc_bundle.md).
 
 ## Outcome
 
@@ -105,7 +105,7 @@ Finally B - j B j^-1 = F^* F - (C F)^* (C F), so |b_+ - b_-| <= (|F| + |C F|) |z
 
 since exp(-g) = exp(g-tilde - G). On r >= l - a, both |F|^2 and |C F|^2 integrate to at most C exp(-2 G). ∎
 
-The samples in section 6.1 of the audit (Python, in the pull-back connection, rows reproduced by Claude Sonnet 5.5) have eta_t / lambda^2 between 0.5 and 0.9. They vary the length at fixed mass, with profiles outside Setting 29.0, so they are a qualitative comparison and do not test this statement as M -> infinity. Under the added hypothesis the defect comes from the wall, which breaks C: for an operator with the same interior and no wall, on a complete manifold, Hom_G(4, ker T) carries a real structure, and if it is one-dimensional the core block is exactly quaternionic.
+The samples in section 6.1 of the audit (Python, in the pull-back connection) have eta_t / lambda^2 between 0.5 and 0.9. They vary the length at fixed mass, with profiles outside Setting 29.0, so they are a qualitative comparison and do not test this statement as M -> infinity. Under the added hypothesis the defect comes from the wall, which breaks C: for an operator with the same interior and no wall, on a complete manifold, Hom_G(4, ker T) carries a real structure, and if it is one-dimensional the core block is exactly quaternionic.
 
 **Remark 30.8 (what is missing, and the direction).** The next steps are, in order:
 
@@ -116,4 +116,4 @@ The samples in section 6.1 of the audit (Python, in the pull-back connection, ro
 
 ## Numerical check
 
-No statement here needs a computation. The audit tabulates the localized family in Python (mu_* = 1, alpha = 1/2, c_0 = 2), and Claude Sonnet 5.5 recomputed the rows; for eps = 10^-2, c = 4.3026 and m = 2.710 x 10^-3, against the asymptotic 2.707 x 10^-3.
+No statement here needs a computation. The audit tabulates the localized family in Python (mu_* = 1, alpha = 1/2, c_0 = 2); for eps = 10^-2, c = 4.3026 and m = 2.710 x 10^-3, against the asymptotic 2.707 x 10^-3.

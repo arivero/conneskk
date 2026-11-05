@@ -1,6 +1,6 @@
 # In a neutral KO-6 sector a KO-7 reduction always exists, and a KO-5 reduction exists exactly when every singular value of the mass matrix, zero included, has even multiplicity
 
-**Status.** Lemma (Lemma 4 of lemma 06), with Propositions 6 and 7; ledger kind theorem. Proved by Astra 6 (job 06); checked by Claude Opus 5.5 by hand and by Terra 6.1 by hand, with one amendment to Result 7 on the meaning of flavour mixing (historical/reviews/2026-11-03_terra_check_nogo_19.md). Ledger row `l06_neutral`. Item 2 of Theorem D of paper/towerless_intervals.tex; cited as "\supp{06}, Lemma 4 and Result 7" in paper/real_structure_note.tex.
+**Status.** Lemma (Lemma 4 of lemma 06), with Propositions 6 and 7; ledger kind theorem. Proved by Astra 6 (job 06). Ledger row `l06_neutral`. Item 2 of Theorem D of paper/towerless_intervals.tex; cited as "\supp{06}, Lemma 4 and Result 7" in paper/real_structure_note.tex.
 
 **Setting.** A KO-6 sector H = H_+ + H_- with dim H_+ = dim H_- = r, on which both algebra actions are the same scalar character. In a basis of H_+ and its J-image, J = [[0, I], [I, 0]] K, and JD = DJ says M^T = M for the block M of D. The reductions are those of 06_doubling_criterion.md.
 

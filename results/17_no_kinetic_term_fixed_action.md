@@ -1,6 +1,6 @@
 # A spacetime-dependent reduction of the fixed operator gives no kinetic term for Sigma: the spectral action of D is unchanged, and a kinetic term needs a new operator with m != 0, whose coefficient is N_c f(0) m^2/(4 pi^2)
 
-**Status.** Proposition (Proposition 17.10). Proved by Terra 6.1 in the referee report on lemma 17 (historical/reviews/2026-11-03_terra_check_17.md); checked by Claude Opus 5.5 by hand (the spin trace evaluated with explicit Dirac matrices). Ledger row `l17_no_kinetic`.
+**Status.** Proposition (Proposition 17.10). Proved by Terra 6.1. Ledger row `l17_no_kinetic`.
 
 **Setting.** U(x) a pointwise admissible involution on M, c^mu = [D_M, x^mu], B_mu = (U d_mu U) restricted to H_0, R defined pointwise as in Theorem 17.1 (17_reduced_action.md), P_- = (1 - gamma_5)/2. The quark sector of 17_set_of_reductions.md with N_c colours.
 

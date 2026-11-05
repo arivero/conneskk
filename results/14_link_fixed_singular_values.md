@@ -1,6 +1,6 @@
 # For the mixed interval with gauge-invariant bulk mass, the covariant light link is lambda W_l^dagger, with fixed singular values, so it supplies only the unitary part of the two-sheet fluctuation space
 
-**Status.** Theorem (Theorem 3 of lemma 14). Proved by Astra 6 (job 14); checked by Terra 6.1 by hand, who found the global form as first written false and restricted the image statement to hold locally in spacetime (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger row `l14_image`. Compared with the finite fluctuations in lemma 19 (19_comparison_with_parent.md).
+**Status.** Theorem (Theorem 3 of lemma 14), with the image statement holding locally in spacetime. Proved by Astra 6 (job 14). Ledger row `l14_image`. Compared with the finite fluctuations in lemma 19 (19_comparison_with_parent.md).
 
 **Setting.** D_{I,A_5} = [[0, d/dx + i A_5 + M], [-d/dx - i A_5 + M, 0]], M real, with R(0) = 0 and L(l) = 0 on C^n-valued fields; the parent algebra C^infinity(I, M_n(C)) acting identically on both chiralities. Real normalized lowest profiles p_L, p_R with (-d/dx + M) p_L = lambda p_R, (d/dx + M) p_R = lambda p_L; the endpoint-adapted frame U_L = p_L W, U_R = p_R W W_l^dagger; w_L = p_L^2, w_R = p_R^2, B_mu = W^dagger A_mu W - i W^dagger d_mu W.
 

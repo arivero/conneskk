@@ -1,6 +1,6 @@
 # The minimal grading-preserving spectral truncation of the chiral interval is the Connes-Lott two-point space, with |m| = pi/(2l) and truncated distance 2l/pi
 
-**Status.** Theorem. Proved by Astra 6 (job 05, Part 3); checked by Claude Opus 5.5 in Python (spectra, commutator norms, distances, truncation) and by Terra 6.1 by hand, as Theorem A of the main paper (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger row `l05_truncation`. It is Theorem A of paper/towerless_intervals.tex. The truncation theorem with |m| = pi/(2l) was not found in print (paper/LITERATURE.md, section A).
+**Status.** Theorem. Proved by Astra 6 (job 05, Part 3). Ledger row `l05_truncation`. It is Theorem A of paper/towerless_intervals.tex. The truncation theorem with |m| = pi/(2l) was not found in print (paper/LITERATURE.md, section A).
 
 **Setting.** H_l = L^2([0, l], C^2) with psi = (L, R), D_l = [[0, d/dx], [-d/dx, 0]] on {(L, R) in H^1 : R(0) = 0, L(l) = 0}, scalar multiplication by C^infinity([0, l]) and grading Gamma = diag(1, -1). Let m_1 = pi/(2l), P = 1_{[0,E]}(|D_l|) with m_1 <= E < 3 m_1, and S = P C([0, l]) P with its inherited operator-system structure (Connes-van Suijlekom, section 1).
 

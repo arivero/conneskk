@@ -1,6 +1,6 @@
 # Chiral boundary conditions alone do not force KO-dimension 0, and the two-point compression with its full diagonal algebra and inherited real structure fails first order
 
-**Status.** Counterexample (Result 4 of lemma 08). Proved by Astra 6 (job 08); checked by Claude Opus 5.5 by hand and by Terra 6.1 by hand (historical/reviews/2026-11-03_terra_check_08_13_14.md). Ledger row `l08_ce_reality`; it amends `l07_real`. Cited after Theorem A of paper/towerless_intervals.tex ("\supp{08}") and in item 4 of Theorem D.
+**Status.** Counterexample (Result 4 of lemma 08). Proved by Astra 6 (job 08). Ledger row `l08_ce_reality`; it amends `l07_real`. Cited after Theorem A of paper/towerless_intervals.tex ("\supp{08}") and in item 4 of Theorem D.
 
 **Setting.** The chiral interval of lemma 07: D_I = E d/dx, R(0) = 0, L(l) = 0, Gamma_I = diag(1, -1), R_l psi(x) = psi(l - x). Its minimal truncation D_2 = m sigma_1, m = pi/(2l) > 0, Gamma_2 = sigma_3, with the compressed algebra A_2 = {diag(a, b)} (compression sends 1 to 1 and cos(pi x/l) to sigma_3/2).
 
