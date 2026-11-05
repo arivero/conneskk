@@ -35,7 +35,7 @@ The live set, read by agents and by readers:
 
 ## HTML edition
 
-The [integrated discussion](docs/index.html) links the shared themes to complete HTML editions of all seven papers, alongside their PDFs and supplements. From the repository root, `make -C paper html` regenerates the site from the LaTeX papers, bibliography, `paper/site_overview.md`, and the shared stylesheet. It needs Python 3 and Pandoc 3.1 or later; equations are rendered as MathML without a network dependency. The build checks source sections, result headings, equations, citations, labels and local links. `make -C paper docs` also rebuilds the HTML when rebuilding the PDFs.
+The [integrated discussion](docs/index.html) links the shared themes to complete HTML editions of all seven papers, alongside their PDFs and supplements. From the repository root, `make -C paper html` regenerates the site from the LaTeX papers, bibliography, `paper/site_overview.md`, and the shared stylesheet. It needs Python 3 and Pandoc 3.1 or later; equations are rendered as MathML without a network dependency. Three SVG plots are generated from the formulas by `paper/figures.py`, with their assumptions and source links in the discussion. The build checks source sections, result headings, equations, citations, labels, local links and plot calculations. `make -C paper docs` also rebuilds the HTML when rebuilding the PDFs.
 
 ## Removed sources
 

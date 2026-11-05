@@ -32,6 +32,15 @@ $$m_\varepsilon\ll E_\varepsilon\ll\Delta_\varepsilon\to0.$$
 
 It also requires and proves a divergent state count at each fixed positive energy for its examples. For the interval family $l_\varepsilon=l_*\varepsilon^{-\alpha}$, with $0<\alpha<1$ and $D_F=\varepsilon D_*$, a choice $\alpha<\beta<1$ and $E_\varepsilon\propto\varepsilon^\beta$ retains a fixed finite window while the fixed-energy count grows like $\varepsilon^{-\alpha}$.
 
+### Opening-window hierarchy {#plot-opening}
+
+<figure class="plot">
+<div class="plot-scroll" tabindex="0" role="region" aria-label="Opening-window plot; scroll horizontally if needed">
+<img src="plots/opening-hierarchy.svg" alt="Logarithmic plot of epsilon from one millionth to one tenth. The light mass and the moving window fall faster than the first discarded level as epsilon approaches zero.">
+</div>
+<figcaption><strong>Figure 1. Python plot.</strong> The interval example takes α = 1/3, β = 2/3 and l<sub>∗</sub> = E<sub>∗</sub> = ‖D<sub>∗</sub>‖ = 1. The curves are m = ε, E = ε<sup>2/3</sup> and Δ = π ε<sup>1/3</sup> − ε, in common units. The family and its inputs are prescribed; no dynamics selects them. <a href="joint_limit_note.html#thm:interval">Source: interval theorem.</a></figcaption>
+</figure>
+
 On a disc bundle over $S^4$, a local Dirac operator with a Callias potential yields an eight-state fermion window for the stated metrics, and an expanding family has seven-dimensional Weyl growth. On that parent, the relation between the tunnelling scale and the $W$ and $Z$ masses, the vector sector, couplings, physical chirality and dynamics selecting the family remain open. See [the interval family](joint_limit_note.html#sec:interval), [the local window](joint_limit_note.html#sec:window), [the joint limit](joint_limit_note.html#sec:joint) and [what is missing](joint_limit_note.html#what-is-missing).
 
 ## Masses, chirality and the fermion action {#fermions}
@@ -48,11 +57,29 @@ $$\sin^2(M_Wl)=\tfrac12\sin^2(2\theta),\qquad \sin^2(M_Zl)=\tfrac45\sin^2(2\thet
 
 The small-angle limits are $M_W^2\to2(\theta/l)^2$ and $M_Z^2\to(16/5)(\theta/l)^2$. The same model also has massless vectors as $\theta\to\pi/2$ at fixed $l$. These are properties of the prescribed flat family, rather than a determination of the observed electroweak vacuum. The paper gives the [exact vector result and its hypotheses](boundary_condition_note.html#gauge-sector-and-the-two-limits), together with directions beyond the flat comparison.
 
+### Interval vector poles {#plot-poles}
+
+<figure class="plot">
+<div class="plot-scroll" tabindex="0" role="region" aria-label="Interval vector-pole plot; scroll horizontally if needed">
+<img src="plots/interval-poles.svg" alt="Dimensionless vector poles start at zero, peak halfway across the angle range, and return to zero. The universal fermion mass rises linearly to one.">
+</div>
+<figcaption><strong>Figure 2. Python plot.</strong> W and Z use the lowest nonnegative branches; m = θ/l is the universal fermion parameter. The curves use the flat five-dimensional Yang–Mills model with the stated wall connector and positive kinetic form without boundary terms. Endpoint values are limits. <a href="boundary_condition_note.html#thm:wz">Source: vector-pole theorem.</a></figcaption>
+</figure>
+
 For a heat cutoff, a constant-profile vector in the transported frame and small finite masses, the leading spectral-action sum rule is
 
 $$M_W^2=\frac{3-d}{24}\sum_f N_fm_f^2,\qquad d=\frac{d\log S}{d\log s},\qquad S(s)=\sum_{n\in\mathbb Z}e^{-n^2\pi^2/s^2},\quad s=l\Lambda.$$
 
 Here $d$ tends to zero for a towerless cutoff and to one in the opposite heat-trace limit. For a top-only sum, the corresponding leading ratio $m_t/M_W$ runs from $\sqrt{8/3}$ to $2$. The calculation assumes the stated profile and matching scale, with no running; comparison with measurements needs an effective theory and thresholds. See [the effective-dimension theorem](boundary_condition_note.html#the-sum-rule-and-the-effective-dimension) and [the main paper's spectral-action analysis](towerless_intervals.html#spectral-action-heavy-fermions-and-the-gauge-sector).
+
+### Heat-trace effective dimension {#plot-heat}
+
+<figure class="plot">
+<div class="plot-scroll" tabindex="0" role="region" aria-label="Heat-trace plot; scroll horizontally if needed">
+<img src="plots/heat-dimension.svg" alt="The effective dimension rises from zero to about 0.72 at l times Lambda equal to two, and approaches one by five.">
+</div>
+<figcaption><strong>Figure 3. Python plot.</strong> The curve evaluates the unshifted circle heat trace and its logarithmic derivative. Its use in the mass sum rule is at leading order in small masses, with a heat cutoff, a constant transported profile and no running. Figure 2 shows vector poles in a separate Yang–Mills calculation. <a href="boundary_condition_note.html#thm:deff">Source: effective-dimension theorem.</a></figcaption>
+</figure>
 
 ## Generations and the real structure {#generations}
 

@@ -7,6 +7,8 @@ from pathlib import Path
 import re
 import subprocess
 
+from figures import write_figures
+
 
 HERE = Path(__file__).resolve().parent
 DOCS = HERE.parent / "docs"
@@ -163,7 +165,6 @@ def paper_body(paper):
         (
             "--standalone",
             "--number-sections",
-            "--shift-heading-level-by=1",
             "--metadata=link-citations:true",
             "--citeproc",
             f"--bibliography={BIBLIOGRAPHY}",
@@ -172,6 +173,23 @@ def paper_body(paper):
     if "<body>" not in rendered or "</body>" not in rendered:
         raise RuntimeError(f'No HTML body in {paper["name"]}')
     body = rendered.split("<body>", 1)[1].rsplit("</body>", 1)[0].strip()
+    if "</header>" not in body:
+        raise RuntimeError(f'No title block in {paper["name"]}')
+    header, content = body.split("</header>", 1)
+    content = re.sub(
+        r"<(/?)h([1-5])(?=[\s>])",
+        lambda match: f'<{match.group(1)}h{int(match.group(2)) + 1}',
+        content,
+    )
+    body = header + "</header>" + content
+    table_number = 0
+
+    def number_table(match):
+        nonlocal table_number
+        table_number += 1
+        return f'<caption><strong class="table-number">Table {table_number}.</strong> '
+
+    body = re.sub(r"<caption>", number_table, body)
     marker = '<div id="refs"'
     if marker not in body:
         raise RuntimeError(f'No bibliography in {paper["name"]}')
@@ -190,9 +208,20 @@ def navigation(current, overview_headings, paper_headings):
     parts = ['<nav class="site-tree" aria-label="Site contents">']
     parts.append('<p class="nav-label">Integrated discussion</p><ul class="topic-list">')
     parts.append("<li>" + item("index.html", "Overview", current == "index") + "</li>")
+    groups = []
     for level, identifier, title in overview_headings:
         if level == "h2":
-            parts.append("<li>" + item(f"index.html#{identifier}", title) + "</li>")
+            groups.append((identifier, title, []))
+        elif level == "h3" and groups:
+            groups[-1][2].append((identifier, title))
+    for identifier, title, children in groups:
+        parts.append("<li>" + item(f"index.html#{identifier}", title))
+        if children:
+            parts.append('<ul class="topic-sublist">')
+            for child_id, child_title in children:
+                parts.append("<li>" + item(f"index.html#{child_id}", child_title) + "</li>")
+            parts.append("</ul>")
+        parts.append("</li>")
     parts.append('</ul><p class="nav-label">Complete papers</p><ul class="paper-list">')
     for paper in PAPERS:
         name = paper["name"]
@@ -258,6 +287,7 @@ def paper_files(paper):
 
 def main():
     DOCS.mkdir(exist_ok=True)
+    write_figures(DOCS / "plots")
     discussion = pandoc((HERE / "site_overview.md").read_text(encoding="utf-8"), "markdown")
     overview_headings = headings(discussion)
     bodies = {paper["name"]: paper_body(paper) for paper in PAPERS}

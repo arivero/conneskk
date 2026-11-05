@@ -29,6 +29,7 @@ supplements:
 html:
 	python3 build_html.py
 	python3 check_html.py
+	python3 -m unittest -q test_figures
 
 # Copy all PDFs and rebuild the HTML edition served by GitHub Pages.
 docs: all supplement supplements html

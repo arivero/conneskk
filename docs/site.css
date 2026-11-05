@@ -58,6 +58,8 @@ a:focus-visible, summary:focus-visible { outline: 3px solid #d88c29; outline-off
 .site-tree a { display: block; padding: .25rem .4rem; border-radius: .25rem; color: #e3efeb; text-decoration: none; }
 .site-tree a:hover, .site-tree a[aria-current="page"] { color: white; background: #31525a; }
 .site-tree a[aria-current="page"] { box-shadow: inset 3px 0 var(--accent); }
+.site-tree .topic-sublist { margin: .15rem 0 .45rem .8rem; padding-left: .55rem; border-left: 1px solid #648086; }
+.topic-sublist a { color: #c8dcd5; font-size: .77rem; }
 .paper-list details { margin: 0 0 .35rem .4rem; color: var(--nav-muted); }
 .paper-list summary { width: max-content; cursor: pointer; font-size: .76rem; }
 .paper-list details ul { margin: .3rem 0 .6rem .5rem; padding-left: .6rem; border-left: 1px solid #648086; }
@@ -90,8 +92,16 @@ p { margin: 0 0 1.1rem; }
 .equation > math { flex: 1 0 auto; margin: 0 auto; }
 .equation-number { flex: 0 0 auto; color: var(--muted); font: .85rem system-ui, sans-serif; }
 math { font-size: 1.02em; }
+math[display="inline"] { display: inline-block; max-width: 100%; overflow-x: auto; overflow-y: hidden; vertical-align: middle; }
+code { overflow-wrap: anywhere; }
+.plot { margin: 1.6rem 0 2rem; padding: .8rem; border: 1px solid var(--line); border-radius: .4rem; background: #f8faf6; }
+.plot-scroll { overflow-x: auto; }
+.plot-scroll p { margin: 0; }
+.plot img { display: block; width: 100%; min-width: 35rem; height: auto; }
+.plot figcaption { margin: .8rem .25rem .25rem; color: #41565b; font: .88rem/1.6 system-ui, sans-serif; }
 table { display: block; max-width: 100%; margin: 1.4rem 0; overflow-x: auto; border-collapse: collapse; font-size: .91rem; }
 caption { padding: .5rem; text-align: left; font-style: italic; }
+.table-number { font-style: normal; }
 th, td { min-width: 8rem; padding: .55rem .65rem; border-bottom: 1px solid var(--line); vertical-align: top; }
 th { background: #edf4ee; font-family: system-ui, sans-serif; text-align: left; }
 .references { font-size: .94rem; }
@@ -100,7 +110,7 @@ th { background: #edf4ee; font-family: system-ui, sans-serif; text-align: left; 
 .footnotes { margin-top: 2.5rem; border-top: 1px solid var(--line); font-size: .92rem; }
 .site-footer { padding-top: 1.5rem; padding-bottom: 3rem; border-top: 1px solid var(--line); color: var(--muted); font: .82rem/1.6 system-ui, sans-serif; }
 .site-footer p { max-width: 48rem; }
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .site-layout { display: block; }
   .sidebar { position: static; height: auto; padding: 1.25rem; }
   .site-edition { margin: .4rem 0 1rem; }
@@ -108,6 +118,23 @@ th { background: #edf4ee; font-family: system-ui, sans-serif; text-align: left; 
   main, .site-footer { padding-left: 1.2rem; padding-right: 1.2rem; }
   main { padding-top: 2rem; }
   h2 { margin-top: 2.5rem; }
-  math[display="inline"] { display: inline-block; max-width: 100%; overflow-x: auto; overflow-y: hidden; vertical-align: middle; }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --ink: #e0eae7;
+    --muted: #b4c6c1;
+    --paper: #142225;
+    --wash: #0e1b1e;
+    --line: #405858;
+    --link: #8adbd1;
+    --nav: #0d1d21;
+    --nav-muted: #b6c8c8;
+  }
+  h1, h2, h3 { color: #eaf5f0; }
+  .discussion > p:first-of-type { color: #c4d7d1; }
+  .paper-files, .abstract, .theorem, .proposition, .lemma, .corollary, blockquote, .plot { background: #1d3232; }
+  .plot figcaption { color: #c6d9d4; }
+  th { background: #294240; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
