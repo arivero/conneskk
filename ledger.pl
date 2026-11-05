@@ -1198,6 +1198,18 @@ checked_by(l46_cross_blocks, claude_fable_5_1, python("the spectrum with a compl
 depends(l46_cross_blocks, l29_tunnelling).  depends(l46_cross_blocks, l28_tunnelling).
 referee_pending(l46_cross_blocks).
 addresses(t14, l46_odd_blocks).  addresses(t14, l46_doublet_masses).  addresses(t14, l46_cross_blocks).  addresses(t0, l46_hypercharge_direction).  addresses(t12, l46_doublet_masses).
+claim(l47_killing_form, proposition, proved, "Proposition 47.1", "On the Berger five-sphere (Hopf fibre scaled by eta, volume V_eta), the Kaluza-Klein kinetic form of the Killing vectors is <K_T, K_T'> = V_eta (3 + eta^2) tr(T T')/12 for Hermitian traceless T, T' on C^3, <K_c, K_c> = V_eta eta^2 c^2 for the central circle with charge c on the coordinates, and <K_T, K_c> = 0.").
+source(l47_killing_form, 'lemmas/47_berger_sphere_coupling_normalization.md', 'statements').
+attempted_by(l47_killing_form, claude_fable_5_1).
+checked_by(l47_killing_form, claude_fable_5_1, python("the two sphere moments by Monte Carlo (2 x 10^6 points); not kept")).
+referee_pending(l47_killing_form).
+claim(l47_coupling_ratio, corollary, proved, "Corollary 47.2", "e^2/g_s^2 = (3 + eta^2)/(24 eta^2 c^2) at tree level; the two formulas of the parked job 04 are c = 1/3 and c = 2/3; the spinor unit at the round point (the 4 of SU(4) restricting to U(3) as 3_{-1/3} + 1_1, the coordinates at 2/3 in Lambda^2(4)) gives 3(eta^2 + 3)/(32 eta^2), equal to Connes' matching value 3/8 at eta = 1 (also by Schur's lemma: tr Q^2 = 4/3 against tr T^2 = 1/2), decreasing to 3/32 as eta -> infinity.").
+source(l47_coupling_ratio, 'lemmas/47_berger_sphere_coupling_normalization.md', 'statements').
+attempted_by(l47_coupling_ratio, claude_fable_5_1).
+checked_by(l47_coupling_ratio, claude_fable_5_1, python("the formula at eta = 1, 2, 1/2 against the Monte Carlo moments; the charges of Lambda^2(4); not kept")).
+depends(l47_coupling_ratio, l47_killing_form).
+referee_pending(l47_coupling_ratio).
+addresses(t18, l47_killing_form).  addresses(t18, l47_coupling_ratio).
 claim(l23_potential, no_go, proved, "Proposition 23.8", "Flat massless family, this gauge content, fermions of frequency 1, one loop: theta = pi/2 is the unique global minimum for n_f > 0, and V is strictly decreasing for n_f >= 10.8; for smaller n_f, no interior minimum on grids (Python). Escapes: general bulk masses with a completion, warping, wall scalar with a potential, wall terms, fermions of frequency 2.").
 source(l23_potential, 'lemmas/23_two_gradings_interval.md', 'the-one-loop-potential-in-the-same-family').
 attempted_by(l23_potential, claude_opus_5_5).

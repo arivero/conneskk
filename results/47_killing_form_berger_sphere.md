@@ -1,0 +1,16 @@
+# On the Berger five-sphere the Killing-form coupling ratio of the central circle with charge c on the coordinates to the SU(3) is e^2/g_s^2 = (3 + eta^2)/(24 eta^2 c^2); with the spinor charge unit c = 2/3 it is 3(eta^2 + 3)/(32 eta^2), equal to Connes' matching value 3/8 at the round point
+
+**Status.** Proposition (Proposition 47.1) with Corollary 47.2. Proved by Claude Fable 5.1 on 5 November 2026 by hand; the sphere moments, the formula at three values of eta and the charges of the coordinates in Lambda^2(4) were checked with numpy (script not kept). No independent check yet: the ledger marks the rows referee_pending. Ledger rows `l47_killing_form` and `l47_coupling_ratio`. The lead came from GitHub issue 1 of the repository (round point, by Schur's lemma). Not yet in a paper.
+
+**Setting.** S^5 in C^3 with the Hopf fibre scaled by eta (Berger metric g_eta, volume V_eta = eta V_1); U(3) isometric for every eta, SO(6) at eta = 1. Killing vectors K_T(z) = i T z for Hermitian traceless T on C^3 (tr T^2 = 1/2 for the colour generators) and K_c(z) = i c z for the central circle with charge c on the coordinates. The tree-level Kaluza-Klein kinetic form is <K_a, K_b> = int g(K_a, K_b) dvol (Witten 1981), with g_a^{-2} proportional to <K_a, K_a>.
+
+**Statement.**
+
+1. (Proposition 47.1) <K_T, K_T'>_eta = V_eta (3 + eta^2) tr(T T')/12, <K_c, K_c>_eta = V_eta eta^2 c^2, <K_T, K_c>_eta = 0.
+2. (Corollary 47.2) e^2/g_s^2 = (3 + eta^2)/(24 eta^2 c^2). The two formulas of the parked job 04 are c = 1/3 and c = 2/3. At the round point the Killing spinors form the 4 of SU(4), which restricts to U(3) as 3_{-1/3} + 1_{1} with the singlet at unit charge, and the coordinates carry 2/3 in Lambda^2(4) = 6; with this unit e^2/g_s^2 = 3(eta^2 + 3)/(32 eta^2), which is 3/8 at eta = 1, also directly by Schur's lemma on the trace form of su(4) (tr Q^2 = 4/3 against tr T^2 = 1/2). The function decreases from infinity to 3/32 as eta grows, taking 3/8 at the round point only.
+
+*Scope.* Tree-level reduction of the Einstein-Hilbert term; the Berger family; the charge unit as an input fixed by the spinor at the round point; the reading of SU(3) as colour and of the central circle as electromagnetism is that of the 9 end of T18. The running and the physical value of the ratio are outside the statement.
+
+**Proof.** Lemma 47, Proposition 47.1 and Corollary 47.2: the vertical component of K_T at z is <z, T z>; the moments int <T z, T' z> = tr(T T')/3 and int <z, T z> <z, T' z> = tr(T T')/12 on the unit sphere of C^3; the branching of the 4 and of its exterior square under U(3).
+
+**What it leaves open.** An independent reading. Whether the matching value's appearance at the enhanced-symmetry point of the family (U(3) to SO(6)) is the general rule of the dictionary: the finite triple's matching relations against the enhanced points of the geometric families (STRATEGY T18, candidate 5).
