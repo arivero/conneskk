@@ -1210,6 +1210,25 @@ checked_by(l47_coupling_ratio, claude_fable_5_1, python("the formula at eta = 1,
 depends(l47_coupling_ratio, l47_killing_form).
 referee_pending(l47_coupling_ratio).
 addresses(t18, l47_killing_form).  addresses(t18, l47_coupling_ratio).
+claim(l48_spin_lift, proposition, proved, "Proposition 48.1", "On T^6 = A x E with the flat metric, a transposition of S_3 acts on T A = a (x) R^2 as the rotation by pi in a two-plane, both lifts to Spin(4) having order four (rs_N20: no homomorphic lift of S_3), a three-cycle lifts to order three, the lift of S_3 is Dic_3, the inversion of E lifts to a central element of square -1, and the lift group of W = S_3 x Z_2 is (Dic_3 x Z_4)/Z_2 of order 24, with lifted stabilizers Dic_3 at an orbit of stabilizer S_3, the whole group at the fixed point, and (Z_4 x Z_4)/Z_2 at the three-point orbit.").
+source(l48_spin_lift, 'lemmas/48_spin_lift_quaternions_weyl_orbits.md', 'statements').
+attempted_by(l48_spin_lift, claude_fable_5_1).
+checked_by(l48_spin_lift, claude_fable_5_1, by_hand).
+depends(l48_spin_lift, l45_fibres).
+referee_pending(l48_spin_lift).
+claim(l48_spinorial_algebras, proposition, proved, "Proposition 48.2", "R[Dic_3] = R + R + M_2(R) + C + H, with spinorial part (-1 acting as -1) C + H: the conjugate pair of characters with the lifted transposition acting as +-i, and the faithful two-dimensional representation, of quaternionic type; at the fixed point the central lift of the inversion acts as +-i on every spinorial representation, which are then of complex type, and the spinorial part is C + C + M_2(C); at the three-point orbit it is C + C.").
+source(l48_spinorial_algebras, 'lemmas/48_spin_lift_quaternions_weyl_orbits.md', 'statements').
+attempted_by(l48_spinorial_algebras, claude_fable_5_1).
+checked_by(l48_spinorial_algebras, claude_fable_5_1, by_hand).
+depends(l48_spinorial_algebras, l48_spin_lift).
+referee_pending(l48_spinorial_algebras).
+claim(l48_real_two_sheets, theorem, proved, "Theorem 48.3", "The fibre of the spinorial real crossed product at an orbit of type (a, a, a) is M_2(C + H), with corner C + H, and at the three-point orbit M_3(C + C); the two-sheet bimodule of Theorem 45.2 with its first sheet at such an orbit (V_X = C + C^2, A_{F,X} = C + H, G = (1, -1), d_X = D_v; V_Y = C^3, M_3(C)) has the KO-6 signs, order zero, order one, nonzero one-forms and the real orientability relation over the real algebra C + H + M_3(C), with the corpus intersection form of rank 2; the spinorial condition selects exactly C + H on the first sheet, up to the choice of a conjugate character.").
+source(l48_real_two_sheets, 'lemmas/48_spin_lift_quaternions_weyl_orbits.md', 'statements').
+attempted_by(l48_real_two_sheets, claude_fable_5_1).
+checked_by(l48_real_two_sheets, claude_fable_5_1, by_hand).
+depends(l48_real_two_sheets, l48_spinorial_algebras).  depends(l48_real_two_sheets, l45_two_sheets).  depends(l48_real_two_sheets, l16_two_sheets).
+referee_pending(l48_real_two_sheets).
+addresses(t16, l48_spin_lift).  addresses(t16, l48_spinorial_algebras).  addresses(t16, l48_real_two_sheets).
 claim(l23_potential, no_go, proved, "Proposition 23.8", "Flat massless family, this gauge content, fermions of frequency 1, one loop: theta = pi/2 is the unique global minimum for n_f > 0, and V is strictly decreasing for n_f >= 10.8; for smaller n_f, no interior minimum on grids (Python). Escapes: general bulk masses with a completion, warping, wall scalar with a potential, wall terms, fermions of frequency 2.").
 source(l23_potential, 'lemmas/23_two_gradings_interval.md', 'the-one-loop-potential-in-the-same-family').
 attempted_by(l23_potential, claude_opus_5_5).
