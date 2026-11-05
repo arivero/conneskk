@@ -1,6 +1,6 @@
 # The singular value lambda_M that links the two ends of the eight-state window satisfies the exact identity lambda (<u, chi u> - <v, chi v>) = <v, c(d chi) u> and is exponentially small, |lambda_M| <= C exp(-(1 - eta)(M/2) int_e^{l-a} f dr)
 
-**Status.** Proposition (Proposition 29.8). Proved by Claude Opus 5.5; checked by Claude Opus 5.5 by hand and by Terra 6.1 by hand (historical/reviews/2026-11-04_terra_check_29.md). Ledger row `l29_tunnelling` (depending on `l29_window_b` and `l28_tunnelling`). Proposition 3 of paper/joint_limit_note.tex.
+**Status.** Proposition (Proposition 29.8). Proved by Claude Opus 5.5; checked by Claude Opus 5.5 by hand and by Terra 6.1 by hand (historical/reviews/2026-11-04_terra_check_29.md). Ledger row `l29_tunnelling` (depending on `l29_window_b` and `l28_tunnelling`). Proposition 3 of paper/joint_limit_note.tex. Read a second time by Terra 6.1 (5 Nov 2026, historical/reviews/2026-11-05_terra_check_29_second_reading.md): identity confirmed; the Agmon argument now keeps the partition weights in the transition region, and the statement for a family with l -> infinity is qualified by the uniformity it needs.
 
 **Setting.** The window of Theorem 29.7 or 29.11. By Proposition 28.19, on one copy of the 4 in each Gamma-hat degree the window operator is d_M = [[0, conj(lambda_M) I_4], [lambda_M I_4, 0]] after equivariant unitary identifications, so the four singular values coincide; T_M u = lambda v and T_M\* v = lambda u is a singular pair with unit vectors. chi is radial, equal to 1 near r = 0 and to 0 near r = l.
 
