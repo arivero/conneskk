@@ -33,6 +33,10 @@ The live set, read by agents and by readers:
 
 `historical/` is never read into context (AGENTS.md). It holds, as provenance: `historical/corpus/` (the files the project started from: the consolidated paper *Nine, Ten and Eleven Dimensions*, its three appendices, the finite checks and the research-state notes, all read in full on 4 Nov 2026 with the outcome in `historical/CORPUS_SALVAGE.md`); `historical/reviews/` (the referee reports, verbatim; what they established is written into the lemmas and `results/`); `historical/prompts/` (the prompts of the Astra and Terra jobs); `historical/transcripts/` (the four chat printouts); `historical/11D/` (the plan, the README with the results table and the unfinished file 06 of the eleven-dimensional line); the two dated evaluations and `DUPLICATES.md`.
 
+## HTML edition
+
+The [integrated discussion](docs/index.html) links the shared themes to complete HTML editions of all seven papers, alongside their PDFs and supplements. From the repository root, `make -C paper html` regenerates the site from the LaTeX papers, bibliography, `paper/site_overview.md`, and the shared stylesheet. It needs Python 3 and Pandoc 3.1 or later; equations are rendered as MathML without a network dependency. Three SVG plots are generated from the formulas by `paper/figures.py`, with their assumptions and source links in the discussion. The build checks source sections, result headings, equations, citations, labels, local links and plot calculations. `make -C paper docs` also rebuilds the HTML when rebuilding the PDFs.
+
 ## Removed sources
 
 The folder holds text only, apart from the built PDFs in [docs/](docs/index.html), which GitHub Pages serves (`make docs` in `paper/`, run at milestones). Binaries, code and duplicated developments were removed after their content was written out (details and recovery commits in [historical/DUPLICATES.md](historical/DUPLICATES.md)):
