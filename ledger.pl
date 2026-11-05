@@ -1173,30 +1173,30 @@ checked_by(l45_two_sheets, claude_fable_5_1, by_hand).
 depends(l45_two_sheets, l16_two_sheets).  depends(l45_two_sheets, l45_fibres).
 checked_by(l45_two_sheets, claude_opus_5_5, by_hand).  % the intersection form over the complex algebra, the formal use of 16.8, the grading as a choice; Remark 45.3 corrected (H arises at the orbit type (a, a, a), not at the fixed point)
 addresses(t16, l45_fibres).  addresses(t16, l45_two_sheets).
-claim(l46_odd_blocks, proposition, proved, "Proposition 46.1", "On the quaternionic sheet W = H^2 with grading axis p, the Hermitian blocks odd for Gamma_p are Hom_C(L_p, L_p^perp) = (2,2) (x) C under Sp(1)_a x Sp(1)_b; the j-linear part is the real span of the Gamma_a with a orthogonal to p, equal to Hom_H(L_p, L_p^perp) = T_p S^4 and to the odd parts of the compressed coordinates of S^4; the j-antilinear part is the span of the i Gamma_a Gamma_p, outside M_2(H) and inside the compression of the functions on CP^3; End_C(W) = 1 + 5 + 10 restricts to K_p as (1,1), (1,1) + (2,2), (3,1) + (1,3) + (2,2).").
+claim(l46_odd_blocks, proposition, proved, "Proposition 46.1", "On the quaternionic sheet W = H^2 with grading axis p, the Hermitian blocks odd for Gamma_p are Hom_C(L_p, L_p^perp) = (2,2) (x) C under Sp(1)_a x Sp(1)_b; the j-linear part is the real span of the Gamma_a with a orthogonal to p, equal to Hom_H(L_p, L_p^perp) = T_p S^4 and to the odd parts of the compressed coordinates of S^4; the j-antilinear part is the span of the i Gamma_a Gamma_p, outside M_2(H) and equal to the compression of the real functions on CP^3 odd under the fibre involution (Q(f o j) = j Q(f) j^-1); End_C(W) = 1 + 5 + 10 restricts to K_p as (1,1), (1,1) + (2,2), (3,1) + (1,3) + (2,2).").
 source(l46_odd_blocks, 'lemmas/46_odd_blocks_quaternionic_sheet.md', 'statements').
 attempted_by(l46_odd_blocks, claude_fable_5_1).
 checked_by(l46_odd_blocks, claude_fable_5_1, python("Clifford relations, j, commutant dimensions 16, 8, 16, K_p-invariance of the two spans; not kept")).
 depends(l46_odd_blocks, l10_toeplitz).  depends(l46_odd_blocks, l16_two_sheets).
-referee_pending(l46_odd_blocks).
+checked_by(l46_odd_blocks, claude_opus_5_5, python("the Clifford structure, j, the dimensions and spans, a Monte Carlo compression of a fibre-odd function")).  % 5 Nov 2026: item 3 sharpened
 claim(l46_doublet_masses, proposition, proved, "Proposition 46.2", "For a Yukawa block X = L_q + i L_q' on a doublet, with q, q' quaternions acting by left multiplication, the two masses are m_+-^2 = |q|^2 + |q'|^2 +- 2 |Im(conj(q) q')|; they are equal iff X = z L_q (z complex), which holds for the odd part of the compression of every real function on S^4; m_- = 0 < m_+ iff q' = q u with u a unit imaginary quaternion, that is X = 2 L_q P_u of rank one with the two halves of equal norm.").
 source(l46_doublet_masses, 'lemmas/46_odd_blocks_quaternionic_sheet.md', 'statements').
 attempted_by(l46_doublet_masses, claude_fable_5_1).
 checked_by(l46_doublet_masses, claude_fable_5_1, python("the mass formula and the rank-one limit on random quaternions; not kept")).
 depends(l46_doublet_masses, l46_odd_blocks).
-referee_pending(l46_doublet_masses).
-claim(l46_hypercharge_direction, corollary, proved, "Corollary 46.4", "If a doublet has m_+ != m_-, the commutant of X^* X in Sp(1)_b is a circle U(1)_b with weight lines the two mass eigenlines of L_p: the U(1)_b that lemma 42 marked by hand, under which T_p S^4 restricts to one complex doublet of hypercharge 1/2; the Majorana line w of the connector of lemma 20 is a Dirac-mass eigenstate iff it is one of these eigenlines; for a j-linear block neither is determined.").
+checked_by(l46_doublet_masses, claude_opus_5_5, python("the mass formula on 2000 random pairs, det X, the rank-one case, three generations")).  % 5 Nov 2026: convention of L_q, case q = 0, the lepton block; a restatement of the bidoublet mass matrices in print
+claim(l46_hypercharge_direction, corollary, proved, "Corollary 46.4", "If a doublet has m_+ != m_-, the commutant of X^* X in Sp(1)_b is a circle U(1)_b with weight lines the two mass eigenlines of L_p: a maximal torus of the kind lemma 42 marked by hand, equal to lemma 42's U(1)_b (the stabilizer of the connector's line) iff that line is one of its weight lines, under which T_p S^4 restricts to one complex doublet of hypercharge 1/2; with the axis under the connector's quaternionic line, the Majorana state is a Dirac-mass eigenstate iff w is an eigenline of X^* X; the stabilizer of X in K_p is the diagonal Sp(1) for equal masses and a circle for split ones, and X and the connector's line leave a common circle unbroken iff the eigenline condition holds; for a j-linear block neither is determined.").
 source(l46_hypercharge_direction, 'lemmas/46_odd_blocks_quaternionic_sheet.md', 'statements').
 attempted_by(l46_hypercharge_direction, claude_fable_5_1).
 checked_by(l46_hypercharge_direction, claude_fable_5_1, by_hand).
 depends(l46_hypercharge_direction, l46_doublet_masses).  depends(l46_hypercharge_direction, l42_tangent).  depends(l46_hypercharge_direction, l20_rank_one).
-referee_pending(l46_hypercharge_direction).
-claim(l46_cross_blocks, proposition, proved, "Proposition 46.3", "In the window of Theorem 29.7, under the weighted estimates of Proposition 29.8, |<v, B u>| <= C_eta ||B|| exp(-(1 - eta)(M/2) int f) for a unit core state u, a unit wall state v and a bounded B: every cross block of a local operator is of the order of lambda_M; for a coordinate x_a of S^4 the cross block is c_M Gamma_a by Schur; a window operator with block lambda + mu n.Gamma has eigenvalues +-(lambda^2 + |mu|^2 +- 2 lambda Re mu)^{1/2}, each of multiplicity two.").
+checked_by(l46_hypercharge_direction, claude_opus_5_5, python("stabilizer dimensions 3, 1, 1, 0")).  % 5 Nov 2026: the identification with lemma 42's U(1)_b made conditional; stabilizers added
+claim(l46_cross_blocks, proposition, proved, "Proposition 46.3", "In the window of Theorem 29.7, under the weighted estimates of Proposition 29.8, |<v, B u>| <= C_eta ||B|| exp(-(1 - eta)(M/2) int f) for a unit core state u, a unit wall state v and a bounded multiplication operator B (false for a general bounded operator, B = v u^*): every cross block of such an operator is bounded by the exponential that bounds lambda_M, with no lower bound; for a coordinate x_a of S^4 the cross block is c_M Gamma_a by Schur; c_M != 0 is not shown and arg(c_M conj(lambda_M)) is the invariant phase; a window operator with block lambda + mu n.Gamma has eigenvalues +-|lambda + mu| and +-|lambda - mu|, each of multiplicity two.").
 source(l46_cross_blocks, 'lemmas/46_odd_blocks_quaternionic_sheet.md', 'statements').
 attempted_by(l46_cross_blocks, claude_fable_5_1).
 checked_by(l46_cross_blocks, claude_fable_5_1, python("the spectrum with a complex mu; not kept")).
 depends(l46_cross_blocks, l29_tunnelling).  depends(l46_cross_blocks, l28_tunnelling).
-referee_pending(l46_cross_blocks).
+checked_by(l46_cross_blocks, claude_opus_5_5, python("the window spectrum")).  % 5 Nov 2026: hypothesis corrected to multiplication operators; weights extended; upper bound only
 addresses(t14, l46_odd_blocks).  addresses(t14, l46_doublet_masses).  addresses(t14, l46_cross_blocks).  addresses(t0, l46_hypercharge_direction).  addresses(t12, l46_doublet_masses).
 claim(l47_killing_form, proposition, proved, "Proposition 47.1", "On the Berger five-sphere (Hopf fibre scaled by eta, volume V_eta), the Kaluza-Klein kinetic form of the Killing vectors is <K_T, K_T'> = V_eta (3 + eta^2) tr(T T')/12 for Hermitian traceless T, T' on C^3, <K_c, K_c> = V_eta eta^2 c^2 for the central circle with charge c on the coordinates, and <K_T, K_c> = 0.").
 source(l47_killing_form, 'lemmas/47_berger_sphere_coupling_normalization.md', 'statements').
@@ -1585,6 +1585,7 @@ referee_report('lemmas/29_window_on_the_disc_bundle.md', 'historical/reviews/202
 referee_report('lemmas/29_window_on_the_disc_bundle.md', 'historical/reviews/2026-11-05_terra_check_29_second_reading.md').
 referee_report('lemmas/37_dilaton_and_second_scale.md', 'historical/reviews/2026-11-05_terra_check_37_38.md').
 referee_report('lemmas/38_so30_fluctuations.md', 'historical/reviews/2026-11-05_terra_check_37_38.md').
+referee_report('lemmas/46_odd_blocks_quaternionic_sheet.md', 'historical/reviews/2026-11-05_opus_check_46.md').
 claim_amended(l28_window, l29_window_b).
 claim_amended(l28_window, l29_window_a).
 addresses(t0, l29_window_b).  addresses(t0, l29_window_a).  addresses(t0, l29_compression).  addresses(t0b, l29_compression).
