@@ -49,6 +49,10 @@ def toc(path, prefix=''):
         print(f"{'  ' * max(level - 2, 0)}- [{plain(text)}]({prefix or path}#{a})")
 
 
+# Markdown sources of generated pages: their links resolve where the page is served (paper/build_html.py).
+PAGE_SOURCES = {'paper/site_overview.md': 'docs'}
+
+
 def check():
     files = subprocess.run(['git', 'ls-files', '--cached', '--others', '--exclude-standard', '*.md'],
                            capture_output=True, text=True, check=True).stdout.split()
@@ -67,7 +71,8 @@ def check():
                     continue
                 total += 1
                 name, _, frag = target.partition('#')
-                dest = os.path.normpath(os.path.join(os.path.dirname(f), name)) if name else f
+                base = PAGE_SOURCES.get(f, os.path.dirname(f))  # page sources link relative to the served folder
+                dest = os.path.normpath(os.path.join(base, name)) if name else f
                 ok = os.path.exists(dest)
                 if ok and frag and dest.endswith('.md'):
                     ok = frag in cache.setdefault(dest, anchors(dest))
