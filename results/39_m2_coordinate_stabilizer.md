@@ -2,7 +2,7 @@
 
 **Status.** Proposition (the proved part of Proposal 3.4 of lemma 39, with the referee amendment on the Fayet-Iliopoulos quotient), conditional on the proposed action of the Betti U(1) of Proposal 3.1 on the brane coordinates. Computed by Claude Opus 5.5 (branch 11D; ledger agent `claude`; Python, historical/11D/checks_11d.py, section B2); checked by Terra 6.1 by hand, whose proof of the stabilizer and of the residual stabilizers is written out in the Referee proofs of lemma 39, and by Claude Sonnet 5.5 by hand (reports: historical/reviews/2026-11-04_terra_check_11d.md, historical/reviews/2026-11-04_sonnet_second_check_11d.md). Ledger row `d11_higgs_m2`, of kind conjecture, since the row covers the whole proposal. No paper cites it.
 
-**Setting.** The cone C^5 // U(1)_Y of 32_witten_space_hypercharge_quotient.md resolved by a Fayet-Iliopoulos parameter, 2 abs(U)^2 - 3 abs(V)^2 = zeta, with the action lambda (U, V) = (lambda^2 U, lambda^{-3} V); T_3 = diag(1/2, -1/2) on V, Y(V) = -1/2 and Q = T_3 + Y.
+**Setting.** The cone C^5 // U(1)_Y of 32_witten_space_hypercharge_quotient.md partially (orbifold) resolved by a Fayet-Iliopoulos parameter, 2 abs(U)^2 - 3 abs(V)^2 = zeta, with the action lambda (U, V) = (lambda^2 U, lambda^{-3} V); T_3 = diag(1/2, -1/2) on V, Y(V) = -1/2 and Q = T_3 + Y.
 
 **Statement.**
 

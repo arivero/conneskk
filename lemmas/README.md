@@ -1,6 +1,6 @@
 # Lemmas and conjectures
 
-Priorities come from [../STRATEGY.md](../STRATEGY.md). Each job runs alone through `codex exec -m gpt-6-astra --disable multi_agent --disable multi_agent_v2 -s read-only` (`--disable memories` from job 03 on); prompts are in `prompts/`. Claude checks each result by hand or numerically before it is filed.
+Priorities come from [../STRATEGY.md](../STRATEGY.md). Each job runs alone through `codex exec -m gpt-6-astra --disable multi_agent --disable multi_agent_v2 -s read-only` (`--disable memories` from job 03 on); prompts are in `historical/prompts/`. Claude checks each result by hand or numerically before it is filed.
 
 ## Results
 

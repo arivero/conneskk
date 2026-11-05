@@ -158,7 +158,7 @@ The algebra (6) has real dimension \(24\). Up to an automorphism of \(\mathcal A
 
 The two intertwining equations in (3) require that \(\mathbb Cw\) and \(\mathbb Cv\) be reducing subspaces for the respective actions, with the same scalar action on these lines. A quaternion preserving \(\mathbb Cw\) belongs to the displayed copy of \(\mathbb C\). On \(V\), the orthogonal complement \(v^\perp\) carries an arbitrary \(M_3(\mathbb C)\)-action. The other quaternionic summand is unrestricted. This proves (6), and \(2+4+18=24\).
 
-We reproduce the dimension argument in [Chamseddine–Connes, section 4](https://arxiv.org/abs/0706.3688), whose local source defines (3) at line 875. A nonzero connecting block implies, by Result 1, a nonzero intertwiner \(R\) for \(B\). Compress \(R\) on either side by projections in the commutants of the full even algebra. Some nonzero compression remains, and its support and range can be placed in irreducible representation spaces
+We reproduce the dimension argument in [Chamseddine–Connes, section 4](https://arxiv.org/abs/0706.3688), where (3) is the relation labelled comrel in the LaTeX source. A nonzero connecting block implies, by Result 1, a nonzero intertwiner \(R\) for \(B\). Compress \(R\) on either side by projections in the commutants of the full even algebra. Some nonzero compression remains, and its support and range can be placed in irreducible representation spaces
 \[
 K:\mathbb C^2\longrightarrow\mathbb C^4.
 \]

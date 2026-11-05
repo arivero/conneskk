@@ -1,4 +1,4 @@
-# Literature check for claims A-I
+# Literature check for claims A-R
 
 Written by Claude Opus 5.5 on 3 November 2026, as recommendation 1 of [historical/evaluation2026-11-03.md](../historical/evaluation2026-11-03.md). Method: web searches (standard mode, extended mode where results were thin), arXiv abstract pages and full texts, Crossref and INSPIRE metadata for every journal reference below. Where an equation or section number is given, it was read in the full text (arXiv version unless stated). Items that could not be checked are marked **unverified** and collected at the end.
 

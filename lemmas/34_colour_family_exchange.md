@@ -10,7 +10,7 @@ Part of the 11D line of research ([README](../historical/11D/README.md), [PLAN](
 
 **Referee note (GPT-6.1 Terra, 4 Nov 2026).** The M2/M5 identification is a proposal, and the colour-family conclusion of Proposition 4.2 needs a factor-preserving map. See the [wording audit](../historical/reviews/2026-11-04_terra_check_11d.md#wording-audit-results-and-proposals).
 
-Proposition 4.6 showed that the M2/M5 exchange of the graded e8 acts as J and cannot exchange the top with the neutrinos, and Proposition 4.2 that any such exchange must trade the colour index of the top for the generation index of the neutrinos. This file tests the colour-family exchanges inside E8.
+Proposition 4.6 showed that the Chevalley involution of the graded e8, read as the M2/M5 exchange (a proposal) and composed with a conjugation into the real structure J, cannot exchange the top with the neutrinos, and Proposition 4.2 that any exchange respecting the tensor factors must trade the colour index of the top for the generation index of the neutrinos. This file tests the colour-family exchanges inside E8.
 
 Use E8 ⊃ SO(16) ⊃ SO(10) × SO(6), with the roots of E8 in the coordinates of R^8: ±e_i ± e_j, and (1/2)(±1, ..., ±1) with an even number of minus signs. The 128 half-integer roots form the chiral spinor of SO(16), which under SO(10) × SU(4) is (16, 4) + (16bar, 4bar): four families of the Standard Model with ν^c, with their conjugates. Write a root as (χ | w | φ), with χ the signs of the three colour coordinates, w those of the two weak coordinates and φ those of the three family coordinates; a particle has an even number of minus signs among χ, w and an even number among φ. The four family patterns are 𝟙 = (+++) (family 0) and the three patterns with two minus signs (families 1, 2, 3); the colour patterns with one minus sign are the quark colours, the pattern −𝟙 is the lepton. Then, for a colour pattern c with one minus sign and a family f,
 
@@ -51,7 +51,7 @@ So the four-family sets 128 − T(0) and 128 − N(1, 2, 3), each of 116 roots, 
 
 **Proof.** P is an even permutation of coordinates and −1 is in the Weyl group of E8, so M is in it; M^2 = P^2 = 1. Both preserve the set of half-integer vectors with an even number of minus signs. P maps (χ | w_1 w_2 | φ) to (φ | w_2 w_1 | χ), so M maps it to (−φ | −w_2 −w_1 | −χ). The weak part (−+) goes to (−+) and (++) to (−−), so T_3 of SU(2)_L, (w_2 − w_1)/2, is preserved and T_3 of SU(2)_R is reversed. Then t_L(c) = (c | −+ | 𝟙) goes to (−𝟙 | −+ | −c) = ν_L(−c); t^c = (−c | ++ | 𝟙) goes to (−𝟙 | −− | c) = −ν^c(−c); b_L(c) = (c | +− | 𝟙) goes to (−𝟙 | +− | −c) = e_L(−c); ν_L(0) = (−𝟙 | −+ | 𝟙) and e_L(0) are fixed; u_L(c, f) = (c | −+ | f) goes to u_L(−f, −c), with −f a quark colour and −c a family pattern. ∎
 
-The search found further signed permutations with the same effect on the two blocks; P itself maps T(0) onto N(1, 2, 3) up to conjugation, and M = J ∘ P, with J = −1 the real structure of Proposition 4.6.
+The search found further signed permutations with the same effect on the two blocks; P itself maps T(0) onto N(1, 2, 3) up to conjugation, and M = (−1) ∘ P, with −1 the Chevalley involution of Proposition 4.6 acting on the roots.
 
 ## Proposition 5.3 (the flip in a four-family finite geometry)
 
@@ -73,7 +73,7 @@ F equals M on the left-handed states and M followed by the particle-antiparticle
 
 **Statement.** Place the top in slot 0, and let the up-type quarks, the down-type quarks, the charged leptons and the neutrinos each occupy three of the four family slots, independently (the up-type quarks in slots containing 0). This includes the aligned families of Proposition 5.1 and the configurations of the 9 label, where SU(2)_L is off and does not tie the slots of up-type and down-type quarks. For none of the 192 configurations S is there an isometry of R^8 mapping S − T onto S − N. S − N has d in {13, 17, 19, 20}, and {19, 20} only when the down-quark and charged-lepton slot sets coincide (48 of the 192); each neutrino root of S − T has d = 16 + 6 (1_A(f) − 1_0(f)), with A the slot set of the up-type quarks, so the values are 16 and 22 in the patterns (16, 22, 22) and (16, 16, 22).
 
-**Proof.** Exhaustive computation of the neighbour counts d (Python, exact integers, rerun twice on 4 Nov 2026 and not kept; also the analytic proof in the referee report); the counts of S − T and S − N differ for every configuration, so no isometry exists. ∎ This is a computer-assisted statement; Proposition 5.1 is its hand-proved aligned case.
+**Proof.** At the end of the lemma, without enumeration: the neighbour counts of S − T and S − N differ for every configuration, so no isometry exists; an exhaustive computation (Python, exact integers) agrees. ∎ Proposition 5.1 is its aligned case.
 
 *Correction (4 Nov 2026).* The conclusion holds on rerun; the sentence of the first version of the Statement, "In every case S - N has d = 19 and d = 20 only, while S - T has d = 16 on the neutrino roots of one slot and d = 22 on those of the two others", was wrong for misaligned configurations and has been removed. See [10](37_dilaton_and_second_scale.md), section on corrections.
 

@@ -49,7 +49,7 @@ The new element is the reading of the generators: U and V are the coordinates wh
 
 **Referee note (GPT-6.1 Terra, 4 Nov 2026).** The stated coordinate stabilizer is independently checked under the proposed charge assignment. The FI quotient has residual \(\mathbb Z_3\) or \(\mathbb Z_2\) stabilizers on the respective exceptional loci, so it is a partial orbifold resolution. See the [referee report](../historical/reviews/2026-11-04_terra_check_11d.md#proposal-34-higgs-stabilizer-and-the-fi-quotient).
 
-Resolve the cone with a Fayet-Iliopoulos parameter: 2|U|^2 - 3|V|^2 = zeta. For zeta < 0 the locus U = 0 is the projective line of the doublet, P(V) = CP^1; for zeta > 0 the locus V = 0 is CP^2.
+Partially resolve the cone with a Fayet-Iliopoulos parameter: 2|U|^2 - 3|V|^2 = zeta (the quotient keeps Z_3 and Z_2 stabilizers on the exceptional loci, so it is an orbifold; end of the lemma). For zeta < 0 the locus U = 0 is the projective line of the doublet, P(V) = CP^1; for zeta > 0 the locus V = 0 is CP^2.
 
 **Statement (proved part).** On the brane coordinates (U, V), on which the Betti U(1)_Y of Proposal 3.1 acts with charges (2, -3), the value V = (v, 0), U = 0 on the doublet line is fixed by SU(3) and by T_3 + Y, and moved by T_3 - Y. (In the quotient geometry, where U(1)_Y is divided out, the same point is fixed by T_3, which is T_3 + Y up to the quotient.) Q = T_3 + Y gives U the charge +1/3 of d^c and V the charges (0, -1) of (nu, e). (Python, section B2.)
 

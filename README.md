@@ -25,7 +25,7 @@ Facts: `claim/5`, `source/3`, `depends/2`, `hypothesis/2`, `attempted_by/2`, `ch
 The live set, read by agents and by readers:
 
 1. `STRATEGY.md`: the question, hypothesis H, the ranked items and what would count against H.
-2. `lemmas/`: the proofs, one file per lemma (01 to 40; 31 to 40 are the eleven-dimensional line, moved here on 4 Nov 2026), with [lemmas/README.md](lemmas/README.md) as the table of their main statements; every proved statement is a row of `ledger.pl`.
+2. `lemmas/`: the proofs, one file per lemma (01 to 52, job 04 parked; 31 to 40 are the eleven-dimensional line, moved here on 4 Nov 2026), with [lemmas/README.md](lemmas/README.md) as the table of their main statements; every proved statement is a row of `ledger.pl`.
 3. `results/`: one file per result, with statement, hypotheses, scope, status and the place of the proof ([results/README.md](results/README.md)).
 4. `paper/`: the papers and notes (REVTeX; `make` builds the Phys Rev two-column PDF and a one-column PDF of the same width for phones; `make docs` rebuilds `docs/`), the Supplemental Material built from `lemmas/`, `results/` and `paper/` only, and the two literature records: `paper/LITERATURE.md` (prior work for each claim, with verdicts known / partial / not found) and `paper/NCG_HISTORY.md` (noncommutative geometry in particle physics and its ramifications, to November 2026, beside the closure of the Kaluza-Klein programme).
 5. `current_framework.md`: background note on the current Connes et al. framework, and what truncation reaches (STRATEGY T0b). `d9_masses_fermi_qcd_steer.md`: the steer for the next paper (T13).

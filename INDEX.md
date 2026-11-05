@@ -142,7 +142,7 @@ From lemmas 06, 21 and 22 and the lemmas 35, 36 and 38: SO(30) as the commutant 
 
 A dated record to November 2026 in nine sections: origins beside the Kaluza-Klein closure (with the finding that no founding text cites the chirality obstruction), the 1990s, 2003-2012, 2013-2019, 2020-2026 (including what exists on finite triples as limits of geometries), ramifications, comparison with the author table to 2003, relevance to the project, and what is unverified.
 
-### Literature check of claims A-I: [paper/LITERATURE.md](paper/LITERATURE.md)
+### Literature check of claims A-R: [paper/LITERATURE.md](paper/LITERATURE.md)
 
 - [A. Connes-Lott as the minimal spectral truncation of a chiral interval](paper/LITERATURE.md#a-connes-lott-as-the-minimal-spectral-truncation-of-a-chiral-interval)
 - [B. The two limits of the massive chiral interval](paper/LITERATURE.md#b-the-two-limits-of-the-massive-chiral-interval)

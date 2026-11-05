@@ -181,5 +181,5 @@ By Claude Opus 5.5, in Python (numpy and scipy), 3 Nov 2026, in a temporary dire
 - Small theta: M_W^2/m^2 = 2.000 and M_Z^2/m^2 = 3.200.
 - The universal connection on E (+) E\*: J D = D J, Gamma_0 D = -D Gamma_0, all |eigenvalues| equal to theta/l, Gamma_1 = (left Gamma_p, right mirror), J_1^2 = -1, J_1 Gamma_1 = -Gamma_1 J_1, while J alone fails; J_1 h J_1^-1 is right multiplication by +h on E\*, for odd h.
 - The theta function: monotone on a grid for s = 0.3, 1, 2, with the towerless value at s = 0.3 equal to e^{-x} to five digits; Poisson summation and the triple product to 10^-16.
-- The ratio M_W^2/M_Z^2 on a grid: range [0.5032, 0.6250], symmetric under theta -> pi/2 - theta to 10^-15, minimum at pi/4. At theta = 1.1625, M_W l = 0.541, and at theta = 1.0589, M_W l = 0.648.
+- The ratio M_W^2/M_Z^2 on a grid: range [0.5032, 0.6250], symmetric under theta -> pi/2 - theta to 10^-15, minimum at pi/4. At theta = 1.1626, M_W l = 0.541, and at theta = 1.0589, M_W l = 0.648.
 - The one-loop integrals by adaptive quadrature (scipy), and by Gauss-Legendre quadrature on 400 nodes for the scan with c_U = -c_Q. The referee recomputed the derivative with scipy, found one sign change for each n_f in {1, 2, 3, 4, 6, 8}, with the stationary angle about 0.3382 at n_f = 8, and checked I = (3/2) zeta(3).

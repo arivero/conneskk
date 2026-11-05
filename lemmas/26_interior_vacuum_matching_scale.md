@@ -6,7 +6,7 @@ For STRATEGY T13, T5b and T12, following [lemma 23](23_two_gradings_interval.md)
 
 1. Pure frequency-2 fermion channels give the flat family an interior global minimum, and we classify it for n_2 >= n_c (Theorem 26.2). With frequency-2 channels alone it sits exactly at theta = pi/4, where M_KK = 4 M_W.
 2. In the displayed channels of the multiplets containing Q_L and U_R, a pure channel carries an exact massless coloured exotic, and a wall mass of any finite positive size leaves a coloured state of charge 2/3 below M_W (Proposition 26.3c). So a top at 2 M_W in such a channel has a lighter partner, whose couplings are not analyzed. In E there is no such partner: m_1 = 2 M_W at theta = 1.1377, with M_KK = 444 GeV, and the vacuum then needs a separate sector.
-3. In the step-threshold model of the parent, without frequency-2 multiplets, the left-right difference of the couplings runs only logarithmically (Proposition 26.5). The couplings then meet at mu_* = 2.2 x 10^14 GeV, with M_KK = 3.1 x 10^13 GeV (Result 26.6, one loop, conditional on the spectrum).
+3. In the step-threshold model of the parent, without frequency-2 multiplets, the left-right difference of the couplings runs only logarithmically (Proposition 26.5). The couplings then meet at mu_* = 2.2 x 10^14 GeV, with M_KK = 3.15 x 10^13 GeV (Result 26.6, one loop, conditional on the spectrum).
 4. At a low tower, with the hypercharge coupling fitted by a wall kinetic term, the finite interval shifts M_W^2/M_Z^2 below its four-dimensional value by 0.05 at the top-compatible point, and by less than 0.006 only above about 1.2 TeV (Result 26.8, tree level).
 5. These give two regimes of one family, stated at the end with hypotheses and escapes.
 

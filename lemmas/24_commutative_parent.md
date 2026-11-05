@@ -172,6 +172,8 @@ The sections of \(\mathcal O(1)\) have no common zero, so \(\bar\partial f_i=0\)
 
 The hypotheses in (6) are a sufficient local ellipticity condition. An arbitrary bundle grading supplies a pointwise isotropic condition, but self-adjointness on an \(H^1\) domain and compact resolvent still require an ellipticity check. Likewise, prescribing a grading only on \(V\) leaves the boundary problem incomplete until a condition on \(V^\perp\) is supplied.
 
+*Scope.* Write G_0 at x = 0 and G_l at x = l. Equation (6) supplies the principal-symbol condition of Bär-Ballmann, Corollary 4.18 and Theorem 4.11; their Example 4.20 assumes more. On the unaugmented Dolbeault bundle the Clifford representation is irreducible, so a fibre endomorphism commuting with every sigma_A is scalar, and a smooth involution of this form is +1 or -1. Additional fibres and other local elliptic projectors lie outside this sufficient criterion.
+
 ---
 
 **3. Proposition — Compression of a local grading and the unchanged level-one window.**
@@ -244,6 +246,8 @@ the natural field \(2\Pi_y-1\) acts as \(+1\) on the fibre \(\operatorname{ran}\
 uses a separately chosen point \(p\). Its action on global section coefficients is nonlocal.
 
 The restriction proved here concerns the unchanged level-one space, a local multiplication grading, and its compression as an actual involution. A different coupled window, additional fibres, or spectral boundary conditions remain available directions.
+
+*Scope.* The statement on marked points concerns the natural field displayed above. A local field can encode a chosen point: on the auxiliary bundle, G_p(y) = p_a Gamma_a^aux is a local constant field whose coefficients contain p.
 
 ---
 
@@ -389,7 +393,7 @@ For bounded \(b_r,v_r\), both errors are \(O(r/\Delta_K)\). If a common-domain c
 \frac{r v_r}{\Delta_K}\to0,\qquad
 \frac{r v_r^2}{\Delta_K}\to0,
 \]
-together with convergence of the \(\Pi\)-diagonal perturbation.
+together with convergence of the \(\Pi\)-diagonal perturbation. A sufficient condition for the denominator is r (b_r + L) <= (1 - epsilon) Delta_K. The stronger estimate |D_{r,Q}| >= (Delta_K^2/r^2 + pi^2/(4 l^2))^{1/2}, from the one-ended Poincaré inequality on the positive and negative B-spectral components, replaces Delta_K/r by (Delta_K^2/r^2 + pi^2/(4 l^2))^{1/2} in g_r. This keeps g_r positive at every r when b_r = beta/l with beta < pi/2 and L l < pi/2 - beta; the error bounds of (18) then still need the conditions on v_r stated above.
 
 An arbitrary local \(G_i(y)\) generally fails \([G_i,\Pi]=0\). Although the differential expression commutes with \(\Pi\), its domain then does not. Such a boundary change is not automatically a bounded perturbation satisfying (18). The explicit local field in Result 3 has nonvanishing boundary mixing at every radius. No convergence to the prescribed two-gradings operator is established here for that nonreducing local problem.
 
@@ -409,7 +413,7 @@ If \(T\) is even for \(\Gamma_0\), the stronger formula of Theorem 22.4 applies:
 Equation (19) follows by integrating
 \(\|R^*TR-T\|\le2x\|D_F\|\|T\|\); equation (20) follows by taking the even part of the conjugation series.
 
-Consequently there is convergence of the **compression maps on their scalar operator systems**. The limit is \(\mathcal E_0Q_K\). It does not turn that image into every element of \(\mathcal E_0(P)\); Result 4 computes the difference explicitly. Algebra generation remains a separate operation.
+Convergence of the **compression maps on their scalar operator systems** needs a common domain and a collapse map: with aligned walls, D_F = 0 and f_l(y, x) = 6 (x/l)(1 - x/l), both endpoint values vanish while Phi_l(f_l) = 1. In the correct form, for F(y, s) fixed on K x [0, 1] and f_l(y, x) = F(y, x/l), Phi_l(f_l) tends to E_0 Q_K(int_0^1 F(., s) ds); for x-independent ambient multipliers the limit is \(\mathcal E_0Q_K\), by (19). It does not turn that image into every element of \(\mathcal E_0(P)\); Result 4 computes the difference explicitly. Algebra generation remains a separate operation.
 
 ---
 
@@ -637,7 +641,7 @@ This proves the massless statement for the entire parameter range, including the
 
 The recorded author and [Terra referee calculations](../historical/reviews/2026-11-03_terra_check_23.md) agree on the sampled massless cases. The logarithmic-concavity proof above is an additional single-agent derivation; it has not received a fresh independent model review in this turn. The recorded agreement therefore should not be described as a multi-model review of this new proof.
 
-The escapes remain changes to the stated determinant: frequency-two fermions, modified form factors through warping or other geometry, suitable bulk-mass sectors, wall potentials, and wall kinetic or interaction terms. The full effective action of the proposed \(K\times I_\ell\) parent, including its \(K\)-tower, has not been computed here.
+The escapes remain changes to the stated determinant: frequency-two fermions, modified form factors through warping or other geometry, suitable bulk-mass sectors, wall potentials, and wall kinetic or interaction terms. The full effective action of the proposed \(K\times I_\ell\) parent, including its \(K\)-tower, has not been computed here. Theorem 9 is for theta in [0, pi/2]; at theta = pi/2 the determinant has its continuous value, while the principal-logarithm window is degenerate.
 
 ---
 
@@ -653,7 +657,7 @@ G(x)=
 
 If \(c_U=-c_Q=c\), then the potential is finite and \(t=1\) is its unique global minimum for every \(n_f>0\). The reported absence of additional interior **local** minima at nonzero \(c\) remains a numerical statement here.
 
-If \(a=c_Q+c_U\ne0\), the displayed unrenormalized integral has angle-dependent ultraviolet divergences.
+If \(a=c_Q+c_U\ne0\), the displayed unrenormalized integral has angle-dependent ultraviolet divergences, for nonzero fermion multiplicity and with no cancellation by additional sectors.
 
 **Proof.** For opposite masses,
 \[
