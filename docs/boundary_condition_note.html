@@ -1,0 +1,1122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An integrated HTML edition of the papers on finite spectral triples and Kaluza-Klein limits.">
+<title>The finite Dirac operator as a boundary condition on an interval | Finite spectral triples and Kaluza-Klein limits</title>
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to content</a>
+<div class="site-layout">
+<aside class="sidebar">
+  <a class="site-name" href="index.html">Finite spectral triples<br><span>and Kaluza-Klein limits</span></a>
+  <p class="site-edition">An integrated reading of the papers</p>
+  <details class="navigation" open>
+    <summary>Contents</summary>
+    <nav class="site-tree" aria-label="Site contents">
+<p class="nav-label">Integrated discussion</p><ul class="topic-list">
+<li><a href="index.html">Overview</a></li>
+<li><a href="index.html#dimensions">What the dimensions mean</a></li>
+<li><a href="index.html#interval">The two-point space and the interval</a></li>
+<li><a href="index.html#wall-data">Finite data as wall data</a></li>
+<li><a href="index.html#opening">Opening a tower</a></li>
+<li><a href="index.html#fermions">Masses, chirality and the fermion action</a></li>
+<li><a href="index.html#gauge">Gauge fields and the spectral action</a></li>
+<li><a href="index.html#generations">Generations and the real structure</a></li>
+<li><a href="index.html#sources">Completions, sources and status</a></li>
+</ul><p class="nav-label">Complete papers</p><ul class="paper-list">
+<li><a href="towerless_intervals.html">Towerless intervals</a>
+<details><summary>Sections</summary><ul>
+<li><a href="towerless_intervals.html#introduction">0.1 Introduction</a></li>
+<li><a href="towerless_intervals.html#setting-and-conventions">0.2 Setting and conventions</a></li>
+<li><a href="towerless_intervals.html#the-two-point-space-is-a-truncated-interval">0.3 The two-point space is a truncated interval</a></li>
+<li><a href="towerless_intervals.html#bulk-mass-the-light-pair-and-both-limits">0.4 Bulk mass: the light pair and both limits</a></li>
+<li><a href="towerless_intervals.html#boundary-yukawa-matrices-and-towerless-textures">0.5 Boundary Yukawa matrices and towerless textures</a></li>
+<li><a href="towerless_intervals.html#sec:real">0.6 Real structures: the choice between 9 and 11</a></li>
+<li><a href="towerless_intervals.html#spectral-action-heavy-fermions-and-the-gauge-sector">0.7 Spectral action: heavy fermions and the gauge sector</a></li>
+<li><a href="towerless_intervals.html#whole-triples-and-truncations">0.8 Whole triples and truncations</a></li>
+<li><a href="towerless_intervals.html#discussion">0.9 Discussion</a></li>
+<li><a href="towerless_intervals.html#provenance-and-supplemental-material">Provenance and Supplemental Material</a></li>
+<li><a href="towerless_intervals.html#references">References</a></li>
+</ul></details></li>
+<li><a href="chiral_limit_note.html">Masses and the chiral limit</a>
+<details><summary>Sections</summary><ul>
+<li><a href="chiral_limit_note.html#setting">0.1 Setting</a></li>
+<li><a href="chiral_limit_note.html#the-reduced-action">0.2 The reduced action</a></li>
+<li><a href="chiral_limit_note.html#the-chiral-limit">0.3 The chiral limit</a></li>
+<li><a href="chiral_limit_note.html#the-condensate">0.4 The condensate</a></li>
+<li><a href="chiral_limit_note.html#the-anomaly-on-the-reduced-action">0.5 The anomaly on the reduced action</a></li>
+<li><a href="chiral_limit_note.html#the-chiral-limit-on-an-interval">0.6 The chiral limit on an interval</a></li>
+<li><a href="chiral_limit_note.html#provenance">Provenance</a></li>
+<li><a href="chiral_limit_note.html#references">References</a></li>
+</ul></details></li>
+<li><a href="boundary_condition_note.html" aria-current="page">The Dirac operator at the walls</a>
+<details open><summary>Sections</summary><ul>
+<li><a href="boundary_condition_note.html#introduction">0.1 Introduction</a></li>
+<li><a href="boundary_condition_note.html#the-window">0.2 The window</a></li>
+<li><a href="boundary_condition_note.html#algebra-order-one-compression">0.3 Algebra, order one, compression</a></li>
+<li><a href="boundary_condition_note.html#fluctuations">0.4 Fluctuations</a></li>
+<li><a href="boundary_condition_note.html#gauge-sector-and-the-two-limits">0.5 Gauge sector and the two limits</a></li>
+<li><a href="boundary_condition_note.html#the-sum-rule-and-the-effective-dimension">0.6 The sum rule and the effective dimension</a></li>
+<li><a href="boundary_condition_note.html#status">0.7 Status</a></li>
+<li><a href="boundary_condition_note.html#provenance">Provenance</a></li>
+<li><a href="boundary_condition_note.html#references">References</a></li>
+</ul></details></li>
+<li><a href="joint_limit_note.html">Opening towers and seven dimensions</a>
+<details><summary>Sections</summary><ul>
+<li><a href="joint_limit_note.html#introduction">0.1 Introduction</a></li>
+<li><a href="joint_limit_note.html#sec:interval">0.2 The interval</a></li>
+<li><a href="joint_limit_note.html#sec:cylinder">0.3 A cylinder with a prescribed window</a></li>
+<li><a href="joint_limit_note.html#sec:window">0.4 A window from a local operator</a></li>
+<li><a href="joint_limit_note.html#sec:joint">0.5 The joint limit on the disc bundle</a></li>
+<li><a href="joint_limit_note.html#the-quaternionic-defect">0.6 The quaternionic defect</a></li>
+<li><a href="joint_limit_note.html#relation-to-prior-work">0.7 Relation to prior work</a></li>
+<li><a href="joint_limit_note.html#what-is-missing">0.8 What is missing</a></li>
+<li><a href="joint_limit_note.html#status">0.9 Status</a></li>
+<li><a href="joint_limit_note.html#provenance">Provenance</a></li>
+<li><a href="joint_limit_note.html#references">References</a></li>
+</ul></details></li>
+<li><a href="connes_kk_dictionary_note.html">The finite / Kaluza-Klein dictionary</a>
+<details><summary>Sections</summary><ul>
+<li><a href="connes_kk_dictionary_note.html#introduction">0.1 Introduction</a></li>
+<li><a href="connes_kk_dictionary_note.html#the-grading-is-a-reflection">0.2 The grading is a reflection</a></li>
+<li><a href="connes_kk_dictionary_note.html#the-finite-dirac-operator-is-a-boundary-condition-and-a-holonomy">0.3 The finite Dirac operator is a boundary condition and a holonomy</a></li>
+<li><a href="connes_kk_dictionary_note.html#the-higgs-field-is-the-gauge-field-along-the-interval">0.4 The Higgs field is the gauge field along the interval</a></li>
+<li><a href="connes_kk_dictionary_note.html#the-real-structure-fixes-the-symmetry-of-a-massless-block">0.5 The real structure fixes the symmetry of a massless block</a></li>
+<li><a href="connes_kk_dictionary_note.html#the-algebra">0.6 The algebra</a></li>
+<li><a href="connes_kk_dictionary_note.html#sec:path">0.7 The massless limit and what selects the path</a></li>
+<li><a href="connes_kk_dictionary_note.html#what-the-string-dualities-give">0.8 What the string dualities give</a></li>
+<li><a href="connes_kk_dictionary_note.html#where-this-leaves-the-question">0.9 Where this leaves the question</a></li>
+<li><a href="connes_kk_dictionary_note.html#status">Status</a></li>
+<li><a href="connes_kk_dictionary_note.html#provenance">Provenance</a></li>
+<li><a href="connes_kk_dictionary_note.html#references">References</a></li>
+</ul></details></li>
+<li><a href="generations_note.html">The two families of 84</a>
+<details><summary>Sections</summary><ul>
+<li><a href="generations_note.html#introduction">0.1 Introduction</a></li>
+<li><a href="generations_note.html#sec:colour">0.2 The colour obstructions</a></li>
+<li><a href="generations_note.html#sec:e8">0.3 The E8 placement</a></li>
+<li><a href="generations_note.html#sec:roots">0.4 Root configurations</a></li>
+<li><a href="generations_note.html#sec:44">0.5 The four-family count and the two placements</a></li>
+<li><a href="generations_note.html#sec:open">0.6 What this leaves</a></li>
+<li><a href="generations_note.html#status">Status</a></li>
+<li><a href="generations_note.html#provenance">Provenance</a></li>
+<li><a href="generations_note.html#references">References</a></li>
+</ul></details></li>
+<li><a href="real_structure_note.html">Real structure and SO(30)</a>
+<details><summary>Sections</summary><ul>
+<li><a href="real_structure_note.html#introduction">0.1 Introduction</a></li>
+<li><a href="real_structure_note.html#sec:sign">0.2 The sign of an odd factorization and the symmetry of a massless block</a></li>
+<li><a href="real_structure_note.html#sec:J">0.3 J-compatible operators and gauge generators</a></li>
+<li><a href="real_structure_note.html#sec:interval">0.4 The interval parent</a></li>
+<li><a href="real_structure_note.html#sec:window">0.5 The compression to the window</a></li>
+<li><a href="real_structure_note.html#sec:exotic">0.6 The charge-4/3 antitriplets</a></li>
+<li><a href="real_structure_note.html#sec:open">0.7 Open questions</a></li>
+<li><a href="real_structure_note.html#status">Status</a></li>
+<li><a href="real_structure_note.html#provenance">Provenance</a></li>
+<li><a href="real_structure_note.html#references">References</a></li>
+</ul></details></li>
+</ul></nav>
+  </details>
+</aside>
+<div class="reading-pane">
+<main id="content">
+<p class="breadcrumbs"><a href="index.html">Integrated discussion</a> / Complete paper</p>
+<div class="paper-files" aria-label="Paper and supplement editions">
+<span>Read or download</span>
+<a href="boundary_condition_note.pdf">Paper PDF</a>
+<a href="boundary_condition_note_mobile.pdf">Mobile PDF</a>
+<a href="supplemental_boundary_condition_note.pdf">Paper supplement</a>
+<a href="supplemental_boundary_condition_note_mobile.pdf">Mobile supplement</a>
+</div>
+<article class="paper">
+<header id="title-block-header">
+<h1 class="title">The finite Dirac operator as a boundary condition on
+an interval</h1>
+<p class="date">Draft, 3 November 2026</p>
+<div class="abstract">
+<div class="abstract-title">Abstract</div>
+<p>Every finite Dirac operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>F</mi></msub><annotation encoding="application/x-tex">D_F</annotation></semantics></math>
+with the signs of KO-dimension six is exactly the lowest spectral window
+of the pure derivative on an interval of length
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>,
+for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo stretchy="false" form="postfix">∥</mo><msub><mi>D</mi><mi>F</mi></msub><mo stretchy="false" form="postfix">∥</mo><mo>&lt;</mo><mi>π</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">l\|D_F\|&lt;\pi/2</annotation></semantics></math>,
+with no mass term. The boundary data are a grading at each wall, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>F</mi></msub><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><msub><mi>Γ</mi><mn>0</mn></msub><mo>log</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>Γ</mi><mn>1</mn></msub><msub><mi>Γ</mi><mn>0</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">D_F=(2l)^{-1}\Gamma_0\log(\Gamma_1\Gamma_0)</annotation></semantics></math>,
+so the singular values of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>F</mi></msub><annotation encoding="application/x-tex">D_F</annotation></semantics></math>
+are principal angles over
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>
+and the masses are quantized momenta. Preserving the domain restricts
+the observables at a wall to the commutant of its grading. Order one
+holds in this parent for any finite data with order zero. The
+compression of an observable is its average under
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>i</mi><mi>x</mi><msub><mi>D</mi><mi>F</mi></msub></mrow></msup><annotation encoding="application/x-tex">e^{ixD_F}</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi>x</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo>≤</mo><mi>l</mi></mrow><annotation encoding="application/x-tex">|x|\le l</annotation></semantics></math>,
+which tends to the finite representation with rate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>l</mi><mn>2</mn></msup><annotation encoding="application/x-tex">l^2</annotation></semantics></math>.
+Aligned walls compress a bulk prealgebra stable under the grading to its
+even part, with the grading inherited. Even scalar fluctuations are pure
+gauge, and on a moving window they reproduce the quadratic term of
+Chamseddine-Connes-van Suijlekom. Odd ones change the angles; for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mn>2</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>ℍ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">M_2(\mathbb H)</annotation></semantics></math>
+their field space is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>S</mi><mn>4</mn></msup><annotation encoding="application/x-tex">S^4</annotation></semantics></math>.
+In a Yang-Mills parent with a wall connector the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Z</mi><annotation encoding="application/x-tex">Z</annotation></semantics></math>
+masses are exact, with the constants
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>16</mn><mi>/</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">16/5</annotation></semantics></math>
+at small angle. Unfolded, the parent is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mi>i</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>/</mi><mi>d</mi><mi>x</mi><mo>+</mo><msub><mi>D</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">-i\,d/dx+D_F</annotation></semantics></math>
+on a circle, and at leading order in small masses, for a vector of
+constant profile in the transported frame, the sum rule of the spectral
+action becomes
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>M</mi><mi>W</mi><mn>2</mn></msubsup><mo>=</mo><mfrac><mrow><mn>3</mn><mo>−</mo><mi>d</mi></mrow><mn>24</mn></mfrac><mo>∑</mo><msub><mi>N</mi><mi>f</mi></msub><msubsup><mi>m</mi><mi>f</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">M_W^2=\frac{3-d}{24}\sum N_fm_f^2</annotation></semantics></math>,
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+the spectral dimension of the circle at the cutoff, so that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mi>t</mi></msub><mi>/</mi><msub><mi>M</mi><mi>W</mi></msub></mrow><annotation encoding="application/x-tex">m_t/M_W</annotation></semantics></math>
+goes from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mrow><mn>8</mn><mi>/</mi><mn>3</mn></mrow></msqrt><annotation encoding="application/x-tex">\sqrt{8/3}</annotation></semantics></math>
+at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">d=0</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>
+at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">d=1</annotation></semantics></math>.
+All finite data are inputs and the parent algebra is matrix-valued, so
+the selection of the finite algebra is untouched.</p>
+</div>
+</header>
+<h2 data-number="0.1" id="introduction"><span
+class="header-section-number">0.1</span> Introduction</h2>
+<p>In an almost-commutative geometry the masses of the fermions are the
+entries of a finite Dirac operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>F</mi></msub><annotation encoding="application/x-tex">D_F</annotation></semantics></math>,
+and in a Kaluza-Klein reduction a mass can be a momentum in the internal
+direction, quantized by the boundary conditions. We relate the two for
+an interval. The Connes-Lott mass is the lowest such momentum,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\pi/(2l)</annotation></semantics></math>,
+and the known boundary formula
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>tan</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>m</mi><mi>n</mi></msub><mi>L</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mi>M</mi><mi>D</mi></msub><mi>L</mi></mrow><annotation encoding="application/x-tex">\tan(m_nL)=M_DL</annotation></semantics></math>
+of Higgsless models <span class="citation" data-cites="Csaki2004">(<a
+href="#ref-Csaki2004" role="doc-biblioref">Csáki, Grojean, Hubisz, et
+al. 2004</a>)</span> gives the interpolation for one flavor. Here we
+carry this through for the whole finite operator, with its real
+structure and grading, and we ask what the parent says about the
+algebra, order one, and fluctuations.</p>
+<p>The finite data remain inputs, so the existence of the window is
+close to a reparametrization. The content lies in the existence of a
+consistent parent, and in the form it gives to the wall algebra, the
+compression and the fluctuations.</p>
+<h2 data-number="0.2" id="the-window"><span
+class="header-section-number">0.2</span> The window</h2>
+<p>Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mi>F</mi></msub><mo>=</mo><msub><mi>H</mi><mo>+</mo></msub><mo>⊕</mo><msub><mi>H</mi><mo>−</mo></msub></mrow><annotation encoding="application/x-tex">H_F=H_+\oplus H_-</annotation></semantics></math>
+be finite-dimensional,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Γ</mi><mi>F</mi></msub><mo>=</mo><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">g</mi></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>,</mo><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\Gamma_F=\mathrm{diag}(1,-1)</annotation></semantics></math>,
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>:</mo><msub><mi>H</mi><mo>+</mo></msub><mo>→</mo><msub><mi>H</mi><mo>−</mo></msub></mrow><annotation encoding="application/x-tex">c:H_+\to H_-</annotation></semantics></math>
+antiunitary, with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>J</mi><mi>F</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>c</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>b</mi><mo>,</mo><mi>c</mi><mi>a</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">J_F(a,b)=(c^{-1}b,ca)</annotation></semantics></math>.
+Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>F</mi></msub><annotation encoding="application/x-tex">D_F</annotation></semantics></math>
+have blocks
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>M</mi><mo>*</mo></msup><annotation encoding="application/x-tex">M^*</annotation></semantics></math>,
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mi>c</mi><msup><mi>M</mi><mo>*</mo></msup><mi>c</mi></mrow><annotation encoding="application/x-tex">M=cM^*c</annotation></semantics></math>,
+which is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>J</mi><mi>F</mi></msub><msub><mi>D</mi><mi>F</mi></msub><mo>=</mo><msub><mi>D</mi><mi>F</mi></msub><msub><mi>J</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">J_FD_F=D_FJ_F</annotation></semantics></math>.
+These are the signs
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mo>+</mo><mo>,</mo><mo>+</mo><mo>,</mo><mo>−</mo><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(+,+,-)</annotation></semantics></math>.
+For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo stretchy="false" form="postfix">∥</mo><msub><mi>D</mi><mi>F</mi></msub><mo stretchy="false" form="postfix">∥</mo><mo>&lt;</mo><mi>π</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">l\|D_F\|&lt;\pi/2</annotation></semantics></math>,
+define
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>:</mo><msub><mi>H</mi><mo>−</mo></msub><mo>→</mo><msub><mi>H</mi><mo>+</mo></msub></mrow><annotation encoding="application/x-tex">X:H_-\to H_+</annotation></semantics></math>
+as the block of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>tan</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>l</mi><msub><mi>D</mi><mi>F</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\tan(lD_F)</annotation></semantics></math>,
+so that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>X</mi><mo>*</mo></msup><annotation encoding="application/x-tex">X^*</annotation></semantics></math>
+is the other block.</p>
+<p>On
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>L</mi><mn>2</mn></msup><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mo stretchy="true" form="prefix">[</mo><mn>0</mn><mo>,</mo><mi>l</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo>;</mo><msup><mi>ℂ</mi><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>⊗</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>H</mi><mo>+</mo></msub><mo>⊕</mo><msub><mi>H</mi><mo>−</mo></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">L^2([0,l];\mathbb C^2)\otimes(H_+\oplus H_-)</annotation></semantics></math>,
+write
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ψ</mi><annotation encoding="application/x-tex">\psi</annotation></semantics></math>
+with components
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>Q</mi><mi>L</mi></msub><mo>,</mo><msub><mi>Q</mi><mi>R</mi></msub><mo>;</mo><msub><mi>U</mi><mi>L</mi></msub><mo>,</mo><msub><mi>U</mi><mi>R</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(Q_L,Q_R;U_L,U_R)</annotation></semantics></math>,
+and let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>X</mi></msub><mo>=</mo><mi>E</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>/</mi><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">D_X=E\,d/dx</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>E</mi><mi>ψ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>L</mi></msub><mo>=</mo><msub><mi>ψ</mi><mi>R</mi></msub></mrow><annotation encoding="application/x-tex">(E\psi)_L=\psi_R</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>E</mi><mi>ψ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>R</mi></msub><mo>=</mo><mo>−</mo><msub><mi>ψ</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">(E\psi)_R=-\psi_L</annotation></semantics></math>,
+with domain
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><msub><mi>Q</mi><mi>R</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mi>U</mi><mi>L</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>0</mn><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><msub><mi>Q</mi><mi>R</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>X</mi><msub><mi>U</mi><mi>R</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mspace width="1.0em"></mspace><msub><mi>U</mi><mi>L</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mo>−</mo><msup><mi>X</mi><mo>*</mo></msup><msub><mi>Q</mi><mi>L</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+&amp;Q_R(0)=U_L(0)=0,\\
+&amp;Q_R(l)=XU_R(l),\quad U_L(l)=-X^*Q_L(l).
+\end{aligned}</annotation></semantics></math><span class="equation-number" aria-label="Equation 1">(1)</span></span>
+Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>Γ</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat\Gamma</annotation></semantics></math>
+be
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">+1</annotation></semantics></math>
+on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ψ</mi><mi>L</mi></msub><annotation encoding="application/x-tex">\psi_L</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>
+on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ψ</mi><mi>R</mi></msub><annotation encoding="application/x-tex">\psi_R</annotation></semantics></math>,
+and let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>J</mi><mo accent="true">̂</mo></mover><mi>ψ</mi></mrow><annotation encoding="application/x-tex">\hat J\psi</annotation></semantics></math>
+have components
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>c</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><msub><mi>U</mi><mi>R</mi></msub><mo>,</mo><mo>−</mo><msup><mi>c</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><msub><mi>U</mi><mi>L</mi></msub><mo>;</mo><mo>−</mo><mi>c</mi><msub><mi>Q</mi><mi>R</mi></msub><mo>,</mo><mi>c</mi><msub><mi>Q</mi><mi>L</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(c^{-1}U_R,-c^{-1}U_L;-cQ_R,cQ_L)</annotation></semantics></math>.</p>
+<div id="thm:window" class="theorem">
+<p><strong>Theorem 1</strong>.
+<em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>X</mi></msub><annotation encoding="application/x-tex">D_X</annotation></semantics></math>
+is self-adjoint with compact resolvent, with signs
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mo>+</mo><mo>,</mo><mo>+</mo><mo>,</mo><mo>−</mo><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(+,+,-)</annotation></semantics></math>.
+Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mo>exp</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><msub><mi>Γ</mi><mi>F</mi></msub><msub><mi>D</mi><mi>F</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">R(x)=\exp(x\Gamma_FD_F)</annotation></semantics></math>,
+and let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>:</mo><msub><mi>H</mi><mi>F</mi></msub><mo>→</mo><msup><mi>L</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">W:H_F\to L^2</annotation></semantics></math>
+send
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(a,b)</annotation></semantics></math>
+to the function with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>-components
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>l</mi><mrow><mo>−</mo><mn>1</mn><mi>/</mi><mn>2</mn></mrow></msup><mi>R</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>,</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">l^{-1/2}R(x)(a,0)</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>-components
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>l</mi><mrow><mo>−</mo><mn>1</mn><mi>/</mi><mn>2</mn></mrow></msup><mi>R</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">l^{-1/2}R(x)(0,b)</annotation></semantics></math>.
+Then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math>
+is an isometry, and
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>X</mi></msub><mi>W</mi><mo>=</mo><mi>W</mi><msub><mi>D</mi><mi>F</mi></msub><mo>,</mo><mspace width="1.0em"></mspace><mover><mi>J</mi><mo accent="true">̂</mo></mover><mi>W</mi><mo>=</mo><mi>W</mi><msub><mi>J</mi><mi>F</mi></msub><mo>,</mo><mspace width="1.0em"></mspace><mover><mi>Γ</mi><mo accent="true">̂</mo></mover><mi>W</mi><mo>=</mo><mi>W</mi><msub><mi>Γ</mi><mi>F</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">D_XW=WD_F,\quad \hat JW=WJ_F,\quad \hat\Gamma W=W\Gamma_F.</annotation></semantics></math><span class="equation-number" aria-label="Equation 2">(2)</span></span>
+With
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>θ</mi><mi>k</mi></msub><mo>=</mo><mi>l</mi><msub><mi>σ</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">\theta_k=l\sigma_k</annotation></semantics></math>
+for the singular values
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>k</mi></msub><annotation encoding="application/x-tex">\sigma_k</annotation></semantics></math>
+of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>,
+the signed spectrum is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mi>π</mi><mo>±</mo><msub><mi>θ</mi><mi>k</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mi>/</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">(n\pi\pm\theta_k)/l</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">n\in\mathbb Z</annotation></semantics></math>,
+so
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">r</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">n</mi></mrow><mspace width="0.167em"></mspace><mi>W</mi></mrow><annotation encoding="application/x-tex">\mathrm{ran}\,W</annotation></semantics></math>
+is the spectral subspace of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>D</mi><mi>X</mi></msub><mo stretchy="true" form="postfix">|</mo></mrow><mo>≤</mo><mo stretchy="false" form="postfix">∥</mo><msub><mi>D</mi><mi>F</mi></msub><mo stretchy="false" form="postfix">∥</mo></mrow><annotation encoding="application/x-tex">|D_X|\le\|D_F\|</annotation></semantics></math>,
+and the next level is at least
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>π</mi><mo>−</mo><mi>l</mi><mo stretchy="false" form="postfix">∥</mo><msub><mi>D</mi><mi>F</mi></msub><mo stretchy="false" form="postfix">∥</mo><mo stretchy="true" form="postfix">)</mo></mrow><mi>/</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">(\pi-l\|D_F\|)/l</annotation></semantics></math>.</em></p>
+</div>
+<div class="proof">
+<p><em>Structure of the proof.</em> Takagi factorization gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mi>V</mi><mrow><mo stretchy="true" form="prefix">|</mo><mi>M</mi><mo stretchy="true" form="postfix">|</mo></mrow></mrow><annotation encoding="application/x-tex">M=V|M|</annotation></semantics></math>
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>c</mi><msup><mi>V</mi><mo>*</mo></msup><mi>c</mi></mrow><annotation encoding="application/x-tex">V=cV^*c</annotation></semantics></math>.
+Then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>,</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">R(x)(a,0)</annotation></semantics></math>
+has components
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mrow><mo stretchy="true" form="prefix">|</mo><mi>M</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">\cos(x|M|)a</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mi>V</mi><mo>sin</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mrow><mo stretchy="true" form="prefix">|</mo><mi>M</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">-V\sin(x|M|)a</annotation></semantics></math>,
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">R(x)(0,b)</annotation></semantics></math>
+has components
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mrow><mo stretchy="true" form="prefix">|</mo><mi>M</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>V</mi><mo>*</mo></msup><mi>b</mi></mrow><annotation encoding="application/x-tex">\sin(x|M|)V^*b</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mrow><mo stretchy="true" form="prefix">|</mo><msup><mi>M</mi><mo>*</mo></msup><mo stretchy="true" form="postfix">|</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">\cos(x|M^*|)b</annotation></semantics></math>.
+The wall conditions follow from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>=</mo><mo>tan</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>l</mi><mrow><mo stretchy="true" form="prefix">|</mo><mi>M</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>V</mi><mo>*</mo></msup></mrow><annotation encoding="application/x-tex">X=\tan(l|M|)V^*</annotation></semantics></math>,
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>X</mi></msub><mi>W</mi><mo>=</mo><mi>W</mi><msub><mi>D</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">D_XW=WD_F</annotation></semantics></math>
+follows by differentiating
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>.
+Constant unitaries on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+reduce
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">g</mi></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mo>tan</mo><msub><mi>θ</mi><mi>k</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mathrm{diag}(\tan\theta_k)</annotation></semantics></math>,
+and each channel has the known one-flavor spectrum (<a
+href="supplemental.pdf">Supplemental Material, part 22</a>). ◻</p>
+</div>
+<p>So
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>X</mi></msub><annotation encoding="application/x-tex">D_X</annotation></semantics></math>
+has no mass term. A light eigenvalue is a momentum
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mi>θ</mi><mi>/</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">k=\theta/l</annotation></semantics></math>,
+fixed by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>tan</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>k</mi><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mo>tan</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">\tan(kl)=\tan\theta</annotation></semantics></math>,
+a singular value of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>.
+In the finite description this condition is lost and the value appears
+as free data, which offers a reading of why the finite triple needs
+Yukawa couplings. One matrix
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+encodes the Yukawa and Majorana blocks together. Also,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mo>*</mo></msup><msub><mi>D</mi><mi>X</mi></msub><mi>R</mi><mo>=</mo><msub><mi>D</mi><mn>0</mn></msub><mo>+</mo><mi>E</mi><msub><mi>Γ</mi><mi>F</mi></msub><msub><mi>D</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">R^*D_XR=D_0+E\Gamma_FD_F</annotation></semantics></math>,
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mn>0</mn></msub><annotation encoding="application/x-tex">D_0</annotation></semantics></math>
+uncoupled: after a unitary change of domain,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>F</mi></msub><annotation encoding="application/x-tex">D_F</annotation></semantics></math>
+is a constant matrix connection, with relative endpoint rotation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">R(l)</annotation></semantics></math>.</p>
+<div id="thm:gradings" class="theorem">
+<p><strong>Theorem 2</strong>. <em>The boundary conditions are gradings:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ψ</mi><mi>L</mi></msub><annotation encoding="application/x-tex">\psi_L</annotation></semantics></math>
+lies in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">+1</annotation></semantics></math>
+eigenspace of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Γ</mi><mi>i</mi></msub><annotation encoding="application/x-tex">\Gamma_i</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ψ</mi><mi>R</mi></msub><annotation encoding="application/x-tex">\psi_R</annotation></semantics></math>
+in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>
+eigenspace at each wall, with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Γ</mi><mn>0</mn></msub><mo>=</mo><msub><mi>Γ</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">\Gamma_0=\Gamma_F</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Γ</mi><mn>1</mn></msub><annotation encoding="application/x-tex">\Gamma_1</annotation></semantics></math>
+equal to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow><msub><mi>Γ</mi><mn>0</mn></msub><mi>R</mi><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>*</mo></msup></mrow><annotation encoding="application/x-tex">R(l)\Gamma_0R(l)^*</annotation></semantics></math>.
+If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>
+is not an eigenvalue of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Γ</mi><mn>1</mn></msub><msub><mi>Γ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\Gamma_1\Gamma_0</annotation></semantics></math>,
+then
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>F</mi></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>l</mi></mrow></mfrac><mspace width="0.167em"></mspace><msub><mi>Γ</mi><mn>0</mn></msub><mo>log</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>Γ</mi><mn>1</mn></msub><msub><mi>Γ</mi><mn>0</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">D_F=\frac1{2l}\,\Gamma_0\log(\Gamma_1\Gamma_0),</annotation></semantics></math><span class="equation-number" aria-label="Equation 3">(3)</span></span>
+and the numbers
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><msub><mi>σ</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">l\sigma_k</annotation></semantics></math>
+are the principal angles between the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">+1</annotation></semantics></math>
+spaces. A real structure is given by an antiunitary
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mn>1</mn></msub><annotation encoding="application/x-tex">J_1</annotation></semantics></math>,
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>J</mi><mn>1</mn><mn>2</mn></msubsup><mo>=</mo><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">J_1^2=-1</annotation></semantics></math>,
+that anticommutes with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Γ</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\Gamma_0</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Γ</mi><mn>1</mn></msub><annotation encoding="application/x-tex">\Gamma_1</annotation></semantics></math>.
+Then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>J</mi><mi>F</mi></msub><mo>=</mo><msub><mi>Γ</mi><mn>0</mn></msub><msub><mi>J</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">J_F=\Gamma_0J_1</annotation></semantics></math>,
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mi>F</mi></msub><annotation encoding="application/x-tex">J_F</annotation></semantics></math>
+carries
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Γ</mi><mn>1</mn></msub><annotation encoding="application/x-tex">\Gamma_1</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><msub><mi>Γ</mi><mn>0</mn></msub><msub><mi>Γ</mi><mn>1</mn></msub><msub><mi>Γ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">-\Gamma_0\Gamma_1\Gamma_0</annotation></semantics></math>.</em></p>
+</div>
+<p>At an angle
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\pi/2</annotation></semantics></math>
+the channel has the chiral conditions of the Connes-Lott interval, with
+no zero mode and lowest level
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\pi/(2l)</annotation></semantics></math>.</p>
+<h2 data-number="0.3" id="algebra-order-one-compression"><span
+class="header-section-number">0.3</span> Algebra, order one,
+compression</h2>
+<p>Let a unital algebra
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>F</mi></msub><annotation encoding="application/x-tex">A_F</annotation></semantics></math>
+act evenly and faithfully, with order zero, and let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>F</mi></msub><annotation encoding="application/x-tex">C_F</annotation></semantics></math>
+be the commutant of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>F</mi></msub><annotation encoding="application/x-tex">D_F</annotation></semantics></math>
+in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>F</mi></msub><annotation encoding="application/x-tex">A_F</annotation></semantics></math>.
+Order one is not assumed.</p>
+<div id="thm:parent" class="theorem">
+<p><strong>Theorem 3</strong>. <em>A function
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>∈</mo><msup><mi>C</mi><mi>∞</mi></msup><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mo stretchy="true" form="prefix">[</mo><mn>0</mn><mo>,</mo><mi>l</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo><msub><mi>A</mi><mi>F</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">f\in C^\infty([0,l],A_F)</annotation></semantics></math>
+preserves the domain of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>X</mi></msub><annotation encoding="application/x-tex">D_X</annotation></semantics></math>
+iff
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>∈</mo><msub><mi>C</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">f(l)\in C_F</annotation></semantics></math>.
+Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>l</mi></msub><annotation encoding="application/x-tex">A_l</annotation></semantics></math>
+be the algebra of such
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>.
+Then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">[</mo><msub><mi>D</mi><mi>X</mi></msub><mo>,</mo><mi>π</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>f</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mi>E</mi><mi>π</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>f</mi><mi>′</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">[D_X,\pi(f)]=E\pi(f&#39;)</annotation></semantics></math>,
+and we have a real even spectral triple with order zero and order
+one.</em></p>
+</div>
+<div class="proof">
+<p><em>Structure of the proof.</em> The wall conditions say that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\pi(f(l))</annotation></semantics></math>
+commutes with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>tan</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>l</mi><msub><mi>D</mi><mi>F</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\tan(lD_F)</annotation></semantics></math>,
+equivalently with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>F</mi></msub><annotation encoding="application/x-tex">D_F</annotation></semantics></math>,
+for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo stretchy="false" form="postfix">∥</mo><msub><mi>D</mi><mi>F</mi></msub><mo stretchy="false" form="postfix">∥</mo><mo>&lt;</mo><mi>π</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">l\|D_F\|&lt;\pi/2</annotation></semantics></math>.
+The opposite action is pointwise, so by finite order zero
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi>π</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>f</mi><mi>′</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">E\pi(f&#39;)</annotation></semantics></math>
+commutes with it. ◻</p>
+</div>
+<p>So
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>F</mi></msub><annotation encoding="application/x-tex">A_F</annotation></semantics></math>
+acts freely in the bulk, and the wall carries the commutant of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>F</mi></msub><annotation encoding="application/x-tex">D_F</annotation></semantics></math>.
+In the Standard Model data with nonzero Yukawa blocks, this is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>λ</mi><mo>,</mo><mi>λ</mi><mo>,</mo><mi>m</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{(\lambda,\lambda,m)\}</annotation></semantics></math>,
+the algebra of the photon and gluons. Finite order one does not arise as
+a condition on the parent.</p>
+<div id="thm:compression" class="theorem">
+<p><strong>Theorem 4</strong>. <em>Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>l</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>T</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mi>W</mi><mo>*</mo></msup><mi>T</mi><mi>W</mi></mrow><annotation encoding="application/x-tex">Q_l(T)=W^*TW</annotation></semantics></math>.
+For even
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">T(x)</annotation></semantics></math>,
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><msub><mi>Q</mi><mi>l</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>T</mi><mo stretchy="true" form="postfix">)</mo></mrow></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mfrac><mn>1</mn><mi>l</mi></mfrac><msubsup><mo>∫</mo><mn>0</mn><mi>l</mi></msubsup><mo>cos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mspace width="0.167em"></mspace><msub><mrow><mi mathvariant="normal">a</mi><mi mathvariant="normal">d</mi></mrow><msub><mi>D</mi><mi>F</mi></msub></msub><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>T</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mspace width="0.167em"></mspace><mi>d</mi><mi>x</mi><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><msub><mi>Q</mi><mi>l</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>E</mi><mi>T</mi><mo stretchy="true" form="postfix">)</mo></mrow></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mo>−</mo><mfrac><mn>1</mn><mi>l</mi></mfrac><msubsup><mo>∫</mo><mn>0</mn><mi>l</mi></msubsup><mo>sin</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mspace width="0.167em"></mspace><msub><mrow><mi mathvariant="normal">a</mi><mi mathvariant="normal">d</mi></mrow><msub><mi>D</mi><mi>F</mi></msub></msub><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>T</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mspace width="0.167em"></mspace><mi>d</mi><mi>x</mi><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+Q_l(T)&amp;=\frac1l\int_0^l\cos(x\,\mathrm{ad}_{D_F})(T(x))\,dx,\\
+Q_l(ET)&amp;=-\frac1l\int_0^l\sin(x\,\mathrm{ad}_{D_F})(T(x))\,dx.
+\end{aligned}</annotation></semantics></math><span class="equation-number" aria-label="Equation 4">(4)</span></span>
+For constant
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>,
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><msub><mi>Q</mi><mi>l</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo stretchy="true" form="postfix">)</mo></mrow></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>l</mi></mrow></mfrac><msubsup><mo>∫</mo><mrow><mo>−</mo><mi>l</mi></mrow><mi>l</mi></msubsup><msup><mi>e</mi><mrow><mi>i</mi><mi>x</mi><msub><mi>D</mi><mi>F</mi></msub></mrow></msup><mi>π</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>e</mi><mrow><mo>−</mo><mi>i</mi><mi>x</mi><msub><mi>D</mi><mi>F</mi></msub></mrow></msup><mi>d</mi><mi>x</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">c</mi></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>l</mi><mspace width="0.167em"></mspace><msub><mrow><mi mathvariant="normal">a</mi><mi mathvariant="normal">d</mi></mrow><msub><mi>D</mi><mi>F</mi></msub></msub><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>π</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+Q_l(a)&amp;=\frac1{2l}\int_{-l}^{l}e^{ixD_F}\pi(a)e^{-ixD_F}dx\\
+&amp;=\mathrm{sinc}(l\,\mathrm{ad}_{D_F})(\pi(a)),
+\end{aligned}</annotation></semantics></math><span class="equation-number" aria-label="Equation 5">(5)</span></span>
+so
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">∥</mo><msub><mi>Q</mi><mi>l</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><mi>π</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="postfix">∥</mo><mo>≤</mo><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>l</mi><mn>2</mn></msup><mi>/</mi><mn>6</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="postfix">∥</mo><mrow><mo stretchy="true" form="prefix">[</mo><msub><mi>D</mi><mi>F</mi></msub><mo>,</mo><mrow><mo stretchy="true" form="prefix">[</mo><msub><mi>D</mi><mi>F</mi></msub><mo>,</mo><mi>π</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow><mo stretchy="false" form="postfix">∥</mo></mrow><annotation encoding="application/x-tex">\|Q_l(a)-\pi(a)\|\le(l^2/6)\|[D_F,[D_F,\pi(a)]]\|</annotation></semantics></math>.
+Moreover
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>l</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><mi>l</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mi>Q</mi><mi>l</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>C</mi><mi>∞</mi></msup><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mo stretchy="true" form="prefix">[</mo><mn>0</mn><mo>,</mo><mi>l</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo><msub><mi>A</mi><mi>F</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">Q_l(A_l)=Q_l(C^\infty([0,l],A_F))</annotation></semantics></math>,
+which contains
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>l</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">Q_l(a)</annotation></semantics></math>
+for every
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><msub><mi>A</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">a\in A_F</annotation></semantics></math>,
+and the order defects of the compressed data differ from the finite ones
+by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>l</mi><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">O(l^2)</annotation></semantics></math>
+with explicit constants.</em></p>
+</div>
+<p>Thus
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>F</mi></msub><mo>,</mo><msub><mi>J</mi><mi>F</mi></msub><mo>,</mo><msub><mi>Γ</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">D_F,J_F,\Gamma_F</annotation></semantics></math>
+are exact, and the observables converge to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><mi>F</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\pi(A_F)</annotation></semantics></math>
+as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">l\to0</annotation></semantics></math>
+at fixed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>F</mi></msub><annotation encoding="application/x-tex">D_F</annotation></semantics></math>,
+as maps. The generated algebra is discontinuous at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">l=0</annotation></semantics></math>:
+compressions of commuting projections can fail to commute at order
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>l</mi><mn>2</mn></msup><annotation encoding="application/x-tex">l^2</annotation></semantics></math>,
+in line with the remark of Connes and van Suijlekom <span
+class="citation" data-cites="CvS2021">(<a href="#ref-CvS2021"
+role="doc-biblioref">Connes and Suijlekom 2021</a>)</span> on generated
+algebras (<a href="supplemental.pdf">Supplemental Material, part
+22</a>).</p>
+<div id="thm:aligned" class="theorem">
+<p><strong>Theorem 5</strong>. <em>Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+be a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>*</mo><annotation encoding="application/x-tex">*</annotation></semantics></math>-subalgebra
+of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">E</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">d</mi></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>H</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mathrm{End}(H)</annotation></semantics></math>
+that need not commute with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Γ</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\Gamma_0</annotation></semantics></math>,
+acting pointwise and identically on both spin components. A function
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>
+valued in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+preserves the domain iff
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">[</mo><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><msub><mi>Γ</mi><mn>0</mn></msub><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">[f(0),\Gamma_0]=0</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">[</mo><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><msub><mi>Γ</mi><mn>1</mn></msub><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">[f(l),\Gamma_1]=0</annotation></semantics></math>,
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>Γ</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat\Gamma</annotation></semantics></math>
+commutes with every such
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>.
+For aligned walls
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Γ</mi><mn>1</mn></msub><mo>=</mo><msub><mi>Γ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\Gamma_1=\Gamma_0</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>F</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">D_F=0</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>Γ</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat\Gamma</annotation></semantics></math>
+restricts to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Γ</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\Gamma_0</annotation></semantics></math>
+on the window, and an ambient constant
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">a\in P</annotation></semantics></math>
+has
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>+</mo><msub><mi>Γ</mi><mn>0</mn></msub><mi>a</mi><msub><mi>Γ</mi><mn>0</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">Q(a)=E_0(a)=(a+\Gamma_0a\Gamma_0)/2</annotation></semantics></math>.
+If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Γ</mi><mn>0</mn></msub><mi>P</mi><msub><mi>Γ</mi><mn>0</mn></msub><mo>=</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">\Gamma_0P\Gamma_0=P</annotation></semantics></math>,
+then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>P</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">E_0(P)</annotation></semantics></math>
+is the even part of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>,
+and it is the image of the boundary algebra.</em></p>
+</div>
+<p>So a matrix-valued bulk prealgebra is compressed to its even part,
+with the grading inherited from the parent operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>Γ</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat\Gamma</annotation></semantics></math>.
+For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mn>2</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>ℍ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>⊕</mo><msub><mi>M</mi><mn>4</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>ℂ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">M_2(\mathbb H)\oplus M_4(\mathbb C)</annotation></semantics></math>
+this gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℍ</mi><mo>⊕</mo><mi>ℍ</mi><mo>⊕</mo><msub><mi>M</mi><mn>4</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>ℂ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mathbb H\oplus\mathbb H\oplus M_4(\mathbb C)</annotation></semantics></math>,
+the step of the classification <span class="citation"
+data-cites="CC2008">(<a href="#ref-CC2008"
+role="doc-biblioref">Chamseddine and Connes 2008</a>)</span> that a
+compression of functions on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>S</mi><mn>4</mn></msup><annotation encoding="application/x-tex">S^4</annotation></semantics></math>
+reaches only with an added grading. The commutative-parent question
+remains open.</p>
+<h2 data-number="0.4" id="fluctuations"><span
+class="header-section-number">0.4</span> Fluctuations</h2>
+<div id="thm:transport" class="theorem">
+<p><strong>Theorem 6</strong>. <em>Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>
+be smooth with anti-Hermitian values in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>,
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mi>′</mi><mo>=</mo><mo>−</mo><mi>h</mi><mi>u</mi></mrow><annotation encoding="application/x-tex">u&#39;=-hu</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">u(0)=1</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><mi>u</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">w=u(l)</annotation></semantics></math>,
+and let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>Γ</mi><mn>0</mn></msub><mo>,</mo><msub><mi>Γ</mi><mn>1</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">D(\Gamma_0,\Gamma_1)</annotation></semantics></math>
+be the derivative with those gradings. Then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>Γ</mi><mn>0</mn></msub><mo>,</mo><msub><mi>Γ</mi><mn>1</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>E</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">D(\Gamma_0,\Gamma_1)+Eh</annotation></semantics></math>
+equals
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mi>D</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>Γ</mi><mn>0</mn></msub><mo>,</mo><msup><mi>w</mi><mo>*</mo></msup><msub><mi>Γ</mi><mn>1</mn></msub><mi>w</mi><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>u</mi><mo>*</mo></msup></mrow><annotation encoding="application/x-tex">uD(\Gamma_0,w^*\Gamma_1w)u^*</annotation></semantics></math>.
+The self-adjoint scalar one-forms are exactly the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">Eh</annotation></semantics></math>.
+If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>
+takes values in the even algebra, then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>w</mi><mo>*</mo></msup><msub><mi>Γ</mi><mn>1</mn></msub><mi>w</mi></mrow><annotation encoding="application/x-tex">w^*\Gamma_1w</annotation></semantics></math>
+has the same angles with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Γ</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\Gamma_0</annotation></semantics></math>;
+on the moving window the finite operator is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>w</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>*</mo></msup><msub><mi>D</mi><mi>F</mi></msub><mi>π</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>w</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\pi(w)^*D_F\pi(w)</annotation></semantics></math>,
+and with the real fluctuation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>U</mi><mi>w</mi><mo>*</mo></msubsup><msub><mi>D</mi><mi>F</mi></msub><msub><mi>U</mi><mi>w</mi></msub></mrow><annotation encoding="application/x-tex">U_w^*D_FU_w</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>U</mi><mi>w</mi></msub><mo>=</mo><mi>π</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>w</mi><mo stretchy="true" form="postfix">)</mo></mrow><msub><mi>J</mi><mi>F</mi></msub><mi>π</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>w</mi><mo stretchy="true" form="postfix">)</mo></mrow><msubsup><mi>J</mi><mi>F</mi><mrow><mo>−</mo><mn>1</mn></mrow></msubsup></mrow><annotation encoding="application/x-tex">U_w=\pi(w)J_F\pi(w)J_F^{-1}</annotation></semantics></math>.
+In that case the connection is gauge equivalent to zero under the
+allowed endpoint gauge group.</em></p>
+</div>
+<p>With
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><msup><mi>w</mi><mo>*</mo></msup></mrow><annotation encoding="application/x-tex">v=w^*</annotation></semantics></math>,
+this is the gauge orbit of <span class="citation"
+data-cites="CCvS2013a">(<a href="#ref-CCvS2013a"
+role="doc-biblioref">Chamseddine, Connes, and Suijlekom
+2013</a>)</span>, Eqs. (10)-(11), namely
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mi>D</mi><msup><mi>U</mi><mo>*</mo></msup></mrow><annotation encoding="application/x-tex">UDU^*</annotation></semantics></math>,
+which equals
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>+</mo><msub><mi>A</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></msub><mo>+</mo><msub><mover><mi>A</mi><mo accent="true">̃</mo></mover><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></msub><mo>+</mo><msub><mi>A</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow></msub></mrow><annotation encoding="application/x-tex">D+A_{(1)}+\tilde A_{(1)}+A_{(2)}</annotation></semantics></math>,
+quadratic term included, for finite data that fail order one, while the
+parent has order one and no quadratic term. The fixed compression is a
+different object: for constant
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>l</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>E</mi><mi>h</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mo>−</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>l</mi><mi>/</mi><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">[</mo><msub><mi>D</mi><mi>F</mi></msub><mo>,</mo><mi>h</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo><mi>O</mi><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>l</mi><mn>3</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">Q_l(Eh)=-(l/2)[D_F,h]+O(l^3)</annotation></semantics></math>,
+against
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mi>l</mi><mrow><mo stretchy="true" form="prefix">[</mo><msub><mi>D</mi><mi>F</mi></msub><mo>,</mo><mi>h</mi><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">-l[D_F,h]</annotation></semantics></math>
+for the first derivative of the transported operator.</p>
+<p><em>No-go theorem (the radial mode).</em> For one interval, fixed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>,
+no bulk masses, even scalar inner fluctuations and the moving window,
+the singular values of the finite operator are fixed. With nonzero
+Yukawa data, the Higgs quaternion stays on the unit quaternions, with no
+radial mode (<a href="supplemental.pdf">Supplemental Material, part
+22</a>). The following lie outside the hypotheses, and each needs its
+own construction:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+as a field on the wall; bulk terms odd for the grading; bulk masses not
+commuting with the gauge action; more internal dimensions; an added
+composite degree of freedom. At the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mo>→</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">10\to9</annotation></semantics></math>
+endpoint this agrees with a frozen Higgs field.</p>
+<p>The odd escape is explicit. For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>=</mo><msup><mi>ℍ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">W=\mathbb H^2</annotation></semantics></math>,
+the gradings with quaternionic eigenspaces form
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>S</mi><mn>4</mn></msup><mo>=</mo><mi>S</mi><mi>p</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>S</mi><mi>p</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>×</mo><mi>S</mi><mi>p</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">S^4=Sp(2)/(Sp(1)\times Sp(1))</annotation></semantics></math>,
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Γ</mi><mi>p</mi></msub><mo>=</mo><msub><mi>p</mi><mi>a</mi></msub><msub><mi>Γ</mi><mi>a</mi></msub></mrow><annotation encoding="application/x-tex">\Gamma_p=p_a\Gamma_a</annotation></semantics></math>.
+For two points at geodesic distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>,
+all principal angles equal
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mi>d</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\theta=d/2</annotation></semantics></math>.
+On
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">H</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">m</mi></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>V</mi><mo>,</mo><mi>W</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>⊕</mo><mrow><mi mathvariant="normal">H</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">m</mi></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>W</mi><mo>,</mo><mi>V</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mathrm{Hom}(V,W)\oplus\mathrm{Hom}(W,V)</annotation></semantics></math>,
+the connection
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mi>/</mi><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>F</mi><mi>x</mi><mo>,</mo><mi>y</mi><mi>F</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">K(x,y)=(\theta/l)(Fx,yF)</annotation></semantics></math>,
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math>
+odd in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mn>2</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>ℍ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">M_2(\mathbb H)</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>F</mi><mn>2</mn></msup><mo>=</mo><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">F^2=-1</annotation></semantics></math>,
+gives a universal mass
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mi>/</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">\theta/l</annotation></semantics></math>,
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>J</mi><mn>1</mn></msub><mo>=</mo><msub><mi>Γ</mi><mn>0</mn></msub><mi>J</mi></mrow><annotation encoding="application/x-tex">J_1=\Gamma_0J</annotation></semantics></math>
+and a second grading at the point
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+on the first summand and its mirror image on the second. So
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo>,</mo><mi>q</mi><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\theta,q)</annotation></semantics></math>
+are polar coordinates of a Higgs quaternion on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>S</mi><mn>4</mn></msup><annotation encoding="application/x-tex">S^4</annotation></semantics></math>,
+the coset of the minimal composite Higgs model <span class="citation"
+data-cites="ACP2005">(<a href="#ref-ACP2005"
+role="doc-biblioref">Agashe, Contino, and Pomarol 2005</a>)</span>,
+whose warped construction and potentials are not those here; the analogy
+with gauge-Higgs unification <span class="citation"
+data-cites="Hosotani1983">(<a href="#ref-Hosotani1983"
+role="doc-biblioref">Hosotani 1983</a>)</span> has the same limit. That
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>S</mi><mn>4</mn></msup><annotation encoding="application/x-tex">S^4</annotation></semantics></math>
+is also the base of the twistor window is an observation here, with no
+identification.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mn>1</mn></msub><annotation encoding="application/x-tex">J_1</annotation></semantics></math>
+induces an opposite action twisted by the inner automorphism
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>γ</mi><mi>W</mi></msub><mo>⋅</mo><msub><mi>γ</mi><mi>W</mi></msub></mrow><annotation encoding="application/x-tex">\gamma_W\cdot\gamma_W</annotation></semantics></math>,
+a structural analogy with the twisted triples of the grand symmetry,
+whose automorphism is different <span class="citation"
+data-cites="DLM2014">(<a href="#ref-DLM2014"
+role="doc-biblioref">D’Andrea, Lizzi, and Martinetti
+2014</a>)</span>.</p>
+<h2 data-number="0.5" id="gauge-sector-and-the-two-limits"><span
+class="header-section-number">0.5</span> Gauge sector and the two
+limits</h2>
+<p>Assume a flat product and a positive five-dimensional Yang-Mills
+kinetic form with no boundary terms. Then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">A_\mu</annotation></semantics></math>
+at a wall lies in the wall algebra, the directions in it are Neumann and
+the others Dirichlet, as in Higgsless models <span class="citation"
+data-cites="Csaki2003">(<a href="#ref-Csaki2003"
+role="doc-biblioref">Csáki, Grojean, Murayama, et al.
+2004</a>)</span>.</p>
+<p><em>The strict family.</em> For even walls with nonzero Yukawa data,
+the unbroken directions have masses
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>π</mi><mi>/</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">n\pi/l</annotation></semantics></math>
+and the broken ones
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mfrac displaystyle="false"><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>π</mi><mi>/</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">(n-\tfrac12)\pi/l</annotation></semantics></math>,
+so
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mi>W</mi></msub><mo>=</mo><msub><mi>M</mi><mi>Z</mi></msub><mo>=</mo><mi>π</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">M_W=M_Z=\pi/(2l)</annotation></semantics></math>,
+with massless photon and gluons after unimodularity. Fix a light block
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>M</mi><mn>0</mn></msub><annotation encoding="application/x-tex">M_0</annotation></semantics></math>
+and a heavy block
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Θ</mi><mi>/</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">\Theta/l</annotation></semantics></math>
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mi>Θ</mi><mo>&lt;</mo><mi>π</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">0&lt;\Theta&lt;\pi/2</annotation></semantics></math>.
+As
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">l\to0</annotation></semantics></math>,
+the light couplings
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>M</mi><mn>0</mn></msub><mo stretchy="true" form="postfix">|</mo></mrow></mrow><annotation encoding="application/x-tex">l|M_0|</annotation></semantics></math>
+vanish at fixed mass, the heavy mass
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Θ</mi><mi>/</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">\Theta/l</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>M</mi><mi>W</mi></msub><annotation encoding="application/x-tex">M_W</annotation></semantics></math>
+diverge with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mi>t</mi></msub><mi>/</mi><msub><mi>M</mi><mi>W</mi></msub><mo>=</mo><mn>2</mn><mi>Θ</mi><mi>/</mi><mi>π</mi><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">m_t/M_W=2\Theta/\pi&lt;1</annotation></semantics></math>,
+and the light compression converges. This realizes the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mo>→</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">10\to9</annotation></semantics></math>
+proposal at this level, with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mi>q</mi></msub><mo>∼</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>π</mi><mi>/</mi><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><msub><mi>m</mi><mi>q</mi></msub><mi>/</mi><msub><mi>M</mi><mi>W</mi></msub></mrow><annotation encoding="application/x-tex">X_q\sim(\pi/2)m_q/M_W</annotation></semantics></math>,
+in the form of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>q</mi></msub><mo>=</mo><msqrt><mn>2</mn></msqrt><msub><mi>m</mi><mi>q</mi></msub><mi>/</mi><mi>v</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">y_q=\sqrt2m_q/v\to0</annotation></semantics></math>
+at fixed mass. Identifying
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mi>q</mi></msub><annotation encoding="application/x-tex">X_q</annotation></semantics></math>
+with a four-dimensional Yukawa coupling is a hypothesis.</p>
+<div id="thm:wz" class="theorem">
+<p><strong>Theorem 7</strong>. <em>Take
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><msub><mi>M</mi><mn>2</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>ℍ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>⊕</mo><msub><mi>M</mi><mn>4</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>ℂ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P=M_2(\mathbb H)\oplus M_4(\mathbb C)</annotation></semantics></math>,
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>p</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>⊕</mo><mi>s</mi><mi>u</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">sp(2)\oplus su(4)</annotation></semantics></math>
+and the trace form, with one coupling, gradings at distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>θ</mi></mrow><annotation encoding="application/x-tex">2\theta</annotation></semantics></math>,
+and at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>l</mi></mrow><annotation encoding="application/x-tex">x=l</annotation></semantics></math>
+a connector on a line
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>w</mi><annotation encoding="application/x-tex">w</annotation></semantics></math>
+in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">+1</annotation></semantics></math>
+eigenspace of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Γ</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\Gamma_p</annotation></semantics></math>
+and a line
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>
+in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℂ</mi><mn>4</mn></msup><annotation encoding="application/x-tex">\mathbb C^4</annotation></semantics></math>,
+whose stabilizer is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℂ</mi><mo>⊕</mo><mi>ℍ</mi><mo>⊕</mo><msub><mi>M</mi><mn>3</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>ℂ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mathbb C\oplus\mathbb H\oplus M_3(\mathbb C)</annotation></semantics></math>.
+Then for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mi>θ</mi><mo>&lt;</mo><mi>π</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">0&lt;\theta&lt;\pi/2</annotation></semantics></math>
+exactly nine modes are massless, the photon, with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>e</mi><mn>2</mn></msup><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>8</mn><mi>/</mi><mn>3</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>/</mi><msup><mi>g</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/e^2=(8/3)/g^2</annotation></semantics></math>,
+and the gluons, and
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><msup><mo>sin</mo><mn>2</mn></msup><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>M</mi><mi>W</mi></msub><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mfrac displaystyle="false"><mn>1</mn><mn>2</mn></mfrac><msup><mo>sin</mo><mn>22</mn></msup><mi>θ</mi><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><msup><mo>sin</mo><mn>2</mn></msup><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>M</mi><mi>Z</mi></msub><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mfrac displaystyle="false"><mn>4</mn><mn>5</mn></mfrac><msup><mo>sin</mo><mn>22</mn></msup><mi>θ</mi><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+\sin^2(M_Wl)&amp;=\tfrac12\sin^22\theta,\\
+\sin^2(M_Zl)&amp;=\tfrac45\sin^22\theta.
+\end{aligned}</annotation></semantics></math><span class="equation-number" aria-label="Equation 6">(6)</span></span>
+With
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi>θ</mi><mi>/</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">m=\theta/l</annotation></semantics></math>,
+as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\theta\to0</annotation></semantics></math>:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>M</mi><mi>W</mi><mn>2</mn></msubsup><mo>→</mo><mn>2</mn><msup><mi>m</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">M_W^2\to2m^2</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>M</mi><mi>Z</mi><mn>2</mn></msubsup><mo>→</mo><mfrac displaystyle="false"><mn>16</mn><mn>5</mn></mfrac><msup><mi>m</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">M_Z^2\to\tfrac{16}5m^2</annotation></semantics></math>.
+As
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>→</mo><mi>π</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\theta\to\pi/2</annotation></semantics></math>:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mi>W</mi></msub><mo>,</mo><msub><mi>M</mi><mi>Z</mi></msub><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">M_W,M_Z\to0</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>→</mo><mi>π</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">m\to\pi/(2l)</annotation></semantics></math>.
+In both limits
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>M</mi><mi>W</mi><mn>2</mn></msubsup><mi>/</mi><msubsup><mi>M</mi><mi>Z</mi><mn>2</mn></msubsup><mo>→</mo><mn>5</mn><mi>/</mi><mn>8</mn></mrow><annotation encoding="application/x-tex">M_W^2/M_Z^2\to5/8</annotation></semantics></math>,
+and its minimum is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>π</mi><mi>/</mi><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>/</mi><mo>arctan</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>0.503</mn></mrow><annotation encoding="application/x-tex">((\pi/4)/\arctan2)^2=0.503</annotation></semantics></math>
+at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mi>π</mi><mi>/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">\theta=\pi/4</annotation></semantics></math>.</em></p>
+</div>
+<p>Here the connector is prescribed wall data for the gauge field; as a
+term in the fermion boundary operator it also changes the affected
+fermion tower. The constants
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>16</mn><mi>/</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">16/5</annotation></semantics></math>
+are the Hilbert-Schmidt ratios
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">∥</mo><mrow><mo stretchy="true" form="prefix">[</mo><msub><mi>D</mi><mi>F</mi></msub><mo>,</mo><mi>a</mi><mo stretchy="true" form="postfix">]</mo></mrow><msup><mo stretchy="false" form="postfix">∥</mo><mn>2</mn></msup><mi>/</mi><mo stretchy="false" form="postfix">∥</mo><mi>a</mi><msup><mo stretchy="false" form="postfix">∥</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\|[D_F,a]\|^2/\|a\|^2</annotation></semantics></math>,
+and they are the coefficients of the lower bounds for the poles of the
+fully massive family in the exact quadratic spectral action (<a
+href="supplemental.pdf">Supplemental Material, part 18</a>), whose
+small-mass poles and Taylor mass differ from them by the heat
+coefficients. The second limit is a geometric form of heavy fermions
+with light vectors: at antipodal points the two walls have the same
+stabilizer in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>p</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">sp(2)</annotation></semantics></math>.</p>
+<div id="prop:theta" class="proposition">
+<p><strong>Proposition 8</strong>. <em>For the heat cutoff and universal
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>,
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>l</mi><mi>Λ</mi></mrow><annotation encoding="application/x-tex">s=l\Lambda</annotation></semantics></math>,
+the trace per channel is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mo>∑</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow></msub><mo>exp</mo><mrow><mo stretchy="true" form="prefix">(</mo><mo>−</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mi>π</mi><mo>+</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mi>/</mi><msup><mi>s</mi><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">2\sum_{n\in\mathbb Z}\exp(-(n\pi+\theta)^2/s^2)</annotation></semantics></math>,
+a Jacobi theta function, strictly decreasing on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mn>0</mn><mo>,</mo><mi>π</mi><mi>/</mi><mn>2</mn><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[0,\pi/2]</annotation></semantics></math>.
+For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">s\to0</annotation></semantics></math>
+at fixed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><msup><mi>θ</mi><mn>2</mn></msup><mi>/</mi><msup><mi>s</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">x=\theta^2/s^2</annotation></semantics></math>,
+it tends to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msup><mi>e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow><annotation encoding="application/x-tex">2e^{-x}</annotation></semantics></math>.</em></p>
+</div>
+<p>The radial no-go of the finite action <span class="citation"
+data-cites="towerlesspaper">(<a href="#ref-towerlesspaper"
+role="doc-biblioref"><span>“Finite Spectral Triples as Towerless
+Intervals”</span> 2026</a>)</span> concerns finite data and a free ray,
+so this family lies outside it: the radial direction is compact, and the
+tower gives a stationary point at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi>π</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">m=\pi/(2l)</annotation></semantics></math>.
+There, by Theorem <a href="#thm:wz" data-reference-type="ref"
+data-reference="thm:wz">7</a>, the vectors are massless, so this is not
+the physical point. For the one-loop potential with vector and fermion
+loops in the flat massless family, with fermions counted by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mi>f</mi></msub><mo>=</mo><mn>2</mn><msub><mi>N</mi><mi>D</mi></msub></mrow><annotation encoding="application/x-tex">n_f=2N_D</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mi>π</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\theta=\pi/2</annotation></semantics></math>
+is the unique global minimum for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mi>f</mi></msub><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">n_f&gt;0</annotation></semantics></math>,
+the potential is strictly decreasing for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mi>f</mi></msub><mo>≥</mo><mn>54</mn><mi>/</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">n_f\ge54/5</annotation></semantics></math>,
+and for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><msub><mi>n</mi><mi>f</mi></msub><mo>&lt;</mo><mn>54</mn><mi>/</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">0&lt;n_f&lt;54/5</annotation></semantics></math>
+it has exactly one interior stationary point, a strict maximum, for the
+stated flat massless determinant with no other angle-dependent term (<a
+href="supplemental.pdf">Supplemental Material, part 23</a> and <a
+href="supplemental.pdf">Supplemental Material, part 24</a>). In a flat
+tree-level comparison, neither the Wilson-line family, with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>M</mi><mi>W</mi><mn>2</mn></msubsup><mi>/</mi><msubsup><mi>M</mi><mi>Z</mi><mn>2</mn></msubsup><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><mn>0.503</mn><mo>,</mo><mn>0.625</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">M_W^2/M_Z^2\in[0.503,0.625)</annotation></semantics></math>,
+nor a finite wall scalar, with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>0.625</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">[0.625,1)</annotation></semantics></math>,
+fits both the top ratio and the weak ratio. Pure fermion channels of
+frequency 2 under the Wilson line, which the bimodule does not contain,
+change this: for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mn>2</mn></msub><mo>≥</mo><msub><mi>n</mi><mi>c</mi></msub><mo>=</mo><mn>2.8855</mn><mi>…</mi></mrow><annotation encoding="application/x-tex">n_2\ge n_c=2.8855\ldots</annotation></semantics></math>
+they give an interior global minimum, at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mi>π</mi><mi>/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">\theta=\pi/4</annotation></semantics></math>
+when they act alone, where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mi>/</mi><mi>l</mi><mo>=</mo><mn>4</mn><msub><mi>M</mi><mi>W</mi></msub></mrow><annotation encoding="application/x-tex">\pi/l=4M_W</annotation></semantics></math>.
+In the multiplets containing both top chiralities, in the displayed
+channel, a state at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>M</mi><mi>W</mi></msub></mrow><annotation encoding="application/x-tex">2M_W</annotation></semantics></math>
+has a lighter coloured partner for every finite wall mass. In a
+step-threshold model without those multiplets, the left-right difference
+of the couplings runs only logarithmically, and at one loop the three
+couplings meet at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.2</mn><mo>×</mo><msup><mn>10</mn><mn>14</mn></msup></mrow><annotation encoding="application/x-tex">2.2\times10^{14}</annotation></semantics></math> GeV
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mi>/</mi><mi>l</mi><mo>=</mo><mn>3.15</mn><mo>×</mo><msup><mn>10</mn><mn>13</mn></msup></mrow><annotation encoding="application/x-tex">\pi/l=3.15\times10^{13}</annotation></semantics></math> GeV,
+where the flat potential has no global minimum at the required angle (<a
+href="supplemental.pdf">Supplemental Material, part 26</a>). These
+negative statements hold in those flat families. They point toward
+changed form factors, as in warped composite models <span
+class="citation" data-cites="ACP2005">(<a href="#ref-ACP2005"
+role="doc-biblioref">Agashe, Contino, and Pomarol 2005</a>)</span>, or a
+wall scalar with its own potential, for the physical interior,
+consistently with the reading of the odd labels as limits.</p>
+<h2 data-number="0.6"
+id="the-sum-rule-and-the-effective-dimension"><span
+class="header-section-number">0.6</span> The sum rule and the effective
+dimension</h2>
+<p>Unfolding gives a sharper statement. For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mrow><mo stretchy="true" form="prefix">[</mo><mo>−</mo><mi>l</mi><mo>,</mo><mi>l</mi><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">x\in[-l,l]</annotation></semantics></math>,
+put
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Ψ</mi><mi>Q</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mi>Q</mi><mi>L</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mo stretchy="true" form="prefix">|</mo><mi>x</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>i</mi><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">g</mi><mi mathvariant="normal">n</mi></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><msub><mi>Q</mi><mi>R</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mo stretchy="true" form="prefix">|</mo><mi>x</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\Psi_Q(x)=Q_L(|x|)+i\,\mathrm{sgn}(x)Q_R(|x|)</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Ψ</mi><mi>U</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mi>U</mi><mi>R</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mo stretchy="true" form="prefix">|</mo><mi>x</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><mi>i</mi><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">g</mi><mi mathvariant="normal">n</mi></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><msub><mi>U</mi><mi>L</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mo stretchy="true" form="prefix">|</mo><mi>x</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\Psi_U(x)=U_R(|x|)-i\,\mathrm{sgn}(x)U_L(|x|)</annotation></semantics></math>.
+Up to the factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msqrt><mn>2</mn></msqrt></mrow><annotation encoding="application/x-tex">1/\sqrt2</annotation></semantics></math>,
+this is unitary, and it carries
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mo>*</mo></msup><msub><mi>D</mi><mi>X</mi></msub><mi>R</mi><mo>=</mo><msub><mi>D</mi><mn>0</mn></msub><mo>+</mo><mi>E</mi><msub><mi>Γ</mi><mi>F</mi></msub><msub><mi>D</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">R^*D_XR=D_0+E\Gamma_FD_F</annotation></semantics></math>
+to
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mi>i</mi><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo>⊗</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>⊗</mo><msub><mi>D</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">-i\frac{d}{dx}\otimes1+1\otimes D_F</annotation></semantics></math><span class="equation-number" aria-label="Equation 7">(7)</span></span>
+on the circle of length
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>l</mi></mrow><annotation encoding="application/x-tex">2l</annotation></semantics></math>.
+So the tower is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>F</mi></msub><annotation encoding="application/x-tex">D_F</annotation></semantics></math>
+shifted by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><mi>π</mi><mi>/</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">k_n=n\pi/l</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">n\in\mathbb Z</annotation></semantics></math>,
+and an even generator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>
+constant in this transported frame becomes
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>⊗</mo><mi>T</mi></mrow><annotation encoding="application/x-tex">1\otimes T</annotation></semantics></math>.
+In the original frame it is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mi>T</mi><msup><mi>R</mi><mo>*</mo></msup></mrow><annotation encoding="application/x-tex">RTR^*</annotation></semantics></math>,
+generally with an odd bulk component, so it needs an enlarged gauge
+algebra, such as the prealgebra above. The exact quadratic kernel of the
+spectral action <span class="citation" data-cites="towerlesspaper">(<a
+href="#ref-towerlesspaper" role="doc-biblioref"><span>“Finite Spectral
+Triples as Towerless Intervals”</span> 2026</a>)</span> then applies
+block by block, with Gaussian convergence.</p>
+<div id="thm:deff" class="theorem">
+<p><strong>Theorem 9</strong>. <em>For the heat cutoff, with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>l</mi><mi>Λ</mi></mrow><annotation encoding="application/x-tex">s=l\Lambda</annotation></semantics></math>,
+the Taylor mass of a vector of constant profile in the transported frame
+is, at fixed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+and for fixed nonzero
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>,
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>M</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mn>3</mn><mo>−</mo><mi>d</mi></mrow><mn>2</mn></mfrac><mspace width="0.167em"></mspace><mfrac><mrow><mo stretchy="false" form="postfix">∥</mo><mrow><mo stretchy="true" form="prefix">[</mo><msub><mi>D</mi><mi>F</mi></msub><mo>,</mo><mi>T</mi><mo stretchy="true" form="postfix">]</mo></mrow><msup><mo stretchy="false" form="postfix">∥</mo><mn>2</mn></msup></mrow><mrow><mo stretchy="false" form="postfix">∥</mo><mi>T</mi><msup><mo stretchy="false" form="postfix">∥</mo><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mi>O</mi><mspace width="-0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mo stretchy="false" form="postfix">∥</mo><msub><mi>D</mi><mi>F</mi></msub><msup><mo stretchy="false" form="postfix">∥</mo><mn>4</mn></msup></mrow><msup><mi>Λ</mi><mn>2</mn></msup></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">M^2=\frac{3-d}2\,\frac{\|[D_F,T]\|^2}{\|T\|^2}+O\!\left(\frac{\|D_F\|^4}{\Lambda^2}\right),</annotation></semantics></math><span class="equation-number" aria-label="Equation 8">(8)</span></span>
+in Hilbert-Schmidt norms, where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mi>d</mi><mo>log</mo><mi>S</mi><mi>/</mi><mi>d</mi><mo>log</mo><mi>s</mi></mrow><annotation encoding="application/x-tex">d=d\log S/d\log s</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>s</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mo>∑</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow></msub><msup><mi>e</mi><mrow><mo>−</mo><msup><mi>n</mi><mn>2</mn></msup><msup><mi>π</mi><mn>2</mn></msup><mi>/</mi><msup><mi>s</mi><mn>2</mn></msup></mrow></msup></mrow><annotation encoding="application/x-tex">S(s)=\sum_{n\in\mathbb Z}e^{-n^2\pi^2/s^2}</annotation></semantics></math>.
+Here
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>
+is the heat trace of the unshifted circle at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><msup><mi>Λ</mi><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">t=\Lambda^{-2}</annotation></semantics></math>,
+so
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+is its spectral dimension at the cutoff, with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">d\to0</annotation></semantics></math>
+for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>≪</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">s\ll1</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>→</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">d\to1</annotation></semantics></math>
+for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>≫</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">s\gg1</annotation></semantics></math>.
+For the three-generation Standard Model representation, at this order,
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>M</mi><mi>W</mi><mn>2</mn></msubsup><mo>=</mo><mfrac><mrow><mn>3</mn><mo>−</mo><mi>d</mi></mrow><mn>24</mn></mfrac><munder><mo>∑</mo><mi>f</mi></munder><msub><mi>N</mi><mi>f</mi></msub><msubsup><mi>m</mi><mi>f</mi><mn>2</mn></msubsup><mo>,</mo></mrow><annotation encoding="application/x-tex">M_W^2=\frac{3-d}{24}\sum_fN_fm_f^2,</annotation></semantics></math><span class="equation-number" aria-label="Equation 9">(9)</span></span>
+so for the top alone
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mi>t</mi></msub><mi>/</mi><msub><mi>M</mi><mi>W</mi></msub><mo>=</mo><msqrt><mrow><mn>8</mn><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>3</mn><mo>−</mo><mi>d</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></msqrt></mrow><annotation encoding="application/x-tex">m_t/M_W=\sqrt{8/(3-d)}</annotation></semantics></math>,
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>M</mi><mi>W</mi><mn>2</mn></msubsup><mi>/</mi><msubsup><mi>M</mi><mi>Z</mi><mn>2</mn></msubsup><mo>=</mo><mn>5</mn><mi>/</mi><mn>8</mn></mrow><annotation encoding="application/x-tex">M_W^2/M_Z^2=5/8</annotation></semantics></math>
+at all
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>.</em></p>
+</div>
+<div class="proof">
+<p><em>Structure of the proof.</em> With
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>k</mi><mo>+</mo><msub><mi>μ</mi><mi>i</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">a_i=(k+\mu_i)^2</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><msub><mi>μ</mi><mi>i</mi></msub><mo>−</mo><msub><mi>μ</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">d_{ij}=\mu_i-\mu_j</annotation></semantics></math>,
+the kernel at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">q=0</annotation></semantics></math>
+expands to second order in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>
+as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>d</mi><mrow><mi>i</mi><mi>j</mi></mrow><mn>2</mn></msubsup><msup><mi>e</mi><mrow><mo>−</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mfrac displaystyle="false"><mn>2</mn><mn>3</mn></mfrac><msup><mi>k</mi><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">d_{ij}^2e^{-k^2}(1-\tfrac23k^2)</annotation></semantics></math>,
+and at order
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>q</mi><mn>2</mn></msup><annotation encoding="application/x-tex">q^2</annotation></semantics></math>
+as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac displaystyle="false"><mn>2</mn><mn>3</mn></mfrac><msup><mi>e</mi><mrow><mo>−</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></msup></mrow><annotation encoding="application/x-tex">\tfrac23e^{-k^2}</annotation></semantics></math>.
+Terms odd in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+cancel between
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">-n</annotation></semantics></math>.
+Summing over
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+gives the factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac displaystyle="false"><mn>3</mn><mn>2</mn></mfrac><mo>−</mo><mo stretchy="false" form="prefix">⟨</mo><msup><mi>k</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\tfrac32-\langle k^2\rangle</annotation></semantics></math>,
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><msup><mi>k</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mfrac displaystyle="false"><mn>1</mn><mn>2</mn></mfrac><mi>d</mi><mo>log</mo><mi>S</mi><mi>/</mi><mi>d</mi><mo>log</mo><mi>s</mi></mrow><annotation encoding="application/x-tex">\langle k^2\rangle=\tfrac12d\log S/d\log s</annotation></semantics></math>. ◻</p>
+</div>
+<p>At
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">d=0</annotation></semantics></math>
+this is the relation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><msubsup><mi>M</mi><mi>W</mi><mn>2</mn></msubsup><mo>=</mo><mo>∑</mo><msub><mi>N</mi><mi>f</mi></msub><msubsup><mi>m</mi><mi>f</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">8M_W^2=\sum N_fm_f^2</annotation></semantics></math>
+of the asymptotic spectral action. At
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">d=1</annotation></semantics></math>
+it is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><msubsup><mi>M</mi><mi>W</mi><mn>2</mn></msubsup><mo>=</mo><mo>∑</mo><msub><mi>N</mi><mi>f</mi></msub><msubsup><mi>m</mi><mi>f</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">12M_W^2=\sum N_fm_f^2</annotation></semantics></math>,
+which covariance requires on the unfolded circle: the fifth component of
+the Dirac operator is a constant
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>5</mn></msub><mo>=</mo><msub><mi>D</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">A_5=D_F</annotation></semantics></math>,
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>F</mi><mrow><mn>5</mn><mi>μ</mi></mrow><mn>2</mn></msubsup><annotation encoding="application/x-tex">F_{5\mu}^2</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow><mn>2</mn></msubsup><annotation encoding="application/x-tex">F_{\mu\nu}^2</annotation></semantics></math>
+have one coefficient. So the factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">3/2</annotation></semantics></math>
+between the finite spectral-action coefficient and the Yang-Mills
+commutator quotient is, in this constant-profile calculation, the ratio
+of the two ends of one function, crossing at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mi>Λ</mi><mo>≈</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">l\Lambda\approx2</annotation></semantics></math>.
+In terms of couplings,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>t</mi></msub><mo>=</mo><mn>2</mn><mi>g</mi><mi>/</mi><msqrt><mn>3</mn></msqrt></mrow><annotation encoding="application/x-tex">y_t=2g/\sqrt3</annotation></semantics></math>
+at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">d=0</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>t</mi></msub><mo>=</mo><msqrt><mn>2</mn></msqrt><mi>g</mi></mrow><annotation encoding="application/x-tex">y_t=\sqrt2g</annotation></semantics></math>
+at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">d=1</annotation></semantics></math>.
+The endpoint
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mi>t</mi></msub><mo>=</mo><mn>2</mn><msub><mi>M</mi><mi>W</mi></msub></mrow><annotation encoding="application/x-tex">m_t=2M_W</annotation></semantics></math>
+is known in flat gauge-Higgs models with suitable representations <span
+class="citation" data-cites="CCP2006">(<a href="#ref-CCP2006"
+role="doc-biblioref">Cacciapaglia, Csáki, and Park 2006</a>)</span>; we
+did not find the coefficient
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>3</mn><mo>−</mo><mi>d</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>/</mi><mn>24</mn></mrow><annotation encoding="application/x-tex">(3-d)/24</annotation></semantics></math>
+or the crossover, and a wider search is open. These are leading-order
+statements about a prescribed background: the towerless top-only
+expansion already has the correction
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mfrac displaystyle="false"><mn>23</mn><mn>128</mn></mfrac><msubsup><mi>m</mi><mi>t</mi><mn>4</mn></msubsup><mi>/</mi><msup><mi>Λ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">-\tfrac{23}{128}m_t^4/\Lambda^2</annotation></semantics></math>.
+They hold at a matching scale, for flat profiles and no running. With
+bulk masses for the light fields the kinetic coefficient must be
+recomputed. Comparison with measured values needs a specified effective
+theory with thresholds and running.</p>
+<h2 data-number="0.7" id="status"><span
+class="header-section-number">0.7</span> Status</h2>
+<p>As mathematics, the one-flavor formula and the gauge boundary
+conditions are known <span class="citation"
+data-cites="Csaki2004 Csaki2003">(<a href="#ref-Csaki2004"
+role="doc-biblioref">Csáki, Grojean, Hubisz, et al. 2004</a>; <a
+href="#ref-Csaki2003" role="doc-biblioref">Csáki, Grojean, Murayama, et
+al. 2004</a>)</span>, compression of operator systems is treated in
+<span class="citation" data-cites="CvS2021">(<a href="#ref-CvS2021"
+role="doc-biblioref">Connes and Suijlekom 2021</a>)</span>, and spectral
+action on spaces with boundary in <span class="citation"
+data-cites="CC2011">(<a href="#ref-CC2011"
+role="doc-biblioref">Chamseddine and Connes 2011</a>)</span>, for a
+boundary of the manifold, with a local chirality projector. In our
+searches we did not find the finite real triple as an exact window on an
+internal interval, with the wall algebra and the average formula; the
+searches are recorded in the Supplemental Material and do not establish
+absence. The parent algebra is matrix-valued, so the founding question
+for a commutative parent remains open, as does any selection of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>F</mi></msub><annotation encoding="application/x-tex">A_F</annotation></semantics></math>.
+On
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mi>ℂ</mi><mi>ℙ</mi></mrow><mn>3</mn></msup><mo>×</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">\mathbb{CP}^3\times I</annotation></semantics></math>,
+nonlocal spectral walls give the exact window for the operator and the
+grading, with the higher
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math>-modes
+decoupling with the radius, but they reduce scalar functions at the
+walls to constants, while direct aligned compression of real functions
+on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>S</mi><mn>4</mn></msup><annotation encoding="application/x-tex">S^4</annotation></semantics></math>
+gives only
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℝ</mi><mo>⊕</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">\mathbb R\oplus\mathbb R</annotation></semantics></math>,
+against
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℍ</mi><mo>⊕</mo><mi>ℍ</mi></mrow><annotation encoding="application/x-tex">\mathbb H\oplus\mathbb H</annotation></semantics></math>
+when the matrix algebra is generated at the intermediate stage (<a
+href="supplemental.pdf">Supplemental Material, part 24</a>).</p>
+<h2 class="unnumbered" id="provenance">Provenance</h2>
+<p>This note has no listed authors. The results were proved by Claude
+Opus 5.5, except that the statements on the commutative cylinder and the
+proof for the one-loop potential are by Astra 6 (gpt-6-astra, effort
+xhigh). All were refereed by Terra 6.1 (gpt-6.1-terra, effort max),
+whose reports led to corrections, with Python (numpy, scipy) checks of
+the identities and the numerical statements. Details are in the
+Supplemental Material of <span class="citation"
+data-cites="towerlesspaper">(<a href="#ref-towerlesspaper"
+role="doc-biblioref"><span>“Finite Spectral Triples as Towerless
+Intervals”</span> 2026</a>)</span>, parts 22 to 26, with the referee
+reports.</p>
+<h2 id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent"
+role="list">
+<div id="ref-ACP2005" class="csl-entry" role="listitem">
+Agashe, K., R. Contino, and A. Pomarol. 2005. <span>“The Minimal
+Composite <span>H</span>iggs Model.”</span> <em>Nucl. Phys. B</em> 719:
+165. <a
+href="https://doi.org/10.1016/j.nuclphysb.2005.04.035">https://doi.org/10.1016/j.nuclphysb.2005.04.035</a>.
+</div>
+<div id="ref-CCP2006" class="csl-entry" role="listitem">
+Cacciapaglia, G., C. Csáki, and S. C. Park. 2006. <span>“Fully Radiative
+Electroweak Symmetry Breaking.”</span> <em>J. High Energy Phys.</em> 03:
+099.
+</div>
+<div id="ref-CC2008" class="csl-entry" role="listitem">
+Chamseddine, A. H., and A. Connes. 2008. <span>“Why the
+<span>S</span>tandard <span>M</span>odel.”</span> <em>J. Geom.
+Phys.</em> 58: 38. <a
+href="https://doi.org/10.1016/j.geomphys.2007.09.011">https://doi.org/10.1016/j.geomphys.2007.09.011</a>.
+</div>
+<div id="ref-CC2011" class="csl-entry" role="listitem">
+———. 2011. <span>“Noncommutative Geometric Spaces with Boundary:
+Spectral Action.”</span> <em>J. Geom. Phys.</em> 61: 317. <a
+href="https://doi.org/10.1016/j.geomphys.2010.10.002">https://doi.org/10.1016/j.geomphys.2010.10.002</a>.
+</div>
+<div id="ref-CCvS2013a" class="csl-entry" role="listitem">
+Chamseddine, A. H., A. Connes, and W. D. van Suijlekom. 2013.
+<span>“Inner Fluctuations in Noncommutative Geometry Without the First
+Order Condition.”</span> <em>J. Geom. Phys.</em> 73: 222. <a
+href="https://doi.org/10.1016/j.geomphys.2013.06.006">https://doi.org/10.1016/j.geomphys.2013.06.006</a>.
+</div>
+<div id="ref-CvS2021" class="csl-entry" role="listitem">
+Connes, A., and W. D. van Suijlekom. 2021. <span>“Spectral Truncations
+in Noncommutative Geometry and Operator Systems.”</span> <em>Commun.
+Math. Phys.</em> 383: 2021. <a
+href="https://doi.org/10.1007/s00220-020-03825-x">https://doi.org/10.1007/s00220-020-03825-x</a>.
+</div>
+<div id="ref-Csaki2004" class="csl-entry" role="listitem">
+Csáki, C., C. Grojean, J. Hubisz, Y. Shirman, and J. Terning. 2004.
+<span>“Fermions on an Interval: Quark and Lepton Masses Without a
+<span>H</span>iggs.”</span> <em>Phys. Rev. D</em> 70: 015012. <a
+href="https://doi.org/10.1103/PhysRevD.70.015012">https://doi.org/10.1103/PhysRevD.70.015012</a>.
+</div>
+<div id="ref-Csaki2003" class="csl-entry" role="listitem">
+Csáki, C., C. Grojean, H. Murayama, L. Pilo, and J. Terning. 2004.
+<span>“Gauge Theories on an Interval: Unitarity Without a
+<span>H</span>iggs Boson.”</span> <em>Phys. Rev. D</em> 69: 055006. <a
+href="https://doi.org/10.1103/PhysRevD.69.055006">https://doi.org/10.1103/PhysRevD.69.055006</a>.
+</div>
+<div id="ref-DLM2014" class="csl-entry" role="listitem">
+D’Andrea, F., F. Lizzi, and P. Martinetti. 2014. <span>“Spectral
+Geometry with a Cut-Off: Topological and Metric Aspects.”</span> <em>J.
+Geom. Phys.</em> 82: 18. <a
+href="https://doi.org/10.1016/j.geomphys.2014.03.014">https://doi.org/10.1016/j.geomphys.2014.03.014</a>.
+</div>
+<div id="ref-towerlesspaper" class="csl-entry" role="listitem">
+<span>“Finite Spectral Triples as Towerless Intervals.”</span> 2026.
+ <a class="local-reference" href="towerless_intervals.html">Read the paper in HTML</a>.</div>
+<div id="ref-Hosotani1983" class="csl-entry" role="listitem">
+Hosotani, Y. 1983. <span>“Dynamical Mass Generation by Compact Extra
+Dimensions.”</span> <em>Phys. Lett. B</em> 126: 309. <a
+href="https://doi.org/10.1016/0370-2693(83)90170-3">https://doi.org/10.1016/0370-2693(83)90170-3</a>.
+</div>
+</div>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Draft research documents. Equations are rendered as MathML; the source papers and their supplements remain the record for each claim.</p>
+  <p><a href="index.html">Integrated discussion</a> · <a href="supplemental.pdf">Full supplement</a> · <a href="https://github.com/arivero/conneskk">Research repository</a></p>
+</footer>
+</div>
+</div>
+</body>
+</html>
