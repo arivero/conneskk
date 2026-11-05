@@ -19,3 +19,6 @@ part 38 lemmas/38_*.md
 part 41 lemmas/41_*.md
 part 42 lemmas/42_*.md
 part 43 lemmas/43_*.md
+part 46 lemmas/46_*.md
+part 47 lemmas/47_*.md
+part 48 lemmas/48_*.md

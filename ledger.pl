@@ -1202,32 +1202,32 @@ claim(l47_killing_form, proposition, proved, "Proposition 47.1", "On the Berger 
 source(l47_killing_form, 'lemmas/47_berger_sphere_coupling_normalization.md', 'statements').
 attempted_by(l47_killing_form, claude_fable_5_1).
 checked_by(l47_killing_form, claude_fable_5_1, python("the two sphere moments by Monte Carlo (2 x 10^6 points); not kept")).
-referee_pending(l47_killing_form).
-claim(l47_coupling_ratio, corollary, proved, "Corollary 47.2", "e^2/g_s^2 = (3 + eta^2)/(24 eta^2 c^2) at tree level; the two formulas of the parked job 04 are c = 1/3 and c = 2/3; the spinor unit at the round point (the 4 of SU(4) restricting to U(3) as 3_{-1/3} + 1_1, the coordinates at 2/3 in Lambda^2(4)) gives 3(eta^2 + 3)/(32 eta^2), equal to Connes' matching value 3/8 at eta = 1 (also by Schur's lemma: tr Q^2 = 4/3 against tr T^2 = 1/2), decreasing to 3/32 as eta -> infinity.").
+checked_by(l47_killing_form, claude_opus_5_5, python("the two moments and the Berger form at eta = 0.5, 1, 2, 3 by Monte Carlo with 4 x 10^6 points")).  % 5 Nov 2026
+claim(l47_coupling_ratio, corollary, proved, "Corollary 47.2", "e^2/g_s^2 = (3 + eta^2)/(24 eta^2 c^2) at tree level; the two formulas of the parked job 04 are c = 1/3 and c = 2/3; the spinor unit at the round point (the 4 of SU(4) restricting to U(3) as 3_{-1/3} + 1_1, the coordinates at 2/3 in Lambda^2(4)) gives 3(eta^2 + 3)/(32 eta^2), equal to Connes' matching value 3/8 at eta = 1 (also by Schur's lemma: tr Q^2 = 4/3 against tr T^2 = 1/2, so independent of any SO(6)-invariant source), and in the Einstein-term reduction decreasing to 3/32 as eta -> infinity; c = 2/3 is the superconformal R-charge of Barnes, Gorbatov, Intriligator and Wright, whose tau_SU(3)/tau_RR = 3/8.").
 source(l47_coupling_ratio, 'lemmas/47_berger_sphere_coupling_normalization.md', 'statements').
 attempted_by(l47_coupling_ratio, claude_fable_5_1).
 checked_by(l47_coupling_ratio, claude_fable_5_1, python("the formula at eta = 1, 2, 1/2 against the Monte Carlo moments; the charges of Lambda^2(4); not kept")).
 depends(l47_coupling_ratio, l47_killing_form).
-referee_pending(l47_coupling_ratio).
+checked_by(l47_coupling_ratio, claude_opus_5_5, python("the charges of Lambda^2(4), the traces in the 4 and the 6, the ratio with a Ricci-weighted term")).  % 5 Nov 2026: Weinberg's formula; Einstein-term scope of the curve; enhancement proved via the Ricci eigenvalues
 addresses(t18, l47_killing_form).  addresses(t18, l47_coupling_ratio).
-claim(l48_spin_lift, proposition, proved, "Proposition 48.1", "On T^6 = A x E with the flat metric, a transposition of S_3 acts on T A = a (x) R^2 as the rotation by pi in a two-plane, both lifts to Spin(4) having order four (rs_N20: no homomorphic lift of S_3), a three-cycle lifts to order three, the lift of S_3 is Dic_3, the inversion of E lifts to a central element of square -1, and the lift group of W = S_3 x Z_2 is (Dic_3 x Z_4)/Z_2 of order 24, with lifted stabilizers Dic_3 at an orbit of stabilizer S_3, the whole group at the fixed point, and (Z_4 x Z_4)/Z_2 at the three-point orbit.").
+claim(l48_spin_lift, proposition, proved, "Proposition 48.1", "On T^6 = A x E with the flat metric, a transposition of S_3 acts on T A = a (x) R^2 as the rotation by pi in a two-plane, both lifts to Spin(4) having order four (rs_N20: no homomorphic lift of S_3), a three-cycle lifts to order three, the lift of S_3 is Dic_3, the inversion of E lifts to a central element of square -1, and the lift group of W = S_3 x Z_2 is (Dic_3 x Z_4)/Z_2 of order 24, isomorphic to S_3 x Z_4 (the twisted S_3 pairing odd permutations with the inversion lifts homomorphically), with lifted stabilizers Dic_3 at an orbit of stabilizer S_3, the whole group at the fixed point, and (Z_4 x Z_4)/Z_2 at the three-point orbit.").
 source(l48_spin_lift, 'lemmas/48_spin_lift_quaternions_weyl_orbits.md', 'statements').
 attempted_by(l48_spin_lift, claude_fable_5_1).
 checked_by(l48_spin_lift, claude_fable_5_1, by_hand).
 depends(l48_spin_lift, l45_fibres).
-referee_pending(l48_spin_lift).
+checked_by(l48_spin_lift, claude_opus_5_5, python("an explicit Cl(6): the lifts and the groups they generate with their element orders; the S_3-invariant spin structures of A")).  % 5 Nov 2026
 claim(l48_spinorial_algebras, proposition, proved, "Proposition 48.2", "R[Dic_3] = R + R + M_2(R) + C + H, with spinorial part (-1 acting as -1) C + H: the conjugate pair of characters with the lifted transposition acting as +-i, and the faithful two-dimensional representation, of quaternionic type; at the fixed point the central lift of the inversion acts as +-i on every spinorial representation, which are then of complex type, and the spinorial part is C + C + M_2(C); at the three-point orbit it is C + C.").
 source(l48_spinorial_algebras, 'lemmas/48_spin_lift_quaternions_weyl_orbits.md', 'statements').
 attempted_by(l48_spinorial_algebras, claude_fable_5_1).
 checked_by(l48_spinorial_algebras, claude_fable_5_1, by_hand).
 depends(l48_spinorial_algebras, l48_spin_lift).
-referee_pending(l48_spinorial_algebras).
-claim(l48_real_two_sheets, theorem, proved, "Theorem 48.3", "The fibre of the spinorial real crossed product at an orbit of type (a, a, a) is M_2(C + H), with corner C + H, and at the three-point orbit M_3(C + C); the two-sheet bimodule of Theorem 45.2 with its first sheet at such an orbit (V_X = C + C^2, A_{F,X} = C + H, G = (1, -1), d_X = D_v; V_Y = C^3, M_3(C)) has the KO-6 signs, order zero, order one, nonzero one-forms and the real orientability relation over the real algebra C + H + M_3(C), with the corpus intersection form of rank 2; the spinorial condition selects exactly C + H on the first sheet, up to the choice of a conjugate character.").
+checked_by(l48_spinorial_algebras, claude_opus_5_5, python("spinor decompositions by characters and Frobenius-Schur sums; real spans and centres")).  % 5 Nov 2026: the matrix of the standard representation corrected
+claim(l48_real_two_sheets, theorem, proved, "Theorem 48.3", "The fibre of the spinorial real crossed product at an orbit of type (a, a, a) is M_2(C + H), with corner C + H, and at the three-point orbit M_3(C + C); the two-sheet bimodule of Theorem 45.2 with its first sheet at such an orbit (V_X = C + C^2, A_{F,X} = C + H, G = (1, -1), d_X = D_v; V_Y = C^3, M_3(C)) has the KO-6 signs, order zero, order one, nonzero one-forms and the real orientability relation over the real algebra C + H + M_3(C), with the corpus intersection form of rank 2; the spinorial condition fixes the algebra on each of the six orbit types, the quaternionic summand occurring only at stabilizer S_3 and the matrix size 3 only at the three-point orbit, so the target forces the two orbit types; V_X keeps one of the two conjugate characters (a choice of submodule), and the corner at O_1 against the quotient at O_2 is a choice.").
 source(l48_real_two_sheets, 'lemmas/48_spin_lift_quaternions_weyl_orbits.md', 'statements').
 attempted_by(l48_real_two_sheets, claude_fable_5_1).
 checked_by(l48_real_two_sheets, claude_fable_5_1, by_hand).
 depends(l48_real_two_sheets, l48_spinorial_algebras).  depends(l48_real_two_sheets, l45_two_sheets).  depends(l48_real_two_sheets, l16_two_sheets).
-referee_pending(l48_real_two_sheets).
+checked_by(l48_real_two_sheets, claude_opus_5_5, python("the fibres of the spinorial crossed product at the two orbits; the bimodule axioms and the intersection form on the 18 states")).  % 5 Nov 2026: corner/quotient choice stated; selection restated as the forcing of the orbit types
 addresses(t16, l48_spin_lift).  addresses(t16, l48_spinorial_algebras).  addresses(t16, l48_real_two_sheets).
 claim(l23_potential, no_go, proved, "Proposition 23.8", "Flat massless family, this gauge content, fermions of frequency 1, one loop: theta = pi/2 is the unique global minimum for n_f > 0, and V is strictly decreasing for n_f >= 10.8; for smaller n_f, no interior minimum on grids (Python). Escapes: general bulk masses with a completion, warping, wall scalar with a potential, wall terms, fermions of frequency 2.").
 source(l23_potential, 'lemmas/23_two_gradings_interval.md', 'the-one-loop-potential-in-the-same-family').
@@ -1586,6 +1586,8 @@ referee_report('lemmas/29_window_on_the_disc_bundle.md', 'historical/reviews/202
 referee_report('lemmas/37_dilaton_and_second_scale.md', 'historical/reviews/2026-11-05_terra_check_37_38.md').
 referee_report('lemmas/38_so30_fluctuations.md', 'historical/reviews/2026-11-05_terra_check_37_38.md').
 referee_report('lemmas/46_odd_blocks_quaternionic_sheet.md', 'historical/reviews/2026-11-05_opus_check_46.md').
+referee_report('lemmas/47_berger_sphere_coupling_normalization.md', 'historical/reviews/2026-11-05_opus_check_47_48.md').
+referee_report('lemmas/48_spin_lift_quaternions_weyl_orbits.md', 'historical/reviews/2026-11-05_opus_check_47_48.md').
 claim_amended(l28_window, l29_window_b).
 claim_amended(l28_window, l29_window_a).
 addresses(t0, l29_window_b).  addresses(t0, l29_window_a).  addresses(t0, l29_compression).  addresses(t0b, l29_compression).
