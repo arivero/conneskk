@@ -448,11 +448,12 @@ source(d11_44_sets, 'lemmas/34_colour_family_exchange.md', 'readings-proposals')
 depends(d11_44_sets, d11_no_isometry).
 attempted_by(d11_44_sets, claude_opus_5_5).
 checked_by(d11_44_sets, sonnet_5_5, python("degree multisets over W(D8) and family permutations, exact integers, not kept")).
-claim(d11_spin9_conjugate, proposition, proved, "Reading 3b (c)", "The so(9) fixed by the Chevalley involution on sl(9) (file 04) is conjugate in E8 to the Spin(9) of reading 3, with k = so(9) + 84 and p = 44 + 84; involutions with a 120-dimensional fixed algebra form one class, and the spinor embeddings with 128 -> 44 + 84 one SO(16)-class.").
+referee_pending(d11_44_sets).  % single-model strengthening (Sonnet); no referee has read it; added 5 Nov 2026 when lemma 34 gained a referee report for Proposition 5.6
+claim(d11_spin9_conjugate, proposition, proved, "Proposition 5.6 and Reading 3b (c)", "The so(9) fixed by the Chevalley involution theta on sl(9) (lemma 33) is conjugate in E8 to the Spin(9) of reading 3, with k = so(9) + 84 and p = 44 + 84, the 44 = p cap sl(9) in the gravity sector and the two 84 the graphs x +- theta x of Lambda^3 C^9; involutions of e8 with a 120-dimensional fixed algebra form one class, and the spinor embeddings with 128 -> 44 + 84 one class under Spin(16)/Z_2; inside E8 both subgroups are SO(9), and the class with the irreducible 128 is Spin(9).").
 source(d11_spin9_conjugate, 'lemmas/34_colour_family_exchange.md', 'readings-proposals').
 attempted_by(d11_spin9_conjugate, sonnet_5_5).
 checked_by(d11_spin9_conjugate, sonnet_5_5, by_hand).
-referee_pending(d11_spin9_conjugate).
+checked_by(d11_spin9_conjugate, claude_opus_5_5, python("weight-multiset branchings of 248 under the three so(9) classes and their Dynkin indices, exact fractions")).  % the referee also wrote the proof, Proposition 5.6 of lemma 34
 addresses(t14, d11_spin9_colour).  addresses(t14, d11_44_sets).  addresses(t14, d11_spin9_conjugate).
 addresses(t14, d11_no_isometry).  addresses(t14, d11_transposition).  addresses(t14, d11_two_heavy).
 addresses(t12, d11_no_isometry).  addresses(t14, d11_flip).  addresses(t12, d11_transposition).

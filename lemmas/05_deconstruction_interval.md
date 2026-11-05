@@ -6,7 +6,7 @@ The truncated endpoint states are smeared states on the original interval. Moreo
 
 ## Part 1. Deconstructed chain
 
-**Statement.** There is a natural family with opposite endpoint chiralities, an exact Connes–Lott member at \(N=2\), and endpoint distance converging to \(l\). The answer depends on the representation of the site algebra; the familiar lattice-distance anomaly is not universal.
+**Statement.** There is a natural family with opposite endpoint chiralities, an exact Connes–Lott member at \(N=2\), and endpoint distance converging to \(l\). The answer depends on the representation of the site algebra; the familiar lattice-distance anomaly is not universal. (Parts 1 and 2 were refereed by Claude Opus 5.5 on 5 November 2026, report in historical/reviews/2026-11-05_opus_check_05_21_34.md: correct as written, every formula recomputed, with the scope of the three convergence statements made explicit at the end of the Statement of Part 2.)
 
 **Hypotheses.** We consider complex even spectral triples, without imposing additional real-structure or KO-dimension axioms. Let \(N\geq2\), \(n=N-1\), and
 \[
@@ -159,7 +159,7 @@ Thus the quoted integer deconstruction tower belongs to the incidence constructi
 
 ## Part 2. Continuum limit
 
-**Statement.** The chain above converges to an interval Dirac operator in three precise senses: ordered low eigenvalues, heat traces locally uniformly for \(t>0\), and pure-state metric spaces in Gromov–Hausdorff distance. It also has a controlled one-dimensional heat window.
+**Statement.** The chain above converges to an interval Dirac operator in three precise senses: ordered low eigenvalues, heat traces locally uniformly for \(t>0\), and pure-state metric spaces in Gromov–Hausdorff distance. It also has a controlled one-dimensional heat window. Here spectral convergence means that each eigenvalue lambda_{N,r} increases to (2r-1) m_1 at fixed r, so that the counting function on [-E, E] converges for every E outside spec(D_l); the Hilbert spaces differ and no resolvent convergence is asserted. The heat traces converge uniformly on [eps, infinity) for every eps > 0. The Gromov-Hausdorff statement concerns the pure-state spaces with their Connes metrics, at distance at most l/(N-1) (referee, 5 November 2026).
 
 **Hypotheses.** On \(H_l=L^2([0,l],\mathbb C^2)\), define
 \[

@@ -76,11 +76,11 @@ depends(l05_limits, l05_truncation).
 attempted_by(l05_limits, astra6).
 checked_by(l05_limits, claude_opus_5_5, python("spectra")).
 checked_by(l05_limits, terra_6_1, by_hand).
-claim(l05_chain, theorem, proved, "Parts 1 and 2", "The staggered N-site chain with hopping h_N = (2N-1)/(2l) has spectrum +-2 h_N sin((2r-1) pi/(4N-2)), r = 1..N, and distances abs(i-j)/h_N between sites; as N -> infinity it converges to the chiral interval in spectrum, in heat trace and in Gromov-Hausdorff distance.").
+claim(l05_chain, theorem, proved, "Parts 1 and 2", "The staggered N-site chain with hopping h_N = pi/(4 l sin(pi/(4N-2))), asymptotic to (2N-1)/(2l), has spectrum +-2 h_N sin((2r-1) pi/(4N-2)), r = 1..N-1, with smallest positive eigenvalue pi/(2l) at every N, and Connes distances abs(i-j)/h_N between sites. As N -> infinity each eigenvalue increases to (2r-1) pi/(2l), the heat trace converges uniformly on [eps, infinity) for every eps > 0, and the pure-state metric spaces converge to [0, l] with the metric abs(x-y), at Gromov-Hausdorff distance at most l/(N-1).").
 source(l05_chain, 'lemmas/05_deconstruction_interval.md', '').
 attempted_by(l05_chain, astra6).
 checked_by(l05_chain, claude_opus_5_5, python("spectra and distances of the chain, with the truncation check of l05_truncation")).
-referee_pending(l05_chain).  % row added on 4 Nov 2026 when results/05_chain_converges_to_interval.md found none; no referee read Parts 1 and 2
+checked_by(l05_chain, claude_opus_5_5, python("spectra and commutator norms to N = 39, heat traces, path distances; the row's hopping and range of r corrected")).  % refereed 5 Nov 2026
 addresses(t1, l05_chain).
 claim(l06_factorization, theorem, proved, "Theorem", "A KO-6 triple factors as (KO-7) x P_7 or (KO-5) x P_1 iff there is a grading-reversing involution U commuting with a, a°, D and UJ = sJU (s = +1: 11, s = -1: 9).").
 source(l06_factorization, 'lemmas/06_vectorlike_odd_factorization.md', '').
@@ -1093,13 +1093,13 @@ checked_by(l21_so30, claude_opus_5_5, python("exact counting")).
 prior_work(l21_so30, partial, "hep-ph/0512065, Tables 1-2, an early preprint: the 15 diquarks and 25 mesons, the 4/3 states, and the top unable to form them; neither SO(30) nor a role for SO(32)").
 addresses(t12, l21_removal).  addresses(t12, l21_counts).  addresses(t12, l21_so30).
 checked_by(l21_so30, terra_6_1, by_hand).
-claim(l21_exotic, proposition, proved, "Proposition 21.4 and Corollary 21.5", "For n_u up-type and n_d down-type light quarks the symmetric diquark antitriplets number n_d(n_d+1)/2, n_u n_d, n_u(n_u+1)/2 at charges -2/3, 1/3, 4/3; the antisquark counts 6 and 6 of three generations force (n_u, n_d) = (2, 3), the top out, and leave 3 states of charge 4/3, half of a chiral-multiplet pairing; as superpartners their fermions would be three Weyl (3bar, 4/3) singlets, anomalous alone. Readings: partnerless scalars, or the top in with the 1/3 count broken to 9 and SO(36) in place of SO(32). In the window of lemma 38 one state remains.").
+claim(l21_exotic, proposition, proved, "Proposition 21.4 and Corollary 21.5", "For n_u up-type and n_d down-type light quarks the symmetric diquark antitriplets number n_d(n_d+1)/2, n_u n_d, n_u(n_u+1)/2 at charges -2/3, 1/3, 4/3; the antisquark counts 6 and 6 of three generations force (n_u, n_d) = (2, 3), the top out, and leave 3 states of charge 4/3, half of a chiral-multiplet pairing; as superpartners their fermions would be three Weyl (3bar, 4/3) singlets, anomalous alone. Readings: partnerless scalars, or the top in with the 1/3 count broken to 9 and SO(36) in place of SO(32). In the window of lemma 38, for distinct masses, the counts become (3, 6, 1) in reading (a), with one state of charge 4/3, and (3, 9, 3) in reading (b).").
 source(l21_exotic, 'lemmas/21_top_counting.md', 'so30').
 attempted_by(l21_exotic, claude_fable_5_1).
 checked_by(l21_exotic, claude_fable_5_1, by_hand).  % arithmetic; the anomaly traces are standard
 depends(l21_exotic, l21_so30).
 addresses(t12, l21_exotic).
-referee_pending(l21_exotic).  % added on 4 Nov 2026, after the Terra report on lemma 21
+checked_by(l21_exotic, claude_opus_5_5, python("exhaustive diquark counts, the window counts, all eight anomaly assignments; the window clause corrected for reading (b)")).  % refereed 5 Nov 2026
 claim(l41_forms, theorem, proved, "Lemma 41.1 and Theorem 41.2", "For a finite real KO-6 triple with order zero the trace form Q_ij = Tr(gamma p_i p_j^o) is skew. Along the chain A_PS -> A_SM -> C + M_3(C) of lemma 20 and lemma 06 (one generation, Dirac neutrinos) the forms are [[0,0,-2],[0,0,2],[2,-2,0]], [[0,-2,-2],[2,0,2],[2,-2,0]] and 0, of ranks 2, 2, 0: the trace-form Poincare duality fails at every step, at the last because every range rho(p_i) rho(p_j)^o of the light block has graded dimension zero (the bimodule balance of lemma 06, weaker than vectorlikeness: the unpaired nu_L coexists with Q_B = 0).").
 source(l41_forms, 'lemmas/41_axioms_along_the_chain.md', 'poincare-duality').
 attempted_by(l41_forms, claude_fable_5_1).
@@ -1604,6 +1604,9 @@ referee_report('lemmas/42_higgs_as_connector_moduli.md', 'historical/reviews/202
 referee_report('lemmas/43_engineered_connections.md', 'historical/reviews/2026-11-04_opus_check_41_45.md').
 referee_report('lemmas/44_seesaw_scaling_retained_algebra.md', 'historical/reviews/2026-11-04_opus_check_41_45.md').
 referee_report('lemmas/45_weyl_crossed_product_two_sheets.md', 'historical/reviews/2026-11-04_opus_check_41_45.md').
+referee_report('lemmas/05_deconstruction_interval.md', 'historical/reviews/2026-11-05_opus_check_05_21_34.md').
+referee_report('lemmas/21_top_counting.md', 'historical/reviews/2026-11-05_opus_check_05_21_34.md').
+referee_report('lemmas/34_colour_family_exchange.md', 'historical/reviews/2026-11-05_opus_check_05_21_34.md').
 referee_report('lemmas/05_deconstruction_interval.md', 'historical/reviews/2026-11-03_terra_check_08_13_14.md').
 referee_report('lemmas/06_vectorlike_odd_factorization.md', 'historical/reviews/2026-11-03_terra_check_nogo_19.md').
 referee_report('lemmas/08_product_selects_ko.md', 'historical/reviews/2026-11-03_terra_check_08_13_14.md').
