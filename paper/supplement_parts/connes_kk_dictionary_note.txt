@@ -22,3 +22,4 @@ part 43 lemmas/43_*.md
 part 46 lemmas/46_*.md
 part 47 lemmas/47_*.md
 part 48 lemmas/48_*.md
+part 49 lemmas/49_*.md
