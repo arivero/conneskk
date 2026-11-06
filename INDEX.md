@@ -142,7 +142,7 @@ From lemmas 06, 21 and 22 and the lemmas 35, 36 and 38: SO(30) as the commutant 
 
 A dated record to November 2026 in nine sections: origins beside the Kaluza-Klein closure (with the finding that no founding text cites the chirality obstruction), the 1990s, 2003-2012, 2013-2019, 2020-2026 (including what exists on finite triples as limits of geometries), ramifications, comparison with the author table to 2003, relevance to the project, and what is unverified.
 
-### Literature check of claims A-R: [paper/LITERATURE.md](paper/LITERATURE.md)
+### Literature check of claims A-S: [paper/LITERATURE.md](paper/LITERATURE.md)
 
 - [A. Connes-Lott as the minimal spectral truncation of a chiral interval](paper/LITERATURE.md#a-connes-lott-as-the-minimal-spectral-truncation-of-a-chiral-interval)
 - [B. The two limits of the massive chiral interval](paper/LITERATURE.md#b-the-two-limits-of-the-massive-chiral-interval)
@@ -162,6 +162,7 @@ A dated record to November 2026 in nine sections: origins beside the Kaluza-Klei
 - [P. The top block as the Higgs vector times the Majorana projector, the compressed height functions and the quark-lepton split (lemma 50): prior work](paper/LITERATURE.md#p-the-top-block-as-the-higgs-vector-times-the-majorana-projector-the-compressed-height-functions-and-the-quark-lepton-split-lemma-50-prior-work)
 - [Q. The torus Dirac operator with a Wilson line and a torsion as the Yukawa block (lemma 51)](paper/LITERATURE.md#q-the-torus-dirac-operator-with-a-wilson-line-and-a-torsion-as-the-yukawa-block-lemma-51)
 - [R. The lepton generation in three views (lemma 52)](paper/LITERATURE.md#r-the-lepton-generation-in-three-views-lemma-52)
+- [S. The chiral partition function from a five-dimensional bulk, and the lattice twist (lemmas 09, 27, 31; T3, T10; issues 7 and 16)](paper/LITERATURE.md#s-the-chiral-partition-function-from-a-five-dimensional-bulk-and-the-lattice-twist-lemmas-09-27-31-t3-t10-issues-7-and-16)
 - [Sources read on 4 November 2026](paper/LITERATURE.md#sources-read-on-4-november-2026)
 - [Items not verified](paper/LITERATURE.md#items-not-verified)
 - [Summary table](paper/LITERATURE.md#summary-table)
