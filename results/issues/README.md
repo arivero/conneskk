@@ -2,8 +2,18 @@
 
 Numbers correspond to the original discussions. Each calculation states its inputs, observable and scope. The linked issue retains its original questions and comments.
 
+The calculations and editorial requests in #2–4, #6–9, #11–13, #18 and #19 have been completed within their stated scope. Issue 13 explicitly allowed a radius interval about one, and issue 18 allowed a continuous family with its endpoint behaviour. Issue 19 records three measured comparisons with their uncertainties and mass conventions.
+
+Eight discussions retain open requirements.
+
+- [#1](01.md) needs one parent for the boundary real structure, chiral spectrum and gauge breaking. [#5](05.md) needs the general generation-matrix vacuum beyond the printed one-generation example.
+- [#10](10.md) needs the transmission coefficient of the coupled radial system, and [#16](16.md) needs the low-spin BFSS energy information and a dynamical identification of the circle.
+- [#14](14.md) needs a physical normalization and an electroweak identification of the magnetic theory. [#15](15.md) needs a parent action or spectrum that determines the charges and residual interactions of the proposed dark states. [#17](17.md) needs the spacetime flavour and grading couplings that would put the anomaly term in the original window.
+- [#20](20.md) needs an independently selected vacuum, charged-particle and tower matching, and conversion to the measured hadronic scale. The benchmark is crossed on the free family.
+
 | Issue | Calculation | Outcome |
 |---|---|---|
+| [#1](https://github.com/arivero/conneskk/issues/1) | [Dimension, boundary spinors and weak symmetry in the interpolation](01.md) | A KO-6 cylinder and a chiral six-dimensional example answer the boundary and flux questions. The weak centre sign depends on the bundle. A common dynamical parent is open. |
 | [#2](https://github.com/arivero/conneskk/issues/2) | [Twisted spinors and cap domains on the football](02.md) | Separated spectrum, chiral index, cap conditions and shrinking-scale exponents. |
 | [#3](https://github.com/arivero/conneskk/issues/3) | [The Berry connection of a moving Dirac kernel](03.md) | Kato transport gives the two motion terms and distinguishes the two admissible collar connections. |
 | [#4](https://github.com/arivero/conneskk/issues/4) | [Triality transport of the three-family frame](04.md) | An explicit two-reflection conjugator transports the 96 states. The colour stabilizer excludes the proposed 44. |

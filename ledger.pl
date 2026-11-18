@@ -1893,8 +1893,7 @@ addresses(t14, gh5_ps_potential).
 claim(gh6_elliptic_weyl, proposition, proved, "Issue 6", "The Weyl group of each holonomy centralizer gives the spin algebra of Lemma 49, and the normalized A2 Cartan pairing induces a Weyl-equivariant isogeny to the dual four-torus with kernel E[3].").
 source(gh6_elliptic_weyl, 'results/issues/06.md', '').
 attempted_by(gh6_elliptic_weyl, gpt_6_2_astra_max).
-checked_by(gh6_elliptic_weyl, gpt_6_2_astra_max, by_hand).
-referee_pending(gh6_elliptic_weyl).
+checked_by(gh6_elliptic_weyl, codex_gpt_6, by_hand).
 addresses(t16, gh6_elliptic_weyl).
 addresses(t18, gh6_elliptic_weyl).
 
@@ -1908,8 +1907,7 @@ addresses(t16, gh7_quark_wall).
 claim(gh8_three_torus_blocks, proposition, proved, "Issue 8", "An endomorphism-valued Wilson line and three-form from a single normal flavour endomorphism realize arbitrary three positive doublets with prescribed orientations; a degree-three elliptic zero sector realizes the multiplicity.").
 source(gh8_three_torus_blocks, 'results/issues/08.md', '').
 attempted_by(gh8_three_torus_blocks, gpt_6_2_astra_max).
-checked_by(gh8_three_torus_blocks, gpt_6_2_astra_max, by_hand).
-referee_pending(gh8_three_torus_blocks).
+checked_by(gh8_three_torus_blocks, codex_gpt_6, by_hand).
 addresses(t8, gh8_three_torus_blocks).
 addresses(t12, gh8_three_torus_blocks).
 addresses(t16, gh8_three_torus_blocks).
@@ -1955,18 +1953,21 @@ claim(gh19_s1, claim, numerical, "Issue 19, S1", "Thomson alpha times the line-s
 source(gh19_s1, 'results/issues/19.md', '').
 attempted_by(gh19_s1, gpt_6_2_astra_max).
 checked_by(gh19_s1, gpt_6_2_astra_max, python).
+checked_by(gh19_s1, codex_gpt_6, python).
 addresses(t13, gh19_s1).
 
 claim(gh19_s2, claim, numerical, "Issue 19, S2", "The charged-lepton scale exceeds the mean nucleon mass divided by three by 0.2802 percent.").
 source(gh19_s2, 'results/issues/19.md', '').
 attempted_by(gh19_s2, gpt_6_2_astra_max).
 checked_by(gh19_s2, gpt_6_2_astra_max, python).
+checked_by(gh19_s2, codex_gpt_6, python).
 addresses(t13, gh19_s2).
 
 claim(gh19_s3, claim, numerical, "Issue 19, S3", "Thomson alpha times the Fermi VEV exceeds the tau mass by about 1.116 percent.").
 source(gh19_s3, 'results/issues/19.md', '').
 attempted_by(gh19_s3, gpt_6_2_astra_max).
 checked_by(gh19_s3, gpt_6_2_astra_max, python).
+checked_by(gh19_s3, codex_gpt_6, python).
 addresses(t13, gh19_s3).
 
 claim(gh11_flat_folds, proposition, proved, "Issue 11", "For 0<=n2<nc the left stationary curve has a unique maximum exactly when n2>69/50, yielding the fold and all roots. For integer n2=1,2 and positive integer n1 all interior stationary points are maxima.").
@@ -1975,6 +1976,26 @@ attempted_by(gh11_flat_folds, gpt_6_2_astra_max).
 checked_by(gh11_flat_folds, terra_6_1, by_hand).
 addresses(t13, gh11_flat_folds).
 addresses(t5b, gh11_flat_folds).
+
+claim(gh1_spin_cylinder, proposition, proved, "Issue 1", "On the product of a closed spin five-manifold and an interval the complementary spectral boundary conditions and a quaternionic polarization of the tangential kernel give an explicit self-adjoint KO-6 domain. Its zero modes are precisely the polarized constant sections.").
+source(gh1_spin_cylinder, 'results/issues/01.md', '').
+attempted_by(gh1_spin_cylinder, gpt_6_2_astra_max).
+checked_by(gh1_spin_cylinder, terra_6_1, by_hand).
+addresses(t18, gh1_spin_cylinder).
+addresses(t11, gh1_spin_cylinder).
+addresses(t2, gh1_spin_cylinder).
+
+claim(gh1_weak_centre, proposition, proved, "Issue 1", "For a primitive circle bundle M^{pq} over CP2 x CP1, the spin condition is p odd and q even, and the weak centre acts on ordinary spinors by (-1)^(p-3q/2).").
+source(gh1_weak_centre, 'results/issues/01.md', '').
+attempted_by(gh1_weak_centre, gpt_6_2_astra_max).
+checked_by(gh1_weak_centre, terra_6_1, by_hand).
+addresses(t18, gh1_weak_centre).
+
+claim(gh1_monopole_anomaly, proposition, proved, "Issue 1", "Adding opposite-chirality monopole-neutral spectator partners leaves the chiral sphere window unchanged and factors the six-dimensional local fermion anomaly as x squared times an explicit four-class.").
+source(gh1_monopole_anomaly, 'results/issues/01.md', '').
+attempted_by(gh1_monopole_anomaly, gpt_6_2_astra_max).
+checked_by(gh1_monopole_anomaly, terra_6_1, by_hand).
+addresses(t18, gh1_monopole_anomaly).
 
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
