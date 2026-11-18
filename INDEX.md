@@ -78,7 +78,7 @@ One electron from a specified character (e^2/g_3^2 with 8 eta^2), the singlet/tr
 
 Infinite weak masses, the angle test, lens lattice and Berger metrics, p = 5 and 5/8, mass-weighted kinetic terms, heavy W forcing a heavy top.
 
-[lemma 03](lemmas/03_mass_weighted_kinetic_terms.md) · [lemma 11](lemmas/11_spectral_action_heavy_w.md) · [lemma 18, heavy limit at fixed cutoff](lemmas/18_heavy_limit_near_cutoff.md)
+[lemma 03](lemmas/03_mass_weighted_kinetic_terms.md) · [lemma 11](lemmas/11_spectral_action_heavy_w.md) · [lemma 18, heavy limit at fixed cutoff](lemmas/18_heavy_limit_near_cutoff.md) · [Berger radius at fixed matching](results/47_berger_radius_at_matching.md)
 
 ### 1.15 Kasparov KK-theory
 

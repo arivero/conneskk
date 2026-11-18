@@ -4,6 +4,31 @@ One file per result: the statement, its hypotheses and scope, its status in the 
 
 This directory, `lemmas/` and `paper/` are the sources of every PDF in `docs/`; `paper/build_supplement.sh` refuses any other path.
 
+## Reading routes
+
+Begin a research step by writing down the operation, the inputs held fixed and the observable to be explained. Choose the row whose question matches. Read its construction and the example that tests the relevant assumption, then follow the numbered proof on which the calculation depends. The command `python3 -I tools/read_step.py scale` opens the three result files for the Berger calculation in order. A strategy ID such as `T14` opens the routes attached to that item. Use `--paths` for just their filenames. After editing the routes, `python3 -I tools/read_step.py --check` verifies the files and the coverage of the ranked list.
+
+| Route | Strategy | Question | Results in reading order |
+|---|---|---|---|
+| `scale` | T13, T18 | Does matching at fixed nine-dimensional normalization select both shape and radius? | [Berger kinetic form](47_killing_form_berger_sphere.md) · [residual radius and threshold convention](47_berger_radius_at_matching.md) · [which weak angle survives a heavy threshold](18_unbroken_coefficients_and_angles.md) |
+| `blocking` | T1, T4, T4b, T6 | What survives elimination of short-distance modes at fixed background? | [chain spectrum and distances](05_chain_converges_to_interval.md) · [gauge-equivalent inputs split by a fixed projection, and the Schur complement](13_nogo_fixed_compression_not_covariant.md) · [gauge-covariant window](14_covariant_spectral_projection.md) |
+| `potential` | T13, T14 | Can stationarity select a length when the mass is held fixed? | [free angle and tied angle](31_scale_free_potential.md) · [flat stationary direction](31_counterexample_flat_direction.md) · [higher-order selection after two cancellations](37_nogo_dilaton_gradient.md) |
+| `window` | T0, T6, T14 | What survives when the low-energy window moves and the tower gap closes? | [fixed-energy and moving-window counts](30_window_and_tower_on_interval.md) · [compression on the disc bundle](29_compression_to_endpoint_maps.md) · [discontinuity of generated algebras](28_counterexample_generation_discontinuous.md) |
+| `sign` | T2, T2b, T2c | Does fixing the real structure and particle counting select a sign? | [factorization criterion](06_doubling_criterion.md) · [both signs with the same inputs](08_counterexample_both_signs_fixed_data.md) · [effect of the neutral mass spectrum](06_neutral_sector_criterion.md) |
+| `masses` | T3, T8, T10 | Which mass or condensate follows from the wall data? | [light wall mass and localization](12_light_spectrum_towerless_limit.md) · [explicit masses on the commuting algebra](17_explicit_mass_commuting_subalgebra.md) · [additional input for a condensate](17_condensate_hypotheses.md) |
+| `cutoff` | T5, T5b, T12 | Does a heavy-top relation survive at fixed cutoff? | [asymptotic top-only relation](11_top_only_ratio.md) · [fixed-cutoff kernel](18_top_only_w_mass_at_fixed_cutoff.md) · [failure of a Taylor pole estimate](18_counterexample_wrong_sign_taylor.md) |
+| `algebra` | T0b, T7, T16, T17 | Which sheet or algebra is selected with the representation and connector fixed? | [connector and admissible algebra](20_rank_one_block_classified_algebra.md) · [spin-lift orbit choices](48_real_standard_model_algebra_from_spin_lift.md) · [projection versus centralization on a neutral pair](orientability_under_heavy_centralizer.md) |
+| `connection` | T7, T15 | Which connection can be varied while the vertical kernel stays fixed? | [Berry compression criterion](43_berry_connection_criterion.md) · [scalar changes from the base and from the fibre](43_scalar_changes_cp3_s4.md) |
+| `eleven` | T11, T14 | Which modes survive the global group, spin and flux conditions of an eleven-dimensional candidate? | [hypercharge quotient](32_witten_space_hypercharge_quotient.md) · [centre action on tensor and spinor modes](32_z6_kernel_tensor_modes.md) · [spin obstruction and flux mixing on the magnetic product](39_magnetic_completion_ads5.md) |
+
+For instance, along the Berger curve a change of radius changes both matching couplings at fixed Einstein coefficient. A block-spin step needs a blocking map at a specified background and an effective action for the retained variables. For a quadratic operator the eliminated sector contributes the Schur complement in result 13. Computing a projected spectrum alone leaves that term and, in a Gaussian path integral, the determinant of the eliminated sector to account for. The two routes therefore test different operations even when both use a length called a cutoff.
+
+For a question outside these starting points, use `addresses(Task, Claim)` in the ledger, then `depends(Claim, Input)`, `claim_amended(Claim, Later)` and the claim identifier in this directory. Four parts of lemma 37 have no claim row of their own. Their entries below can be found by subject or proof number. A result earns a place on a route when it changes a hypothesis, supplies an observable or gives a counterexample relevant to that calculation.
+
+Before moving a result to `historical/`, identify the live replacement for its statement, hypotheses and proof, and check references from the papers and supplement lists. For example, the lower-range massless scan in result 23 now has an analytic proof in result 24. The same file also records the bulk-mass scan and its assumptions. The doubled-torus construction and its six-dimensional bimodule obstruction likewise answer different questions. [One-loop scans](23_nogo_one_loop_interior_minimum.md) · [Analytic stationary-point count](24_nogo_massless_one_loop_minimum.md) · [Torus construction](40_doubled_torus_landau_window.md) · [Unitality counterexample](40_counterexample_nonunital_torus_window.md)
+
+## All results
+
 | file | result | status | proof |
 |---|---|---|---|
 | [R1_counterexample_farsi_latremoliere.md](R1_counterexample_farsi_latremoliere.md) | Theorem 3.4 of Farsi-Latrémolière (arXiv:2404.00240, J. London Math. Soc. 2026) fails as printed; anticommutation of D_h and D_v, or a relative bound, is a sufficient repair | Counterexample | here; the contradiction through Theorem 15.7 is in the main paper |
