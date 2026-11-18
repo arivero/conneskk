@@ -1986,6 +1986,56 @@ addresses(t3, gh17_eta_circle).
 addresses(t10, gh17_eta_circle).
 addresses(t14, gh17_eta_circle).
 
+claim(gh16_channel_compactness, theorem, proved, "Issue 16", "For the physical relative SU(2) BFSS Hamiltonian, each total Spin(9) type absent from the rank-one fast ground has compact resolvent and H >= (8/5) R_X - 425/R_X squared. Zero belongs to the essential spectrum in each type occurring in the physical angular ground.").
+source(gh16_channel_compactness, 'results/issues/16.md', '').
+attempted_by(gh16_channel_compactness, gpt_6_2_astra_max).
+checked_by(gh16_channel_compactness, codex_gpt_6, by_hand).
+depends(gh16_channel_compactness, gh16_high_spin_mass).
+addresses(t14, gh16_channel_compactness).
+
+claim(gh16_protected_mass, corollary, proved, "Issue 16", "At charge two the mass bound for every superspin except the even symmetric scattering family exceeds the Planck threshold when the sum of its four weights is at least eight. The estimate leaves 34 integral and 18 half-integral protected labels below the cutoff.").
+source(gh16_protected_mass, 'results/issues/16.md', '').
+attempted_by(gh16_protected_mass, gpt_6_2_astra_max).
+checked_by(gh16_protected_mass, codex_gpt_6, by_hand).
+depends(gh16_protected_mass, gh16_channel_compactness).
+depends(gh16_protected_mass, gh16_matrix_radius).
+addresses(t14, gh16_protected_mass).
+
+claim(gh16_cubic_levels, proposition, proved, "Issue 16", "The physical relative SU(2) BFSS total rotation type (3,0,0,0) contains infinitely many positive normalizable levels tending to infinity. The gauge-invariant harmonic cubic gives infinite multiplicity and the channel theorem gives compact resolvent.").
+source(gh16_cubic_levels, 'results/issues/16.md', '').
+attempted_by(gh16_cubic_levels, gpt_6_2_astra_max).
+checked_by(gh16_cubic_levels, codex_gpt_6, by_hand).
+depends(gh16_cubic_levels, gh16_channel_compactness).
+addresses(t14, gh16_cubic_levels).
+
+claim(gh16_matrix_radius, proposition, proved, "Issue 16", "At finite SU(N) a total Spin(9) type of summed highest weight j obeys E times the second relative matrix-radius moment at least 49 j squared / 122 and H >= [(7j-sqrt(61))_+] squared / (122 R_X squared) as forms for positive coefficient. A sub-Planck multiplet contains a total type with j at least three and O(1/N) probability in a fixed trace-norm ball.").
+source(gh16_matrix_radius, 'results/issues/16.md', '').
+attempted_by(gh16_matrix_radius, gpt_6_2_astra_max).
+checked_by(gh16_matrix_radius, codex_gpt_6, by_hand).
+checked_by(gh16_matrix_radius, terra_6_1, by_hand).
+addresses(t14, gh16_matrix_radius).
+
+claim(gh16_superspin_bound, corollary, proved, "Issue 16", "All polarizations in a positive SU(2) BFSS supermultiplet with second superspin coordinate greater than nine inherit the lower mass bound, by the highest weight in the 84 tensor product.").
+source(gh16_superspin_bound, 'results/issues/16.md', '').
+attempted_by(gh16_superspin_bound, gpt_6_2_astra_max).
+checked_by(gh16_superspin_bound, codex_gpt_6, by_hand).
+depends(gh16_superspin_bound, gh16_high_spin_mass).
+addresses(t14, gh16_superspin_bound).
+
+claim(gh16_high_spin_mass, proposition, proved, "Issue 16", "For the normalized relative SU(2) BFSS operator, the sharper Clifford, slice and colour-average estimates give E >= 1.53497 for second Spin(9) weight > 10. Under the specified light-cone dictionary this gives M l_p >= 1.3428.").
+source(gh16_high_spin_mass, 'results/issues/16.md', '').
+attempted_by(gh16_high_spin_mass, gpt_6_2_astra_max).
+checked_by(gh16_high_spin_mass, gpt_6_1_terra, by_hand).
+addresses(t14, gh16_high_spin_mass).
+
+claim(gh16_d0_landau, proposition, proved, "Issue 16", "The degree-p Landau zero space has a p-dimensional magnetic-translation representation with specified central phases. The putative CDS projective class (1,p) at theta=1/p has trace zero.").
+source(gh16_d0_landau, 'results/issues/16.md', '').
+attempted_by(gh16_d0_landau, gpt_6_2_astra_max).
+checked_by(gh16_d0_landau, codex_gpt_6, by_hand).
+addresses(t14, gh16_d0_landau).
+addresses(t18, gh16_d0_landau).
+addresses(t16, gh16_d0_landau).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
