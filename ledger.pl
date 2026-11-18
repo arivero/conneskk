@@ -1912,6 +1912,13 @@ attempted_by(gh4_triality_frame, gpt_6_2_astra_max).
 checked_by(gh4_triality_frame, terra_6_1, by_hand).
 addresses(t14, gh4_triality_frame).
 
+claim(gh12_mixing_law, proposition, proved, "Issue 12", "For independent standard complex Gaussian sectors and fixed nonsingular diagonal right profiles, the normalized CKM magnitudes converge to explicit Gram-minor ratios with small-ball exponent two.").
+source(gh12_mixing_law, 'results/issues/12.md', '').
+attempted_by(gh12_mixing_law, gpt_6_2_astra_max).
+checked_by(gh12_mixing_law, codex_gpt_6, by_hand).
+addresses(t8, gh12_mixing_law).
+addresses(t3, gh12_mixing_law).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
