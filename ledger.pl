@@ -1897,6 +1897,14 @@ checked_by(gh5_ps_potential, codex_gpt_6, by_hand).
 addresses(t12, gh5_ps_potential).
 addresses(t14, gh5_ps_potential).
 
+claim(gh6_elliptic_weyl, proposition, proved, "Issue 6", "The Weyl group of each holonomy centralizer gives the spin algebra of Lemma 49, and the normalized A2 Cartan pairing induces a Weyl-equivariant isogeny to the dual four-torus with kernel E[3].").
+source(gh6_elliptic_weyl, 'results/issues/06.md', '').
+attempted_by(gh6_elliptic_weyl, gpt_6_2_astra_max).
+checked_by(gh6_elliptic_weyl, gpt_6_2_astra_max, by_hand).
+referee_pending(gh6_elliptic_weyl).
+addresses(t16, gh6_elliptic_weyl).
+addresses(t18, gh6_elliptic_weyl).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
