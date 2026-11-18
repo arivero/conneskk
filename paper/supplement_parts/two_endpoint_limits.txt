@@ -1,0 +1,5 @@
+# paper: From a finite KO-six geometry toward five and seven dimensions
+# name: two_endpoint_limits
+part 05 lemmas/05_deconstruction_interval.md
+part 22 lemmas/22_dirac_operator_as_boundary_condition.md
+part "S208 (a chiral family over the round five-sphere and its two interval limits)" results/54_chiral_family_over_the_five_sphere.md

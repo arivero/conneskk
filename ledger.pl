@@ -2309,6 +2309,23 @@ addresses(t18, gh1_winding_family).
 addresses(t14, gh1_winding_family).
 addresses(t13, gh1_winding_family).
 
+claim(two_endpoint_current, theorem, proved, "Two-endpoint paper, charged current", "On the two-interval winding vacuum a specified product Yang-Mills action gives an exact massive scalar-Laplacian tower for each transverse weak vector. Parallel harmonic currents see only its constant profile. Smooth winding-dependent kinetic coefficients give vanishing weak exchange and a finite matching charge at the five-dimensional end.").
+source(two_endpoint_current, 'paper/two_endpoint_limits.tex', '').
+depends(two_endpoint_current, gh1_winding_family).
+attempted_by(two_endpoint_current, gpt_6_2_astra_max).
+checked_by(two_endpoint_current, gpt_6_2_astra_max, by_hand).
+referee_pending(two_endpoint_current).
+addresses(t13, two_endpoint_current).
+addresses(t18, two_endpoint_current).
+
+claim(two_endpoint_upper_matter, proposition, proved, "Two-endpoint paper, upper matter", "Two vectorlike completions with the same classical bosonic data have identical retained spectra near five and in a chosen finite KO-six window, and different massless matter at seven.").
+source(two_endpoint_upper_matter, 'paper/two_endpoint_limits.tex', '').
+depends(two_endpoint_upper_matter, gh1_winding_family).
+attempted_by(two_endpoint_upper_matter, gpt_6_2_astra_max).
+checked_by(two_endpoint_upper_matter, gpt_6_2_astra_max, by_hand).
+referee_pending(two_endpoint_upper_matter).
+addresses(t18, two_endpoint_upper_matter).
+
 claim(gh1_berger_charge_kernel, proposition, proved, "Issue 1 section 4", "On round S5 the spin Dirac twisted by the dual spin bundle and the exterior Killing-spinor bundle has kernel exterior(4) and gap sqrt(5)/R. Under the rank-one stabilizer it is the colour and electric charge module of one all-left generation. A separately gauged projector masses six vector directions.").
 source(gh1_berger_charge_kernel, 'results/issues/01.md', '').
 attempted_by(gh1_berger_charge_kernel, gpt_6_2_astra_max).

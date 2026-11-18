@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An integrated HTML edition of the papers on finite spectral triples and Kaluza-Klein limits.">
+<title>From a finite KO-six geometry toward five and seven dimensions | Finite spectral triples and Kaluza-Klein limits</title>
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to content</a>
+<div class="site-layout">
+<aside class="sidebar">
+  <a class="site-name" href="index.html">Finite spectral triples<br><span>and Kaluza-Klein limits</span></a>
+  <p class="site-edition">An integrated reading of the papers</p>
+  <details class="navigation" open>
+    <summary>Contents</summary>
+    <nav class="site-tree" aria-label="Site contents">
+<p class="nav-label">Integrated discussion</p><ul class="topic-list">
+<li><a href="index.html">Overview</a></li>
+<li><a href="index.html#dimensions">What the dimensions mean</a>
+</li>
+<li><a href="index.html#interval">The two-point space and the interval</a>
+</li>
+<li><a href="index.html#wall-data">Finite data as wall data</a>
+</li>
+<li><a href="index.html#opening">Opening a tower</a>
+<ul class="topic-sublist">
+<li><a href="index.html#plot-opening">Opening-window hierarchy</a></li>
+</ul>
+</li>
+<li><a href="index.html#fermions">Masses, chirality and the fermion action</a>
+</li>
+<li><a href="index.html#gauge">Gauge fields and the spectral action</a>
+<ul class="topic-sublist">
+<li><a href="index.html#plot-poles">Interval vector poles</a></li>
+<li><a href="index.html#plot-heat">Heat-trace effective dimension</a></li>
+</ul>
+</li>
+<li><a href="index.html#generations">Generations and the real structure</a>
+</li>
+<li><a href="index.html#sources">Completions, sources and status</a>
+</li>
+</ul><p class="nav-label">Complete papers</p><ul class="paper-list">
+<li><a href="towerless_intervals.html">Towerless intervals</a>
+<details><summary>Sections</summary><ul>
+<li><a href="towerless_intervals.html#introduction">1 Introduction</a></li>
+<li><a href="towerless_intervals.html#setting-and-conventions">2 Setting and conventions</a></li>
+<li><a href="towerless_intervals.html#the-two-point-space-is-a-truncated-interval">3 The two-point space is a truncated interval</a></li>
+<li><a href="towerless_intervals.html#bulk-mass-the-light-pair-and-both-limits">4 Bulk mass: the light pair and both limits</a></li>
+<li><a href="towerless_intervals.html#boundary-yukawa-matrices-and-towerless-textures">5 Boundary Yukawa matrices and towerless textures</a></li>
+<li><a href="towerless_intervals.html#sec:real">6 Real structures: the choice between 9 and 11</a></li>
+<li><a href="towerless_intervals.html#spectral-action-heavy-fermions-and-the-gauge-sector">7 Spectral action: heavy fermions and the gauge sector</a></li>
+<li><a href="towerless_intervals.html#whole-triples-and-truncations">8 Whole triples and truncations</a></li>
+<li><a href="towerless_intervals.html#discussion">9 Discussion</a></li>
+<li><a href="towerless_intervals.html#provenance-and-supplemental-material">Provenance and Supplemental Material</a></li>
+<li><a href="towerless_intervals.html#references">References</a></li>
+</ul></details></li>
+<li><a href="chiral_limit_note.html">Masses and the chiral limit</a>
+<details><summary>Sections</summary><ul>
+<li><a href="chiral_limit_note.html#setting">1 Setting</a></li>
+<li><a href="chiral_limit_note.html#the-reduced-action">2 The reduced action</a></li>
+<li><a href="chiral_limit_note.html#the-chiral-limit">3 The chiral limit</a></li>
+<li><a href="chiral_limit_note.html#the-condensate">4 The condensate</a></li>
+<li><a href="chiral_limit_note.html#the-anomaly-on-the-reduced-action">5 The anomaly on the reduced action</a></li>
+<li><a href="chiral_limit_note.html#the-chiral-limit-on-an-interval">6 The chiral limit on an interval</a></li>
+<li><a href="chiral_limit_note.html#provenance">Provenance</a></li>
+<li><a href="chiral_limit_note.html#references">References</a></li>
+</ul></details></li>
+<li><a href="boundary_condition_note.html">The Dirac operator at the walls</a>
+<details><summary>Sections</summary><ul>
+<li><a href="boundary_condition_note.html#introduction">1 Introduction</a></li>
+<li><a href="boundary_condition_note.html#the-window">2 The window</a></li>
+<li><a href="boundary_condition_note.html#algebra-order-one-compression">3 Algebra, order one, compression</a></li>
+<li><a href="boundary_condition_note.html#fluctuations">4 Fluctuations</a></li>
+<li><a href="boundary_condition_note.html#gauge-sector-and-the-two-limits">5 Gauge sector and the two limits</a></li>
+<li><a href="boundary_condition_note.html#the-sum-rule-and-the-effective-dimension">6 The sum rule and the effective dimension</a></li>
+<li><a href="boundary_condition_note.html#status">7 Status</a></li>
+<li><a href="boundary_condition_note.html#provenance">Provenance</a></li>
+<li><a href="boundary_condition_note.html#references">References</a></li>
+</ul></details></li>
+<li><a href="joint_limit_note.html">Opening towers and seven dimensions</a>
+<details><summary>Sections</summary><ul>
+<li><a href="joint_limit_note.html#introduction">1 Introduction</a></li>
+<li><a href="joint_limit_note.html#sec:interval">2 The interval</a></li>
+<li><a href="joint_limit_note.html#sec:cylinder">3 A cylinder with a prescribed window</a></li>
+<li><a href="joint_limit_note.html#sec:window">4 A window from a local operator</a></li>
+<li><a href="joint_limit_note.html#sec:joint">5 The joint limit on the disc bundle</a></li>
+<li><a href="joint_limit_note.html#the-quaternionic-defect">6 The quaternionic defect</a></li>
+<li><a href="joint_limit_note.html#relation-to-prior-work">7 Relation to prior work</a></li>
+<li><a href="joint_limit_note.html#what-is-missing">8 What is missing</a></li>
+<li><a href="joint_limit_note.html#status">9 Status</a></li>
+<li><a href="joint_limit_note.html#provenance">Provenance</a></li>
+<li><a href="joint_limit_note.html#references">References</a></li>
+</ul></details></li>
+<li><a href="connes_kk_dictionary_note.html">The finite / Kaluza-Klein dictionary</a>
+<details><summary>Sections</summary><ul>
+<li><a href="connes_kk_dictionary_note.html#introduction">1 Introduction</a></li>
+<li><a href="connes_kk_dictionary_note.html#the-grading-is-a-reflection">2 The grading is a reflection</a></li>
+<li><a href="connes_kk_dictionary_note.html#the-finite-dirac-operator-is-a-boundary-condition-and-a-holonomy">3 The finite Dirac operator is a boundary condition and a holonomy</a></li>
+<li><a href="connes_kk_dictionary_note.html#the-higgs-field-is-the-gauge-field-along-the-interval">4 The Higgs field is the gauge field along the interval</a></li>
+<li><a href="connes_kk_dictionary_note.html#the-real-structure-fixes-the-symmetry-of-a-massless-block">5 The real structure fixes the symmetry of a massless block</a></li>
+<li><a href="connes_kk_dictionary_note.html#the-algebra">6 The algebra</a></li>
+<li><a href="connes_kk_dictionary_note.html#sec:path">7 The massless limit and what selects the path</a></li>
+<li><a href="connes_kk_dictionary_note.html#what-the-string-dualities-give">8 What the string dualities give</a></li>
+<li><a href="connes_kk_dictionary_note.html#where-this-leaves-the-question">9 Where this leaves the question</a></li>
+<li><a href="connes_kk_dictionary_note.html#status">Status</a></li>
+<li><a href="connes_kk_dictionary_note.html#provenance">Provenance</a></li>
+<li><a href="connes_kk_dictionary_note.html#references">References</a></li>
+</ul></details></li>
+<li><a href="generations_note.html">The two families of 84</a>
+<details><summary>Sections</summary><ul>
+<li><a href="generations_note.html#introduction">1 Introduction</a></li>
+<li><a href="generations_note.html#sec:colour">2 The colour obstructions</a></li>
+<li><a href="generations_note.html#sec:e8">3 The E8 placement</a></li>
+<li><a href="generations_note.html#sec:roots">4 Root configurations</a></li>
+<li><a href="generations_note.html#sec:44">5 The four-family count and the two placements</a></li>
+<li><a href="generations_note.html#sec:open">6 What this leaves</a></li>
+<li><a href="generations_note.html#status">Status</a></li>
+<li><a href="generations_note.html#provenance">Provenance</a></li>
+<li><a href="generations_note.html#references">References</a></li>
+</ul></details></li>
+<li><a href="real_structure_note.html">Real structure and SO(30)</a>
+<details><summary>Sections</summary><ul>
+<li><a href="real_structure_note.html#introduction">1 Introduction</a></li>
+<li><a href="real_structure_note.html#sec:sign">2 The sign of an odd factorization and the symmetry of a massless block</a></li>
+<li><a href="real_structure_note.html#sec:J">3 J-compatible operators and gauge generators</a></li>
+<li><a href="real_structure_note.html#sec:interval">4 The interval parent</a></li>
+<li><a href="real_structure_note.html#sec:window">5 The compression to the window</a></li>
+<li><a href="real_structure_note.html#sec:exotic">6 The charge-4/3 antitriplets</a></li>
+<li><a href="real_structure_note.html#sec:open">7 Open questions</a></li>
+<li><a href="real_structure_note.html#status">Status</a></li>
+<li><a href="real_structure_note.html#provenance">Provenance</a></li>
+<li><a href="real_structure_note.html#references">References</a></li>
+</ul></details></li>
+<li><a href="two_endpoint_limits.html" aria-current="page">From six toward five and seven</a>
+<details open><summary>Sections</summary><ul>
+<li><a href="two_endpoint_limits.html#what-the-three-labels-measure">1 What the three labels measure</a></li>
+<li><a href="two_endpoint_limits.html#a-single-path-through-the-finite-window">2 A single path through the finite window</a></li>
+<li><a href="two_endpoint_limits.html#the-charged-current-through-the-tower">3 The charged current through the tower</a></li>
+<li><a href="two_endpoint_limits.html#when-five-has-no-weak-contact-interaction">4 When five has no weak contact interaction</a></li>
+<li><a href="two_endpoint_limits.html#why-the-upper-fermions-remain-undetermined">5 Why the upper fermions remain undetermined</a></li>
+<li><a href="two_endpoint_limits.html#references">References</a></li>
+</ul></details></li>
+</ul></nav>
+  </details>
+</aside>
+<div class="reading-pane">
+<main id="content">
+<p class="breadcrumbs"><a href="index.html">Integrated discussion</a> / Complete paper</p>
+<div class="paper-files" aria-label="Paper and supplement editions">
+<span>Read or download</span>
+<a href="two_endpoint_limits.pdf">Paper PDF</a>
+<a href="two_endpoint_limits_mobile.pdf">Mobile PDF</a>
+<a href="supplemental_two_endpoint_limits.pdf">Paper supplement</a>
+<a href="supplemental_two_endpoint_limits_mobile.pdf">Mobile supplement</a>
+</div>
+<article class="paper">
+<header id="title-block-header">
+<h1 class="title">From a finite KO-six geometry toward five and seven
+dimensions</h1>
+<p class="author">GPT-6.2-Astra max</p>
+<p class="date">Draft, 18 November 2026</p>
+<div class="abstract">
+<div class="abstract-title">Abstract</div>
+<p>We follow both limits of a finite real fermion geometry in a family
+on a five-sphere and two intervals. Two windings fix a boundary angle as
+a function of area. At small area the surviving operator is a
+five-dimensional Dirac operator with vectorlike charges. At large area
+the weak vectors become massless and two towers can be resolved. The
+fermion limit alone leaves the current response undetermined. We compute
+the complete tree-level transverse charged-vector exchange for a
+specified product gauge action. Constant kinetic densities give a finite
+weak pole and growing contact interaction at the five-dimensional end. A
+smooth dependence on the same winding density gives a finite
+electromagnetic coupling, vanishing weak exchange and weak poles
+separated from the first axial excitations. Two allowed fermion
+completions have different massless content at seven and identical
+bounded-energy data near five. The construction specifies the gauge
+representation and the constitutive functions as microscopic inputs.</p>
+</div>
+</header>
+<h2 data-number="1" id="what-the-three-labels-measure"><span
+class="header-section-number">1</span> What the three labels
+measure</h2>
+<p>At five we ask for surviving four-dimensional Dirac fermions with the
+same colour and electric charge on their two chiralities. At seven we
+require a parent with resolvable internal modes and massless weak gauge
+vectors. Restoring the weak group specifies its gauge fields. Its
+representation on light fermions is a separate part of the problem. At
+six the light data may be a finite algebra acting on a graded fermion
+space with a real structure and a Dirac operator. Its KO-degree is six.
+The heat trace of that finite space is bounded at short time. A
+six-dimensional manifold is one possible model for an intervening energy
+band; the finite geometry needs no such band <span class="citation"
+data-cites="Connes2006 towerlesspaper jointnote">(<a
+href="#ref-Connes2006" role="doc-biblioref">Connes 2006</a>; <a
+href="#ref-towerlesspaper" role="doc-biblioref"><span>“Finite Spectral
+Triples as Towerless Intervals”</span> 2026</a>; <a
+href="#ref-jointnote" role="doc-biblioref"><span>“Finite Spectral
+Windows with an Opening Tower in Seven-Dimensional Parents”</span>
+2026</a>)</span>.</p>
+<p>These distinctions suggest two measurements on the same family. We
+follow the fermion operator to find the states that remain at a fixed
+energy. We then couple a weak current to a gauge field and follow its
+exchange amplitude. A mass assigned in a finite fermion matrix answers
+the first question only when the matrix has been obtained as an isolated
+spectral window. A statement about beta decay also needs the second
+measurement.</p>
+<h2 data-number="2" id="a-single-path-through-the-finite-window"><span
+class="header-section-number">2</span> A single path through the finite
+window</h2>
+<p>Let the internal metric be the product on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>S</mi><mi>R</mi><mn>5</mn></msubsup><mo>×</mo><msub><mi>I</mi><mi>ℓ</mi></msub><mo>×</mo><msub><mi>I</mi><mi>d</mi></msub></mrow><annotation encoding="application/x-tex">S^5_R\times I_\ell\times I_d</annotation></semantics></math>.
+All lengths and masses below are measured in the product frame, with a
+fixed five-sphere radius
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>.
+Write
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>ℓ</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">A=\ell d</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mn>5</mn></msub><mo>=</mo><msup><mi>π</mi><mn>3</mn></msup><msup><mi>R</mi><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">V_5=\pi^3R^5</annotation></semantics></math>.
+Identify opposite reflected copies to compute the two axial spectra. The
+internal coefficient bundle, the spin lift, the boundary data and the
+reduced algebra in this section are the ones in Part S208 of the
+Supplemental Material. We recall the construction because the endpoint
+particle assignments depend on it.</p>
+<p>The twisted five-sphere Dirac operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mn>5</mn></msub><annotation encoding="application/x-tex">D_5</annotation></semantics></math>
+has a harmonic coefficient space whose particle lines carry
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mn>𝟑</mn><mrow><mn>2</mn><mi>/</mi><mn>3</mn></mrow></msub><mo>⊕</mo><msub><mn>𝟑</mn><mrow><mi>−</mi><mn>1</mn><mi>/</mi><mn>3</mn></mrow></msub><mo>⊕</mo><msub><mn>𝟏</mn><mrow><mi>−</mi><mn>1</mn></mrow></msub><mo>⊕</mo><msub><mn>𝟏</mn><mn>0</mn></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathbf{3}_{2/3}\oplus\mathbf{3}_{-1/3}\oplus\mathbf{1}_{-1}\oplus\mathbf{1}_{0}.</annotation></semantics></math><span class="equation-number" aria-label="Equation 1">(1)</span></span>
+Colour multiplets and electric charges are displayed. The twist uses a
+Clifford ideal and a parallel coefficient bundle. Its first nonzero
+absolute eigenvalue is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mn>5</mn></msqrt><mi>/</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">\sqrt5/R</annotation></semantics></math>.
+Two copies and an axial spin factor carry a cylinder operator whose
+local axial derivative is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>i</mi><msub><mi>σ</mi><mn>2</mn></msub><msub><mi>∂</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">-i\sigma_2\partial_x</annotation></semantics></math>.
+On the harmonic branch its allowed constant components are fixed at both
+ends. On each nonzero tangential eigenspace its end planes are separated
+by an angle
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>=</mo><mi>π</mi><mi>/</mi><mn>2</mn><mo>−</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">\delta=\pi/2-\theta</annotation></semantics></math>.
+The quadratic form bounds the squared mass below by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo>+</mo><msup><mi>δ</mi><mn>2</mn></msup><mi>/</mi><msup><mi>ℓ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\lambda^2+\delta^2/\ell^2</annotation></semantics></math>
+for a tangential eigenvalue
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda\ne0</annotation></semantics></math>.
+Reflection on the second interval selects a ten-dimensional chirality on
+the constant outer level. All other outer levels cost at least
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mi>/</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">\pi/d</annotation></semantics></math>.
+This is a construction with specified spectral walls. The complete
+domain, signs and norm-resolvent proof are in Part S208. The related
+exact interval realization of an arbitrary finite mass matrix is
+described in Ref. <span class="citation" data-cites="boundarynote">(<a
+href="#ref-boundarynote" role="doc-biblioref"><span>“The Finite
+<span>D</span>irac Operator as a Boundary Condition on an
+Interval”</span> 2026</a>)</span>.</p>
+<p>Let the neutral Higgs coordinate be
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\phi=(0,s)</annotation></semantics></math>,
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mrow><mi>sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">s=\sin\theta</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mrow><mi>cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">c=\cos\theta</annotation></semantics></math>.
+Two circle-valued scalars wind
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>,</mo><msub><mi>n</mi><mn>2</mn></msub><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">n_1,n_2\ne0</annotation></semantics></math>
+times on the doubled intervals. For the constant winding gradients the
+local invariant
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>d</mi><msub><mi>w</mi><mn>1</mn></msub><mo>∧</mo><mi>d</mi><msub><mi>w</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">b=|dw_1\wedge dw_2|</annotation></semantics></math>
+and the vacuum equation are
+<span class="equation" id="eq:area"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mfrac><mrow><msup><mi>π</mi><mn>2</mn></msup><mo stretchy="false" form="prefix">|</mo><msub><mi>n</mi><mn>1</mn></msub><msub><mi>n</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">|</mo></mrow><mi>A</mi></mfrac><mo>,</mo><mspace width="2.0em"></mspace><mi>c</mi><mo>=</mo><mrow><mi>min</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>A</mi><mi>/</mi><msub><mi>A</mi><mo>*</mo></msub><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">b=\frac{\pi^2|n_1n_2|}{A},\qquad c=\min(1,A/A_*).
+ </annotation></semantics></math><span class="equation-number" aria-label="Equation 2">(2)</span></span>
+Here
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mo>*</mo></msub><mo>=</mo><msup><mi>π</mi><mn>2</mn></msup><mo stretchy="false" form="prefix">|</mo><msub><mi>n</mi><mn>1</mn></msub><msub><mi>n</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">|</mo><mi>/</mi><msup><mi>μ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">A_*=\pi^2|n_1n_2|/\mu^2</annotation></semantics></math>.
+The parameter
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>
+belongs to the fixed scalar action. In Part S208 the stationary
+configuration has zero scalar stress and the two lengths remain moduli.
+Choosing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℓ</mi><mo>=</mo><mi>d</mi><mo>=</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">\ell=d=t</annotation></semantics></math>
+specifies a path through these vacua.</p>
+<p>For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>↓</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t\downarrow0</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>=</mo><mrow><mi>arcsin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msup><mi>t</mi><mn>2</mn></msup><mi>/</mi><msub><mi>A</mi><mo>*</mo></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\delta=\arcsin(t^2/A_*)</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mi>/</mi><mi>t</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\delta/t\to0</annotation></semantics></math>.
+The constant axial channel then converges in generalized norm resolvent
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mn>5</mn></msub><mo>⊕</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><msub><mi>D</mi><mn>5</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">D_5\oplus(-D_5)</annotation></semantics></math>,
+with the bounded neutral Yukawa matrix if present. For a general
+shrinking path the control parameter is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mi>/</mi><mi>ℓ</mi></mrow><annotation encoding="application/x-tex">\delta/\ell</annotation></semantics></math>.
+A finite nonzero limit adds that number times the sign of the nonzero
+tangential operator. Thus the wall-angle equation matters even when both
+walls look local at the endpoint. In the unshifted limit the charged
+left and right states have the same colour and electromagnetic
+representations. A weak doublet action on a parallel coefficient pair
+and singlet actions on its right partners give an explicit realization;
+they were chosen in defining this family.</p>
+<p>For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><msup><mi>t</mi><mn>2</mn></msup><mo>&lt;</mo><msub><mi>A</mi><mo>*</mo></msub></mrow><annotation encoding="application/x-tex">0&lt;t^2&lt;A_*</annotation></semantics></math>
+the reflected harmonic sector carries the finite real signs
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>J</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">J^2=1</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mi>D</mi><mo>=</mo><mi>D</mi><mi>J</mi></mrow><annotation encoding="application/x-tex">JD=DJ</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mi>γ</mi><mo>=</mo><mi>−</mi><mi>γ</mi><mi>J</mi></mrow><annotation encoding="application/x-tex">J\gamma=-\gamma J</annotation></semantics></math>.
+Its particle and conjugate copies, with the prescribed left and right
+actions, realize the one-generation module of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℂ</mi><mo>⊕</mo><mi>ℍ</mi><mo>⊕</mo><msub><mi>M</mi><mn>3</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>ℂ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbb C\oplus\mathbb H\oplus M_3(\mathbb C)</annotation></semantics></math>.
+Choose a cutoff above the harmonic Yukawa masses and below the first
+other fermion level. For example, before a Yukawa perturbation of norm
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>,
+the gaps are bounded below by the minimum of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mi>/</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\pi/t</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mrow><mn>5</mn><mi>/</mi><msup><mi>R</mi><mn>2</mn></msup><mo>+</mo><msup><mi>δ</mi><mn>2</mn></msup><mi>/</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></msqrt><annotation encoding="application/x-tex">\sqrt{5/R^2+\delta^2/t^2}</annotation></semantics></math>.
+Taking a margin greater than
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+isolates this finite window. Scalar fields on the same metric have their
+own spectrum.</p>
+<p>At
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>≥</mo><msub><mi>A</mi><mo>*</mo></msub></mrow><annotation encoding="application/x-tex">t^2\ge A_*</annotation></semantics></math>
+one has
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">s=0</annotation></semantics></math>.
+Weak symmetry is restored at a finite area. To resolve seven internal
+scalar directions requires a probe energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi>R</mi><mo>≫</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">ER\gg1</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi>t</mi><mo>≫</mo><mi>π</mi></mrow><annotation encoding="application/x-tex">Et\gg\pi</annotation></semantics></math>.
+The product eigenvalues are sums of five-sphere eigenvalues and two
+squared interval frequencies. Consequently restoration and
+seven-dimensional spectral growth can be tested independently. A compact
+upper member suffices. Letting
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+tend to infinity instead gives two decompactifying directions and
+changes the normalization of a constant four-dimensional field.</p>
+<h2 data-number="3" id="the-charged-current-through-the-tower"><span
+class="header-section-number">3</span> The charged current through the
+tower</h2>
+<p>Use a specified product Yang–Mills and scalar action on this
+background. The gauge fields propagate on the product, have Neumann
+spacetime-vector profiles at the interval ends, and act through fixed
+colour, weak and hypercharge matrices on the retained coefficients. In
+particular the neutral coefficient
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>=</mo><msub><mi>T</mi><mn>3</mn></msub><mo>+</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">Q=T_3+Y</annotation></semantics></math>
+agrees with the electric charges displayed above. This choice supplies
+the gauge sector. In a theory gauging metric isometries and form fields,
+the kinetic norms and currents must be derived afresh. The five-sphere
+lift in Part S208 includes such a contribution.</p>
+<p>Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">K_i(b)</annotation></semantics></math>
+multiply
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><msubsup><mi>F</mi><mrow><mi>M</mi><mi>N</mi></mrow><mi>a</mi></msubsup><msup><mi>F</mi><mrow><mi>a</mi><mi>M</mi><mi>N</mi></mrow></msup><mi>/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">-F^a_{MN}F^{aMN}/4</annotation></semantics></math>
+for each gauge factor. Give the doublet the kinetic term
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">|</mo><mi>D</mi><mi>ϕ</mi><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">H(b)|D\phi|^2/2</annotation></semantics></math>
+in positive-energy convention. Here
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+is dimensionless and the positive functions
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mi>i</mi></msub><mo>,</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">K_i,H</annotation></semantics></math>
+carry their corresponding microscopic units. They are spatially constant
+on each winding vacuum. Both the gauge curvature and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">D\phi</annotation></semantics></math>
+vanish there, so the additional terms and their first variations leave
+that vacuum intact in the bosonic equations. We work to quadratic order
+for transverse spacetime vectors, about a trivial weak gauge connection.
+Put
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mn>2</mn></msub><mo>=</mo><msub><mi>K</mi><mn>3</mn></msub><mo>=</mo><mi>K</mi></mrow><annotation encoding="application/x-tex">K_2=K_3=K</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mi>Y</mi></msub><mo>=</mo><mn>5</mn><mi>K</mi><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">K_Y=5K/3</annotation></semantics></math>
+and take the boundary kinetic terms to vanish. The inherited relative
+matching then holds for any
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>.</p>
+<div class="theorem">
+<p><strong>Theorem 1</strong>. <em>Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="normal">Λ</mi><mi>j</mi></msub><annotation encoding="application/x-tex">\Lambda_j</annotation></semantics></math>
+be the ordered eigenvalues of the nonnegative scalar Laplacian on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>S</mi><mi>R</mi><mn>5</mn></msubsup><annotation encoding="application/x-tex">S^5_R</annotation></semantics></math>.
+At each broken vacuum the complete transverse charged-vector masses in
+this action are
+<span class="equation" id="eq:tower"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>m</mi><mrow><mi>j</mi><mi>n</mi><mi>m</mi></mrow><mn>2</mn></msubsup><mo>=</mo><msubsup><mi>M</mi><mi>W</mi><mn>2</mn></msubsup><mo>+</mo><msub><mi mathvariant="normal">Λ</mi><mi>j</mi></msub><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mi>π</mi><mi>/</mi><mi>ℓ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mi>π</mi><mi>/</mi><mi>d</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">m^2_{jnm}=M_W^2+\Lambda_j+(n\pi/\ell)^2+(m\pi/d)^2 .
+ </annotation></semantics></math><span class="equation-number" aria-label="Equation 3">(3)</span></span>
+Here
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>,</mo><mi>m</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">n,m\ge0</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>M</mi><mi>W</mi><mn>2</mn></msubsup><mo>=</mo><mi>H</mi><msup><mi>s</mi><mn>2</mn></msup><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mi>K</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">M_W^2=Hs^2/(4K)</annotation></semantics></math>.
+The neutral massive tower has the same Laplacian shifts and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>M</mi><mi>Z</mi><mn>2</mn></msubsup><mo>=</mo><mn>8</mn><msubsup><mi>M</mi><mi>W</mi><mn>2</mn></msubsup><mi>/</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">M_Z^2=8M_W^2/5</annotation></semantics></math>.
+A current between normalized parallel harmonic fermions has only the
+constant vector profile at tree level. For spacelike momentum of
+magnitude
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>,
+its charged exchange coefficient for currents
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>u</mi><mo accent="true">‾</mo></mover><mi>L</mi></msub><msup><mi>γ</mi><mi>μ</mi></msup><msub><mi>d</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">\bar u_L\gamma^\mu d_L</annotation></semantics></math>
+is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>g</mi><mn>2</mn><mn>2</mn></msubsup><mi>/</mi><mo stretchy="false" form="prefix">[</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><msup><mi>p</mi><mn>2</mn></msup><mo>+</mo><msubsup><mi>M</mi><mi>W</mi><mn>2</mn></msubsup><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">g_2^2/[2(p^2+M_W^2)]</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mi>−</mi><mn>2</mn></mrow></msubsup><mo>=</mo><msub><mi>V</mi><mn>5</mn></msub><mi>A</mi><mi>K</mi></mrow><annotation encoding="application/x-tex">g_2^{-2}=V_5 A K</annotation></semantics></math>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Internal derivatives of a spacetime gauge component
+give the positive product Laplacian. The neutral Higgs kinetic term adds
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><msup><mi>s</mi><mn>2</mn></msup><mi>/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">Hs^2/4</annotation></semantics></math>
+to the charged quadratic form. The common factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math>
+divides both pieces after canonical normalization. The Neumann cosines
+and five-sphere harmonics diagonalize this form, including the constant
+mode. The neutral mass form is proportional to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msup><mi>W</mi><mn>3</mn></msup><mo>−</mo><msub><mi>B</mi><mi>Y</mi></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(W^3-B_Y)^2</annotation></semantics></math>
+in charge-connection coordinates. Its positive generalized eigenvalue is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><msup><mi>s</mi><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mi>/</mi><mi>K</mi><mo>+</mo><mn>1</mn><mi>/</mi><msub><mi>K</mi><mi>Y</mi></msub><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">Hs^2(1/K+1/K_Y)/4</annotation></semantics></math>.
+The other eigenvector is the photon. The mass and kinetic matrices are
+constant on the internal space, so the rotation commutes with the
+internal Laplacian.</p>
+<p>Normalize profiles in volume-average measure, with constant
+eigenfunction one. The harmonic sphere sections used here are parallel
+in the twisted Clifford ideal and coefficient spaces, and the two axial
+ground profiles are constant. Their pointwise charged bilinear, when the
+left generator connects the pair, is therefore constant as well.
+Orthogonality removes every other profile from its vertex. More
+generally a current of profile
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+has equal-source coefficient bounded by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>g</mi><mn>2</mn><mn>2</mn></msubsup><mo stretchy="false" form="postfix">∥</mo><mi>j</mi><msup><mo stretchy="false" form="postfix">∥</mo><mn>2</mn></msup><mi>/</mi><mo stretchy="false" form="prefix">[</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><msup><mi>p</mi><mn>2</mn></msup><mo>+</mo><msubsup><mi>M</mi><mi>W</mi><mn>2</mn></msubsup><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">g_2^2\|j\|^2/[2(p^2+M_W^2)]</annotation></semantics></math>.
+This follows by inserting the complete orthonormal eigenbasis into the
+positive resolvent. The bound also controls pairs of distinct profiles
+by Cauchy–Schwarz. No sum over an omitted tower is hidden in the
+constant-current formula. ◻</p>
+</div>
+<h2 data-number="4" id="when-five-has-no-weak-contact-interaction"><span
+class="header-section-number">4</span> When five has no weak contact
+interaction</h2>
+<p>The zero-momentum four-fermion convention and the matching charge are
+<span class="equation" id="eq:contact"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>G</mi><mi>F</mi></msub><msqrt><mn>2</mn></msqrt></mfrac><mo>=</mo><mfrac><msubsup><mi>g</mi><mn>2</mn><mn>2</mn></msubsup><mrow><mn>8</mn><msubsup><mi>M</mi><mi>W</mi><mn>2</mn></msubsup></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><msub><mi>V</mi><mn>5</mn></msub><mi>A</mi><mi>H</mi><msup><mi>s</mi><mn>2</mn></msup></mrow></mfrac><mo>,</mo><mspace width="2.0em"></mspace><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn></mrow></msup><mo>=</mo><mfrac><mn>8</mn><mn>3</mn></mfrac><msub><mi>V</mi><mn>5</mn></msub><mi>A</mi><mi>K</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\frac{G_F}{\sqrt2}=\frac{g_2^2}{8M_W^2}
+ =\frac{1}{2V_5 A H s^2},\qquad
+ e^{-2}=\frac83 V_5 A K .
+ </annotation></semantics></math><span class="equation-number" aria-label="Equation 4">(4)</span></span>
+The first expression uses currents written with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><msub><mi>γ</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">1-\gamma_5</annotation></semantics></math>
+and the contact expansion requires
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>≪</mo><msub><mi>M</mi><mi>W</mi></msub></mrow><annotation encoding="application/x-tex">p\ll M_W</annotation></semantics></math>.
+At the restored end a finite-momentum probe sees a massless propagator.
+At the five end
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>→</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">s\to1</annotation></semantics></math>
+a strictly positive finite matching charge requires
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>K</mi></mrow><annotation encoding="application/x-tex">AK</annotation></semantics></math>
+to approach a strictly positive finite limit. Weak decoupling for the
+constant current then requires
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>H</mi><mo>→</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">AH\to\infty</annotation></semantics></math>.
+With constant bulk densities,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>M</mi><mi>W</mi></msub><annotation encoding="application/x-tex">M_W</annotation></semantics></math>
+approaches a finite value whereas the formal zero-momentum exchange
+grows as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">1/A</annotation></semantics></math>.
+The growing gauge coupling also limits perturbation theory on that
+trajectory.</p>
+<div class="proposition">
+<p><strong>Proposition 1</strong>. <em>There is a fixed, smooth
+classical action in the above class for which
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math>
+stays finite and nonzero, both weak poles diverge, and the weak exchange
+of every uniformly bounded normalized current tends to zero toward five.
+On the square path both poles stay below the first axial frequency for
+sufficiently small
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Take fixed positive constants
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mn>0</mn></msub><mo>,</mo><msub><mi>K</mi><mn>0</mn></msub><mo>,</mo><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">b_0,K_0,H_0</annotation></semantics></math>
+and put
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>=</mo><msub><mi>K</mi><mn>0</mn></msub><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mi>/</mi><msubsup><mi>b</mi><mn>0</mn><mn>2</mn></msubsup><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow></msup><mo>,</mo><mspace width="2.0em"></mspace><mi>H</mi><mo>=</mo><msub><mi>H</mi><mn>0</mn></msub><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mi>/</mi><msubsup><mi>b</mi><mn>0</mn><mn>2</mn></msubsup><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>3</mn><mi>/</mi><mn>4</mn></mrow></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">K=K_0(1+b^2/b_0^2)^{1/2},\qquad
+ H=H_0(1+b^2/b_0^2)^{3/4}.</annotation></semantics></math><span class="equation-number" aria-label="Equation 5">(5)</span></span>
+Both are smooth functions of the squared winding density, including at
+zero. Equation <a href="#eq:area" data-reference-type="eqref"
+data-reference="eq:area">(2)</a> gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math>
+of order
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">A^{-1}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>
+of order
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mrow><mi>−</mi><mn>3</mn><mi>/</mi><mn>2</mn></mrow></msup><annotation encoding="application/x-tex">A^{-3/2}</annotation></semantics></math>.
+Equations <a href="#eq:tower" data-reference-type="eqref"
+data-reference="eq:tower">(3)</a> and <a href="#eq:contact"
+data-reference-type="eqref" data-reference="eq:contact">(4)</a> yield
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mi>W</mi></msub><mo>,</mo><msub><mi>M</mi><mi>Z</mi></msub></mrow><annotation encoding="application/x-tex">M_W,M_Z</annotation></semantics></math>
+of order
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn><mi>/</mi><mn>4</mn></mrow></msup><annotation encoding="application/x-tex">A^{-1/4}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>G</mi><mi>F</mi></msub><annotation encoding="application/x-tex">G_F</annotation></semantics></math>
+of order
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow></msup><annotation encoding="application/x-tex">A^{1/2}</annotation></semantics></math>.
+For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">A=t^2</annotation></semantics></math>
+the first axial frequency is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mi>/</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\pi/t</annotation></semantics></math>.
+Five-sphere excitations of finite mass are allowed below the weak poles;
+every charged vector in Eq. <a href="#eq:tower"
+data-reference-type="eqref" data-reference="eq:tower">(3)</a> still
+carries the same positive weak shift. The resolvent bound proves
+decoupling at fixed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>.
+At the upper endpoint
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">s=0</annotation></semantics></math>
+and the two constant weak masses vanish. In the decompactifying upper
+limit
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>→</mo><msub><mi>K</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">K\to K_0</annotation></semantics></math>
+and the normalized four-dimensional zero-mode coupling tends to zero
+with the growing volume. ◻</p>
+</div>
+<p>This example exhibits a choice of local operators that achieves both
+current limits. For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math>
+proportional to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+asymptotically, any
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>
+growing as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>b</mi><mi>p</mi></msup><annotation encoding="application/x-tex">b^p</annotation></semantics></math>
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>&lt;</mo><mi>p</mi><mo>&lt;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">1&lt;p&lt;2</annotation></semantics></math>
+gives the same ordering on the square path. The endpoints therefore
+leave a continuous freedom in the functions and in the finite value of
+the charge. The argument treats these functions as an exact classical
+constitutive law. An expansion valid only for small winding gradients
+would give no control of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>→</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">b\to\infty</annotation></semantics></math>.
+Equations <a href="#eq:tower" data-reference-type="eqref"
+data-reference="eq:tower">(3)</a> and <a href="#eq:contact"
+data-reference-type="eqref" data-reference="eq:contact">(4)</a> use tree
+matching in a fixed four-dimensional frame, with zero finite threshold
+corrections. Obtaining a Thomson charge or a QCD observable requires the
+charged and coloured thresholds, a quantum matching scheme and the
+corresponding matter action. A strong scale has not entered the
+construction.</p>
+<h2 data-number="5"
+id="why-the-upper-fermions-remain-undetermined"><span
+class="header-section-number">5</span> Why the upper fermions remain
+undetermined</h2>
+<p>There is a direct way to vary the upper matter at fixed bosonic
+background. Add a fermion sector and its mirror, with the gauge
+representations of the reflected model, a vanishing original Yukawa
+link, and no bilinear mixing with the old fermions. On the reflected
+cover write the doubled kinetic operator as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mn>3</mn></msub><mi>D</mi></mrow><annotation encoding="application/x-tex">\rho_3 D</annotation></semantics></math>,
+with Pauli matrices
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ρ</mi><mi>i</mi></msub><annotation encoding="application/x-tex">\rho_i</annotation></semantics></math>
+in copy space. Take opposite outer reflection parities. A
+gauge-invariant mass
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><msub><mi>ρ</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">m\rho_1</annotation></semantics></math>
+exchanges these parities in the kinetic pairing. In a constant vacuum
+its square adds
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>m</mi><mn>2</mn></msup><annotation encoding="application/x-tex">m^2</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>D</mi><mn>2</mn></msup><annotation encoding="application/x-tex">D^2</annotation></semantics></math>.
+The two copies supply opposite four-dimensional chiralities. One may
+restrict attention to the additional gauge-singlet sector or keep the
+whole vectorlike pair.</p>
+<p>Consider the two fixed mass laws
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mi>a</mi></msub><mo>=</mo><mi>y</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mi>/</mi><msubsup><mi>b</mi><mn>0</mn><mn>2</mn></msubsup><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>m</mi><mi>b</mi></msub><mo>=</mo><mi>M</mi><mo>+</mo><msub><mi>m</mi><mi>a</mi></msub></mrow><annotation encoding="application/x-tex">m_a=y\,|\phi|^2(1+b^2/b_0^2),\qquad m_b=M+m_a</annotation></semantics></math><span class="equation-number" aria-label="Equation 6">(6)</span></span>
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>,</mo><mi>M</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">y,M&gt;0</annotation></semantics></math>
+of mass dimension one. At five both masses diverge. At a chosen broken
+middle with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">s&gt;0</annotation></semantics></math>,
+choose
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+such that both exceed the stated fermion cutoff. The bounded lower
+spectrum and the finite middle window then agree between the two
+completions. At seven
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mi>a</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">m_a=0</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mi>b</mi></msub><mo>=</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">m_b=M</annotation></semantics></math>.
+A zero mode and its mirror occur in the first completion; the second has
+a gap at least
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
+in this sector. The statement at finite unbroken area concerns exact
+zero modes. The gap of the second persists on decompactification. With
+zero classical fermion background the bosonic equations and vector
+masses do not change. Virtual matter affects quantum thresholds, which
+have been excluded in this comparison.</p>
+<p>This explains the status of the one-generation example. Its wall
+domain, twist and representation determine the observed modes once they
+are specified. The same two endpoints of the bosonic action permit the
+two different matter spectra above. To infer an upper particle content
+requires a parent that fixes those data, including their quantum
+consistency. To infer the physical electromagnetic, weak and strong
+scales further requires a principle selecting the kinetic functions and
+matching scales. The two limits and their current matrix elements
+provide distinct tests of such a parent.</p>
+<h2 id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-Connes2006" class="csl-entry" role="listitem">
+Connes, A. 2006. <span>“Noncommutative Geometry and the Standard Model
+with Neutrino Mixing.”</span> <em>J. High Energy Phys.</em> 11: 081. <a
+href="https://doi.org/10.1088/1126-6708/2006/11/081">https://doi.org/10.1088/1126-6708/2006/11/081</a>.
+</div>
+<div id="ref-towerlesspaper" class="csl-entry" role="listitem">
+<span>“Finite Spectral Triples as Towerless Intervals.”</span> 2026.
+ <a class="local-reference" href="towerless_intervals.html">Read the paper in HTML</a>.</div>
+<div id="ref-jointnote" class="csl-entry" role="listitem">
+<span>“Finite Spectral Windows with an Opening Tower in
+Seven-Dimensional Parents.”</span> 2026.
+ <a class="local-reference" href="joint_limit_note.html">Read the paper in HTML</a>.</div>
+<div id="ref-boundarynote" class="csl-entry" role="listitem">
+<span>“The Finite <span>D</span>irac Operator as a Boundary Condition on
+an Interval.”</span> 2026.
+ <a class="local-reference" href="boundary_condition_note.html">Read the paper in HTML</a>.</div>
+</div>
+</article>
+</main>
+<footer class="site-footer">
+  <p>Draft research documents. Equations are rendered as MathML; the source papers and their supplements remain the record for each claim.</p>
+  <p><a href="index.html">Integrated discussion</a> · <a href="supplemental.pdf">Full supplement</a> · <a href="https://github.com/arivero/conneskk">Research repository</a></p>
+</footer>
+</div>
+</div>
+</body>
+</html>

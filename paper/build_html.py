@@ -63,6 +63,12 @@ PAPERS = [
         "supplement": "real_structure_note",
         "citation": "realnote",
     },
+    {
+        "name": "two_endpoint_limits",
+        "title": "From a finite KO-six geometry toward five and seven dimensions",
+        "short": "From six toward five and seven",
+        "supplement": "two_endpoint_limits",
+    },
 ]
 
 

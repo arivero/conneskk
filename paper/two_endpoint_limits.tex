@@ -1,0 +1,107 @@
+% Author draft on the two directions from a finite internal window.
+\ifdefined\mobile
+\documentclass[aps,prd,reprint,onecolumn,nofootinbib,amsmath,amssymb]{revtex4-2}
+\usepackage[paperwidth=270pt,paperheight=585pt,textwidth=246pt,textheight=545pt,top=18pt,left=12pt,headsep=14pt]{geometry}
+\else
+\documentclass[aps,prd,reprint,nofootinbib,amsmath,amssymb]{revtex4-2}
+\fi
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsthm}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdfauthor={GPT-6.2-Astra max},pdftitle={From a finite KO-six geometry toward five and seven dimensions}}
+\emergencystretch=1.5em
+\ifdefined\mobile\makeatletter\def\frontmatter@abstractwidth{246\p@}\makeatother\fi
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\title{From a finite KO-six geometry toward five and seven dimensions}
+\author{GPT-6.2-Astra max}
+\date{Draft, 18 November 2026}
+\begin{abstract}
+We follow both limits of a finite real fermion geometry in a family on a five-sphere and two intervals. Two windings fix a boundary angle as a function of area. At small area the surviving operator is a five-dimensional Dirac operator with vectorlike charges. At large area the weak vectors become massless and two towers can be resolved. The fermion limit alone leaves the current response undetermined. We compute the complete tree-level transverse charged-vector exchange for a specified product gauge action. Constant kinetic densities give a finite weak pole and growing contact interaction at the five-dimensional end. A smooth dependence on the same winding density gives a finite electromagnetic coupling, vanishing weak exchange and weak poles separated from the first axial excitations. Two allowed fermion completions have different massless content at seven and identical bounded-energy data near five. The construction specifies the gauge representation and the constitutive functions as microscopic inputs.
+\end{abstract}
+\maketitle
+
+\section{What the three labels measure}
+At five we ask for surviving four-dimensional Dirac fermions with the same colour and electric charge on their two chiralities. At seven we require a parent with resolvable internal modes and massless weak gauge vectors. Restoring the weak group specifies its gauge fields. Its representation on light fermions is a separate part of the problem. At six the light data may be a finite algebra acting on a graded fermion space with a real structure and a Dirac operator. Its KO-degree is six. The heat trace of that finite space is bounded at short time. A six-dimensional manifold is one possible model for an intervening energy band; the finite geometry needs no such band \cite{Connes2006,towerlesspaper,jointnote}.
+
+These distinctions suggest two measurements on the same family. We follow the fermion operator to find the states that remain at a fixed energy. We then couple a weak current to a gauge field and follow its exchange amplitude. A mass assigned in a finite fermion matrix answers the first question only when the matrix has been obtained as an isolated spectral window. A statement about beta decay also needs the second measurement.
+
+\section{A single path through the finite window}
+Let the internal metric be the product on $S^5_R\times I_\ell\times I_d$. All lengths and masses below are measured in the product frame, with a fixed five-sphere radius $R$. Write $A=\ell d$, $V_5=\pi^3R^5$. Identify opposite reflected copies to compute the two axial spectra. The internal coefficient bundle, the spin lift, the boundary data and the reduced algebra in this section are the ones in Part S208 of the Supplemental Material. We recall the construction because the endpoint particle assignments depend on it.
+
+The twisted five-sphere Dirac operator $D_5$ has a harmonic coefficient space whose particle lines carry
+\begin{equation}
+ \mathbf{3}_{2/3}\oplus\mathbf{3}_{-1/3}\oplus\mathbf{1}_{-1}\oplus\mathbf{1}_{0}.
+\end{equation}
+Colour multiplets and electric charges are displayed. The twist uses a Clifford ideal and a parallel coefficient bundle. Its first nonzero absolute eigenvalue is $\sqrt5/R$. Two copies and an axial spin factor carry a cylinder operator whose local axial derivative is $-i\sigma_2\partial_x$. On the harmonic branch its allowed constant components are fixed at both ends. On each nonzero tangential eigenspace its end planes are separated by an angle $\delta=\pi/2-\theta$. The quadratic form bounds the squared mass below by $\lambda^2+\delta^2/\ell^2$ for a tangential eigenvalue $\lambda\ne0$. Reflection on the second interval selects a ten-dimensional chirality on the constant outer level. All other outer levels cost at least $\pi/d$. This is a construction with specified spectral walls. The complete domain, signs and norm-resolvent proof are in Part S208. The related exact interval realization of an arbitrary finite mass matrix is described in Ref.~\cite{boundarynote}.
+
+Let the neutral Higgs coordinate be $\phi=(0,s)$, with $s=\sin\theta$ and $c=\cos\theta$. Two circle-valued scalars wind $n_1,n_2\ne0$ times on the doubled intervals. For the constant winding gradients the local invariant $b=|dw_1\wedge dw_2|$ and the vacuum equation are
+\begin{equation}
+ b=\frac{\pi^2|n_1n_2|}{A},\qquad c=\min(1,A/A_*).
+ \label{eq:area}
+\end{equation}
+Here $A_*=\pi^2|n_1n_2|/\mu^2$. The parameter $\mu$ belongs to the fixed scalar action. In Part S208 the stationary configuration has zero scalar stress and the two lengths remain moduli. Choosing $\ell=d=t$ specifies a path through these vacua.
+
+For $t\downarrow0$, $\delta=\arcsin(t^2/A_*)$ and $\delta/t\to0$. The constant axial channel then converges in generalized norm resolvent to $D_5\oplus(-D_5)$, with the bounded neutral Yukawa matrix if present. For a general shrinking path the control parameter is $\delta/\ell$. A finite nonzero limit adds that number times the sign of the nonzero tangential operator. Thus the wall-angle equation matters even when both walls look local at the endpoint. In the unshifted limit the charged left and right states have the same colour and electromagnetic representations. A weak doublet action on a parallel coefficient pair and singlet actions on its right partners give an explicit realization; they were chosen in defining this family.
+
+For $0<t^2<A_*$ the reflected harmonic sector carries the finite real signs $J^2=1$, $JD=DJ$, $J\gamma=-\gamma J$. Its particle and conjugate copies, with the prescribed left and right actions, realize the one-generation module of $\mathbb C\oplus\mathbb H\oplus M_3(\mathbb C)$. Choose a cutoff above the harmonic Yukawa masses and below the first other fermion level. For example, before a Yukawa perturbation of norm $y$, the gaps are bounded below by the minimum of $\pi/t$ and $\sqrt{5/R^2+\delta^2/t^2}$. Taking a margin greater than $y$ isolates this finite window. Scalar fields on the same metric have their own spectrum.
+
+At $t^2\ge A_*$ one has $s=0$. Weak symmetry is restored at a finite area. To resolve seven internal scalar directions requires a probe energy $E$ with $ER\gg1$ and $Et\gg\pi$. The product eigenvalues are sums of five-sphere eigenvalues and two squared interval frequencies. Consequently restoration and seven-dimensional spectral growth can be tested independently. A compact upper member suffices. Letting $t$ tend to infinity instead gives two decompactifying directions and changes the normalization of a constant four-dimensional field.
+
+\section{The charged current through the tower}
+Use a specified product Yang--Mills and scalar action on this background. The gauge fields propagate on the product, have Neumann spacetime-vector profiles at the interval ends, and act through fixed colour, weak and hypercharge matrices on the retained coefficients. In particular the neutral coefficient $Q=T_3+Y$ agrees with the electric charges displayed above. This choice supplies the gauge sector. In a theory gauging metric isometries and form fields, the kinetic norms and currents must be derived afresh. The five-sphere lift in Part S208 includes such a contribution.
+
+Let $K_i(b)$ multiply $-F^a_{MN}F^{aMN}/4$ for each gauge factor. Give the doublet the kinetic term $H(b)|D\phi|^2/2$ in positive-energy convention. Here $\phi$ is dimensionless and the positive functions $K_i,H$ carry their corresponding microscopic units. They are spatially constant on each winding vacuum. Both the gauge curvature and $D\phi$ vanish there, so the additional terms and their first variations leave that vacuum intact in the bosonic equations. We work to quadratic order for transverse spacetime vectors, about a trivial weak gauge connection. Put $K_2=K_3=K$, $K_Y=5K/3$ and take the boundary kinetic terms to vanish. The inherited relative matching then holds for any $b$.
+
+\begin{theorem}
+Let $\Lambda_j$ be the ordered eigenvalues of the nonnegative scalar Laplacian on $S^5_R$. At each broken vacuum the complete transverse charged-vector masses in this action are
+\begin{equation}
+ m^2_{jnm}=M_W^2+\Lambda_j+(n\pi/\ell)^2+(m\pi/d)^2 .
+ \label{eq:tower}
+\end{equation}
+Here $n,m\ge0$ and $M_W^2=Hs^2/(4K)$. The neutral massive tower has the same Laplacian shifts and $M_Z^2=8M_W^2/5$. A current between normalized parallel harmonic fermions has only the constant vector profile at tree level. For spacelike momentum of magnitude $p$, its charged exchange coefficient for currents $\bar u_L\gamma^\mu d_L$ is $g_2^2/[2(p^2+M_W^2)]$, where $g_2^{-2}=V_5 A K$.
+\end{theorem}
+
+\begin{proof}
+Internal derivatives of a spacetime gauge component give the positive product Laplacian. The neutral Higgs kinetic term adds $Hs^2/4$ to the charged quadratic form. The common factor $K$ divides both pieces after canonical normalization. The Neumann cosines and five-sphere harmonics diagonalize this form, including the constant mode. The neutral mass form is proportional to $(W^3-B_Y)^2$ in charge-connection coordinates. Its positive generalized eigenvalue is $Hs^2(1/K+1/K_Y)/4$. The other eigenvector is the photon. The mass and kinetic matrices are constant on the internal space, so the rotation commutes with the internal Laplacian.
+
+Normalize profiles in volume-average measure, with constant eigenfunction one. The harmonic sphere sections used here are parallel in the twisted Clifford ideal and coefficient spaces, and the two axial ground profiles are constant. Their pointwise charged bilinear, when the left generator connects the pair, is therefore constant as well. Orthogonality removes every other profile from its vertex. More generally a current of profile $j$ has equal-source coefficient bounded by $g_2^2\|j\|^2/[2(p^2+M_W^2)]$. This follows by inserting the complete orthonormal eigenbasis into the positive resolvent. The bound also controls pairs of distinct profiles by Cauchy--Schwarz. No sum over an omitted tower is hidden in the constant-current formula.
+\end{proof}
+
+\section{When five has no weak contact interaction}
+The zero-momentum four-fermion convention and the matching charge are
+\begin{equation}
+ \frac{G_F}{\sqrt2}=\frac{g_2^2}{8M_W^2}
+ =\frac{1}{2V_5 A H s^2},\qquad
+ e^{-2}=\frac83 V_5 A K .
+ \label{eq:contact}
+\end{equation}
+The first expression uses currents written with $1-\gamma_5$ and the contact expansion requires $p\ll M_W$. At the restored end a finite-momentum probe sees a massless propagator. At the five end $s\to1$ a strictly positive finite matching charge requires $AK$ to approach a strictly positive finite limit. Weak decoupling for the constant current then requires $AH\to\infty$. With constant bulk densities, $M_W$ approaches a finite value whereas the formal zero-momentum exchange grows as $1/A$. The growing gauge coupling also limits perturbation theory on that trajectory.
+
+\begin{proposition}
+There is a fixed, smooth classical action in the above class for which $e$ stays finite and nonzero, both weak poles diverge, and the weak exchange of every uniformly bounded normalized current tends to zero toward five. On the square path both poles stay below the first axial frequency for sufficiently small $t$.
+\end{proposition}
+\begin{proof}
+Take fixed positive constants $b_0,K_0,H_0$ and put
+\begin{equation}
+ K=K_0(1+b^2/b_0^2)^{1/2},\qquad
+ H=H_0(1+b^2/b_0^2)^{3/4}.
+\end{equation}
+Both are smooth functions of the squared winding density, including at zero. Equation~\eqref{eq:area} gives $K$ of order $A^{-1}$ and $H$ of order $A^{-3/2}$. Equations~\eqref{eq:tower} and \eqref{eq:contact} yield $M_W,M_Z$ of order $A^{-1/4}$ and $G_F$ of order $A^{1/2}$. For $A=t^2$ the first axial frequency is $\pi/t$. Five-sphere excitations of finite mass are allowed below the weak poles; every charged vector in Eq.~\eqref{eq:tower} still carries the same positive weak shift. The resolvent bound proves decoupling at fixed $p$. At the upper endpoint $s=0$ and the two constant weak masses vanish. In the decompactifying upper limit $K\to K_0$ and the normalized four-dimensional zero-mode coupling tends to zero with the growing volume.
+\end{proof}
+
+This example exhibits a choice of local operators that achieves both current limits. For $K$ proportional to $b$ asymptotically, any $H$ growing as $b^p$ with $1<p<2$ gives the same ordering on the square path. The endpoints therefore leave a continuous freedom in the functions and in the finite value of the charge. The argument treats these functions as an exact classical constitutive law. An expansion valid only for small winding gradients would give no control of $b\to\infty$. Equations~\eqref{eq:tower} and \eqref{eq:contact} use tree matching in a fixed four-dimensional frame, with zero finite threshold corrections. Obtaining a Thomson charge or a QCD observable requires the charged and coloured thresholds, a quantum matching scheme and the corresponding matter action. A strong scale has not entered the construction.
+
+\section{Why the upper fermions remain undetermined}
+There is a direct way to vary the upper matter at fixed bosonic background. Add a fermion sector and its mirror, with the gauge representations of the reflected model, a vanishing original Yukawa link, and no bilinear mixing with the old fermions. On the reflected cover write the doubled kinetic operator as $\rho_3 D$, with Pauli matrices $\rho_i$ in copy space. Take opposite outer reflection parities. A gauge-invariant mass $m\rho_1$ exchanges these parities in the kinetic pairing. In a constant vacuum its square adds $m^2$ to $D^2$. The two copies supply opposite four-dimensional chiralities. One may restrict attention to the additional gauge-singlet sector or keep the whole vectorlike pair.
+
+Consider the two fixed mass laws
+\begin{equation}
+ m_a=y\,|\phi|^2(1+b^2/b_0^2),\qquad m_b=M+m_a
+\end{equation}
+with $y,M>0$ of mass dimension one. At five both masses diverge. At a chosen broken middle with $s>0$, choose $y$ such that both exceed the stated fermion cutoff. The bounded lower spectrum and the finite middle window then agree between the two completions. At seven $m_a=0$ and $m_b=M$. A zero mode and its mirror occur in the first completion; the second has a gap at least $M$ in this sector. The statement at finite unbroken area concerns exact zero modes. The gap of the second persists on decompactification. With zero classical fermion background the bosonic equations and vector masses do not change. Virtual matter affects quantum thresholds, which have been excluded in this comparison.
+
+This explains the status of the one-generation example. Its wall domain, twist and representation determine the observed modes once they are specified. The same two endpoints of the bosonic action permit the two different matter spectra above. To infer an upper particle content requires a parent that fixes those data, including their quantum consistency. To infer the physical electromagnetic, weak and strong scales further requires a principle selecting the kinetic functions and matching scales. The two limits and their current matrix elements provide distinct tests of such a parent.
+\bibliography{towerless_intervals}
+\end{document}

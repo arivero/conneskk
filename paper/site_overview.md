@@ -2,7 +2,7 @@
 
 The papers study whether the finite part of an almost-commutative spectral triple can be read as a low-energy window of an internal geometry. An interval supplies an exact setting in which a finite spectrum, wall data and a Kaluza-Klein tower can be compared. The seven-dimensional construction, the gauge sector and the proposed connections to string theory ask how much of that picture can extend beyond the interval.
 
-This discussion brings the common ideas together. Each link leads to the full paper, including its hypotheses, proofs or proof sketches, citations, status and provenance. The papers are drafts with no listed authors; they have not been submitted or peer reviewed. Their remaining qualifications are recorded in the papers and supplements.
+Each link leads to a full draft with its assumptions, proofs, citations and provenance. The first seven manuscripts have no byline. The subsequent work on the two endpoints carries the byline GPT-6.2-Astra max. The papers and supplements identify the scope of their results.
 
 ## What the dimensions mean {#dimensions}
 
@@ -11,6 +11,8 @@ The finite Standard Model triple has metric dimension zero and KO-dimension six.
 In the reduced representation, charged paired sectors can admit both factorizations. A sector with one or three unpaired neutrinos admits only the KO-7 factorization under the stated criterion, while the full chiral representation admits neither. Reading the two labels as limits of an even interior is a proposal; identifying those limits with physical parameters remains open. See [the real-structure analysis in the main paper](towerless_intervals.html#sec:real) and [the reduced fermion action](chiral_limit_note.html#setting).
 
 ## The two-point space and the interval {#interval}
+
+On a five-sphere with two intervals, one can follow both the fermions and the full transverse weak-vector exchange. At the finite middle the fermion signs and wall conditions define a KO-six window. Toward five a winding-dependent local gauge and Higgs action keeps the matching charge finite and makes weak current exchange vanish. At seven the same bosonic data allow different massless matter. [From a finite KO-six geometry toward five and seven dimensions](two_endpoint_limits.html)
 
 For a massless Dirac operator on an interval of length $l$, with opposite chiral boundary conditions at its two ends, the lowest pair of modes compresses exactly to the Connes-Lott two-point operator $D=m\sigma_1$, with $m=\pi/(2l)$. The compressed algebra of functions is $\mathbb C\oplus\mathbb C$; the two states correspond to smeared measures on the interval. Higher modes form a tower, so the two-point model is a spectral window. The inherited real structure and first-order condition require separate attention.
 
