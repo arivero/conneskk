@@ -1856,6 +1856,13 @@ checked_by(gh10_tunnelling_cutoffs, codex_gpt_6, by_hand).
 addresses(t0, gh10_tunnelling_cutoffs).
 addresses(t14, gh10_tunnelling_cutoffs).
 
+claim(gh2_football_spin, proposition, proved, "Issue 2", "The bounding spin football with integer monopole has the stated Jacobi spectrum and chiral index N, and in the cone-angle range q>=1 its Dirac domain is unique.").
+source(gh2_football_spin, 'results/issues/02.md', '').
+attempted_by(gh2_football_spin, gpt_6_2_astra_max).
+checked_by(gh2_football_spin, terra_6_1, by_hand).
+addresses(t18, gh2_football_spin).
+addresses(t3, gh2_football_spin).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
