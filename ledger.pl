@@ -1337,6 +1337,25 @@ checked_by(l52_flavour_adjoint, claude_opus_5_5, python("U(1)_em weights of sl(5
 prior_work(l52_majorana_nine, known, "The decomposition of a Majorana-Weyl spinor of ten dimensions, and of a Majorana spinor of nine, under Spin(1,3) x Spin(6) or Spin(5) as a left-handed Weyl spinor tensored with the internal spinor is standard (Polchinski, String Theory vol. 2, appendix B; Green-Schwarz-Witten vol. 2, chapter 15; not reopened); the vanishing Majorana bilinear in 8k + 1 is Alvarez-Gaume-Witten (rs_F3); the reading of the four Weyl spinors as one lepton generation with the K_p structure of the sheet not found").
 prior_work(l52_flavour_adjoint, known, "The meson counts 6, 6, 12 of the five light quarks and their match with three generations of sleptons: Rivero, Eur. Phys. J. C 84 (2024) 1058, and hep-ph/0512065 (ledger rows d11_so32_comparison, l21_so30); the branching under SU(2)_u x SU(3)_d is elementary").
 addresses(t16, l52_lepton_line).  addresses(t12, l52_flavour_adjoint).  addresses(t2c, l52_majorana_nine).  addresses(t13, l52_majorana_nine).  addresses(t0b, l52_lepton_line).  addresses(t8, l52_majorana_nine).
+
+%% Flag spinors and the conic in the monopole collapse, 18 November 2026.
+claim(l53_flag_multiplets, proposition, proved, "Proposition 53.1", "For the flag spin twist O(a,b) the index is ab(a+b)/2. The twists (1,2), (1,1), (2,1) give positive kernels 3, 1, 3-bar, while (0,k) is acyclic. The product spin-c twist O(-4,1) gives a geometric (3,2). On the flag independent weak multiplicities and hypercharge characters realize one generation of representations.").
+source(l53_flag_multiplets, 'lemmas/53_flag_conic_and_monopole_window.md', 'bulk-chiral-multiplets').
+attempted_by(l53_flag_multiplets, gpt_6_2_astra_max).
+checked_by(l53_flag_multiplets, terra_6_1, by_hand).
+addresses(t11, l53_flag_multiplets).  addresses(t18, l53_flag_multiplets).
+
+claim(l53_conic_defect, proposition, proved, "Proposition 53.2", "The intrinsic spin index of the conic surface in the Hopf twist k is k^2. The graded Dolbeault operator of its Koszul divisor complex has one even zero mode, with squared L2 norm outside each fixed neighbourhood O(1/t) as the defect coefficient grows.").
+source(l53_conic_defect, 'lemmas/53_flag_conic_and_monopole_window.md', 'localization-on-a-fixed-conic').
+attempted_by(l53_conic_defect, gpt_6_2_astra_max).
+checked_by(l53_conic_defect, terra_6_1, by_hand).
+addresses(t11, l53_conic_defect).  addresses(t18, l53_conic_defect).
+
+claim(l53_conic_window, proposition, proved, "Proposition 53.3", "In the homogeneous sphere collapse N(1,0) to S^5 with spin and relative monopole twist O(2), the vertical kernel is recovered by a length-two conic intersection including tangent jets. The bounded Dirac spectrum converges with multiplicity to that of the five-sphere with its fundamental SU(2) bundle, of odd kernel parity.").
+source(l53_conic_window, 'lemmas/53_flag_conic_and_monopole_window.md', 'the-monopole-window-over-the-five-sphere').
+attempted_by(l53_conic_window, gpt_6_2_astra_max).
+checked_by(l53_conic_window, terra_6_1, by_hand).
+addresses(t15, l53_conic_window).  addresses(t18, l53_conic_window).
 claim(l23_potential, no_go, proved, "Proposition 23.8", "Flat massless family, this gauge content, fermions of frequency 1, one loop: theta = pi/2 is the unique global minimum for n_f > 0, and V is strictly decreasing for n_f >= 10.8; for smaller n_f, the early grid check is superseded by the proof of Theorem 24.9. Escapes: general bulk masses with a completion, warping, wall scalar with a potential, wall terms, fermions of frequency 2.").
 source(l23_potential, 'lemmas/23_two_gradings_interval.md', 'the-one-loop-potential-in-the-same-family').
 attempted_by(l23_potential, claude_opus_5_5).

@@ -50,13 +50,13 @@ Level-one quantization, M_2(H) inside M_4(C), the flag and the finite SM data, t
 
 ### 1.8 Seven-dimensional geometry: fibrations, flag and product candidates
 
-N^7 and its quotients, the sequential orbit-space chain, S^3 bundles and circle endpoints, flag-fibre zero modes.
+The sphere over a projective line distinguishes the flag from the product. Both contain the conic surface. Its intrinsic spin index, the bulk flag multiplets and an operator localizing on the fixed surface give three distinct tests of chirality. [Lemma 53](lemmas/53_flag_conic_and_monopole_window.md)
 
 ### 1.9 Monopole collapse N^7 to S^5 and invariant connections
 
 Kernel bundles K_n, Berry connection, holonomy and parallel algebras; the protected real-index mode on S^5.
 
-[lemma 02](lemmas/02_invariant_connections_monopole.md)
+[Lemma 02, invariant connections](lemmas/02_invariant_connections_monopole.md) · [Lemma 53, secant reconstruction of the rank-two kernel](lemmas/53_flag_conic_and_monopole_window.md#the-monopole-window-over-the-five-sphere)
 
 ### 1.10 Spinor bundles, circle lifts and Wilson lines
 
@@ -277,6 +277,7 @@ A dated record to November 2026 in nine sections: origins beside the Kaluza-Klei
 - [50: The Majorana line and the top block: one point of the twistor fibre, the Higgs vector and the compressed height functions](lemmas/50_majorana_line_and_top_block.md)
 - [51: The Dirac operator of the four-torus with a Wilson line and a constant three-form: its lowest window is the Yukawa block, the photon condition is the invariance under the transposition, and the heaviest quark is the torsion equal to the quarter turn of the Wilson line](lemmas/51_torus_wilson_line_and_torsion_yukawa.md)
 - [52: The lepton generation in three views: the lepton line of the two sheets with the connector, the Majorana spinor of nine dimensions, and the partner of the flavour adjoint](lemmas/52_lepton_generation_three_views.md)
+- [53. Weak multiplets on the flag and the conic in the monopole collapse](lemmas/53_flag_conic_and_monopole_window.md)
 
 ### Results: [results/README.md](results/README.md)
 
