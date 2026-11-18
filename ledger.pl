@@ -2007,6 +2007,13 @@ attempted_by(gh19_s3, gpt_6_2_astra_max).
 checked_by(gh19_s3, gpt_6_2_astra_max, python).
 addresses(t13, gh19_s3).
 
+claim(gh11_flat_folds, proposition, proved, "Issue 11", "For 0<=n2<nc the left stationary curve has a unique maximum exactly when n2>69/50, yielding the fold and all roots. For integer n2=1,2 and positive integer n1 all interior stationary points are maxima.").
+source(gh11_flat_folds, 'results/issues/11.md', '').
+attempted_by(gh11_flat_folds, gpt_6_2_astra_max).
+checked_by(gh11_flat_folds, terra_6_1, by_hand).
+addresses(t13, gh11_flat_folds).
+addresses(t5b, gh11_flat_folds).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
