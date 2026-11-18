@@ -6,3 +6,4 @@ part 39 lemmas/39_*.md
 part 33 lemmas/33_*.md
 part 34 lemmas/34_*.md
 part 36 lemmas/36_*.md
+part "I04 (triality transport)" results/issues/04.md
