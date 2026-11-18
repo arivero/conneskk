@@ -1912,6 +1912,15 @@ checked_by(gh7_quark_wall, terra_6_1, by_hand).
 addresses(t3, gh7_quark_wall).
 addresses(t16, gh7_quark_wall).
 
+claim(gh8_three_torus_blocks, proposition, proved, "Issue 8", "An endomorphism-valued Wilson line and three-form from a single normal flavour endomorphism realize arbitrary three positive doublets with prescribed orientations; a degree-three elliptic zero sector realizes the multiplicity.").
+source(gh8_three_torus_blocks, 'results/issues/08.md', '').
+attempted_by(gh8_three_torus_blocks, gpt_6_2_astra_max).
+checked_by(gh8_three_torus_blocks, gpt_6_2_astra_max, by_hand).
+referee_pending(gh8_three_torus_blocks).
+addresses(t8, gh8_three_torus_blocks).
+addresses(t12, gh8_three_torus_blocks).
+addresses(t16, gh8_three_torus_blocks).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
