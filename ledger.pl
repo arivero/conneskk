@@ -1928,6 +1928,20 @@ checked_by(gh9_flux_lattice, terra_6_1, by_hand).
 addresses(t14, gh9_flux_lattice).
 addresses(t12, gh9_flux_lattice).
 
+claim(gh15_broken_colour_interval, proposition, proved, "Issue 15, broken-group parent", "Three genuinely charged ultraviolet antitriplets of a separate broken group survive as neutral Majorana modes of the visible window. The specified Neumann-Dirichlet tower gives their exact tree-level current interaction.").
+source(gh15_broken_colour_interval, 'results/issues/15.md', '').
+attempted_by(gh15_broken_colour_interval, gpt_6_2_astra_max).
+checked_by(gh15_broken_colour_interval, codex_gpt_6, by_hand).
+addresses(t2, gh15_broken_colour_interval).
+addresses(t12, gh15_broken_colour_interval).
+
+claim(gh15_charged_compression, proposition, proved, "Issue 15", "On a gauge-equivariant spectral window the surviving part of an irreducible charge sector carries that same representation; an unmatched Weyl kernel can survive the cutoff.").
+source(gh15_charged_compression, 'results/issues/15.md', '').
+attempted_by(gh15_charged_compression, gpt_6_2_astra_max).
+checked_by(gh15_charged_compression, terra_6_1, by_hand).
+addresses(t12, gh15_charged_compression).
+addresses(t2, gh15_charged_compression).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
