@@ -1928,6 +1928,13 @@ checked_by(gh15_charged_compression, terra_6_1, by_hand).
 addresses(t12, gh15_charged_compression).
 addresses(t2, gh15_charged_compression).
 
+claim(gh14_sqcd_hessian, proposition, proved, "Issue 14", "In the massive five-flavour SU(3) SQCD vacua the six oppositely charged meson pairs have factorized holomorphic quadratic coefficients m_i m_j/S, with S cubed equal to Lambda^4 det m.").
+source(gh14_sqcd_hessian, 'results/issues/14.md', '').
+attempted_by(gh14_sqcd_hessian, gpt_6_2_astra_max).
+checked_by(gh14_sqcd_hessian, terra_6_1, by_hand).
+addresses(t12, gh14_sqcd_hessian).
+addresses(t13, gh14_sqcd_hessian).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
