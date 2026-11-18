@@ -16,4 +16,4 @@
 
 **Proof.** Lemma 34, Proposition 5.6; the proof is there: -1 lies outside W(A_8), so theta is outer on sl(9); the fixed algebra of theta has dimension 120 and is so(16); Λ^2(16) = 36 + 84 forces the spinor; involutions of e8 with a 120-dimensional fixed algebra form one class, and the spinor embeddings with 128 -> 44 + 84 one class under Spin(16)/Z_2, since det A = -1 would exchange the half-spinors; the tensor modules 36, 44, 84 see no centre.
 
-**What it leaves open.** How the 96 states of the three-family frame sit against the conjugated Spin(9): for theta itself the projection of H_F to the 128 has 3 dimensions in the 44 and 45 in the 84 for t = +1/2, so the top meets only the three-form, against the numerical count of Reading 3b (a); the Spin(8) x Spin(8) frame of the commuting pair sigma, theta is where to compute it (lemma 34, What remains open).
+**Transport of the states.** The [triality calculation](issues/04.md) gives a two-reflection lift, transports the projectors and determines the connected stabilizer of the 44 in E8. The transported top projects to the 84. A compactification realizing the four-family symmetry remains open.
