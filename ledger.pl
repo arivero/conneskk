@@ -1935,6 +1935,14 @@ checked_by(gh14_sqcd_hessian, terra_6_1, by_hand).
 addresses(t12, gh14_sqcd_hessian).
 addresses(t13, gh14_sqcd_hessian).
 
+claim(gh17_eta_circle, proposition, proved, "Issue 17", "On a product with a pulled-back unitary connection eta is determined by the chiral indices and the total spin-plus-holonomy shifts; an antiperiodic spin structure and an odd half holonomy cancel.").
+source(gh17_eta_circle, 'results/issues/17.md', '').
+attempted_by(gh17_eta_circle, gpt_6_2_astra_max).
+checked_by(gh17_eta_circle, codex_gpt_6, by_hand).
+addresses(t3, gh17_eta_circle).
+addresses(t10, gh17_eta_circle).
+addresses(t14, gh17_eta_circle).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
