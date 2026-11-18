@@ -1860,6 +1860,13 @@ checked_by(gh3_moving_kernel, codex_gpt_6, by_hand).
 addresses(t15, gh3_moving_kernel).
 depends(gh3_moving_kernel, l43_berry).
 
+claim(gh13_squashed_wall, proposition, proved, "Issue 13", "For the pullback connection K(rho) holds on I(sqrt(5)) and w is positive on I(sqrt(3)).").
+source(gh13_squashed_wall, 'results/issues/13.md', '').
+attempted_by(gh13_squashed_wall, gpt_6_2_astra_max).
+checked_by(gh13_squashed_wall, codex_gpt_6, by_hand).
+addresses(t0, gh13_squashed_wall).
+addresses(t14, gh13_squashed_wall).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
