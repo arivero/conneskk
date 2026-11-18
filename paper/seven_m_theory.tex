@@ -1,0 +1,113 @@
+% Author draft on the seven-dimensional upper endpoint.
+\ifdefined\mobile
+\documentclass[aps,prd,reprint,onecolumn,nofootinbib,amsmath,amssymb]{revtex4-2}
+\usepackage[paperwidth=270pt,paperheight=585pt,textwidth=246pt,textheight=545pt,top=18pt,left=12pt,headsep=14pt]{geometry}
+\else
+\documentclass[aps,prd,reprint,nofootinbib,amsmath,amssymb]{revtex4-2}
+\fi
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsthm}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdfauthor={GPT-6.2-Astra max},pdftitle={An M-theory test for the seven-dimensional weak endpoint}}
+\emergencystretch=1.5em
+\ifdefined\mobile\makeatletter\def\frontmatter@abstractwidth{246\p@}\makeatother\fi
+\newtheorem{proposition}{Proposition}
+\begin{document}
+\title{An M-theory test for the seven-dimensional weak endpoint}
+\author{GPT-6.2-Astra max}
+\date{Draft, 18 November 2026}
+\begin{abstract}
+Can a seven-dimensional parent with massless weak gauge vectors be the internal space of an M-theory compactification? We compare the five-sphere with two intervals to the Freund--Rubin solution on the regular circle bundle $M^{111}$. The first background is supported by a five-form in its own action. The second solves eleven-dimensional supergravity and has the required weak Lie algebra. Its quotient circle, the weak centre and a gauge field from the three-form give separate tests of electric charges. We normalize the harmonic two-form to one unit of wrapped membrane charge, compute the four-dimensional Maxwell coefficient, and bound the classical mass of a charged membrane. A free circle reduction produces a six-dimensional base with a spin obstruction to neutral fermion descent. Integral cohomology also distinguishes this total space from a smooth two-sphere bundle over the five-sphere. These results specify what an M-theory origin supplies and which transition and fermion data remain to be constructed.
+\end{abstract}
+\maketitle
+
+\section{The higher-dimensional field equations}
+We take five internal dimensions with Dirac matter under colour and electromagnetism as the lower target. The middle may be a finite real spectral triple of KO-degree six. The upper target has seven internal dimensions and an unbroken weak group. Before symmetry breaking the neutral weak and Abelian gauge fields are separately massless. Naming a particular neutral combination $Z$ requires a choice of charge generator and gauge kinetic normalization. The representation content at the upper end is an output sought from a parent.
+
+Eleven-dimensional supergravity gives a concrete test of the M-theory proposal at leading order in the eleven-dimensional Planck length $\ell_p$. Its bosonic fields are a metric and a three-form potential $C_3$ with field strength $G_4$. In the absence of sources the equations include $dG_4=0$, $d{*G_4}+\tfrac12G_4\wedge G_4=0$ and
+\begin{equation}
+ R_{MN}=\frac1{12}\left(G_{MPQR}G_N{}^{PQR}
+             -\frac1{12}g_{MN}G^2\right).
+ \label{eq:einstein}
+\end{equation}
+Here $G^2=G_{PQRS}G^{PQRS}$. We use Lorentzian external signature and the normalization $2\kappa_{11}^2=(2\pi)^8\ell_p^9$ \cite{CJS1978,DNP1986}. For an unwarped product with maximally symmetric four-space write $G_4=f\,\mathrm{vol}_4+F_4$ with $F_4$ internal and $|F_4|^2=F_{abcd}F^{abcd}/4!$. The external Einstein equation is
+\begin{equation}
+ R_{\mu\nu}=-\left(\frac{f^2}{3}+\frac{|F_4|^2}{6}\right)g_{\mu\nu}.
+ \label{eq:external}
+\end{equation}
+Indeed the external volume contributes $-6f^2g_{\mu\nu}$ to the first contraction in Eq.~\eqref{eq:einstein}.
+
+The product with a round $S^5$ and two flat intervals in Part S208 of the Supplemental Material permits a direct comparison. Its Minkowski solution uses a magnetic \emph{five}-form through $S^5$ and a positive cosmological coefficient. For ordinary eleven-dimensional supergravity, Eq.~\eqref{eq:external} on an open unwarped Minkowski patch sets both four-form components to zero there. Equation~\eqref{eq:einstein} would then require the sphere Ricci tensor to vanish on that patch. For pure external flux and an AdS four-space, every internal Ricci eigenvalue would instead be $f^2/6$. The flat interval directions fail that test as well. Boundary conditions on fermions leave these local bulk equations intact. Warping, sources, additional flux components with external AdS curvature, and quantum corrections require different field equations or different solutions. A new bulk construction is needed to promote this interval example to an M-theory compactification.
+
+\section{A Freund--Rubin upper endpoint}
+Let $Y$ be the principal circle bundle over $B=\mathbb{CP}^2\times\mathbb{CP}^1$ with primitive Euler class $3h+2k$. Here $h,k$ integrate to one on projective lines in their respective factors. We use the standard regular Sasaki--Einstein realization of $M^{111}$ on this bundle, with unit metric $\hat g$ satisfying $\mathrm{Ric}=6\hat g$. The coset, its ordinary harmonics and its supermultiplets have been worked out explicitly \cite{Witten1981,Fabbri1999}. The bundle and lift calculations are given in Part 32 of the Supplemental Material.
+
+Write $\hat g=\eta^2+g_B$, let $J_1,J_2$ be the two horizontal Kähler forms and take $d\eta=2(J_1+J_2)$. The base has Ricci tensor $8g_B$. The Ricci form and first Chern class fix
+\begin{equation}
+ [J_1]=\frac{3\pi}{4}h,\qquad [J_2]=\frac{\pi}{2}k .
+\end{equation}
+The connection of period $2\pi$ is $4\eta$. Consequently the unit Reeb orbit has length $\pi/2$, the base volume is $\int_B J_1^2 J_2/2=9\pi^3/64$, and $\operatorname{Vol}(Y,\hat g)=9\pi^4/128$.
+
+With metric $L^2\hat g$ use external flux $G_4=(6/L)\operatorname{vol}_4$. Its internal stress supplies $\mathrm{Ric}_7=6g_7/L^2$, and Eq.~\eqref{eq:external} gives the AdS radius $L/2$. The Maxwell and Bianchi equations hold since both volume forms are closed and $G_4\wedge G_4=0$. In the classical electric flux convention, with positive orientation and trivial flat three-form data,
+\begin{equation}
+ N=\frac{6L^6\operatorname{Vol}(Y,\hat g)}{(2\pi\ell_p)^6},
+ \qquad
+ \frac{L^6}{\ell_p^6}=\frac{4096\pi^2}{27}N .
+ \label{eq:radius}
+\end{equation}
+The $C_3\wedge G_4$ term in the Page integrand pulls back to zero on $Y$ in this background. Equation~\eqref{eq:radius} uses leading supergravity normalization of the M2 charge. A finite-charge precision calculation also needs the quantum gravitational and torsion data. The magnetic five-form of the interval model has no role here \cite{FreundRubin1980,Fabbri1999}.
+
+The flux is invariant under the internal isometries and its contraction with an internal Killing field vanishes. The associated unbroken gauge transformations give massless vectors, including a weak $\mathfrak{su}(2)$. The Abelian assignments take more work. In the realization $(S^5\times S^3)/U(1)$ the divided-out circle acts as $(\lambda^2,\lambda^{-3})$ on $\mathbb C^3\oplus\mathbb C^2$. These weights are $6Y$ on the corresponding two summands of the $\overline{\mathbf5}$. The surviving phase circle is the Reeb circle. Fulfilling the hypercharge assignment on particles requires a further calculation.
+
+The weak centre already constrains the answer. The central element $-1$ on the second sphere is trivial on the quotient. Its spin lift is also $+1$ for the primitive class $(3,2)$. To see the sign, follow the weak path $\mathrm{diag}(e^{it},e^{-it})$ to $t=\pi$ and compensate by the quotient phases. The closed ambient path has winding $-1$ in each of the three colour complex planes and windings $2,1$ in the two weak planes. Their sum is zero. The radial normals and the quotient generator provide the three stable trivial directions, so the ambient spin sign descends to the tangent spin lift. Ordinary bulk tensors, spinors and tensor-spinors therefore carry integer weak isospin in this smooth compactification. The weak adjoint itself has precisely this parity. A doublet would require further degrees of freedom or a different lift. The full smooth harmonic spectrum is a known spectrum of this candidate. Its identification with the matter of the proposed upper endpoint remains open \cite{Fabbri1999}.
+
+\section{An Abelian vector and its membrane charge}
+There is also an Abelian vector from $C_3$ expanded on a harmonic two-form, often called a Betti vector. We fix its electric normalization by the Wess--Zumino coupling of an elementary M2 brane. This choice matters for comparing a geometric charge with a finite-triple charge.
+
+\begin{proposition}
+Choose $u\in H^2(Y;\mathbb Z)$ with $\pi^*h=2u$, $\pi^*k=-3u$. The basic harmonic form representing $u$ and the four-dimensional coupling in this normalization satisfy
+\begin{equation}
+ \omega=\frac{2}{9\pi}(J_1-2J_2),\qquad
+ g_B^{-2}=\frac{\sqrt N}{36\sqrt3\,\pi}.
+ \label{eq:betti}
+\end{equation}
+We use the two-derivative bulk kinetic term and the electric vector potential obtained from $C_3$. A charge-one wrapped classical M2 particle obeys $m L_{\rm AdS}\ge 8\sqrt{N/3}$ in the product background.
+\end{proposition}
+
+\begin{proof}
+The Gysin sequence gives $H^2(Y;\mathbb Z)=\mathbb Z^2/\langle(3,2)\rangle$. A pair $(x,y)$ maps to $2x-3y$. The form $J_1-2J_2$ is closed and primitive on the Kähler base of complex dimension three. Its horizontal Hodge dual is closed. In $d(*_7\omega)$ the other term is proportional to $(J_1+J_2)\wedge *_6\omega$ and vanishes by primitivity. The cohomology normalization follows from the two Kähler classes displayed above. Since $|J_1|^2=2$, $|J_2|^2=1$ and the blocks are orthogonal, one obtains
+\begin{equation}
+ \int_{(Y,L^2\hat g)}\omega\wedge*\omega=\frac{\pi^2 L^3}{48}.
+\end{equation}
+Use $C_3=T_2^{-1} A_B\wedge\omega$ for this fluctuation, where $T_2=1/[(2\pi)^2\ell_p^3]$. Its field strength $T_2^{-1}dA_B\wedge\omega$ solves the linearized form equation precisely for a four-dimensional Maxwell field. Its contraction in the linearized Einstein stress with the purely external background vanishes by index type, as does the linear Chern--Simons source. The coefficient of $-\tfrac12\int dA_B\wedge *_4dA_B$ is the internal norm divided by $2\kappa_{11}^2T_2^2$. Substitution of Eq.~\eqref{eq:radius} yields Eq.~\eqref{eq:betti}. The membrane term $T_2\int C_3$ assigns charge $\int_\Sigma\omega$ to a two-cycle $\Sigma$.
+
+A degree-one cycle projects to base degrees $(2,-3)$. Indeed the homotopy sequence identifies $\pi_2(Y)$ with the kernel of $(3,2)$ on $\mathbb Z^2$, and $Y$ is simply connected. For a smooth representative take a degree-two embedded conic in the first factor and an antiholomorphic degree-three map in the second. The pulled-back circle has zero Euler number, so the graph admits a section and lifts to an embedded sphere. For a cycle of charge $q$ the closed horizontal two-form $J_1-J_2$ integrates to $3\pi q$. Its comass is one in the unit metric, since it is the Kähler form for the orthogonal complex structure with the second factor reversed on the horizontal space and vanishes on the Reeb direction. Thus every oriented representative has area at least $3\pi L^2|q|$. Multiplication by $T_2 L/2$ gives the asserted mass bound.
+\end{proof}
+
+This is a classical tension bound for an M2 treated as a probe at fixed charge in a background of large $N$. A smooth topological representative supplies its charge. Existence of a stable quantum particle, its fermion zero modes, its isospin and saturation of the bound each require additional dynamics. In particular, the Abelian field and a charge lattice do not by themselves give a light weak doublet. The choice of electric boundary conditions for a Maxwell field in AdS also matters if its boundary current is used as the observable.
+
+\section{A controlled circle reduction and its spinors}
+A nontrivial route from seven toward six uses the free Reeb circle. Quotient its fibres by $\mathbb Z_j$. The local Einstein equations and weak Killing fields persist. The principal circle bundle $Y_j\to B$ now has Euler class $j(3h+2k)$, unit-metric volume $\operatorname{Vol}(Y)/j$ and physical fibre radius $R_{11}=L/(4j)$. Holding the quotient flux $N$ fixed replaces $N$ by $Nj$ in the formula for $L^6$ in Eq.~\eqref{eq:radius}. Reduction gives the two-form Kaluza--Klein flux on the base with integral class $j(3h+2k)$.
+
+Use $\ell_s^2=\ell_p^3/R_{11}$ for the string length. The circle relation for the coupling is $g_s=(R_{11}/\ell_p)^{3/2}$ \cite{Witten1995Circle}. It gives $g_s$ of order $(N/j^5)^{1/4}$ and $L^2/\ell_s^2$ of order $(N/j)^{1/2}$. For $N^{1/5}\ll j\ll N$ there is a small circle and a weakly curved base in these units. This is a bosonic scale separation. Global spin data decide which fermions have neutral zero modes.
+
+\begin{proposition}
+$Y_j$ is spin precisely when $j$ is odd. For odd $j$ its spin structure is unique and the fibre rotation has a double-cover lift on ordinary spinors. It gives no invariant spinor for the infinitesimal circle action.
+\end{proposition}
+\begin{proof}
+Stably $TY_j=\pi^*TB\oplus\mathbb R$, and $w_2(B)=h\bmod2$. The degree-two mod-two Gysin sequence gives $\ker\pi^*=\langle j(3h+2k)\bmod2\rangle$. This removes $h$ exactly at odd $j$. The circle homotopy sequence gives $\pi_1(Y_j)=\mathbb Z_j$, hence $H^1(Y_j;\mathbb Z_2)=0$ for odd $j$. If the principal circle action lifted with its original period, reducing spin frames along the invariant unit vertical vector and taking the quotient would define a spin structure on $B$. This contradicts $w_2(B)\ne0$. The lifted $2\pi$ turn therefore acts as $-1$ on spinors. Its weights in principal-circle units are half-integral.
+\end{proof}
+
+This explains why the bosonic limit alone cannot supply an ordinary neutral type-IIA gravitino or the fermions of a finite KO-six geometry. Charged spin$^c$ sectors, alternative circle actions or localized fields must be tracked with their respective operators. The spin calculation concerns circle weights. It does not give the eigenvalues of a flux-coupled Dirac or Rarita--Schwinger operator by itself.
+
+\section{What a route to five would have to change}
+For the unquotiented $Y$, multiplication by $3h+2k$ from $H^2(B)$ to $H^4(B)$ has matrix
+\begin{equation}
+ \begin{pmatrix}3&0\\2&3\end{pmatrix}
+\end{equation}
+in the bases $(h,k)$ and $(h^2,hk)$. The Gysin sequence gives $H^4(Y;\mathbb Z)=\mathbb Z/9$. Every smooth $S^2$ bundle over $S^5$ has $H^4=0$, since the only nonzero entries in its integral cohomology spectral sequence have base degrees zero or five and fibre degrees zero or two. Thus this regular $M^{111}$ cannot be the total space of a smooth sphere fibration over the round five-dimensional target. This statement leaves open a singular transition, a change of orbit structure, a dual description or a different upper space. For comparison, the distinct bundle $SU(3)/U(1)_{1,0}\to S^5$ in Part 53 has an actual sphere collapse with a specified monopole. Its bounded fermionic spectrum converges to a five-sphere Dirac operator on a rank-two bundle. In that construction the monopole charge and the origin of its weak multiplicities must be supplied.
+
+A concrete next calculation is to choose an upper defect or gauge sector with a half-integral weak multiplet, specify its coupling to the Reeb and Betti vectors, and follow its normalizable modes through a degeneration. Its light spectrum should reproduce the charged currents at the middle and the vectorlike colour and electric charges at five. The smooth Freund--Rubin solution supplies genuine eleven-dimensional field equations, a quantized radius and massless weak vectors. Those facts, the spin calculation and the membrane bound give independently testable requirements for this proposed extension.
+The accompanying endpoint paper constructs a coefficient gauge action for which both limits of the weak current can be evaluated explicitly \cite{TwoEndpoint2026}.
+\bibliography{towerless_intervals}
+\end{document}

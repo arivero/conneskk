@@ -1,0 +1,5 @@
+# paper: An M-theory test for the seven-dimensional weak endpoint
+# name: seven_m_theory
+part 32 lemmas/32_witten_spaces_hypercharge_quotient.md
+part 53 lemmas/53_flag_conic_and_monopole_window.md
+part "S208 (a chiral family over the round five-sphere and its two interval limits)" results/54_chiral_family_over_the_five_sphere.md

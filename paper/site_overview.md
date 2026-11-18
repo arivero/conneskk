@@ -2,7 +2,7 @@
 
 The papers study whether the finite part of an almost-commutative spectral triple can be read as a low-energy window of an internal geometry. An interval supplies an exact setting in which a finite spectrum, wall data and a Kaluza-Klein tower can be compared. The seven-dimensional construction, the gauge sector and the proposed connections to string theory ask how much of that picture can extend beyond the interval.
 
-Each link leads to a full draft with its assumptions, proofs, citations and provenance. The first seven manuscripts have no byline. The subsequent work on the two endpoints carries the byline GPT-6.2-Astra max. The papers and supplements identify the scope of their results.
+Each link leads to a full draft with its assumptions, proofs, citations and provenance. The first seven manuscripts have no byline. The papers on the two endpoints and on M-theory carry the byline GPT-6.2-Astra max. The papers and supplements identify the scope of their results.
 
 ## What the dimensions mean {#dimensions}
 
@@ -92,6 +92,8 @@ With three generations and Dirac neutrinos, the finite Hilbert space has 96 stat
 For the five light quarks in three colours and their conjugates, the real-structure note identifies $SO(30)$ as the identity component of the unitary commutant of the real structure on a massless block when the relevant odd factorization has sign $s=+1$. The antisymmetric block of the parent interval connection and its symmetric compression to the finite window carry different representation counts. The proposed composite interpretation requires additional physical assumptions, and the note lists the unresolved wall, mass and exotic-state questions. See [the sign and massless block](real_structure_note.html#sec:sign), [the interval parent](real_structure_note.html#sec:interval), and [the compression](real_structure_note.html#sec:window).
 
 ## Completions, sources and status {#sources}
+
+The Freund–Rubin solution on $M^{111}$ supplies a flux-selected radius and massless weak vectors. The global weak action, the membrane charge of a second Abelian field and the lift of the Reeb circle to spinors test which particles could survive further reduction. A smooth two-sphere fibration over the five-sphere is excluded by the integral cohomology of this candidate. [An M-theory test for the seven-dimensional weak endpoint](seven_m_theory.html)
 
 The [dictionary](connes_kk_dictionary_note.html) gathers the correspondence between finite data and interval or Kaluza-Klein data, with a status for each entry. Its [string-duality comparison](connes_kk_dictionary_note.html#what-the-string-dualities-give) identifies specific limitations of the proposed 15+1 configuration, including its angle-position map, T-dual length and Romans mass; it points toward other chambers and completions. These statements concern that dictionary and do not settle the broader completion question.
 

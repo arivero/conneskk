@@ -2326,6 +2326,22 @@ checked_by(two_endpoint_upper_matter, gpt_6_2_astra_max, by_hand).
 referee_pending(two_endpoint_upper_matter).
 addresses(t18, two_endpoint_upper_matter).
 
+claim(m111_membrane_charge, proposition, proved, "M-theory endpoint paper, Betti vector and wrapped charge", "With an elementary electric M2 charge and leading Freund-Rubin flux normalization, the inverse squared Betti coupling on M111 is sqrt(N)/(36 sqrt(3) pi). A smooth representative of the primitive two-cycle exists and the classical mass of a unit-charge wrapped membrane times the AdS radius is at least 8 sqrt(N/3).").
+source(m111_membrane_charge, 'paper/seven_m_theory.tex', '').
+depends(m111_membrane_charge, d11_quotient).
+attempted_by(m111_membrane_charge, gpt_6_2_astra_max).
+checked_by(m111_membrane_charge, gpt_6_2_astra_max, by_hand).
+referee_pending(m111_membrane_charge).
+addresses(t18, m111_membrane_charge).
+
+claim(m111_circle_descent, proposition, proved, "M-theory endpoint paper, circle reduction", "For the order-j quotient of the regular Reeb fibre, the seven-manifold is spin precisely at odd j. Its unique spin structure then has a double-cover fibre lift, so neutral ordinary spinors do not descend. The bosonic reduction admits a small circle with a weakly curved base.").
+source(m111_circle_descent, 'paper/seven_m_theory.tex', '').
+depends(m111_circle_descent, d11_quotient).
+attempted_by(m111_circle_descent, gpt_6_2_astra_max).
+checked_by(m111_circle_descent, gpt_6_2_astra_max, by_hand).
+referee_pending(m111_circle_descent).
+addresses(t18, m111_circle_descent).
+
 claim(gh1_berger_charge_kernel, proposition, proved, "Issue 1 section 4", "On round S5 the spin Dirac twisted by the dual spin bundle and the exterior Killing-spinor bundle has kernel exterior(4) and gap sqrt(5)/R. Under the rank-one stabilizer it is the colour and electric charge module of one all-left generation. A separately gauged projector masses six vector directions.").
 source(gh1_berger_charge_kernel, 'results/issues/01.md', '').
 attempted_by(gh1_berger_charge_kernel, gpt_6_2_astra_max).

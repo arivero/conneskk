@@ -68,6 +68,14 @@ PAPERS = [
         "title": "From a finite KO-six geometry toward five and seven dimensions",
         "short": "From six toward five and seven",
         "supplement": "two_endpoint_limits",
+        "citation": "TwoEndpoint2026",
+    },
+    {
+        "name": "seven_m_theory",
+        "title": "An M-theory test for the seven-dimensional weak endpoint",
+        "short": "Seven dimensions and M-theory",
+        "supplement": "seven_m_theory",
+        "citation": "SevenMTheory2026",
     },
 ]
 
