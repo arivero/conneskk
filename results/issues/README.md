@@ -4,4 +4,5 @@ Numbers correspond to the original discussions. Each calculation states its inpu
 
 | Issue | Calculation | Outcome |
 |---|---|---|
+| [#3](https://github.com/arivero/conneskk/issues/3) | [The Berry connection of a moving Dirac kernel](03.md) | Kato transport gives the two motion terms and distinguishes the two admissible collar connections. |
 | [#20](https://github.com/arivero/conneskk/issues/20) | [The hypercharge projection at a stationary spectral vacuum](20.md) | At a fixed stationary polynomial vacuum, a free lepton determinant moves the one-loop electromagnetic benchmark. The exact flat trace gives a separate vacuum test. |
