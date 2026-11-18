@@ -4,3 +4,4 @@ part 24 lemmas/24_*.md
 part 28 lemmas/28_*.md
 part 29 lemmas/29_*.md
 part 30 lemmas/30_*.md
+part "I13 (the squashed twistor wall)" results/issues/13.md
