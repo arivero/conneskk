@@ -33,12 +33,12 @@ up to the factor 8 pi^2 l^4. Equation (1) assumes precisely these towers and mul
 **Theorem 26.2.** Let n_1, n_2 >= 0 in the family (1), with theta in [0, pi/2].
 
 1. *n_1 = 0.* The potential is a function of u.
-   - If n_2 <= 27/10, it increases with u: theta = 0 and theta = pi/2 are the two global minima, degenerate at n_2 = 27/10, where the leading term is (99/25) theta^4 log(1/theta^2), and theta = pi/4 is the maximum.
+   - If n_2 <= 27/10, it increases with u: theta = 0 and theta = pi/2 are two global minima of equal value, and theta = pi/4 is the maximum. At n_2 = 27/10 the quadratic term vanishes and the leading term about theta = 0 is (99/25) theta^4 log(1/theta^2), in the normalization of (1).
    - If 27/10 < n_2 < n_c, there are exactly two global minima, at theta_* and pi/2 - theta_*, with theta_* in (0, pi/4), and theta = pi/4 is a local maximum.
    - If n_2 >= n_c, theta = pi/4 is the unique global minimum, with a quartic leading displacement at n_2 = n_c.
 2. *n_1 > 0 and n_2 >= n_c.* Let n_* = (4/3)(4 n_2 - 54/5).
    - If n_1 < n_*, there is exactly one stationary point in the open interval. It is the strict global minimum, and it lies in (pi/4, pi/2).
-   - If n_1 >= n_*, V decreases strictly on (0, pi/2), with unique global minimum at theta = pi/2, degenerate at n_1 = n_*.
+   - If n_1 >= n_*, V decreases strictly on (0, pi/2), with unique global minimum at theta = pi/2. At n_1 = n_* its quadratic term vanishes.
 
 The endpoints are stationary in theta in every case, since dt/d(theta) vanishes there. The range n_1 > 0, n_2 < n_c is not classified here.
 

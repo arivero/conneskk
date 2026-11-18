@@ -10,8 +10,8 @@
 2. Every smooth scalar function on X preserves the domain.
 3. No boundary condition enters at the zero section: once the outer condition is fixed, removing S^4 creates no further self-adjoint extension.
 
-*Scope.* By Proposition 28.1, O(k) for k != 0 does not extend over X, while E restricts on CP^3 to O(3) (+) O(1) (+) O(-1) (+) O(-3), the summand O(3) giving the Dolbeault operator on O(1) of Example 16.9, and the hedgehog Phi(v) = phi(|v|) (v-hat . T) is smooth and G-equivariant with zero set exactly S^4. The wall condition reads u_even(l) = 0 for T and v_odd(l) = 0 for T\*. Charge conjugation C = C_7 (x) j_E commutes with T_M as a differential expression and exchanges the two local wall conditions, so it does not preserve the chosen domain (Proposition 28.18).
+*Scope.* By Proposition 28.1, O(k) for k != 0 does not extend over X, while E restricts on CP^3 to O(3) (+) O(1) (+) O(-1) (+) O(-3), the summand O(3) giving the Dolbeault operator on O(1) of Example 16.9, and the hedgehog Phi(v) = phi(|v|) (v-hat . T) is smooth and G-equivariant with zero set exactly S^4. The wall condition reads u_even(l) = 0 for T and v_odd(l) = 0 for T\*. When j_E is parallel, charge conjugation C = C_7 (x) j_E commutes with T_M as a differential expression. Independently of parallelism, it exchanges the two local wall conditions (Proposition 28.18).
 
 **Proof.** Lemma 28, Theorem 28.9; the proof is there, with the local elliptic boundary condition of Bär-Ballmann, Corollary 4.18.
 
-**What it leaves open.** The spectrum of D-hat_M at large M: the four core states (28_four_core_states.md), the boundary mode (28_boundary_fibre_part.md), and the isolated eight-state window, Conjecture 28.6 (28_conjecture_window.md).
+**What it leaves open.** Establishing the large-M spectrum requires control of the end models and the intervening bulk. Lemma 29 gives the eight-state window under Setting 29.0 at the Fubini-Study radius, with other metrics remaining within Conjecture 28.6 (28_conjecture_window.md).

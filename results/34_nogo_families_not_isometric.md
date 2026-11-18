@@ -1,4 +1,4 @@
-# In the aligned three-family embedding in the roots of E8, the two families of 84 have equal numbers of pairs at each inner product, and no isometry of R^8 maps F1 onto F2, so no element of W(E8) does and no isometry of H_F maps the top block onto the neutrino block
+# In the aligned three-family embedding in the roots of E8, the two families of 84 have equal numbers of pairs at each inner product, and no isometry of R^8 maps F1 onto F2, so no element of W(E8) does and no isometry preserving the 96-root configuration maps the top block onto the neutrino block
 
 **Status.** No-go theorem in its scope (Proposition 5.1). Proved by Claude Opus 5.5 by hand, with an exploratory search in Python (exact fractions, not kept); a neighbour table by Terra 6.1 is written out in the section "Further proofs" of lemma 34. Ledger row `d11_no_isometry` (depending on `d11_blocks` and `l21_counts`). Proposition 7 of paper/generations_note.tex, with a proof sketch ("\supp{34}").
 

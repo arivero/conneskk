@@ -8,7 +8,7 @@
 
 1. theta_t = (pi/2) 8 (1 - rho)/(8 - rho) and R_\*^2 = 14 (8 - rho^2)/(8 - rho)^2.
 2. R_\* runs from sqrt 2, for the top's brane on the stack, to sqrt 7/2, for the top's brane on the far wall, which are the values (1/2) abs(n - 8)^{1/2} of Polchinski and Witten at n = 16 and n = 15; in heterotic string units R_\*/sqrt(alpha'_h) lies in [sqrt(7/8), 1], and R_\*^2 = 2 - (theta/pi)^2.
-3. At each fixed Wilson angle a nonnegative far-wall value of the normalized profile gives R_h >= R_\*(theta), by R_h^2 = 2 - a^2 + 28 E/(8A - T - 7E) with A, T, E the 2/3 powers of the profile at 0, x_t and L and a = theta/pi; so infinite coupling sits at the smallest radius, at the string scale, and large R is large B, the weakly coupled region, as Polchinski and Witten state.
+3. At each fixed Wilson angle a nonnegative far-wall value of the normalized profile gives R_h >= R_\*(theta), by R_h^2 = 2 - a^2 + 28 E/(8A - T - 7E) with A, T, E the 2/3 powers of the profile at 0, x_t and L and a = theta/pi; so infinite coupling sits at the smallest radius, at the string scale, and large R is large B. At fixed positive normalization C this gives weak local coupling since z_phys is proportional to C h (Proposition 10.5).
 
 *Scope.* The classical profile of the chamber 15 + 1 with infinite coupling at the far wall.
 

@@ -6,7 +6,7 @@
 
 **Statement.**
 
-1. For the top alone, n_f = 6: the small-angle coefficient is proportional to 54/5 - 6 > 0 and G > 0 on [0, pi/2], with minimum 23.88, so V has no stationary point with theta < pi/2; l runs until theta leaves the fundamental domain of Proposition 7.1, where the top joins the tower, and the periodically continued potential has its first stationary points far outside the window, near theta = 8.15 and 8.40, with further roots near 11.17, 11.71, 14.27, ..., as periodicity with an interval where G' > 0 requires.
+1. For the top alone, n_f = 6: the small-angle coefficient is proportional to 54/5 - 6 > 0 and G > 0 on [0, pi/2], with minimum 23.88, and V has no stationary point in the window. Indeed G >= A_0 - 6F(1) > 22 even with a graviton, while 0 <= t', |u'| <= 1/2 and F' <= F'(0) give theta G' <= (pi/2)(27/5)F'(0) < 25. Thus theta G' - 4G < 0. The length increases until theta leaves the fundamental domain of Proposition 7.1, where the top joins the tower, and the periodically continued potential has its first stationary points far outside the window, near theta = 8.15 and 8.40, with further roots near 11.17, 11.71, 14.27, ..., as periodicity with an interval where G' > 0 requires.
 2. For a universal mass, n_f = 48 at three generations, G changes sign and there is one stable stationary point, theta_\* = 1.009, with M_W/m = 0.685; at one generation, n_f = 16, theta_\* = 1.031 and M_W/m = 0.653.
 3. Adding a graviton does not change this classification.
 
@@ -14,4 +14,4 @@
 
 **Proof.** Lemma 37, paragraph on the flat family with the angle tied: numerical evaluation of G and of the roots of theta G' - 4 G.
 
-**What it leaves open.** A separated window on the scale-free path needs a light mass exponentially small in a stabilized shape parameter (Remark 10.7), and that stabilization at a large value is a target: the one-loop interaction term of one localized fermion channel has its unique minimum at c = mu l = 1 exactly (d_c log Q = 2(1 - c)/w), where the light pair merges with the tower (lemma 37, paragraph on a localized channel).
+**What it leaves open.** A separated window on the scale-free path needs a light mass exponentially small in a stabilized shape parameter (Remark 10.7), and that stabilization at a large value is a target: the one-loop interaction term of one localized fermion channel has its unique minimum at c = mu l = 1 exactly (d_c log Q = 2(1 - c)/w), where the lowest level reaches the bulk mass mu = 1/l and the next level stays strictly higher (lemma 37, paragraph on a localized channel).

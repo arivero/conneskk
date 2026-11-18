@@ -14,7 +14,7 @@ That paper uses the adjoint of SO(32) to classify the scalars of a supersymmetri
 
 ## 2. Proposition 9.1 (the type I' coupling function is a trace of a function of the finite Dirac operator)
 
-*Scope.* The trace is over sixteen selected channels, and the full physical D_F Hilbert space enters only through a specified projection onto them. The formula z(L) = z(0) - c (8L - sum x_k) is exact in the positions; the dictionary x_k = (2L/pi) l m_k holds only for constant z, and in general theta_k = (pi/2) W(x_k)/W(L) with W = int z^{-1/3} ([10](37_dilaton_and_second_scale.md), Proposition 10.1). In the profile 15 + 1 the endpoint values 7cL and 8cL stand, and theta_t = pi/4 gives 7.358 cL in place of 7.5 cL.
+*Scope.* The trace is over sixteen selected channels, and the full physical D_F Hilbert space enters only through a specified projection onto them. The formula z(L) = z(0) - c (8L - sum x_k) is exact in the positions; the dictionary x = (2L/pi) theta holds at every position exactly when z is constant. A nonconstant profile can agree at the occupied positions, for example when every brane lies at a wall. In general theta_k = (pi/2) W(x_k)/W(L) with W = int z^{-1/3} ([10](37_dilaton_and_second_scale.md), Proposition 10.1). In the profile 15 + 1 the endpoint values 7cL and 8cL stand, and theta_t = pi/4 gives 7.358 cL in place of 7.5 cL.
 
 **Setting.** Type I' on an interval [0, L], in the conformal coordinate x, with sixteen D8-branes at x_1, ..., x_16 and O8^- planes at the ends. Recalled rule (Polchinski and Witten, hep-th/9510169): the dilaton is e^{phi} = z^{−5/6} for a function z that is continuous and piecewise linear in x, with slope c (8 − N(x)), where N(x) is the number of D8-branes to the left of x and c > 0; the coupling diverges where z vanishes. Dictionary (06, 07): x_k = (2L/pi) θ_k with θ_k = l m_k the angles of sixteen channels of the finite Dirac operator (fifteen light-quark channels with colour, and the top).
 
@@ -92,7 +92,7 @@ since int_0^x N(y) dy = sum_k (x - x_k)_+, and x/2 - (x - x_k)_+ = min(x/2, x_k 
 
     z(L) = z(0) - c (8L - sum_k x_k).
 
-With x_k = 2 l L m_k/pi, the dictionary of the Setting (exact only for constant z, by the correction after the proof), the zero condition z(L) = 0 is z(0) = (2cL/pi)(4 pi - l sum_k m_k), as stated. The slopes c (8 - N(x)) are nonincreasing, so z is concave; if z(0) > 0 and z(L) = 0, then z(x) >= (1 - x/L) z(0) > 0 on [0, L).
+With x_k = 2 l L m_k/pi, the dictionary of the Setting (exact at all positions for constant z, by the correction after the proof), the zero condition z(L) = 0 is z(0) = (2cL/pi)(4 pi - l sum_k m_k), as stated. The slopes c (8 - N(x)) are nonincreasing, so z is concave; if z(0) > 0 and z(L) = 0, then z(x) >= (1 - x/L) z(0) > 0 on [0, L).
 
 *Scope of the trace.* The trace is over the sixteen selected channel values. The equality with a spectral trace assumes a chosen sixteen-dimensional channel space with eigenvalues m_k, or an explicitly normalized projection selecting those values. The physical D_F has additional chirality, conjugation, colour and generation multiplicities, which cannot be dropped from its full trace without specifying that projection. The assignment of the sixteen brane positions to those channels is also part of the proposal. This profile alone does not derive a stabilizing term for the interval modulus. The slope, coordinate and e^phi-to-z conventions are those of the recalled rule.
 

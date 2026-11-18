@@ -7,7 +7,7 @@
 **Statement.**
 
 1. The G-orbits of the pair of lines (Cw, Cv) are classified by a = abs(h(w, v)) and b = abs(omega(w, v)), with a^2 + b^2 <= 1: a^2 + b^2 is the squared norm of the component of v in the quaternionic line L of w, a the overlap with l = Cw and b the overlap with jl.
-2. The G-orbits of the connector T_kappa are classified by a, b, abs(kappa) and, when alpha = h(w, v) is nonzero, the phase of kappa alpha^2 = tr T_kappa(1), with 1 the identity in Hom(V, W), fixed by G. So the connector has four real moduli when alpha is nonzero and three when alpha = 0; a symmetry larger than the diagonal Sp(2), such as an independent phase on V, removes the fourth.
+2. The G-orbits of the connector T_kappa are classified by a, b, abs(kappa) and, when alpha = h(w, v) is nonzero, the phase of kappa alpha^2 = tr T_kappa(1), with 1 the identity in Hom(V, W), fixed by G. So the connector has four real moduli on the generic stratum a > 0, b > 0, a^2 + b^2 < 1, and two (b and |kappa|) when alpha = 0 and 0 < b < 1; boundary strata have the corresponding fewer free coordinates; a symmetry larger than the diagonal Sp(2), such as an independent phase on V, removes the fourth.
 
 *Scope.* The proposition counts moduli; it does not identify them with a vacuum expectation value, fixes no coupling and computes no potential.
 

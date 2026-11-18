@@ -55,7 +55,7 @@ A second element of order three, the centre of SU(3) in E8 ⊃ (SU(3) × E6)/Z_3
 
 so that b ≡ a + q/3 = a + 2 T_3 (mod 3).
 
-**Proof.** Λ^3 of (3,1)_{-2} + (1,6)_{1} is (1,1)_{-6} + (3bar,6)_{-3} + (3,15)_{0} + (1,20)_{3}; the adjoint is (8,1) + (1,35) + (1,1) + (3,6bar)_{-3} + (3bar,6)_{3}; Λ^6 is the conjugate of Λ^3. The column a = 0 sums to 86 = 8 + 78 and the row a = 1 to 81 = 3 x 27, which matches E8 ⊃ SU(3) × E6 with E6 ⊃ SU(6) × SU(2): 27 = (15, 1) + (6bar, 2) and 78 = (35, 1) + (1, 3) + (20, 2), the SU(2) triplet being (1,1)_{-6}, the u(1) and (1,1)_{6}. ∎
+**Proof.** Λ^3 of (3,1)_{-2} + (1,6)_{1} is (1,1)_{-6} + (3bar,6)_{-3} + (3,15)_{0} + (1,20)_{3}; the adjoint is (8,1) + (1,35) + (1,1) + (3,6bar)_{-3} + (3bar,6)_{3}; Λ^6 is the conjugate of Λ^3. The row a = 0 sums to 86 = 8 + 78 and the row a = 1 to 81 = 3 x 27, which matches E8 ⊃ SU(3) × E6 with E6 ⊃ SU(6) × SU(2): 27 = (15, 1) + (6bar, 2) and 78 = (35, 1) + (1, 3) + (20, 2), the SU(2) triplet being (1,1)_{-6}, the u(1) and (1,1)_{6}. ∎
 
 ## 4. Placement of the generation
 
@@ -216,9 +216,9 @@ The remark holds as a selection rule for the single element s_M, assuming it sur
     Q u^c H_u (1 + 1 + 1),  Q d^c H_d (1 + 2 + 0),  L e^c H_d (2 + 1 + 0),  L nu^c H_u (2 + 0 + 1),
     N H_u H_d (2 + 1 + 0),  (nu^c)^2 (0),  L L H_u H_u (2 + 2 + 1 + 1),  L H_u (2 + 1),
 
-and grade 2 for
+grade 1 for H_u H_d (1 + 0), and grade 2 for
 
-    H_u H_d (1 + 0),  Q Q Q L (1 + 1 + 1 + 2),  u^c u^c d^c e^c (1 + 1 + 2 + 1),
+    Q Q Q L (1 + 1 + 1 + 2),  u^c u^c d^c e^c (1 + 1 + 2 + 1),
     L L e^c (2 + 2 + 1),  L Q d^c (2 + 1 + 2),  u^c d^c d^c (1 + 2 + 2).
 
 Additional unbroken symmetries may impose further restrictions. In particular, the family Z_3 has to be considered separately if it is also retained.

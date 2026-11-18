@@ -54,7 +54,7 @@ checked_by(a11_localized, terra_6_1, by_hand).
 checked_by(a11_localized, sonnet_5_5, by_hand).
 
 %% ---------------------------------------------------------------- 02: Witten spaces as the hypercharge quotient
-claim(d11_quotient, theorem, conditional, "Theorem 2.1", "Y_{3,2} = (S^9 cap mu_Y^{-1}(0))/U(1)_Y is the circle bundle of O(3,2) over CP^2 x CP^1, with trivial-canonical cone and effective group (U(3) x U(2))/U(1)_Y. Its identification with M^{111} is conditional on the recalled fibration; the Sasaki-Einstein metric requires rescaling the natural quotient metric.").
+claim(d11_quotient, theorem, conditional, "Theorem 2.1", "Y_{3,2} = (S^9 cap mu_Y^{-1}(0))/U(1)_Y is the circle bundle of O(3,2) over CP^2 x CP^1, with trivial-canonical cone and effective group (U(3) x U(2))/U(1)_Y = PSU(3) x SO(3) x U(1). Its identification with M^{111} is conditional on the recalled fibration; the Sasaki-Einstein metric requires rescaling the natural quotient metric.").
 source(d11_quotient, 'lemmas/32_witten_spaces_hypercharge_quotient.md', 'theorem-21-m111-is-the-hypercharge-quotient-of-the-5-bar').
 attempted_by(d11_quotient, claude).
 checked_by(d11_quotient, claude, python("historical/11D/checks_11d.py sections A, B: weights, Calabi-Yau condition, Z_6")).
@@ -76,7 +76,7 @@ checked_by(d11_topology, claude, python("historical/11D/checks_11d.py section C:
 checked_by(d11_topology, terra_6_1, by_hand).
 checked_by(d11_topology, sonnet_5_5, by_hand).
 
-claim(d11_z6, proposition, proved, "Proposition 2.4", "Every monomial in U, V and every state of Lambda^*(5-bar) satisfies 2t + 3d + 6Y = 0 mod 6; Y-neutral monomials have t = d = 0; tensor fields on Y_{3,2} carry representations of PSU(3) x SO(3) x U(1)_R, so no tensor Kaluza-Klein mode on an invariant background is a colour triplet or weak doublet; spinors open.").
+claim(d11_z6, proposition, proved, "Proposition 2.4", "Every monomial in U, V and every state of Lambda^*(5-bar) satisfies 2t + 3d + 6Y = 0 mod 6; Y-neutral monomials have t = d = 0; tensor fields on Y_{3,2} carry representations of PSU(3) x SO(3) x U(1)_R, so every tensor mode has zero triality and integer weak isospin. The genuine semisimple action also lifts to the unique ordinary spin bundle and imposes the same centre restriction. Independently twisted spinors require the bundle action.").
 source(d11_z6, 'lemmas/32_witten_spaces_hypercharge_quotient.md', 'proposition-24-the-z_6-of-the-standard-model').
 depends(d11_z6, d11_quotient).
 attempted_by(d11_z6, claude).
@@ -140,14 +140,14 @@ attempted_by(d11_higgs_m2, claude).
 checked_by(d11_higgs_m2, terra_6_1, by_hand).
 checked_by(d11_higgs_m2, sonnet_5_5, by_hand).
 
-claim(d11_ads5, proposition, proved, "Proposition 3.5", "AdS5 x CP^2 x S^2 with G_4 = f_1 vol(CP^2) + f_2 J ^ vol(S^2) solves eleven-dimensional supergravity with R_AdS = -(f_1^2 + 2 f_2^2)/6, R_CP2 = f_1^2/3 + f_2^2/6, R_S2 = 2 f_2^2/3 - f_1^2/6; round factors iff abs(f_1) < 2 abs(f_2). Supersymmetry, stability and flux quantization not checked.").
+claim(d11_ads5, proposition, proved, "Proposition 3.5", "AdS5 x CP^2 x S^2 with G_4 = f_1 vol(CP^2) + f_2 J ^ vol(S^2) solves the bosonic field equations of eleven-dimensional supergravity with R_AdS = -(f_1^2 + 2 f_2^2)/6, R_CP2 = f_1^2/3 + f_2^2/6, R_S2 = 2 f_2^2/3 - f_1^2/6; round factors iff abs(f_1) < 2 abs(f_2). The product is nonspin since w_2 restricts to h_1 mod 2 on CP^2. The equal-flux Kähler-Einstein subfamily is linearly unstable (Martin-Reall). Stability at other flux ratios and flux periods remain separate.").
 source(d11_ads5, 'lemmas/39_branes_hypercharge_and_the_84.md', 'proposition-35-a-magnetic-completion-ads5-x-cp2-x-s2').
 attempted_by(d11_ads5, claude).
 checked_by(d11_ads5, claude, python("historical/11D/checks_11d.py section G: all frame components of the flux bilinear")).
 checked_by(d11_ads5, terra_6_1, by_hand).
 checked_by(d11_ads5, sonnet_5_5, by_hand).
 
-claim(d11_two_completions, conjecture, conjectural, "Proposals 3.6, 3.7", "CP^2 x S^2 has an electric completion AdS4 x Y_{3,2} and a magnetic completion AdS5 x CP^2 x S^2, both 4 + 1 + 6 with the 1 as fibre or as AdS5 radius; the M2/M5 exchange acts on hypercharge as electric-magnetic duality and does not permute the 96 states.").
+claim(d11_two_completions, conjecture, conjectural, "Proposals 3.6, 3.7", "CP^2 x S^2 has an electric completion AdS4 x Y_{3,2} and a proposed magnetic geometry AdS5 x CP^2 x S^2 solving the bosonic equations, both 4 + 1 + 6 with the 1 as fibre or as AdS5 radius; the magnetic product lacks a spin bundle, and the magnetic flux couples one combination of its two harmonic vectors to the external three-form. The proposed M2/M5 exchange acts on hypercharge as electric-magnetic duality and does not permute the 96 states.").
 source(d11_two_completions, 'lemmas/39_branes_hypercharge_and_the_84.md', 'proposal-36-two-completions-of-one-base').
 depends(d11_two_completions, d11_ads5).
 depends(d11_two_completions, d11_betti_y).
@@ -161,7 +161,7 @@ checked_by(d11_colour84, claude, python("historical/11D/checks_11d.py section E:
 checked_by(d11_colour84, terra_6_1, by_hand).
 checked_by(d11_colour84, sonnet_5_5, by_hand).
 
-claim(d11_kk_triality, corollary, proved, "Corollary 3.9", "Under the quotient realization, on a background invariant under the displayed action, no tensor Kaluza-Klein mode of C_3 or of the metric on Y_{3,2} is a colour triplet (spinors open), so the coloured states of either family of 84 are not modes of C_3 on Y_{3,2}.").
+claim(d11_kk_triality, corollary, proved, "Corollary 3.9", "Under the quotient realization, on a background invariant under the displayed action, no tensor Kaluza-Klein mode of C_3 or of the metric on Y_{3,2} is a colour triplet (the same colour centre acts trivially on ordinary spinors), so the coloured states of either family of 84 are not modes of C_3 on Y_{3,2}.").
 source(d11_kk_triality, 'lemmas/39_branes_hypercharge_and_the_84.md', 'corollary-39-the-coloured-states-of-the-84-are-not-kaluza-klein-modes-of-c_3-on-y_32').
 depends(d11_kk_triality, d11_z6).
 depends(d11_kk_triality, d11_colour84).
@@ -290,7 +290,7 @@ attempted_by(d11_heterotic_route, claude).
 checked_by(d11_heterotic_route, terra_6_1, by_hand).
 
 %% ---------------------------------------------------------------- 07: dualities between 9 and 11
-claim(d11_angle_interval, proposition, proved, "Proposition 7.1", "The signed channel spectrum has fundamental domain [0, pi/2], with doubly degenerate periodic and antiperiodic endpoint spectra; the lemma-22 window uses the strict interior.").
+claim(d11_angle_interval, proposition, proved, "Proposition 7.1", "The signed channel spectrum has fundamental domain [0, pi/2], with doubly degenerate periodic and antiperiodic endpoint spectra; the lemma-22 window includes the periodic endpoint at theta = 0 and requires theta < pi/2.").
 source(d11_angle_interval, 'lemmas/40_dualities_9_11.md', '3-proposition-71-the-angle-of-a-channel-lives-on-an-interval').
 depends(d11_angle_interval, l22_window).
 depends(d11_angle_interval, l23_wz).
@@ -446,9 +446,10 @@ checked_by(d11_spin9_colour, sonnet_5_5, by_hand).
 claim(d11_44_sets, proposition, proved, "Reading 3b (b), strengthening", "No isometry of R^8 maps the 44 roots of (fourth family + top block) onto those of (fourth family + neutrino block): up to family permutations the degree multisets are {10^16, 12^12, 13^16} and {10^24, 13^16, 16^4}.").
 source(d11_44_sets, 'lemmas/34_colour_family_exchange.md', 'readings-proposals').
 depends(d11_44_sets, d11_no_isometry).
-attempted_by(d11_44_sets, claude_opus_5_5).
+attempted_by(d11_44_sets, sonnet_5_5).
 checked_by(d11_44_sets, sonnet_5_5, python("degree multisets over W(D8) and family permutations, exact integers, not kept")).
-referee_pending(d11_44_sets).  % single-model strengthening (Sonnet); no referee has read it; added 5 Nov 2026 when lemma 34 gained a referee report for Proposition 5.6
+checked_by(d11_44_sets, codex_gpt6, by_hand).  % Counted from the live neighbour table, lemma 34, 18 Nov 2026.
+outside_referee(d11_44_sets, "The earlier report on Proposition 5.6 did not cover the sets of 44. The independent count from the neighbour table is in lemma 34, 18 Nov 2026.").
 claim(d11_spin9_conjugate, proposition, proved, "Proposition 5.6 and Reading 3b (c)", "The so(9) fixed by the Chevalley involution theta on sl(9) (lemma 33) is conjugate in E8 to the Spin(9) of reading 3, with k = so(9) + 84 and p = 44 + 84, the 44 = p cap sl(9) in the gravity sector and the two 84 the graphs x +- theta x of Lambda^3 C^9; involutions of e8 with a 120-dimensional fixed algebra form one class, and the spinor embeddings with 128 -> 44 + 84 one class under Spin(16)/Z_2; inside E8 both subgroups are SO(9), and the class with the irreducible 128 is Spin(9).").
 source(d11_spin9_conjugate, 'lemmas/34_colour_family_exchange.md', 'readings-proposals').
 attempted_by(d11_spin9_conjugate, sonnet_5_5).
@@ -482,14 +483,14 @@ checked_by(d11_romans, claude_opus_5_5, by_hand).
 checked_by(d11_romans, sonnet_5_5, by_hand).
 checked_by(d11_romans, terra_6_1, by_hand).  % 5 Nov 2026: coefficient and bound confirmed; orientation, N = 8 and the formal eleven-dimensional scale amended
 addresses(t14, d11_romans).
-claim(d11_gradient, proposition, proved, "Propositions 10.5, 10.6", "In scope (a regular joint expansion in theta and alpha'/l^2): the relative variation of the dilaton profile is bounded by 6/R^2 along an opening path, and the gradient is the second scale only if a_0 = 0, and with a_1 = 0 only if b = 0 (counterexample G_0 = theta^6, G_1 = theta^2 at b = 0); 8 pi^2 a_0 = (3 zeta(5)/16)(4 n_D' - 3 (n_i - (15/16) n_h) - n_s - 5 n_g), with n_i = 16, n_h = 9 for sp(2) + su(4).").
+claim(d11_gradient, proposition, proved, "Propositions 10.5, 10.6", "In scope (a regular joint expansion in theta and alpha'/l^2): the relative profile variation is at most 16 pi/B = 6/R^2 + O(R^-4) at large R. A stationary joint branch requires a_0 = 0. If V(0,l) vanishes for every l, it also requires b = 0. With only a_0 = a_1 = 0, G_0 = -theta^2, G_1 = 0, G_2 = c > 0 gives a strict joint minimum at l^6 = 4c (alpha')^2/m^2; 8 pi^2 a_0 = (3 zeta(5)/16)(4 n_D' - 3 (n_i - (15/16) n_h) - n_s - 5 n_g), with n_i = 16, n_h = 9 for sp(2) + su(4).").
 source(d11_gradient, 'lemmas/37_dilaton_and_second_scale.md', '').
 attempted_by(d11_gradient, claude_opus_5_5).
 checked_by(d11_gradient, claude_opus_5_5, by_hand).
 checked_by(d11_gradient, sonnet_5_5, by_hand).
 checked_by(d11_gradient, terra_6_1, python("A_0 = 32.9184, the sample radius and the stationary angles in SciPy; the error in Proposition 10.6, item 3, found with the counterexample at b = 0")).  % 5 Nov 2026
 addresses(t14, d11_gradient).
-claim(d11_so30_block, proposition, proved, "Propositions 11.1, 11.2", "so(30) = u(15) + Lambda^2 V is the commutant of j on the massless block for s = +1, and the fluctuation along the interval is an so(30) connection with antisymmetric block.").
+claim(d11_so30_block, proposition, proved, "Propositions 11.1, 11.2", "on the massless block for s = +1, O(30) is the full unitary commutant of j and SO(30) its identity component, with Lie algebra so(30) = u(15) + (Lambda^2 V)_R, and the fluctuation along the interval is an so(30) connection with antisymmetric block.").
 source(d11_so30_block, 'lemmas/38_so30_fluctuations.md', '').
 attempted_by(d11_so30_block, claude_opus_5_5).
 checked_by(d11_so30_block, claude_opus_5_5, by_hand).
@@ -503,7 +504,7 @@ checked_by(d11_so30_zero, claude_opus_5_5, by_hand).
 checked_by(d11_so30_zero, sonnet_5_5, by_hand).
 checked_by(d11_so30_zero, terra_6_1, by_hand).  % 5 Nov 2026: zero-mode calculation confirmed once the gauge action and the boundary problem are specified; the corner representation alone supplies no gauge group; counts 210 and 225
 addresses(t14, d11_so30_zero).
-claim(d11_shadow, proposition, proved, "Proposition 11.4", "The compression of a constant interval connection to the window acts by B_ij -> -((1 - cos(l(m_i - m_j)))/(l(m_i - m_j))) B_ij, mapping (S^2 5, 3bar) onto (Lambda^2 5, 3bar) as vector spaces, counts (3, 6, 1); its realization as an inner fluctuation at nonzero mass needs a unital completion of the corner algebra.").
+claim(d11_shadow, proposition, proved, "Proposition 11.4", "The compression of a constant interval connection to the window acts by B_ij -> -((1 - cos(l(m_i - m_j)))/(l(m_i - m_j))) B_ij, mapping (S^2 5, 3bar) onto (Lambda^2 5, 3bar) as vector spaces, counts (3, 6, 1); the unital completion realizes the perturbation as a real inner fluctuation even at nonzero mass, with explicit one-form coefficients.").
 source(d11_shadow, 'lemmas/38_so30_fluctuations.md', '').
 attempted_by(d11_shadow, claude_opus_5_5).
 checked_by(d11_shadow, claude_opus_5_5, by_hand).

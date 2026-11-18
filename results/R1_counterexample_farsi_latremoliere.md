@@ -12,12 +12,12 @@
 
 needs ||D_v xi||/eps <= ||D_eps xi||, which is neither assumed nor proved. For xi = e_n at eps = eps_n the left side is 1 and the right side is 4 sqrt(2 eps_n) (1 + x) -> 0.
 
-**Sufficient repairs.** Either hypothesis below makes the Fourier Lemma 3.3 of the paper unnecessary and improves the rate from O(sqrt eps) to O(eps):
+**Sufficient repairs.** Either hypothesis below gives an O(eps) bound on the component outside the vertical kernel, in place of the O(sqrt eps) estimate sought via Fourier Lemma 3.3:
 
 1. D_h and D_v anticommute on a common core. Then ||D_eps xi||^2 = ||D_h xi||^2 + eps^{-2} ||D_v xi||^2 and ||xi - p xi|| <= ||D_v xi||/delta <= (eps/delta) ||D_eps xi||.
 2. A relative bound ||D_v xi|| <= C eps (||xi|| + ||D_eps xi||). Then ||xi - p xi|| <= (C eps/delta)(||xi|| + ||D_eps xi||).
 
 These are sufficient hypotheses; the counterexample shows the printed six are not. All applications in the paper (Corollary 4.1, Theorems 4.6, 5.5, 6.3) have anticommuting D_h and D_v and avoid the defect; Theorem 4.6 and Corollary 4.7 additionally need a nonzero vertical kernel for their displayed target to be a spectral triple (Astra 6, 3 November 2026). Corollary 4.1 (collapse of a fixed triple scaled by 1/eps to (C, ker D, 0), and to nothing when ker D = 0) has D_h = 0 and is sound.
 
-**Scope.** This is a statement about one theorem of one paper. It leaves the paper's framework, its corollaries in the anticommuting setting and its applications intact. For the project, it is the reason lemma 15 proves its own collapse statements (Theorems 15.3 and 15.7) and the reason the main paper reaches the contradiction through Theorem 15.7 (the converse of Proposition G: along eps_n the eigenvalues 0 and x stay bounded, while a limit (C, C e_0, 0) would need one eigenvalue near 0 with a diverging gap) rather than through Corollary 3.5. The route through Theorem 15.7 was written by Claude Opus 5.5.
+**Scope.** This is a statement about one theorem of one paper. The applications with anticommuting horizontal and vertical parts satisfy the leakage estimate above. Statements with a spectral triple on the vertical kernel require that kernel to be nonzero. For the project, it is the reason lemma 15 proves its own collapse statements (Theorems 15.3 and 15.7) and the reason the main paper reaches the contradiction through Theorem 15.7 (the converse of Proposition G: along eps_n the eigenvalues 0 and x stay bounded, while a limit (C, C e_0, 0) would need one eigenvalue near 0 with a diverging gap) rather than through Corollary 3.5. The route through Theorem 15.7 was written by Claude Opus 5.5.
 

@@ -9,7 +9,7 @@
 1. (Proposition 22.8) The gauge one-forms take values in C_F at x = l. The directions in the Lie algebra of C_F have masses n pi/l, n >= 0, and the orthogonal directions (n - 1/2) pi/l, n >= 1. In the Standard Model data with nonzero Yukawas, M_W = M_Z = pi/(2l), and with the unimodularity condition of Chamseddine-Connes-Marcolli the massless modes are the photon and the gluons.
 2. X(l) has the light block tan(l |M_0|) V_0\* = l M_0\* + O(l^3) and a heavy block with singular values tan(Theta): the light couplings vanish as m l at fixed mass m.
 3. The heavy channel has mass Theta/l, the broken gauge directions pi/(2l), and the other levels diverge.
-4. The massless gauge sector is the physical real gauge representation of C_F, with its kernel and any unimodularity condition. For the projection P_L onto the light block D_L, P_L Q_l(a) P_L = sinc(l ad_{D_L})(P_L pi(a) P_L), within (2/3) l^2 ||D_L||^2 ||pi(a)|| of P_L pi(a) P_L. The limiting light compression need not be a representation, and the full estimate of Theorem 22.4 does not apply, since l ||D_F(l)|| -> Theta.
+4. The massless gauge sector is the physical real gauge representation of C_F, with its kernel and any unimodularity condition. For the projection P_L onto the light block D_L, P_L Q_l(a) P_L = sinc(l ad_{D_L})(P_L pi(a) P_L), within (2/3) l^2 ||D_L||^2 ||pi(a)|| of P_L pi(a) P_L. The limiting light compression need not be a representation, and the bound of Theorem 22.4 on the full space does not tend to zero, since l ||D_F(l)|| -> Theta.
 5. With l = pi/(2 M_W), X_q ~ (pi/2) m_q/M_W, of the form of y_q = sqrt(2) m_q/v -> 0 at fixed mass. Identifying X_q with the four-dimensional Yukawa coupling is a hypothesis.
 6. m_t/M_W = 2 Theta/pi < 1, and M_W/M_Z = 1.
 

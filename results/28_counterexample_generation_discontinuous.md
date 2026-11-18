@@ -1,13 +1,13 @@
-# Unital completely positive maps that converge in norm can generate M_4(C) for every positive parameter and M_2(H) at the limit, so generated algebras need not converge when compression maps do
+# Unital completely positive maps that converge in norm can generate M_4(C) for every parameter 0 < eps <= 1 and M_2(H) at the limit, so generated algebras need not converge when compression maps do
 
 **Status.** Counterexample (Counterexample 28.17), to the claim that convergence of compression maps carries the generated algebras along. Constructed by Astra 6, job 28 (Counterexample 9). Ledger row `l28_generation` (depending on `l28_symmetry`). The caution is stated after Theorem 4 of paper/joint_limit_note.tex and in the section on the algebra of paper/connes_kk_dictionary_note.tex.
 
-**Setting.** On the disc bundle of lemma 28, R_0 = Q_B E_fib, with E_fib the fibre average on CP^3, R_1 = Q_Y, and R_eps = (1 - eps) R_0 + eps R_1.
+**Setting.** On C(CP^3), or on C(X) after restriction to its CP^3 boundary, R_0 = Q_B E_fib, with E_fib the fibre average on CP^3, R_1 = Q_Y, and R_eps = (1 - eps) R_0 + eps R_1 with 0 <= eps <= 1.
 
 **Statement.**
 
 1. The R_eps are unital completely positive, and ||R_eps - R_0|| <= 2 eps.
-2. Real functions generate M_4(C) under R_eps for every eps > 0.
+2. Real functions generate M_4(C) under R_eps for every 0 < eps <= 1.
 3. Real functions generate M_2(H) under R_0.
 
 *Scope.* The correct limit statement concerns specified compression maps, and it gives no convergence of the generated algebras.

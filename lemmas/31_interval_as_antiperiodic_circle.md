@@ -87,10 +87,10 @@ Near t = 0, 𝒱'(0) = (6 + 24/5 - n_f) J(0) with J(0) = int x^3/sinh^2 x dx = (
 
 **Statement.** Let V(l, theta) = l^{-4} G(theta) with G of class C^1, the form of every one-loop potential of a flat interval whose only scales are l and the wall angles (lemmas 23 and 24, with a_0 included in G).
 
-1. If the angle is free, V is monotone in l at every fixed theta with G(theta) != 0. At the minimizing angle theta_min the length runs away: to l -> infinity if G(theta_min) > 0, to l -> 0 if G(theta_min) < 0. Stationary points exist only on the set G = G' = 0.
+1. If the angle is free, V is monotone in l at every fixed theta with G(theta) != 0. At the minimizing angle theta_min the length runs away: to l -> infinity if G(theta_min) > 0, to l -> 0 if G(theta_min) < 0. An interior stationary point requires G = G' = 0. At a constrained angular minimum on an endpoint, stationarity in l requires G = 0 and the angular minimum condition is one-sided.
 2. If the angle is tied to a fixed mass, theta = l m (as for X = tan(l M) in lemma 22), the stationary lengths satisfy theta G'(theta) = 4 G(theta) at theta = l m. So l = theta_*/m for a root theta_* that does not depend on m, and M_W l, M_Z l (functions of theta alone by Theorem 23.6) are the same at every m.
 
-Hence, when the roots of theta G' - 4 G are isolated, a stationary branch has l = theta_*/m: the path l ~ 1/M_W of H's original statement, alpha = 1 in the scaling of the joint family (Remark 10.7 of [10](37_dilaton_and_second_scale.md) for a small fixed ratio). A root interval, as for G = theta^4 near 0, makes every alpha < 1 stationary and selects none. The joint family with alpha < 1 needs a second scale in the action: a bulk mass (the localized family, G(l m, l mu)), the cutoff of the spectral action (lemma 25, G(theta, l Lambda)), curvature, flux or a wall term.
+Hence, when the roots of theta G' - 4 G are isolated, a stationary branch has l = theta_*/m: the path l ~ 1/M_W of H's original statement when M_W l is positive, alpha = 1 in the scaling of the joint family (Remark 10.7 of [10](37_dilaton_and_second_scale.md) for a small fixed ratio). A root interval, as for G = theta^4 near 0, makes every alpha < 1 stationary and selects none. The joint family with alpha < 1 needs a second scale in the action: a bulk mass (the localized family, G(l m, l mu)), the cutoff of the spectral action (lemma 25, G(theta, l Lambda)), curvature, flux or a wall term.
 
 **Proof.** d/dl [l^{-4} G(l m)] = l^{-5} (theta G'(theta) - 4 G(theta)) at theta = l m. For item 1, d/dl V = -4 l^{-5} G(theta) and d/dtheta V = l^{-4} G'(theta). ∎
 
@@ -101,9 +101,9 @@ Hence, when the roots of theta G' - 4 G are isolated, a stationary branch has l 
 ## What remains open here
 
 - Whether the identification of Proposal 1.3 survives the gauge sector: lemmas 13, 14 and 25 tie M_W to the tower with model-dependent coefficients, which here become a relation between M_W, g_s and l_s, and test 2 above requires g_5^2 ~ R.
-- The theta-independent Casimir coefficient a_0 of the flat family, which decides the runaway direction of Proposition 1.5, item 1.
+- The theta-independent Casimir coefficient a_0, which decides the runaway direction of Proposition 1.5, item 1, is computed for the specified field content in [lemma 37](37_dilaton_and_second_scale.md).
 - A potential with a second scale that selects alpha < 1: the localized family of the audit is the first candidate, with G(l m, l mu) computable from the exact secular equations of lemma 09.
-- A fermion with both a fibre momentum and a base twist: on a nontrivial circle bundle (Witten spaces, file 02) the antiperiodic shift corresponds to a spin structure whose fibre circle does not lift the circle action. Which Witten spaces carry such a structure is an open item for the next job.
+- A fermion with both a fibre momentum and a base twist: on a nontrivial circle bundle (Witten spaces, file 02) the antiperiodic shift corresponds to a spin structure whose fibre circle does not lift the circle action. For the circle bundles over CP^2 x CP^1 of [lemma 32](32_witten_spaces_hypercharge_quotient.md), Proposition 2.3, every spin structure on a spin total space has this property. A lift of the fibre circle would descend to a spin structure on the base by taking the quotient of spin frames adapted to the vertical unit tangent. The base has w_2 = h_1 mod 2. The spectrum for a specified additional twist remains to be computed.
 
 ## Further proofs (Terra 6.1, 4 November 2026)
 

@@ -98,7 +98,7 @@ Claim ledgers, the consolidated result, the theorem queue, lemma results and con
 
 ### 1.18 Eleven dimensions from massless W and Z (branch 11D)
 
-The interval of H as an antiperiodic circle; the hypercharge quotient of the 5-bar and its conditional comparison with M^{111}; Z_6 and flux-index calculations; and proposed C_3, brane and Higgs readings, with their scopes in lemmas 31 to 40.
+At the Fubini-Study radius, lemma 29 proves the eight-state disc-bundle window for both connections. The explicit pull-back fibre weight from Proposition 28.13 depends on the identification of the displayed matrix with the geometric wall operator. The 11D branch also studies the interval as an antiperiodic circle, the hypercharge quotient of the 5-bar, its centre restrictions for ordinary spinor and tensor modes, and flux indices. The magnetic product solves the bosonic equations and has a global spin obstruction. The C_3, brane and Higgs identifications are proposals.
 
 [lemma 28, two ends of a connected parent](lemmas/28_two_walls_connected_parent.md) · [lemma 29, the eight-state window](lemmas/29_window_on_the_disc_bundle.md) · [lemma 30, the joint limit](lemmas/30_massless_limit_as_a_joint_limit.md) · [note on the joint limit](paper/joint_limit_note.tex) · [11D §1](lemmas/31_interval_as_antiperiodic_circle.md) · [11D §2](lemmas/32_witten_spaces_hypercharge_quotient.md) · [11D §3](lemmas/39_branes_hypercharge_and_the_84.md) · [strategy, Ranked list (T14)](STRATEGY.md#ranked-list) · [11D §4, two families and M2/M5](lemmas/33_two_families_e8_placement.md) · [11D §5, colour-family exchange](lemmas/34_colour_family_exchange.md) · [11D §7, dualities between 9 and 11](lemmas/40_dualities_9_11.md) · [11D §8, orientifold sign](lemmas/35_orientifold_sign.md) · [11D §9, dilaton as spectral function and the SO(32) of the EPJC paper](lemmas/36_dilaton_spectral_and_so32.md)
 
@@ -118,7 +118,7 @@ From [lemma 28](lemmas/28_two_walls_connected_parent.md), [lemma 29](lemmas/29_w
 
 ### Short note: *A dictionary between finite spectral triples and Kaluza-Klein data*: [paper/connes_kk_dictionary_note.tex](paper/connes_kk_dictionary_note.tex)
 
-A synthesis with the status of each entry, drawing on lemmas 05 to 30 and on the , including [11D §10](lemmas/37_dilaton_and_second_scale.md) and [11D §11](lemmas/38_so30_fluctuations.md). Draft.
+A synthesis with the status of each entry, drawing on lemmas 05 to 30 and on the eleven-dimensional line, including [11D §10](lemmas/37_dilaton_and_second_scale.md) and [11D §11](lemmas/38_so30_fluctuations.md). Draft.
 
 ### Short note: *The two families of 84 and the number of generations*: [paper/generations_note.tex](paper/generations_note.tex)
 
@@ -126,7 +126,7 @@ From [lemma 21](lemmas/21_top_counting.md) and the , files 03 to 05: the scoped 
 
 ### Short note: *The real structure of a massless block: SO(30) in the finite geometry*: [paper/real_structure_note.tex](paper/real_structure_note.tex)
 
-From lemmas 06, 21 and 22 and the lemmas 35, 36 and 38: SO(30) as the commutant of the real structure on the massless light block for s = +1, the symmetric block of J-compatible operators against the antisymmetric block of the connection along the interval, and the compression of the latter to the window, with the comparison to the EPJC paper. Draft.
+From lemmas 06, 21 and 22 and the lemmas 35, 36 and 38: SO(30) as the identity component of the unitary commutant of the real structure on the massless light block for s = +1, the symmetric block of J-compatible operators against the antisymmetric block of the connection along the interval, and the compression of the latter to the window, with the comparison to the EPJC paper. Draft.
 
 ### Strategy: [STRATEGY.md](STRATEGY.md)
 

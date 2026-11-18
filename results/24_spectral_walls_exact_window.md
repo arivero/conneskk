@@ -1,4 +1,4 @@
-# On CP^3 x I, nonlocal spectral walls that prescribe two gradings on the level-one kernel C^4 give exactly the two-gradings window of lemma 23, with every other mode above Delta_K/r, so the higher K-modes decouple as the radius shrinks
+# On CP^3 x I, nonlocal spectral walls give the exact two-gradings interval on the level-one kernel C^4 and put the orthogonal tangential modes at or above Delta_K/r
 
 **Status.** Theorem (Result 1 of lemma 24, Theorem 24.1 in the ledger), with Result 5, a theorem on the radius collapse. Proved by Astra 6. Ledger row `l24_spectral`; Result 5 has no row of its own. Stated in the Status section of paper/boundary_condition_note.tex ("\supp{24}"), and used in the section on the cylinder of paper/joint_limit_note.tex ("the spectral walls of \supp{24}").
 

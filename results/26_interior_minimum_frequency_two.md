@@ -9,7 +9,7 @@
 **Statement.**
 
 1. (Lemma 26.1) R(u) = [6 J(2u) + (24/5) J((16/5) u)]/(4 J(4u)) is strictly increasing on (0, 1/4], with R(0+) = 27/10 and R(1/4) = n_c = 2.8855033... (numerical quadrature).
-2. (n_1 = 0) If n_2 <= 27/10, theta = 0 and pi/2 are the global minima, degenerate at n_2 = 27/10, and pi/4 is the maximum. If 27/10 < n_2 < n_c, there are exactly two global minima, at theta_\* and pi/2 - theta_\*, theta_\* in (0, pi/4). If n_2 >= n_c, theta = pi/4 is the unique global minimum.
+2. (n_1 = 0) If n_2 <= 27/10, theta = 0 and pi/2 are global minima of equal value and pi/4 is the maximum. The quadratic coefficient at the endpoint minima vanishes at n_2 = 27/10. If 27/10 < n_2 < n_c, there are exactly two global minima, at theta_\* and pi/2 - theta_\*, theta_\* in (0, pi/4). If n_2 >= n_c, theta = pi/4 is the unique global minimum.
 3. (n_1 > 0, n_2 >= n_c) If n_1 < n_\*, there is exactly one stationary point in the open interval, the strict global minimum, in (pi/4, pi/2); if n_1 >= n_\*, V decreases strictly and theta = pi/2 is the unique global minimum. The range n_1 > 0, n_2 < n_c is not classified.
 4. (Proposition 26.2b) For n_1 > 0 and 0 < t < 1/2, V(1 - t) - V(t) = -n_1 [F(1 - t) - F(t)] < 0, so no point of (0, pi/4) is a global minimum; with item 2 this covers all integer counts.
 5. (Corollary 26.3) At theta = pi/4, M_KK = pi/l = 4 M_W, m_1 = M_W, m_2 = 2 M_W, tan(M_Z l) = 2 and M_W^2/M_Z^2 = 0.5032. From pi/4 to pi/2, m_1/M_W increases from 1 to infinity and m_2/M_W decreases strictly from 2 to sqrt(2); M_KK >= 4 M_W for all theta in (0, pi/2).

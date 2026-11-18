@@ -1,6 +1,6 @@
 # On the flat four-torus with a constant connection and a constant three-form the Dirac operator is c(k + A) + i c(eta) Gamma on each momentum sector; the constant spinors are its lowest window for |A| + |eta| < pi/l, and there it is the Yukawa block c(A) + i c(eta) Gamma, with the Wilson line as the custodial half and the three-form as the splitting half, of masses m_+-^2 = |A|^2 + |eta|^2 +- 2 |A wedge eta|
 
-**Status.** Proposition 51.1. Proved by Claude Fable 5.1 on 5 November 2026 by hand. Agricola's normalization D^s = D^0 + 3sT is used. Ledger row `l51_window`. Not yet in a paper.
+**Status.** Proposition 51.1. Proved by Claude Fable 5.1 on 5 November 2026 by hand. Agricola's normalization D^s = D^0 + 3sT is used. Ledger row `l51_window`. The [dictionary paper](../paper/connes_kk_dictionary_note.tex) summarises the torus Dirac block in its summary tables.
 
 **Setting.** The flat four-torus A = R^4/Lambda of lemma 48 with the periodic spin structure, Sigma_4 the sheet of Proposition 49.1; D_{A,H} = D + c(A) + s i c(H) with A a constant one-form (a flat U(1) connection) and H a constant three-form, s i c(H) = i c(eta) Gamma with eta = +- s *H, s != 0 (s = 3/4 for the connection with torsion H, 1/4 for torsion H/3; Agricola); 2 pi/l the length of the shortest nonzero dual vector.
 

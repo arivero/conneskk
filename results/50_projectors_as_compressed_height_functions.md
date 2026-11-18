@@ -1,6 +1,6 @@
 # The compression of 5 w'^* B w'/w'^* w' on CP^3 is B + tr(B): the grading and the projectors on the marked lines are compressions of height functions, and the top block is the anticommutator of a compressed base coordinate and a compressed height function of the wall sheet
 
-**Status.** Proposition 50.2. Proved by Claude Fable 5.1 on 5 November 2026 by Schur's lemma and the two normalizations Q(1) = 1 and Q(5 x_a) = Gamma_a (Proposition 10.1). The identity is Example 16.9, item 2, extended complex-linearly; the sign of delta' is fixed by the definition of J_w. Ledger row `l50_height_functions`. Not yet in a paper.
+**Status.** Proposition 50.2. Proved by Claude Fable 5.1 on 5 November 2026 by Schur's lemma and the two normalizations Q(1) = 1 and Q(5 x_a) = Gamma_a (Proposition 10.1). The identity is Example 16.9, item 2, extended complex-linearly; the sign of delta' is fixed by the definition of J_w. Ledger row `l50_height_functions`. The [dictionary paper](../paper/connes_kk_dictionary_note.tex) summarises the compressed height functions in its summary tables.
 
 **Setting.** The compression Q of lemmas 10 and 16 to the level-one kernel H^0(CP^3, O(1)) = C^4, in the convention of lemma 10 (Q(f) = 4 int f P_{w'} dmu, extended complex-linearly), used in lemma 46, item 3: Q(1) = 1 and Q(5 x_a) = Gamma_a. The Fubini-Study distance d, cos d([w'], [w]) = |<w', w>|/(|w'| |w|).
 

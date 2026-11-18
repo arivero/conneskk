@@ -10,7 +10,7 @@
 2. PH_l has the orthonormal chiral basis u_L = sqrt(2/l) (cos(pi x/(2l)), 0), u_R = sqrt(2/l) (0, sin(pi x/(2l))), in which P D_l P = m_1 sigma_1 and P Gamma P = sigma_3.
 3. The compression is Q(f) = diag((2/l) int f cos^2(pi x/(2l)) dx, (2/l) int f sin^2(pi x/(2l)) dx), and its range is exactly C + C. So the truncation is unitarily equivalent to the Connes-Lott two-point space with |m| = m_1 = pi/(2l), any phase of m being supplied by a diagonal unitary.
 4. The two states omega_0, omega_l of the compressed operator system are at Connes distance 1/m_1 = 2l/pi < l. Their pullbacks are the smeared measures (2/l) cos^2(pi x/(2l)) dx and (2/l) sin^2(pi x/(2l)) dx, at distance 4l/pi^2 in the original seminorm. Endpoint evaluations do not factor through Q, since Q(cos(3 pi x/l)) = 0.
-5. The truncation is minimal: there is no zero mode and Gamma exchanges the eigenspaces at +-m_1, so every nonzero grading-preserving spectral subspace contains both.
+5. This is the first nonzero low-energy cutoff and has minimal rank two: Gamma exchanges the eigenspaces at each pair +-(2r-1)m_1, so every nonzero grading-preserving spectral subspace contains at least one complete pair. A spectral window away from zero can instead select +-3m_1 or another pair of the same rank.
 
 *Scope.* Complex even data, with no real structure imposed. The construction supplies no KO-6 or Standard Model identification. With the inherited real structure the full diagonal algebra fails first order (08_counterexample_pointwise_reality_first_order.md).
 

@@ -1,6 +1,6 @@
 # The centralizer in A_SM of the top-only Dirac operator is C + M_3(C) with the summand C embedded in H along the top's left-handed line: the algebra of the label 9, the retained algebra of lemma 44 and the corpus row rs_F1
 
-**Status.** Proposition 50.4. Proved by Claude Fable 5.1 on 5 November 2026 by hand. The gauge group is determined up to a finite group; Proposition 41.5 transfers by an Sp(1)_a conjugation; a lepton block on another left line drops the dimension to 19. Ledger row `l50_top_centralizer`. Not yet in a paper.
+**Status.** Proposition 50.4. Proved by Claude Fable 5.1 on 5 November 2026 by hand. The gauge group is determined up to a finite group; Proposition 41.5 transfers by an Sp(1)_a conjugation; a lepton block on another left line drops the dimension to 19. Ledger row `l50_top_centralizer`. The [dictionary paper](../paper/connes_kk_dictionary_note.tex) summarises the top centralizer in its summary tables.
 
 **Setting.** D_F = Y_q (x) (1 - P_v) + S_{T_kappa} on H_F with Y_q = {c(h), P_w}, h != 0, the lepton block zero (the top-only family, one generation), the connector on w and v, and A_SM = A(T_kappa) = {(lambda, q, m)} of Theorem 20.2.
 

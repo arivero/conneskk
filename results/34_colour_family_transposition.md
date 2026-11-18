@@ -12,7 +12,7 @@
 
 So the sets 128 - T(0) and 128 - N(1, 2, 3), of 116 roots each, are exchanged.
 
-*Scope.* A Weyl element acts on an E8 holonomy by conjugation, so it exchanges colour and family physically only relative to a structure that tells them apart, such as this placement of H_F (lemma 36, section 5, item 2). The search of lemma 34 found further signed permutations with the same effect on the two blocks, and M = J P with J = -1 the Chevalley involution of 33_nogo_graded_e8_exchange.md.
+*Scope.* A Weyl element acts on an E8 holonomy by conjugation, so it exchanges colour and family physically only relative to a structure that tells them apart, such as this placement of H_F (lemma 36, section 5, item 2). The search of lemma 34 found further signed permutations with the same effect on the two blocks, and M = (-1) P on roots, where -1 is the Weyl action of the complex-linear Chevalley involution of 33_nogo_graded_e8_exchange.md.
 
 **Proof.** Lemma 34, Proposition 5.2, and the section "Further proofs" there: P is an even permutation of coordinates and -1 lies in W(E8); M maps (chi | w_1 w_2 | phi) to (-phi | -w_2 -w_1 | -chi), so t_L(c) = (c | -+ | +++) goes to nu_L(-c) and t^c to -nu^c(-c).
 

@@ -12,7 +12,7 @@
 
 So the restriction l norm(D_F) < pi/2 of lemma 22 is the choice of the fundamental domain.
 
-*Scope.* Theorem 22.1 uses the strict interior, and theta = pi/2 is a boundary-condition limit with a degenerate window, so each end needs its own domain or limit. Equality of one channel spectrum does not identify complete physical backgrounds. The massless electroweak vectors at theta = pi/2 (M_W = M_Z = 0 at fixed l, with the fermion at pi/(2l)) are a statement of the two-grading model of lemma 23 (Theorem 23.6).
+*Scope.* Theorem 22.1 includes theta = 0 with X = 0 and all angles below pi/2. The upper endpoint theta = pi/2 is a boundary-condition limit with a degenerate window. Equality of one channel spectrum does not identify complete physical backgrounds. The massless electroweak vectors at theta = pi/2 (M_W = M_Z = 0 at fixed l, with the fermion at pi/(2l)) are a statement of the two-grading model of lemma 23 (Theorem 23.6).
 
 **Proof.** Lemma 40, Proposition 7.1, and the section "Further proofs" there: equality of two such multisets is equivalent to theta' = +-theta mod pi, by comparing the residues modulo pi/l, and n pi + theta = m pi - theta needs 2 theta in pi Z.
 

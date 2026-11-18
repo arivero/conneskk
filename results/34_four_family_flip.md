@@ -7,10 +7,10 @@
 **Statement.**
 
 1. F is unitary, F^2 = 1, and F commutes with gamma and J.
-2. For T_top = Y (x) P_q (x) P_0 and T_nu = Y (x) P_ell (x) (1 - P_0), with Y the map of the up state of C^2_L to the up state of C^2_R and P_ell, P_q = 1 - P_ell, P_0 the lepton, quark and family-0 projectors, F T_top F^{-1} = T_nu; likewise for the down-type block of family 0 and the charged leptons of families 1, 2, 3.
+2. For T_top = Y (x) P_q (x) P_0 and T_nu = Y (x) P_ell (x) (1 - P_0), with Y exchanging the up states of C^2_L and C^2_R by a nonzero amplitude and its adjoint, extended to the conjugate summand by J, and P_ell, P_q = 1 - P_ell, P_0 the lepton, quark and family-0 projectors, F T_top F^{-1} = T_nu; likewise for the down-type block of family 0 and the charged leptons of families 1, 2, 3.
 3. For D commuting with F, D + t T_top and D + t T_nu are conjugate by F for every t, and their heavy limits have conjugate light spaces of 116 states. The light algebras correspond when the algebra is F-invariant; the Pati-Salam and Standard Model algebras act on C^4_c alone and are not F-invariant.
 
-*Scope.* F equals M of 34_colour_family_transposition.md on the left-handed states and M followed by the particle-antiparticle exchange on the right-handed ones, where M reverses gamma on 64 states, so F lies outside W(E8). F maps the top Yukawa block to Dirac blocks of neutrinos, and it does not map the Majorana block to a Dirac block, since the Majorana block joins H_f to conj(H_f).
+*Scope.* For the coordinate identification pairing c with -c, F agrees with M on left-handed root labels and reverses M's right-handed images. For same-slot u_L and nu^c this changes their inner product from +1 to -1, excluding a Weyl action. A general unitary iota can mix the basis states and still conjugates the two Dirac blocks. F maps the top Yukawa block to Dirac blocks of neutrinos, and it does not map the Majorana block to a Dirac block, since the Majorana block joins H_f to conj(H_f).
 
 **Proof.** Lemma 34, Proposition 5.3: F acts on C^4_c (x) C^4_f only, conjugating a (x) b to iota^{-1} b iota (x) iota a iota^{-1}, so P_q (x) P_0 goes to P_ell (x) (1 - P_0); the two Dirac blocks have rank 12 and kernels of dimension 128 - 12 = 116.
 

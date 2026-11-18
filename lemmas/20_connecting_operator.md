@@ -170,6 +170,8 @@ If \(K\) has rank two, its image is a reducing two-plane in \(\mathbb C^4\). The
 \]
 If \(K\) has rank one, its support and range are complex lines. The intertwining algebra is (6), of dimension \(24\). Unitary changes of these lines, and exchange of the quaternionic summands, give the stated uniqueness.
 
+The bound \(16\) concerns the rank of the compressed intertwiner \(K\). For an admissible \(T\) of rank two on the algebra (6), take orthonormal \(v_0=v\), \(v_1\in v^\perp\), put \(e_i=wv_i^*\) and \(f_i=ce_i\), and let \(R=|f_0\rangle\langle e_1|\). Both \(e_1\) and \(f_0\) carry the left character \(\lambda\), so \(R\) intertwines the left actions. Then \(T=R+\tau(R)=|f_0\rangle\langle e_1|+|f_1\rangle\langle e_0|\) is odd and satisfies (1) and (2) by Result 1. Its rank is two and (6) still has dimension \(24\).
+
 Finally, \(T_\kappa\) and \(T_\kappa^*\) have orthogonal source and target summands, giving \(\operatorname{rank}S_{T_\kappa}=2\). ∎
 
 The connecting condition here is relative to the sheet projections of the original prealgebra: \([S_{T_\kappa},e_1]\ne0\). On the selected algebra (6), this particular Majorana block commutes with the algebra. Additional sheet-diagonal Dirac terms are needed for the usual nontrivial finite one-forms and Yukawa data.

@@ -17,4 +17,4 @@ The product member CP^2 x S^2 x S^1 of Witten's family (a = b = 0) is not spin.
 
 **Proof.** Lemma 32, Proposition 2.3, and the section "Further proofs" there: the Gysin sequence, with the cup product H^2(B) -> H^4(B) of matrix [[a, 0], [b, a]], determinant a^2 and Smith invariants (g, a^2/g); w_2(Y) = pi^\*(h_1 mod 2), since the vertical tangent line is trivial, and the kernel of the pullback on H^2(B; Z/2) is spanned by e mod 2.
 
-**What it leaves open.** The reading of the Betti class, which pairs with the two divisors as 2 and -3, as hypercharge is Proposal 3.1 of lemma 39 and has no file.
+**What it leaves open.** The reading of the lifted five-cycles, whose Poincaré duals are 2 and -3 times the primitive class in H^2(Y), as hypercharge is Proposal 3.1 of lemma 39 and has no file.

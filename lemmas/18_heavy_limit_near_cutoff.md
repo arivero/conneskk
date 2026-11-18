@@ -787,14 +787,14 @@ m_t/M_W\to\sqrt{8/3}.
 
 Accordingly, the obstruction has three distinct scopes. The CCM identity cannot be extrapolated to \(\mu\to\infty\) at fixed cutoff because it belongs to the asymptotic truncation. The exact top-only quadratic action obstructs a fixed-cutoff heavy-\(W\) limit for the heat cutoff under both mass definitions, and for class (4) under the Taylor definition. A family of actual nonzero stationary vacua of the unmodified positive-Laplace action encounters the separate obstruction (41). Counterexample 7 excludes extending the first of these exact mass conclusions to arbitrary finite representations.
 
-**11. Proposition (the radial derivative for general \(f\)).** On flat \(\mathbb R^4\), for a sufficiently integrable real cutoff \(f\), with \(\lambda_j^2\) the eigenvalues of \(V_*^2\),
+**11. Proposition (the radial derivative for general \(f\)).** On flat \(\mathbb R^4\), let \(f\) be a sufficiently integrable real cutoff and let \(\lambda_j^2\) be the eigenvalues of \(V_*^2\), with \(V_*\ne 0\). Then
 \[
 \mathcal U'(c)=
 -\frac{c\Lambda^2}{2\pi^2}
 \sum_j\lambda_j^2
 \int_{c^2\lambda_j^2/\Lambda^2}^{\infty}f(z)\,dz. \tag{43}
 \]
-For nonnegative \(f\), a finite \(c>0\) is stationary exactly when every tail associated with a nonzero \(\lambda_j\) vanishes. So if \(f\) has nonzero support arbitrarily far out, there is no finite stationary point on this ray; if \(f\) has compact support ending at \(R\), there is a stationary plateau once every nonzero \(c^2\lambda_j^2/\Lambda^2\geq R\). Sign-changing cutoffs can have cancellations. A nonconstant cutoff flat near zero lies outside (4), since a nonzero positive measure gives \(f'(0)<0\); (43) covers the nonnegative ones. A radial path with an additional fixed noncommuting mass matrix need not have the form \(cV_*\). \(\square\)
+For nonnegative \(f\), a finite \(c>0\) is stationary exactly when every tail associated with a nonzero \(\lambda_j\) vanishes. So nonnegative \(f\) with unbounded essential support has no finite stationary point along this ray; if \(f\) has compact support ending at \(R\), there is a stationary plateau once every nonzero \(c^2\lambda_j^2/\Lambda^2\geq R\). Sign-changing cutoffs can have cancellations. A nonconstant cutoff flat near zero lies outside (4), since a nonzero positive measure gives \(f'(0)<0\); (43) covers the nonnegative ones. A radial path with an additional fixed noncommuting mass matrix need not have the form \(cV_*\). \(\square\)
 
 **12. Proposition (the top-only Taylor mass for general \(f\)).** For nonnegative smooth compactly supported \(f\) with \(f(0)>0\), the formulas of Proposition 4 hold with
 \[

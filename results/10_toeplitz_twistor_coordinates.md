@@ -18,4 +18,4 @@ with P_w the rank-one projector onto w and mu the Fubini-Study probability measu
 
 **Proof.** Lemma 10, Proposition 10.1; the proof is there. Lift to w uniform on S^7 in C^4; Wick's theorem gives E[w_j w_k conj(w_i) conj(w_l)] = (delta_ij delta_kl + delta_jl delta_ki)/20 and the sixth moment as the sum over the six matchings divided by 120; tr Gamma_a = 0 and Gamma_a^2 = I.
 
-**What it leaves open.** These compressions generate M_4(C) at level one with no limit taken (16_compressed_algebras_noncommutative.md), and the real functions of S^4 generate M_2(H) (16_twistor_level_one_m2h_m4c.md). Part B of job 04, the Berger gauge normalizations, stays parked (lemmas/README.md).
+**What it leaves open.** These compressions generate M_4(C) at level one with no limit taken (16_compressed_algebras_noncommutative.md), and the real functions of S^4 generate M_2(H) (16_twistor_level_one_m2h_m4c.md). Lemma 47 resolves the Berger gauge-normalization calculation of job 04, Part B, for the stated tree-level Einstein-term reduction.

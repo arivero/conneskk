@@ -1,4 +1,4 @@
-# A self-adjoint boundary condition for the derivative on an interval is a grading at each wall, and the finite Dirac operator is D_F = (1/2l) Gamma_0 log(Gamma_1 Gamma_0), with singular values the principal angles between the two gradings divided by l
+# Separate grading conditions at the two walls give a self-adjoint derivative and a finite operator D_F = (1/2l) Gamma_0 log(Gamma_1 Gamma_0), with singular values the principal angles divided by l
 
 **Status.** Theorem (Theorem 23.1). Proved by Claude Opus 5.5. Ledger row `l23_gradings` (depending on `l22_window`). Theorem 2 of paper/boundary_condition_note.tex; cited in paper/connes_kk_dictionary_note.tex.
 

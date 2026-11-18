@@ -11,7 +11,7 @@
 
 *Scope.* A linear colour action on the nine transverse directions; tensor modes on the stated quotient with the stated action, which needs only to preserve the background metric and flux. Together the two statements exclude the two direct routes, the little group and the tensor Kaluza-Klein tower, for a colour-equivariant identification.
 
-*Escapes, as the lemma states them.* Colour acting on the internal space, outside the little group; a nonlinear or brane realization; spinor modes; a map that is not colour-equivariant, in which case the equality of the two 84s is an equality of numbers only.
+*Escapes, as the lemma states them.* Colour acting on the internal space, outside the little group; a nonlinear or brane realization; spinors in additionally twisted gauge bundles; a map that is not colour-equivariant, in which case the equality of the two 84s is an equality of numbers only.
 
 **Proof.** Lemma 39, Proposition 3.8 and Corollary 3.9, and the section "Further proofs" there: the irreducibles of dimension at most nine are 1, 3, 3-bar, 6, 6-bar and 8, and a self-conjugate complexification excludes a sextet and two triplet pairs; Lambda^2 3 (x) 3-bar = 6-bar + 3, and Lambda^2 8 contains a 10. For the corollary, (omega I_3, I_2) is the quotient-circle element at lambda = e^{4 pi i/3}, so it acts trivially on every tensor bundle.
 

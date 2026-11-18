@@ -2,14 +2,14 @@
 
 **Status.** Proposition (Proposition 11 of lemma 18). Proved by Terra 6.1. Ledger row `l18_radial_general`.
 
-**Setting.** A sufficiently integrable real cutoff f; flat R^4; radial configurations V = c V_\*, c > 0, with lambda_j^2 the eigenvalues of V_\*^2.
+**Setting.** A sufficiently integrable real cutoff f on flat R^4 and radial configurations V = c V_\*, with c > 0, V_\* != 0 and lambda_j^2 the eigenvalues of V_\*^2.
 
 **Statement.**
 
 1. U'(c) = -(c Lambda^2/(2 pi^2)) sum_j lambda_j^2 int_{c^2 lambda_j^2/Lambda^2}^infinity f(z) dz.
 2. For nonnegative f, a finite c > 0 is stationary exactly when every tail associated with a nonzero lambda_j vanishes.
-3. If f has nonzero support arbitrarily far out, there is no finite stationary point on the ray.
-4. If f has compact support ending at R, there is a stationary plateau once every nonzero c^2 lambda_j^2/Lambda^2 >= R.
+3. If nonnegative f has unbounded essential support, there is no finite stationary point on the ray.
+4. If f has compact support ending at R, there is a stationary plateau once every nonzero c^2 lambda_j^2/Lambda^2 is at least R.
 5. Sign-changing cutoffs can have cancellations.
 6. A nonconstant cutoff flat near zero lies outside class (4), since a nonzero positive measure gives f'(0) < 0; formula (1) covers the nonnegative ones.
 

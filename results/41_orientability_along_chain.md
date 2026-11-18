@@ -7,11 +7,11 @@
 **Statement.**
 
 1. The Pati-Salam data are orientable, with the cycle above.
-2. The Standard Model data are not orientable: nu_R and J nu_R carry the same left character lambda and the same right character lambda and have opposite gradings, and so do e_R and J e_R (left character conj(lambda), right character lambda, in the real summand), so no sum of left-right products separates either pair; the failure does not depend on the presence of nu_R (Stephan, hep-th/0610097, for the KO-6 models with neutrinos).
+2. The Standard Model data are not orientable: nu_R and J nu_R carry the same left character lambda and the same right character lambda and have opposite gradings, while e_R has characters (conj(lambda), lambda) and J e_R has (lambda, conj(lambda)); a cycle has conjugate values on the latter pair and cannot take the opposite real grading values; the failure does not depend on the presence of nu_R (Stephan, hep-th/0610097, for the KO-6 models with neutrinos).
 3. The light block of the third step is not orientable: its kept mass blocks are nonzero and commute with B (Corollary 17.4), and a nonzero D commuting with both actions commutes with every orientation cycle while anticommuting with gamma; directly, d_L and d_R of one colour carry the same characters and opposite gradings. This proves the corpus statement rs_N9.
 
 *Scope.* One generation with Dirac neutrinos in the stated representation, the strict projections of lemma 06 for the third step, and a sheet-diagonal D at the first. The same loss under a heavy centralizer in a four-summand toy model is orientability_under_heavy_centralizer.md; here it happens in the physical chain.
 
-**Proof.** Lemma 41, Proposition 41.4: on the particles rho(1_4)^o is the identity and rho(1_4) vanishes, on the antiparticles the reverse, so the right side is +1 on p_L, -1 on p_R, -1 on p-bar_L and +1 on p-bar_R, which is gamma; a cycle takes the same value on two states with the same pair of characters, while gamma takes opposite values.
+**Proof.** Lemma 41, Proposition 41.4: on the particles rho(1_4)^o is the identity and rho(1_4) vanishes, on the antiparticles the reverse, so the right side is +1 on p_L, -1 on p_R, -1 on p-bar_L and +1 on p-bar_R, which is gamma; a cycle takes the same value on the neutrino pair and conjugate values on the electron pair; gamma takes opposite real values on each pair.
 
 **What it leaves open.** The result points to the topology of a Kaluza-Klein parent as the source of orientability, which the finite data along the chain do not keep (lemma 41, Scope).

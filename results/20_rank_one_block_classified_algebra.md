@@ -8,7 +8,7 @@
 
 1. T_kappa has complex rank one and satisfies T = tau(T) and hT + Tg = 0; S_{T_kappa} has complex rank two.
 2. A(T_kappa) = {(lambda + q, lambda + m) : lambda in C, q in H, m in M_3(C)}, the first lambda acting on W_+ as diag(lambda, conj(lambda)) in a basis starting with w, and the second on Cv.
-3. It has real dimension 2 + 4 + 18 = 24, and up to an automorphism of A^ev it is the unique maximal-dimensional involutive subalgebra admitting a nonzero sheet-connecting Dirac block with order one; a block of rank two gives at most 4 + 4 + 8 = 16.
+3. It has real dimension 2 + 4 + 18 = 24, and up to an automorphism of A^ev it is the unique maximal-dimensional involutive subalgebra admitting a nonzero sheet-connecting Dirac block with order one. A compressed intertwiner K: C^2 -> C^4 of rank two in the dimension argument gives the bound 4 + 4 + 8 = 16. The algebra of dimension 24 also admits a rank-two connecting block T, as shown in the proof.
 4. At kappa = 0 the block has rank zero and the admissible algebra has dimension 40 (ledger row).
 
 *Scope.* The connecting condition is relative to the sheet projections of the original prealgebra, [S_T, e_1] != 0. On the selected algebra this block commutes with the algebra, so additional sheet-diagonal Dirac terms are needed for the usual nontrivial finite one-forms and Yukawa data.

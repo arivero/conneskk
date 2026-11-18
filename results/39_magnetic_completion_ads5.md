@@ -1,4 +1,4 @@
-# AdS5 x CP^2 x S^2 with G_4 = f_1 vol(CP^2) + f_2 J wedge vol(S^2) solves the equations of eleven-dimensional supergravity, with Ricci components -(f_1^2 + 2 f_2^2)/6, f_1^2/3 + f_2^2/6 and 2 f_2^2/3 - f_1^2/6, and round factors exist exactly when abs(f_1) < 2 abs(f_2)
+# AdS5 x CP^2 x S^2 with G_4 = f_1 vol(CP^2) + f_2 J wedge vol(S^2) solves the bosonic equations of eleven-dimensional supergravity, with Ricci components -(f_1^2 + 2 f_2^2)/6, f_1^2/3 + f_2^2/6 and 2 f_2^2/3 - f_1^2/6, and round factors exist exactly when abs(f_1) < 2 abs(f_2)
 
 **Status.** Proposition (Proposition 3.5). Proved by Claude Opus 5.5; a proof by Terra 6.1 is written out in the section "Further proofs" of lemma 39. Ledger row `d11_ads5`. No paper cites it.
 
@@ -10,8 +10,8 @@
 2. R_AdS = -(f_1^2 + 2 f_2^2)/6, R_CP2 = f_1^2/3 + f_2^2/6 and R_S2 = 2 f_2^2/3 - f_1^2/6, with zero off the diagonal.
 3. Positive curvature of the S^2 factor is equivalent to abs(f_1) < 2 abs(f_2), which also makes the CP^2 curvature positive and the AdS curvature negative, and the radii follow from the three Einstein constants.
 
-*Scope.* A classical local solution with scaled Einstein factors; "round factors" means the scaled Fubini-Study metric on CP^2 and the round metric on S^2. Flux quantization, global consistency, supersymmetry and stability are not checked. The product with flux on KE_4 x S^2 appears in Pope and van Nieuwenhuizen (1989), and supersymmetric AdS5 solutions fibre the S^2 over the Kähler-Einstein base (Gauntlett, Martelli, Sparks and Waldram, hep-th/0402153); both are recalled.
+*Scope.* A classical local solution with scaled Einstein factors; "round factors" means the scaled Fubini-Study metric on CP^2 and the round metric on S^2. The product has no spin structure for the global eleven-dimensional gravitino. Its w_2 restricts to c_1(TCP^2) mod 2 = h_1 mod 2 on CP^2. At f_1 = f_2 the flux is proportional to the square of the product Kähler form, and the bosonic linear instability of S^2 x CP^2 in this subfamily is known. [Martin and Reall, §2.2.4](https://arxiv.org/pdf/0810.2707)
 
 **Proof.** Lemma 39, Proposition 3.5, and the section "Further proofs" there: in a frame with J = e^{12} + e^{34}, G^2 = 24 (f_1^2 + 2 f_2^2), and the contraction G_aPQR G_a^PQR is 6 (f_1^2 + f_2^2) in a CP^2 direction, 12 f_2^2 in an S^2 direction and zero in an AdS direction; the forms involved are parallel.
 
-**What it leaves open.** The flux quantization, supersymmetry and stability of the solution. Its reading as the magnetic completion of the base CP^2 x S^2, against the electric completion AdS4 x Y_{3,2}, with the M2/M5 exchange acting on hypercharge as electric-magnetic duality, is Proposals 3.6 and 3.7 of lemma 39, which have no files.
+**What it leaves open.** The flux periods, the stability at other flux ratios and an alternative magnetic geometry admitting a global spin structure. Its reading as the magnetic completion of the base CP^2 x S^2, against the electric completion AdS4 x Y_{3,2}, with the M2/M5 exchange acting on hypercharge as electric-magnetic duality, is Proposals 3.6 and 3.7 of lemma 39, which have no files.

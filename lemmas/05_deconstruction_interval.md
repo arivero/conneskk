@@ -265,7 +265,7 @@ The endpoint chirality here concerns allowed boundary components. It does not su
 
 ## Part 3. Minimal spectral truncation
 
-**Statement.** The minimal nonzero grading-preserving spectral truncation of (8) is unitarily equivalent to Connes–Lott, with
+**Statement.** The first nonzero low-energy spectral cutoff of (8) is a minimal-rank grading-preserving truncation, unitarily equivalent to Connes–Lott, with
 \[
 \boxed{|m|=m_1=\frac{\pi}{2l},\qquad c=\frac{\pi}{2}.}
 \]
@@ -333,7 +333,7 @@ and hence
 \tag{20}
 \]
 
-Minimality follows because there is no zero mode and the grading exchanges the eigenspaces at \(+m_1\) and \(-m_1\). A nonzero grading-preserving spectral subspace must retain both.
+Minimality in rank follows because there is no zero mode and the grading exchanges the eigenspaces at each pair \(\pm(2r-1)m_1\). Every nonzero grading-preserving spectral subspace contains at least one complete pair. The cutoff \(1_{[0,E]}(|D_l|)\) with \(m_1\le E<3m_1\) is the first nonzero low-energy cutoff; a window away from zero may instead select another pair, such as \(\pm3m_1\), of the same rank.
 
 There is an essential distinction between these states and literal evaluations. For
 \[
