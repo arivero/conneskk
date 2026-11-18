@@ -2326,6 +2326,39 @@ checked_by(two_endpoint_upper_matter, gpt_6_2_astra_max, by_hand).
 referee_pending(two_endpoint_upper_matter).
 addresses(t18, two_endpoint_upper_matter).
 
+claim(two_endpoint_flavour_wall, theorem, proved, "Two-endpoint paper, three light families", "Among four complete flavour channels, opposite outer reflections on one complex flavour line give it half-integral frequencies and gap pi/(2d). The three orthogonal channels are periodic and give three complete families below the remaining gaps, for block-preserving Yukawa operators.").
+source(two_endpoint_flavour_wall, 'paper/two_endpoint_limits.tex', '').
+depends(two_endpoint_flavour_wall, gh1_winding_family).
+attempted_by(two_endpoint_flavour_wall, gpt_6_2_astra_max).
+checked_by(two_endpoint_flavour_wall, gpt_6_2_astra_max, by_hand).
+referee_pending(two_endpoint_flavour_wall).
+addresses(t14, two_endpoint_flavour_wall).
+
+claim(two_endpoint_flavour_current, proposition, proved, "Two-endpoint paper, flavour and current", "General Dirac Yukawa maps realize the three-family commutator invariant on the isolated window. The exact parallel-current exchange is the zero-mode propagator times the product of the two appropriate flavour mixing entries.").
+source(two_endpoint_flavour_current, 'paper/two_endpoint_limits.tex', '').
+depends(two_endpoint_flavour_current, two_endpoint_flavour_wall).
+depends(two_endpoint_flavour_current, two_endpoint_current).
+attempted_by(two_endpoint_flavour_current, gpt_6_2_astra_max).
+checked_by(two_endpoint_flavour_current, gpt_6_2_astra_max, by_hand).
+referee_pending(two_endpoint_flavour_current).
+addresses(t13, two_endpoint_flavour_current).
+
+claim(two_endpoint_face_current, proposition, proved, "Two-endpoint paper, sources on a face or a corner", "For a Neumann product gauge action a source on one face has response (g2 squared/2)(ell/q)coth(q ell) for q squared equal to p squared plus the weak mass squared. It distinguishes the aspect along a fixed-area matching curve. At a corner the absolute exchange diverges logarithmically and a momentum subtraction is finite.").
+source(two_endpoint_face_current, 'paper/two_endpoint_limits.tex', '').
+depends(two_endpoint_face_current, two_endpoint_current).
+attempted_by(two_endpoint_face_current, gpt_6_2_astra_max).
+checked_by(two_endpoint_face_current, gpt_6_2_astra_max, by_hand).
+referee_pending(two_endpoint_face_current).
+addresses(t13, two_endpoint_face_current).
+
+claim(two_endpoint_scalar_count, proposition, conditional, "Two-endpoint paper, scalar representations and wall fields", "For complete Dirac generations, the symmetric diquark counts and the full neutral traceless meson count together force three families and two up and three down participating flavours. Equal orthogonal interval parities propagate the diquark Wilson scalars, while the meson generators have Dirichlet axial profiles.").
+source(two_endpoint_scalar_count, 'paper/two_endpoint_limits.tex', '').
+depends(two_endpoint_scalar_count, l21_exotic).
+attempted_by(two_endpoint_scalar_count, gpt_6_2_astra_max).
+checked_by(two_endpoint_scalar_count, gpt_6_2_astra_max, by_hand).
+referee_pending(two_endpoint_scalar_count).
+addresses(t14, two_endpoint_scalar_count).
+
 claim(m111_membrane_charge, proposition, proved, "M-theory endpoint paper, Betti vector and wrapped charge", "With an elementary electric M2 charge and leading Freund-Rubin flux normalization, the inverse squared Betti coupling on M111 is sqrt(N)/(36 sqrt(3) pi). A smooth representative of the primitive two-cycle exists and the classical mass of a unit-charge wrapped membrane times the AdS radius is at least 8 sqrt(N/3).").
 source(m111_membrane_charge, 'paper/seven_m_theory.tex', '').
 depends(m111_membrane_charge, d11_quotient).

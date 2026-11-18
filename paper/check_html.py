@@ -201,8 +201,16 @@ def main():
         check(document.equations == equations, f"{name}: {document.equations}/{equations} equations", errors)
         sections = len(re.findall(r"^\\section\*?\{", source, re.MULTILINE))
         check(document.h2 == sections + 1, f"{name}: {document.h2 - 1}/{sections} sections", errors)
-        numbered_sections = len(re.findall(r"^\\section\{", source, re.MULTILINE))
-        expected_numbers = [str(number) for number in range(1, numbered_sections + 1)]
+        section = subsection = 0
+        expected_numbers = []
+        for heading in re.findall(r"^\\(section|subsection)\{", source, re.MULTILINE):
+            if heading == "section":
+                section += 1
+                subsection = 0
+                expected_numbers.append(str(section))
+            else:
+                subsection += 1
+                expected_numbers.append(f"{section}.{subsection}")
         check(document.section_numbers == expected_numbers, f"{name}: inconsistent section numbering", errors)
         tables = len(re.findall(r"\\begin\{table\*?\}", source))
         check(document.tables == tables, f"{name}: {document.tables}/{tables} tables", errors)

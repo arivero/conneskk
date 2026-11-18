@@ -6,7 +6,9 @@ This directory, `lemmas/` and `paper/` are the sources of every PDF in `docs/`; 
 
 ## Reading routes
 
-For the question about five, six and seven internal dimensions, use the two-interval result on the blocking route with the [paper on fermions and weak-current exchange](../paper/two_endpoint_limits.tex). On the eleven-dimensional route, the [M-theory paper](../paper/seven_m_theory.tex) tests flux quantization, wrapped charge and spinor descent on the same upper candidate.
+For five, six and seven internal dimensions, compare the constant current with a source on a face of the two-interval family. Its flavour wall gives three periodic channels and a gapped fourth. [Three-generation fermions and weak-current exchange](../paper/two_endpoint_limits.tex)
+
+On the eleven-dimensional route, the [M-theory paper](../paper/seven_m_theory.tex) tests flux quantization, wrapped charge and spinor descent on the same upper candidate.
 
 Begin a research step by writing down the operation, the inputs held fixed and the observable to be explained. Choose the row whose question matches. Read its construction and the example that tests the relevant assumption, then follow the numbered proof on which the calculation depends. The command `python3 -I tools/read_step.py scale` opens the scale calculations in reading order, beginning with the Berger family. A strategy ID such as `T14` opens the routes attached to that item. Use `--paths` for just their filenames. After editing the routes, `python3 -I tools/read_step.py --check` verifies the files and the coverage of the ranked list.
 

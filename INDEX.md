@@ -8,7 +8,9 @@ The paper states results with their labels; the appendices hold the derivations 
 
 ### 1.1 The counts 9, 10 and 11
 
-For the current dependence of the five- and seven-dimensional limits, and for a seven-dimensional M-theory candidate with a quantized membrane charge, see the two signed manuscripts. [Two limits of the finite KO-six window](paper/two_endpoint_limits.tex) · [The seven-dimensional weak endpoint in M-theory](paper/seven_m_theory.tex)
+The interval calculation follows three generations, their weak currents and candidate scalar partners. [Two limits of the finite KO-six window](paper/two_endpoint_limits.tex)
+
+For the seven-dimensional candidate and its membrane charge see [the M-theory endpoint paper](paper/seven_m_theory.tex).
 
 What the numbers mean (spacetime plus internal metric dimension; KO-degree), and the regime table of hypothesis H.
 

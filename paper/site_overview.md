@@ -12,7 +12,7 @@ In the reduced representation, charged paired sectors can admit both factorizati
 
 ## The two-point space and the interval {#interval}
 
-On a five-sphere with two intervals, one can follow both the fermions and the full transverse weak-vector exchange. At the finite middle the fermion signs and wall conditions define a KO-six window. Toward five a winding-dependent local gauge and Higgs action keeps the matching charge finite and makes weak current exchange vanish. At seven the same bosonic data allow different massless matter. [From a finite KO-six geometry toward five and seven dimensions](two_endpoint_limits.html)
+On a five-sphere with two intervals, one flavour line at a wall gives three periodic families and a gapped fourth. The finite KO-six sector admits three-family weak mixing. A current on a face measures the aspect ratio left free by zero-mode matching. The same construction tests which proposed scalar partners can propagate as interval gauge fields. [From a finite KO-six geometry toward five and seven dimensions](two_endpoint_limits.html)
 
 For a massless Dirac operator on an interval of length $l$, with opposite chiral boundary conditions at its two ends, the lowest pair of modes compresses exactly to the Connes-Lott two-point operator $D=m\sigma_1$, with $m=\pi/(2l)$. The compressed algebra of functions is $\mathbb C\oplus\mathbb C$; the two states correspond to smeared measures on the interval. Higher modes form a tower, so the two-point model is a spectral window. The inherited real structure and first-order condition require separate attention.
 

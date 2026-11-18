@@ -16,9 +16,9 @@
 \begin{document}
 \title{From a finite KO-six geometry toward five and seven dimensions}
 \author{GPT-6.2-Astra max}
-\date{Draft, 18 November 2026}
+\date{Revised draft, 19 November 2026}
 \begin{abstract}
-We follow both limits of a finite real fermion geometry in a family on a five-sphere and two intervals. Two windings fix a boundary angle as a function of area. At small area the surviving operator is a five-dimensional Dirac operator with vectorlike charges. At large area the weak vectors become massless and two towers can be resolved. The fermion limit alone leaves the current response undetermined. We compute the complete tree-level transverse charged-vector exchange for a specified product gauge action. Constant kinetic densities give a finite weak pole and growing contact interaction at the five-dimensional end. A smooth dependence on the same winding density gives a finite electromagnetic coupling, vanishing weak exchange and weak poles separated from the first axial excitations. Two allowed fermion completions have different massless content at seven and identical bounded-energy data near five. The construction specifies the gauge representation and the constitutive functions as microscopic inputs.
+We follow a finite real fermion geometry between a five-dimensional Dirac limit and a seven-dimensional parent with restored weak symmetry. Two windings determine the wall angle. We construct three chiral generations as the periodic channels of four bulk families subject to a single flavour line at one wall. We give their Yukawa operators, mixing matrices and charged-current amplitudes through weak breaking. The bulk family number and the wall representation are inputs. A three-family CP invariant distinguishes the resulting finite geometry from any two-family quark sector with the same charged-current prescription. The complete transverse vector resolvent shows when an interaction disappears at five, how a current on one face measures the unfixed aspect ratio, and why a current on a corner needs a short-distance prescription. Gauge matching leaves continuous scale data. We also compare the resulting particle count with the proposed scalar partners of the five light quarks. The composite charge count and the required physical boson spectrum impose different tests on a parent.
 \end{abstract}
 \maketitle
 
@@ -26,6 +26,10 @@ We follow both limits of a finite real fermion geometry in a family on a five-sp
 At five we ask for surviving four-dimensional Dirac fermions with the same colour and electric charge on their two chiralities. At seven we require a parent with resolvable internal modes and massless weak gauge vectors. Restoring the weak group specifies its gauge fields. Its representation on light fermions is a separate part of the problem. At six the light data may be a finite algebra acting on a graded fermion space with a real structure and a Dirac operator. Its KO-degree is six. The heat trace of that finite space is bounded at short time. A six-dimensional manifold is one possible model for an intervening energy band. The finite geometry needs no such band \cite{Connes2006,towerlesspaper,jointnote}.
 
 These distinctions suggest two measurements on the same family. We follow the fermion operator to find the states that remain at a fixed energy. We then couple a weak current to a gauge field and follow its exchange amplitude. A mass assigned in a finite fermion matrix answers the first question only when the matrix has been obtained as an isolated spectral window. A statement about beta decay also needs the second measurement.
+
+There are two meanings of counting a family in this problem. An independent left-handed quark doublet includes three colour components. These colour components constitute one copy of a gauge representation. A family index labels equivalent copies on which all the gauge generators act identically. A four-dimensional Weyl field and the conjugate written in its real spectral triple also constitute a single independent field. We use the complex dimension of the finite Hilbert space when describing the triple, and remove this conjugate bookkeeping when counting particles. A set of light copies with the same colour and electric charge can still be distinguished by its masses or by a weak mixing experiment at a nearby broken vacuum.
+
+The question about three families can accordingly be posed in a form admitting a calculation. Fix the bosonic action, the winding sector and the relative gauge normalization. Allow the representations and the reflections of the fermion bundle to be specified at the microscopic scale. Which of those data determine a multiplicity, and which observables would test it at the finite middle or either end? This extends the question about the two 84-dimensional subspaces studied previously \cite{gennote}. There a count of 96 finite states assumed three complete families. Here we compute the rank of a wall kernel before forming the finite triple, and follow its mixing through the collapse. The gauge fields, the two windings and the four-dimensional frame are the same when these fermionic boundary data are compared.
 
 \section{A single path through the finite window}
 Let the internal metric be the product on $S^5_R\times I_\ell\times I_d$. All lengths and masses below are measured in the product frame, with a fixed five-sphere radius $R$. Write $A=\ell d$, $V_5=\pi^3R^5$. Identify opposite reflected copies to compute the two axial spectra. The internal coefficient bundle, the spin lift, the boundary data and the reduced algebra in this section are the ones in Part S208 of the Supplemental Material. We recall the construction because the endpoint particle assignments depend on it.
@@ -49,6 +53,146 @@ For $0<t^2<A_*$ the reflected harmonic sector carries the finite real signs $J^2
 
 At $t^2\ge A_*$ one has $s=0$. Weak symmetry is restored at a finite area. To resolve seven internal scalar directions requires a probe energy $E$ with $ER\gg1$ and $Et\gg\pi$. The product eigenvalues are sums of five-sphere eigenvalues and two squared interval frequencies. Consequently restoration and seven-dimensional spectral growth can be tested independently. A compact upper member suffices. Letting $t$ tend to infinity instead gives two decompactifying directions and changes the normalization of a constant four-dimensional field.
 
+\section{How the winding vacuum selects the five-dimensional operator}
+The angle in Eq.~\eqref{eq:area} solves a field equation. It is important that the same action can be held fixed on paths with different shapes. In the scalar sector of Part S208 let $c^2+|\phi|^2=1$, $c\geq0$, and introduce a real singlet $u$. With positive coefficients, the two terms in the static potential are
+\begin{equation}
+ \lambda(c^2 b^2+u^2-\mu^4)^2+
+ \lambda' u^2|\phi|^2 .
+ \label{eq:potential}
+\end{equation}
+There are also positive gradient terms for $c,\phi,u$. The winding fields enter through $b^2$ in this model. A separate bare kinetic energy for their gradients would change the stress and the vacuum equations. On a colour-invariant vacuum of zero energy the three ordinary scalar profiles are parallel or constant. The two windings on the reflected rectangle obey
+\begin{equation}
+ \left|\int_{I_\ell\times I_d} dw_1\wedge dw_2\right|
+ =\pi^2|n_1n_2|=:C .
+\end{equation}
+We fix nonzero integers and one orientation. Vanishing of the first square prevents $c=0$ when the second square vanishes. It then fixes $b^2$ pointwise. The winding integral fixes $b=C/A$, since a continuous nonzero two-form on this connected rectangle has a constant orientation. Linear winding maps attain the result. For $b<\mu^2$ the second square can vanish with $u^2=\mu^4-b^2$ and $|\phi|=0$. For $b>\mu^2$ it enforces $u=0$, $c=\mu^2/b$ and $|\phi|^2=1-\mu^4/b^2$. The branches meet at $u=|\phi|=0$. Both have zero scalar stress because each square and its first variation vanish. The round sphere radius is supplied by the separate Einstein and five-form sector described in Part S208.
+
+One can see which part of the fermion result depends on this vacuum by resolving a single nonzero sphere eigenvalue $\lambda$. The first-order operator on the $x$ cylinder is
+\begin{equation}
+ D_\theta=\sigma_1 T D_5-i\sigma_2\partial_x,\qquad
+ T=c\tau_3+s\tau_1 .
+\end{equation}
+The matrices $\tau_i$ interchange two copies of the charged coefficients, and $\sigma_i$ act on the axial spin components. On each paired two-plane the allowed line rotates by $\delta$ between the ends. The squared Dirac form has a boundary term with coefficient $h=|\lambda|\sin\delta$ at both ends. In a basis adapted to the first line, the Dirichlet component there is proportional to $\sin(kx)/k$. The allowed component is proportional to $\cos(kx)+h\sin(kx)/k$. At $x=\ell$ set the component perpendicular to the second line to zero and impose outward Robin coefficient $h$ on the parallel component. The resulting scalar equation for a level of squared mass $\lambda^2+k^2$ is
+\begin{equation}
+ \left(\cos(k\ell)+h\,\frac{\sin(k\ell)}{k}\right)^2
+      =\cos^2\delta .
+ \label{eq:robin}
+\end{equation}
+At $k=0$ the quotient means $\ell$. In particular the same principal angle in a Robin problem and in a free interval problem need not give the same small eigenvalue.
+
+Take the root whose axial frequency remains bounded, with $\delta/\ell\to a$. The positive square root of Eq.~\eqref{eq:robin} near the local wall has left-hand side $1-k^2\ell^2/2+|\lambda|\delta\ell+o(\ell^2)$ and right-hand side $1-\delta^2/2+o(\ell^2)$. Hence the limiting squared mass is $(|\lambda|+a)^2$. The signs of the two channels come from the original first-order operator. Part S208 identifies their limit with $D_{\rm tan}+a\,\operatorname{sgn}D_{\rm tan}$, where $D_{\rm tan}=D_5\oplus(-D_5)$ and $\operatorname{sgn}(0)=0$. The harmonic wall uses a common line at both ends and keeps its constant modes. This distinction is needed, for instance, if the nonzero levels are shifted while the observed lowest masses stay fixed.
+
+On the actual broken vacua, uniformly as $A/A_*\to0$,
+\begin{equation}
+ \frac{\delta}{\ell}=\frac{d}{A_*}
+       \left[1+O\!\left((A/A_*)^2\right)\right].
+ \label{eq:wallrate}
+\end{equation}
+Shrinking both lengths therefore gives the unshifted Dirac limit at every aspect ratio. Shrinking only $\ell$ at fixed $d=d_0>0$ yields $a=d_0/A_*$ and a finite outer tower of spacing $\pi/d_0$. Below that tower it is possible to measure the shift in the first nonzero sphere mass while all harmonic fermions have precisely the same multiplicity. An extrapolation in area alone would miss this experiment.
+
+For clarity the scalar resolution test can also be made at fixed metric. The Neumann heat trace factors as
+\begin{equation}
+ Z(\tau)=Z_{S^5_R}(\tau)\,Z_\ell(\tau)\,Z_d(\tau),\qquad
+ Z_\ell(\tau)=\sum_{n=0}^\infty e^{-\tau(n\pi/\ell)^2}.
+\end{equation}
+For $\tau/\ell^2\gg1$ only the constant contributes to leading order. Poisson summation gives $Z_\ell=\ell/(2\sqrt{\pi\tau})+1/2$ up to an exponentially small relative error for $\tau/\ell^2\ll1$. The round heat trace has leading behaviour $V_5/(4\pi\tau)^{5/2}$ for $\tau/R^2\ll1$. Thus the logarithmic slope $-2\,d\log Z/d\log\tau$ counts five, six or seven resolved directions according to the two independent length ratios. A separated six-dimensional band requires a hierarchy between the two lengths. On the square path the fermions can realize their finite KO-six module although there is no parametrically wide band in which just one of the two axial heat factors is resolved. These measurements use operators on the same vacuum.
+
+\section{Three light families from four bulk channels}
+Let $F$ be a Hermitian flavour space of dimension $g$. First tensor the particle coefficients with $F$, the conjugate coefficients with $\bar F$, and leave the algebra and the sphere and $x$ operators diagonal in flavour. The real structure exchanges the two spaces antiunitarily. With the original outer reflection the finite window now has $32g$ complex dimensions. For each colour and electric representative at five there are $g$ Dirac copies. At a compact restored member the chosen wall module has $g$ left weak quark doublets in colour $\mathbf3$, $g$ left lepton doublets, and their right singlets. This operation is possible for every $g$. It gives a control against which to compare a mechanism that actually removes a channel.
+
+\begin{theorem}
+Let four complete bulk flavour channels have the same gauge action. At $z=0$ impose the original outer reflection. At $z=d$ compose it with a flavour involution $S=1-2\Pi$, where $\Pi$ is an orthogonal rank-one projector on $F=\mathbb C^4$. Use the conjugate prescription on $\bar F$. Assume that all tangential mass operators preserve the decomposition into image and kernel of $\Pi$. There are precisely three independent constant flavour channels. The fourth channel has axial gap $\pi/(2d)$. Below that gap and the other nonharmonic thresholds the finite window consists of three complete generations, including three right-handed neutrinos.
+\end{theorem}
+
+\begin{proof}
+Write the even reflection on the ten-dimensional spin space at the first end as $\Gamma_{10}$. At the second end it is $\Gamma_{10}S$. Their product on the doubled interval, a translation by $2d$, acts on flavour by $S$. On $\ker\Pi$ the translation is periodic. The constant $z$ mode must have $\Gamma_{10}=+1$, precisely the original chirality selection. Its independent particle modes give one left and one right member of each prescribed broken pair. On $\operatorname{im}\Pi$ the translation is antiperiodic. The allowed frequencies are $(n+1/2)\pi/d$, $n\in\mathbb Z$. The original first-order operator maps a parity domain to its kinetic partner, and its square separates into $D_{10}^2-\partial_z^2$ in both subspaces. The block-diagonal hypothesis preserves this separation with the Yukawa terms included. There is no fourth constant mode of either ten-dimensional chirality. The other three channels have the gaps of the original family. The real structure pairs the corresponding conjugate channels without introducing independent mirror particles.
+\end{proof}
+
+A wall can select this projector while its microscopic couplings remain invariant under flavour rotations. Give one boundary scalar $v\in\mathbb C^4$ a flavour-invariant positive potential $\lambda_v(v^\dagger v-v_*^2)^2$ with $v_*>0$. On a constant minimum let $\Pi=vv^\dagger/v_*^2$. One linear condition $v^\dagger f=0$ on a four-dimensional space leaves dimension three for every vacuum orientation. The local boundary prescription for the fermion, and the choice of a fundamental scalar, are extra data. This illustration does not derive the reflection law from the scalar potential. The result concerns the fermionic window at a fixed orientation. Propagating the boundary scalar would also require counting its fluctuations and any physical flavour Goldstone modes. Fixed Yukawa couplings can distinguish orientations.
+
+More generally a space of $n$ flavour channels and a wall map $B:F\to\mathbb C^r$ of rank $r$ give $n-r$ periodic channels when the minus reflection is on $(\ker B)^\perp$. This result is stable under perturbations of $B$ that preserve its rank. The construction at $n=4,r=1$ makes the origin of three precise. Removing the wall map gives four on the same metric. A rank-two map gives two. A microscopic proposal in which four slots are already present, for instance one of the placements in Ref.~\cite{gennote}, can use this test only after identifying a physical boundary map and its gauge representations. A correspondence of dimensions with an exceptional-group decomposition would leave these tasks open.
+
+At a broken middle choose a fixed energy cutoff with all three light Yukawa norms below it and a margin to the first omitted level. At zero momentum the fourth antiperiodic family may already be integrated out. A compact restored upper member can have three exact constant families even when the available resolution is high enough to see the fourth tower. In the decompactifying upper limit its threshold $\pi/(2d)$ tends to zero. Holding a positive detector energy fixed and counting modes after decompactification gives a different statement from counting exact periodic zero modes at each compact member. This is one way for information about the fourth family to survive in seven while three generations describe a middle experiment.
+
+\section{Flavour, conjugation and the finite algebra}
+Let $F_0$ be the periodic flavour space. The following discussion applies both to $g=\dim F_0$ direct copies and to $g=3$ obtained by the preceding wall construction. On the quark particle space write the left coefficients as $\mathbb C^2\otimes\mathbb C^3\otimes F_0$, with the weak factor first. The two right quark coefficients have the same colour and flavour factors and separate weak singlet labels. The leptons have the same arrangement with a trivial colour factor. On the harmonic branch the independent particle space thus has dimension $16g$. Reflection fixes the external Weyl chirality of each summand. Adding the conjugate coefficient space makes the $32g$ complex states on which the real triple acts.
+
+Write the four Yukawa maps on the retained coefficients as $Y_u,Y_d,Y_\nu,Y_e$. Their entries have the dimension of mass in our convention for $\phi$. The neutral background gives the particle map from right to left and its adjoint. For the quarks it is
+\begin{equation}
+ s\begin{pmatrix}1_3\otimes Y_u&0\\0&1_3\otimes Y_d\end{pmatrix}.
+ \label{eq:yuk}
+\end{equation}
+For a general doublet orientation the two columns are multiplied by $\widetilde\phi=i\sigma_2^{\,w}\bar\phi$ and $\phi$, respectively. The lepton block uses $Y_\nu,Y_e$ in the same order. Self-adjointness fixes the reverse link. Conjugation fixes the link on the antiparticle block. We use Dirac neutrinos throughout the count. A Majorana term would change the flavour group, the allowed rephasings and the neutrino mass problem.
+
+The action of the finite algebra on flavour is the identity. Its opposite action agrees on the two ends of a particle Yukawa link for a fixed colour line, including arbitrary maps on $F_0$. On the conjugate link it is the left action that agrees. Hence the order-one condition $[[D_F,a],JbJ^{-1}]=0$ holds for these matrices just as it does for scalar Yukawas. Order zero is immediate from the two commuting actions. The grading and real structure keep the signs $(+,+,-)$ on $g$ copies. In particular these algebraic identities constrain the gauge type of a link, while every entry of the four flavour maps can be varied within that type. A perturbation of norm at most $y_*=\max_f\|Y_f\|$ preserves the isolation of the stated window if the unperturbed complement gap exceeds the chosen upper cutoff by more than $y_*$ and all retained masses are below the cutoff. For the four-channel example the gap test includes $\pi/(2d)$.
+
+Let $Y_f=U_{fL}\,\operatorname{diag}(y_{f1},\ldots,y_{fg})\,U_{fR}^\dagger$ with $y_{fi}\ge0$. Broken-phase masses are $s y_{fi}$. The same $s$ multiplies all four sectors, so the individual diagonalizers can be held fixed along any broken branch with constant microscopic matrices. A mass degeneracy permits further rotations on its eigenspace. The charged vertex in the mass basis contains
+\begin{equation}
+ V_q=U_{uL}^\dagger U_{dL},\qquad
+ V_\ell=U_{\nu L}^\dagger U_{eL}.
+ \label{eq:mix}
+\end{equation}
+The second matrix is written for the current $\bar\nu_L\gamma^\mu e_L$. Its adjoint applies for $\bar e_L\gamma^\mu\nu_L$. These conventions fix the complex conjugations when the two currents are contracted. The flavour-diagonal electromagnetic and colour generators commute with all four rotations. In particular a weak mixing angle in flavour space cannot change the unit of electric charge. At five the mass eigenstates can be assigned unambiguously paired Dirac charges even when $V_q$ is far from the identity.
+
+For nonzero, nondegenerate singular values and generic mixing the two complex $g$-by-$g$ quark matrices have $4g^2$ real parameters before flavour equivalences. The basis groups on $Q_L,u_R,d_R$ remove $3g^2-1$. The common phase acts trivially on both matrices. Of the resulting $g^2+1$ invariants, $2g$ are singular values. A unitary mixing matrix has $g(g-1)/2$ angles. There are $g(g+1)/2$ phases before the $2g-1$ independent row and column rephasings, leaving $(g-1)(g-2)/2$ phases. The same calculation applies to Dirac leptons. Thus at $g=3$ the generic flavour sector has twelve mass parameters, six mixing angles and two physical phases. These numbers concern the mass and charged-current Lagrangian with fixed kinetic normalization. At a degeneracy, or if a Yukawa vanishes, the stabilizer must be recalculated. Neither an angle fixing the area nor the count of three supplies numerical values for these parameters.
+
+\subsection{A three-family observable}
+Mass spectra alone cannot decide if two charge sectors are aligned. Let $H_u=Y_uY_u^\dagger$ and $H_d=Y_dY_d^\dagger$ on the same left-handed flavour space. With three distinct eigenvalues $a_i$ of $H_u$, the projector onto $a_i$ is
+\begin{equation}
+ P_i=\prod_{k\ne i}\frac{H_u-a_k\,1}{a_i-a_k}.
+\end{equation}
+Define $Q_j$ from the eigenvalues $b_j$ of $H_d$. These are fibrewise flavour projectors, unrelated to the electric generator $Q$. In the nondegenerate case $\operatorname{tr}(P_iQ_j)=|(V_q)_{ij}|^2$. Thus neutral mass measurements and resolved charged transitions together determine probabilities independently of the flavour basis. For four in-order measurements on coherent states the corresponding trace is
+\begin{equation}
+ \operatorname{tr}(P_i Q_j P_k Q_l)
+ =V_{ij}\bar V_{kj} V_{kl}\bar V_{il}.
+\end{equation}
+Its imaginary part changes sign under complex conjugation and survives all changes of individual mass eigenstate phases. A rate for a single tree-level exchange depends only on the appropriate modulus squared. Accessing such an imaginary part in a rate needs interfering amplitudes with the requisite relative phases.
+
+The following form of the three-family commutator test uses the quark mass and weak-vertex conventions above \cite{KM1973,Jarlskog1985}.
+\begin{proposition}
+For three nondegenerate quark families, put $J_q=\operatorname{Im}(V_{11}V_{22}\bar V_{12}\bar V_{21})$. The basis-invariant flavour polynomial satisfies
+\begin{equation}
+ \left|\operatorname{Im}\operatorname{tr}[H_u,H_d]^3\right|
+ =6|J_q|\prod_{i<k}|a_i-a_k|
+                \prod_{j<l}|b_j-b_l| .
+ \label{eq:cp}
+\end{equation}
+It can be nonzero on an isolated KO-six window of the two-interval family. The corresponding cubic trace vanishes for one or two flavours.
+\end{proposition}
+
+\begin{proof}
+In the $H_u$ eigenbasis the commutator has entries $(a_i-a_k)(H_d)_{ik}$ and vanishing diagonal. The nonzero terms in its cubic trace visit three distinct indices. The two orientations of a three-cycle are complex conjugates with opposite signs, and each has three cyclic starting points. The absolute value is therefore six times the product of the three up-sector differences times $|\operatorname{Im}((H_d)_{12}(H_d)_{23}(H_d)_{31})|$. Write $H_d=V\operatorname{diag}(b_j)V^\dagger$. The last imaginary part is a homogeneous cubic in the $b_j$. When two are equal, $H_d$ is a scalar plus a real multiple of one rank-one projector. The product of its three off-diagonal entries is then real. The cubic is divisible by the three differences of the $b_j$.
+
+The magnitude of its remaining coefficient can be read at $b_3=0$. For instance the $b_1^2b_2$ coefficient has three summands according to which matrix entry uses column two. Their imaginary parts have the same sign relative to the same quartet, and their weights are $|V_{11}|^2,|V_{21}|^2,|V_{31}|^2$ up to a cyclic permutation. To see the equality of the signed quartets, close the triangle $\sum_i V_{i1}\bar V_{i2}=0$. The imaginary parts of the cyclic products of one side with the conjugate of the next agree. The weights sum to one. This proves Eq.~\eqref{eq:cp} with the stated absolute-value convention. With fewer than three indices the trace has no such cycle.
+
+For an actual example take $U_{uL}=1$ and $(U_{dL})_{ij}=\exp(2\pi i(i-1)(j-1)/3)/\sqrt3$. Then $|J_q|=1/(6\sqrt3)$. Choose distinct positive singular values in both sectors and scale them all into the gap. The invariant remains nonzero. This example concerns existence of a weak phase and supplies no fit to the quark data.
+\end{proof}
+
+If one forms the same invariant from physical squared mass matrices, each $H_f$ is replaced by $s^2 H_f$. Its value in Eq.~\eqref{eq:cp} acquires the factor $s^{12}$. At weak restoration all these masses vanish, the mass eigenbases become arbitrary, and this mass-resolved invariant vanishes. Toward five the flavour polynomial can remain nonzero even while the amplitude that couples the two charge sectors disappears. At that endpoint a comparison of the up and down bases has operational meaning only through a specified surviving interaction. A nonzero middle value detects at least three resolved, coherently coupled flavour directions in this class. Additional heavy or decoupled families can evade the test. The rank-one reflection supplies independent evidence for exactly three periodic channels on a given compact member.
+
+\subsection{How many levels have actually been resolved}
+There is a separate positive counting test when only diagonal mass data are available. On one particle charge block remove the known colour degeneracy and let $x_i$ be the distinct squared masses below a fixed spectral cutoff. Give each detected level a positive weight $w_i$. Such weights arise either from a trace in a positive spectral projector or from the norm of a source projected onto each eigenspace. Let $\mu_k=\sum_iw_i x_i^k$. The matrix $B^{(n)}=(\mu_{r+s})_{0\le r,s<n}$ is the Gram matrix of the polynomials $1,x,\ldots,x^{n-1}$ for this positive measure. Its rank is the smaller of $n$ and the number of distinct levels of positive weight. Indeed a polynomial lies in its kernel precisely when it vanishes on every point of the support. This proof requires a fixed operator and a common source prescription for all moments.
+
+In particular $\det B^{(3)}>0$ and $\det B^{(4)}=0$ establish exactly three distinct masses visible to that source in that window. If there are three, their first determinant is $w_1w_2w_3\prod_{i<j}(x_i-x_j)^2$, by the Vandermonde determinant. Two exactly degenerate generations contribute to a single $x_i$. A source orthogonal to one family likewise fails to see it. At restoration $x_i=0$ for this harmonic Yukawa sector and only the total weight survives. The Hilbert-space rank, the number of distinct masses and the presence of a measurable CP phase answer three different questions even on the same background. This distinction matters when one infers particle counting from a truncated trace.
+
+\section{Gauge normalization and anomalies with several families}
+Consider an entire periodic generation before any threshold is crossed. In the particle convention the weak trace per fixed normalized generator is $3/2+1/2=2$ from the coloured and uncoloured left doublets. The colour trace per generator is also two, from two left and two right colour triplets, with $\operatorname{tr}_{\mathbf3} T^a T^b=\delta^{ab}/2$. For the Abelian generator one obtains
+\begin{equation}
+ \operatorname{tr}Y^2=
+ 6(1/6)^2+3(2/3)^2+3(1/3)^2+2(1/2)^2+1
+ =10/3 .
+\end{equation}
+The right neutrino contributes zero to this sum. The electromagnetic trace on both chiralities is $16/3$. Including conjugate states doubles all these traces. Consequently whole identical families leave their relative kinetic ratios independent of $g$. If an absolute spectral moment multiplying a trace is prescribed, the absolute coefficient of that action grows proportionally to the multiplicity. In the separate product gauge action below the functions multiplying the gauge curvature are microscopic inputs. These two ways of setting the absolute coefficient must be distinguished in a parameter count.
+
+Anomaly cancellation of a complete generation also respects replication. Write all chiral fields as left-handed and use the integer label $6Y$. With the common factor of the fundamental Dynkin index taken out, the mixed colour and weak anomalies are $2-4+2=0$ and $3-3=0$, respectively. The cubic Abelian sum and the mixed gravitational sum are
+\begin{equation}
+\begin{aligned}
+ &6+3(-4)^3+3(2)^3+2(-3)^3+6^3=0,\\
+ &6+3(-4)+3(2)+2(-3)+6=0 .
+\end{aligned}
+\end{equation}
+Colour is vectorlike and its cubic anomaly cancels. There are four weak doublets per generation counting colour, an even number for the four-dimensional $SU(2)$ global test \cite{Witten1982}. Multiplying all representations by $g$ preserves these statements for every positive integer. Thus these checks admit three as readily as one or four. They apply to four-dimensional gauge and gravitational backgrounds. Boundary anomalies of a higher-dimensional chiral model would have to be cancelled in its full spectrum, possibly with anomaly inflow.
+
 \section{The charged current through the tower}
 Use a specified product Yang--Mills and scalar action on this background. The gauge fields propagate on the product, have Neumann spacetime-vector profiles at the interval ends, and act through fixed colour, weak and hypercharge matrices on the retained coefficients. In particular the neutral coefficient $Q=T_3+Y$ agrees with the electric charges displayed above. This choice supplies the gauge sector. In a theory gauging metric isometries and form fields, the kinetic norms and currents must be derived afresh. The five-sphere lift in Part S208 includes such a contribution.
 
@@ -68,6 +212,48 @@ Internal derivatives of a spacetime gauge component give the positive product La
 
 Normalize profiles in volume-average measure, with constant eigenfunction one. The harmonic sphere sections used here are parallel in the twisted Clifford ideal and coefficient spaces, and the two axial ground profiles are constant. Their pointwise charged bilinear, when the left generator connects the pair, is therefore constant as well. Orthogonality removes every other profile from its vertex. More generally a current of profile $j$ has equal-source coefficient bounded by $g_2^2\|j\|^2/[2(p^2+M_W^2)]$. This follows by inserting the complete orthonormal eigenbasis into the positive resolvent. The bound also controls pairs of distinct profiles by Cauchy--Schwarz. No sum over an omitted tower is hidden in the constant-current formula.
 \end{proof}
+
+In the three-generation example the flavour rotations multiply these constant profiles by numbers. Let $C_0(p)=g_2^2/[2(p^2+M_W^2)]$. For exchange between a quark transition $i\leftarrow j$ and the conjugate of a transition $k\leftarrow l$ the coefficient is
+\begin{equation}
+ C_{ij,kl}(p)=C_0(p)(V_q)_{ij}\overline{(V_q)_{kl}} .
+\end{equation}
+Replace one mixing matrix by $V_\ell$ for semileptonic exchange in the conventions of Eq.~\eqref{eq:mix}. The inclusive squared vertex for a given up mass eigenstate is proportional to $\sum_j|V_{ij}|^2=1$, if all final flavours are included with equal kinematic weights. Flavour tagging tests the individual entries, whereas a disappearance of the common coefficient suppresses all channels. Neutral colour and electromagnetic currents stay diagonal after these same rotations, by unitarity on each equal-charge space. A partial rate below a heavy mass threshold sums over fewer states and has the corresponding phase-space factors. It cannot be turned into an inclusive unitarity test without that information.
+
+A disappearance of beta decay at fixed external energy still has several possible explanations. The total weak response may vanish in the limit. A particular flavour matrix element may also vanish, or a transition may close kinematically while the underlying current survives. The common coefficient, its flavour tensor and the masses in Eq.~\eqref{eq:yuk} permit these possibilities to be varied independently. For example a permutation $V_q$ can set $V_{11}=0$ at fixed $C_0$, while the inclusive up-quark vertex retains its full strength. Conversely a Fourier mixing matrix leaves all nine moduli squared equal to $1/3$ while a growth of the weak poles can suppress the whole coefficient. Translating any of these elementary matrix elements to nuclear beta decay would require hadronic matrix elements and the available energy as well.
+
+\subsection{Eliminating short wavelengths at fixed geometry}
+The product problem admits an exact elimination of internal modes at quadratic order. Put $q_p=\sqrt{p^2+M_W^2}>0$ and let $\lambda_\alpha$ denote the full internal Laplace spectrum including the two intervals. For a current with coefficients $j_\alpha$ the response is
+\begin{equation}
+ C_j(p)=\frac{g_2^2}{2}
+         \sum_\alpha\frac{|j_\alpha|^2}{q_p^2+\lambda_\alpha}.
+ \label{eq:blocked}
+\end{equation}
+Let $P$ project onto any finite collection of these eigenfunctions. Completing the square in each omitted transverse gauge component generates exactly its term in Eq.~\eqref{eq:blocked} as a quadratic source interaction. Eliminating two disjoint shells gives the sum of their contributions, in either order. Simply removing all omitted coefficients of the current would discard this interaction. Positivity at spacelike momentum determines its sign for equal sources. This argument integrates a Gaussian action at a fixed vacuum. Varying $\ell$ or $d$ instead changes the eigenvalues and generally also changes the physical current normalization. Quantum polarization of the gauge field introduces a different kernel and an additional scale prescription.
+
+For a bounded smooth current the spectral sum converges by the operator-norm bound. A source confined to a wall is outside that uniform $L^2$ argument, but the same product allows us to evaluate its response exactly. Take a current uniform on $S^5$ and along $z$, supported at $x=0$. Normalize the evaluation functional so that its overlap with the constant eigenfunction is one. It couples to the $n$th positive Neumann cosine with coefficient $\sqrt2$. These couplings describe a prescribed external probe. Parallel harmonic bulk fermions generate the constant source of the theorem.
+
+\begin{proposition}
+With the stated Neumann gauge action and zero boundary kinetic terms, the response on one face is
+\begin{equation}
+ C_{\rm face}(p)=\frac{g_2^2}{2}\,
+             \frac{\ell}{q_p}\coth(q_p\ell).
+ \label{eq:face}
+\end{equation}
+For a source confined also to $z=0$ the unsubtracted tree response at a fixed compact geometry has a logarithmic ultraviolet divergence. The difference of its responses at two positive Euclidean squared denominators is ultraviolet finite.
+\end{proposition}
+
+\begin{proof}
+The Neumann kernel for $-\partial_x^2+q_p^2$ in the ordinary length measure is
+\begin{equation}
+ \frac{\cosh(q_p x_<)\cosh(q_p(\ell-x_>))}
+      {q_p\sinh(q_p\ell)} ,
+\end{equation}
+where $x_<$ and $x_>$ are the smaller and larger arguments. Its derivative vanishes at the two ends and its first derivative has jump $-1$ across the diagonal. In the volume-average convention the kernel is multiplied by $\ell$. Evaluating at $(0,0)$ yields Eq.~\eqref{eq:face}, equivalently the sum of $q_p^{-2}$ and $2/[q_p^2+(n\pi/\ell)^2]$ over all $n\ge1$ for the excited terms. The opposite-face matrix element has $\operatorname{csch}(q_p\ell)$ in place of $\coth(q_p\ell)$. Its high-momentum suppression measures the separation of the two sources.
+
+At a corner the two positive cosine frequencies give squared overlap four. Put a circular cutoff $\Lambda$ on the physical axial momenta $(n\pi/\ell,m\pi/d)$. At large momentum the density of points in the positive quadrant is $A/\pi^2$. Replacing each high-momentum cell by its area integral changes the ultraviolet sum by a convergent series, since the gradient of the summand is $O(|k|^{-3})$. The axes contribute convergent one-dimensional sums. Between two sufficiently high cutoffs the leading growth, before multiplication by $g_2^2/2$, is $(2A/\pi)\log(\Lambda/\Lambda_0)$. Subtracting at a second momentum replaces the summand by a multiple of the product of two resolvents, of order $|k|^{-4}$. This is summable in two dimensions. A finite-width source or a specified renormalized local source term is required for the absolute contact at a corner.
+\end{proof}
+
+The ratio of the face and constant amplitudes is $x\coth x$, $x=q_p\ell$. At small $x$ it equals $1+x^2/3+O(x^4)$. At large $x$ the face amplitude behaves as $g_2^2\ell/(2q_p)$ and the opposite-face amplitude is exponentially small. This result is sensitive to a shape modulus even at fixed area and fixed zero-mode gauge couplings. In fact $x\coth x$ increases strictly for $x>0$, since $\sinh x\cosh x>x$. A measurement of the normalized face response at known $q_p$ determines $\ell$ uniquely in this ideal experiment. A prescribed external wall source is necessary to perform it. A measurement using only constant fermions has no access to this length dependence at the stated order.
 
 \section{When five has no weak contact interaction}
 The zero-momentum four-fermion convention and the matching charge are
@@ -93,6 +279,82 @@ Both are smooth functions of the squared winding density, including at zero. Equ
 
 This example exhibits a choice of local operators that achieves both current limits. For $K$ proportional to $b$ asymptotically, any $H$ growing as $b^p$ with $1<p<2$ gives the same ordering on the square path. The endpoints therefore leave a continuous freedom in the functions and in the finite value of the charge. The argument treats these functions as an exact classical constitutive law. An expansion valid only for small winding gradients would give no control of $b\to\infty$. Equations~\eqref{eq:tower} and \eqref{eq:contact} use tree matching in a fixed four-dimensional frame, with zero finite threshold corrections. Obtaining a Thomson charge or a QCD observable requires the charged and coloured thresholds, a quantum matching scheme and the corresponding matter action. A strong scale has not entered the construction.
 
+\subsection{Which mass ordering survives a change of shape}
+Let $\ell=R\varepsilon$, $d=R\varepsilon^\nu$ with $\nu\ge1$ and $\varepsilon\downarrow0$. The first nonzero axial frequency among the periodic gauge fields is $\pi/\ell$. Write $\beta$ for the asymptotic power of $H$ in $b$, keeping $K\sim k b$ and $\beta>1$. In fixed units the weak pole grows as $A^{-(\beta-1)/2}$ and the ratio to that first axial frequency is proportional to
+\begin{equation}
+ \varepsilon^{\,1-(1+\nu)(\beta-1)/2}.
+\end{equation}
+Both lengths shrink, so Eq.~\eqref{eq:wallrate} gives the same limiting Dirac operator for every $\nu$. The weak poles lie parametrically below the axial tower when $\beta<1+2/(1+\nu)$. At equality the constants of the kinetic terms decide the ordering. Above it the first axial level occurs below the weak mass scale, although every charged transverse vector still has mass at least $M_W$. For the smooth example $\beta=3/2$, the boundary is $\nu=3$. This distinguishes a gap in the axial derivative from a light charged-vector pole. A statement about the ordering on a square is insufficient when the aspect ratio is a modulus.
+
+The one-face result also extends the decoupling test beyond square-integrable profiles with a uniform norm. For $x>0$ one has $\coth x\le1+1/x$, so
+\begin{equation}
+ C_{\rm face}(p)\le\frac{g_2^2}{2}
+        \left(\frac{\ell}{q_p}+\frac{1}{q_p^2}\right).
+\end{equation}
+If $g_2^2$ stays finite, $M_W\to\infty$ and $\ell\to0$, this tends to zero at fixed momentum for every such aspect-ratio path. It can do so at a different rate from the constant source. A corner with a resolution that itself changes along the path needs its own scaling law. Interchanging the point-source limit, the removal of a cutoff and the degeneration of the internal metric is an additional assumption.
+
+\subsection{Momentum resolution near the restored vacuum}
+At a finite critical area the zero-mode coupling is regular for the smooth functions above. Write $A=A_*(1-\varepsilon)$ with $\varepsilon>0$, and let $K_*,H_*$ be their values at $b=C/A_*$. Then $s^2=2\varepsilon-\varepsilon^2$ and
+\begin{equation}
+ M_W^2=\frac{H_*}{2K_*}\varepsilon+O(\varepsilon^2).
+\end{equation}
+At fixed aspect ratio this is a closing pole at finite axial frequencies. In a measurement with $p/M_W\to z$ and fixed finite $z$, $M_W^2 C_0(p)$ tends to $g_{2,*}^2/[2(1+z^2)]$. Taking the contact limit first gives $z=0$. At fixed nonzero $p$ the restored exchange instead tends to $g_{2,*}^2/(2p^2)$. In particular the iterated limits of $p^2 C_0(p)$ are zero when $p\to0$ first at a broken member and $g_{2,*}^2/2$ when restoration is taken first. A zero-momentum Fermi coefficient cannot be extrapolated through this pole as a local four-fermion interaction. These statements keep the bulk volume finite and use spacelike probes, so no additional continuation or threshold convention enters their comparison.
+
+\subsection{The residual set at fixed matching inputs}
+Let the winding integers, $R$, the charge units, $\mu$ and the functions $K,H$ be fixed. There are two continuous length parameters before any fit to $\alpha$, the Fermi scale or a strong scale. The winding equation fixes the angle in terms of their product. The relative gauge conditions give $g_2^2=g_3^2=(5/3)g_Y^2$, $\sin^2\theta_W=3/8$ and $e^2/g_3^2=3/8$ in the product action. They are identities at the common tree matching prescription. One can parameterize the surviving metrics explicitly by $A>0$ and $\xi=\ell/d>0$, with $\ell=\sqrt{A\xi}$, $d=\sqrt{A/\xi}$. Reflections and chosen sources distinguish the two axes. Once the vacuum is chosen, singular values and mixing angles are further independent parameters of the flavour sector, as counted above.
+
+For the smooth square-root choice of $K$, let $A_0=C/b_0$. A prescribed absolute kinetic coefficient $X=g_2^{-2}$ obeys
+\begin{equation}
+ X=V_5 K_0\sqrt{A^2+A_0^2},\qquad
+ A^2=\left(\frac{X}{V_5K_0}\right)^2-A_0^2 .
+\end{equation}
+There is one positive area for each $X>V_5K_0 A_0$. Equality is the limiting value at five. An absolute input below this minimum has no positive-area solution in this action. For a compatible $X$ the exact residual curve is $(\sqrt{A\xi},\sqrt{A/\xi})$, $\xi>0$. If an isolated fermion window is required at a given cutoff, its gap inequalities restrict the allowed interval in $\xi$. Strict inequalities preserve a neighbourhood of any admissible interior point. The zero-mode values of $e$, $M_W$, $M_Z$ and, in the broken branch, $G_F$ depend only on $A$ and the fixed coefficients. Measuring these again cannot determine the aspect. The face response or a nonzero axial frequency gives an independent equation for it. No measured input was used to obtain the residual curve.
+
+Running is a different experiment from integrating the internal Gaussian modes in Eq.~\eqref{eq:blocked}. For example, in an interval with exactly $n_f$ active four-dimensional Dirac colour fundamentals and no other coloured thresholds, define $\alpha_s=g_3^2/(4\pi)$ in mass-independent one-loop matching with continuous $\alpha_s$ at each pole-mass threshold and zero finite threshold constants. Then
+\begin{equation}
+ \alpha_s^{-1}(\mu_2)-\alpha_s^{-1}(\mu_1)
+ =\frac{11-2n_f/3}{2\pi}\log\frac{\mu_2}{\mu_1}.
+\end{equation}
+With three complete quark generations and all six flavours active this coefficient is $7/(2\pi)$. Removing the top alone gives $23/(6\pi)$. Writing $\alpha_s^{-1}(\mu)=b\log(\mu/\Lambda_{n_f})/(2\pi)$ and matching at $m_t$ yields $\Lambda_5=\Lambda_6^{21/23}m_t^{2/23}$. Here the subscript five counts active flavours, independently of the five-dimensional internal endpoint. The formula applies only if the matching scale and the whole evolution interval have the indicated particle content. A descending fourth antiperiodic channel, a tower of coloured vectors, scalar partners or additional coloured walls changes the calculation. The low-energy Thomson charge needs the electromagnetic thresholds and, for light quarks, a physical treatment of hadronic vacuum polarization. These conventions explain why the relative tree relation cannot supply a measured $\alpha(0)$ or a nuclear scale in this construction.
+
+\section{Three generations and candidate scalar partners}
+Three independent observations enter the proposed scalar correspondence. The fermion window has a certain flavour multiplicity. Particular colour and electric representations occur in an orthogonal Lie algebra constructed from light quark charges. A supersymmetric identification would pair propagating bosons in those representations with physical fermions. The first statement is a rank computation in the present model. The second has a counting test whose converse is quite restrictive \cite{Rivero2005,Rivero2024,realnote}. The third calls for a kinetic operator, a spectrum and an action of the supercharges. Here we work through the count and through a wall construction in which some of those candidate bosons really propagate.
+
+Let $u,d$ denote the numbers of participating up- and down-type quark flavours, temporarily unrelated to the number $g$ of fermion generations. In this section $d$ as an integer appears only in the flavour counts. Write $F_{\mathrm q}=\mathbb C^u_{2/3}\oplus\mathbb C^d_{-1/3}$ and $V=F_{\mathrm q}\otimes\mathbb C^3$, with the second factor colour. Take $V\oplus\bar V$ with the real structure exchanging the two summands. Its real fixed space has dimension $6(u+d)$. The complexified adjoint of the orthogonal group on it decomposes into $\Lambda^2 V$, its conjugate, and $V\otimes V^*$. In $\Lambda^2 V$ the colour-antitriplet part is $\operatorname{Sym}^2F_{\mathrm q}\otimes\bar{\mathbf3}$. The reason is that exchanging two colour fundamental factors is antisymmetric on $\bar{\mathbf3}$, leaving the flavour wavefunction symmetric. The other summand is $\Lambda^2 F_{\mathrm q}\otimes\mathbf6$. Colour-singlet mesons come from $\operatorname{End}(F_{\mathrm q})$. The trace may be included as a singlet or removed in taking the flavour adjoint.
+
+Each unordered pair of down flavours, including a repeated flavour, contributes one antitriplet of charge $-2/3$. Each up-down pair contributes an antitriplet of charge $+1/3$, and each unordered up pair one of charge $+4/3$. In the colour-singlet mesons the up-to-down and down-to-up maps have charges $+1$ and $-1$. Removing the total trace gives the independent counts
+\begin{equation}
+\begin{aligned}
+ N_{-2/3}&=d(d+1)/2, &N_{+1/3}&=ud,\\
+ N_{+4/3}&=u(u+1)/2, &N_{\pm1}&=ud\quad\text{each},\\
+ N_0&=u^2+d^2-1 .
+\end{aligned}
+\end{equation}
+For neutral mesons $N_0$ counts real Hermitian directions. Each charged direction and its conjugate describe a complex scalar. The colour counts give multiplicities of antitriplet representations, with the three colour components inside each representation. This convention is necessary when comparing a real Lie algebra with complex scalars.
+
+\begin{proposition}
+Assume $g>0$ complete Dirac generations, including right-handed neutrinos. Require the symmetric diquarks to supply $2g$ antitriplets at each of charges $-2/3$ and $+1/3$. Require the traceless meson sector to supply the $4g$ neutral real slepton directions. Then the unique positive integer solution is $g=3$, $u=2$, $d=3$. It supplies $2g$ charged mesons of each sign and three additional antitriplets of charge $+4/3$.
+\end{proposition}
+
+\begin{proof}
+The first two equalities give $d(d+1)/2=ud=2g$, hence $d=2u-1$. The neutral equality reads $u^2+d^2-1=4g=2ud$, so $(d-u)^2=1$. For positive integers with $d=2u-1$ this forces $u=2$, $d=3$, giving $g=3$. The charged-meson and exotic counts follow by substitution. For the neutral target, there are two complex sneutrino labels for each Dirac neutrino, one for each chiral multiplet, hence four real labels per generation.
+\end{proof}
+
+This conditional converse exhibits the extra ingredient needed to single out three. The diquark equations alone also allow other integers, for instance $u=4,d=7,g=14$. The traceless neutral count supplies independent information. Keeping the entire meson trace changes $N_0$ to $u^2+d^2$. Equating that to $4g$ forces $u=d$ and the two diquark equalities then have no positive integer $g$. At the three-family values the traceful mesons have one additional neutral real state, which could instead be retained as a separate singlet. The microscopic choice between these readings is observable. An independent, stronger assumption sometimes used in the counting is that just one of the $2g$ quark flavours fails to bind. For the solution above the missing flavour is up-type. Identifying it with the top uses mass information beyond its charge.
+
+The three charge-$4/3$ directions are also detectable in the count. Promoting each to a full chiral multiplet introduces a Weyl fermion with those gauge charges. For three left-handed $\bar{\mathbf3}$ singlets this gives cubic colour anomaly $-3$ in units in which one fundamental has coefficient $+1$. The previously complete families cancel among themselves, so other new matter or a compensating sector would be needed. Treating the directions as scalar excitations in a theory with broken or absent supersymmetry gives no such fermion anomaly. This is a concrete difference between a representation of candidate scalar charges and a physical supersymmetric completion.
+
+Part 21 of the Supplemental Material also gives the charge traces for the alternative 12-state blocks in the 96-state triple. Its top and neutrino deletions preserve the stated relative spectral coefficients with different surviving charged matter. This provides a check on interpreting an absolute particle multiplicity from relative trace data alone.
+
+\subsection{Which of these charges give actual wall scalars}
+One can test part of the conjecture with a gauge field on an interval of length $L_{\rm w}$. This is an auxiliary parent sector, added at zero background field to exhibit a mechanism. On the real orthogonal space underlying $V$ let $J_{\rm c}$ be multiplication by $i$. The automorphism $\sigma(X)=J_{\rm c}XJ_{\rm c}^{-1}$ of $\mathfrak{so}(2\dim_{\mathbb C} V)$ is an involution because $J_{\rm c}^2=-1$. Its even subalgebra is $\mathfrak u(V)$. On complexification its odd space is $\Lambda^2 V\oplus\Lambda^2 V^*$. This follows by writing a skew transformation in blocks for $V\oplus V^*$ and using its compatibility with the real bilinear metric. Commuting with $J_{\rm c}$ preserves each eigenspace and interchanging them is odd.
+
+At both ends reflect the spacetime-vector components $A_\mu$ by $\sigma$ and the axial component $A_x$ by $-\sigma$. The sign of a one-form in the normal direction fixes this relative parity. At the trivial background, the even components have Neumann and the odd components have Dirichlet profiles. Thus precisely the $\sigma$-odd generators have constant $A_x$ and zero axial mass. Their kinetic term is positive from the bulk $F_{\mu x}^2$. Gauge parameters in these directions vanish at both ends. At linear order the variation of their constant axial mode is proportional to the integral of $\partial_x\epsilon$, which is zero. They are physical infinitesimal Wilson-line scalars about the trivial connection. Residual constant $U(V)$ transformations act on them in their indicated representation. Large gauge identifications and an eventual loop potential affect the global scalar space and masses.
+
+For $(u,d)=(2,3)$ this explicit spectrum includes the colour antitriplets with multiplicities $(6,6,3)$ as well as the companion sextets. The colour-singlet meson generators live in $\mathfrak u(V)$ and have Dirichlet $A_x$ in this same construction. Here the charged diquark sector is present as fields, while the desired slepton sector would need a different parent polarization or additional fields. A sharp countertest is to replace the second reflection on $A_\mu$ by the identity automorphism, leaving the first reflection and the separate fermion flavour wall fixed. Each former odd $A_x$ then has opposite boundary parities and gap $\pi/(2L_{\rm w})$. The same three-family fermion data admit both results. Independent matter and gauge sectors in this comparison must of course be coupled consistently before any common supersymmetry can be tested.
+
+In the finite real fluctuation problem a further sign enters. As shown for the massless orthogonal block in Ref.~\cite{realnote}, the within-multiplet real finite fluctuation can have symmetric tensor type in $V$, while the parent connection has antisymmetric tensor type. In $\operatorname{Sym}^2 V$ the colour antitriplets instead occur in $\Lambda^2F_{\mathrm q}\otimes\bar{\mathbf3}$ and have multiplicities $(3,6,1)$ for the same five flavours. Their mixed charge counts agree because an up and a down flavour are always distinct. Their equal-charge counts differ because repeated flavours are allowed only in the symmetric flavour square. Following the parent interval connection into a compressed finite operator therefore calls for a map of field spaces as well as a count of massless fermions. A string wall on which the orthogonal projection is fixed can supply one such sign. The companion paper compares that possibility with ordinary supersymmetric matter on a heterotic wall.
+
 \section{Why the upper fermions remain undetermined}
 There is a direct way to vary the upper matter at fixed bosonic background. Add a fermion sector and its mirror, with the gauge representations of the reflected model, a vanishing original Yukawa link, and no bilinear mixing with the old fermions. On the reflected cover write the doubled kinetic operator as $\rho_3 D$, with Pauli matrices $\rho_i$ in copy space. Take opposite outer reflection parities. A gauge-invariant mass $m\rho_1$ exchanges these parities in the kinetic pairing. In a constant vacuum its square adds $m^2$ to $D^2$. The two copies supply opposite four-dimensional chiralities. One may restrict attention to the additional gauge-singlet sector or keep the whole vectorlike pair.
 
@@ -101,6 +363,10 @@ Consider the two fixed mass laws
  m_a=y\,|\phi|^2(1+b^2/b_0^2),\qquad m_b=M+m_a
 \end{equation}
 with $y,M>0$ of mass dimension one. At five both masses diverge. At a chosen broken middle with $s>0$, choose $y$ such that both exceed the stated fermion cutoff. The bounded lower spectrum and the finite middle window then agree between the two completions. At seven $m_a=0$ and $m_b=M$. A zero mode and its mirror occur in the first completion. The second has a gap at least $M$ in this sector. The statement at finite unbroken area concerns exact zero modes. The gap of the second persists on decompactification. With zero classical fermion background the bosonic equations and vector masses do not change. Virtual matter affects quantum thresholds, which have been excluded in this comparison.
+
+In detail let $P$ denote the original spin reflection including the pullback $z\mapsto-z$. Then $\{P,D\}=0$ on the reflected cover. On the doubled space the total reflection is $\rho_3P$. Both $\rho_3D$ and $m\rho_1$ anticommute with this reflection. Thus their sum maps the physical parity space into the parity space of its kinetic partner, as required for the chiral prescription. The two terms anticommute with each other for constant $m$ on the vacuum, which gives the square $D^2+m^2$ used in the comparison. This construction can be applied to one independent neutral channel while leaving all three charged-current flavour matrices and their wall conditions fixed.
+
+The measurements now have distinct powers of discrimination. An observer at the broken middle can count periodic families, resolve three distinct masses and test the weak flavour quartet. A constant-current observer at five can still distinguish masses and vectorlike charges, but the disappearing weak vertex removes the operational comparison of the two charged flavour bases. A wall source on the way to five can recover a length invisible in all the zero-mode couplings. At a compact seven the weak algebra is restored, and an observer able to resolve higher axial frequencies can distinguish a fourth antiperiodic channel from an entirely absent fourth bulk family. These are experiments on the same specified pair of intervals, with their sources and energy resolution included in the statements.
 
 This explains the status of the one-generation example. Its wall domain, twist and representation determine the observed modes once they are specified. The same two endpoints of the bosonic action permit the two different matter spectra above. To infer an upper particle content requires a parent that fixes those data, including their quantum consistency. To infer the physical electromagnetic, weak and strong scales further requires a principle selecting the kinetic functions and matching scales. The two limits and their current matrix elements provide distinct tests of such a parent.
 The companion study tests an upper parent with a specified supergravity action and flux quantization \cite{SevenMTheory2026}.
