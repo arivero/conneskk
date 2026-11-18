@@ -93,7 +93,7 @@ For the five light quarks in three colours and their conjugates, the real-struct
 
 ## Completions, sources and status {#sources}
 
-The Freund–Rubin solution on $M^{111}$ supplies a flux-selected radius and massless weak vectors. The global weak action, the membrane charge of a second Abelian field and the lift of the Reeb circle to spinors test which particles could survive further reduction. A smooth two-sphere fibration over the five-sphere is excluded by the integral cohomology of this candidate. [An M-theory test for the seven-dimensional weak endpoint](seven_m_theory.html)
+Massless weak vectors arise from isometries on two Freund–Rubin candidates and from boundary gauge fields on a heterotic Calabi–Yau wall. The Reeb spin sectors on $M^{111}$, a relative-radius instability on $S^5\times S^2$, and nine matter multiplets with six conjugates on the wall give different tests of the route to five. [An M-theory test for the seven-dimensional weak endpoint](seven_m_theory.html)
 
 The [dictionary](connes_kk_dictionary_note.html) gathers the correspondence between finite data and interval or Kaluza-Klein data, with a status for each entry. Its [string-duality comparison](connes_kk_dictionary_note.html#what-the-string-dualities-give) identifies specific limitations of the proposed 15+1 configuration, including its angle-position map, T-dual length and Romans mass; it points toward other chambers and completions. These statements concern that dictionary and do not settle the broader completion question.
 

@@ -10,7 +10,7 @@ The paper states results with their labels; the appendices hold the derivations 
 
 The interval calculation follows three generations, their weak currents and candidate scalar partners. [Two limits of the finite KO-six window](paper/two_endpoint_limits.tex)
 
-For the seven-dimensional candidate and its membrane charge see [the M-theory endpoint paper](paper/seven_m_theory.tex).
+Two Freund–Rubin geometries and a heterotic gauge wall test three origins of the seven-dimensional weak sector. [The seven-dimensional weak endpoint in M-theory](paper/seven_m_theory.tex)
 
 What the numbers mean (spacetime plus internal metric dimension; KO-degree), and the regime table of hypothesis H.
 

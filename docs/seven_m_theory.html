@@ -150,10 +150,13 @@
 <li><a href="seven_m_theory.html" aria-current="page">Seven dimensions and M-theory</a>
 <details open><summary>Sections</summary><ul>
 <li><a href="seven_m_theory.html#the-higher-dimensional-field-equations">1 The higher-dimensional field equations</a></li>
-<li><a href="seven_m_theory.html#a-freundrubin-upper-endpoint">2 A Freund–Rubin upper endpoint</a></li>
-<li><a href="seven_m_theory.html#an-abelian-vector-and-its-membrane-charge">3 An Abelian vector and its membrane charge</a></li>
-<li><a href="seven_m_theory.html#a-controlled-circle-reduction-and-its-spinors">4 A controlled circle reduction and its spinors</a></li>
-<li><a href="seven_m_theory.html#what-a-route-to-five-would-have-to-change">5 What a route to five would have to change</a></li>
+<li><a href="seven_m_theory.html#a-product-with-geometric-weak-rotations-and-an-actual-five-dimensional-base">2 A product with geometric weak rotations and an actual five-dimensional base</a></li>
+<li><a href="seven_m_theory.html#a-freundrubin-upper-endpoint">3 A Freund–Rubin upper endpoint</a></li>
+<li><a href="seven_m_theory.html#an-abelian-vector-and-its-membrane-charge">4 An Abelian vector and its membrane charge</a></li>
+<li><a href="seven_m_theory.html#a-controlled-circle-reduction-and-its-spinors">5 A controlled circle reduction and its spinors</a></li>
+<li><a href="seven_m_theory.html#a-heterotic-wall-with-a-computable-chiral-spectrum">6 A heterotic wall with a computable chiral spectrum</a></li>
+<li><a href="seven_m_theory.html#boundary-data-in-a-finite-connes-geometry">7 Boundary data in a finite Connes geometry</a></li>
+<li><a href="seven_m_theory.html#what-a-route-to-five-would-have-to-change">8 What a route to five would have to change</a></li>
 <li><a href="seven_m_theory.html#references">References</a></li>
 </ul></details></li>
 </ul></nav>
@@ -174,26 +177,30 @@
 <h1 class="title">An M-theory test for the seven-dimensional weak
 endpoint</h1>
 <p class="author">GPT-6.2-Astra max</p>
-<p class="date">Draft, 18 November 2026</p>
+<p class="date">Revised draft, 19 November 2026</p>
 <div class="abstract">
 <div class="abstract-title">Abstract</div>
-<p>Can a seven-dimensional parent with massless weak gauge vectors be
-the internal space of an M-theory compactification? We compare the
-five-sphere with two intervals to the Freund–Rubin solution on the
-regular circle bundle
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>M</mi><mn>111</mn></msup><annotation encoding="application/x-tex">M^{111}</annotation></semantics></math>.
-The first background is supported by a five-form in its own action. The
-second solves eleven-dimensional supergravity and has the required weak
-Lie algebra. Its quotient circle, the weak centre and a gauge field from
-the three-form give separate tests of electric charges. We normalize the
-harmonic two-form to one unit of wrapped membrane charge, compute the
-four-dimensional Maxwell coefficient, and bound the classical mass of a
-charged membrane. A free circle reduction produces a six-dimensional
-base with a spin obstruction to neutral fermion descent. Integral
-cohomology also distinguishes this total space from a smooth two-sphere
-bundle over the five-sphere. These results specify what an M-theory
-origin supplies and which transition and fermion data remain to be
-constructed.</p>
+<p>We test three realizations of seven internal dimensions with massless
+weak vectors. The Freund–Rubin solution on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>M</mi><mn>111</mn></msup><annotation encoding="application/x-tex">M^{111}</annotation></semantics></math>
+fixes a membrane charge and radius. Its circle Fourier sectors give an
+explicit
+spin<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mi>c</mi></msup><annotation encoding="application/x-tex">^c</annotation></semantics></math>
+family on the six-dimensional base, with a calculable mismatch to a
+quark doublet. The product
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>S</mi><mn>5</mn></msup><mo>×</mo><msup><mi>S</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">S^5\times S^2</annotation></semantics></math>
+instead has both a geometric weak group and the desired smooth
+projection to five. Its relative-radius scalar violates the AdS
+stability bound in the pure electric solution. A third route uses a
+Hořava–Witten interval and a heterotic Calabi–Yau compactification. An
+explicit free quotient with the standard embedding has nine
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>𝟐𝟕</mn><annotation encoding="application/x-tex">\mathbf{27}</annotation></semantics></math>
+and six conjugate matter multiplets before further breaking, giving
+three net chiral families and their supersymmetric scalars. We compare
+their origin with the three-generation scalar charge counts in the
+orthogonal string construction. Equivariant charges, a finite real Dirac
+window and the survival of vectorlike fermions at five impose further,
+separately computable conditions on a common parent.</p>
 </div>
 </header>
 <h2 data-number="1" id="the-higher-dimensional-field-equations"><span
@@ -209,6 +216,27 @@ particular neutral combination
 requires a choice of charge generator and gauge kinetic normalization.
 The representation content at the upper end is an output sought from a
 parent.</p>
+<p>In a geometric Kaluza–Klein reduction the weak vectors can be
+fluctuations along Killing fields. In a theory with boundaries, gauge
+transformations supported on a wall can also supply them. A choice
+between these origins changes the wavefunctions, the normalization of a
+four-dimensional current, and the central characters available to
+matter. We compare models by holding these data fixed within each
+calculation. We vary an integral flux, a fibre quotient, a metric ratio
+or a bundle as indicated. Crossing from one candidate to another is a
+change of microscopic model. A continuous path of solutions between them
+would require additional field equations and boundary data.</p>
+<p>We will use three tests which have direct physical meanings. A
+Killing algebra or a wall gauge algebra gives the brackets of
+infinitesimal transformations. A charged state also needs an action of
+the global group and a normalizable kinetic term. A surviving particle
+at a lower endpoint further requires a spectral window in which its mass
+and its current matrix elements can be followed. The first calculation
+can succeed even when ordinary spinors all carry integer weak isospin.
+The second can succeed for an infinitely heavy wrapped object. The
+distinction is particularly sharp for the zero modes on a Calabi–Yau
+wall, where an index gives a difference between representations and
+conjugates while experiment at a finite cutoff counts both.</p>
 <p>Eleven-dimensional supergravity gives a concrete test of the M-theory
 proposal at leading order in the eleven-dimensional Planck length
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ℓ</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\ell_p</annotation></semantics></math>.
@@ -265,8 +293,275 @@ additional flux components with external AdS curvature, and quantum
 corrections require different field equations or different solutions. A
 new bulk construction is needed to promote this interval example to an
 M-theory compactification.</p>
-<h2 data-number="2" id="a-freundrubin-upper-endpoint"><span
-class="header-section-number">2</span> A Freund–Rubin upper
+<h2 data-number="2"
+id="a-product-with-geometric-weak-rotations-and-an-actual-five-dimensional-base"><span
+class="header-section-number">2</span> A product with geometric weak
+rotations and an actual five-dimensional base</h2>
+<p>There is a second elementary way to write down the upper geometry
+before considering
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>M</mi><mn>111</mn></msup><annotation encoding="application/x-tex">M^{111}</annotation></semantics></math>.
+A round
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>S</mi><mn>2</mn></msup><annotation encoding="application/x-tex">S^2</annotation></semantics></math>
+carries rotations with Lie algebra
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>𝔰</mi><mi>𝔲</mi></mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathfrak{su}(2)</annotation></semantics></math>.
+The round
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>S</mi><mn>5</mn></msup><mo>⊂</mo><msup><mi>ℂ</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">S^5\subset\mathbb C^3</annotation></semantics></math>
+carries colour rotations with Lie algebra
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>𝔰</mi><mi>𝔲</mi></mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathfrak{su}(3)</annotation></semantics></math>
+and a commuting phase. Put
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Y</mi><mi mathvariant="normal">p</mi></msub><mo>=</mo><msubsup><mi>S</mi><mi>a</mi><mn>5</mn></msubsup><mo>×</mo><msubsup><mi>S</mi><mi>b</mi><mn>2</mn></msubsup><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>G</mi><mn>4</mn></msub><mo>=</mo><mi>f</mi><mspace width="0.167em"></mspace><msub><mrow><mi>vol</mi><mo>&#8289;</mo></mrow><mn>4</mn></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">Y_{\mathrm{p}}=S^5_a\times S^2_b,\qquad
+ G_4=f\,\operatorname{vol}_4 ,</annotation></semantics></math><span class="equation-number" aria-label="Equation 3">(3)</span></span>
+where the subscript on each sphere denotes its physical radius.
+Projection onto the first factor gives a globally smooth sphere bundle,
+with the full action of the weak rotations on every fibre. The metric
+has additional isometries. Selecting a subgroup of them for observation,
+or removing the corresponding vector fields, needs a mechanism.</p>
+<div class="proposition">
+<p><strong>Proposition 1</strong>. <em>The unwarped electric
+Freund–Rubin equations on this product have a solution at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mn>2</mn><mi>b</mi></mrow><annotation encoding="application/x-tex">a=2b</annotation></semantics></math>.
+With
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">c</mi></mrow><mn>7</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>6</mn><mi>/</mi><msup><mi>L</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo><msub><mi>g</mi><mn>7</mn></msub></mrow><annotation encoding="application/x-tex">\mathrm{Ric}_7=(6/L^2)g_7</annotation></semantics></math>
+one has
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>=</mo><mn>2</mn><msup><mi>L</mi><mn>2</mn></msup><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">a^2=2L^2/3</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>=</mo><msup><mi>L</mi><mn>2</mn></msup><mi>/</mi><mn>6</mn></mrow><annotation encoding="application/x-tex">b^2=L^2/6</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mn>6</mn><mi>/</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">f=6/L</annotation></semantics></math>
+up to orientation and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>L</mi><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">d</mi><mi mathvariant="normal">S</mi></mrow></msub><mo>=</mo><mi>L</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">L_{\mathrm{AdS}}=L/2</annotation></semantics></math>.
+The homogeneous, volume-preserving relative-radius perturbation has
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>m</mi><mn>2</mn></msup><msubsup><mi>L</mi><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">d</mi><mi mathvariant="normal">S</mi></mrow><mn>2</mn></msubsup><mo>=</mo><mi>−</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">m^2L_{\mathrm{AdS}}^2=-3</annotation></semantics></math>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> The Ricci eigenvalues on the factors are
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>/</mi><msup><mi>a</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">4/a^2</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/b^2</annotation></semantics></math>.
+Pure external flux gives both the same positive value
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><msup><mi>f</mi><mn>2</mn></msup><mi>/</mi><mn>6</mn></mrow><annotation encoding="application/x-tex">\lambda=f^2/6</annotation></semantics></math>,
+and the external equation fixes the indicated AdS radius. The product
+volume form and the external volume form are closed, so the form
+equations hold. The integer electric flux fixes the common overall scale
+as in Eq. <a href="#eq:radius" data-reference-type="eqref"
+data-reference="eq:radius">(6)</a>, with the volume of this product in
+place of that of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>M</mi><mn>111</mn></msup><annotation encoding="application/x-tex">M^{111}</annotation></semantics></math>.</p>
+<p>At fixed background flux take
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>h</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mi>u</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><msub><mi>g</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">h_{ij}=u(x)g_{ij}</annotation></semantics></math>
+on the sphere of dimension five and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>h</mi><mrow><mi>α</mi><mi>β</mi></mrow></msub><mo>=</mo><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mi>u</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><msub><mi>g</mi><mrow><mi>α</mi><mi>β</mi></mrow></msub></mrow><annotation encoding="application/x-tex">h_{\alpha\beta}=-(5/2)u(x)g_{\alpha\beta}</annotation></semantics></math>
+on the sphere of dimension two, where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+denotes an external coordinate. Its internal trace and divergence
+vanish, and its tensor coefficients are parallel on each factor. The
+purely internal Ricci tensor with both indices down is invariant under
+independent constant rescalings of the two factors. Thus internal
+derivatives supply zero in its linear variation on this tensor. The
+spacetime derivatives give
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><msub><mi>R</mi><mrow><mi>m</mi><mi>n</mi></mrow></msub><mo>=</mo><mi>−</mi><msub><mo>□</mo><mn>4</mn></msub><msub><mi>h</mi><mrow><mi>m</mi><mi>n</mi></mrow></msub><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\delta R_{mn}=-\Box_4 h_{mn}/2</annotation></semantics></math>,
+as follows directly from the two-derivative variation of Ricci with zero
+trace and divergence. The external and mixed equations have zero first
+variation. The product volume is unchanged to first order, so
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo stretchy="false" form="prefix">(</mo><mi>*</mi><msub><mi>G</mi><mn>4</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\delta(*G_4)=0</annotation></semantics></math>
+for fixed external flux, consistently with fixed quantized charge. The
+internal stress varies by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><msub><mi>h</mi><mrow><mi>m</mi><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\lambda h_{mn}</annotation></semantics></math>.
+With
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mo>□</mo><mn>4</mn></msub><mo>−</mo><msup><mi>m</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo><mi>u</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">(\Box_4-m^2)u=0</annotation></semantics></math>
+this gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>=</mo><mi>−</mi><mn>2</mn><mi>λ</mi><mo>=</mo><mi>−</mi><mn>12</mn><mi>/</mi><msup><mi>L</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">m^2=-2\lambda=-12/L^2</annotation></semantics></math>. ◻</p>
+</div>
+<p>In
+AdS<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mn>4</mn></msub><annotation encoding="application/x-tex">_4</annotation></semantics></math>
+the two radial falloffs of a free scalar satisfy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mo>−</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>m</mi><mn>2</mn></msup><msubsup><mi>L</mi><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">d</mi><mi mathvariant="normal">S</mi></mrow><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\Delta(\Delta-3)=m^2L_{\mathrm{AdS}}^2</annotation></semantics></math>.
+The lower bound for stable scalar fluctuations is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>9</mn><mi>/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">-9/4</annotation></semantics></math>
+in these units <span class="citation" data-cites="BF1982">(<a
+href="#ref-BF1982" role="doc-biblioref">Breitenlohner and Freedman
+1982</a>)</span>. The perturbation above lies below it. The relative
+radii change a ratio of curvature eigenvalues, so this is a physical
+internal metric perturbation. The result concerns an unwarped product
+with only a Freund–Rubin four-form in two-derivative supergravity.
+Additional stress or a solution with a different metric can change the
+mode. A stabilizing term must supply sufficient positive curvature of
+the effective potential in the relative-radius direction, or remove that
+degree of freedom by a consistent change of geometry.</p>
+<p>The effective action gives a second derivation and shows how to vary
+the radii without accidentally varying the charge. Fix the total
+internal volume and write
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><msub><mi>a</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mn>2</mn><mi>v</mi></mrow></msup></mrow><annotation encoding="application/x-tex">a=a_0e^{2v}</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><msub><mi>b</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>−</mi><mn>5</mn><mi>v</mi></mrow></msup></mrow><annotation encoding="application/x-tex">b=b_0e^{-5v}</annotation></semantics></math>.
+The relative mode keeps
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mn>5</mn></msup><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">a^5b^2</annotation></semantics></math>
+constant. In four-dimensional Einstein units the scalar curvature part
+of the potential, in the convention where the Lagrangian includes
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">-V</annotation></semantics></math>,
+is
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">v</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>v</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mfrac><mn>20</mn><msubsup><mi>a</mi><mn>0</mn><mn>2</mn></msubsup></mfrac><msup><mi>e</mi><mrow><mi>−</mi><mn>4</mn><mi>v</mi></mrow></msup><mo>−</mo><mfrac><mn>2</mn><msubsup><mi>b</mi><mn>0</mn><mn>2</mn></msubsup></mfrac><msup><mi>e</mi><mrow><mn>10</mn><mi>v</mi></mrow></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">V_{\mathrm{curv}}(v)=-\frac{20}{a_0^2}e^{-4v}
+                   -\frac{2}{b_0^2}e^{10v}.</annotation></semantics></math><span class="equation-number" aria-label="Equation 4">(4)</span></span>
+The electric energy at fixed total charge depends only on volume and is
+constant on this slice. At the stationary point one has
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>20</mn><mi>/</mi><msubsup><mi>a</mi><mn>0</mn><mn>2</mn></msubsup><mo>=</mo><mn>5</mn><mi>λ</mi></mrow><annotation encoding="application/x-tex">20/a_0^2=5\lambda</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>/</mi><msubsup><mi>b</mi><mn>0</mn><mn>2</mn></msubsup><mo>=</mo><mn>2</mn><mi>λ</mi></mrow><annotation encoding="application/x-tex">2/b_0^2=2\lambda</annotation></semantics></math>.
+The linear terms cancel. Dimensional reduction of the Einstein term on a
+volume-preserving rescaling gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mo stretchy="false" form="prefix">[</mo><mn>5</mn><mo stretchy="false" form="prefix">(</mo><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo stretchy="false" form="postfix">]</mo><mo stretchy="false" form="prefix">(</mo><mi>∂</mi><mi>v</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>=</mo><mi>−</mi><mn>70</mn><mo stretchy="false" form="prefix">(</mo><mi>∂</mi><mi>v</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">-[5(2)^2+2(-5)^2](\partial v)^2=-70(\partial v)^2</annotation></semantics></math>.
+One obtains
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>V</mi><mo>″</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>280</mn><mi>λ</mi></mrow><annotation encoding="application/x-tex">V&#39;&#39;(0)=-280\lambda</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>=</mo><msup><mi>V</mi><mo>″</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>140</mn><mo>=</mo><mi>−</mi><mn>2</mn><mi>λ</mi></mrow><annotation encoding="application/x-tex">m^2=V&#39;&#39;(0)/140=-2\lambda</annotation></semantics></math>.
+Holding
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+fixed and sending
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+to zero is a legitimate path of metrics for a spectral experiment, but
+every member beyond
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mn>2</mn><mi>b</mi></mrow><annotation encoding="application/x-tex">a=2b</annotation></semantics></math>
+requires different supporting stress to remain a vacuum of this
+particular action.</p>
+<p>There is also a direct supersymmetry test on the electric product. An
+unbroken Freund–Rubin spinor restricts to a real Killing spinor on the
+internal unit Einstein space, with nonzero Killing constant. Take
+orthogonal unit vectors tangent to different factors. The spin curvature
+on this mixed plane is zero for the product connection. Applying the
+Killing-spinor equation twice would instead make it proportional to the
+commutator of their Clifford multiplications on the spinor, with
+coefficient the nonzero Killing constant squared. For an orthogonal pair
+that commutator is invertible. Thus this product supplies no such
+spinor. A weak rotation group and a solution of the electric Einstein
+equations suffice for its massless vectors. Supersymmetric scalar
+pairing would require a different background. The regular
+Sasaki–Einstein example below and the supersymmetric gauge wall give two
+explicit ways to change that premise.</p>
+<h3 data-number="2.1"
+id="a-spin-doublet-and-the-cost-of-a-monopole"><span
+class="header-section-number">2.1</span> A spin doublet and the cost of
+a monopole</h3>
+<p>The sphere is spin and its rotation group has a double cover acting
+on spinors. The lowest ordinary Dirac eigenspaces on a round
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>S</mi><mi>b</mi><mn>2</mn></msubsup><annotation encoding="application/x-tex">S^2_b</annotation></semantics></math>
+are weak doublets with mass magnitude
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">1/b</annotation></semantics></math>.
+In the pure product they are genuine spin harmonics. One way to see the
+doublets is to restrict constant spinors in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\mathbb R^3</annotation></semantics></math>
+to the unit normals of the sphere. The spinorial Gauss formula gives
+Killing spinors with Killing constant of magnitude
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">1/(2b)</annotation></semantics></math>
+and hence Dirac eigenvalues of magnitude
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">1/b</annotation></semantics></math>.
+The opposite sign is obtained by multiplying by the chirality operator.
+Positive scalar curvature excludes a harmonic untwisted spinor. These
+facts concern the ordinary spin Dirac operator. Flux terms and gauge
+constraints enter the physical eleven-dimensional gravitino equation,
+and a spin harmonic is by itself an insufficient assignment of a
+four-dimensional fermion.</p>
+<p>The collapse experiment illustrates exactly what an extra monopole
+buys. Fix the product connection and twist the fibre spinor by a line of
+degree
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">n&gt;0</annotation></semantics></math>.
+On
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mi>ℂ</mi><mi>ℙ</mi></mrow><mn>1</mn></msup><annotation encoding="application/x-tex">\mathbb{CP}^1</annotation></semantics></math>
+the holomorphic spin half-canonical line is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝒪</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(-1)</annotation></semantics></math>.
+The positive Dirac kernel is therefore
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mn>0</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>𝒪</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">H^0(\mathcal O(n-1))</annotation></semantics></math>,
+of dimension
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>,
+and the negative kernel is zero. Under the lifted fibre rotations the
+kernel is the irreducible representation of spin
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">(n-1)/2</annotation></semantics></math>.
+At
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n=2</annotation></semantics></math>
+it is a doublet. At
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">n=3</annotation></semantics></math>
+it is a triplet. In the latter case a choice of basis in a triplet does
+not give three copies of a weak singlet or three equivalent weak
+doublets. A generation index belongs to the commuting multiplicity space
+of an irreducible gauge representation.</p>
+<p>On a direct product the squared, twisted spin operator is a sum of
+the squared operators on the factors. For variable
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+the positive gap off the vertical kernel is of order
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">1/b</annotation></semantics></math>,
+whereas a fixed horizontal eigenvalue stays finite. At
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n=2</annotation></semantics></math>
+the limiting horizontal spinor therefore carries a two-dimensional
+coefficient. Which symmetry acts on it depends on the lift that
+preserves the monopole. A charge on such a twist is an input to the
+matter covariant derivative. In the Freund–Rubin solution just described
+there is an external four-form and there is no elementary Maxwell
+one-form with this assigned first Chern number in the eleven-dimensional
+field list. A brane or gauge sector can change this conclusion only by
+supplying the charged operator, its background and the corresponding
+stress. The index theorem makes its conditional consequence
+testable.</p>
+<h3 data-number="2.2"
+id="the-alternative-homogeneous-sphere-bundle"><span
+class="header-section-number">2.2</span> The alternative homogeneous
+sphere bundle</h3>
+<p>There is also a nonproduct candidate over the same five-sphere. The
+transitive colour action gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>S</mi><mn>5</mn></msup><mo>=</mo><mi>S</mi><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mi>S</mi><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">S^5=SU(3)/SU(2)</annotation></semantics></math>.
+Consider an
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">SU(3)</annotation></semantics></math>-equivariant
+sphere bundle with invariant round fibre metric. It is induced from an
+isometric action of the stabilizer
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">SU(2)</annotation></semantics></math>
+on the fibre at one point. The identification is explicit. Sending
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>g</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[g,z]</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">g z</annotation></semantics></math>
+identifies the associated bundle with the original one. As
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">SU(2)</annotation></semantics></math>
+is connected, its map lands in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">SO(3)</annotation></semantics></math>.
+A nonzero homomorphism of the Lie algebras is an isomorphism by
+simplicity and dimension. At the group level this gives the double cover
+up to conjugacy. The trivial homomorphism gives the preceding product.
+The nontrivial one yields the homogeneous space
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mi>H</mi></mrow><annotation encoding="application/x-tex">SU(3)/H</annotation></semantics></math>
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>
+a circle in the stabilizing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">SU(2)</annotation></semantics></math>.</p>
+<p>Choose
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>
+with weights
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>−</mi><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1,-1,0)</annotation></semantics></math>
+in the defining three, equivalent by permutation to the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N(1,0)</annotation></semantics></math>
+convention. Every equivariant diffeomorphism of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mi>H</mi></mrow><annotation encoding="application/x-tex">SU(3)/H</annotation></semantics></math>
+sends the base point to a coset fixed by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>.
+It is right multiplication by an element of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mi>H</mi></mrow><annotation encoding="application/x-tex">N(H)/H</annotation></semantics></math>.
+The identity component of the normalizer centralizes the circle, since
+its automorphism group is discrete. The three weights are distinct, so
+this centralizer in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">SU(3)</annotation></semantics></math>
+is the diagonal torus. Consequently the connected group of equivariant
+diffeomorphisms is a single circle. This leaves room for a commuting
+Abelian action. A full independent weak group commuting with this
+transitive colour action must have a different origin, such as a
+coefficient or a wall. The argument applies to these homogeneous lifts
+and does not assume a particular Einstein metric on the total space.</p>
+<p>In Part 53 a charge-two homogeneous vertical Dirac problem on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>→</mo><msup><mi>S</mi><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">N(1,0)\to S^5</annotation></semantics></math>
+does have a rank-two limit. Horizontal transport is by the isotropy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">SU(2)</annotation></semantics></math>
+in the nontrivial rank-two bundle. Its parallel endomorphisms are
+scalars. The two states are geometrically transported as a doublet of
+this holonomy, while an independently gauged weak action commuting with
+transport would need its own representation. The distinction can be
+tested by comparing the holonomies around loops on the base. The product
+with a prescribed monopole, the homogeneous sphere bundle and the
+regular Freund–Rubin circle bundle below thus give different answers for
+the same proposed experiment on weak matter.</p>
+<h2 data-number="3" id="a-freundrubin-upper-endpoint"><span
+class="header-section-number">3</span> A Freund–Rubin upper
 endpoint</h2>
 <p>Let
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math>
@@ -298,7 +593,7 @@ be the two horizontal Kähler forms and take
 The base has Ricci tensor
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><msub><mi>g</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">8g_B</annotation></semantics></math>.
 The Ricci form and first Chern class fix
-<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><msub><mi>J</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mfrac><mrow><mn>3</mn><mi>π</mi></mrow><mn>4</mn></mfrac><mi>h</mi><mo>,</mo><mspace width="2.0em"></mspace><mo stretchy="false" form="prefix">[</mo><msub><mi>J</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mi>k</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">[J_1]=\frac{3\pi}{4}h,\qquad [J_2]=\frac{\pi}{2}k .</annotation></semantics></math><span class="equation-number" aria-label="Equation 3">(3)</span></span>
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><msub><mi>J</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mfrac><mrow><mn>3</mn><mi>π</mi></mrow><mn>4</mn></mfrac><mi>h</mi><mo>,</mo><mspace width="2.0em"></mspace><mo stretchy="false" form="prefix">[</mo><msub><mi>J</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mi>k</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">[J_1]=\frac{3\pi}{4}h,\qquad [J_2]=\frac{\pi}{2}k .</annotation></semantics></math><span class="equation-number" aria-label="Equation 5">(5)</span></span>
 The connection of period
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>π</mi></mrow><annotation encoding="application/x-tex">2\pi</annotation></semantics></math>
 is
@@ -326,13 +621,13 @@ trivial flat three-form data,
 <span class="equation" id="eq:radius"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mfrac><mrow><mn>6</mn><msup><mi>L</mi><mn>6</mn></msup><mrow><mi>Vol</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>Y</mi><mo>,</mo><mover><mi>g</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>π</mi><msub><mi>ℓ</mi><mi>p</mi></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>6</mn></msup></mrow></mfrac><mo>,</mo><mspace width="2.0em"></mspace><mfrac><msup><mi>L</mi><mn>6</mn></msup><msubsup><mi>ℓ</mi><mi>p</mi><mn>6</mn></msubsup></mfrac><mo>=</mo><mfrac><mrow><mn>4096</mn><msup><mi>π</mi><mn>2</mn></msup></mrow><mn>27</mn></mfrac><mi>N</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">N=\frac{6L^6\operatorname{Vol}(Y,\hat g)}{(2\pi\ell_p)^6},
  \qquad
  \frac{L^6}{\ell_p^6}=\frac{4096\pi^2}{27}N .
- </annotation></semantics></math><span class="equation-number" aria-label="Equation 4">(4)</span></span>
+ </annotation></semantics></math><span class="equation-number" aria-label="Equation 6">(6)</span></span>
 The
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>3</mn></msub><mo>∧</mo><msub><mi>G</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">C_3\wedge G_4</annotation></semantics></math>
 term in the Page integrand pulls back to zero on
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math>
 in this background. Equation <a href="#eq:radius"
-data-reference-type="eqref" data-reference="eq:radius">(4)</a> uses
+data-reference-type="eqref" data-reference="eq:radius">(6)</a> uses
 leading supergravity normalization of the M2 charge. A finite-charge
 precision calculation also needs the quantum gravitational and torsion
 data. The magnetic five-form of the interval model has no role here
@@ -382,8 +677,8 @@ this candidate. Its identification with the matter of the proposed upper
 endpoint remains open <span class="citation" data-cites="Fabbri1999">(<a
 href="#ref-Fabbri1999" role="doc-biblioref">Fabbri et al.
 1999</a>)</span>.</p>
-<h2 data-number="3" id="an-abelian-vector-and-its-membrane-charge"><span
-class="header-section-number">3</span> An Abelian vector and its
+<h2 data-number="4" id="an-abelian-vector-and-its-membrane-charge"><span
+class="header-section-number">4</span> An Abelian vector and its
 membrane charge</h2>
 <p>There is also an Abelian vector from
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mn>3</mn></msub><annotation encoding="application/x-tex">C_3</annotation></semantics></math>
@@ -392,7 +687,7 @@ electric normalization by the Wess–Zumino coupling of an elementary M2
 brane. This choice matters for comparing a geometric charge with a
 finite-triple charge.</p>
 <div class="proposition">
-<p><strong>Proposition 1</strong>. <em>Choose
+<p><strong>Proposition 2</strong>. <em>Choose
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>∈</mo><msup><mi>H</mi><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>Y</mi><mo>;</mo><mi>ℤ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">u\in H^2(Y;\mathbb Z)</annotation></semantics></math>
 with
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>π</mi><mo>*</mo></msup><mi>h</mi><mo>=</mo><mn>2</mn><mi>u</mi></mrow><annotation encoding="application/x-tex">\pi^*h=2u</annotation></semantics></math>,
@@ -402,7 +697,7 @@ The basic harmonic form representing
 and the four-dimensional coupling in this normalization satisfy
 <span class="equation" id="eq:betti"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>=</mo><mfrac><mn>2</mn><mrow><mn>9</mn><mi>π</mi></mrow></mfrac><mo stretchy="false" form="prefix">(</mo><msub><mi>J</mi><mn>1</mn></msub><mo>−</mo><mn>2</mn><msub><mi>J</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="2.0em"></mspace><msubsup><mi>g</mi><mi>B</mi><mrow><mi>−</mi><mn>2</mn></mrow></msubsup><mo>=</mo><mfrac><msqrt><mi>N</mi></msqrt><mrow><mn>36</mn><msqrt><mn>3</mn></msqrt><mspace width="0.167em"></mspace><mi>π</mi></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">\omega=\frac{2}{9\pi}(J_1-2J_2),\qquad
  g_B^{-2}=\frac{\sqrt N}{36\sqrt3\,\pi}.
- </annotation></semantics></math><span class="equation-number" aria-label="Equation 5">(5)</span></span>
+ </annotation></semantics></math><span class="equation-number" aria-label="Equation 7">(7)</span></span>
 We use the two-derivative bulk kinetic term and the electric vector
 potential obtained from
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mn>3</mn></msub><annotation encoding="application/x-tex">C_3</annotation></semantics></math>.
@@ -429,7 +724,7 @@ the two Kähler classes displayed above. Since
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msub><mi>J</mi><mn>1</mn></msub><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">|J_1|^2=2</annotation></semantics></math>,
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msub><mi>J</mi><mn>2</mn></msub><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">|J_2|^2=1</annotation></semantics></math>
 and the blocks are orthogonal, one obtains
-<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∫</mo><mrow><mo stretchy="false" form="prefix">(</mo><mi>Y</mi><mo>,</mo><msup><mi>L</mi><mn>2</mn></msup><mover><mi>g</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow></msub><mi>ω</mi><mo>∧</mo><mi>*</mi><mi>ω</mi><mo>=</mo><mfrac><mrow><msup><mi>π</mi><mn>2</mn></msup><msup><mi>L</mi><mn>3</mn></msup></mrow><mn>48</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">\int_{(Y,L^2\hat g)}\omega\wedge*\omega=\frac{\pi^2 L^3}{48}.</annotation></semantics></math><span class="equation-number" aria-label="Equation 6">(6)</span></span>
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∫</mo><mrow><mo stretchy="false" form="prefix">(</mo><mi>Y</mi><mo>,</mo><msup><mi>L</mi><mn>2</mn></msup><mover><mi>g</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow></msub><mi>ω</mi><mo>∧</mo><mi>*</mi><mi>ω</mi><mo>=</mo><mfrac><mrow><msup><mi>π</mi><mn>2</mn></msup><msup><mi>L</mi><mn>3</mn></msup></mrow><mn>48</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">\int_{(Y,L^2\hat g)}\omega\wedge*\omega=\frac{\pi^2 L^3}{48}.</annotation></semantics></math><span class="equation-number" aria-label="Equation 8">(8)</span></span>
 Use
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>3</mn></msub><mo>=</mo><msubsup><mi>T</mi><mn>2</mn><mrow><mi>−</mi><mn>1</mn></mrow></msubsup><msub><mi>A</mi><mi>B</mi></msub><mo>∧</mo><mi>ω</mi></mrow><annotation encoding="application/x-tex">C_3=T_2^{-1} A_B\wedge\omega</annotation></semantics></math>
 for this fluctuation, where
@@ -444,8 +739,8 @@ linear Chern–Simons source. The coefficient of
 is the internal norm divided by
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msubsup><mi>κ</mi><mn>11</mn><mn>2</mn></msubsup><msubsup><mi>T</mi><mn>2</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">2\kappa_{11}^2T_2^2</annotation></semantics></math>.
 Substitution of Eq. <a href="#eq:radius" data-reference-type="eqref"
-data-reference="eq:radius">(4)</a> yields Eq. <a href="#eq:betti"
-data-reference-type="eqref" data-reference="eq:betti">(5)</a>. The
+data-reference="eq:radius">(6)</a> yields Eq. <a href="#eq:betti"
+data-reference-type="eqref" data-reference="eq:betti">(7)</a>. The
 membrane term
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>2</mn></msub><mo>∫</mo><msub><mi>C</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">T_2\int C_3</annotation></semantics></math>
 assigns charge
@@ -484,16 +779,98 @@ gives the asserted mass bound. ◻</p>
 <p>This is a classical tension bound for an M2 treated as a probe at
 fixed charge in a background of large
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>.
-A smooth topological representative supplies its charge. Existence of a
-stable quantum particle, its fermion zero modes, its isospin and
-saturation of the bound each require additional dynamics. In particular,
-the Abelian field and a charge lattice do not by themselves give a light
-weak doublet. The choice of electric boundary conditions for a Maxwell
-field in AdS also matters if its boundary current is used as the
-observable.</p>
-<h2 data-number="4"
+A smooth topological representative supplies its charge. A stable
+quantum particle, its fermion zero modes and its isospin each require
+additional dynamics. Saturation for smooth classical surfaces admits a
+further geometric test. In particular, the Abelian field and a charge
+lattice do not by themselves give a light weak doublet. The choice of
+electric boundary conditions for a Maxwell field in AdS also matters if
+its boundary current is used as the observable.</p>
+<p>There is a sharper statement about saturation within the class of
+smooth representatives. It uses the same two forms that enter the
+kinetic normalization, so one can check it without assuming a membrane
+quantization prescription.</p>
+<div class="proposition">
+<p><strong>Proposition 3</strong>. <em>Every smooth closed oriented
+immersed surface of nonzero integral charge in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>M</mi><mn>111</mn></msup><annotation encoding="application/x-tex">M^{111}</annotation></semantics></math>
+has area strictly greater than
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>π</mi><msup><mi>L</mi><mn>2</mn></msup><mo stretchy="false" form="prefix">|</mo><mi>q</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">3\pi L^2|q|</annotation></semantics></math>.
+This pointwise statement for each representative does not fix the
+infimum over representatives, including singular limits.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Work in the unit metric and first take a connected
+surface of positive charge. Equality in the integral comass bound would
+imply equality at every tangent plane. Write
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>=</mo><msub><mi>J</mi><mn>1</mn></msub><mo>−</mo><msub><mi>J</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\beta=J_1-J_2</annotation></semantics></math>.
+Its skew endomorphism is the orthogonal complex structure
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>I</mi><mn>1</mn></msub><mo>,</mo><mi>−</mi><msub><mi>I</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(I_1,-I_2)</annotation></semantics></math>
+on the horizontal space and zero in the Reeb direction. A unit simple
+oriented two-plane has
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>β</mi><annotation encoding="application/x-tex">\beta</annotation></semantics></math>-value
+one only when it is horizontal and complex for this structure with its
+positive orientation. This follows from the two equality conditions in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mo stretchy="false" form="prefix">⟨</mo><msup><mi>β</mi><mi>♯</mi></msup><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><mo stretchy="false" form="prefix">|</mo><msup><mi>β</mi><mi>♯</mi></msup><mi>v</mi><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">|\langle \beta^\sharp v,w\rangle|\leq|\beta^\sharp v|\leq1</annotation></semantics></math>
+for an orthonormal tangent frame. In particular the connection form
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>η</mi><annotation encoding="application/x-tex">\eta</annotation></semantics></math>
+pulls back to zero on the whole surface. Its differential then gives the
+pointwise relation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>J</mi><mn>1</mn></msub><mo>+</mo><msub><mi>J</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><msub><mo stretchy="false" form="prefix">|</mo><mi mathvariant="normal">Σ</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">(J_1+J_2)|_\Sigma=0</annotation></semantics></math>.</p>
+<p>Relative to the induced complex orientation, the projection to the
+first factor is complex linear on tangent spaces and the projection to
+the second factor is complex antilinear. The last pointwise relation
+makes their unsigned area densities equal. Their sum is positive because
+the surface is immersed and horizontal. It follows that the projection
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mi>ℂ</mi><mi>ℙ</mi></mrow><mn>1</mn></msup><annotation encoding="application/x-tex">\mathbb{CP}^1</annotation></semantics></math>
+has full real rank two at every point. A local diffeomorphism from a
+compact connected surface onto the two-sphere is a covering, necessarily
+of absolute degree one. But integration of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+over the projected surface gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>3</mn><mi>q</mi></mrow><annotation encoding="application/x-tex">-3q</annotation></semantics></math>.
+These two integers cannot agree in absolute value for integral nonzero
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>.
+Reversing orientation treats negative charge. For a disconnected
+representative, equality of the sum requires equality on every component
+of nonzero charge, as well as agreement in sign. This is already
+impossible. ◻</p>
+</div>
+<p>The smooth conic graph used above illustrates what breaks the
+equality. The antiholomorphic cubic map to the second factor has
+ramification. Its graph is smooth because the conic embedding in the
+first factor is an immersion. Near a ramification point the two
+projected area densities cannot agree on a calibrated horizontal tangent
+plane. The vanishing of the integrated Euler class ensures that some
+circle section exists along the graph. A horizontal lift would impose a
+curvature equation at every point of it. The difference between the two
+demands persists even when the membrane tension is very large. Whether a
+minimizing sequence has a smooth limit would require control of its area
+and regularity, and a supersymmetric state would require the appropriate
+Killing-spinor calibration and fermionic condition of the physical
+brane.</p>
+<p>One can express the bound in gravitational units without referring to
+coordinates on either projective factor. Define the reduced Planck
+coefficient by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>M</mi><mn>4</mn><mn>2</mn></msubsup><mo>=</mo><mrow><mi>Vol</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>Y</mi><mo>,</mo><msup><mi>L</mi><mn>2</mn></msup><mover><mi>g</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="postfix">)</mo><mi>/</mi><msubsup><mi>κ</mi><mn>11</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">M_4^2=\operatorname{Vol}(Y,L^2\hat g)/\kappa_{11}^2</annotation></semantics></math>,
+so the Einstein term is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>M</mi><mn>4</mn><mn>2</mn></msubsup><msub><mi>R</mi><mn>4</mn></msub><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">M_4^2R_4/2</annotation></semantics></math>.
+The vector normalization then gives
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>g</mi><mi>B</mi></msub><msub><mi>M</mi><mn>4</mn></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mn>2</mn><msubsup><mi>T</mi><mn>2</mn><mn>2</mn></msubsup><mspace width="0.167em"></mspace><mrow><mi>Vol</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>Y</mi><mo>,</mo><msup><mi>L</mi><mn>2</mn></msup><mover><mi>g</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mrow><msub><mo>∫</mo><mi>Y</mi></msub><mi>ω</mi><mo>∧</mo><mi>*</mi><mi>ω</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>27</mn><msup><mi>π</mi><mn>2</mn></msup></mrow><mn>4</mn></mfrac><mspace width="0.167em"></mspace><msubsup><mi>T</mi><mn>2</mn><mn>2</mn></msubsup><msup><mi>L</mi><mn>4</mn></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">(g_B M_4)^2=
+ \frac{2T_2^2\,\operatorname{Vol}(Y,L^2\hat g)}
+      {\int_Y\omega\wedge *\omega}
+ =\frac{27\pi^2}{4}\,T_2^2 L^4 .</annotation></semantics></math><span class="equation-number" aria-label="Equation 9">(9)</span></span>
+Thus the classical tension estimate is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">|</mo><mi>q</mi><mo stretchy="false" form="prefix">|</mo><msub><mi>g</mi><mi>B</mi></msub><msub><mi>M</mi><mn>4</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>≥</mo><mn>2</mn><mi>/</mi><msqrt><mn>3</mn></msqrt></mrow><annotation encoding="application/x-tex">m/(|q|g_B M_4)\ge 2/\sqrt3</annotation></semantics></math>.
+The dimensionless ratio eliminates the flux-dependent radius while
+retaining the normalization of the elementary electric charge. The force
+between wrapped branes in AdS would also involve scalar couplings,
+boundary conditions and other exchanged fields. This calculation
+concerns the electric kinetic term and the wrapped area alone.</p>
+<h2 data-number="5"
 id="a-controlled-circle-reduction-and-its-spinors"><span
-class="header-section-number">4</span> A controlled circle reduction and
+class="header-section-number">5</span> A controlled circle reduction and
 its spinors</h2>
 <p>A nontrivial route from seven toward six uses the free Reeb circle.
 Quotient its fibres by
@@ -516,7 +893,7 @@ by
 in the formula for
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>L</mi><mn>6</mn></msup><annotation encoding="application/x-tex">L^6</annotation></semantics></math>
 in Eq. <a href="#eq:radius" data-reference-type="eqref"
-data-reference="eq:radius">(4)</a>. Reduction gives the two-form
+data-reference="eq:radius">(6)</a>. Reduction gives the two-form
 Kaluza–Klein flux on the base with integral class
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mi>h</mi><mo>+</mo><mn>2</mn><mi>k</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">j(3h+2k)</annotation></semantics></math>.</p>
 <p>Use
@@ -539,7 +916,7 @@ there is a small circle and a weakly curved base in these units. This is
 a bosonic scale separation. Global spin data decide which fermions have
 neutral zero modes.</p>
 <div class="proposition">
-<p><strong>Proposition 2</strong>.
+<p><strong>Proposition 4</strong>.
 <em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Y</mi><mi>j</mi></msub><annotation encoding="application/x-tex">Y_j</annotation></semantics></math>
 is spin precisely when
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
@@ -587,8 +964,793 @@ sectors, alternative circle actions or localized fields must be tracked
 with their respective operators. The spin calculation concerns circle
 weights. It does not give the eigenvalues of a flux-coupled Dirac or
 Rarita–Schwinger operator by itself.</p>
-<h2 data-number="5" id="what-a-route-to-five-would-have-to-change"><span
-class="header-section-number">5</span> What a route to five would have
+<h3 data-number="5.1"
+id="the-horizontal-operator-in-each-spinor-sector"><span
+class="header-section-number">5.1</span> The horizontal operator in each
+spinor sector</h3>
+<p>The half-integral weights have an observable consequence even before
+solving the physical gravitino equation. On the base use the two
+Fubini–Study factors with the Chern connections determined by their
+Kähler forms. Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℒ</mi><mo>=</mo><mi>𝒪</mi><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mi>j</mi><mo>,</mo><mn>2</mn><mi>j</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal L=\mathcal O(3j,2j)</annotation></semantics></math>,
+and orient the circle so that its associated line has this first Chern
+class. A spinor of circle weight
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>∈</mo><mi>ℤ</mi><mo>+</mo><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">r\in\mathbb Z+1/2</annotation></semantics></math>
+gives a horizontal
+spin<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mi>c</mi></msup><annotation encoding="application/x-tex">^c</annotation></semantics></math>
+structure with determinant
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℒ</mi><mrow><mn>2</mn><mi>r</mi></mrow></msup><annotation encoding="application/x-tex">\mathcal L^{2r}</annotation></semantics></math>.
+Here and below reversing the convention for the fibre character replaces
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">-r</annotation></semantics></math>.
+To see the determinant exponent, choose local sections of the circle
+bundle. On an overlap the rotation of these sections has a local angle
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>.
+A coefficient of weight
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+picks up the phase
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>exp</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>i</mi><mi>r</mi><mi>α</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\exp(ir\alpha)</annotation></semantics></math>
+in addition to the spin lift of the base frame. The sign ambiguity of
+the lifted frame cancels the sign of this half-character. The
+determinant squares the phase and has the integral transition character
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>exp</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>i</mi><mi>r</mi><mi>α</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\exp(2ir\alpha)</annotation></semantics></math>.</p>
+<p>The canonical complex
+spin<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mi>c</mi></msup><annotation encoding="application/x-tex">^c</annotation></semantics></math>
+structure on the base has spinors
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="normal">Λ</mi><mrow><mn>0</mn><mo>,</mo><mi>*</mi></mrow></msup><annotation encoding="application/x-tex">\Lambda^{0,*}</annotation></semantics></math>
+and determinant
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>K</mi><mi>B</mi><mrow><mi>−</mi><mn>1</mn></mrow></msubsup><mo>=</mo><mi>𝒪</mi><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">K_B^{-1}=\mathcal O(3,2)</annotation></semantics></math>.
+Twisting its spinors by a line tensors its determinant by the square of
+that line. The base has torsion-free Picard group with the two indicated
+generators. Thus in the sector
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+the horizontal spinors are canonically described, up to the chosen line
+identifications, by
+<span class="equation" id="eq:fourier"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="normal">Λ</mi><mrow><mn>0</mn><mo>,</mo><mi>*</mi></mrow></msup><msup><mi>T</mi><mo>*</mo></msup><mi>B</mi><mo>⊗</mo><mi>𝒪</mi><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mi>n</mi><mo>,</mo><mn>2</mn><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="2.0em"></mspace><mi>n</mi><mo>=</mo><mi>j</mi><mi>r</mi><mo>−</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mi>.</mi></mrow><annotation encoding="application/x-tex">\Lambda^{0,*}T^*B\otimes\mathcal O(3n,2n),
+ \qquad n=jr-\tfrac12 .
+ </annotation></semantics></math><span class="equation-number" aria-label="Equation 10">(10)</span></span>
+For odd
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+the integer
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+runs over a single congruence class modulo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>.
+We can therefore determine the whole kernel of the base
+spin<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mi>c</mi></msup><annotation encoding="application/x-tex">^c</annotation></semantics></math>
+Dirac operator in these sectors. The statement uses the horizontal Chern
+connection. Vertical momentum, spin-connection curvature terms and the
+supergravity flux act in addition on the eleven-dimensional field.</p>
+<div class="proposition">
+<p><strong>Proposition 5</strong>. <em>For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">n\geq0</annotation></semantics></math>
+in Eq. <a href="#eq:fourier" data-reference-type="eqref"
+data-reference="eq:fourier">(10)</a>, the horizontal Dirac kernel lies
+in degree zero. Its dimension is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mrow><mn>3</mn><mi>n</mi><mo>+</mo><mn>2</mn></mrow><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\binom{3n+2}{2}(2n+1)</annotation></semantics></math>
+and its weak isospin is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>.
+For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≤</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">n\leq-1</annotation></semantics></math>
+it lies in degree three and is dual to the degree-zero representation
+for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-n-1</annotation></semantics></math>.
+In particular no Reeb Fourier sector of this horizontal operator
+furnishes a weak doublet.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> The Kähler
+spin<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mi>c</mi></msup><annotation encoding="application/x-tex">^c</annotation></semantics></math>
+operator with the specified twist is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mn>2</mn></msqrt><mo stretchy="false" form="prefix">(</mo><mover><mi>∂</mi><mo accent="true">‾</mo></mover><mo>+</mo><msup><mover><mi>∂</mi><mo accent="true">‾</mo></mover><mo>*</mo></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\sqrt2(\bar\partial+\bar\partial^*)</annotation></semantics></math>.
+Its squared norm on a form is twice the sum of the squared norms of the
+Dolbeault differential and its adjoint. Harmonic representatives thus
+compute its full kernel. For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">n\geq0</annotation></semantics></math>,
+sections on the first factor are homogeneous polynomials of degree
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>n</mi></mrow><annotation encoding="application/x-tex">3n</annotation></semantics></math>
+in three variables and sections on the second have degree
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>n</mi></mrow><annotation encoding="application/x-tex">2n</annotation></semantics></math>
+in two variables. The two factors have no higher cohomology in these
+degrees. The product formula for cohomology yields the given dimension.
+The second factor is the symmetric power of degree
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>n</mi></mrow><annotation encoding="application/x-tex">2n</annotation></semantics></math>
+of the dual defining weak representation, of spin
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>.
+For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≤</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">n\leq-1</annotation></semantics></math>
+use Serre duality on the product. Tensoring the dual line with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mi>B</mi></msub><mo>=</mo><mi>𝒪</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>3</mn><mo>,</mo><mi>−</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">K_B=\mathcal O(-3,-2)</annotation></semantics></math>
+produces
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝒪</mi><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(3(-n-1),2(-n-1))</annotation></semantics></math>.
+This gives precisely degree three with the conjugate representation. Its
+weak centre has the same sign. ◻</p>
+</div>
+<p>For the primitive circle the two smallest absolute weights
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mi>±</mi><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">r=\pm1/2</annotation></semantics></math>
+give horizontal singlets of opposite degree parity. At
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mi>±</mi><mn>3</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">r=\pm3/2</annotation></semantics></math>
+the horizontal space has dimension 30 and consists of a ten-dimensional
+colour representation times a weak triplet, or its dual. Thus even
+observing a factor of three in a horizontal degeneracy need not identify
+a flavour multiplicity. The weak generators connect its three
+components. For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>&gt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">j&gt;1</annotation></semantics></math>
+the allowed congruence class skips some of these representations, and
+the vertical momentum scale is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>r</mi><mo stretchy="false" form="prefix">|</mo><mi>/</mi><msub><mi>R</mi><mn>11</mn></msub></mrow><annotation encoding="application/x-tex">|r|/R_{11}</annotation></semantics></math>.
+A horizontal zero mode is part of a separated spectral computation.
+Claiming a light four-dimensional gravitino or chiral family from it
+requires the full operator, its projection and the surviving local
+supersymmetry.</p>
+<p>The same base admits an instructive countertest in Part 53. Use the
+canonical
+spin<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mi>c</mi></msup><annotation encoding="application/x-tex">^c</annotation></semantics></math>
+operator twisted instead by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝒪</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>4</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(-4,1)</annotation></semantics></math>.
+On
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mi>ℂ</mi><mi>ℙ</mi></mrow><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{CP}^2</annotation></semantics></math>
+only
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>𝒪</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">H^2(\mathcal O(-4))</annotation></semantics></math>
+survives, dual to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mn>0</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>𝒪</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">H^0(\mathcal O(1))</annotation></semantics></math>
+and giving
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>𝟑</mn><annotation encoding="application/x-tex">\mathbf3</annotation></semantics></math>
+in the projective-lines convention. On
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mi>ℂ</mi><mi>ℙ</mi></mrow><mn>1</mn></msup><annotation encoding="application/x-tex">\mathbb{CP}^1</annotation></semantics></math>
+the two sections of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝒪</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(1)</annotation></semantics></math>
+form a doublet. The resulting even kernel is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>𝟑</mn><mo>,</mo><mn>𝟐</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\mathbf3,\mathbf2)</annotation></semantics></math>.
+For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">j=1</annotation></semantics></math>
+the untwisted canonical
+spin<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mi>c</mi></msup><annotation encoding="application/x-tex">^c</annotation></semantics></math>
+structure is the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">r=1/2</annotation></semantics></math>
+sector. The extra line would change
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mi>n</mi><mo>,</mo><mn>2</mn><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(3n,2n)</annotation></semantics></math>
+by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>4</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(-4,1)</annotation></semantics></math>,
+a vector outside the lattice generated by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(3,2)</annotation></semantics></math>.
+Its pullback to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math>
+has first Chern class
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>11</mn><mi>u</mi></mrow><annotation encoding="application/x-tex">-11u</annotation></semantics></math>,
+since
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>3</mn><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>11</mn></mrow><annotation encoding="application/x-tex">2(-4)-3(1)=-11</annotation></semantics></math>.
+Different Reeb weights all pull back with zero class on the primitive
+total space. Thus the needed twist has a distinguishable topological
+cost.</p>
+<p>The class
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>11</mn><mi>u</mi></mrow><annotation encoding="application/x-tex">-11u</annotation></semantics></math>
+is a property of an internal coefficient line. Assigning a spacetime
+particle electric charge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>11</mn></mrow><annotation encoding="application/x-tex">-11</annotation></semantics></math>
+under the Betti vector is another operation. An ordinary pointlike
+supergravity spinor couples to the spin connection and to the prescribed
+flux terms. The elementary coupling
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∫</mo><mrow><mi mathvariant="normal">M</mi><mn>2</mn></mrow></msub><msub><mi>C</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">\int_{\mathrm{M}2}C_3</annotation></semantics></math>
+instead measures a two-cycle wrapped by a membrane. A model that
+identifies the two integers must construct a charged object and its
+operator or a wall gauge field inducing the coefficient line. The
+successful even kernel on the base tells us exactly which new degrees of
+freedom that construction has to explain.</p>
+<h3 data-number="5.2"
+id="flux-and-charge-when-the-fibre-is-shortened"><span
+class="header-section-number">5.2</span> Flux and charge when the fibre
+is shortened</h3>
+<p>The quotient also permits a check with an observable other than a
+spinor index. The cohomology Gysin sequence gives
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><msub><mi>Y</mi><mi>j</mi></msub><mo>;</mo><mi>ℤ</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>ℤ</mi><mo>⊕</mo><msub><mi>ℤ</mi><mi>j</mi></msub><mo>,</mo><mspace width="2.0em"></mspace><msup><mi>H</mi><mn>4</mn></msup><mo stretchy="false" form="prefix">(</mo><msub><mi>Y</mi><mi>j</mi></msub><mo>;</mo><mi>ℤ</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>ℤ</mi><mi>j</mi></msub><mo>⊕</mo><msub><mi>ℤ</mi><mrow><mn>9</mn><mi>j</mi></mrow></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">H^2(Y_j;\mathbb Z)=\mathbb Z\oplus\mathbb Z_j,\qquad
+ H^4(Y_j;\mathbb Z)=\mathbb Z_j\oplus\mathbb Z_{9j}.</annotation></semantics></math><span class="equation-number" aria-label="Equation 11">(11)</span></span>
+For the first group take the quotient of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℤ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb Z^2</annotation></semantics></math>
+by the vector
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">j(3,2)</annotation></semantics></math>.
+For the second the map is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+times the matrix of multiplication by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>h</mi><mo>+</mo><mn>2</mn><mi>k</mi></mrow><annotation encoding="application/x-tex">3h+2k</annotation></semantics></math>,
+whose entries have greatest common divisor one and whose determinant is
+nine. This proves the two invariant factors by integral row and column
+operations. The kernel of the Euler-class pairing on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>π</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\pi_2(B)</annotation></semantics></math>
+is still generated by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mi>−</mi><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(2,-3)</annotation></semantics></math>,
+and its conic graph again admits a section. The free degree-two class
+pairs integrally with that sphere. Torsion classes have no harmonic
+curvature representative and do not change the Maxwell coefficient in
+the specified trivial flat background.</p>
+<p>The harmonic form has the same horizontal normalization on every
+quotient. Its squared norm is divided by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+at fixed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>.
+At fixed quotient electric flux,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>L</mi><mn>6</mn></msup><annotation encoding="application/x-tex">L^6</annotation></semantics></math>
+instead acquires a factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>.
+These changes give
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msubsup><mi>g</mi><mrow><mi>B</mi><mo>,</mo><mi>j</mi></mrow><mrow><mi>−</mi><mn>2</mn></mrow></msubsup></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mfrac><mn>1</mn><mrow><mn>36</mn><msqrt><mn>3</mn></msqrt><mspace width="0.167em"></mspace><mi>π</mi></mrow></mfrac><msqrt><mfrac><mi>N</mi><mi>j</mi></mfrac></msqrt><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>m</mi><msub><mi>L</mi><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">d</mi><mi mathvariant="normal">S</mi></mrow></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>≥</mo><mn>8</mn><mo stretchy="false" form="prefix">|</mo><mi>q</mi><mo stretchy="false" form="prefix">|</mo><msqrt><mrow><mi>N</mi><mi>j</mi><mi>/</mi><mn>3</mn></mrow></msqrt><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+ g_{B,j}^{-2}&amp;=\frac{1}{36\sqrt3\,\pi}\sqrt{\frac Nj},\\
+ m L_{\mathrm{AdS}}&amp;\geq 8 |q|\sqrt{Nj/3}.
+\end{aligned}</annotation></semantics></math><span class="equation-number" aria-label="Equation 12">(12)</span></span>
+The lower bound per unit free charge grows on this reduction even though
+the weakly curved string window permits a shorter circle. Both its
+volume and its harmonic norm scale in the same way in the ratio defining
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>g</mi><mi>B</mi></msub><msub><mi>M</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">g_B M_4</annotation></semantics></math>
+at fixed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>,
+so the charge-normalized tension ratio above is unchanged. We have held
+the electric ensemble and its elementary membrane fixed. Switching
+electric and magnetic boundary conditions in AdS, or turning on discrete
+flux, changes what is meant by a charged observable in the reduced
+theory.</p>
+<h2 data-number="6"
+id="a-heterotic-wall-with-a-computable-chiral-spectrum"><span
+class="header-section-number">6</span> A heterotic wall with a
+computable chiral spectrum</h2>
+<p>We next change the origin of the gauge fields. In the Hořava–Witten
+description of the strongly coupled
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>8</mn></msub><mo>×</mo><msub><mi>E</mi><mn>8</mn></msub></mrow><annotation encoding="application/x-tex">E_8\times E_8</annotation></semantics></math>
+heterotic string, the two ends of an eleven-dimensional interval carry
+ten-dimensional gauge fields <span class="citation"
+data-cites="HW1996">(<a href="#ref-HW1996" role="doc-biblioref">Hořava
+and Witten 1996</a>)</span>. Let their common compact internal factor be
+a Calabi–Yau threefold
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>.
+The seven internal directions of the bulk are locally those of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+and the interval. On one boundary the gauge connection is a connection
+on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+with values in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝔢</mi><mn>8</mn></msub><annotation encoding="application/x-tex">\mathfrak e_8</annotation></semantics></math>.
+A four-dimensional gauge generator remains massless at leading order if
+it is covariantly constant in the adjoint and satisfies the boundary
+conditions. The visible Lie algebra is the centralizer of the bundle
+holonomy, further restricted if a Wilson line is present. A nontrivial
+Killing field of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+is unnecessary for this mechanism.</p>
+<p>Work first in the weakly coupled, large-radius heterotic description
+with the standard embedding of the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">SU(3)</annotation></semantics></math>
+tangent connection in the first
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>8</mn></msub><annotation encoding="application/x-tex">E_8</annotation></semantics></math>,
+trivial bundle on the second and no five-brane class. The cohomological
+Bianchi condition is
+<span class="equation" id="eq:bianchi"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>V</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><msub><mi>c</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>V</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">[</mo><mi>𝒲</mi><mo stretchy="false" form="postfix">]</mo><mo>=</mo><msub><mi>c</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mi>X</mi><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">c_2(V_1)+c_2(V_2)+[\mathcal W]=c_2(TX).
+ </annotation></semantics></math><span class="equation-number" aria-label="Equation 13">(13)</span></span>
+It holds with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>=</mo><mi>T</mi><mi>X</mi></mrow><annotation encoding="application/x-tex">V_1=TX</annotation></semantics></math>.
+The Kähler Ricci-flat connection is Hermitian Yang–Mills at leading
+order. We take the background with unbroken four-dimensional
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">N=1</annotation></semantics></math>
+supersymmetry and discuss the classical perturbative massless modes at
+that point <span class="citation" data-cites="CHSW1985">(<a
+href="#ref-CHSW1985" role="doc-biblioref">Candelas et al.
+1985</a>)</span>. Turning on spacetime supersymmetry breaking or bundle
+moduli changes the scalar spectrum. In the interval description the two
+boundary sources are locally proportional to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>tr</mi><mo>&#8289;</mo></mrow><msubsup><mi>F</mi><mi>i</mi><mn>2</mn></msubsup><mo>−</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mrow><mi>tr</mi><mo>&#8289;</mo></mrow><msup><mi>R</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\operatorname{tr}F_i^2-\tfrac12\operatorname{tr}R^2</annotation></semantics></math>
+with the conventional same-trace normalization. Their sum integrates to
+the appropriate Bianchi identity. Even with the standard embedding on
+one wall their separate values can source warping and bulk flux. A
+direct product
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>×</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">X\times I</annotation></semantics></math>
+with constant gauge coupling at arbitrary interval size specifies the
+topology. A strong-coupling metric would have to solve the sourced
+equations.</p>
+<p>The centralizer has Lie algebra
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝔢</mi><mn>6</mn></msub><annotation encoding="application/x-tex">\mathfrak e_6</annotation></semantics></math>.
+The adjoint branching, up to simultaneous conjugation conventions for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">SU(3)</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>6</mn></msub><annotation encoding="application/x-tex">E_6</annotation></semantics></math>,
+is
+<span class="equation" id="eq:eight"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>𝟐𝟒𝟖</mn><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>𝟕𝟖</mn><mo>,</mo><mn>𝟏</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>𝟏</mn><mo>,</mo><mn>𝟖</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>𝟐𝟕</mn><mo>,</mo><mn>𝟑</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mover><mn>𝟐𝟕</mn><mo accent="true">¯</mo></mover><mo>,</mo><mover><mn>𝟑</mn><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathbf{248}=(\mathbf{78},\mathbf1)+(\mathbf1,\mathbf8)
+ +(\mathbf{27},\mathbf3)
+ +(\overline{\mathbf{27}},\bar{\mathbf3}).
+ </annotation></semantics></math><span class="equation-number" aria-label="Equation 14">(14)</span></span>
+The dimensions add to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>78</mn><mo>+</mo><mn>8</mn><mo>+</mo><mn>81</mn><mo>+</mo><mn>81</mn><mo>=</mo><mn>248</mn></mrow><annotation encoding="application/x-tex">78+8+81+81=248</annotation></semantics></math>.
+The unbroken
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>6</mn></msub><annotation encoding="application/x-tex">E_6</annotation></semantics></math>
+contains the weak and colour groups and additional generators. A chosen
+hypercharge embedding and subsequent breaking are needed to isolate the
+Standard Model. We set any discrete gauge Wilson line to the identity
+for the calculation below. In a convention calling the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mn>1</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mi>X</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">H^1(TX)</annotation></semantics></math>
+modes
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>𝟐𝟕</mn><annotation encoding="application/x-tex">\mathbf{27}</annotation></semantics></math>,
+the matter multiplicities are
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>h</mi><mrow><mn>2</mn><mo>,</mo><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">h^{2,1}(X)</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>h</mi><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">h^{1,1}(X)</annotation></semantics></math>
+in conjugate representations. Contraction with the nonvanishing
+holomorphic three-form identifies
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>X</mi></mrow><annotation encoding="application/x-tex">TX</annotation></semantics></math>
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi mathvariant="normal">Ω</mi><mi>X</mi><mn>2</mn></msubsup><annotation encoding="application/x-tex">\Omega^2_X</annotation></semantics></math>,
+and the dual tangent bundle is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi mathvariant="normal">Ω</mi><mi>X</mi><mn>1</mn></msubsup><annotation encoding="application/x-tex">\Omega^1_X</annotation></semantics></math>.
+This gives the two cohomology groups from the linearized internal gauge
+operator. The following construction keeps track of both.</p>
+<p>The origin of a gauge vector is visible even in its leading kinetic
+normalization. Write the wall Yang–Mills coefficient as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msubsup><mi>g</mi><mn>10</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">1/g_{10}^2</annotation></semantics></math>
+with a fixed invariant trace, and let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>L</mi><mi>I</mi></msub><annotation encoding="application/x-tex">L_I</annotation></semantics></math>
+denote the proper interval length. In the leading product approximation
+a constant unbroken wall generator gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>g</mi><mn>4</mn><mrow><mi>−</mi><mn>2</mn></mrow></msubsup><mo>=</mo><mrow><mi>Vol</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><msubsup><mi>g</mi><mn>10</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">g_4^{-2}=\operatorname{Vol}(X)/g_{10}^2</annotation></semantics></math>
+in the induced four-dimensional frame. The bulk Einstein term instead
+gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>M</mi><mn>4</mn><mn>2</mn></msubsup><mo>=</mo><msub><mi>L</mi><mi>I</mi></msub><mrow><mi>Vol</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><msubsup><mi>κ</mi><mn>11</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">M_4^2=L_I\operatorname{Vol}(X)/\kappa_{11}^2</annotation></semantics></math>
+in the same normalization. Thus changing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>L</mi><mi>I</mi></msub><annotation encoding="application/x-tex">L_I</annotation></semantics></math>
+at fixed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+changes the gravitational coefficient and the bulk axial thresholds. It
+leaves the leading wall gauge coefficient fixed. A wall field has no
+independent standing-wave number along the normal interval. In a warped
+solution the wall samples the induced metric at its own position and the
+bulk normalization is an integral of the warped measure. This gives a
+direct calculation to distinguish wall weak vectors from bulk weak
+vectors on a proposed interpolation, even when their four-dimensional
+Lie brackets agree.</p>
+<h3 data-number="6.1"
+id="a-free-quotient-with-euler-number-minus-six"><span
+class="header-section-number">6.1</span> A free quotient with Euler
+number minus six</h3>
+<p>Use the Tian–Yau complete-intersection construction <span
+class="citation" data-cites="TianYau1987">(<a href="#ref-TianYau1987"
+role="doc-biblioref">Tian and Yau 1987</a>)</span>. We give the quotient
+action explicitly because dividing the Euler number by three would give
+an incorrect index in the presence of fixed points. Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>1</mn></msub><mo>,</mo><msub><mi>S</mi><mn>2</mn></msub><mo>⊂</mo><msup><mrow><mi>ℂ</mi><mi>ℙ</mi></mrow><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">S_1,S_2\subset\mathbb{CP}^3</annotation></semantics></math>
+each be the smooth cubic surface
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>α</mi><mo>=</mo><mn>0</mn></mrow><mn>3</mn></msubsup><msubsup><mi>x</mi><mi>α</mi><mn>3</mn></msubsup><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sum_{\alpha=0}^3x_\alpha^3=0</annotation></semantics></math>,
+using
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+coordinates on the second copy. On each take the same order-three
+transformation
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>↦</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi>ζ</mi><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msup><mi>ζ</mi><mn>2</mn></msup><msub><mi>x</mi><mn>3</mn></msub><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">(x_0,x_1,x_2,x_3)\longmapsto
+ (x_0,x_1,\zeta x_2,\zeta^2 x_3).</annotation></semantics></math><span class="equation-number" aria-label="Equation 15">(15)</span></span>
+Here
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ζ</mi><annotation encoding="application/x-tex">\zeta</annotation></semantics></math>
+is a primitive cube root of unity. On the product use its diagonal
+action. Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>X</mi><mo accent="true">̃</mo></mover><annotation encoding="application/x-tex">\widetilde X</annotation></semantics></math>
+be a generic invariant divisor of bidegree
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1,1)</annotation></semantics></math>
+on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>1</mn></msub><mo>×</mo><msub><mi>S</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">S_1\times S_2</annotation></semantics></math>.
+Its equation is
+<span class="equation" id="eq:divisor"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>x</mi><mn>01</mn><mrow><mspace width="0.167em"></mspace><mi>t</mi></mrow></msubsup><mi>A</mi><msub><mi>y</mi><mn>01</mn></msub><mo>+</mo><mi>B</mi><msub><mi>x</mi><mn>2</mn></msub><msub><mi>y</mi><mn>3</mn></msub><mo>+</mo><mi>D</mi><msub><mi>x</mi><mn>3</mn></msub><msub><mi>y</mi><mn>2</mn></msub><mo>=</mo><mn>0</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>x</mi><mn>01</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub><msup><mo stretchy="false" form="postfix">)</mo><mi>t</mi></msup><mo>,</mo></mrow><annotation encoding="application/x-tex">x_{01}^{\,t} A y_{01}+B x_2y_3+D x_3y_2=0,
+ \qquad x_{01}=(x_0,x_1)^t ,
+ </annotation></semantics></math><span class="equation-number" aria-label="Equation 16">(16)</span></span>
+with constant complex coefficients and an invertible
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>
+by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>
+matrix
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>.
+The transpose describes a holomorphic bilinear form. We use generic
+coefficients in this linear system and the induced complex
+orientation.</p>
+<p>Each nontrivial group element fixes exactly three points on a cubic
+surface. They lie on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><msub><mi>x</mi><mn>3</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x_2=x_3=0</annotation></semantics></math>.
+The remaining two isolated projective eigenpoints lie off the cubic.
+Thus there are nine product fixed points and each is avoided by a
+generic choice of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>.
+Smoothness of the invariant divisor also deserves a check. Where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mn>01</mn></msub><annotation encoding="application/x-tex">x_{01}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>y</mi><mn>01</mn></msub><annotation encoding="application/x-tex">y_{01}</annotation></semantics></math>
+are both nonzero the linear system has no base point. If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>01</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x_{01}=0</annotation></semantics></math>
+then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mn>2</mn></msub><annotation encoding="application/x-tex">x_2</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mn>3</mn></msub><annotation encoding="application/x-tex">x_3</annotation></semantics></math>
+are both nonzero, and vanishing for every equation forces
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>=</mo><msub><mi>y</mi><mn>3</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">y_2=y_3=0</annotation></semantics></math>.
+The second possibility reverses the two factors. These are finite sets.
+At a base point of the first kind the derivatives in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">x_0,x_1</annotation></semantics></math>
+directions are the components of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>y</mi><mn>01</mn></msub><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">A y_{01}\ne0</annotation></semantics></math>.
+These directions are tangent to the first cubic there. The transpose
+argument treats the second kind. Away from the base points Bertini’s
+smoothness theorem applies to the invariant linear system. Hence smooth
+members avoiding all nine fixed points exist, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>=</mo><mover><mi>X</mi><mo accent="true">̃</mo></mover><mi>/</mi><msub><mi>ℤ</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">X=\widetilde X/\mathbb Z_3</annotation></semantics></math>
+is a smooth compact threefold.</p>
+<p>Write
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>,</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">h,k</annotation></semantics></math>
+for the hyperplane classes restricted to the two cubics in this
+subsection. The anticanonical class of the product is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>+</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">h+k</annotation></semantics></math>.
+Adjunction gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>K</mi><mover><mi>X</mi><mo accent="true">̃</mo></mover></msub><annotation encoding="application/x-tex">K_{\widetilde X}</annotation></semantics></math>
+trivial. The diagonal action preserves the residue holomorphic volume
+form because each coordinate action has determinant one and preserves
+the two cubic equations and Eq. <a href="#eq:divisor"
+data-reference-type="eqref" data-reference="eq:divisor">(16)</a>. Thus
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>K</mi><mi>X</mi></msub><annotation encoding="application/x-tex">K_X</annotation></semantics></math>
+is trivial as a line with a nonvanishing holomorphic section. Each cubic
+surface is simply connected, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>X</mi><mo accent="true">̃</mo></mover><annotation encoding="application/x-tex">\widetilde X</annotation></semantics></math>
+is a smooth ample divisor in their four-dimensional product. Lefschetz
+gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>π</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mover><mi>X</mi><mo accent="true">̃</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\pi_1(\widetilde X)=0</annotation></semantics></math>
+and an isomorphism on degree-two cohomology. In particular there are no
+holomorphic one- or two-forms on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>X</mi><mo accent="true">̃</mo></mover><annotation encoding="application/x-tex">\widetilde X</annotation></semantics></math>
+or its quotient, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>π</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>ℤ</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">\pi_1(X)=\mathbb Z_3</annotation></semantics></math>.
+These properties allow the usual Calabi–Yau compactification with a
+single covariantly constant complex spinor for the supersymmetry
+counting, in the spin structure preserving the holomorphic volume
+form.</p>
+<div class="proposition">
+<p><strong>Proposition 6</strong>. <em>For the smooth free quotient just
+constructed,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>χ</mi><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>6</mn></mrow><annotation encoding="application/x-tex">\chi(X)=-6</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msup><mi>h</mi><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><msup><mi>h</mi><mrow><mn>2</mn><mo>,</mo><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>6</mn><mo>,</mo><mn>9</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(h^{1,1}(X),h^{2,1}(X))=(6,9)</annotation></semantics></math>.
+The standard embedding with trivial discrete Wilson line gives net
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>𝟐𝟕</mn><annotation encoding="application/x-tex">\mathbf{27}</annotation></semantics></math>
+index three and has six vectorlike pairs in addition to that net count
+at this bundle point.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> On one cubic the tangent Chern class is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>h</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>4</mn></msup><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>3</mn><mi>h</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1+h)^4/(1+3h)</annotation></semantics></math>,
+so
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>=</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">c_1=h</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>=</mo><mn>3</mn><msup><mi>h</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">c_2=3h^2</annotation></semantics></math>,
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∫</mo><mi>S</mi></msub><msup><mi>h</mi><mn>2</mn></msup><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">\int_S h^2=3</annotation></semantics></math>.
+On the product
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><msub><mi>S</mi><mn>1</mn></msub><mo>×</mo><msub><mi>S</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">P=S_1\times S_2</annotation></semantics></math>
+one has
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>c</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>3</mn><msup><mi>h</mi><mn>2</mn></msup><mo>+</mo><mi>h</mi><mi>k</mi><mo>+</mo><mn>3</mn><msup><mi>k</mi><mn>2</mn></msup><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>c</mi><mn>3</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>3</mn><msup><mi>h</mi><mn>2</mn></msup><mi>k</mi><mo>+</mo><mn>3</mn><mi>h</mi><msup><mi>k</mi><mn>2</mn></msup><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+ c_2(P)&amp;=3h^2+hk+3k^2,\\
+ c_3(P)&amp;=3h^2k+3hk^2 .
+\end{aligned}</annotation></semantics></math><span class="equation-number" aria-label="Equation 17">(17)</span></span>
+Dividing by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mi>h</mi><mo>+</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">1+h+k</annotation></semantics></math>
+in the normal sequence gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mn>3</mn></msub><mo stretchy="false" form="prefix">(</mo><mover><mi>X</mi><mo accent="true">̃</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>c</mi><mn>3</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mi>h</mi><mo>+</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo><msub><mi>c</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">c_3(\widetilde X)=c_3(P)-(h+k)c_2(P)</annotation></semantics></math>
+restricted to the divisor, since
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>h</mi><mo>+</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">c_1(P)=h+k</annotation></semantics></math>.
+This is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>h</mi><mn>2</mn></msup><mi>k</mi><mo>+</mo><mi>h</mi><msup><mi>k</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">-(h^2k+hk^2)</annotation></semantics></math>.
+Integrating on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+supplies another factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>+</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">h+k</annotation></semantics></math>,
+giving
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>2</mn><msub><mo>∫</mo><mi>P</mi></msub><msup><mi>h</mi><mn>2</mn></msup><msup><mi>k</mi><mn>2</mn></msup><mo>=</mo><mi>−</mi><mn>18</mn></mrow><annotation encoding="application/x-tex">-2\int_P h^2k^2=-18</annotation></semantics></math>.
+The quotient is free of degree three, so its Euler characteristic is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>6</mn></mrow><annotation encoding="application/x-tex">-6</annotation></semantics></math>.</p>
+<p>For the Hodge numbers use the action on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>H</mi><mn>2</mn></msup><annotation encoding="application/x-tex">H^2</annotation></semantics></math>
+of each cubic. Its Euler number is nine, so
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">b_2=7</annotation></semantics></math>
+using simple connectivity and duality. Each isolated fixed point
+contributes
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">+1</annotation></semantics></math>
+to the topological Lefschetz number. The two tangent eigenvalues at a
+fixed point are the nontrivial cube roots, and the real determinant of
+one minus their complex-linear action is positive. The trace on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>H</mi><mn>2</mn></msup><annotation encoding="application/x-tex">H^2</annotation></semantics></math>
+is therefore
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>−</mo><mn>2</mn><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">3-2=1</annotation></semantics></math>
+for each nontrivial element, after subtracting the degree-zero and
+degree-four traces. Averaging the identity and the two nontrivial traces
+gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>7</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>3</mn><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">(7+1+1)/3=3</annotation></semantics></math>
+invariant classes per cubic. The ample divisor inherits
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">H^2(P)</annotation></semantics></math>
+equivariantly, and the diagonal action preserves its two summands. The
+quotient has
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>h</mi><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow></msup><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">h^{1,1}=6</annotation></semantics></math>.
+Finally
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>χ</mi><mo>=</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><msup><mi>h</mi><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow></msup><mo>−</mo><msup><mi>h</mi><mrow><mn>2</mn><mo>,</mo><mn>1</mn></mrow></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\chi=2(h^{1,1}-h^{2,1})</annotation></semantics></math>
+yields
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>h</mi><mrow><mn>2</mn><mo>,</mo><mn>1</mn></mrow></msup><mo>=</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">h^{2,1}=9</annotation></semantics></math>.
+Substitution into Eq. <a href="#eq:eight" data-reference-type="eqref"
+data-reference="eq:eight">(14)</a> gives the claimed spectrum. ◻</p>
+</div>
+<p>One can also read the net result directly from the holomorphic index.
+For the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">SU(3)</annotation></semantics></math>
+tangent bundle on a Calabi–Yau threefold the degree-six term in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>ch</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mi>X</mi><mo stretchy="false" form="postfix">)</mo><mrow><mi>Td</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\operatorname{ch}(TX)\operatorname{Td}(X)</annotation></semantics></math>
+is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mn>3</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mi>X</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">c_3(TX)/2</annotation></semantics></math>.
+Its holomorphic Euler characteristic is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">-3</annotation></semantics></math>
+here. In the convention in which deformations with coefficient
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>X</mi></mrow><annotation encoding="application/x-tex">TX</annotation></semantics></math>
+are counted in degree one, the particle index has the opposite sign and
+is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">+3</annotation></semantics></math>.
+The index is stable under smooth bundle deformations with the same Chern
+classes. Such a deformation can lift vectorlike pairs, but their actual
+mass matrix and a vacuum that gives it sufficient rank have to be
+exhibited to infer only three light families. The explicit cohomology
+calculation shows why replacing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><mo>−</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">9-6</annotation></semantics></math>
+by three copies in a tree-level threshold calculation would be
+premature.</p>
+<p>To relate these statements to Standard Model charges, choose the
+familiar chain
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>6</mn></msub><mo>⊃</mo><mrow><mi>Spin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>⊃</mo><mi>S</mi><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">E_6\supset\operatorname{Spin}(10)\supset SU(5)</annotation></semantics></math>
+at Lie-algebra level. A
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>𝟐𝟕</mn><annotation encoding="application/x-tex">\mathbf{27}</annotation></semantics></math>
+contains
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>𝟏𝟔</mn><mo>+</mo><mn>𝟏𝟎</mn><mo>+</mo><mn>𝟏</mn></mrow><annotation encoding="application/x-tex">\mathbf{16}+\mathbf{10}+\mathbf1</annotation></semantics></math>
+under
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>Spin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\operatorname{Spin}(10)</annotation></semantics></math>.
+The
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>𝟏𝟔</mn><annotation encoding="application/x-tex">\mathbf{16}</annotation></semantics></math>
+contains one
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>𝟏𝟎</mn><mo>+</mo><mover><mn>𝟓</mn><mo accent="true">‾</mo></mover><mo>+</mo><mn>𝟏</mn></mrow><annotation encoding="application/x-tex">\mathbf{10}+\bar{\mathbf5}+\mathbf1</annotation></semantics></math>
+of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">SU(5)</annotation></semantics></math>,
+the last singlet allowing a right neutrino in an all-left convention.
+The additional
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>𝟏𝟎</mn><annotation encoding="application/x-tex">\mathbf{10}</annotation></semantics></math>
+of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>Spin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\operatorname{Spin}(10)</annotation></semantics></math>
+supplies
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>𝟓</mn><mo>+</mo><mover><mn>𝟓</mn><mo accent="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\mathbf5+\bar{\mathbf5}</annotation></semantics></math>,
+a conjugate pair under
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">SU(5)</annotation></semantics></math>.
+A standard hypercharge choice on this subgroup supplies one net chiral
+family per net
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>𝟐𝟕</mn><annotation encoding="application/x-tex">\mathbf{27}</annotation></semantics></math>
+after branching. There are also the extra representations from the very
+same branching and the net-neutral six pairs. Which light doublets,
+triplets and singlets survive a particular breaking is a spectrum
+calculation. No Wilson line or Higgs breaking that performs this task
+has been assumed here.</p>
+<p>A Wilson line on this quotient would be a homomorphism from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ℤ</mi><mn>3</mn></msub><annotation encoding="application/x-tex">\mathbb Z_3</annotation></semantics></math>
+to the unbroken group up to conjugacy. For a field in a representation
+with a chosen Wilson character the surviving modes are the invariant
+part of the tensor product of its gauge representation with its
+cohomology on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>X</mi><mo accent="true">̃</mo></mover><annotation encoding="application/x-tex">\widetilde X</annotation></semantics></math>.
+Consequently the viable charge count uses the character-resolved
+cohomology. Dividing every upstairs representation multiplicity by three
+is justified for an index in the regular representation of this free
+action. Individual particle counts require the trace in each
+cohomological degree. For example
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>h</mi><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mover><mi>X</mi><mo accent="true">̃</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>14</mn></mrow><annotation encoding="application/x-tex">h^{1,1}(\widetilde X)=14</annotation></semantics></math>
+whereas
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>h</mi><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">h^{1,1}(X)=6</annotation></semantics></math>.
+A proposed Wilson line and lifted bundle can be tested by averaging the
+three traces in the combined action. This is a finite computation with
+specified inputs.</p>
+<h3 data-number="6.2"
+id="scalar-partners-and-the-meaning-of-three"><span
+class="header-section-number">6.2</span> Scalar partners and the meaning
+of three</h3>
+<p>In this heterotic example normalizable internal gauge fluctuations in
+the matter sector are harmonic
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(0,1)</annotation></semantics></math>-forms
+valued in the appropriate bundle. Their spacetime coefficients are
+complex scalars. The ten-dimensional gaugino on the same background uses
+the covariantly constant internal spinor to identify its internal Dirac
+equation with the corresponding Dolbeault problem. With the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">N=1</annotation></semantics></math>
+boundary supersymmetry and a supersymmetric vacuum the fermion and
+scalar coefficients belong to the same four-dimensional chiral
+multiplet. An index three therefore supplies a net difference of three
+such multiplets, each including its scalar. At the explicit
+standard-embedding point there are scalars for the vectorlike pairs as
+well. The multiplet relation holds whenever the same supersymmetry and
+zero-mode hypotheses hold, for any allowed value of the index. The value
+three here is supplied by the topology and the chosen gauge bundle.</p>
+<p>There is an independent suggestion in the finite-geometry line that
+the scalar charges themselves single out three generations <span
+class="citation" data-cites="Rivero2005 Rivero2024 realnote">(<a
+href="#ref-Rivero2005" role="doc-biblioref">Rivero 2005</a>, <a
+href="#ref-Rivero2024" role="doc-biblioref">2024</a>; <a
+href="#ref-realnote" role="doc-biblioref"><span>“The Real Structure of a
+Massless Block: <span>SO</span>(30) in the Finite Geometry”</span>
+2026</a>)</span>. Let the participating light flavours in three colours
+have charges
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>/</mi><mn>3</mn><mo>,</mo><mn>2</mn><mi>/</mi><mn>3</mn><mo>,</mo><mi>−</mi><mn>1</mn><mi>/</mi><mn>3</mn><mo>,</mo><mi>−</mi><mn>1</mn><mi>/</mi><mn>3</mn><mo>,</mo><mi>−</mi><mn>1</mn><mi>/</mi><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(2/3,2/3,-1/3,-1/3,-1/3)</annotation></semantics></math>.
+The fundamental with its conjugate is the real vector of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mn>30</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">SO(30)</annotation></semantics></math>.
+In its adjoint the symmetric flavour pairs in the colour antitriplet
+have multiplicities
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">6,6,3</annotation></semantics></math>
+at charges
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>2</mn><mi>/</mi><mn>3</mn><mo>,</mo><mi>+</mi><mn>1</mn><mi>/</mi><mn>3</mn><mo>,</mo><mi>+</mi><mn>4</mn><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">-2/3,+1/3,+4/3</annotation></semantics></math>.
+The traceless colour-singlet mesons have six charged labels of each sign
+and twelve neutral real directions. The companion paper proves a
+converse under the symmetric diquark and traceless meson postulates and
+constructs a wall for which part of that charge list is a physical
+Wilson-line scalar spectrum <span class="citation"
+data-cites="TwoEndpoint2026">(<a href="#ref-TwoEndpoint2026"
+role="doc-biblioref">GPT-6.2-Astra max 2026</a>)</span>. In particular a
+trace singlet, sextets and extra
+charge-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">4/3</annotation></semantics></math>
+states need an explicit treatment when the whole parent algebra is
+propagated.</p>
+<p>The string choice bearing directly on this second count is an
+orthogonal one. In a Chan–Paton description let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><msup><mi>ℂ</mi><mn>5</mn></msup><mo>⊗</mo><msup><mi>ℂ</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">V=\mathbb C^5\otimes\mathbb C^3</annotation></semantics></math>
+and place the stack with its image. The orthogonal projection picks the
+exterior square
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="normal">Λ</mi><mn>2</mn></msup><mi>V</mi></mrow><annotation encoding="application/x-tex">\Lambda^2 V</annotation></semantics></math>
+in the charged stack-image block. Decomposing it gives
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msup><mi mathvariant="normal">Λ</mi><mn>2</mn></msup><mn>𝟓</mn><mo>,</mo><msup><mrow><mi>Sym</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mn>𝟑</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.278em"></mspace><mo>+</mo><mspace width="0.278em"></mspace><mo stretchy="false" form="prefix">(</mo><msup><mrow><mi>Sym</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mn>𝟓</mn><mo>,</mo><msup><mi mathvariant="normal">Λ</mi><mn>2</mn></msup><mn>𝟑</mn><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">(\Lambda^2\mathbf5,\operatorname{Sym}^2\mathbf3)
+ \;+\;(\operatorname{Sym}^2\mathbf5,\Lambda^2\mathbf3).</annotation></semantics></math><span class="equation-number" aria-label="Equation 18">(18)</span></span>
+The second term is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>𝟏𝟓</mn><mo>,</mo><mover><mn>𝟑</mn><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\mathbf{15},\bar{\mathbf3})</annotation></semantics></math>.
+The opposite projection would put the antisymmetric flavour square in
+the colour antitriplet and give multiplicities
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">3,6,1</annotation></semantics></math>
+in the same charge order. The role of the orientifold sign and the extra
+directions of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mn>32</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">SO(32)</annotation></semantics></math>
+are analysed in the orthogonal interval construction <span
+class="citation" data-cites="realnote Rivero2024 PW1996">(<a
+href="#ref-realnote" role="doc-biblioref"><span>“The Real Structure of a
+Massless Block: <span>SO</span>(30) in the Finite Geometry”</span>
+2026</a>; <a href="#ref-Rivero2024" role="doc-biblioref">Rivero
+2024</a>; <a href="#ref-PW1996" role="doc-biblioref">Polchinski and
+Witten 1996</a>)</span>. A projection of open-string indices determines
+which representations are available. Neumann or Dirichlet polarization
+of the spacetime and internal components, the boundary gauge breaking
+and the mass operator determine which of them are light four-dimensional
+scalars. The projected flavours include an explicit choice to separate
+one up-type quark from the five participating ones.</p>
+<p>The Hořava–Witten walls used for the net index carry
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>8</mn></msub><annotation encoding="application/x-tex">E_8</annotation></semantics></math>
+gauge algebras. The orthogonal construction has different
+ten-dimensional gauge data. Heterotic circle duality or a type-I
+description may relate appropriate lower-dimensional vacua, but a
+proposed identification here needs the charge lattice, Wilson lines,
+projections and their map on these particular matter modes. An
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>6</mn></msub><annotation encoding="application/x-tex">E_6</annotation></semantics></math>
+index of three cannot be inserted directly into the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mn>30</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">SO(30)</annotation></semantics></math>
+branching as a proof of such an identification. Conversely, the
+orthogonal count alone gives no Euler characteristic or chiral index on
+a Calabi–Yau wall. A common mechanism would be particularly interesting
+if it transported the three indexed generations, their unlifted scalar
+partners and their electric charges under one demonstrated duality or
+degeneration.</p>
+<p>Part 36 of the Supplemental Material gives the two orientifold
+projections and their Chan–Paton multiplicities with the electromagnetic
+normalization of the orthogonal construction. These data specify the
+string comparison independently of the choice of a visible bundle on the
+heterotic wall.</p>
+<h2 data-number="7" id="boundary-data-in-a-finite-connes-geometry"><span
+class="header-section-number">7</span> Boundary data in a finite Connes
+geometry</h2>
+<p>The two uses of a wall can be compared at the level of operators. In
+the interval construction the wall is a domain of a first-order
+operator. Specifying its allowed boundary subspace fixes the reflection
+of normal current. Relative boundary subspaces then set the masses of
+standing waves. On a Hořava–Witten wall there are additional propagating
+fields with their own gauge transformations and equations. A compact
+internal wall can supply a finite set of harmonic coefficients. The
+computation above produces precisely such vector spaces, together with a
+positive norm inherited from the ten-dimensional action. Obtaining a
+finite spectral triple of KO-degree six asks how an algebra, its
+opposite action, a grading and a real mass operator act on those
+coefficients.</p>
+<p>For instance choose finite left and right particle spaces
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mi>L</mi></msub><mo>,</mo><msub><mi>H</mi><mi>R</mi></msub></mrow><annotation encoding="application/x-tex">H_L,H_R</annotation></semantics></math>
+from a specified symmetry breaking and spectral cutoff, and let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>:</mo><msub><mi>H</mi><mi>R</mi></msub><mo>→</mo><msub><mi>H</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">M:H_R\to H_L</annotation></semantics></math>
+be the four-dimensional mass link. On
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mi>L</mi></msub><mo>⊕</mo><msub><mi>H</mi><mi>R</mi></msub></mrow><annotation encoding="application/x-tex">H_L\oplus H_R</annotation></semantics></math>
+the self-adjoint odd matrix is given by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>,</mo><msup><mi>M</mi><mo>†</mo></msup></mrow><annotation encoding="application/x-tex">M,M^\dagger</annotation></semantics></math>
+in off-diagonal blocks. Adjoining their conjugates can produce the real
+signs
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>J</mi><mn>2</mn></msup><mo>=</mo><mi>+</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">J^2=+1</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mi>D</mi><mo>=</mo><mi>D</mi><mi>J</mi></mrow><annotation encoding="application/x-tex">JD=DJ</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mi>γ</mi><mo>=</mo><mi>−</mi><mi>γ</mi><mi>J</mi></mrow><annotation encoding="application/x-tex">J\gamma=-\gamma J</annotation></semantics></math>.
+This operation records each independent field together with its
+conjugate in the real module. For a proposed algebra
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝒜</mi><mi>F</mi></msub><annotation encoding="application/x-tex">\mathcal A_F</annotation></semantics></math>
+and its opposite action
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>b</mi><mn>0</mn></msup><mo>=</mo><mi>J</mi><msup><mi>b</mi><mo>*</mo></msup><msup><mi>J</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">b^0=Jb^*J^{-1}</annotation></semantics></math>,
+the finite-order-one condition includes the requirement
+<span class="equation" id="eq:orderone"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>M</mi><msub><mi>a</mi><mi>R</mi></msub><mo>−</mo><msub><mi>a</mi><mi>L</mi></msub><mi>M</mi><mo stretchy="false" form="postfix">)</mo><msubsup><mi>b</mi><mi>R</mi><mn>0</mn></msubsup><mo>−</mo><msubsup><mi>b</mi><mi>L</mi><mn>0</mn></msubsup><mo stretchy="false" form="prefix">(</mo><mi>M</mi><msub><mi>a</mi><mi>R</mi></msub><mo>−</mo><msub><mi>a</mi><mi>L</mi></msub><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">(M a_R-a_L M)b_R^0
+       -b_L^0(M a_R-a_L M)=0 .
+ </annotation></semantics></math><span class="equation-number" aria-label="Equation 19">(19)</span></span>
+Here
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>L</mi></msub><mo>,</mo><msub><mi>a</mi><mi>R</mi></msub></mrow><annotation encoding="application/x-tex">a_L,a_R</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>b</mi><mi>L</mi><mn>0</mn></msubsup><mo>,</mo><msubsup><mi>b</mi><mi>R</mi><mn>0</mn></msubsup></mrow><annotation encoding="application/x-tex">b_L^0,b_R^0</annotation></semantics></math>
+are the respective actions on the two ends. There is the corresponding
+adjoint equation and the condition that left and opposite actions
+commute. Equation <a href="#eq:orderone" data-reference-type="eqref"
+data-reference="eq:orderone">(19)</a> can be checked on actual matrices
+obtained from wall zero modes. A matching dimension or gauge Lie algebra
+supplies none of these matrices by itself.</p>
+<p>For a Calabi–Yau wall, one source of holomorphic cubic couplings is
+the integral of three bundle-valued
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(0,1)</annotation></semantics></math>
+modes contracted with the holomorphic three-form and an invariant gauge
+tensor. In local notation an overlap has the form
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝒴</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi></mrow></msub><mspace width="0.222em"></mspace><mo>∝</mo><mspace width="0.222em"></mspace><msub><mo>∫</mo><mi>X</mi></msub><mi mathvariant="normal">Ω</mi><mo>∧</mo><mrow><mi>tr</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>ψ</mi><mi>i</mi></msub><mo>∧</mo><msub><mi>ψ</mi><mi>j</mi></msub><mo>∧</mo><msub><mi>ψ</mi><mi>k</mi></msub><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathcal Y_{ijk}\ \propto\
+  \int_X\Omega\wedge\operatorname{tr}
+         (\psi_i\wedge\psi_j\wedge\psi_k).</annotation></semantics></math><span class="equation-number" aria-label="Equation 20">(20)</span></span>
+The trace here denotes an allowed invariant contraction of the embedded
+gauge factors. It vanishes for triples that admit no invariant. Gauge
+invariance, the finite quotient characters and the cohomological product
+impose selection rules. The kinetic norm matrix must be used to
+canonically normalize the modes before interpreting singular values or
+mixing angles. Giving an appropriate scalar a vacuum value can then
+yield a candidate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>.
+This specifies a calculation that could decide if the same wall physics
+produces the lepton and quark blocks of a real finite triple. The index
+alone leaves all these overlap integrals undetermined.</p>
+<p>There is also an inverse construction with which to compare any such
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>.
+In the exact interval realization in Part 22 of the companion supplement
+<span class="citation" data-cites="boundarynote TwoEndpoint2026">(<a
+href="#ref-boundarynote" role="doc-biblioref"><span>“The Finite
+<span>D</span>irac Operator as a Boundary Condition on an
+Interval”</span> 2026</a>; <a href="#ref-TwoEndpoint2026"
+role="doc-biblioref">GPT-6.2-Astra max 2026</a>)</span>, the relative
+wall rotation fixes the light momentum by an angle divided by the
+interval length. In a scalar channel of desired positive mass
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+choose
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>δ</mi><mi>f</mi></msub><mo>=</mo><mi>m</mi><mi>ℓ</mi></mrow><annotation encoding="application/x-tex">\delta_f=m\ell</annotation></semantics></math>
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mi>m</mi><mi>ℓ</mi><mo>&lt;</mo><mi>π</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">0\leq m\ell&lt;\pi/2</annotation></semantics></math>.
+The principal-angle construction gives a standing-wave frequency
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>,
+and the other axial channels are at frequencies displaced by integer
+multiples of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mi>/</mi><mi>ℓ</mi></mrow><annotation encoding="application/x-tex">\pi/\ell</annotation></semantics></math>.
+For several singular values choose the rotations in their respective
+singular planes, respecting the particle/conjugate pairing. Thus many
+finite mass matrices can be encoded in a wall domain. Agreement with an
+assigned matrix is informative about realization. Agreement with the
+matrix calculated from normalized string wall overlaps and an
+independently determined reflection would also test its physical
+origin.</p>
+<p>The two walls in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>8</mn></msub><mo>×</mo><msub><mi>E</mi><mn>8</mn></msub></mrow><annotation encoding="application/x-tex">E_8\times E_8</annotation></semantics></math>
+interval have separate gauge bundles. In the standard embedding just
+used the second bundle is trivial and the corresponding
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>8</mn></msub><annotation encoding="application/x-tex">E_8</annotation></semantics></math>
+is hidden from the charged zero modes of the first. One cannot identify
+these two physical walls with left and right light fermion coefficients
+simply by naming the two ends. A mass linking a mode on one wall to a
+mode on the other needs a mediator or gauge-covariant transport with the
+indicated endpoint representations. In the absence of such a map the
+independent boundary gauge symmetries forbid a bare cross term for
+nontrivial charges. The finite-triple link can instead connect
+representations on the same physical wall after symmetry breaking. Which
+realization occurs can be tested first on fast data, the gauge
+characters and allowed cubic couplings, before computing a detailed
+tower spectrum.</p>
+<h2 data-number="8" id="what-a-route-to-five-would-have-to-change"><span
+class="header-section-number">8</span> What a route to five would have
 to change</h2>
 <p>For the unquotiented
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math>,
@@ -599,7 +1761,7 @@ from
 to
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mn>4</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">H^4(B)</annotation></semantics></math>
 has matrix
-<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\begin{pmatrix}3&amp;0\\2&amp;3\end{pmatrix}</annotation></semantics></math><span class="equation-number" aria-label="Equation 7">(7)</span></span>
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\begin{pmatrix}3&amp;0\\2&amp;3\end{pmatrix}</annotation></semantics></math><span class="equation-number" aria-label="Equation 21">(21)</span></span>
 in the bases
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>h</mi><mo>,</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(h,k)</annotation></semantics></math>
 and
@@ -625,23 +1787,115 @@ in Part 53 has an actual sphere collapse with a specified monopole. Its
 bounded fermionic spectrum converges to a five-sphere Dirac operator on
 a rank-two bundle. In that construction the monopole charge and the
 origin of its weak multiplicities must be supplied.</p>
-<p>A concrete next calculation is to choose an upper defect or gauge
-sector with a half-integral weak multiplet, specify its coupling to the
-Reeb and Betti vectors, and follow its normalizable modes through a
-degeneration. Its light spectrum should reproduce the charged currents
-at the middle and the vectorlike colour and electric charges at five.
-The smooth Freund–Rubin solution supplies genuine eleven-dimensional
-field equations, a quantized radius and massless weak vectors. Those
-facts, the spin calculation and the membrane bound give independently
-testable requirements for this proposed extension. The accompanying
-endpoint paper constructs a coefficient gauge action for which both
-limits of the weak current can be evaluated explicitly <span
+<p>The Calabi–Yau wall gives a different topological test of the next
+step. Suppose one wanted to keep this particular smooth
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+and exhibit it as a circle bundle over a closed five-manifold. The
+vertical circle generator would be a nowhere vanishing tangent vector.
+Poincaré–Hopf would give
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>χ</mi><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\chi(X)=0</annotation></semantics></math>,
+in conflict with the computed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>6</mn></mrow><annotation encoding="application/x-tex">-6</annotation></semantics></math>.
+The argument also applies to a smooth locally free circle action with
+finite stabilizers. It concerns a regular collapse by a circle action on
+this fixed compact manifold. A fibration with degenerating orbits, a
+boundary, a topology change or a finite spectral window need not obey
+that premise.</p>
+<p>There is a more quantitative version if singular orbits are allowed
+in a smooth circle action on the same underlying manifold. Its fixed
+locus must have total Euler number
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>6</mn></mrow><annotation encoding="application/x-tex">-6</annotation></semantics></math>.
+Choose an invariant metric and take a generic element of the circle
+whose powers are dense. Its fixed set is exactly the full group fixed
+set. In normal directions at a fixed component the derivative is a
+direct sum of nontrivial real rotations and one minus that derivative
+has positive determinant. The Lefschetz number counts the Euler number
+of each fixed component with positive normal sign. One can see this by a
+small perturbation along a tangent vector field on each component with
+isolated zeros. The positive normal sign leaves their local indices
+intact. The circle element is homotopic to the identity, so its
+Lefschetz number is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>χ</mi><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\chi(X)</annotation></semantics></math>.
+In particular isolated fixed points alone cannot account for the
+required negative total. At the smooth Ricci-flat metric of the standard
+embedding the integrated Bochner identity forces every Killing field to
+be parallel. This quotient has
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b_1=0</annotation></semantics></math>,
+so no nonzero parallel one-form exists. A route through circle orbits
+would have to change the metric or pass through a singular description
+before using that symmetry.</p>
+<p>The wall still gives a positive comparison at the level of charge
+representations. After restriction of a single left-handed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>𝟏𝟔</mn><annotation encoding="application/x-tex">\mathbf{16}</annotation></semantics></math>
+to colour and the ordinary unbroken electric generator its charged and
+neutral particle records come in conjugate pairs
+<span class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mn>𝟑</mn><mrow><mn>2</mn><mi>/</mi><mn>3</mn></mrow></msub><mo>+</mo><msub><mover><mn>𝟑</mn><mo accent="true">‾</mo></mover><mrow><mi>−</mi><mn>2</mn><mi>/</mi><mn>3</mn></mrow></msub><mo>+</mo><msub><mn>𝟑</mn><mrow><mi>−</mi><mn>1</mn><mi>/</mi><mn>3</mn></mrow></msub><mo>+</mo><msub><mover><mn>𝟑</mn><mo accent="true">‾</mo></mover><mrow><mn>1</mn><mi>/</mi><mn>3</mn></mrow></msub><mo>+</mo><msub><mn>𝟏</mn><mrow><mi>−</mi><mn>1</mn></mrow></msub><mo>+</mo><msub><mn>𝟏</mn><mn>1</mn></msub><mo>+</mo><mn>2</mn><mspace width="0.167em"></mspace><msub><mn>𝟏</mn><mn>0</mn></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathbf3_{2/3}+\bar{\mathbf3}_{-2/3}
+ +\mathbf3_{-1/3}+\bar{\mathbf3}_{1/3}
+ +\mathbf1_{-1}+\mathbf1_{1}+2\,\mathbf1_{0}.</annotation></semantics></math><span class="equation-number" aria-label="Equation 22">(22)</span></span>
+With a right neutrino and allowed Dirac links this is the representation
+underlying one vectorlike Dirac family at five. The chirality index is
+computed for the larger unbroken group on a six-dimensional elliptic
+operator. Restricting representations and pairing equal-charge left and
+right particles after weak breaking is compatible with that index. It
+proves a representation-theoretic prerequisite for the transition. It
+does not supply a five-dimensional Dirac operator or ensure that every
+allowed link has nonzero mass. The extra
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>𝟏𝟎</mn><mo>+</mo><mn>𝟏</mn></mrow><annotation encoding="application/x-tex">\mathbf{10}+\mathbf1</annotation></semantics></math>
+in each
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>𝟐𝟕</mn><annotation encoding="application/x-tex">\mathbf{27}</annotation></semantics></math>
+and the six conjugate pairs must also be tracked in a finite spectral
+window.</p>
+<p>For an operator test, let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mi>E</mi></msub><annotation encoding="application/x-tex">P_E</annotation></semantics></math>
+be the spectral projector onto an interval isolated by a gap and let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mo>±</mo></msub><annotation encoding="application/x-tex">T_\pm</annotation></semantics></math>
+be the weak generators with the microscopic current inner product. The
+restricted representations determine possible matrix entries of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>E</mi></msub><msub><mi>T</mi><mo>±</mo></msub><msub><mi>P</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">P_E T_\pm P_E</annotation></semantics></math>.
+Their observed interaction also depends on the inverse transverse gauge
+operator between the currents. On the geometric product that inverse is
+set by the metric, flux and vector mixing. A wall current depends on the
+normalization and support of the wall kinetic term. A family in which
+the charged current vanishes at five has to control this matrix element
+or the weak-vector mass, as well as the spectrum of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>E</mi></msub><mi>D</mi><msub><mi>P</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">P_E D P_E</annotation></semantics></math>.
+The interval construction in the companion paper evaluates the full
+transverse exchange for a specified coefficient gauge field <span
 class="citation" data-cites="TwoEndpoint2026">(<a
 href="#ref-TwoEndpoint2026" role="doc-biblioref">GPT-6.2-Astra max
-2026</a>)</span>.</p>
+2026</a>)</span>. It provides an explicit observable against which
+either string origin can be tested.</p>
+<p>The three prospective parents therefore suggest different concrete
+calculations. On
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>M</mi><mn>111</mn></msup><annotation encoding="application/x-tex">M^{111}</annotation></semantics></math>
+a defect or additional gauge operator would have to supply the missing
+weak centre character and the independent twist exhibited in Eq. <a
+href="#eq:fourier" data-reference-type="eqref"
+data-reference="eq:fourier">(10)</a> and its doublet test. On
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>S</mi><mn>5</mn></msup><mo>×</mo><msup><mi>S</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">S^5\times S^2</annotation></semantics></math>
+the first dynamical quantity is the mass of the relative-radius
+perturbation after including any proposed stabilizing sector, followed
+by its effect on the monopole and on all light charged fields. On the
+heterotic wall the first quantities are the character-resolved matter
+groups and the rank of the allowed mass map on the six conjugate pairs,
+then the order-one test on the remaining normalized overlaps. Each route
+already supplies massless weak vectors in its stated regime. A single
+compactification realizing the finite middle and a vectorlike
+five-dimensional operator while satisfying all these dynamical and
+charge requirements remains open.</p>
 <h2 id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent"
 data-entry-spacing="0" role="list">
+<div id="ref-BF1982" class="csl-entry" role="listitem">
+Breitenlohner, P., and D. Z. Freedman. 1982. <span>“Stability in Gauged
+Extended Supergravity.”</span> <em>Ann. Phys.</em> 144: 249–81.
+</div>
+<div id="ref-CHSW1985" class="csl-entry" role="listitem">
+Candelas, P., G. T. Horowitz, A. Strominger, and E. Witten. 1985.
+<span>“Vacuum Configurations for Superstrings.”</span> <em>Nucl. Phys.
+B</em> 258: 46–74. <a
+href="https://doi.org/10.1016/0550-3213(85)90602-9">https://doi.org/10.1016/0550-3213(85)90602-9</a>.
+</div>
 <div id="ref-CJS1978" class="csl-entry" role="listitem">
 Cremmer, E., B. Julia, and J. Scherk. 1978. <span>“Supergravity Theory
 in Eleven Dimensions.”</span> <em>Phys. Lett. B</em> 76: 409–12. <a
@@ -672,6 +1926,41 @@ href="https://doi.org/10.1016/0370-2693(80)90590-0">https://doi.org/10.1016/0370
 GPT-6.2-Astra max. 2026. <span>“From a Finite <span>KO</span>-Six
 Geometry Toward Five and Seven Dimensions.”</span>
  <a class="local-reference" href="two_endpoint_limits.html">Read the paper in HTML</a>.</div>
+<div id="ref-HW1996" class="csl-entry" role="listitem">
+Hořava, P., and E. Witten. 1996. <span>“Eleven-Dimensional Supergravity
+on a Manifold with Boundary.”</span> <em>Nucl. Phys. B</em> 475: 94. <a
+href="https://doi.org/10.1016/0550-3213(96)00308-2">https://doi.org/10.1016/0550-3213(96)00308-2</a>.
+</div>
+<div id="ref-PW1996" class="csl-entry" role="listitem">
+Polchinski, J., and E. Witten. 1996. <span>“Evidence for Heterotic-Type
+<span>I</span> String Duality.”</span> <em>Nucl. Phys. B</em> 460: 525.
+<a
+href="https://doi.org/10.1016/0550-3213(95)00614-1">https://doi.org/10.1016/0550-3213(95)00614-1</a>.
+</div>
+<div id="ref-Rivero2005" class="csl-entry" role="listitem">
+Rivero, A. 2005. <span>“Supersymmetry with Composite Bosons.”</span>
+</div>
+<div id="ref-Rivero2024" class="csl-entry" role="listitem">
+———. 2024. <span>“An Interpretation of Scalars in
+<span>SO</span>(32).”</span> <em>Eur. Phys. J. C</em> 84: 1058. <a
+href="https://arxiv.org/abs/2407.05397">https://arxiv.org/abs/2407.05397</a>.
+</div>
+<div id="ref-boundarynote" class="csl-entry" role="listitem">
+<span>“The Finite <span>D</span>irac Operator as a Boundary Condition on
+an Interval.”</span> 2026.
+ <a class="local-reference" href="boundary_condition_note.html">Read the paper in HTML</a>.</div>
+<div id="ref-realnote" class="csl-entry" role="listitem">
+<span>“The Real Structure of a Massless Block: <span>SO</span>(30) in
+the Finite Geometry.”</span> 2026.
+ <a class="local-reference" href="real_structure_note.html">Read the paper in HTML</a>.</div>
+<div id="ref-TianYau1987" class="csl-entry" role="listitem">
+Tian, G., and S.-T. Yau. 1987. <span>“Three-Dimensional Algebraic
+Manifolds with
+<span><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">c_1=0</annotation></semantics></math></span>
+and
+<span><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>χ</mi><mo>=</mo><mi>−</mi><mn>6</mn></mrow><annotation encoding="application/x-tex">\chi=-6</annotation></semantics></math></span>.”</span>
+In <em>Mathematical Aspects of String Theory</em>. World Scientific.
+</div>
 <div id="ref-Witten1981" class="csl-entry" role="listitem">
 Witten, E. 1981. <span>“Search for a Realistic
 <span>K</span>aluza-<span>K</span>lein Theory.”</span> <em>Nucl. Phys.

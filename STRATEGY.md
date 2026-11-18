@@ -62,7 +62,7 @@ The identification "the two sheets are a truncated interval, with length proport
 
 ## Papers
 
-The [M-theory endpoint paper](paper/seven_m_theory.tex) tests a specific upper geometry against the eleven-dimensional field equations. The smooth Freund–Rubin solution on $M^{111}$ has weak isometry vectors. Its bulk spin lift, the charge and mass bound for a wrapped membrane, and spinor descent on the six-dimensional base constrain its particle content. A singular transition, a different upper space or additional charged fields would require an explicit reduction to the lower Dirac operator.
+The seven-dimensional candidates now include two geometric weak groups and a wall gauge group. On $M^{111}$ the Reeb sectors have integer weak isospin. On the electric $S^5\times S^2$ product the weak rotations and projection to five coexist, but its relative-radius mode has $m^2L_{\rm AdS}^2=-3$. On a heterotic wall the explicit standard embedding gives nine $\mathbf{27}$s and six conjugates. The three net generations and supersymmetric scalars motivate a calculation of the masses of the vectorlike pairs and of the finite Dirac links. [Seven-dimensional M-theory and string candidates](paper/seven_m_theory.tex)
 
 In the two-interval family a flavour reflection leaves three periodic generations out of four and gives the fourth a gap $\pi/(2d)$. A fixed winding-dependent coefficient action keeps the electric coupling finite and suppresses the weak currents toward five. A source on a face resolves the aspect ratio left free by zero-mode matching. The rank of the physical wall coupling and the origin of the scalar partner fields remain open. [Three-family Dirac window and weak currents](paper/two_endpoint_limits.tex)
 

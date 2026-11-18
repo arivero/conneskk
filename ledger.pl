@@ -2375,6 +2375,37 @@ checked_by(m111_circle_descent, gpt_6_2_astra_max, by_hand).
 referee_pending(m111_circle_descent).
 addresses(t18, m111_circle_descent).
 
+claim(m111_membrane_saturation, proposition, proved, "M-theory endpoint paper, smooth membrane representatives", "A nonzero-charge smooth immersed closed surface cannot saturate the stated comass bound on M111. Equality would give an unbranched covering of the two-sphere of absolute degree 3 times the absolute integral charge. The infimum over singular limits is open.").
+source(m111_membrane_saturation, 'paper/seven_m_theory.tex', '').
+depends(m111_membrane_saturation, m111_membrane_charge).
+attempted_by(m111_membrane_saturation, gpt_6_2_astra_max).
+checked_by(m111_membrane_saturation, gpt_6_2_astra_max, by_hand).
+referee_pending(m111_membrane_saturation).
+addresses(t18, m111_membrane_saturation).
+
+claim(m111_horizontal_modes, proposition, proved, "M-theory endpoint paper, Reeb sectors and a separate doublet", "For odd j the Reeb sectors give horizontal Dolbeault coefficients O(3n,2n), n=jr-1/2. Their kernels have integer weak isospin. The O(-4,1) quark-doublet twist pulls back to class -11u on the primitive total space.").
+source(m111_horizontal_modes, 'paper/seven_m_theory.tex', '').
+depends(m111_horizontal_modes, m111_circle_descent).
+depends(m111_horizontal_modes, l53_flag_multiplets).
+attempted_by(m111_horizontal_modes, gpt_6_2_astra_max).
+checked_by(m111_horizontal_modes, gpt_6_2_astra_max, by_hand).
+referee_pending(m111_horizontal_modes).
+addresses(t18, m111_horizontal_modes).
+
+claim(fr_product_relative_radius, proposition, proved, "M-theory endpoint paper, electric product", "The unwarped electric Freund-Rubin product with round S5 and S2 has radii in ratio two and geometric weak rotations. The volume-preserving relative-radius perturbation has mass squared times the AdS radius squared equal to -3, below the AdS4 stability bound.").
+source(fr_product_relative_radius, 'paper/seven_m_theory.tex', '').
+attempted_by(fr_product_relative_radius, gpt_6_2_astra_max).
+checked_by(fr_product_relative_radius, gpt_6_2_astra_max, by_hand).
+referee_pending(fr_product_relative_radius).
+addresses(t18, fr_product_relative_radius).
+
+claim(heterotic_wall_three_index, proposition, conditional, "M-theory endpoint paper, heterotic wall spectrum", "The explicit free order-three quotient of an anticanonical divisor in two cubic surfaces has Hodge numbers (6,9) and Euler number -6. The supersymmetric standard embedding with trivial Wilson line gives nine 27s and six conjugates before further breaking, three net families. Its Euler number excludes a smooth locally free circle action on this same threefold.").
+source(heterotic_wall_three_index, 'paper/seven_m_theory.tex', '').
+attempted_by(heterotic_wall_three_index, gpt_6_2_astra_max).
+checked_by(heterotic_wall_three_index, gpt_6_2_astra_max, by_hand).
+referee_pending(heterotic_wall_three_index).
+addresses(t18, heterotic_wall_three_index).
+
 claim(gh1_berger_charge_kernel, proposition, proved, "Issue 1 section 4", "On round S5 the spin Dirac twisted by the dual spin bundle and the exterior Killing-spinor bundle has kernel exterior(4) and gap sqrt(5)/R. Under the rank-one stabilizer it is the colour and electric charge module of one all-left generation. A separately gauged projector masses six vector directions.").
 source(gh1_berger_charge_kernel, 'results/issues/01.md', '').
 attempted_by(gh1_berger_charge_kernel, gpt_6_2_astra_max).
