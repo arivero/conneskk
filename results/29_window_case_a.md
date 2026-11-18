@@ -8,7 +8,7 @@
 
 1. Under K(rho), the half-cylinder kernel of T_M^* is exactly one copy of the 4 for m large. Its projection differs from the projection onto the embedded kernel of F^* by O(1/m). The lower bound on the complement uses kappa_a(rho)^2 - O(1/m).
 2. K(1) holds. For each fixed 0 < delta < min(2, kappa_a(1)) and for M large enough, the window conclusion of Theorem 29.7 holds with the wall modes replaced by the half-cylinder kernel.
-3. kappa_a(1) >= sqrt(5) - 3/2, with lower bound sqrt(3) on the 4. The signed fibre weight tends to -w with w >= 1/7. Conditional on the matrix of Proposition 28.13, w = 2/3 and the two squared singular values on the 4 are (45 +- 3 sqrt(33))/8, with the smaller singular value 1.863...
+3. kappa_a(1) >= sqrt(5) - 3/2, with lower bound sqrt(3) on the 4. The signed fibre weight tends to -w with w >= 1/7. The [geometric angular calculation](issues/10.md#the-pull-back-prefactor-and-smooth-split-collars) gives w = 2/3 and the two squared singular values on the 4 are (45 +- 3 sqrt(33))/8, with the smaller singular value 1.863...
 4. At another wall radius the same conclusion holds under K(rho).
 
 *Scope.* At other radii only finitely many V can carry a kernel, those with |D_3(rho) (+) D_1(rho)| <= 3/(2 rho), by ellipticity. In Python, on the 16, 20 and 40 and for rho in [0.2, 4], the compressed block has smallest singular value at least 1.30. The [uniform radius estimate](issues/13.md) proves K(rho) on an explicit interval with approximate endpoints 0.8842 and 1.3176. It also proves a nonzero fibre weight on a smaller interval. The kernel test outside the larger interval remains open.
