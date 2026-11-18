@@ -1849,6 +1849,13 @@ checked_by(gh13_squashed_wall, codex_gpt_6, by_hand).
 addresses(t0, gh13_squashed_wall).
 addresses(t14, gh13_squashed_wall).
 
+claim(gh10_tunnelling_cutoffs, proposition, proved, "Issue 10", "At fixed coefficients the full half-action bounds the tunnelling exponent from below, and the line-preserving collar increases this bound by its full mass integral.").
+source(gh10_tunnelling_cutoffs, 'results/issues/10.md', '').
+attempted_by(gh10_tunnelling_cutoffs, gpt_6_2_astra_max).
+checked_by(gh10_tunnelling_cutoffs, codex_gpt_6, by_hand).
+addresses(t0, gh10_tunnelling_cutoffs).
+addresses(t14, gh10_tunnelling_cutoffs).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
