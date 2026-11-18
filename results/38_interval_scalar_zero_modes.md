@@ -1,4 +1,4 @@
-# Under a five-dimensional Yang-Mills action the massless four-dimensional scalars from the interval component of an so(30) connection form the orthogonal complement of k_0 + k_l, so lemma 22's parent has none, wall algebras M_15(C) give exactly Lambda^2 V + Lambda^2 V-bar, and a generator has a massless vector or a massless scalar, never both
+# Vector and scalar zero modes of an so(30) interval connection with two wall algebras
 
 **Status.** Theorem (Theorem 11.3). Proved by Claude Opus 5.5 on 4 November 2026. The local zero-mode calculation holds once the gauge action and the Yang-Mills boundary variational problem are specified, which the nonunital corner representation does not do by itself (pi(u) J-hat pi(u) J-hat^{-1} = 0); the counts are 210 real scalar and 225 real vector components for two U(15) walls, tree-level field counts; the double coset needs det g(0) = det g(l) and the component qualification. Ledger row `d11_so30_zero`. Theorem 11.3 in the section on the interval parent of paper/real_structure_note.tex ("\supp{38}"); stated in the section on the Higgs field of paper/connes_kk_dictionary_note.tex ("\supp{38}"), whose table lists it with one reading.
 
@@ -8,7 +8,7 @@
 
 1. The gauge group is {g : I -> O(30), g(0) in K_0, g(l) in K_l}, with det g(0) = det g(l); the holonomy of a_x transforms as P -> g(l) P g(0)^{-1}, so the moduli are the orbits in SO(30) of pairs (k_l,k_0) in K_l x K_0 with equal determinants. For K_l and K_0 contained in SO(30) these are the usual double cosets. At trivial background the massless four-dimensional scalars from a_x form the orthogonal complement of k_0 + k_l in so(30), and the vector zero modes form k_0 cap k_l.
 2. In lemma 22's algebra C_0 = A, so k_0 = so(30), and there are no such scalars, for any algebra of this kind.
-3. If C_0 = C_l = M_15(C), the massless scalars are exactly Lambda^2 V + Lambda^2 V-bar, 210 real components with colour-antitriplet counts (6, 6, 3), and the massless vectors are u(15), 225 real components.
+3. If C_0 = C_l = M_15(C), the real scalar space underlies Lambda^2 V, with complexification Lambda^2 V + Lambda^2 V-bar. There are 210 real scalar components with colour-antitriplet counts (6, 6, 3), and the massless vectors are u(15), 225 real components.
 4. A generator in k_0 cap k_l has a massless vector and no massless scalar, one in the orthogonal complement of k_0 + k_l has a massless scalar and no massless vector, and all others have neither. For aligned walls the towers are n pi/l in the first two cases and (n - 1/2) pi/l on k_0 cap k_l^perp and k_l cap k_0^perp; for k_0 spanned by T_1 and k_l by cos(phi) T_1 + sin(phi) T_2 they move to k l = n pi +- phi, the mechanism of lemma 23.
 5. With colour unbroken at both walls the (1, 8) of Lambda^2(30) is a vector, so Lambda^2(30) cannot consist entirely of massless scalars; in item 3 the (24, 8) + (24, 1) + (1, 8) + (1, 1) are vectors and the scalars are (15, 3-bar) + (10, 6) and conjugates.
 

@@ -497,7 +497,7 @@ checked_by(d11_so30_block, claude_opus_5_5, by_hand).
 checked_by(d11_so30_block, sonnet_5_5, by_hand).
 checked_by(d11_so30_block, terra_6_1, by_hand).  % 5 Nov 2026: blocks and counts confirmed; real-vector-space decomposition; nonunital representation noted
 addresses(t14, d11_so30_block).
-claim(d11_so30_zero, theorem, proved, "Theorem 11.3", "Under a five-dimensional Yang-Mills action at trivial background, with the gauge action from a unital completion of the corner representation, massless interval scalars form (k_0 + k_l)^perp and vectors k_0 cap k_l: none in lemma 22's parent, Lambda^2 V + conjugate (210 real) with u(15) vectors (225 real) for M_15(C) at both walls; a generator has a massless vector or scalar, never both; tree-level counts.").
+claim(d11_so30_zero, theorem, proved, "Theorem 11.3", "Under a five-dimensional Yang-Mills action at trivial background, with the gauge action from a unital completion of the corner representation, the tree-level interval scalars form (k_0 + k_l)^perp and vectors k_0 cap k_l. A full wall removes the scalars. Two U(15) walls give the underlying real space of Lambda^2 V (210 real) and u(15) vectors (225 real). Mixed-parity directions give neither zero mode.").
 source(d11_so30_zero, 'lemmas/38_so30_fluctuations.md', '').
 attempted_by(d11_so30_zero, claude_opus_5_5).
 checked_by(d11_so30_zero, claude_opus_5_5, by_hand).

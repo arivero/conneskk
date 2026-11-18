@@ -1733,7 +1733,7 @@ attempted_by(l30_poles, claude_opus_5_5).
 claim(l30_localized, proposition, proved, "Proposition 30.3", "With mu = mu_* eps^alpha and mu l = (1 - alpha) log(1/eps) + c_0: m ~ 2 mu_* exp(-c_0) eps, Delta ~ mu_* eps^alpha, width/l -> 0, and the exact identity r = (m/(mu + kappa))^2 for the opposite-wall coefficient r.").
 source(l30_localized, 'lemmas/30_massless_limit_as_a_joint_limit.md', '').
 attempted_by(l30_localized, claude_opus_5_5).
-claim(l30_cylinder, corollary, proved, "Corollary 30.4", "On the cylinder of lemma 24, with finite data on its C^4 so that r = 4, the cutoff E_* eps^beta isolates the prescribed window, and the count at fixed energy has seven-dimensional Weyl growth.").
+claim(l30_cylinder, corollary, proved, "Corollary 30.4", "On the cylinder of lemma 24, let the axial length and transverse radius grow as eps^(-alpha) and eps^(-gamma), with 0 < alpha,gamma < beta < 1. The cutoff E_* eps^beta isolates the four prescribed states and the fixed-energy count grows proportionally to the volume times E^7. At fixed transverse radius below its first positive threshold only the axial tower contributes.").
 source(l30_cylinder, 'lemmas/30_massless_limit_as_a_joint_limit.md', '').
 depends(l30_cylinder, l30_interval).
 attempted_by(l30_cylinder, claude_opus_5_5).
