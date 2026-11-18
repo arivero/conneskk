@@ -5,4 +5,5 @@ Numbers correspond to the original discussions. Each calculation states its inpu
 | Issue | Calculation | Outcome |
 |---|---|---|
 | [#3](https://github.com/arivero/conneskk/issues/3) | [The Berry connection of a moving Dirac kernel](03.md) | Kato transport gives the two motion terms and distinguishes the two admissible collar connections. |
+| [#13](https://github.com/arivero/conneskk/issues/13) | [The squashed twistor wall near the symmetric radius](13.md) | Eight states on an explicit open interval, with a smaller interval of nonzero fibre weight. |
 | [#20](https://github.com/arivero/conneskk/issues/20) | [The hypercharge projection at a free electroweak vacuum](20.md) | An explicit continuous family crosses the benchmark before any scale fit. |
