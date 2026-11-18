@@ -1911,8 +1911,7 @@ addresses(t14, gh5_ps_potential).
 claim(gh6_elliptic_weyl, proposition, proved, "Issue 6", "The Weyl group of each holonomy centralizer gives the spin algebra of Lemma 49, and the normalized A2 Cartan pairing induces a Weyl-equivariant isogeny to the dual four-torus with kernel E[3].").
 source(gh6_elliptic_weyl, 'results/issues/06.md', '').
 attempted_by(gh6_elliptic_weyl, gpt_6_2_astra_max).
-checked_by(gh6_elliptic_weyl, gpt_6_2_astra_max, by_hand).
-referee_pending(gh6_elliptic_weyl).
+checked_by(gh6_elliptic_weyl, codex_gpt_6, by_hand).
 addresses(t16, gh6_elliptic_weyl).
 addresses(t18, gh6_elliptic_weyl).
 
@@ -1926,8 +1925,7 @@ addresses(t16, gh7_quark_wall).
 claim(gh8_three_torus_blocks, proposition, proved, "Issue 8", "An endomorphism-valued Wilson line and three-form from a single normal flavour endomorphism realize arbitrary three positive doublets with prescribed orientations; a degree-three elliptic zero sector realizes the multiplicity.").
 source(gh8_three_torus_blocks, 'results/issues/08.md', '').
 attempted_by(gh8_three_torus_blocks, gpt_6_2_astra_max).
-checked_by(gh8_three_torus_blocks, gpt_6_2_astra_max, by_hand).
-referee_pending(gh8_three_torus_blocks).
+checked_by(gh8_three_torus_blocks, codex_gpt_6, by_hand).
 addresses(t8, gh8_three_torus_blocks).
 addresses(t12, gh8_three_torus_blocks).
 addresses(t16, gh8_three_torus_blocks).
@@ -2025,7 +2023,7 @@ addresses(t14, gh16_superspin_bound).
 claim(gh16_high_spin_mass, proposition, proved, "Issue 16", "For the normalized relative SU(2) BFSS operator, the sharper Clifford, slice and colour-average estimates give E >= 1.53497 for second Spin(9) weight > 10. Under the specified light-cone dictionary this gives M l_p >= 1.3428.").
 source(gh16_high_spin_mass, 'results/issues/16.md', '').
 attempted_by(gh16_high_spin_mass, gpt_6_2_astra_max).
-checked_by(gh16_high_spin_mass, gpt_6_1_terra, by_hand).
+checked_by(gh16_high_spin_mass, terra_6_1, by_hand).
 addresses(t14, gh16_high_spin_mass).
 
 claim(gh16_planck_weights, proposition, proved, "Issue 16, The remaining two-D0 mass thresholds", "A sharper radial and transverse form bound plus a four-plane angular multiplier puts every protected charge-two BFSS superspin with weight sum at least seven above the Planck threshold. There remain 23 integral and 12 half-integral protected labels and possible embedded states in the even symmetric family.").
@@ -2107,18 +2105,21 @@ claim(gh19_s1, claim, numerical, "Issue 19, S1", "Thomson alpha times the line-s
 source(gh19_s1, 'results/issues/19.md', '').
 attempted_by(gh19_s1, gpt_6_2_astra_max).
 checked_by(gh19_s1, gpt_6_2_astra_max, python).
+checked_by(gh19_s1, codex_gpt_6, python).
 addresses(t13, gh19_s1).
 
 claim(gh19_s2, claim, numerical, "Issue 19, S2", "The charged-lepton scale exceeds the mean nucleon mass divided by three by 0.2802 percent.").
 source(gh19_s2, 'results/issues/19.md', '').
 attempted_by(gh19_s2, gpt_6_2_astra_max).
 checked_by(gh19_s2, gpt_6_2_astra_max, python).
+checked_by(gh19_s2, codex_gpt_6, python).
 addresses(t13, gh19_s2).
 
 claim(gh19_s3, claim, numerical, "Issue 19, S3", "Thomson alpha times the Fermi VEV exceeds the tau mass by about 1.116 percent.").
 source(gh19_s3, 'results/issues/19.md', '').
 attempted_by(gh19_s3, gpt_6_2_astra_max).
 checked_by(gh19_s3, gpt_6_2_astra_max, python).
+checked_by(gh19_s3, codex_gpt_6, python).
 addresses(t13, gh19_s3).
 
 claim(gh11_flat_folds, proposition, proved, "Issue 11", "For 0<=n2<nc the left stationary curve has a unique maximum exactly when n2>69/50, yielding the fold and all roots. For integer n2=1,2 and positive integer n1 all interior stationary points are maxima.").
@@ -2127,6 +2128,178 @@ attempted_by(gh11_flat_folds, gpt_6_2_astra_max).
 checked_by(gh11_flat_folds, terra_6_1, by_hand).
 addresses(t13, gh11_flat_folds).
 addresses(t5b, gh11_flat_folds).
+
+claim(gh1_vortex_neck, theorem, proved, "Issue 1, gravitating two-vortex sphere", "At fixed critical Einstein-Bogomolny couplings the equatorial radius is sqrt(2) and the diameter P diverges. In the vortex root the kth singlet positive energy obeys P E_k -> k pi. In its square the two zero modes localize at opposite caps and all other modes stay separated from zero in vortex units.").
+source(gh1_vortex_neck, 'results/55_gravitating_vortex_cylinder.md', '').
+attempted_by(gh1_vortex_neck, gpt_6_2_astra_max).
+checked_by(gh1_vortex_neck, gpt_6_1_terra, by_hand).
+addresses(t14, gh1_vortex_neck).
+addresses(t18, gh1_vortex_neck).
+
+claim(gh1_vortex_inertia, proposition, proved, "Issue 1, charged scalar overlap and weak rotations", "The two normalized vortex Yukawa overlaps coincide and sqrt(area) times their value lies between exp(-1/4) and exp(1/4). In the specified collective weak action the geometric inertia I and charged partners give rho=1 with v_EW squared = 8 I + 2 h squared. Both contributions vanish at the round dissolved endpoint.").
+source(gh1_vortex_inertia, 'results/55_gravitating_vortex_cylinder.md', '').
+depends(gh1_vortex_inertia, gh1_vortex_neck).
+attempted_by(gh1_vortex_inertia, gpt_6_2_astra_max).
+checked_by(gh1_vortex_inertia, gpt_6_1_terra, by_hand).
+addresses(t18, gh1_vortex_inertia).
+
+claim(gh1_vortex_phase, theorem, proved, "Issue 1, custodial completion using the existing doublet", "On the gravitating vortex collective branch the metric of the doublet Hopf phase is fixed by custodial invariance and the computed neutral inertia I. The coefficient of the squared doublet current is 2 I/h^4 and extends smoothly to the dissolved sphere, giving rho=1 with v_EW squared=4 I+2 h squared. As diameter P grows, M_W squared/P tends to pi g_2 squared kappa_g squared/sqrt(2) in this reduced action.").
+source(gh1_vortex_phase, 'results/55_gravitating_vortex_cylinder.md', '').
+depends(gh1_vortex_phase, gh1_vortex_inertia).
+attempted_by(gh1_vortex_phase, gpt_6_2_astra_max).
+checked_by(gh1_vortex_phase, gpt_6_1_terra, by_hand).
+addresses(t13, gh1_vortex_phase).
+addresses(t18, gh1_vortex_phase).
+
+claim(gh1_helix_geometry, proposition, proved, "Issue 1, helical photon and tilt potential", "The product-circle helical vortex has one diagonal geometric photon. Its pure Einstein action has a positive sin-squared tilt potential. On an unwarped Lorentzian Einstein four-space the null energy condition requires negative external curvature. On the isotropically matched branch minus the curvature parameter is at least the first neutral solenoidal mass squared divided by sixteen.").
+source(gh1_helix_geometry, 'results/57_helical_weak_sphere.md', '').
+depends(gh1_helix_geometry, gh1_vortex_neck).
+attempted_by(gh1_helix_geometry, gpt_6_2_astra_max).
+checked_by(gh1_helix_geometry, gpt_6_1_terra, by_hand).
+addresses(t18, gh1_helix_geometry).
+
+claim(gh1_helix_scalar, theorem, proved, "Issue 1, helical scalar spectrum with matched radii", "At isotropic projected weak matching B/P tends to 2/3 and L/(kP) to sqrt(5/54). In diameter units every scalar eigenvalue tends to that of an explicit operator on the projective plane times a circle and a Neumann interval. The null energy condition requires liminf of minus the external curvature parameter at least 1/10 in vortex units. At fixed circle radius the entire helical three-factor instead has bounded physical diameter.").
+source(gh1_helix_scalar, 'results/57_helical_weak_sphere.md', '').
+depends(gh1_helix_scalar, gh1_helix_geometry).
+attempted_by(gh1_helix_scalar, gpt_6_2_astra_max).
+checked_by(gh1_helix_scalar, gpt_6_1_terra, by_hand).
+addresses(t13, gh1_helix_scalar).
+addresses(t14, gh1_helix_scalar).
+addresses(t18, gh1_helix_scalar).
+
+claim(gh1_helix_vector, theorem, proved, "Issue 1, vector-mode mixing near the round sphere", "The full colour-singlet solenoidal Einstein vector operator has an analytic near-round branch with the benchmark custodial mass ratio and e squared/g3 squared = 3/8 when the transverse trial kinetic equals colour. Its limiting cos-squared tilt is the positive root of 14715x squared + 67743x - 22396. Equality of all three trial weak norms requires x=1/3 and gives a distinct mass ratio.").
+source(gh1_helix_vector, 'results/57_helical_weak_sphere.md', '').
+depends(gh1_helix_vector, gh1_helix_geometry).
+attempted_by(gh1_helix_vector, gpt_6_2_sol).
+checked_by(gh1_helix_vector, gpt_6_2_astra_max, by_hand).
+checked_by(gh1_helix_vector, gpt_6_1_terra, by_hand).
+addresses(t4, gh1_helix_vector).
+addresses(t13, gh1_helix_vector).
+addresses(t18, gh1_helix_vector).
+
+claim(gh1_hopf_winding, proposition, proved, "Issue 1, circle duality between the projective product and the Berger endpoint", "Unit H flux on the projective product circle dualizes to the Hopf fibration. The full Hodge-Dirac operator is unitarily realized, up to sign, on the sum of winding sectors at reciprocal circumference. Transport of the Clifford ideal with its parallel coefficients recovers the twisted round endpoint. The bare projective lepton and colour harmonic states acquire nonzero Hopf spin energies.").
+source(gh1_hopf_winding, 'results/issues/01.md', '').
+depends(gh1_hopf_winding, gh1_berger_charge_kernel).
+attempted_by(gh1_hopf_winding, gpt_6_2_sol).
+checked_by(gh1_hopf_winding, gpt_6_2_astra_max, by_hand).
+addresses(t18, gh1_hopf_winding).
+
+claim(gh1_capped_monopole, theorem, proved, "Issue 1, A smooth sphere limit with the interval spinor domain", "On a capped shrinking neck the smooth half-flux holonomy gives a norm-resolvent Dirac interval with equal or mixed chiral walls according to the total monopole degree. Pairing the two unit signs gives KO-six and the full vectorlike five-sphere spectrum in the subsequent collapse. At degree two one rotational doublet member is extended and the other localizes at a cap.").
+source(gh1_capped_monopole, 'results/issues/01.md', '').
+attempted_by(gh1_capped_monopole, gpt_6_2_astra_max).
+checked_by(gh1_capped_monopole, gpt_6_1_terra, by_hand).
+addresses(t0, gh1_capped_monopole).
+addresses(t14, gh1_capped_monopole).
+
+claim(gh1_projective_generation, proposition, proved, "Issue 1 section 8", "On the spin-c CP2 times sphere times interval product, the quark and lepton line twists and chiral walls give the full generation from the two rotation groups. Specified opposite actions and conjugate doubling realize the KO-six signs, first order and the Standard Model hypercharges. With Einstein isometry terms and a fixed bulk hypercharge coefficient, matching fixes b squared = 16 r squared / 3 and r squared = 9 kappa_11 squared / (5 g_Y,11 squared), leaving the interval length free.").
+source(gh1_projective_generation, 'results/issues/01.md', '').
+depends(gh1_projective_generation, gh1_monopole_higgs_phases).
+attempted_by(gh1_projective_generation, gpt_6_2_astra_max).
+checked_by(gh1_projective_generation, terra_6_1, by_hand).
+checked_by(gh1_projective_generation, codex_gpt_6, by_hand).
+addresses(t18, gh1_projective_generation).
+addresses(t0, gh1_projective_generation).
+addresses(t14, gh1_projective_generation).
+
+claim(gh1_monopole_higgs_phases, proposition, proved, "Issue 1 section 8", "In the specified monopole scalar and chiral fermion action, a curvature coupling selects a critical sphere radius. Below it a pair of equal orthogonal holomorphic sections leaves the photon and supplies all four Dirac Yukawa masses near onset.").
+source(gh1_monopole_higgs_phases, 'results/issues/01.md', '').
+attempted_by(gh1_monopole_higgs_phases, gpt_6_2_astra_max).
+checked_by(gh1_monopole_higgs_phases, terra_6_1, by_hand).
+addresses(t18, gh1_monopole_higgs_phases).
+addresses(t10, gh1_monopole_higgs_phases).
+addresses(t14, gh1_monopole_higgs_phases).
+
+claim(gh1_smooth_sphere_bundles, proposition, proved, "Issue 1 section 7", "A smooth colour-equivariant S2 submersion over the transitive Berger S5 is the product or SU3/U1. A commuting weak SU2 on the manifold acts trivially in the second case and, if nontrivial, transitively together with colour in the first.").
+source(gh1_smooth_sphere_bundles, 'results/issues/01.md', '').
+attempted_by(gh1_smooth_sphere_bundles, gpt_6_2_astra_max).
+checked_by(gh1_smooth_sphere_bundles, codex_gpt_6, by_hand).
+addresses(t18, gh1_smooth_sphere_bundles).
+
+claim(gh1_regular_stratum, proposition, proved, "Issue 1 section 7", "An infinitesimally effective compact group with the Standard Model Lie algebra acts transitively on a connected smooth seven-dimensional regular stratum dense in a Hausdorff space, so the stratum exhausts the space. A wedge of two seven-spheres realizes a faithful action with one fixed junction and two regular components.").
+source(gh1_regular_stratum, 'results/issues/01.md', '').
+attempted_by(gh1_regular_stratum, gpt_6_2_astra_max).
+checked_by(gh1_regular_stratum, codex_gpt_6, by_hand).
+addresses(t18, gh1_regular_stratum).
+
+claim(gh1_wall_scaling, theorem, proved, "Issue 1 moving cylinder", "For the charged five-sphere the continuous family of spherical spectral and local cylinder domains has a fixed KO-six kernel. When the angular offset divided by length tends to a, the surviving signed operator is D_tan+a sign(D_tan); a diverging ratio removes all nonzero tangential levels.").
+source(gh1_wall_scaling, 'results/54_chiral_family_over_the_five_sphere.md', '').
+depends(gh1_wall_scaling, gh1_berger_cylinder).
+attempted_by(gh1_wall_scaling, gpt_6_2_astra_max).
+checked_by(gh1_wall_scaling, codex_gpt_6, by_hand).
+addresses(t0, gh1_wall_scaling).
+addresses(t18, gh1_wall_scaling).
+
+claim(gh1_winding_family, proposition, proved, "Issue 1 reflected product", "On S5 times two intervals the specified winding action sets c=min(1,ell d/Astar). A reflected chiral generation, a coefficient Higgs and a flat flux background realize the 11/10/9 spectral family. Relative gauge matching fixes two ratios and an independent absolute normalization fixes the area.").
+source(gh1_winding_family, 'results/54_chiral_family_over_the_five_sphere.md', '').
+depends(gh1_winding_family, gh1_wall_scaling).
+depends(gh1_winding_family, gh1_berger_flux_radius).
+attempted_by(gh1_winding_family, gpt_6_2_astra_max).
+checked_by(gh1_winding_family, terra_6_1, by_hand).
+checked_by(gh1_winding_family, codex_gpt_6, by_hand).
+addresses(t18, gh1_winding_family).
+addresses(t14, gh1_winding_family).
+addresses(t13, gh1_winding_family).
+
+claim(gh1_berger_charge_kernel, proposition, proved, "Issue 1 section 4", "On round S5 the spin Dirac twisted by the dual spin bundle and the exterior Killing-spinor bundle has kernel exterior(4) and gap sqrt(5)/R. Under the rank-one stabilizer it is the colour and electric charge module of one all-left generation. A separately gauged projector masses six vector directions.").
+source(gh1_berger_charge_kernel, 'results/issues/01.md', '').
+attempted_by(gh1_berger_charge_kernel, gpt_6_2_astra_max).
+checked_by(gh1_berger_charge_kernel, terra_6_1, by_hand).
+checked_by(gh1_berger_charge_kernel, codex_gpt_6, by_hand).
+addresses(t18, gh1_berger_charge_kernel).
+
+claim(gh1_berger_cylinder, proposition, proved, "Issue 1 section 4", "Two cylinder operators over the charged round endpoint have the same 32 KO-six zero modes. Equal local walls retain the whole doubled tangential Dirac operator in the thin limit. Spectral walls retain only the finite space, with a full-domain realization of the prescribed finite coefficient algebra.").
+source(gh1_berger_cylinder, 'results/issues/01.md', '').
+depends(gh1_berger_cylinder, gh1_berger_charge_kernel).
+depends(gh1_berger_cylinder, gh1_spin_cylinder).
+attempted_by(gh1_berger_cylinder, gpt_6_2_astra_max).
+checked_by(gh1_berger_cylinder, terra_6_1, by_hand).
+checked_by(gh1_berger_cylinder, codex_gpt_6, by_hand).
+addresses(t18, gh1_berger_cylinder).
+addresses(t0, gh1_berger_cylinder).
+
+claim(gh1_berger_flux_radius, proposition, proved, "Issue 1 section 4", "On a Berger S5 in nine-dimensional Einstein gravity with quantized five-form and zero cosmological coefficient, the homogeneous stationary point is round, R^8=3Q^2/56. The form contribution multiplies the tree-level isometry kinetic form by 10/3.").
+source(gh1_berger_flux_radius, 'results/issues/01.md', '').
+attempted_by(gh1_berger_flux_radius, gpt_6_2_astra_max).
+checked_by(gh1_berger_flux_radius, codex_gpt_6, by_hand).
+addresses(t13, gh1_berger_flux_radius).
+addresses(t18, gh1_berger_flux_radius).
+
+claim(gh1_spin_cylinder, proposition, proved, "Issue 1", "On the product of a closed spin five-manifold and an interval the complementary spectral boundary conditions and a quaternionic polarization of the tangential kernel give an explicit self-adjoint KO-6 domain. Its zero modes are precisely the polarized constant sections.").
+source(gh1_spin_cylinder, 'results/issues/01.md', '').
+attempted_by(gh1_spin_cylinder, gpt_6_2_astra_max).
+checked_by(gh1_spin_cylinder, terra_6_1, by_hand).
+addresses(t18, gh1_spin_cylinder).
+addresses(t11, gh1_spin_cylinder).
+addresses(t2, gh1_spin_cylinder).
+
+claim(gh1_weak_centre, proposition, proved, "Issue 1", "For a primitive circle bundle M^{pq} over CP2 x CP1, the spin condition is p odd and q even, and the weak centre acts on ordinary spinors by (-1)^(p-3q/2).").
+source(gh1_weak_centre, 'results/issues/01.md', '').
+attempted_by(gh1_weak_centre, gpt_6_2_astra_max).
+checked_by(gh1_weak_centre, terra_6_1, by_hand).
+addresses(t18, gh1_weak_centre).
+
+claim(gh1_monopole_inflow, proposition, proved, "Issue 1 sections 6 and 8", "For the faithful U(3) times U(1) monopole parents the seventh spin bordism group vanishes. The all-left anomaly is an integral product. The Higgs assignment adds eight virtual line Dirac phases to an integral product, giving a quantized inverse inflow on arbitrary spin gauge backgrounds. The source-free trivialization of the squared unit monopole class on a weak sphere bundle forces zero weak instanton number.").
+source(gh1_monopole_inflow, 'results/issues/01.md', '').
+attempted_by(gh1_monopole_inflow, gpt_6_2_astra_max).
+checked_by(gh1_monopole_inflow, codex_gpt_6, by_hand).
+depends(gh1_monopole_inflow, gh1_monopole_anomaly).
+addresses(t14, gh1_monopole_inflow).
+addresses(t18, gh1_monopole_inflow).
+
+claim(gh1_monopole_generations, proposition, proved, "Issue 1 sections 6 and 8", "With fixed monopole degrees of magnitude two and one and opposite neutral spectator partners, a tensor-free sign assignment exists exactly for even generation count or odd count at least seven. Full-rank leading degree-one quark Yukawas require and admit even counts in that field content. A separate explicit extension of the one-generation Higgs parent has zero anomaly and extra vectorlike light matter under colour, weak rotations and hypercharge.").
+source(gh1_monopole_generations, 'results/issues/01.md', '').
+attempted_by(gh1_monopole_generations, gpt_6_2_astra_max).
+checked_by(gh1_monopole_generations, codex_gpt_6, by_hand).
+depends(gh1_monopole_generations, gh1_monopole_inflow).
+depends(gh1_monopole_generations, gh1_monopole_higgs_phases).
+addresses(t14, gh1_monopole_generations).
+addresses(t18, gh1_monopole_generations).
+
+claim(gh1_monopole_anomaly, proposition, proved, "Issue 1", "Adding opposite-chirality monopole-neutral spectator partners leaves the chiral sphere window unchanged and factors the six-dimensional local fermion anomaly as x squared times an explicit four-class.").
+source(gh1_monopole_anomaly, 'results/issues/01.md', '').
+attempted_by(gh1_monopole_anomaly, gpt_6_2_astra_max).
+checked_by(gh1_monopole_anomaly, terra_6_1, by_hand).
+addresses(t18, gh1_monopole_anomaly).
 
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
