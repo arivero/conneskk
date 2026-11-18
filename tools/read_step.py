@@ -14,7 +14,7 @@ def reading_routes():
     for line in table.splitlines():
         if line.startswith("| `"):
             key, strategies, question, links = line.strip("|").split("|")
-            paths = re.findall(r"\]\(([\w.-]+\.md)\)", links)
+            paths = re.findall(r"\]\(((?:issues/)?[\w.-]+\.md)\)", links)
             yield key.strip(" `"), strategies.strip().split(", "), question.strip(), paths
 
 

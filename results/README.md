@@ -10,7 +10,7 @@ Begin a research step by writing down the operation, the inputs held fixed and t
 
 | Route | Strategy | Question | Results in reading order |
 |---|---|---|---|
-| `scale` | T13, T18 | Does matching at fixed nine-dimensional normalization select both shape and radius? | [Berger kinetic form](47_killing_form_berger_sphere.md) · [residual radius and threshold convention](47_berger_radius_at_matching.md) · [which weak angle survives a heavy threshold](18_unbroken_coefficients_and_angles.md) |
+| `scale` | T13, T18 | Does matching at fixed nine-dimensional normalization select both shape and radius? | [Berger kinetic form](47_killing_form_berger_sphere.md) · [residual radius and threshold convention](47_berger_radius_at_matching.md) · [which weak angle survives a heavy threshold](18_unbroken_coefficients_and_angles.md) · [hypercharge projection and pole benchmark](issues/20.md) |
 | `blocking` | T1, T4, T4b, T6 | What survives elimination of short-distance modes at fixed background? | [chain spectrum and distances](05_chain_converges_to_interval.md) · [gauge-equivalent inputs split by a fixed projection, and the Schur complement](13_nogo_fixed_compression_not_covariant.md) · [gauge-covariant window](14_covariant_spectral_projection.md) |
 | `potential` | T13, T14 | Can stationarity select a length when the mass is held fixed? | [free angle and tied angle](31_scale_free_potential.md) · [flat stationary direction](31_counterexample_flat_direction.md) · [higher-order selection after two cancellations](37_nogo_dilaton_gradient.md) |
 | `window` | T0, T6, T14 | What survives when the low-energy window moves and the tower gap closes? | [fixed-energy and moving-window counts](30_window_and_tower_on_interval.md) · [compression on the disc bundle](29_compression_to_endpoint_maps.md) · [discontinuity of generated algebras](28_counterexample_generation_discontinuous.md) |
@@ -27,6 +27,10 @@ For instance, along the Berger curve a change of radius changes both matching co
 For a question outside these starting points, use `addresses(Task, Claim)` in the ledger, then `depends(Claim, Input)`, `claim_amended(Claim, Later)` and the claim identifier in this directory. Four parts of lemma 37 have no claim row of their own. Their entries below can be found by subject or proof number. A result earns a place on a route when it changes a hypothesis, supplies an observable or gives a counterexample relevant to that calculation.
 
 Before moving a result to `historical/`, identify the live replacement for its statement, hypotheses and proof, and check references from the papers and supplement lists. For example, the lower-range massless scan in result 23 now has an analytic proof in result 24. The same file also records the bulk-mass scan and its assumptions. The doubled-torus construction and its six-dimensional bimodule obstruction likewise answer different questions. [One-loop scans](23_nogo_one_loop_interior_minimum.md) · [Analytic stationary-point count](24_nogo_massless_one_loop_minimum.md) · [Torus construction](40_doubled_torus_landau_window.md) · [Unitality counterexample](40_counterexample_nonunital_torus_window.md)
+
+## GitHub research questions
+
+The [issue calculations](issues/README.md) give the hypotheses, proofs and outstanding tests for the numbered GitHub questions. Each entry links to the full issue and its discussion.
 
 ## All results
 

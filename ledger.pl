@@ -1826,6 +1826,15 @@ referee_report('lemmas/25_sum_rule_effective_dimension.md', 'historical/reviews/
 %% ---------------------------------------------------------------- 11D line (branch 11D)
 :- include('ledger_11d.pl').
 
+claim(gh20_hypercharge_projection, proposition, proved, "Issue 20", "The common kinetic trace and doublet action leave the projection proportional to v/f0^(3/2). At fixed five-dimensional coupling and fixed wall angle the interval pole combination varies as the inverse squared length.").
+source(gh20_hypercharge_projection, 'results/issues/20.md', '').
+attempted_by(gh20_hypercharge_projection, gpt_6_2_astra_max).
+checked_by(gh20_hypercharge_projection, codex_gpt_6, by_hand).
+addresses(t13, gh20_hypercharge_projection).
+addresses(t18, gh20_hypercharge_projection).
+depends(gh20_hypercharge_projection, l23_wz).
+depends(gh20_hypercharge_projection, l47_matching_radius).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
