@@ -1967,6 +1967,20 @@ checked_by(gh15_charged_compression, terra_6_1, by_hand).
 addresses(t12, gh15_charged_compression).
 addresses(t2, gh15_charged_compression).
 
+claim(gh14_symmetric_mirror_vacua, proposition, conditional, "Issue 14, protected vacua", "In five-flavour supersymmetric SU(3) the zero-mass fibre and every positive mass rank differ in protected vacuum data. The local common-spurion model gives a three-branched vacuum family and a charged holomorphic Hessian of order z^(1/3).").
+source(gh14_symmetric_mirror_vacua, 'results/issues/14.md', '').
+attempted_by(gh14_symmetric_mirror_vacua, gpt_6_2_astra_max).
+checked_by(gh14_symmetric_mirror_vacua, terra_6_1, by_hand).
+addresses(t12, gh14_symmetric_mirror_vacua).
+addresses(t13, gh14_symmetric_mirror_vacua).
+
+claim(gh14_sqcd_hessian, proposition, proved, "Issue 14", "In the massive five-flavour SU(3) SQCD vacua the six oppositely charged meson pairs have factorized holomorphic quadratic coefficients m_i m_j/S, with S cubed equal to Lambda^4 det m.").
+source(gh14_sqcd_hessian, 'results/issues/14.md', '').
+attempted_by(gh14_sqcd_hessian, gpt_6_2_astra_max).
+checked_by(gh14_sqcd_hessian, terra_6_1, by_hand).
+addresses(t12, gh14_sqcd_hessian).
+addresses(t13, gh14_sqcd_hessian).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
