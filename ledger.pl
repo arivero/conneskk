@@ -1914,6 +1914,13 @@ addresses(t8, gh8_three_torus_blocks).
 addresses(t12, gh8_three_torus_blocks).
 addresses(t16, gh8_three_torus_blocks).
 
+claim(gh9_flux_lattice, proposition, proved, "Issue 9", "At fixed flux quantum and shape, a rank-one mirror flux has mass proportional to the inverse cubed torus size with a finite lattice window, while the first tower is proportional to its inverse size.").
+source(gh9_flux_lattice, 'results/issues/09.md', '').
+attempted_by(gh9_flux_lattice, gpt_6_2_astra_max).
+checked_by(gh9_flux_lattice, terra_6_1, by_hand).
+addresses(t14, gh9_flux_lattice).
+addresses(t12, gh9_flux_lattice).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
