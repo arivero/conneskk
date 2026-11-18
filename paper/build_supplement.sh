@@ -48,6 +48,11 @@ for f in results/[0-4][0-9]_*.md results/5[0-2]_*.md results/[a-z]*.md \
   i=$((i+1))
   part "S$i ($(sed -n '1s/^# //p' "$f"))" "$f"
 done
+for f in results/issues/[0-9][0-9].md; do
+  [ -f "$f" ] || continue
+  number=${f##*/}
+  part "I${number%.md} ($(sed -n '1s/^# //p' "$f"))" "$f"
+done
 fi
 # Plain-text adjoints and subscripts must survive pandoc emphasis parsing.
 python3 -I paper/supplement_escape.py "$OUT"
@@ -93,7 +98,7 @@ if [ -n "$TARGET" ]; then
     printf '\\noindent This is the supplement of the paper \\emph{%s}. Its parts keep the numbers of the full Supplemental Material, so that a citation of a part in the paper refers to the part of the same name here.\n\n' "$PAPER"
     printf '\\smallskip\\noindent\\textbf{Parts contained.}'
     [ -n "$PL" ] && printf ' Lemma parts: %s.' "$PL"
-    [ -n "$OL" ] && printf ' Other parts: %s (H is the history of the field, L the literature check, R1 Counterexample R1 and S the statements of results).' "$OL"
+    [ -n "$OL" ] && printf ' Other parts: %s (H is the history of the field, L the literature check, R1 Counterexample R1, S the statements of results and I the numbered issue calculations).' "$OL"
     printf '\n\n\\smallskip\\noindent The full Supplemental Material, with all parts of the project, exists as \\texttt{supplemental.pdf} and \\texttt{supplemental\\_mobile.pdf} in the same folder as this file. A reference inside a part to a part not listed here points to the full version.\n\n\\bigskip\n'
   } > "$INTRO"
   INTRO_OPT="-B $INTRO"
