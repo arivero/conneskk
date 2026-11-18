@@ -1874,6 +1874,13 @@ checked_by(gh2_football_spin, terra_6_1, by_hand).
 addresses(t18, gh2_football_spin).
 addresses(t3, gh2_football_spin).
 
+claim(gh18_interval_scale, proposition, proved, "Issue 18", "Fixed interval angle and fixed positive five-dimensional gauge coefficient leave a continuous length with an explicit pure Yang-Mills one-loop scale ratio.").
+source(gh18_interval_scale, 'results/issues/18.md', '').
+attempted_by(gh18_interval_scale, gpt_6_2_astra_max).
+checked_by(gh18_interval_scale, codex_gpt_6, by_hand).
+addresses(t13, gh18_interval_scale).
+addresses(t18, gh18_interval_scale).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
