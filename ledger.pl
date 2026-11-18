@@ -1867,6 +1867,47 @@ checked_by(gh13_squashed_wall, codex_gpt_6, by_hand).
 addresses(t0, gh13_squashed_wall).
 addresses(t14, gh13_squashed_wall).
 
+claim(gh10_transfer_rate, theorem, proved, "Issue 10", "For each fixed disc of Setting 29.0 in the two proved wall cases, zero tunnelling masses are discrete and the large-mass exponential rate exists off a set of finite logarithmic measure. It equals the difference of two transfer support edges and is between I_eff/2 and 13 I/2. This gives the joint mass power and a parallel-quaternionic defect estimate in terms of the singular value on the same mass scales.").
+source(gh10_transfer_rate, 'results/issues/10.md', '').
+depends(gh10_transfer_rate, gh10_radial_transmission).
+depends(gh10_transfer_rate, gh10_tunnelling_cutoffs).
+depends(gh10_transfer_rate, l30_defect).
+attempted_by(gh10_transfer_rate, gpt_6_2_astra_max).
+checked_by(gh10_transfer_rate, codex_gpt_6, by_hand).
+checked_by(gh10_transfer_rate, terra_6_1, by_hand).
+addresses(t0, gh10_transfer_rate).
+addresses(t14, gh10_transfer_rate).
+
+claim(gh10_all_masses, theorem, proved, "Issue 10, The factor at every mass", "On each fixed admissible disc the light singular value has action 2I-h(D), a Blaschke zero product of the zero-mass compact pencil, and an explicit polynomially bounded positive prefactor from imaginary mass, with exponentially small relative error. The doubled determinant coefficient has right support edge 7I.").
+source(gh10_all_masses, 'results/issues/10.md', '').
+depends(gh10_all_masses, gh10_transfer_rate).
+attempted_by(gh10_all_masses, gpt_6_2_astra_max).
+checked_by(gh10_all_masses, codex_gpt_6, by_hand).
+checked_by(gh10_all_masses, terra_6_1, by_hand).
+addresses(t0, gh10_all_masses).
+addresses(t14, gh10_all_masses).
+
+claim(gh10_inverse_schedule, proposition, proved, "Issue 10, The original and the inverse mass schedules", "With a fixed disc and a fixed target fermion mass coefficient, a last-crossing choice realizes m_epsilon=m_star epsilon for every small epsilon. The required mass divided by log(1/epsilon) tends to (1-alpha)/S.").
+source(gh10_inverse_schedule, 'results/issues/10.md', '').
+depends(gh10_inverse_schedule, gh10_all_masses).
+attempted_by(gh10_inverse_schedule, gpt_6_2_astra_max).
+checked_by(gh10_inverse_schedule, codex_gpt_6, by_hand).
+addresses(t14, gh10_inverse_schedule).
+
+claim(gh10_radial_transmission, proposition, proved, "Issue 10", "A zero-energy bordered determinant on the defining multiplicity space gives the actual disc tunnelling singular value with relative O(1/M) error and exact zeros. On the split collar the known prefactor is sqrt(3 M f0) times its exact exponential and one normalized core trace.").
+source(gh10_radial_transmission, 'results/issues/10.md', '').
+attempted_by(gh10_radial_transmission, gpt_6_2_astra_max).
+checked_by(gh10_radial_transmission, codex_gpt_6, by_hand).
+addresses(t0, gh10_radial_transmission).
+addresses(t14, gh10_radial_transmission).
+
+claim(gh10_tunnelling_cutoffs, proposition, proved, "Issue 10", "At fixed coefficients the full half-action bounds the tunnelling exponent from below, and the line-preserving collar increases this bound by its full mass integral.").
+source(gh10_tunnelling_cutoffs, 'results/issues/10.md', '').
+attempted_by(gh10_tunnelling_cutoffs, gpt_6_2_astra_max).
+checked_by(gh10_tunnelling_cutoffs, codex_gpt_6, by_hand).
+addresses(t0, gh10_tunnelling_cutoffs).
+addresses(t14, gh10_tunnelling_cutoffs).
+
 claim(gh2_football_spin, proposition, proved, "Issue 2", "The bounding spin football with integer monopole has the stated Jacobi spectrum and chiral index N, and in the cone-angle range q>=1 its Dirac domain is unique.").
 source(gh2_football_spin, 'results/issues/02.md', '').
 attempted_by(gh2_football_spin, gpt_6_2_astra_max).
