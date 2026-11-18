@@ -1986,6 +1986,123 @@ addresses(t3, gh17_eta_circle).
 addresses(t10, gh17_eta_circle).
 addresses(t14, gh17_eta_circle).
 
+claim(gh16_channel_compactness, theorem, proved, "Issue 16", "For the physical relative SU(2) BFSS Hamiltonian, each total Spin(9) type absent from the rank-one fast ground has compact resolvent and H >= (8/5) R_X - 425/R_X squared. Zero belongs to the essential spectrum in each type occurring in the physical angular ground.").
+source(gh16_channel_compactness, 'results/issues/16.md', '').
+attempted_by(gh16_channel_compactness, gpt_6_2_astra_max).
+checked_by(gh16_channel_compactness, codex_gpt_6, by_hand).
+depends(gh16_channel_compactness, gh16_high_spin_mass).
+addresses(t14, gh16_channel_compactness).
+
+claim(gh16_protected_mass, corollary, proved, "Issue 16", "At charge two the mass bound for every superspin except the even symmetric scattering family exceeds the Planck threshold when the sum of its four weights is at least eight. The estimate leaves 34 integral and 18 half-integral protected labels below the cutoff.").
+source(gh16_protected_mass, 'results/issues/16.md', '').
+attempted_by(gh16_protected_mass, gpt_6_2_astra_max).
+checked_by(gh16_protected_mass, codex_gpt_6, by_hand).
+depends(gh16_protected_mass, gh16_channel_compactness).
+depends(gh16_protected_mass, gh16_matrix_radius).
+addresses(t14, gh16_protected_mass).
+
+claim(gh16_cubic_levels, proposition, proved, "Issue 16", "The physical relative SU(2) BFSS total rotation type (3,0,0,0) contains infinitely many positive normalizable levels tending to infinity. The gauge-invariant harmonic cubic gives infinite multiplicity and the channel theorem gives compact resolvent.").
+source(gh16_cubic_levels, 'results/issues/16.md', '').
+attempted_by(gh16_cubic_levels, gpt_6_2_astra_max).
+checked_by(gh16_cubic_levels, codex_gpt_6, by_hand).
+depends(gh16_cubic_levels, gh16_channel_compactness).
+addresses(t14, gh16_cubic_levels).
+
+claim(gh16_matrix_radius, proposition, proved, "Issue 16", "At finite SU(N) a total Spin(9) type of summed highest weight j obeys E times the second relative matrix-radius moment at least 49 j squared / 122 and H >= [(7j-sqrt(61))_+] squared / (122 R_X squared) as forms for positive coefficient. A sub-Planck multiplet contains a total type with j at least three and O(1/N) probability in a fixed trace-norm ball.").
+source(gh16_matrix_radius, 'results/issues/16.md', '').
+attempted_by(gh16_matrix_radius, gpt_6_2_astra_max).
+checked_by(gh16_matrix_radius, codex_gpt_6, by_hand).
+checked_by(gh16_matrix_radius, terra_6_1, by_hand).
+addresses(t14, gh16_matrix_radius).
+
+claim(gh16_superspin_bound, corollary, proved, "Issue 16", "All polarizations in a positive SU(2) BFSS supermultiplet with second superspin coordinate greater than nine inherit the lower mass bound, by the highest weight in the 84 tensor product.").
+source(gh16_superspin_bound, 'results/issues/16.md', '').
+attempted_by(gh16_superspin_bound, gpt_6_2_astra_max).
+checked_by(gh16_superspin_bound, codex_gpt_6, by_hand).
+depends(gh16_superspin_bound, gh16_high_spin_mass).
+addresses(t14, gh16_superspin_bound).
+
+claim(gh16_high_spin_mass, proposition, proved, "Issue 16", "For the normalized relative SU(2) BFSS operator, the sharper Clifford, slice and colour-average estimates give E >= 1.53497 for second Spin(9) weight > 10. Under the specified light-cone dictionary this gives M l_p >= 1.3428.").
+source(gh16_high_spin_mass, 'results/issues/16.md', '').
+attempted_by(gh16_high_spin_mass, gpt_6_2_astra_max).
+checked_by(gh16_high_spin_mass, gpt_6_1_terra, by_hand).
+addresses(t14, gh16_high_spin_mass).
+
+claim(gh16_planck_weights, proposition, proved, "Issue 16, The remaining two-D0 mass thresholds", "A sharper radial and transverse form bound plus a four-plane angular multiplier puts every protected charge-two BFSS superspin with weight sum at least seven above the Planck threshold. There remain 23 integral and 12 half-integral protected labels and possible embedded states in the even symmetric family.").
+source(gh16_planck_weights, 'results/issues/16.md', '').
+depends(gh16_planck_weights, gh16_high_spin_mass).
+attempted_by(gh16_planck_weights, gpt_6_2_sol).
+checked_by(gh16_planck_weights, gpt_6_1_terra, by_hand).
+checked_by(gh16_planck_weights, gpt_6_2_astra_max, by_hand).
+addresses(t14, gh16_planck_weights).
+
+claim(gh16_vector_planck, theorem, proved, "Issue 16, The common vector component", "A protected sub-Planck two-D0 level exists exactly when the first confined total-vector energy is below (2 pi)^(2/3)/4. The intermediate estimate leaves superspins 9, 36 and 16 as candidates below that threshold. All protected masses satisfy M l_p >= 0.6818988. The even one-row superspins need an embedded-eigenvalue test.").
+source(gh16_vector_planck, 'results/56_two_d0_mass_certificate.md', '').
+depends(gh16_vector_planck, gh16_planck_weights).
+depends(gh16_vector_planck, gh16_matrix_radius).
+attempted_by(gh16_vector_planck, gpt_6_2_astra_max).
+checked_by(gh16_vector_planck, gpt_6_1_terra, python("exact rational interval enclosure and representation count")).
+checked_by(gh16_vector_planck, gpt_6_2_sol, by_hand).
+claim_amended(gh16_planck_weights, gh16_vector_planck).
+addresses(t14, gh16_vector_planck).
+
+claim(gh16_vector_fermions, proposition, proved, "Issue 16, The fermion potential in the vector sector", "At a regular positive diagonal, let p,-a,-b be the signed eigenvalues of the three-by-three Clifford matrix, with p=a+b. The least two-D0 fermion energy compatible with total vector sections is sqrt(2) times (-8p+min(p,4a,4b)).").
+source(gh16_vector_fermions, 'results/56_two_d0_mass_certificate.md', '').
+depends(gh16_vector_fermions, gh16_high_spin_mass).
+attempted_by(gh16_vector_fermions, gpt_6_2_astra_max).
+checked_by(gh16_vector_fermions, gpt_6_2_sol, by_hand).
+checked_by(gh16_vector_fermions, gpt_6_1_terra, by_hand).
+addresses(t14, gh16_vector_fermions).
+
+claim(gh16_vector_domain, proposition, proved, "Issue 16, A finite ball and the scattering continuum", "The physical two-D0 vector sector has infinitely many positive eigenvalues. If its ground energy lies at or below the stated Planck threshold, its Dirichlet energy at matrix radius 17 is higher by less than 3.81e-28. Every total rotation type in the free fast ground channel has essential spectrum [0,infinity).").
+source(gh16_vector_domain, 'results/56_two_d0_mass_certificate.md', '').
+depends(gh16_vector_domain, gh16_channel_compactness).
+depends(gh16_vector_domain, gh16_planck_weights).
+attempted_by(gh16_vector_domain, gpt_6_2_astra_max).
+checked_by(gh16_vector_domain, gpt_6_1_terra, by_hand).
+addresses(t14, gh16_vector_domain).
+
+claim(gh16_two_label_bound, theorem, proved, "Result 58, Two protected superspins", "Only superspins 9 and 16 remain possible in the protected charge-two BFSS spectrum at or below the Planck threshold. Superspin 36 has E >= 5781875/6397153 and superspin 16 has E >= 257149475/415597657. The first confined total-vector energy still decides the protected Planck question.").
+source(gh16_two_label_bound, 'results/58_two_d0_vector_spectrum.md', '').
+depends(gh16_two_label_bound, gh16_vector_planck).
+attempted_by(gh16_two_label_bound, gpt_6_1_terra).
+checked_by(gh16_two_label_bound, gpt_6_2_sol, by_hand).
+checked_by(gh16_two_label_bound, gpt_6_2_astra_max, by_hand).
+claim_amended(gh16_vector_planck, gh16_two_label_bound).
+addresses(t14, gh16_two_label_bound).
+
+claim(gh16_vector_chamber, proposition, proved, "Result 58, The three singular values and the physical domain", "The physical total vector reduces unitarily to 9834 coupled channels on the three ordered singular values with the stated orbit Jacobian, angular generators and Friedrichs form domain. The radius-17 problem imposes a Dirichlet trace on the outer sphere.").
+source(gh16_vector_chamber, 'results/58_two_d0_vector_spectrum.md', '').
+depends(gh16_vector_chamber, gh16_vector_domain).
+attempted_by(gh16_vector_chamber, gpt_6_2_sol).
+checked_by(gh16_vector_chamber, gpt_6_2_astra_max, by_hand).
+addresses(t14, gh16_vector_chamber).
+
+claim(gh16_vector_oscillator, proposition, proved, "Result 58, The first two orbital degrees", "The first two orbital degrees have one and five physical vector multiplicities. The two Yukawa components from the first-degree oscillator have squared norms 240/a and 44/a. The exact three-state Rayleigh-Ritz matrix gives E_vector < 18.552.").
+source(gh16_vector_oscillator, 'results/58_two_d0_vector_spectrum.md', '').
+depends(gh16_vector_oscillator, gh16_vector_chamber).
+attempted_by(gh16_vector_oscillator, gpt_6_2_astra_max).
+checked_by(gh16_vector_oscillator, gpt_6_2_sol, python("independent exact character coefficients and Gaussian moments")).
+checked_by(gh16_vector_oscillator, gpt_6_1_terra, by_hand).
+addresses(t14, gh16_vector_oscillator).
+
+claim(gh16_vector_higher_harmonics, theorem, proved, "Result 58, How much of a light vector must lie in higher harmonics", "A total-vector eigenstate at or below the Planck threshold has at least one fifth of its squared norm in orbital degrees three and higher. The low-degree projection retains every radial profile and physical multiplicity.").
+source(gh16_vector_higher_harmonics, 'results/58_two_d0_vector_spectrum.md', '').
+depends(gh16_vector_higher_harmonics, gh16_vector_oscillator).
+attempted_by(gh16_vector_higher_harmonics, gpt_6_2_astra_max).
+checked_by(gh16_vector_higher_harmonics, gpt_6_2_sol, python("independent angular traces and weighted resolvent estimate")).
+checked_by(gh16_vector_higher_harmonics, gpt_6_1_terra, by_hand).
+addresses(t4, gh16_vector_higher_harmonics).
+addresses(t14, gh16_vector_higher_harmonics).
+
+claim(gh16_d0_landau, proposition, proved, "Issue 16", "The degree-p Landau zero space has a p-dimensional magnetic-translation representation with specified central phases. The putative CDS projective class (1,p) at theta=1/p has trace zero.").
+source(gh16_d0_landau, 'results/issues/16.md', '').
+attempted_by(gh16_d0_landau, gpt_6_2_astra_max).
+checked_by(gh16_d0_landau, codex_gpt_6, by_hand).
+addresses(t14, gh16_d0_landau).
+addresses(t18, gh16_d0_landau).
+addresses(t16, gh16_d0_landau).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
