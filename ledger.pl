@@ -1210,6 +1210,12 @@ checked_by(l47_coupling_ratio, claude_fable_5_1, python("the formula at eta = 1,
 depends(l47_coupling_ratio, l47_killing_form).
 checked_by(l47_coupling_ratio, claude_opus_5_5, python("the charges of Lambda^2(4), the traces in the 4 and the 6, the ratio with a Ricci-weighted term")).  % 5 Nov 2026: Weinberg's formula; Einstein-term scope of the curve; enhancement proved via the Ricci eigenvalues
 addresses(t18, l47_killing_form).  addresses(t18, l47_coupling_ratio).
+claim(l47_matching_radius, proposition, proved, "The Berger radius at fixed gauge matching", "At fixed nine-dimensional Einstein coefficient C9 and spinor charge unit c=2/3, relative full-module gauge matching on the Berger S^5 selects (R,eta)=(R,1) for every R>0. Both subgroup couplings squared scale as R^-7. Independently fixing the spectral moment f0 as well selects R^7=12 f0/(C9 pi^5). The round isometry is SO(6).").
+source(l47_matching_radius, 'results/47_berger_radius_at_matching.md', '').
+depends(l47_matching_radius, l47_coupling_ratio).
+attempted_by(l47_matching_radius, codex_gpt_6).
+checked_by(l47_matching_radius, terra_6_1, by_hand).
+addresses(t13, l47_matching_radius).  addresses(t18, l47_matching_radius).
 claim(l48_spin_lift, proposition, proved, "Proposition 48.1", "On T^6 = A x E with the flat metric, a transposition of S_3 acts on T A = a (x) R^2 as the rotation by pi in a two-plane, both lifts to Spin(4) having order four (rs_N20: no homomorphic lift of S_3), a three-cycle lifts to order three, the lift of S_3 is Dic_3, the inversion of E lifts to a central element of square -1, and the lift group of W = S_3 x Z_2 is (Dic_3 x Z_4)/Z_2 of order 24, isomorphic to S_3 x Z_4 (the twisted S_3 pairing odd permutations with the inversion lifts homomorphically), with lifted stabilizers Dic_3 at an orbit of stabilizer S_3, the whole group at the fixed point, and (Z_4 x Z_4)/Z_2 at the three-point orbit.").
 source(l48_spin_lift, 'lemmas/48_spin_lift_quaternions_weyl_orbits.md', 'statements').
 attempted_by(l48_spin_lift, claude_fable_5_1).
