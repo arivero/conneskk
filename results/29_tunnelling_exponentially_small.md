@@ -15,3 +15,5 @@
 **Proof.** Lemma 29, Proposition 29.8; the proof is there. Since chi u lies in Dom T_M, <T_M\* v, chi u> = <v, T_M chi u> gives the identity. Agmon weights from each end, with the bulk bound of Lemma 29.4 and the wall bound of Lemma 29.6 or Proposition 29.10, bound the weighted norms of u and v, and the identity on a thin bulk shell gives the exponent.
 
 **What it leaves open.** A lower bound on lambda, and the relation between lambda and M_W, which needs the vector sector (lemma 30, Remark 30.8). The joint limit of lemma 30 uses this bound to get m_eps <= C eps (30_joint_limit_disc_bundle.md).
+
+For a fixed disc, the [pointwise tunnelling theorem](issues/10.md#the-factor-at-every-mass) identifies the exponential action, the complex zeros responsible for cancellations, and the geometry-dependent leading multiplier.

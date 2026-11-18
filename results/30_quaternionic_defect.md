@@ -16,3 +16,5 @@
 **Proof.** Lemma 30, Propositions 30.6 and 30.7; the proofs are there. Schur's lemma writes Q(f) as an average of lambda(g)^-1 B(r) lambda(g), j exchanges b_+ and b_-, so ||B - P_H B|| = |b_+ - b_-|/2, and telescoping gives the product bound. For item 4, C commutes with T_M when j_E is parallel, F -> C F j^-1 is a real structure on the one-dimensional Hom_G(4, ker T_0), and zeta = u - C u satisfies T_M zeta = lambda nu in the interior with Pi(chi_c zeta) = 0, so the Agmon weights of Proposition 29.8 and a weighted Cauchy-Schwarz inequality give the doubled exponent.
 
 **What it leaves open.** The exact generated algebra at finite mass, and a lower bound on lambda. The wall block generates M_4(C), which needs the loss of the inherited symmetry at the wall or a different real correspondence (Proposition 28.18).
+
+On a fixed disc with parallel quaternionic structure, the [mass schedules](issues/10.md#the-original-and-the-inverse-mass-schedules) give a defect bound in terms of the light singular value along an inverse schedule for all small target masses. On the originally prescribed schedule an explicit condition on the complex zeros suffices.
