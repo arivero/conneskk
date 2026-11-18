@@ -92,6 +92,8 @@ from b_6 = 7, b_5 = 23/3 and 1/alpha(mu_*) = (8/3)/alpha_3(mu_*). So a nonzero l
 
 **13. The radius in the Berger family (18 November 2026).** At fixed nine-dimensional Einstein coefficient and spinor charge unit, relative gauge matching gives the round shape for every horizontal radius. Both dimensionless squared couplings then vary as the inverse seventh power of the radius. An independently fixed spectral moment selects a single radius. The one-loop five-flavour strong scale also varies along the curve if the matching-scale prescription and top threshold are fixed. The Fermi scale requires charged-current data. [Berger radius at fixed matching](results/47_berger_radius_at_matching.md)
 
+**13. Measured hadronic and lepton scales.** The 2026 values give $m_N/v=0.00381334$ and $3\alpha(0)\sqrt{M_Z^2-M_W^2}/v=0.00383161$. An equality on the finite-QCD heavy path would require power suppression, while item 4 gives logarithmic running under its thresholds. Item 11's matching caution applies also to the Thomson charge and line-shape masses. [Definitions, errors and edition history](results/issues/19.md)
+
 ## Open questions for the next paper
 
 1. An interval or parent family in which one set of data fixes the light masses, the gauge kinetic terms and the weak scale, so that a relation between the Fermi and QCD scales becomes a prediction. The closing answer names this as the missing step.
@@ -100,6 +102,8 @@ from b_6 = 7, b_5 = 23/3 and 1/alpha(mu_*) = (8/3)/alpha_3(mu_*). So a nonzero l
 4. The conditional formula for Lambda_5/v evaluated at finite parameters, with the physical thresholds, and the value of kappa it requires.
 5. The reduction from D = 9 to D = 4 with several flavors: whether internal data can give m_u < m_d, which the one-circle model cannot.
 6. The anomaly as a theorem on the reduced action of lemma 17, and the discrete term of the pion sigma model against the S^5 index. [Lemma 27](lemmas/27_anomaly_reduced_action.md), gives both on a fixed background: the anomaly with its coefficient under a stated regularization, and the relative sign (-1)^{N_c} for the nontrivial class of pi_4(SU(2)). The relation between the internal S^5 and the auxiliary one stays open, and matching a pion field needs a sigma model.
+
+7. Does a family in items 1–12 produce the coefficient of a relation of order alpha between a specified hadronic observable and $M_W\tan\theta_W$, with thresholds fixed independently?
 
 ## Transcript
 
