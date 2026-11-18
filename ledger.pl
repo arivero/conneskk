@@ -1916,6 +1916,13 @@ referee_pending(gh6_elliptic_weyl).
 addresses(t16, gh6_elliptic_weyl).
 addresses(t18, gh6_elliptic_weyl).
 
+claim(gh7_quark_wall, proposition, proved, "Issue 7", "A same-projector interval retains a single complex quark generation; in the all-left convention the grading charge is B-L on leptons and -3(B-L) on quarks.").
+source(gh7_quark_wall, 'results/issues/07.md', '').
+attempted_by(gh7_quark_wall, gpt_6_2_astra_max).
+checked_by(gh7_quark_wall, terra_6_1, by_hand).
+addresses(t3, gh7_quark_wall).
+addresses(t16, gh7_quark_wall).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
