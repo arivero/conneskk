@@ -6,3 +6,4 @@ part 23 lemmas/23_*.md
 part 24 lemmas/24_*.md
 part 25 lemmas/25_*.md
 part 26 lemmas/26_*.md
+part "I11 (stationary points below the critical count)" results/issues/11.md
