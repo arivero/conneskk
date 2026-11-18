@@ -1967,6 +1967,25 @@ checked_by(gh14_sqcd_hessian, terra_6_1, by_hand).
 addresses(t12, gh14_sqcd_hessian).
 addresses(t13, gh14_sqcd_hessian).
 
+claim(gh17_flavour_kernel, proposition, proved, "Issue 17, flavour bundle", "A degree-d pullback of the charge-two sphere Dirac family realizes the inflow doublet bundle and its connection. Its one-doublet mod-two sign is (-1)^d.").
+source(gh17_flavour_kernel, 'results/issues/17.md', '').
+attempted_by(gh17_flavour_kernel, gpt_6_2_astra_max).
+checked_by(gh17_flavour_kernel, codex_gpt_6, by_hand).
+addresses(t10, gh17_flavour_kernel).
+claim(gh17_single_clifford_mass, proposition, conditional, "Issue 17, twistor mass", "The level-one twistor height coupling realizes a single Clifford mass with a controlled high-mode gap. In the specified adiabatic complex determinant its relative sign is the degree parity in the inverted regime. The full doubled odd mass has a graph negative bundle.").
+source(gh17_single_clifford_mass, 'results/issues/17.md', '').
+attempted_by(gh17_single_clifford_mass, gpt_6_2_astra_max).
+checked_by(gh17_single_clifford_mass, codex_gpt_6, by_hand).
+addresses(t14, gh17_single_clifford_mass).
+
+claim(gh17_eta_circle, proposition, proved, "Issue 17", "On a product with a pulled-back unitary connection eta is determined by the chiral indices and the total spin-plus-holonomy shifts; an antiperiodic spin structure and an odd half holonomy cancel.").
+source(gh17_eta_circle, 'results/issues/17.md', '').
+attempted_by(gh17_eta_circle, gpt_6_2_astra_max).
+checked_by(gh17_eta_circle, codex_gpt_6, by_hand).
+addresses(t3, gh17_eta_circle).
+addresses(t10, gh17_eta_circle).
+addresses(t14, gh17_eta_circle).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
