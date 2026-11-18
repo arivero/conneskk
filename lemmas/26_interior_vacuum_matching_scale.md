@@ -40,13 +40,13 @@ up to the factor 8 pi^2 l^4. Equation (1) assumes precisely these towers and mul
    - If n_1 < n_*, there is exactly one stationary point in the open interval. It is the strict global minimum, and it lies in (pi/4, pi/2).
    - If n_1 >= n_*, V decreases strictly on (0, pi/2), with unique global minimum at theta = pi/2. At n_1 = n_* its quadratic term vanishes.
 
-The endpoints are stationary in theta in every case, since dt/d(theta) vanishes there. The range n_1 > 0, n_2 < n_c is not classified here.
+The endpoints are stationary in theta in every case, since dt/d(theta) vanishes there. The [classification below the critical count](../results/issues/11.md) gives the complementary range and its fold curve.
 
 *Proof.* Item 1: dV/du = 4 J(4u) (R(u) - n_2), so Lemma 26.1 gives the three cases. Item 2: since n_2 >= n_c >= R(u), G(u) = -4 J(4u) (n_2 - R(u)) <= 0 on (0, 1/4], with equality only at u = 1/4 and n_2 = n_c. For t <= 1/2, (2) gives dV/dt <= -n_1 J(t) < 0. For t > 1/2 write dV/dt = J(t) [Psi(t) - n_1], with Psi(t) = (2t - 1) |G(u)|/J(t). Here 2t - 1 increases, 1/J(t) increases, and |G(u)| increases with t, since u decreases with t and both factors J(4u) and n_2 - R(u) decrease in u. So Psi increases strictly from Psi(1/2) = 0 to Psi(1) = (4 n_2 - 54/5) J(0)/J(1) = n_*. ∎
 
 No numerical computation enters the proof, apart from the value of n_c. A Python check on a grid of 11600 pairs, n_2 from 3 to 60 and n_1 from 0 to 199, with theta on 20001 points, finds the stated stationary points in each case.
 
-For the remaining integer counts: n_2 = 0 is Theorem 9 of lemma 24. For n_1 = 0 and n_2 = 1, 2, Theorem 26.2 gives both endpoints as global minima. For n_1 > 0 and n_2 = 1, 2, a scan of n_1 up to 200 (Python) finds no interior local minimum, which we have not proved. So at integer counts every interior minimum found has theta >= pi/4. The window 27/10 < n_2 < n_c, with its minima at small theta, contains no integer.
+For the remaining integer counts: n_2 = 0 is Theorem 9 of lemma 24. For n_1 = 0 and n_2 = 1, 2, Theorem 26.2 gives both endpoints as global minima. For n_1 > 0 and n_2 = 1, 2, the [rational interval proof](../results/issues/11.md) establishes the absence of an interior local minimum for every positive integer n_1. For real n_1 just above 2.8 at n_2 = 2 there is a metastable minimum. So at integer counts every interior minimum found has theta >= pi/4. The window 27/10 < n_2 < n_c, with its minima at small theta, contains no integer.
 
 **Proposition 26.2b (no global minimum at small angle).** For n_1 > 0 and 0 < t < 1/2, V(1 - t) - V(t) = -n_1 [F(1 - t) - F(t)] < 0, so no point of (0, pi/4) is a global minimum. With item 1 of Theorem 26.2 for n_1 = 0, this covers all integer counts. It does not exclude metastable minima at small angle in the cases left to scans. ∎
 
