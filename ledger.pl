@@ -1826,6 +1826,33 @@ referee_report('lemmas/25_sum_rule_effective_dimension.md', 'historical/reviews/
 %% ---------------------------------------------------------------- 11D line (branch 11D)
 :- include('ledger_11d.pl').
 
+claim(gh20_majorana_orbit, proposition, proved, "Issue 20", "At fixed Dirac matrices, Majorana singular values and cutoff moments, the mixed trace spans the rearrangement interval, selecting a range of stationary Higgs norms in the order-Lambda^0 potential.").
+source(gh20_majorana_orbit, 'results/issues/20.md', '').
+attempted_by(gh20_majorana_orbit, gpt_6_2_astra_max).
+checked_by(gh20_majorana_orbit, terra_6_1, by_hand).
+addresses(t13, gh20_majorana_orbit).
+
+claim(gh20_flat_exact_trace, proposition, proved, "Issue 20", "In flat infinite volume at zero gauge field the exact positive even spectral trace per volume is nonincreasing along the constant-Higgs norm for any finite CCM Dirac matrices and fixed Majorana block.").
+source(gh20_flat_exact_trace, 'results/issues/20.md', '').
+attempted_by(gh20_flat_exact_trace, gpt_6_2_astra_max).
+checked_by(gh20_flat_exact_trace, terra_6_1, by_hand).
+addresses(t14, gh20_flat_exact_trace).
+
+claim(gh20_lepton_threshold_curve, proposition, proved, "Issue 20", "Fixed separate charged-lepton traces of degrees two and four permit a continuously variable mass product at the same stationary polynomial Higgs vacuum. The differential one-loop Thomson inverse charge is log of the squared-product ratio over three pi.").
+source(gh20_lepton_threshold_curve, 'results/issues/20.md', '').
+attempted_by(gh20_lepton_threshold_curve, gpt_6_2_astra_max).
+checked_by(gh20_lepton_threshold_curve, codex_gpt_6, by_hand).
+addresses(t13, gh20_lepton_threshold_curve).
+
+claim(gh20_hypercharge_projection, proposition, proved, "Issue 20", "The common kinetic trace and doublet action leave the projection proportional to v/f0^(3/2). At fixed five-dimensional coupling and fixed wall angle the interval pole combination varies as the inverse squared length.").
+source(gh20_hypercharge_projection, 'results/issues/20.md', '').
+attempted_by(gh20_hypercharge_projection, gpt_6_2_astra_max).
+checked_by(gh20_hypercharge_projection, codex_gpt_6, by_hand).
+addresses(t13, gh20_hypercharge_projection).
+addresses(t18, gh20_hypercharge_projection).
+depends(gh20_hypercharge_projection, l23_wz).
+depends(gh20_hypercharge_projection, l47_matching_radius).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
