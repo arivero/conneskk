@@ -1870,6 +1870,12 @@ checked_by(gh18_interval_scale, codex_gpt_6, by_hand).
 addresses(t13, gh18_interval_scale).
 addresses(t18, gh18_interval_scale).
 
+claim(gh4_triality_frame, proposition, proved, "Issue 4", "The simultaneous D4 triality exchange transports the theta projection with multiplicities (3,45) or (15,33); the connected E8 stabilizer of the 44 is the indicated SO(9).").
+source(gh4_triality_frame, 'results/issues/04.md', '').
+attempted_by(gh4_triality_frame, gpt_6_2_astra_max).
+checked_by(gh4_triality_frame, terra_6_1, by_hand).
+addresses(t14, gh4_triality_frame).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
