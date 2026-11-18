@@ -62,6 +62,8 @@ The identification "the two sheets are a truncated interval, with length proport
 
 ## Papers
 
+The proposed lecture follows a point trajectory and a closed-string worldsheet on the same circle, from momentum quantization to winding, level matching and gauge enhancement. [Lecture proposal and worked circle](paper/kk_strings_lecture_proposal.md)
+
 The seven-dimensional candidates now include two geometric weak groups and a wall gauge group. On $M^{111}$ the Reeb sectors have integer weak isospin. On the electric $S^5\times S^2$ product the weak rotations and projection to five coexist, but its relative-radius mode has $m^2L_{\rm AdS}^2=-3$. On a heterotic wall the explicit standard embedding gives nine $\mathbf{27}$s and six conjugates. The three net generations and supersymmetric scalars motivate a calculation of the masses of the vectorlike pairs and of the finite Dirac links. [Seven-dimensional M-theory and string candidates](paper/seven_m_theory.tex)
 
 In the two-interval family a flavour reflection leaves three periodic generations out of four and gives the fourth a gap $\pi/(2d)$. A fixed winding-dependent coefficient action keeps the electric coupling finite and suppresses the weak currents toward five. A source on a face resolves the aspect ratio left free by zero-mode matching. The rank of the physical wall coupling and the origin of the scalar partner fields remain open. [Three-family Dirac window and weak currents](paper/two_endpoint_limits.tex)
