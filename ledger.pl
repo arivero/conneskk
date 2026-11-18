@@ -1835,6 +1835,13 @@ addresses(t18, gh20_hypercharge_projection).
 depends(gh20_hypercharge_projection, l23_wz).
 depends(gh20_hypercharge_projection, l47_matching_radius).
 
+claim(gh3_moving_kernel, proposition, proved, "Issue 3", "In the parallel identification of a smooth isolated kernel, the first variation of its Berry connection is P dot(nabla) P + S*B - B*S, where B is its second fundamental form and S=-R dot(D)P. The homogeneous wall line connection is unique after imposing line preservation.").
+source(gh3_moving_kernel, 'results/issues/03.md', '').
+attempted_by(gh3_moving_kernel, gpt_6_2_astra_max).
+checked_by(gh3_moving_kernel, codex_gpt_6, by_hand).
+addresses(t15, gh3_moving_kernel).
+depends(gh3_moving_kernel, l43_berry).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
