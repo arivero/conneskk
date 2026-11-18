@@ -2036,6 +2036,24 @@ addresses(t14, gh16_d0_landau).
 addresses(t18, gh16_d0_landau).
 addresses(t16, gh16_d0_landau).
 
+claim(gh19_s1, claim, numerical, "Issue 19, S1", "Thomson alpha times the line-shape hypercharge combination exceeds the charged-lepton scale by 0.1985 percent, 5.65 experimental standard deviations for the printed 2026 inputs.").
+source(gh19_s1, 'results/issues/19.md', '').
+attempted_by(gh19_s1, gpt_6_2_astra_max).
+checked_by(gh19_s1, gpt_6_2_astra_max, python).
+addresses(t13, gh19_s1).
+
+claim(gh19_s2, claim, numerical, "Issue 19, S2", "The charged-lepton scale exceeds the mean nucleon mass divided by three by 0.2802 percent.").
+source(gh19_s2, 'results/issues/19.md', '').
+attempted_by(gh19_s2, gpt_6_2_astra_max).
+checked_by(gh19_s2, gpt_6_2_astra_max, python).
+addresses(t13, gh19_s2).
+
+claim(gh19_s3, claim, numerical, "Issue 19, S3", "Thomson alpha times the Fermi VEV exceeds the tau mass by about 1.116 percent.").
+source(gh19_s3, 'results/issues/19.md', '').
+attempted_by(gh19_s3, gpt_6_2_astra_max).
+checked_by(gh19_s3, gpt_6_2_astra_max, python).
+addresses(t13, gh19_s3).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
