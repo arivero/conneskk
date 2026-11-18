@@ -1943,6 +1943,14 @@ addresses(t3, gh17_eta_circle).
 addresses(t10, gh17_eta_circle).
 addresses(t14, gh17_eta_circle).
 
+claim(gh16_d0_landau, proposition, proved, "Issue 16", "The degree-p Landau zero space has a p-dimensional magnetic-translation representation with specified central phases. The putative CDS projective class (1,p) at theta=1/p has trace zero.").
+source(gh16_d0_landau, 'results/issues/16.md', '').
+attempted_by(gh16_d0_landau, gpt_6_2_astra_max).
+checked_by(gh16_d0_landau, codex_gpt_6, by_hand).
+addresses(t14, gh16_d0_landau).
+addresses(t18, gh16_d0_landau).
+addresses(t16, gh16_d0_landau).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
