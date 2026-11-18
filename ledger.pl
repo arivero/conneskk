@@ -1894,6 +1894,20 @@ checked_by(gh12_mixing_law, codex_gpt_6, by_hand).
 addresses(t8, gh12_mixing_law).
 addresses(t3, gh12_mixing_law).
 
+claim(gh5_flavour_alignment, theorem, proved, "Issue 5, generation matrices", "For arbitrary generation matrices the connector minimum at fixed other fields follows from at most 24 quadratic stationarity tests. Explicit global vacua have a continuous colour overlap and the two proposed rank-one overlaps can vary independently on the restricted locus.").
+source(gh5_flavour_alignment, 'results/issues/05.md', '').
+attempted_by(gh5_flavour_alignment, gpt_6_2_astra_max).
+checked_by(gh5_flavour_alignment, terra_6_1, by_hand).
+addresses(t12, gh5_flavour_alignment).
+addresses(t14, gh5_flavour_alignment).
+
+claim(gh5_ps_potential, proposition, proved, "Issue 5", "Every unrestricted global minimum of the printed one-generation composite potential has Delta=0 if F0,F2>0, k_R is nonzero and a Dirac Yukawa is nonzero.").
+source(gh5_ps_potential, 'results/issues/05.md', '').
+attempted_by(gh5_ps_potential, gpt_6_2_astra_max).
+checked_by(gh5_ps_potential, codex_gpt_6, by_hand).
+addresses(t12, gh5_ps_potential).
+addresses(t14, gh5_ps_potential).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
