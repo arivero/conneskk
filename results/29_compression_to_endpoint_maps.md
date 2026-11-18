@@ -8,7 +8,7 @@
 
 1. ||Q_M(a) - (Q_B(a|_{S^4}) (+) Q_Y(a|_{CP^3}))|| <= C ||a||_{C^1} M^{-1/2}.
 2. Q_B(a) = int a(x) 2 P_x d mu(x), with P_x = (1 - x . Gamma)/2.
-3. Q_Y(a) = int a(z) B(z) d mu(z). In case (b), B(z) = 4 p_z, the level-one map of Example 16.9. In case (a) at radius rho, B(z) = 2 ((1 + w) p_z + (1 - w) p_{jz}), with p_{jz} the quaternionic partner of p_z, and w the signed imbalance of the two angular weights in the geometric kernel of F^*. Thus Q_Y(x_a) = -Gamma_a/5 and Q_Y(y_T) is w times the level-one value. At rho = 1, w >= 1/7. The explicit formula for w(rho), including w(1) = 2/3, is conditional on the matrix in Proposition 28.13.
+3. Q_Y(a) = int a(z) B(z) d mu(z). In case (b), B(z) = 4 p_z, the level-one map of Example 16.9. In case (a) at radius rho, B(z) = 2 ((1 + w) p_z + (1 - w) p_{jz}), with p_{jz} the quaternionic partner of p_z, and w the signed imbalance of the two angular weights in the geometric kernel of F^*. Thus Q_Y(x_a) = -Gamma_a/5 and Q_Y(y_T) is w times the level-one value. At rho = 1, w >= 1/7. The [geometric angular calculation](issues/10.md#the-pull-back-prefactor-and-smooth-split-collars) gives w(1) = 2/3. The explicit formula at other radii is conditional on the matrix in Proposition 28.13.
 4. Restriction to the two ends is surjective (Proposition 28.8), so real functions on X generate M_2(H) + M_4(C) under the limit map, by lemma 10 and Example 16.9, whenever w != 0.
 
 *Scope.* A statement about compression maps: generated algebras at finite mass stay outside it (Counterexample 28.17). The sign in P_x follows from the core support on the (1, 2) summand and the conventions of Proposition 28.4.

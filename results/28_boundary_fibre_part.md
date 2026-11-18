@@ -1,4 +1,4 @@
-# The displayed pull-back wall matrix gives fibre weight -w(rho), with w(1) = 2/3, conditional on identifying that matrix with the geometric operator
+# The pull-back wall has fibre weight -2/3 at unit radius and the displayed matrix gives its conditional extension to other radii
 
 **Status.** Conditional proposition (Proposition 28.13), with Lemma 28.12. The finite-block calculation is by Claude Opus 5.5; Lemma 28.12 proved by Astra 6 (job 28, Lemma 5). Ledger rows `l28_wall` (depending on `l28_mixing`) and `l28_mixing`. The function w(rho) enters case (a) of Theorems 2 and 4 of paper/joint_limit_note.tex.
 
@@ -15,4 +15,4 @@
 
 **Proof.** Lemma 28, Proposition 28.13 and Lemma 28.12. The three stable channels all lie in Gamma_5 = -1 and have mutually orthogonal target spaces, so the cross terms vanish in the traces of Proposition 28.4.
 
-**What it leaves open.** The geometric derivation of the matrix entries. At rho = 1 the half-cylinder kernel and convergence to the geometric endpoint map are proved with unsigned fibre weight at least 1/7 for the pull-back connection (29_window_case_a.md). The line-preserving case at rho = 1 gives the exact level-one value (29_window_case_b.md). Other radii need K(rho).
+**What it leaves open.** The geometric derivation of the matrix entries. At rho = 1 the half-cylinder kernel and convergence to the geometric endpoint map are proved in the pull-back case (29_window_case_a.md). The [geometric angular calculation](issues/10.md#the-pull-back-prefactor-and-smooth-split-collars) gives the exact weight 2/3 there. The line-preserving case at rho = 1 gives the exact level-one value (29_window_case_b.md). Other radii need K(rho).

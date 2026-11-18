@@ -830,12 +830,13 @@ functions on
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
 generate
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>ℍ</mi><mo stretchy="false" form="postfix">)</mo><mo>⊕</mo><msub><mi>M</mi><mn>4</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>ℂ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">M_2(\mathbb H)\oplus M_4(\mathbb C)</annotation></semantics></math>
-under either limit map. The displayed finite matrix of <a
-href="supplemental.pdf">Supplemental Material, part 28</a>, Proposition
-28.13, gives
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><mn>2</mn><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">w=2/3</annotation></semantics></math>
-at this radius, conditional on identifying its entries with the
-geometric operator.</em></p>
+under either limit map. The angular calculation in <a
+href="supplemental.pdf">Supplemental Material, part I10</a> gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">w(1)=2/3</annotation></semantics></math>
+using the horizontal spinor generator, the line Dirac spectrum and the
+transverse twist ladder. The formula of Proposition 28.13 in <a
+href="supplemental.pdf">Supplemental Material, part 28</a> at other
+radii still depends on the full geometric matrix.</em></p>
 </div>
 <p>This is a statement about compression maps. Generated algebras need
 not converge when compression maps do, in line with the setting of <span
@@ -906,12 +907,13 @@ data-reference="eq:hierarchy">(1)</a> holds for a fermion window that
 comes from the operator, with growth of a seven-dimensional internal
 space at fixed energy. The bound on
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mi>ε</mi></msub><annotation encoding="application/x-tex">m_\varepsilon</annotation></semantics></math>
-is one-sided, since a lower bound on
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>
-is open. The fixed shape expands, so the pointed limit at fixed energy
-is flat at an interior point and a half-space at a boundary point.
-Nothing here identifies it with the complete Bryant-Salamon manifold
-<span class="citation" data-cites="BS1989 KL2020">(<a href="#ref-BS1989"
+is one-sided for this full class. The pull-back admits a two-sided
+equivalent, while one smooth split connection has infinitely many exact
+zeros (<a href="supplemental.pdf">Supplemental Material, part I10</a>).
+The fixed shape expands, so the pointed limit at fixed energy is flat at
+an interior point and a half-space at a boundary point. Nothing here
+identifies it with the complete Bryant-Salamon manifold <span
+class="citation" data-cites="BS1989 KL2020">(<a href="#ref-BS1989"
 role="doc-biblioref">Bryant and Salamon 1989</a>; <a href="#ref-KL2020"
 role="doc-biblioref">Karigiannis and Lotay 2020</a>)</span>, whose
 metric lies outside our class, or with a solution of field
@@ -1087,15 +1089,65 @@ endpoints approximately
 and
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1.3176</mn><annotation encoding="application/x-tex">1.3176</annotation></semantics></math>.
 The fibre weight is positive on a smaller interval. Outside the verified
-interval the wall kernel remains open. Table <a href="#tab:values"
-data-reference-type="ref" data-reference="tab:values">1</a> is a Python
-computation; by the rule of the project the script is not kept, and the
-values and the setting are recorded in <a
-href="supplemental.pdf">Supplemental Material, part 29</a>.</p>
+interval the wall kernel remains open. For the tunnelling estimate, <a
+href="supplemental.pdf">Supplemental Material, part I10</a> improves the
+upper bound and excludes the proposed reverse bound with the same fixed
+proof cutoffs. At fixed disc geometry the action is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mo>*</mo></msub><mo>=</mo><mn>2</mn><mi>I</mi><mo>−</mo><mi>h</mi><mo stretchy="false" form="prefix">(</mo><mi>𝒟</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">S_*=2I-h(\mathcal D)</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>
+is the full mass integral and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo stretchy="false" form="prefix">(</mo><mi>𝒟</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">h(\mathcal D)</annotation></semantics></math>
+is the right support endpoint of the regular radial determinant. At
+every large mass,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msub><mi>λ</mi><mi>M</mi></msub><mo stretchy="false" form="prefix">|</mo><mo>=</mo><msup><mi>e</mi><mrow><mi>−</mi><msub><mi>S</mi><mo>*</mo></msub><mi>M</mi></mrow></msup><mi>b</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">[</mo><mn>1</mn><mo>+</mo><mi>O</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>c</mi><mi>M</mi></mrow></msup><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">|\lambda_M|=e^{-S_*M}b(M)P(M)[1+O(e^{-cM})]</annotation></semantics></math>
+for some
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">c&gt;0</annotation></semantics></math>.
+The product
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">b(M)</annotation></semantics></math>
+is determined by the complex zeros of a fixed compact operator pencil.
+The positive factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(M)</annotation></semantics></math>
+is obtained from imaginary-mass transfer and lies between powers of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">1+M</annotation></semantics></math>.
+For the pull-back at unit fibre radius the equivalent is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>a</mi></msub><msup><mi>M</mi><mrow><mn>7</mn><mi>/</mi><mn>4</mn></mrow></msup><msup><mi>e</mi><mrow><mi>−</mi><mi>M</mi><mi>I</mi><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">C_a M^{7/4}e^{-MI/2}</annotation></semantics></math>,
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>a</mi></msub><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">C_a&gt;0</annotation></semantics></math>
+given by the regular three-channel normal harmonic and the compressed
+wall kernel. For a smooth split connection a flat transition
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>a</mi><mi>/</mi><mi>u</mi></mrow></msup><annotation encoding="application/x-tex">e^{-a/u}</annotation></semantics></math>,
+at distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>
+from the last transition point, gives a stretched-exponential
+correction. A signed transition
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mi>−</mi><mi>a</mi><mi>/</mi><mi>u</mi></mrow></msup><mrow><mi>sin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mrow><mi>log</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>d</mi><mi>/</mi><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">e^{-a/u}\sin(\log(d/u))</annotation></semantics></math>
+gives infinitely many exact zeros. The quaternionic defect is positive
+at those zeros. For the pull-back it is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>λ</mi><mi>M</mi></msub><msup><mo stretchy="false" form="prefix">|</mo><mi>p</mi></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(|\lambda_M|^p)</annotation></semantics></math>
+for each
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mi>p</mi><mo>&lt;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">0&lt;p&lt;2</annotation></semantics></math>.
+The last crossing of a target
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mo>*</mo></msub><msup><mi>ε</mi><mrow><mn>1</mn><mo>−</mo><mi>α</mi></mrow></msup></mrow><annotation encoding="application/x-tex">m_*\varepsilon^{1-\alpha}</annotation></semantics></math>
+gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mi>ε</mi></msub><mo>=</mo><msub><mi>m</mi><mo>*</mo></msub><mi>ε</mi></mrow><annotation encoding="application/x-tex">m_\varepsilon=m_*\varepsilon</annotation></semantics></math>
+for every small
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ε</mi><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math>,
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mi>ε</mi></msub><mo>∼</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>α</mi><mo stretchy="false" form="postfix">)</mo><mrow><mi>log</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mi>/</mi><mi>ε</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><msub><mi>S</mi><mo>*</mo></msub></mrow><annotation encoding="application/x-tex">M_\varepsilon\sim(1-\alpha)\log(1/\varepsilon)/S_*</annotation></semantics></math>.
+A dynamical selection of this schedule remains open. Table <a
+href="#tab:values" data-reference-type="ref"
+data-reference="tab:values">1</a> is a Python computation; by the rule
+of the project the script is not kept, and the values and the setting
+are recorded in <a href="supplemental.pdf">Supplemental Material, part
+29</a>.</p>
 <h2 class="unnumbered" id="provenance">Provenance</h2>
 <p>The formulation of the joint limit and the interval and cylinder
 statements come from an audit of the repository by GPT-6 Astra. The
-proofs of Sections <a href="#sec:window" data-reference-type="ref"
+geometric prefactor, split-collar examples and unit-radius wall
+normalization in <a href="supplemental.pdf">Supplemental Material, part
+I10</a> are due to GPT-6.2 Astra Max. The proofs of Sections <a
+href="#sec:window" data-reference-type="ref"
 data-reference="sec:window">4</a> and <a href="#sec:joint"
 data-reference-type="ref" data-reference="sec:joint">5</a> and of the
 defect bound are by Claude Opus 5.5, using results of GPT-6 Astra on the

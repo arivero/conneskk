@@ -1666,7 +1666,7 @@ source(l29_tunnelling, 'lemmas/29_window_on_the_disc_bundle.md', '').
 depends(l29_tunnelling, l29_window_b).
 depends(l29_tunnelling, l28_tunnelling).
 attempted_by(l29_tunnelling, claude_opus_5_5).
-claim(l29_compression, theorem, proved, "Theorem 29.9", "The compression converges to the endpoint maps with error O(M^{-1/2}); at rho = 1 the limit map generates M_2(H) + M_4(C) in either case. In case (a) the geometric wall kernel has signed fibre weight -w with w >= 1/7. The exact value w = 2/3 is conditional on the matrix of Proposition 28.13.").
+claim(l29_compression, theorem, proved, "Theorem 29.9", "The compression converges to the endpoint maps with error O(M^{-1/2}); at rho = 1 the limit map generates M_2(H) + M_4(C) in either case. In case (a) the geometric wall kernel has signed fibre weight -w with w >= 1/7. The geometric unit-radius computation gh10_angular_wall gives w = 2/3.").
 source(l29_compression, 'lemmas/29_window_on_the_disc_bundle.md', '').
 depends(l29_compression, l29_window_b).
 depends(l29_compression, l29_window_a).
@@ -1678,7 +1678,7 @@ source(l29_wall_a, 'lemmas/29_window_on_the_disc_bundle.md', '').
 depends(l29_wall_a, l29_lines).
 depends(l29_wall_a, l28_mixing).
 attempted_by(l29_wall_a, claude_opus_5_5).
-claim(l29_window_a, theorem, proved, "Theorem 29.11", "K(1) holds, so Conjecture 28.6 holds in case (a) at the Fubini-Study radius, for Setting 29.0, with kappa_a >= sqrt(5) - 3/2 and signed fibre weight -w, w >= 1/7. The value w = 2/3 is conditional on the matrix of Proposition 28.13. At another radius the window holds under K(rho).").
+claim(l29_window_a, theorem, proved, "Theorem 29.11", "K(1) holds, so Conjecture 28.6 holds in case (a) at the Fubini-Study radius, for Setting 29.0, with kappa_a >= sqrt(5) - 3/2 and signed fibre weight -w, w >= 1/7. The geometric unit-radius computation gh10_angular_wall gives w = 2/3. At another radius the window holds under K(rho).").
 source(l29_window_a, 'lemmas/29_window_on_the_disc_bundle.md', '').
 depends(l29_window_a, l29_wall_a).
 depends(l29_window_a, l29_core).
@@ -1866,6 +1866,75 @@ attempted_by(gh13_squashed_wall, gpt_6_2_astra_max).
 checked_by(gh13_squashed_wall, codex_gpt_6, by_hand).
 addresses(t0, gh13_squashed_wall).
 addresses(t14, gh13_squashed_wall).
+
+claim(gh10_transfer_rate, theorem, proved, "Issue 10", "For each fixed disc of Setting 29.0 in the two proved wall cases, zero tunnelling masses are discrete and the large-mass exponential rate exists off a set of finite logarithmic measure. It equals the difference of two transfer support edges and is between I_eff/2 and 13 I/2. This gives the joint mass power and a parallel-quaternionic defect estimate in terms of the singular value on the same mass scales.").
+source(gh10_transfer_rate, 'results/issues/10.md', '').
+depends(gh10_transfer_rate, gh10_radial_transmission).
+depends(gh10_transfer_rate, gh10_tunnelling_cutoffs).
+depends(gh10_transfer_rate, l30_defect).
+attempted_by(gh10_transfer_rate, gpt_6_2_astra_max).
+checked_by(gh10_transfer_rate, codex_gpt_6, by_hand).
+checked_by(gh10_transfer_rate, terra_6_1, by_hand).
+addresses(t0, gh10_transfer_rate).
+addresses(t14, gh10_transfer_rate).
+
+claim(gh10_all_masses, theorem, proved, "Issue 10, The factor at every mass", "On each fixed admissible disc the light singular value has action 2I-h(D), a Blaschke zero product of the zero-mass compact pencil, and an explicit polynomially bounded positive prefactor from imaginary mass, with exponentially small relative error. The doubled determinant coefficient has right support edge 7I.").
+source(gh10_all_masses, 'results/issues/10.md', '').
+depends(gh10_all_masses, gh10_transfer_rate).
+attempted_by(gh10_all_masses, gpt_6_2_astra_max).
+checked_by(gh10_all_masses, codex_gpt_6, by_hand).
+checked_by(gh10_all_masses, terra_6_1, by_hand).
+addresses(t0, gh10_all_masses).
+addresses(t14, gh10_all_masses).
+
+claim(gh10_inverse_schedule, proposition, proved, "Issue 10, The original and the inverse mass schedules", "With a fixed disc and a fixed target fermion mass coefficient, a last-crossing choice realizes m_epsilon=m_star epsilon for every small epsilon. The required mass divided by log(1/epsilon) tends to (1-alpha)/S.").
+source(gh10_inverse_schedule, 'results/issues/10.md', '').
+depends(gh10_inverse_schedule, gh10_all_masses).
+attempted_by(gh10_inverse_schedule, gpt_6_2_astra_max).
+checked_by(gh10_inverse_schedule, codex_gpt_6, by_hand).
+addresses(t14, gh10_inverse_schedule).
+
+claim(gh10_angular_wall, proposition, proved, "Issue 10, The angular matrix elements", "At the unit Fubini-Study radius the pull-back kernel in the defining multiplicity has weight w=2/3. Its two nonzero squared singular values are (45 plus or minus 3 sqrt(33))/8 from the horizontal row, line spectrum and twist ladder.").
+source(gh10_angular_wall, 'results/issues/10.md', '').
+depends(gh10_angular_wall, l29_window_a).
+attempted_by(gh10_angular_wall, gpt_6_2_astra_max).
+checked_by(gh10_angular_wall, terra_6_1, by_hand).
+addresses(t0, gh10_angular_wall).
+
+claim(gh10_pullback_prefactor, theorem, proved, "Issue 10, The pull-back prefactor and smooth split collars", "At the unit pull-back wall the fixed-disc singular value is asymptotic to a positive explicit constant times M^(7/4) exp(-MI/2). The coefficient is determined by a normalized three-channel normal harmonic; the quaternionic defect is bounded by each positive power of the light mass below two.").
+source(gh10_pullback_prefactor, 'results/issues/10.md', '').
+depends(gh10_pullback_prefactor, gh10_angular_wall).
+depends(gh10_pullback_prefactor, gh10_radial_transmission).
+depends(gh10_pullback_prefactor, l30_defect).
+attempted_by(gh10_pullback_prefactor, gpt_6_2_astra_max).
+checked_by(gh10_pullback_prefactor, codex_gpt_6, by_hand).
+checked_by(gh10_pullback_prefactor, terra_6_1, by_hand).
+addresses(t0, gh10_pullback_prefactor).
+addresses(t14, gh10_pullback_prefactor).
+
+claim(gh10_split_exit, theorem, proved, "Issue 10, Exit into the split wall channel", "For a real affine interpolation ending inside a constant geometric collar a signed Laplace integral gives the geometric transmission with error relative to its absolute envelope. A one-sign flat exit realizes a stretched exponential. A signed flat exit on one fixed smooth disc realizes unbounded exact mass zeros with strictly positive quaternionic defect.").
+source(gh10_split_exit, 'results/issues/10.md', '').
+depends(gh10_split_exit, gh10_pullback_prefactor).
+depends(gh10_split_exit, gh10_radial_transmission).
+attempted_by(gh10_split_exit, gpt_6_2_astra_max).
+checked_by(gh10_split_exit, codex_gpt_6, by_hand).
+checked_by(gh10_split_exit, terra_6_1, by_hand).
+addresses(t0, gh10_split_exit).
+addresses(t14, gh10_split_exit).
+
+claim(gh10_radial_transmission, proposition, proved, "Issue 10", "A zero-energy bordered determinant on the defining multiplicity space gives the actual disc tunnelling singular value with relative O(1/M) error and exact zeros. On the split collar the known prefactor is sqrt(3 M f0) times its exact exponential and one normalized core trace.").
+source(gh10_radial_transmission, 'results/issues/10.md', '').
+attempted_by(gh10_radial_transmission, gpt_6_2_astra_max).
+checked_by(gh10_radial_transmission, codex_gpt_6, by_hand).
+addresses(t0, gh10_radial_transmission).
+addresses(t14, gh10_radial_transmission).
+
+claim(gh10_tunnelling_cutoffs, proposition, proved, "Issue 10", "At fixed coefficients the full half-action bounds the tunnelling exponent from below, and the line-preserving collar increases this bound by its full mass integral.").
+source(gh10_tunnelling_cutoffs, 'results/issues/10.md', '').
+attempted_by(gh10_tunnelling_cutoffs, gpt_6_2_astra_max).
+checked_by(gh10_tunnelling_cutoffs, codex_gpt_6, by_hand).
+addresses(t0, gh10_tunnelling_cutoffs).
+addresses(t14, gh10_tunnelling_cutoffs).
 
 claim(gh2_football_spin, proposition, proved, "Issue 2", "The bounding spin football with integer monopole has the stated Jacobi spectrum and chiral index N, and in the cone-angle range q>=1 its Dirac domain is unique.").
 source(gh2_football_spin, 'results/issues/02.md', '').
