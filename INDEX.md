@@ -12,6 +12,8 @@ The interval calculation follows three generations, their weak currents and cand
 
 Two Freund–Rubin geometries and a heterotic gauge wall test three origins of the seven-dimensional weak sector. [The seven-dimensional weak endpoint in M-theory](paper/seven_m_theory.tex)
 
+The shared ninth direction has an exact charged scalar window and a five-to-six density at fixed absolute kinetic norms. Spinorial probes distinguish a massive circle-vector harmonic from a weak rotation, and a fixed-action vortex product supplies a control on support. The strong chiral vacuum can change the nominally restored weak pole. [Geometry](results/59_shared_circle_and_two_scales.md) · [Magnetic and geometric current tests](results/60_helical_fermion_currents.md) · [Hadronic matching](results/61_colour_thresholds_and_weak_current.md) · [Supported vortex and separated caps](results/62_supported_vortex_and_charged_caps.md)
+
 The graduate lecture derives the point-particle limit of a closed string and uses eleven solved exercises to compare torus momentum and winding, interval windows, the flat M circle and the charged scalar gap over the projective base of $M^{111}$. [Illustrated lecture](docs/kk_strings_lecture.html) · [Lecture source](paper/kk_strings_lecture.tex) · [Original proposal](paper/kk_strings_lecture_proposal.md)
 
 What the numbers mean (spacetime plus internal metric dimension; KO-degree), and the regime table of hypothesis H.

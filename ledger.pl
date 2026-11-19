@@ -2443,6 +2443,107 @@ referee_pending(heterotic_wall_pair_threshold).
 addresses(t14, heterotic_wall_pair_threshold).
 addresses(t18, heterotic_wall_pair_threshold).
 
+claim(shared_circle_window, theorem, proved, "Theorem 59.1 and its vector threshold", "The helical fibre-constant scalar spectrum on CP2 times the circle is exact below the fibre Poincare gap, with charge n/k. Explicit adjoint vector modes bound the first omitted coloured scale by min(1/L,sqrt(12)/B).").
+source(shared_circle_window, 'results/59_shared_circle_and_two_scales.md', '').
+depends(shared_circle_window, gh1_helix_geometry).
+attempted_by(shared_circle_window, gpt_6_2_astra_max).
+checked_by(shared_circle_window, gpt_6_2_astra_max, by_hand).
+referee_pending(shared_circle_window).
+addresses(t13, shared_circle_window).
+addresses(t14, shared_circle_window).
+addresses(t18, shared_circle_window).
+
+claim(shared_circle_density, theorem, proved, "Proposition 59.2 and Theorem 59.3", "At fixed meridian length and fixed positive photon and colour kinetic norms a unique pair of radii grows as P^(1/7). The scalar count per five-volume tends to the flat five-dimensional phase-space sum over Neumann interval thresholds.").
+source(shared_circle_density, 'results/59_shared_circle_and_two_scales.md', '').
+depends(shared_circle_density, shared_circle_window).
+depends(shared_circle_density, gh1_helix_scalar).
+attempted_by(shared_circle_density, gpt_6_2_astra_max).
+checked_by(shared_circle_density, gpt_6_2_astra_max, by_hand).
+referee_pending(shared_circle_density).
+addresses(t13, shared_circle_density).
+addresses(t14, shared_circle_density).
+addresses(t18, shared_circle_density).
+
+claim(shared_circle_curvature, proposition, proved, "Proposition 59.4", "An equatorial null-contraction bound on an unwarped Einstein product with null-energy matter requires minus three times the external curvature times L squared at least (k sin beta)^2 (r_b^4/4+4/r_b^4-2)/2. It constrains the curvature relative to a coloured KK threshold.").
+source(shared_circle_curvature, 'results/59_shared_circle_and_two_scales.md', '').
+depends(shared_circle_curvature, shared_circle_window).
+depends(shared_circle_curvature, gh1_helix_geometry).
+attempted_by(shared_circle_curvature, gpt_6_2_astra_max).
+checked_by(shared_circle_curvature, gpt_6_2_astra_max, by_hand).
+referee_pending(shared_circle_curvature).
+addresses(t13, shared_circle_curvature).
+addresses(t18, shared_circle_curvature).
+
+claim(helical_probe_charge, proposition, proved, "Proposition 60.1", "Equivariant spin-c probes at the round product have a sixteen-state particle kernel with Standard Model charge labels and a conjugate kernel. The charge multiplicities survive on nearby helical spectral clusters. The unconstrained odd bulk is vectorlike.").
+source(helical_probe_charge, 'results/60_helical_fermion_currents.md', '').
+depends(helical_probe_charge, shared_circle_window).
+depends(helical_probe_charge, l53_flag_multiplets).
+attempted_by(helical_probe_charge, gpt_6_2_astra_max).
+checked_by(helical_probe_charge, gpt_6_2_astra_max, by_hand).
+referee_pending(helical_probe_charge).
+addresses(t2, helical_probe_charge).
+addresses(t18, helical_probe_charge).
+
+claim(helical_probe_current, theorem, proved, "Theorem 60.2 and Corollary 60.3", "For the specified minimal lifted fermion current and Einstein vector action the complete round colour-singlet exchange sees a weak rotation and the degree-one harmonic of the circle vector. At canonical matching the relative massive residues are 1/5 for leptons, 1/45 for quarks and -1/15 for the mixed current. The near-round charged pole retains nonzero residue.").
+source(helical_probe_current, 'results/60_helical_fermion_currents.md', '').
+depends(helical_probe_current, helical_probe_charge).
+depends(helical_probe_current, gh1_helix_vector).
+attempted_by(helical_probe_current, gpt_6_2_astra_max).
+checked_by(helical_probe_current, gpt_6_2_astra_max, by_hand).
+referee_pending(helical_probe_current).
+addresses(t4, helical_probe_current).
+addresses(t13, helical_probe_current).
+addresses(t18, helical_probe_current).
+
+claim(magnetic_single_pole_test, proposition, proved, "Proposition 60.4", "For a positive equal-source spectral sum, multiplying by the lightest squared denominator gives an increasing function. Equality at two distinct positive squared momenta is equivalent to single-mass support. The magnetic weak-current reference also fixes the required normalization.").
+source(magnetic_single_pole_test, 'results/60_helical_fermion_currents.md', '').
+depends(magnetic_single_pole_test, helical_probe_current).
+attempted_by(magnetic_single_pole_test, gpt_6_2_astra_max).
+checked_by(magnetic_single_pole_test, gpt_6_2_astra_max, by_hand).
+referee_pending(magnetic_single_pole_test).
+addresses(t4, magnetic_single_pole_test).
+addresses(t13, magnetic_single_pole_test).
+
+claim(shared_winding_hadron, proposition, conditional, "Proposition 61.1", "On the smooth winding two-interval control, continuous one-loop colour matching with six bounded quarks and a fixed matching window gives a finite nonzero limiting three-flavour scale. With continuous massive hadronic matching the product GF H_N squared vanishes as the square root of area.").
+source(shared_winding_hadron, 'results/61_colour_thresholds_and_weak_current.md', '').
+depends(shared_winding_hadron, two_endpoint_current).
+depends(shared_winding_hadron, two_endpoint_flavour_wall).
+attempted_by(shared_winding_hadron, gpt_6_2_astra_max).
+checked_by(shared_winding_hadron, gpt_6_2_astra_max, by_hand).
+referee_pending(shared_winding_hadron).
+addresses(t13, shared_winding_hadron).
+addresses(t18, shared_winding_hadron).
+
+claim(shared_qcd_current, proposition, conditional, "Proposition 61.2", "A chiral condensate of massless QCD doublets adds a rank-one term to the charged KK inverse propagator for a common quark profile. At the two-pole round geometry different quark and lepton profiles give a calculable additional contact, conditional on the stated chiral completion and effective action.").
+source(shared_qcd_current, 'results/61_colour_thresholds_and_weak_current.md', '').
+depends(shared_qcd_current, helical_probe_current).
+depends(shared_qcd_current, l17_condensate).
+attempted_by(shared_qcd_current, gpt_6_2_astra_max).
+checked_by(shared_qcd_current, gpt_6_2_astra_max, by_hand).
+referee_pending(shared_qcd_current).
+addresses(t13, shared_qcd_current).
+addresses(t18, shared_qcd_current).
+
+claim(shared_polar_solution, theorem, proved, "Theorem 62.1", "A fixed Einstein-Higgs action with two dilatons and quantized magnetic flux supports Minkowski times CP2, a circle, and a vortex sphere of arbitrary scale and shape on the polar product. The polar sector retains two independent geometric neutral generators.").
+source(shared_polar_solution, 'results/62_supported_vortex_and_charged_caps.md', '').
+depends(shared_polar_solution, gh1_vortex_neck).
+attempted_by(shared_polar_solution, gpt_6_2_astra_max).
+checked_by(shared_polar_solution, gpt_6_2_astra_max, by_hand).
+referee_pending(shared_polar_solution).
+addresses(t13, shared_polar_solution).
+addresses(t18, shared_polar_solution).
+
+claim(shared_cap_current, proposition, proved, "Proposition 62.2", "For the specified equal-source Einstein probe, the transition between the two polar cap spinors has static exchange bounded by a power of the meridian length times exp(-P/sqrt(2)) on the absolute-matching finite-meridian path. Small positive tilts can preserve vanishing of this contact.").
+source(shared_cap_current, 'results/62_supported_vortex_and_charged_caps.md', '').
+depends(shared_cap_current, helical_probe_charge).
+depends(shared_cap_current, shared_circle_density).
+depends(shared_cap_current, gh1_vortex_neck).
+attempted_by(shared_cap_current, gpt_6_2_astra_max).
+checked_by(shared_cap_current, gpt_6_2_astra_max, by_hand).
+referee_pending(shared_cap_current).
+addresses(t13, shared_cap_current).
+addresses(t18, shared_cap_current).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).
