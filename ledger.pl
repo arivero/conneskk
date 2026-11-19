@@ -2544,6 +2544,168 @@ referee_pending(shared_cap_current).
 addresses(t13, shared_cap_current).
 addresses(t18, shared_cap_current).
 
+claim(vortex_root_vacua, theorem, proved, "Theorem 63.1", "Two circle-charged holomorphic roots of the gravitating vortex solve a fixed positive-square fibration action on the supported product. Their equal-norm vacuum selects the single diagonal geometric photon in the weak sector, with restoration at dissolution.").
+source(vortex_root_vacua, 'results/63_vortex_roots_and_diagonal_photon.md', '').
+depends(vortex_root_vacua, shared_polar_solution).
+depends(vortex_root_vacua, shared_circle_density).
+attempted_by(vortex_root_vacua, gpt_6_2_astra_max).
+checked_by(vortex_root_vacua, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_root_vacua).
+addresses(t13, vortex_root_vacua).
+addresses(t18, vortex_root_vacua).
+
+claim(vortex_root_domain, proposition, proved, "Proposition 63.2", "Circle-equivariant ten-dimensional Weyl fields with prescribed monopole twists give a real finite particle/conjugate window on the supported fibration. Independent mirror Yukawas allow a cut between ordinary and mirror thresholds at a compact broken member and in comoving units at five.").
+source(vortex_root_domain, 'results/63_vortex_roots_and_diagonal_photon.md', '').
+depends(vortex_root_domain, vortex_root_vacua).
+depends(vortex_root_domain, helical_probe_charge).
+attempted_by(vortex_root_domain, gpt_6_2_astra_max).
+checked_by(vortex_root_domain, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_root_domain).
+addresses(t2, vortex_root_domain).
+addresses(t14, vortex_root_domain).
+addresses(t18, vortex_root_domain).
+
+claim(vortex_root_upper_current, proposition, proved, "Proposition 63.3", "At the supported round member the charged source sees the massless rotation and poles at 2/r^2 and 4/r^2. The flux-compensator triplet has relative residue 1/9. The circle pole distinguishes leptonic and quark sources.").
+source(vortex_root_upper_current, 'results/63_vortex_roots_and_diagonal_photon.md', '').
+depends(vortex_root_upper_current, vortex_root_vacua).
+depends(vortex_root_upper_current, helical_probe_current).
+attempted_by(vortex_root_upper_current, gpt_6_2_astra_max).
+checked_by(vortex_root_upper_current, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_root_upper_current).
+addresses(t4, vortex_root_upper_current).
+addresses(t13, vortex_root_upper_current).
+
+claim(vortex_root_lower_current, proposition, proved, "Proposition 63.4", "At fixed nonround shape on the compensated area collapse, the first coupled charged mass is of order 1/a and the full static exchange scales as a positive shape constant divided by the internal volume. Comoving hadrons can have finite weak strength.").
+source(vortex_root_lower_current, 'results/63_vortex_roots_and_diagonal_photon.md', '').
+depends(vortex_root_lower_current, vortex_root_domain).
+depends(vortex_root_lower_current, vortex_root_upper_current).
+attempted_by(vortex_root_lower_current, gpt_6_2_astra_max).
+checked_by(vortex_root_lower_current, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_root_lower_current).
+addresses(t13, vortex_root_lower_current).
+addresses(t18, vortex_root_lower_current).
+
+claim(vortex_root_magnetic_link, proposition, proved, "Proposition 63.5", "The round angular flux and metric triplets admit the quadratic presentation of two equal gauge sites with stiffness 2 I_E/r^2 and probe weights 1/3,2/3. An additional circle pole and non-Abelian current algebra are independent tests of a proposed magnetic dual.").
+source(vortex_root_magnetic_link, 'results/63_vortex_roots_and_diagonal_photon.md', '').
+depends(vortex_root_magnetic_link, vortex_root_upper_current).
+depends(vortex_root_magnetic_link, magnetic_single_pole_test).
+attempted_by(vortex_root_magnetic_link, gpt_6_2_astra_max).
+checked_by(vortex_root_magnetic_link, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_root_magnetic_link).
+addresses(t4, vortex_root_magnetic_link).
+addresses(t18, vortex_root_magnetic_link).
+
+claim(projective_flux_octet, proposition, proved, "Proposition 64.1", "The fixed-modulus Einstein and projective top-form sector has a negative colour-adjoint second variation on the flat supported product. This identifies a saddle under the stated classical action.").
+source(projective_flux_octet, 'results/64_projective_flux_and_colour_stability.md', '').
+depends(projective_flux_octet, shared_polar_solution).
+depends(projective_flux_octet, vortex_root_vacua).
+attempted_by(projective_flux_octet, gpt_6_2_astra_max).
+checked_by(projective_flux_octet, gpt_6_2_astra_max, by_hand).
+referee_pending(projective_flux_octet).
+addresses(t13, projective_flux_octet).
+addresses(t18, projective_flux_octet).
+
+claim(projective_kahler_octet, proposition, proved, "Proposition 64.2", "A magnetic Kahler two-form preserves the supported product and its full colour gauge norm. Its two fixed-modulus shape and flux octet squared masses are positive.").
+source(projective_kahler_octet, 'results/64_projective_flux_and_colour_stability.md', '').
+depends(projective_kahler_octet, projective_flux_octet).
+attempted_by(projective_kahler_octet, gpt_6_2_astra_max).
+checked_by(projective_kahler_octet, gpt_6_2_astra_max, by_hand).
+referee_pending(projective_kahler_octet).
+addresses(t13, projective_kahler_octet).
+addresses(t18, projective_kahler_octet).
+
+claim(projective_kahler_moduli, proposition, proved, "Proposition 64.3", "At round dissolution the projective scalar and Kahler-flux octet block including the two dilatons and weak radius has squared masses at least 12/B^2.").
+source(projective_kahler_moduli, 'results/64_projective_flux_and_colour_stability.md', '').
+depends(projective_kahler_moduli, projective_kahler_octet).
+attempted_by(projective_kahler_moduli, gpt_6_2_astra_max).
+checked_by(projective_kahler_moduli, gpt_6_2_astra_max, by_hand).
+referee_pending(projective_kahler_moduli).
+addresses(t13, projective_kahler_moduli).
+addresses(t18, projective_kahler_moduli).
+
+claim(colour_wilson_trial, proposition, proved, "Proposition 65.1", "A projective colour holonomy gives a physical adjoint scalar trial of squared mass at most of order 1/(BL)^2 on the fixed-shape compensated collapse, and an exact flat direction at zero roots.").
+source(colour_wilson_trial, 'results/65_colour_wilson_scalar.md', '').
+depends(colour_wilson_trial, projective_kahler_octet).
+depends(colour_wilson_trial, vortex_root_domain).
+attempted_by(colour_wilson_trial, gpt_6_2_astra_max).
+checked_by(colour_wilson_trial, gpt_6_2_astra_max, by_hand).
+referee_pending(colour_wilson_trial).
+addresses(t13, colour_wilson_trial).
+addresses(t18, colour_wilson_trial).
+
+claim(colour_wilson_lift, proposition, proved, "Proposition 65.2", "A positive internal circle-curvature term preserves the supported vacua and the tree colour and photon norms. At dissolution it gives both angular colour-vector polarizations a positive mass of order 1/B.").
+source(colour_wilson_lift, 'results/65_colour_wilson_scalar.md', '').
+depends(colour_wilson_lift, colour_wilson_trial).
+attempted_by(colour_wilson_lift, gpt_6_2_astra_max).
+checked_by(colour_wilson_lift, gpt_6_2_astra_max, by_hand).
+referee_pending(colour_wilson_lift).
+addresses(t13, colour_wilson_lift).
+addresses(t18, colour_wilson_lift).
+
+claim(shared_neutral_poles, proposition, proved, "Proposition 66.1", "At canonical matching near dissolution the two sourced light neutral mass squares of the equal-root fibration are 8/5 and 2/3 of the charged mass square at leading order. The vortex pole has a right-handed-neutrino vertex.").
+source(shared_neutral_poles, 'results/66_neutral_currents_and_hadronic_units.md', '').
+depends(shared_neutral_poles, vortex_root_upper_current).
+depends(shared_neutral_poles, vortex_root_domain).
+attempted_by(shared_neutral_poles, gpt_6_2_astra_max).
+checked_by(shared_neutral_poles, gpt_6_2_astra_max, by_hand).
+referee_pending(shared_neutral_poles).
+addresses(t4, shared_neutral_poles).
+addresses(t18, shared_neutral_poles).
+
+claim(vortex_root_neck, proposition, proved, "Proposition 66.2", "On the symmetric long neck the squared projected Yukawa overlap grows as exp(P/(2 sqrt(2)))/P in order, while the fixed-shape lower-limit charged Green function is positive and exponentially suppressed.").
+source(vortex_root_neck, 'results/66_neutral_currents_and_hadronic_units.md', '').
+depends(vortex_root_neck, vortex_root_lower_current).
+depends(vortex_root_neck, shared_cap_current).
+attempted_by(vortex_root_neck, gpt_6_2_astra_max).
+checked_by(vortex_root_neck, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_root_neck).
+addresses(t13, vortex_root_neck).
+addresses(t14, vortex_root_neck).
+addresses(t18, vortex_root_neck).
+
+claim(vortex_root_exchange_range, proposition, proved, "Proposition 66.3", "At fixed compact broken geometry and other tree inputs the positive root kinetic coefficient varies the sourced weak exchange strictly through the open interval between zero and the contact or spacelike response without the root term.").
+source(vortex_root_exchange_range, 'results/66_neutral_currents_and_hadronic_units.md', '').
+depends(vortex_root_exchange_range, vortex_root_lower_current).
+depends(vortex_root_exchange_range, vortex_root_upper_current).
+attempted_by(vortex_root_exchange_range, gpt_6_2_astra_max).
+checked_by(vortex_root_exchange_range, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_root_exchange_range).
+addresses(t13, vortex_root_exchange_range).
+addresses(t18, vortex_root_exchange_range).
+
+claim(vortex_yukawa_half_interval, theorem, proved, "Theorem 67.1", "For fixed nonzero holomorphic Yukawas on the unbounded six-dimensional neck with fixed physical meridian length, each central electric charge in the projective kernel has a mixed-boundary half-interval spectrum. The first mass tends to pi/d above the descending four-dimensional colour scale.").
+source(vortex_yukawa_half_interval, 'results/67_fermion_masses_on_the_long_neck.md', '').
+depends(vortex_yukawa_half_interval, vortex_root_domain).
+depends(vortex_yukawa_half_interval, vortex_root_neck).
+attempted_by(vortex_yukawa_half_interval, gpt_6_2_astra_max).
+checked_by(vortex_yukawa_half_interval, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_yukawa_half_interval).
+addresses(t2, vortex_yukawa_half_interval).
+addresses(t14, vortex_yukawa_half_interval).
+addresses(t18, vortex_yukawa_half_interval).
+
+claim(vortex_five_quarks, proposition, proved, "Proposition 67.2", "At rank-one up and zero down Yukawas five Dirac quark fundamentals occur below the comoving colour cut on the unbounded neck. The fixed nonzero mirror masses remain above the cut.").
+source(vortex_five_quarks, 'results/67_fermion_masses_on_the_long_neck.md', '').
+depends(vortex_five_quarks, vortex_yukawa_half_interval).
+depends(vortex_five_quarks, vortex_root_domain).
+attempted_by(vortex_five_quarks, gpt_6_2_astra_max).
+checked_by(vortex_five_quarks, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_five_quarks).
+addresses(t12, vortex_five_quarks).
+addresses(t14, vortex_five_quarks).
+addresses(t18, vortex_five_quarks).
+
+claim(vortex_one_quark_mass, proposition, proved, "Proposition 67.3", "One scale-dilaton Yukawa function gives four massless quarks and one tunable quark mass in units of the colour matching scale. The limiting value follows from the actual weighted eigenvalue with a cap-localized potential.").
+source(vortex_one_quark_mass, 'results/67_fermion_masses_on_the_long_neck.md', '').
+depends(vortex_one_quark_mass, vortex_five_quarks).
+depends(vortex_one_quark_mass, vortex_root_neck).
+attempted_by(vortex_one_quark_mass, gpt_6_2_astra_max).
+checked_by(vortex_one_quark_mass, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_one_quark_mass).
+addresses(t12, vortex_one_quark_mass).
+addresses(t14, vortex_one_quark_mass).
+addresses(t18, vortex_one_quark_mass).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).
