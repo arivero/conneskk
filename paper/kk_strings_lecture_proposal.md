@@ -1,5 +1,7 @@
 # From Kaluza–Klein trajectories to closed strings on a circle
 
+The completed lecture includes the five-, six- and seven-dimensional applications. [Print handout](../docs/kk_strings_lecture.pdf) · [Mobile handout](../docs/kk_strings_lecture_mobile.pdf) · [Lecture source](kk_strings_lecture.tex)
+
 **Lecture proposal.** Graduate readers familiar with a particle on a circle and canonical quantization can begin with one question. What changes physically when a history $f(t)$ of points becomes a history $t\mapsto f(t,\cdot)$ of loops? The lecture follows one compact coordinate throughout. By the end a reader should be able to recover the ordinary momentum tower, exhibit a state missing from point-particle Kaluza–Klein theory, and decide which massless vectors survive in a specified string theory.
 
 ## Histories and constraints

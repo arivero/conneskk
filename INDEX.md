@@ -12,7 +12,7 @@ The interval calculation follows three generations, their weak currents and cand
 
 Two Freund–Rubin geometries and a heterotic gauge wall test three origins of the seven-dimensional weak sector. [The seven-dimensional weak endpoint in M-theory](paper/seven_m_theory.tex)
 
-The separate lecture proposal compares a point-particle momentum tower with closed-string momentum and winding, including the heterotic projection at the self-dual radius. [Worked circle and lecture documents](paper/kk_strings_lecture_proposal.md)
+The graduate lecture derives the point-particle limit of a closed string and uses eleven solved exercises to compare torus momentum and winding, interval windows, the flat M circle and the charged scalar gap over the projective base of $M^{111}$. [Illustrated lecture](docs/kk_strings_lecture.html) · [Lecture source](paper/kk_strings_lecture.tex) · [Original proposal](paper/kk_strings_lecture_proposal.md)
 
 What the numbers mean (spacetime plus internal metric dimension; KO-degree), and the regime table of hypothesis H.
 

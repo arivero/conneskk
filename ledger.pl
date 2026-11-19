@@ -2443,6 +2443,22 @@ referee_pending(heterotic_wall_pair_threshold).
 addresses(t14, heterotic_wall_pair_threshold).
 addresses(t18, heterotic_wall_pair_threshold).
 
+claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
+source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
+depends(lecture_projective_circle_gap, d11_quotient).
+attempted_by(lecture_projective_circle_gap, gpt_6_2_astra_max).
+checked_by(lecture_projective_circle_gap, gpt_6_2_astra_max, by_hand).
+referee_pending(lecture_projective_circle_gap).
+addresses(t14, lecture_projective_circle_gap).
+addresses(t18, lecture_projective_circle_gap).
+
+claim(lecture_faithful_isometries, proposition, proved, "Compact spaces lecture, Exercise 11", "The quotient of S5 times S3 by phases (z,z inverse) has a faithful isometric S(U(3) times U(2)) action. The six conjugate bidegree (1,1) coordinate products transform as a colour triplet and weak doublet of hypercharge 1/6. Its Euler class h+k leaves the pullback of w2 nonzero. The construction is a bosonic charge example.").
+source(lecture_faithful_isometries, 'paper/kk_strings_lecture.tex', '').
+attempted_by(lecture_faithful_isometries, gpt_6_2_astra_max).
+checked_by(lecture_faithful_isometries, gpt_6_2_astra_max, by_hand).
+referee_pending(lecture_faithful_isometries).
+addresses(t18, lecture_faithful_isometries).
+
 claim(gh1_berger_charge_kernel, proposition, proved, "Issue 1 section 4", "On round S5 the spin Dirac twisted by the dual spin bundle and the exterior Killing-spinor bundle has kernel exterior(4) and gap sqrt(5)/R. Under the rank-one stabilizer it is the colour and electric charge module of one all-left generation. A separately gauged projector masses six vector directions.").
 source(gh1_berger_charge_kernel, 'results/issues/01.md', '').
 attempted_by(gh1_berger_charge_kernel, gpt_6_2_astra_max).

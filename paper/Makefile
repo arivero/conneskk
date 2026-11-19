@@ -1,7 +1,10 @@
 # Each paper in two forms: Phys Rev two-column, and one column of the same width for phones.
 PAPERS = towerless_intervals chiral_limit_note boundary_condition_note joint_limit_note connes_kk_dictionary_note generations_note real_structure_note two_endpoint_limits seven_m_theory
-.PHONY: all supplement supplements html docs clean
-all: $(PAPERS:%=%.pdf) $(PAPERS:%=%_mobile.pdf)
+LECTURE = kk_strings_lecture
+LECTURE_PDFS = $(LECTURE).pdf $(LECTURE)_mobile.pdf
+LECTURE_PLOTS = $(addprefix plots/lecture-,worldsheet.pdf circle-spectrum.pdf interval-window.pdf fibre-winding.pdf m-circle.pdf)
+.PHONY: all lecture supplement supplements html docs clean
+all: $(PAPERS:%=%.pdf) $(PAPERS:%=%_mobile.pdf) $(LECTURE_PDFS)
 
 define build
 	pdflatex -interaction=nonstopmode $(2) $(3) >/dev/null || true
@@ -15,6 +18,14 @@ endef
 
 %.pdf: %.tex towerless_intervals.bib
 	$(call build,$*,,$*)
+
+$(LECTURE_PDFS): $(LECTURE_PLOTS)
+
+$(LECTURE_PLOTS) &: lecture_figures.py
+	python3 lecture_figures.py --pdf-dir plots
+
+lecture: $(LECTURE_PDFS)
+	cp $(LECTURE_PDFS) ../docs/
 
 # Rebuild the Supplemental Material in both forms; run from the repository root by the script.
 supplement:
@@ -32,9 +43,13 @@ html:
 	python3 -m unittest -q test_figures
 
 # Copy all PDFs and rebuild the HTML edition served by GitHub Pages.
-docs: all supplement supplements html
-	cp $(PAPERS:%=%.pdf) $(PAPERS:%=%_mobile.pdf) supplemental.pdf supplemental_mobile.pdf ../docs/
+# The supplement scripts share a scratch manuscript, so run the two targets in order.
+docs: all
+	$(MAKE) supplement
+	$(MAKE) supplements
+	cp $(PAPERS:%=%.pdf) $(PAPERS:%=%_mobile.pdf) $(LECTURE_PDFS) supplemental.pdf supplemental_mobile.pdf ../docs/
 	for t in $(PAPERS); do n=$$t; [ $$t = towerless_intervals ] && n=towerless; cp supplemental_$$n.pdf supplemental_$${n}_mobile.pdf ../docs/; done
+	$(MAKE) html
 
 clean:
 	rm -f *.aux *.log *.bbl *.blg *.out *Notes.bib

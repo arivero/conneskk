@@ -99,6 +99,9 @@ code { overflow-wrap: anywhere; }
 .plot-scroll p { margin: 0; }
 .plot img { display: block; width: 100%; min-width: 35rem; height: auto; }
 .plot figcaption { margin: .8rem .25rem .25rem; color: #41565b; font: .88rem/1.6 system-ui, sans-serif; }
+.paper figure { margin: 1.6rem 0; }
+.paper figure img { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+.paper figcaption { margin-top: .65rem; font: .88rem/1.6 system-ui, sans-serif; }
 table { display: block; max-width: 100%; margin: 1.4rem 0; overflow-x: auto; border-collapse: collapse; font-size: .91rem; }
 caption { padding: .5rem; text-align: left; font-style: italic; }
 .table-number { font-style: normal; }

@@ -81,6 +81,13 @@ PAPERS = [
     },
 ]
 
+LECTURE = {
+    "name": "kk_strings_lecture",
+    "title": "Kaluza–Klein trajectories and strings on compact spaces",
+    "short": "Kaluza–Klein trajectories and strings on compact spaces",
+}
+EDITIONS = [*PAPERS, LECTURE]
+
 
 class Headings(HTMLParser):
     def __init__(self):
@@ -238,16 +245,17 @@ def navigation(current, overview_headings, paper_headings):
                 parts.append("<li>" + item(f"index.html#{child_id}", child_title) + "</li>")
             parts.append("</ul>")
         parts.append("</li>")
-    parts.append('</ul><p class="nav-label">Complete papers</p><ul class="paper-list">')
-    for paper in PAPERS:
-        name = paper["name"]
-        active = current == name
-        parts.append("<li>" + item(f"{name}.html", paper["short"], active))
-        parts.append("<details" + (" open" if active else "") + "><summary>Sections</summary><ul>")
-        for level, identifier, title in paper_headings[name]:
-            if level == "h2":
-                parts.append("<li>" + item(f"{name}.html#{identifier}", title) + "</li>")
-        parts.append("</ul></details></li>")
+    for label, editions in (("Complete papers", PAPERS), ("Graduate lecture", [LECTURE])):
+        parts.append(f'</ul><p class="nav-label">{label}</p><ul class="paper-list">')
+        for edition in editions:
+            name = edition["name"]
+            active = current == name
+            parts.append("<li>" + item(f"{name}.html", edition["short"], active))
+            parts.append("<details" + (" open" if active else "") + "><summary>Sections</summary><ul>")
+            for level, identifier, title in paper_headings[name]:
+                if level == "h2":
+                    parts.append("<li>" + item(f"{name}.html#{identifier}", title) + "</li>")
+            parts.append("</ul></details></li>")
     parts.append("</ul></nav>")
     return "\n".join(parts)
 
@@ -290,23 +298,33 @@ def page(title, current, contents, overview_headings, paper_headings):
 
 def paper_files(paper):
     name = paper["name"]
-    supplement = paper["supplement"]
-    return f"""<p class="breadcrumbs"><a href="index.html">Integrated discussion</a> / Complete paper</p>
-<div class="paper-files" aria-label="Paper and supplement editions">
-<span>Read or download</span>
-<a href="{name}.pdf">Paper PDF</a>
-<a href="{name}_mobile.pdf">Mobile PDF</a>
+    supplement = paper.get("supplement")
+    kind = "Complete paper" if supplement else "Graduate lecture"
+    pdf_label = "Paper PDF" if supplement else "Lecture PDF"
+    edition_label = "Paper and supplement editions" if supplement else "Lecture editions"
+    supplement_links = ""
+    if supplement:
+        supplement_links = f"""
 <a href="supplemental_{supplement}.pdf">Paper supplement</a>
-<a href="supplemental_{supplement}_mobile.pdf">Mobile supplement</a>
+<a href="supplemental_{supplement}_mobile.pdf">Mobile supplement</a>"""
+    return f"""<p class="breadcrumbs"><a href="index.html">Integrated discussion</a> / {kind}</p>
+<div class="paper-files" aria-label="{edition_label}">
+<span>Read or download</span>
+<a href="{name}.pdf">{pdf_label}</a>
+<a href="{name}_mobile.pdf">Mobile PDF</a>{supplement_links}
 </div>"""
 
 
 def main():
     DOCS.mkdir(exist_ok=True)
     write_figures(DOCS / "plots")
+    subprocess.run(
+        ["python3", "lecture_figures.py", "--svg-dir", str(DOCS / "plots")],
+        cwd=HERE, check=True,
+    )
     discussion = pandoc((HERE / "site_overview.md").read_text(encoding="utf-8"), "markdown")
     overview_headings = headings(discussion)
-    bodies = {paper["name"]: paper_body(paper) for paper in PAPERS}
+    bodies = {paper["name"]: paper_body(paper) for paper in EDITIONS}
     paper_headings = {name: headings(body) for name, body in bodies.items()}
 
     (DOCS / "site.css").write_text((HERE / "site.css").read_text(encoding="utf-8"), encoding="utf-8")
@@ -315,14 +333,14 @@ def main():
              overview_headings, paper_headings),
         encoding="utf-8",
     )
-    for paper in PAPERS:
+    for paper in EDITIONS:
         name = paper["name"]
         contents = f'{paper_files(paper)}\n<article class="paper">\n{bodies[name]}\n</article>'
         (DOCS / f"{name}.html").write_text(
             page(paper["title"], name, contents, overview_headings, paper_headings),
             encoding="utf-8",
         )
-    print(f"Built the integrated discussion and {len(PAPERS)} HTML papers in {DOCS}.")
+    print(f"Built the integrated discussion, {len(PAPERS)} HTML papers and the lecture in {DOCS}.")
 
 
 if __name__ == "__main__":

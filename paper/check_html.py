@@ -6,8 +6,16 @@ from html.parser import HTMLParser
 import re
 from urllib.parse import unquote, urlsplit
 
-from build_html import DOCS, HERE, PAPERS
+from build_html import DOCS, EDITIONS, HERE, LECTURE
 from figures import FIGURES
+
+LECTURE_PLOTS = {
+    "plots/lecture-worldsheet.svg",
+    "plots/lecture-circle-spectrum.svg",
+    "plots/lecture-interval-window.svg",
+    "plots/lecture-fibre-winding.svg",
+    "plots/lecture-m-circle.svg",
+}
 
 
 class Document(HTMLParser):
@@ -30,6 +38,9 @@ class Document(HTMLParser):
         self.section_number_buffer = None
         self.table_numbers = []
         self.table_number_buffer = None
+        self.figure_id = None
+        self.figure_number_buffer = None
+        self.figure_numbers = []
         self.heading_id = None
         self.equation_id = None
         self.equation_number_buffer = None
@@ -78,6 +89,10 @@ class Document(HTMLParser):
             self.equation_number_buffer = []
         if tag == "div" and attrs.get("id", "").startswith("tab:"):
             self.table_id = attrs["id"]
+        if tag == "figure":
+            self.figure_id = attrs.get("id")
+        if tag == "strong" and self.caption_stack == ["strong"] and self.figure_id:
+            self.figure_number_buffer = []
         if tag == "div" and classes.intersection({"theorem", "proposition", "lemma", "corollary"}):
             self.formal_id = attrs.get("id")
         if tag == "strong" and "table-number" in classes:
@@ -112,6 +127,14 @@ class Document(HTMLParser):
                 self.target_numbers[self.table_id] = re.search(r"\d+", number).group()
                 self.table_id = None
             self.table_number_buffer = None
+        if tag == "strong" and self.figure_number_buffer is not None:
+            match = re.fullmatch(r"Figure (\d+)\.", "".join(self.figure_number_buffer))
+            if match:
+                self.figure_numbers.append(match.group(1))
+                self.target_numbers[self.figure_id] = match.group(1)
+            self.figure_number_buffer = None
+        if tag == "figure":
+            self.figure_id = None
         if tag == "strong" and self.formal_number_buffer is not None:
             match = re.search(r"\d+", "".join(self.formal_number_buffer))
             if match:
@@ -136,6 +159,8 @@ class Document(HTMLParser):
             self.section_number_buffer.append(data)
         if self.table_number_buffer is not None:
             self.table_number_buffer.append(data)
+        if self.figure_number_buffer is not None:
+            self.figure_number_buffer.append(data)
         if self.equation_number_buffer is not None:
             self.equation_number_buffer.append(data)
         if self.formal_number_buffer is not None:
@@ -151,7 +176,7 @@ def check(condition, message, errors):
 
 def main():
     errors = []
-    paths = [DOCS / "index.html"] + [DOCS / f'{paper["name"]}.html' for paper in PAPERS]
+    paths = [DOCS / "index.html"] + [DOCS / f'{paper["name"]}.html' for paper in EDITIONS]
     documents = {}
     for path in paths:
         if not path.is_file():
@@ -184,7 +209,7 @@ def main():
             if expected is not None:
                 check(text == expected, f"{name}: reference #{target} displays {text}, expected {expected}", errors)
 
-    for paper in PAPERS:
+    for paper in EDITIONS:
         name = paper["name"]
         document = documents.get(f"{name}.html")
         if not document:
@@ -214,7 +239,8 @@ def main():
         check(document.section_numbers == expected_numbers, f"{name}: inconsistent section numbering", errors)
         tables = len(re.findall(r"\\begin\{table\*?\}", source))
         check(document.tables == tables, f"{name}: {document.tables}/{tables} tables", errors)
-        captions = len(re.findall(r"^\\caption\{", source, re.MULTILINE))
+        table_sources = re.findall(r"\\begin\{table\*?\}(.*?)\\end\{table\*?\}", source, re.DOTALL)
+        captions = sum(table.count(r"\caption{") for table in table_sources)
         expected_tables = [f"Table {number}." for number in range(1, captions + 1)]
         check(document.table_numbers == expected_tables, f"{name}: inconsistent table numbering", errors)
         check(document.math > 0, f"{name}: no MathML", errors)
@@ -226,6 +252,12 @@ def main():
     if overview:
         for name in FIGURES:
             check(overview.images[f"plots/{name}"] == 1, f"index.html: expected one plot {name}", errors)
+
+    lecture = documents.get(f'{LECTURE["name"]}.html')
+    if lecture:
+        check(lecture.images == Counter(LECTURE_PLOTS), "Lecture: inconsistent SVG plot coverage", errors)
+        figure_numbers = [str(number) for number in range(1, len(LECTURE_PLOTS) + 1)]
+        check(lecture.figure_numbers == figure_numbers, "Lecture: inconsistent figure numbering", errors)
 
     if errors:
         raise SystemExit("\n".join(errors))

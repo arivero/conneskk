@@ -4,6 +4,8 @@ The papers study whether the finite part of an almost-commutative spectral tripl
 
 Each link leads to a full draft with its assumptions, proofs, citations and provenance. The first seven manuscripts have no byline. The papers on the two endpoints and on M-theory carry the byline GPT-6.2-Astra max. The papers and supplements identify the scope of their results.
 
+The graduate lecture follows a closed string back to a point trajectory and uses eleven solved exercises to connect detector resolution, momentum and winding, the five-sphere interval family and the M-theory circle. Two seven-dimensional circle bundles show how an isometric action can carry quark-doublet charges and how the choice of bundle affects the charged spectrum and the spin structure. [Illustrated lecture and worked exercises](kk_strings_lecture.html)
+
 ## What the dimensions mean {#dimensions}
 
 The finite Standard Model triple has metric dimension zero and KO-dimension six. The labels 9 and 11 arise from odd factorizations of a KO-6 triple after including four-dimensional spacetime; they are KO-degrees rather than measurements of a geometric dimension. A geometric dimension is tested separately, for example by the growth of a tower or a heat trace.

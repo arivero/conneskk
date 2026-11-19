@@ -1,0 +1,365 @@
+% The lecture in print: make lecture. The same target builds the phone edition.
+\ifdefined\mobile
+\documentclass[10pt]{article}
+\usepackage[paperwidth=270pt,paperheight=585pt,left=12pt,right=12pt,top=19pt,bottom=23pt,footskip=14pt]{geometry}
+\else
+\documentclass[11pt,letterpaper]{article}
+\usepackage[textwidth=5.95in,top=0.8in,bottom=0.83in]{geometry}
+\fi
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,graphicx,microtype}
+\usepackage[section]{placeins}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdfauthor={GPT-6.2-Astra max},pdftitle={Kaluza-Klein trajectories and strings on compact spaces}}
+\emergencystretch=1.4em
+\raggedbottom
+\setcounter{topnumber}{2}
+\renewcommand{\topfraction}{.88}
+\renewcommand{\textfraction}{.10}
+\begin{document}
+\title{Kaluza--Klein trajectories and strings on compact spaces}
+\author{GPT-6.2-Astra max}
+\date{Graduate lecture, 19 November 2026}
+\maketitle
+
+Imagine two detectors looking at the same compactification. One reconstructs a charged track $f(t)$ from a sequence of soft collisions. The other can vary its energy and count the masses carrying that charge. A track can look pointlike to the first detector while the second resolves a whole extra dimension. What conditions make that possible? Could the same dimension help supply the gauge symmetries of quarks and leptons?
+
+We start with the trajectory of a particle, allow it to become the history of a loop, and recover what the first detector measures. Momentum, winding and D0 charge then give three physically different experiments with the second detector. The applications use five, six and seven internal directions. In particular we will construct a seven-dimensional metric with the Standard Model gauge \emph{Lie algebra} and a growing circle, and calculate what changes when that circle is twisted to make the total space spin. This last calculation can be done with one charged scalar and pencil and paper.
+
+\section{What a particle measures in Kaluza--Klein theory}
+
+Let $f:\lambda\mapsto(x^\mu(\lambda),\vartheta(\lambda))$ be a worldline. The angle $\vartheta$ has period $2\pi$, and the proper radius $R$ is constant. We use $\hbar=c=1$, a mostly-plus spacetime metric and a positive worldline einbein $e$, the variable that makes the choice of parameter immaterial. Take
+\begin{equation}
+ ds^2=g_{\mu\nu}dx^\mu dx^\nu
+       +R^2(d\vartheta+A_\mu dx^\mu)^2 .
+ \label{eq:kkmetric}
+\end{equation}
+A shift $\vartheta\mapsto\vartheta-\chi(x)$ takes $A$ to $A+d\chi$. A wave on the circle has Fourier modes $e^{in\vartheta}$, $n\in\mathbb Z$, so its conjugate angular momentum is an integer in these units.
+
+It pays to keep the particle action rather than just the mass formula. For a particle of higher-dimensional mass $m_0$ let $L=(G_{MN}\dot f^M\dot f^N/e-em_0^2)/2$. Since $\vartheta$ is cyclic, $p_\vartheta=R^2(\dot\vartheta+A_\mu\dot x^\mu)/e$ is conserved. To prescribe its value $n$, subtract $n\dot\vartheta$ from $L$ \emph{before} eliminating $\dot\vartheta$. This partial Legendre transform gives
+\begin{equation}
+ L_n=\frac{g_{\mu\nu}\dot x^\mu\dot x^\nu}{2e}
+      -\frac e2\left(m_0^2+\frac{n^2}{R^2}\right)
+      +n A_\mu\dot x^\mu .
+ \label{eq:routh}
+\end{equation}
+The same integer determines a mass shift and the force in a background with $dA\ne0$. In the full space a neutral, spinless test particle follows a geodesic. Its projected trajectory in the lower space obeys the Lorentz force law with charge $n$. Even a null geodesic upstairs can project to a massive track. A scalar field gives the same tower by expanding the wave equation in $e^{in\vartheta}$.
+
+On a general compact space $K$, expand in internal eigenfunctions. An infinitesimal isometry with Killing field $K_a$ acts on scalar modes by $-i\mathcal L_{K_a}$, with the corresponding lift on fields carrying spin. Making the isometry parameter depend on the external position introduces vector fields through the mixed metric components. For an isometry-invariant background and Einstein kinetic term their inverse coupling matrix is proportional to the integral of $g_K(K_a,K_b)$ over $K$. Thus the algebra, the charges of a given mode and the strength of its current are three calculations. They coincide in a particularly simple way for Eq.~\eqref{eq:kkmetric}.
+
+\section{How the string returns a trajectory}
+
+At a particular worldsheet time $\tau$, a closed string gives a map $\sigma\mapsto X(\tau,\sigma)$, $0\leq\sigma<2\pi$. Before imposing constraints, a history of closed strings is a path in the free loop space of the target. It sweeps out a cylinder. Reparametrizations of that cylinder identify descriptions of the same history. A point particle can wind around a compact direction during an entire history. A string can already wind around it in a single spatial slice.
+
+Write $\ell_s=\sqrt{\alpha'}$ and $T=1/(2\pi\alpha')$ for the fundamental string length and tension. In conformal gauge its bosonic action in metric $G$ and two-form $B$ is
+\begin{equation}
+\begin{aligned}
+ S=\frac{1}{4\pi\alpha'}\int d\tau\,d\sigma\,\big\{&
+ G_{MN}(\dot X^M\dot X^N-X^{\prime M}X^{\prime N})\\
+ &+2B_{MN}\dot X^M X^{\prime N}\big\}.
+\end{aligned}
+ \label{eq:polyakov}
+\end{equation}
+Dots and primes differentiate $\tau$ and $\sigma$. Variation of the worldsheet metric before gauge fixing imposes $G(\dot X,X')=0$ and $G(\dot X,\dot X)+G(X',X')=0$. In flat space with $B=0$, each target coordinate obeys the wave equation $\ddot X-X''=0$. Worldsheet time becomes a target-space clock only after a time gauge has been chosen \cite{Polyakov1981Worldsheet,Tong2009String}.
+
+There are two ways to recover $f(t)$, and they answer different experimental questions.
+
+\emph{Constant loops.} Set $X^M(\lambda,\sigma)=f^M(\lambda)$ in the Polyakov action. Give the worldsheet metric diagonal entries $-s(\lambda)^2$ and $1$. Integration over $\sigma$ gives
+\begin{equation}
+ S_0=\frac12\int \frac{d\lambda}{e}\,G(\dot f,\dot f),
+ \qquad e=\alpha's .
+\end{equation} Varying $e$ gives $G(\dot f,\dot f)=0$. Varying $f$ gives the geodesic equation in an affine gauge. This is an exact classical null sector, including in a smooth curved target with $B=0$. In a patch where $f^0$ increases, take $t=f^0$ and record the spatial trajectory. Substituting a constant loop directly in the Nambu--Goto area gives zero area because its induced metric is degenerate. The auxiliary metric retains the mass-shell equation that the area substitution loses. A compact momentum then gives precisely Eq.~\eqref{eq:routh} with $m_0=0$.
+
+\emph{An unresolved extended state.} In flat space and in a fixed time gauge, write
+\begin{equation}
+\begin{aligned}
+ f^M(\tau)&=\frac{1}{2\pi}\int_0^{2\pi}X^M(\tau,\sigma)\,d\sigma,\\
+ X^M&=f^M+\xi^M,\qquad \langle\xi^M\rangle_\sigma=0 .
+\end{aligned}
+ \label{eq:mean}
+\end{equation}
+Use this formula in noncompact directions or in a contractible target patch. The position zero mode of a wound compact coordinate is defined on its lift after subtracting the linear winding piece. Integrating the flat wave equation gives $\ddot f^M=0$ exactly. The nonzero modes can carry internal energy and angular momentum. A long-wavelength scalar probe sampling a normalized uniform density has matrix element proportional to $\langle e^{iq\cdot X}\rangle_\sigma$. Its expansion begins with $e^{iq\cdot f}[1-\langle(q\cdot\xi)^2\rangle_\sigma/2+\cdots]$. For $|q|\rho\ll1$, where $\rho$ bounds the transverse size of this source, the probe follows the centre. The quadratic moment is its first size measurement. In a slowly varying metric the monopole approximation to a localized, spinless packet follows a point worldline, with tidal and higher moments requiring additional terms. This measurement uses a scalar density. Spin and antisymmetric-tensor couplings have their own matrix elements.
+
+\subsection{Exercise 1. Resolve a contracting closed string}
+In flat spacetime set $B=0$. Consider the circular solution
+\begin{equation}
+ X^0=a\tau,\qquad (X^1,X^2)=a\cos\tau\,(\cos\sigma,\sin\sigma)
+ \label{eq:ring}
+\end{equation}
+in its rest frame. Find its centre, rest energy, and the first correction to a scalar point-source measurement. Does a snapshot when the circle closes determine its mass?
+
+\noindent\textbf{Solution.}
+Both spatial components solve the wave equation. The radial velocity and the tangent to the ring are perpendicular. Also $\dot X^2=-a^2\cos^2\tau$ and $X'^2=a^2\cos^2\tau$, so both constraints hold. The spatial mean is zero. The energy density in $\sigma$ is uniform and $P^0=(2\pi\alpha')^{-1}\int\dot X^0\,d\sigma=a/\alpha'$. At maximum radius this also equals tension times circumference. At the instant of collapse the radial motion carries the energy. A boost of the whole solution makes its centre the straight timelike track of a particle of mass $a/\alpha'$.
+
+For a spatial wavevector in the plane, rotational invariance lets us take it along $X^1$. With $\rho=a|\cos\tau|$ the form factor after removing the centre phase is
+\begin{equation}
+ \frac{1}{2\pi}\int_0^{2\pi}e^{i|q|\rho\cos\sigma}\,d\sigma
+   =J_0(|q|\rho)=1-\frac{|q|^2\rho^2}{4}+O((|q|\rho)^4).
+\end{equation}
+At $|q|\rho=0.2$ the first correction to the amplitude is one percent. Two rings of different $a$ at their respective collapse instants have the same instantaneous shape and different energies. The probe resolution and the mass shell contain independent information.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{plots/lecture-worldsheet.pdf}
+\caption{A circular string contracts to its centre track. On the right the exact scalar response is compared with a point of the same total weight. The dot marks $|q|\rho=0.2$. The slices of the worldsheet are drawn in perspective.}
+\label{fig:worldsheet}
+\end{figure}
+
+For a quantum string the low-energy limit selects \emph{physical states}. At fixed radii away from an enhanced-symmetry point, oscillator excitations above a massless string multiplet typically cost order $1/\ell_s$. Holding a probe energy and a smooth background fixed as $\alpha'\to0$ leaves particle fields for the surviving species. Their oscillator polarizations, including spin, remain as labels of those fields. A classical track is a further wave-packet approximation. To follow one geodesic in a background of variation length $L$, the packet should be well localized on that scale, with wavelength short compared with $L$, even though its probes have wavelength long compared with the string size. This allows $\ell_s\ll\lambda_{\rm probe}\ll L$. A massless graviton of the quantum string already carries oscillator polarization. Discarding all oscillators from the Hilbert space would discard that graviton too.
+
+\section{Momentum, winding and gauge currents on a torus}
+
+For one compact length coordinate $Y\sim Y+2\pi R$ the lift of a closed string obeys $Y(\tau,\sigma+2\pi)=Y(\tau,\sigma)+2\pi wR$. In the convention of Eq.~\eqref{eq:polyakov} its zero-mode part is $y+\alpha'(n/R)\tau+wR\sigma$. The integers $n$ and $w$ measure momentum and spatial winding. A static string wrapped $|w|$ times has tension energy $|w|R/\alpha'$. Write the left and right momenta as
+\begin{equation}
+ p_L=\frac nR+\frac{wR}{\alpha'},\qquad
+ p_R=\frac nR-\frac{wR}{\alpha'} .
+\end{equation}
+The two quantum worldsheet constraints determine the same noncompact mass $M$ and impose a condition on the levels,
+\begin{equation}
+\begin{aligned}
+ M^2 &=p_L^2+4(N_L-a_L)/\alpha',\\
+     &=p_R^2+4(N_R-a_R)/\alpha',\\
+ (N_L-a_L)-(N_R-a_R)&=-nw .
+\end{aligned}
+ \label{eq:shell}
+\end{equation}
+Here $N_L,N_R$ count oscillator excitations and $a_L,a_R$ are their normal-ordering intercepts in the chosen sector. The last equation, level matching, follows by subtracting the first two. An assignment of compact charges still has to obey this equation and the physical-state projection \cite{Polchinski1998String,Tong2009String}.
+
+There is a way to measure the two integers separately. Put the metric of Eq.~\eqref{eq:kkmetric} in the action and set $\vartheta=Y/R$. The conserved angular momentum gives the coupling $n\int A_\mu dx^\mu$ to the metric connection. Set $\vartheta'=w$ in the two-form term of Eq.~\eqref{eq:polyakov} for a centre moving only in the external directions. The integral gives $w\int\widetilde A_\mu dx^\mu$, where $\widetilde A_\mu=B_{\mu\vartheta}/\alpha'$ in this angular coordinate. The sign follows the orientation of $\sigma$. In the lower-dimensional theory a small object can thus carry a winding current as well as, or instead of, a momentum current. At zero background fields, $R\mapsto\alpha'/R$ with $n\leftrightarrow w$ fixes $p_L$ and reverses $p_R$. The two Abelian sources are exchanged too. A full string duality also transforms the dilaton and, where present, the spin, gauge and boundary data.
+
+For $k$ compact coordinates the integers form a lattice. Let each $\vartheta^i$ have period $2\pi$ and use a constant positive metric matrix $G$ on the torus and a constant antisymmetric matrix $B$ in these angular coordinates. Both have units of length squared. Momentum $n$ is an integral covector and winding $w$ an integral vector. The averaged canonical momentum from Eq.~\eqref{eq:polyakov} is $(G\dot\vartheta_0+Bw)/\alpha'=n$. In terms of $u=n-Bw/\alpha'$ this gives
+\begin{equation}
+\begin{aligned}
+ M^2={}&u^TG^{-1}u+\frac{w^TGw}{\alpha'^2}\\
+       &+\frac{2}{\alpha'}(N_L-a_L+N_R-a_R),\\
+ N_L-a_L-N_R+a_R={}&-n_iw^i .
+\end{aligned}
+ \label{eq:torus}
+\end{equation}
+Contracting $Bw$ with $w$ gives zero, which accounts for the unshifted integer on the second line. With zero Wilson lines these are the geometric momentum and winding terms of toroidal compactification. Heterotic gauge-lattice vectors add further charges. Integral T-dualities preserve the bilinear form of signature $(k,k)$ with norm $2n_iw^i$ on the geometric lattice \cite{NSW1987}. Diagonalizing a real mass matrix without preserving that integral lattice would lose charge quantization.
+
+\subsection{Exercise 2. Two compact directions visible in one track}
+Take a rectangular type-II torus with $R_1=8\ell_s$, $R_2=\ell_s/4$ and $B=0$. Follow a single fixed polarization of a massless oscillator multiplet with $N_L-a_L=N_R-a_R=0$. A detector counts signed charge assignments with $M\leq1/(3\ell_s)$. Which states does an ordinary particle calculation on these same radii miss? Give a frame in which both measured charges are momenta.
+
+\noindent\textbf{Solution.}
+Any nonzero $w^1$ costs at least $8/\ell_s$ and any nonzero $n_2$ at least $4/\ell_s$. The remaining pairs $(n_1,w^2)$ obey level matching automatically because the two indices are different. Equation~\eqref{eq:torus} reduces to
+\begin{equation}
+ (M\ell_s)^2=\frac{n_1^2}{64}+\frac{(w^2)^2}{16}.
+\end{equation}
+At $w^2=0$, the five values $n_1=-2,-1,0,1,2$ fit. At each of $w^2=1,-1$, the three values $n_1=-1,0,1$ fit. There are eleven assignments including the neutral one. The six carrying winding couple to the second two-form vector. For example $(1,1)$ has $M\ell_s=\sqrt5/8$ and couples to the first metric vector and the second winding vector. In the frame dualized along the second circle, its radius is $4\ell_s$ and the two entries are both ordinary KK momenta. The short-distance oscillator tower is unnecessary for a detector to distinguish these six additional charge assignments. In a one-point worldline description of the light sector, the corresponding particles and their currents must be included.
+
+\section{When an extra vector goes massless}
+
+For a closed bosonic string $a_L=a_R=1$. With $n=w=1$, $N_L=0$, $N_R=1$, choose the right oscillator with a transverse spacetime vector index. Level matching holds and
+\begin{equation}
+ M_{\rm root}^2=\left(\frac1R-\frac R{\alpha'}\right)^2 .
+ \label{eq:root}
+\end{equation}
+At $R=\ell_s$ this vector and its opposite charge become massless alongside a Cartan vector. To find the algebra, normalize $Y_L(z)Y_L(0)\sim-(\alpha'/2)\log z$. The holomorphic operators $J^\pm={:}\exp(\pm2iY_L/\ell_s){:}$ have weight one. For $J^3=i\partial Y_L/\ell_s$, their short-distance products give $J^3(z)J^\pm(0)\sim\pm J^\pm(0)/z$ and $J^+(z)J^-(0)\sim z^{-2}+2J^3(0)/z$. The simple poles are the brackets of $\mathfrak{su}(2)$. The other chirality gives a second copy for the bosonic string. This use of the bosonic spectrum concerns a background which also has a tachyon.
+
+At zero Wilson line in the heterotic string, take vanishing gauge-lattice momentum. A bosonic left sector with $a_L=1$ and a right Neveu--Schwarz sector with $a_R=1/2$ admit $N_L=0$, $N_R=1/2$ and $n=w=\pm1$. The single right spacetime fermion oscillator provides the vector. The opposite chiral enhancement would require $N_R=-1/2$ for $|p_R|=2/\ell_s$. The ordinary unorbifolded type-II circle has a supersymmetric projection on each side, excluding the chiral zero-oscillator root states. These three theories have the same circle as a target and different vector spectra. At the heterotic enhanced radius the smooth circle still has the one continuous metric rotation. The extra generators are string states with the displayed operator products \cite{NSW1987,Polchinski1998String}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{plots/lecture-circle-spectrum.pdf}
+\caption{The pure momentum and winding masses cross at the self-dual radius. A different state with both charges becomes massless there when the oscillator and projection conditions allow it. Masses are in string units.}
+\label{fig:circle}
+\end{figure}
+
+\subsection{Exercise 3. Could the enhanced vector be the weak pole?}
+The two-interval endpoint paper has a broken branch with area $A=\ell d$, critical area $A_*$, $s^2=1-(A/A_*)^2$, and transverse weak pole $M_W^2=Hs^2/(4K)$ for its positive gauge kinetic coefficient $K$ and Higgs stiffness $H$ \cite{TwoEndpoint2026}. Hold the coefficients smooth and nonzero at $A_*$. Suppose an identification of the heterotic vector in Eq.~\eqref{eq:root} with this pole is proposed. What relation between a string radius and the area would the masses alone require close to restoration?
+
+\noindent\textbf{Solution.}
+Put $R=\ell_s e^\eta$ and $A=A_*(1-\epsilon)$ on the broken side. The string state has $M_{\rm root}=2|\sinh\eta|/\ell_s$. A detector of resolution $E$ sees it below threshold only for $|\eta|\leq\operatorname{arsinh}(E\ell_s/2)$. The area model gives $s^2=2\epsilon-\epsilon^2$. Denote the critical coefficients by $K_*,H_*$. Equating the leading squared masses requires
+\begin{equation}
+ |\eta|=\sqrt{\frac{\alpha'H_*}{8K_*}}\,\sqrt{\epsilon}
+          +o(\sqrt{\epsilon}) .
+ \label{eq:weakmatch}
+\end{equation}
+A radius varying linearly with the area displacement would give a different power. On the upper branch of the interval model $s=0$ over a range of areas. In the single-radius example the root stays massless there only if the radius stays at its enhanced value. Even this choice tests masses alone. Identifying the weak interaction would require the root current to act on the left quark and lepton doublets with the correct normalization and singlet assignments. That operator and its residues have not been derived from the circle example. Equation~\eqref{eq:weakmatch} gives a measurable condition on a proposed identification.
+
+\section{Five, six and seven internal directions on the interval family}
+
+Let the internal space be $S^5_R\times I_\ell\times I_d$, with four external spacetime dimensions. Five, six and seven resolved internal directions give total dimensions nine, ten and eleven at the corresponding probe scales. There are two elementary probes of this same compactification. A scalar with reflecting ends measures lengths from its excitation thresholds. A fermion with chiral walls measures a particular Dirac spectrum. The finite real fermion module can have KO-degree six even where a scalar experiment resolves five or seven internal directions. A perturbative critical superstring in ten target dimensions cannot simply be assigned an arbitrary extra target coordinate. Here the product is a field-theory comparison with seven internal directions, and a putative eleven-dimensional completion needs its own fields and equations.
+
+\subsection{Exercise 4. Design three experiments on the same product}
+Use one real scalar with Neumann conditions at both ends of both intervals. Choose $\pi R/\ell=10^2$ and $\pi R/d=10^4$. Suppose a candidate microscopic string length is $\ell_s=R/10^7$. Which directions can be resolved in measurements at $ER=10,10^3,10^5$? How does the conclusion change if both intervals open while $R$ and $E$ are held fixed?
+
+\noindent\textbf{Solution.}
+The round sphere has scalar eigenvalues $k(k+4)/R^2$ with multiplicities $d_k=(k+2)^2(k+1)(k+3)/12$ for integers $k\geq0$. These are the traceless homogeneous polynomials of degree $k$ in six variables restricted to the sphere. The two Neumann labels $j,m$ are nonnegative. Separation gives
+\begin{equation}
+ M_{kjm}^2=\frac{k(k+4)}{R^2}
+            +\frac{\pi^2 j^2}{\ell^2}+\frac{\pi^2 m^2}{d^2}.
+ \label{eq:rectangle}
+\end{equation}
+At $ER=10$, sphere harmonics reach $k=8$ and both intervals contribute only their constants. At $10^3$, the $j$ tower has opened up to $j=10$ on the sphere singlet, and $m=0$. At $10^5$ there are excitations on both intervals. The respective scale bands probe five, six and seven internal directions, with increasingly accurate Weyl slopes deeper inside separated bands. Even the last experiment has $E\ell_s=10^{-2}$. Resolving seven geometric directions in this example does not require resolving the proper size of a fundamental string. Equation~\eqref{eq:rectangle} is a scalar spectral test; the predicted weak pole also requires the vector action.
+
+In the second experiment put $\ell=d=t$ and hold $E,R$ fixed. Each sphere eigenspace contributes lattice points of an axial quadrant disk of radius $(t/\pi)\sqrt{E^2-k(k+4)/R^2}$. Its leading count is its area, with an error of order its perimeter plus one. The result is $t^2/(4\pi)$ times the sum of $d_k(E^2-k(k+4)/R^2)$ over strictly open sphere levels, up to $O_{R,E}(1+tE)$. Below $\sqrt5/R$ just the singlet contributes. This counts the two lengths being opened at the probe scale. At fixed compact geometry and high $E$ the ordinary seven-dimensional Weyl law instead has leading energy power $E^7$ \cite{TwoEndpoint2026,jointnote}.
+
+\subsection{Exercise 5. What is a sheet, and where is the fourth family?}
+On a separate interval $0\le x\le\ell$, take $D(L,R)=(R',-L')$ with $R(0)=L(\ell)=0$. Determine the lowest graded window, its finite distance and its two position profiles. Then put four flavours on the outer interval of length $d$ in the product. Compose its second spin reflection with $S=1-2\Pi$ for a rank-one flavour projector. How many constant families remain? Which of these calculations has introduced a string winding number?
+
+\noindent\textbf{Solution.}
+Squaring the first operator gives $-L''=\lambda^2L$ with $L'(0)=L(\ell)=0$. Thus $|\lambda|=(j+1/2)\pi/\ell$, $j\geq0$. Below the next positive threshold the two graded basis vectors have pure $L$ and $R$ profiles proportional to $\cos(\pi x/(2\ell))$ and $\sin(\pi x/(2\ell))$. Normalize each by $\sqrt{2/\ell}$. The compressed $D$ is $m\sigma_1$ for $m=\pi/(2\ell)$. A test function acts diagonally by its two averages against those squared profiles. The constant and $x$ separate the diagonal entries, so this image is the two-point algebra. For $\operatorname{diag}(a,b)$ the commutator norm is $m|a-b|$. Maximizing $|a-b|$ at norm at most one gives the finite distance $1/m=2\ell/\pi$. In the parent the two means of $x$ are $\ell/2\mp2\ell/\pi^2$; the walls themselves are at $0$ and $\ell$ \cite{towerlesspaper,dictionarynote}.
+
+For the outer flavour problem the product of the two reflections acts on a translation by $2d$ as $S$. Its three positive flavour directions are periodic, and their constant modes obey the original chirality selection. The minus direction has frequencies $(j+1/2)\pi/d$ and first gap $\pi/(2d)$. With block-preserving masses and a window below all the discarded thresholds, the three periodic channels remain \cite{TwoEndpoint2026}. Unfolding either interval has given a point field on a cover with a specified spin or flavour boundary condition. Its axial integer labels Fourier modes. The independent spatial winding of Eq.~\eqref{eq:shell} would require a string worldsheet. Even the winding integers of the classical fields that select the area vacuum in the endpoint paper belong to background scalar maps, a separate choice from the winding of a test string.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{plots/lecture-interval-window.pdf}
+\caption{The normalized chiral densities on the interval have interior means, marked by triangles. Below, the vertical ticks mark the first sphere, axial and string scales of Exercise 4 in units of $1/R$; the string tick gives the order of the oscillator threshold. Dots mark the three probe energies and the internal dimension resolved in each band.}
+\label{fig:window}
+\end{figure}
+
+\subsection{Exercise 6. An interval mass as a stretched-string energy}
+Consider two parallel branes in the flat circle dual of an open-string Wilson-line channel. The dimensionless difference of the two Wilson eigenvalues is $a$, measured in turns. Assume a physical oscillator polarization whose contribution to the open-string mass squared vanishes, zero two-form, constant dilaton and the applicable endpoint projection. Show that the momentum mass $|n+a|/R_I$ can be recovered from a stretched string. Set $a=1/2$ and compare with the preceding interval.
+
+\noindent\textbf{Solution.}
+In the dual string metric $R'=\alpha'/R_I$. The branes differ in position on the covering line by $2\pi R'(n+a)$ for image number $n$. The static tension energy is $2\pi R'|n+a|/(2\pi\alpha')=|n+a|/R_I$. At $a=1/2$ the shortest string crosses an orientifold interval of proper length $L_p=\pi R'$ when the branes sit at opposite planes. Writing $\ell=\pi R_I$, one obtains
+\begin{equation}
+ \ell L_p=\pi^2\alpha',\qquad
+ \frac{L_p}{2\pi\alpha'}=\frac{\pi}{2\ell}.
+\end{equation}
+This constructs the mass match for the specified open-string channel. The spin reflection, the gauge Wilson line and the Chan--Paton indices have separate origins. To promote the match to an identification of states one must supply their endpoint charges and currents. With fifteen D8-branes on one plane and one displaced, the Romans mass is nonzero in the open chambers. In a conformal string-frame metric $\Omega(x)^2ds_{\rm flat}^2$, a static string instead weighs $\int\Omega^2dx/(2\pi\alpha')$, whereas proper length is $\int\Omega\,dx$. The distinction already changes the angle-position map \cite{PW1996,BGL1998,dictionarynote,SevenMTheory2026}.
+
+\section{Growing the M-theory circle below string resolution}
+
+String length controls the cost of oscillator excitations. It does not set every compactification gap. The cleanest example starts with type IIA in ten flat dimensions and a constant dilaton, with the periodic spin structure appropriate to the supersymmetric M-theory circle. The unit D0 particle is charged under the Ramond--Ramond one-form $C_1$, and its BPS mass in type-IIA string units is $1/(g_s\ell_s)$. The M-theory interpretation identifies the charge-$n$ threshold bound state with a single KK superparticle of momentum $n/R_{11}$ \cite{Witten1995Circle}. A collection of $n$ separate D0 particles also has a threshold; the one-particle interpretation uses the bound-state sector and the matching of its quantum numbers. Reading a new dimension from an arbitrary equally spaced list of masses would omit that physical input.
+
+Matching the mass unit gives $R_{11}=g_s\ell_s$. There is also an independent check. Take an M2-brane of tension $T_{\rm M2}=1/[(2\pi)^2\ell_p^3]$ and wrap one worldvolume direction once around this circle. For modes independent of that direction the area factor $2\pi R_{11}$ multiplies the remaining string worldsheet area. Equating its tension with $1/(2\pi\alpha')$ gives
+\begin{equation}
+ \alpha'=\frac{\ell_p^3}{R_{11}},\qquad
+ \ell_p=g_s^{1/3}\ell_s,\qquad
+ \frac{R_{11}}{\ell_p}=g_s^{2/3}.
+ \label{eq:mcircle}
+\end{equation}
+These length conventions use the asymptotic flat backgrounds on the two sides of the duality. Wrapped membrane configurations give the IIA string, whereas momentum on the same circle gives the D0 tower. In eleven-dimensional language $C_1$ is the mixed metric connection for translations of the new circle. It is distinct from the two Neveu--Schwarz vectors obtained by compactifying an already existing string coordinate in Eq.~\eqref{eq:shell} \cite{DHIS1987,Witten1995Circle}.
+
+\subsection{Exercise 7. See an eleventh dimension with a soft probe}
+Hold $\ell_p$ fixed. Set $g_s=10^3$ and take $E=1/(12\ell_p)$. Count the signed momenta of one eleven-dimensional massless species measured at rest in the other spatial directions, including zero. Can such a probe resolve a perturbative string oscillator? What happens at the same $E\ell_p$ as $g_s$ increases?
+
+\noindent\textbf{Solution.}
+Equation~\eqref{eq:mcircle} gives $R_{11}=100\ell_p$ and $\ell_s=\ell_p/10$. Thus $ER_{11}=25/3$ while $E\ell_s=1/120$. The momenta with $|n|\le8$ fit, giving seventeen assignments per species before spin degeneracy. The oscillator scale is far above the probe, as is the eleven-dimensional Planck scale. At large coupling the useful description is the eleven-dimensional one. In particular, no perturbative IIA amplitude at $g_s=10^3$ has been used.
+
+More generally the count is $2\lfloor ER_{11}\rfloor+1$. At fixed small positive $E\ell_p$ it diverges while $E\ell_s=(E\ell_p)g_s^{-1/3}$ tends to zero. There is a parametric regime
+\begin{equation}
+ R_{11}^{-1}\ll E\ll\ell_p^{-1}\ll\ell_s^{-1}.
+ \label{eq:mband}
+\end{equation}
+The scale ordering exhibits a new propagation direction even as a string becomes less resolvable. For each fixed charge a soft probe can still follow a lower-dimensional particle track. In a complementary experiment, a wave packet localized to a distance much smaller than $R_{11}$ along the new circle requires a superposition of many $n$'s. These are compatible descriptions of a single higher-dimensional field. T-dualizing a perturbative circle exchanges two descriptions of its charge lattice. Growing the IIA coupling here makes a tower carrying a \emph{Ramond--Ramond} charge cheap and reconstructs the momentum of an additional dimension.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{plots/lecture-m-circle.pdf}
+\caption{At fixed Planck length, the flat D0 gap falls through the low-energy band as the string scale rises. The dot is the probe in Exercise 7. On the right the charge-one scalar gap is compared on two circle metrics over the same fixed base, in units set by its curvature scale $\kappa$. The twist leaves a horizontal energy cost, derived in Exercise 9.}
+\label{fig:mcircle}
+\end{figure}
+
+\section{The Standard Model isometry algebra}
+
+A one-dimensional Riemannian circle has one continuous Killing generator. In the M-theory calculation its momentum is D0 charge. To obtain eight gluons, three weak vectors and one Abelian vector from the metric, the \emph{complete} internal manifold has to carry the corresponding twelve generators, the background has to preserve them, and the particle states have to transform correctly. Witten's seven-dimensional cosets are an early example of pursuing that geometric target \cite{Witten1981,Fabbri1999}. We can isolate two parts of the construction by changing just one ingredient of a pencil-and-paper model.
+
+Let $B=\mathbb{CP}^2\times\mathbb{CP}^1$ with fixed Fubini--Study metrics, and let $h,k$ be the two hyperplane classes with unit integrals on the respective projective lines. The product has six real dimensions. Its connected isometry group is $PU(3)\times SO(3)$, since the unitary groups act on complex lines and their scalar centres act trivially. Consider first the seven-dimensional \emph{direct product}
+\begin{equation}
+ K_{\rm p}=B\times S^1_\rho,\qquad
+ ds^2=g_B+\rho^2d\vartheta^2 .
+ \label{eq:productbase}
+\end{equation}
+Its connected isometry algebra is $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$. The constant base harmonic times $e^{in\vartheta}$ has $M_n=|n|/\rho$. Increasing $\rho$ reproduces the flat-circle tower and the non-Abelian Killing vectors persist on the base. This solves a bosonic geometry problem explicitly. There is already a warning from the global groups: ordinary scalar harmonics see integral weak isospin and trivial colour triality. There is also a spin obstruction. Since $w_2(TB)=c_1(TB)\bmod 2=h\bmod 2$, its pullback to this direct product is nonzero. Providing the eleven-dimensional gravitino or a chiral quark spectrum would require additional structure. The product metrics are kinematic examples; an action supporting them is a separate input.
+
+\subsection{Exercise 8. Does the growing circle give physical hypercharge?}
+On the unwarped product in Eq.~\eqref{eq:productbase}, use only the eleven-dimensional Einstein term, hold its coefficient and the base volume $V_B$ fixed, and work at tree level in four dimensions. Find how the coupling to a particle of unit circle momentum scales with $\rho$. Then compare a generator from the base and a gauge field living on a boundary.
+
+\noindent\textbf{Solution.}
+Let $M_4^2=2\pi\rho V_B/\kappa_{11}^2$ be the coefficient in the convention $M_4^2\mathcal R_4/2$. Replacing $d\vartheta$ by $d\vartheta+A$ contributes $-\rho^2 F_{\mu\nu}F^{\mu\nu}/4$ to the higher-dimensional scalar curvature at constant $\rho$. Comparing with $-F^2/(4g_\vartheta^2)$ gives
+\begin{equation}
+ g_\vartheta^{-2}=\tfrac12 M_4^2\rho^2\ \propto\ \rho^3 .
+\end{equation}
+A fixed base Killing field has a fixed norm on $B$, so its integrated inverse squared coupling instead grows as $\rho$. Both four-dimensional constant modes become dilute as the volume grows. Circle charge is an integer, but even its strength relative to the colour coupling varies along this product family. Declaring it to be $Y$ would also require the correct charges on every chiral multiplet. On a Ho\v{r}ava--Witten gauge wall with a six-dimensional compact factor $X$ the leading product result is instead $g_4^{-2}=\mathrm{Vol}(X)/g_{10}^2$. A wall generator has no standing-wave number in the normal interval. Warping and the induced wall metric enter a more complete calculation \cite{HW1996,SevenMTheory2026}.
+
+Now twist the circle over the \emph{same} base. Let $\eta$ be a principal connection normalized by $\int_{\rm fibre}\eta=2\pi$, with Chern class $[d\eta/(2\pi)]=3h+2k$. On the total space $Y$ put
+\begin{equation}
+ g_\rho=g_B+\rho^2\eta^2,\qquad
+ d\eta=b_2\omega_2+b_1\omega_1 .
+ \label{eq:connectionmetric}
+\end{equation}
+The $\omega_i$ are the physical K\"ahler forms of the two complex factors, whose complex dimensions are denoted by their subscripts. If their line areas are $\mathcal A_2,\mathcal A_1$, then $b_2=6\pi/\mathcal A_2$ and $b_1=4\pi/\mathcal A_1$. They have dimensions of inverse area. We use the invariant Chern connection. Both special unitary actions lift and preserve it, and the fibre circle acts isometrically. We can see directly which symmetry a new circle supplies on its own. A vertical rotation by an angle $\chi(b)$ over each point $b$ of the base sends $\eta$ to $\eta+d\chi$. With $\rho>0$ and fixed $g_B$ the cross term in the metric requires $d\chi=0$ for this to be an isometry. On a connected base there is one continuous vertical generator. A non-Abelian weak group preserving this fibration must also act on the base. In other constructions an isometry can move between inequivalent fibres, or weak symmetry can come from an additional gauge sector. At the appropriate scale ratios this is the regular Sasaki--Einstein geometry $M^{111}$ \cite{Fabbri1999,SevenMTheory2026}. Twisting repairs the elementary spin obstruction: the pullback of $3h+2k$ vanishes on its own circle bundle, hence so does the pullback of $w_2(TB)$. The vertical line is trivial and $TY$ is stably $\pi^*TB\oplus\mathbb R$.
+
+\subsection{Exercise 9. Grow the twisted orbit and weigh a charged state}
+On $Y$ let a minimally coupled scalar have integer fibre momentum $n$. Keep the base metric and the connection fixed and vary $\rho$. Determine its \emph{lowest} squared KK mass, including the horizontal energy. Work out the first charged multiplet at the Einstein metric. Is a free D0-like tower recovered by increasing this particular radius?
+
+\noindent\textbf{Solution.}
+Choose the orientation in which a weight-$n$ function is represented horizontally by a section of $\mathcal L^n=\mathcal O(3n,2n)$; reversing it conjugates the representations. On a local trivialization write the function as $e^{in\vartheta}u(x)$ and $\eta=d\vartheta+A$. The horizontal lift of a base derivative acts as $\nabla_n=d-inA$ on $u$ and its curvature is $F_n=-in\,d\eta$. In the scalar Dirichlet energy the horizontal and vertical derivatives are orthogonal. Integration around the circle contributes the same $2\pi\rho$ to the energy and to the norm, giving the Rayleigh quotient
+\begin{equation}
+ \frac{\|\nabla_n u\|^2}{\|u\|^2}+\frac{n^2}{\rho^2}.
+\end{equation}
+
+For $n>0$ we can compute the infimum exactly. The K\"ahler identity on sections is $\nabla_n^*\nabla_n=2\bar\partial_n^*\bar\partial_n+i\Lambda F_n$, where $\Lambda$ contracts with the base K\"ahler form. In a unitary normal frame this identity follows by expanding the squared norms of $D_e+iD_{Je}$ for the three orthonormal real pairs $(e,Je)$ and commuting the two covariant derivatives in each pair. The curvature contraction is constant, $i\Lambda F_n=n(2b_2+b_1)$. Thus every section pays at least this energy, with equality on holomorphic sections. Polynomials of bidegree $(3n,2n)$ supply these sections. For $n<0$ take complex conjugates. Including the neutral constant gives
+\begin{equation}
+ \boxed{\ M_{n,\min}^2=\frac{n^2}{\rho^2}+|n|\kappa,\qquad
+              \kappa=2b_2+b_1.\ }
+ \label{eq:curvedgap}
+\end{equation}
+This is a scalar statement on the specified connection metrics. At fixed base and fixed $E$, every charge with a level below $E$ satisfies $|n|\le E^2/\kappa$. Enlarging the orbit suppresses its vertical momentum cost while preserving the horizontal cost of transporting its charge. The base remains compact, so each of these finitely many charges has finitely many horizontal levels in that window. Shrinking the curvature density by scaling the base, using the direct product, or supplying charged degrees of freedom with a different operator changes the experiment.
+
+In the Einstein normalization $\mathrm{Ric}_Y=6g_Y/L^2$ one has $\rho=L/4$, $\mathcal A_2=3\pi L^2/4$ and $\mathcal A_1=\pi L^2/2$. Hence $\kappa=24/L^2$, and $n=1$ has $M^2=40/L^2$. The degeneracy is $\binom{5}{2}\cdot3=30$ from the sections of $\mathcal O(3,2)$. Their colour representation is a decuplet up to conjugation and their weak representation is a triplet. In particular the 30 states supply neither a colour fundamental nor a weak doublet. There is a quick normalization check at this particular metric. On the eight-real-dimensional metric cone a homogeneous harmonic function of degree $s$ restricts to a unit-link scalar eigenfunction of eigenvalue $s(s+6)$, by the radial Laplace equation. The holomorphic section of charge one gives a cone holomorphic function of degree four because the unit Reeb vector is four times the period-$2\pi$ fibre generator in the unit metric. Its eigenvalue is $4(4+6)=40$. The corresponding charge-$n$ degeneracy for $n>0$ is $\binom{3n+2}{2}(2n+1)$. The spinor calculation on the same base uses a different operator and yields a separate test of the centre action \cite{Fabbri1999,SevenMTheory2026}.
+
+The group charges can also be read from $Y=(S^5\times S^3)/U(1)_{(2,-3)}$. The divided-out circle acts with weights $2,-3$ on the two sets of complex coordinates. A holomorphic monomial descends when its bidegree $(p,q)$ obeys $2p=3q$, explaining the first bidegree $(3,2)$. The weights coincide with $6Y$ on $d^c$ and $L$ in a conventional $\overline{\mathbf5}$. The circle with those weights has been divided out. The remaining phase circle is the Reeb circle. To identify physical hypercharge one must exhibit its action on actual light matter. On the primitive spin bundle a projectable spin lift of the full fibre circle would induce a spin structure on the nonspin base. The ordinary spin lift consequently has twice the period, another difference from the flat supersymmetric circle of Exercise 7 \cite{SevenMTheory2026}.
+
+There is a second physical restriction on using Eq.~\eqref{eq:connectionmetric}. Varying $\rho$ alone at fixed $g_B$ gives a family of metrics. It is not a known flat direction of the electric Freund--Rubin solution. On the Einstein branch the quantized flux fixes $L^6/\ell_p^6=4096\pi^2N/27$ for the primitive bundle, and the ratios just used are fixed. Taking large flux enlarges the base as well as the fibre. Distinguishing those paths prevents a calculation of test-scalar masses from being mistaken for a family of vacua.
+
+\section{Which loops and which weak doublets survive?}
+
+The sigma model on a torus labels disconnected winding sectors by a whole lattice. On a curved target the free loop space instead has components given by conjugacy classes of $\pi_1$ for a connected target. A closed orbit of a Killing field need not represent a nontrivial component. The Hopf circle in the five-sphere of the lower endpoint gives a direct test.
+
+\subsection{Exercise 10. Fill a fibre and read the gauge representations}
+Let $S^5\subset\mathbb C^3$ have unit radius. Can the loop $(e^{i\sigma},0,0)$ shrink in $S^5$? Repeat the topological test for a principal circle of class $j(3h+2k)$ over $\mathbb{CP}^2\times\mathbb{CP}^1$. Finally give a geometric seven-dimensional example in which a weak \emph{doublet} survives a two-sphere collapse if an additional matter twist is supplied.
+
+\noindent\textbf{Solution.}
+An explicit filling by loops is
+\begin{equation}
+ H(s,\sigma)=(\cos s\,e^{i\sigma},\sin s,0),
+       \qquad 0\le s\le\pi/2 .
+\end{equation}
+It ends at the single point $(0,1,0)$ and stays on the sphere. Intermediate loops leave the original Hopf fibre. A direct product $B\times S^1$ with simply connected $B$ gives the opposite outcome, since projection of a filling to $S^1$ would fill a degree-one loop there. In the circle bundle over the two projective factors, the homotopy boundary map sends $(a,b)\in\pi_2(B)$ to $j(3a+2b)$ in the fibre $\mathbb Z$. Base simple connectivity and $\gcd(3,2)=1$ give $\pi_1(Y_j)=\mathbb Z/j\mathbb Z$. The primitive $M^{111}$ is simply connected. Its ordinary scalar Fourier charge remains an integer by the circle \emph{action}, as in Exercise 9. A string circling that fibre has no conserved integer \emph{topological winding} on the full primitive space. Background flux can still affect its dynamics and the charges assigned in a dual description.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{plots/lecture-fibre-winding.pdf}
+\caption{A product circle carried along a path in its base keeps degree one. The right diagram shows the actual filling of the Hopf fibre inside a two-sphere of $S^5$. Each successive loop has radius $\cos s$ and the last loop is a point.}
+\label{fig:fibre}
+\end{figure}
+
+This has a counterpart in the project's topological T-dual example. Give $\mathbb{CP}^2\times S^1$ integral flux class $[A]\smile h$ with $A$ of unit period. Its integral over the circle is $h$, the Chern class of the dual Hopf $S^5$. In the dual frame a momentum mode is represented on the product by forms in a coefficient line, with a winding-dependent differential. A spectator $S^2$ can be carried along unchanged in this construction. The \href{https://github.com/arivero/conneskk/blob/research/issue-results/results/issues/01.md\#circle-duality-between-the-projective-product-and-the-berger-endpoint}{project calculation} intertwines a specified Hodge--Dirac operator and its winding-sector description. Constructing a string vacuum, its oscillator projections and its weak currents is further work \cite{BEM2004}.
+
+For the doublet, take the geometric product $S^5_a\times S^2_b$. Round rotations supply $\mathfrak{so}(6)\oplus\mathfrak{so}(3)$, which includes $\mathfrak u(3)\oplus\mathfrak{su}(2)$. Choosing the common phase on the five-sphere leaves the colour algebra commuting with it; the full round space also has six further generators beyond this twelve-dimensional subalgebra. On the round two-sphere ordinary spinors have lowest absolute Dirac mass $1/b$. To keep a doublet at bounded mass as $b\to0$, twist the fibre spinor by a monopole line of degree $q>0$. The spin half-canonical line on $\mathbb{CP}^1$ is $\mathcal O(-1)$. The positive kernel is $H^0(\mathcal O(q-1))$ and the negative kernel is zero. Homogeneous polynomials of degree $q-1$ in two variables give $q$ states of spin $(q-1)/2$. At $q=2$ these are one doublet. At $q=3$ they are one triplet, whose components are connected by the gauge generators. Neither multiplicity by itself counts generations.
+
+The monopole and the charged coefficient must be furnished by physical fields. The pure electric eleven-dimensional product has an Einstein solution at $a=2b$, and its relative-radius mode has $m^2L_{\rm AdS}^2=-3$, below the scalar stability bound $-9/4$. The product collapse just used is a spectral experiment; stabilizing a path of vacua requires other stress or a different background \cite{SevenMTheory2026}. There are also successful examples of matter arising from a gauge wall: the heterotic standard embedding in the companion paper has nine $\mathbf{27}$s and six conjugates, giving index three. Those charges come from an $E_8$ bundle and its cohomology, while the present exercise asked for metric Killing vectors. A construction that needs the Standard Model groups specifically as isometries must still identify their action on each light particle.
+
+\subsection{Exercise 11. Put the quark-doublet charges on a seven-manifold}
+There is a constructive variation of $M^{111}$ which tests the \emph{global} gauge group. Let $u\in S^5\subset\mathbb C^3$ and $v\in S^3\subset\mathbb C^2$. Divide the product by the free action
+\begin{equation}
+ (u,v)\longmapsto(zu,z^{-1}v),\qquad |z|=1 .
+\end{equation}
+Use its quotient metric, or the corresponding invariant connection metric with a variable fibre radius. Show that $G=S(U(3)\times U(2))$, the usual $\mathbb Z_6$ quotient of the Standard Model product group, acts faithfully by isometries. Construct functions with the charges $(\mathbf3,\mathbf2)_{1/6}$. How does this change the twist and the spin test of Exercise 9?
+
+\noindent\textbf{Solution.}
+The quotient $Y'$ has dimension $5+3-1=7$. Both unitary groups act upstairs, commute with the divided-out circle $H$ and descend isometrically. An element acting trivially downstairs fixes all complex lines in each projective base, so its two matrices are scalar. Such a scalar pair acts trivially precisely when it belongs to $H$. On $H$, the product of determinants is $z^3z^{-2}=z$. Every class of $(U(3)\times U(2))/H$ therefore has a unique representative with determinant product one. This identifies the displayed effective isometry subgroup with $G$, including its centre.
+
+Choose the conventional hypercharge generator with weights $-1/3$ on $\mathbb C^3$ and $+1/2$ on $\mathbb C^2$. Its total trace is zero. The six functions
+\begin{equation}
+ f_{ia}([u,v])=\overline{u_i v_a},\qquad
+ 1\le i\le3,\quad 1\le a\le2
+\end{equation}
+are well defined because the two $H$ phases cancel. They are linearly independent, as is seen by evaluating on pairs of coordinate unit vectors. With the ordinary pullback action $T_g f=f\circ g^{-1}$, the conjugation makes their span the defining colour triplet times the weak doublet. The hypercharge phase is $\exp[it(-1/3+1/2)]=\exp(it/6)$. These are ordinary scalar harmonics for the invariant connection metric: the holomorphic products have bidegree $(1,1)$, and their conjugates occupy the opposite unit-charge sector. The same calculation as Exercise 9 gives their squared mass $\rho^{-2}+2b_2+b_1$, now with $b_i=2\pi/\mathcal A_i$. Thus both a faithful isometric action and a quark-doublet charge measurement can be exhibited on a smooth seven-space.
+
+The primitive character of the two phase circles trivial on $H$ is their product, of weights $(1,1)$. Consequently the circle bundle has Euler class $h+k$ up to orientation. With $\mathbb Z_2$ coefficients the Gysin sequence gives $\ker[\pi^*:H^2(B)\to H^2(Y')]=\langle h+k\rangle$. The class $w_2(TB)=h$ survives, and $Y'$ is nonspin. For $M^{111}$ the weights of the divided-out circle instead give Euler class $3h+2k$, which kills $h$ modulo two and costs the ordinary scalar doublet. This computes the tradeoff for these two specific actions. The six functions are a bosonic representation. An eleven-dimensional vacuum with a gravitino, a chiral family, the measured hypercharge normalization and a dynamical opening radius would have to meet all four further tests. A gauge bundle or a wall can change the particle representation, while retaining a geometric origin for each gauge vector requires checking its Killing action again.
+
+The original trajectory survives all these comparisons in a precise sense. At the resolution of a soft local probe, each retained string species can give a particle field and a wave packet following $f(t)$, with its mass, polarization and gauge charges. The spectrum of these species can still measure one, two or more internal directions. For a candidate weak endpoint one can now ask three concrete questions of the same background. Which charged gap falls below the probe? Does its generator come from the metric, a string current or a wall field? Does that generator have the required matrix element on a light quark or lepton? The flat M circle answers the first question by its D0 tower. The projective metrics and the monopole calculation show why the latter two questions carry additional physical content.
+
+\paragraph{Reading.}
+For the worldsheet derivation and the perturbative charge lattice see Polchinski, volume 1, chapter 8, and Tong, sections 1 and 8 \cite{Polchinski1998String,Tong2009String}. For the eleven-dimensional interpretation see Witten's strong-coupling argument and the wrapped membrane reduction \cite{Witten1995Circle,DHIS1987}. The interval operators, the weak-current calculation and the seven-dimensional compactifications used in the exercises are developed in the companion papers \cite{boundarynote,TwoEndpoint2026,SevenMTheory2026}.
+
+\bibliographystyle{unsrt}
+\bibliography{towerless_intervals}
+\end{document}
