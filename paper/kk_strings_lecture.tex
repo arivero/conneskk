@@ -381,6 +381,39 @@ For the middle regime set $a=d/P_b$ and let $P_b$ grow. The long cylinder of the
 
 The original trajectory survives all these comparisons in a precise sense. At the resolution of a soft local probe, each retained string species can give a particle field and a wave packet following $f(t)$, with its mass, polarization and gauge charges. The spectrum of these species can still measure one, two or more internal directions. For a candidate weak endpoint one can now ask three concrete questions of the same background. Which charged gap falls below the probe? Does its generator come from the metric, a string current or a wall field? Does that generator have the required matrix element on a light quark or lepton? The flat M circle answers the first question by its D0 tower. The projective metrics and the monopole calculation show why the latter two questions carry additional physical content.
 
+\section{A wrapped string and two infrared phases}
+
+The monopole kernel in Exercise 10 also describes charged fermions on a Euclidean string that wraps the weak sphere. At fixed background, the fermionic zero modes determine which product of the weak roots can appear in the string insertion. Its phase can constrain a different angle from the one measured by QCD.
+
+\subsection{Exercise 13. Evaluate the degree-two insertion}
+Let $[s:t]\mapsto[s^2:t^2]$ be a degree-two cover of the weak sphere, whose monopole line has degree one. The two charge-one root sections pull back to $P=a s^2+b t^2$ and $Q=c s^2+d t^2$. Take two charge-one left-moving complex fermions and the conjugate zero modes of one charge-two right-moving complex fermion. A scalar root couples one left mode to one conjugate right mode. Count the zero modes and determine the determinant of their coupling. Use the orientation in which a degree-$w$ surface contributes $\exp(-iw\theta_e)$, where $\theta_e$ is the period of the tensor field on the weak sphere. What harmonic of the gauge-invariant angle follows at $w=2$?
+
+For the phase comparison, the four-dimensional tensor reduction has electric and magnetic angles $\theta_e$ and $\theta_m$ of vortex charges $2$ and $14$. Write $\alpha=\arg(ad-bc)$ when the roots are independent. Take the strong angle to be $3\alpha-10\theta_e+\theta_m$ with zero bare offset. If the unit wrapped string contributes a potential minimized at $\alpha-\theta_e=\pi/4$, find the common string and QCD minimum modulo $2\pi$.
+
+\noindent\textbf{Solution.}
+The pulled-back monopole line is $\mathcal O(2)$ and the worldsheet spin line is $\mathcal O(-1)$. Each charge-one field contributes two zero modes from $H^0(\mathcal O(1))$. The charge-two field supplies four conjugate modes dual to $H^0(\mathcal O(3))$. The zero-mode Grassmann integral gives the determinant of $(f,g)\mapsto Pf+Qg$. In the ordered source basis $(s,0),(t,0),(0,s),(0,t)$ and target basis $s^3,s^2t,st^2,t^3$, the matrix and its determinant are
+\begin{equation}
+ \begin{pmatrix}
+ a&0&c&0\\
+ 0&a&0&c\\
+ b&0&d&0\\
+ 0&b&0&d
+ \end{pmatrix},
+ \qquad \det=(ad-bc)^2 .
+\end{equation}
+Swapping the middle rows and the middle columns gives two blocks $\bigl(\begin{smallmatrix}a&c\\ b&d\end{smallmatrix}\bigr)$. The signs of the swaps cancel. We have chosen the Grassmann measure orientation giving the displayed sign and absorbed fixed Yukawa phases into the sections. If the two roots are dependent, the determinant vanishes and the insertion leaves unpaired zero modes. For independent roots the determinant has phase $2\alpha$. A vortex gauge parameter $\lambda$ shifts both $\alpha$ and $\theta_e$ by $2\lambda$. Including the surface factor leaves the second harmonic $\exp[2i(\alpha-\theta_e)]$.
+
+Set $u=\alpha-\theta_e$ and $v_m=\theta_m-7\theta_e$. Each is an independent angle of period $2\pi$. Then the strong angle is $3u+v_m$. With the assumed unit string harmonic, the string fixes $u=\pi/4$. The QCD minimum at $3u+v_m=0$ modulo $2\pi$ gives $v_m=5\pi/4$. Figure~\ref{fig:wrapped-phase-torus} shows that this is one common minimum on the torus. The result uses the unit harmonic. If the second harmonic were the only string term, any minimum at $u_0$ would repeat at $u_0+\pi$, giving two common minima with QCD.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{plots/lecture-phase-torus.pdf}
+\caption{The unit string term fixes $u=\pi/4$ along the dashed line. The solid segments are one winding curve on the square with opposite edges identified. They give $3u+v_m=0$ modulo $2\pi$. The dot marks their unique intersection at $(u,v_m)=(\pi/4,5\pi/4)$.}
+\label{fig:wrapped-phase-torus}
+\end{figure}
+
+The determinant comes from a specified effective worldsheet action on a fixed background. A nonzero vacuum harmonic also requires the other fluctuation determinants and the measure over collective coordinates. A critical-string completion and the absolute coefficient of the harmonic remain open. \href{supplemental.pdf}{Parts S240 and S244 of the full supplement} give the worldsheet anomaly and the tensor reduction underlying the two angles.
+
 \paragraph{Reading.}
 For the worldsheet derivation and the perturbative charge lattice see Polchinski, volume 1, chapter 8, and Tong, sections 1 and 8 \cite{Polchinski1998String,Tong2009String}. For the eleven-dimensional interpretation see Witten's strong-coupling argument and the wrapped membrane reduction \cite{Witten1995Circle,DHIS1987}. The interval operators, the weak-current calculation and the seven-dimensional compactifications used in the exercises are developed in the companion papers \cite{boundarynote,TwoEndpoint2026,SevenMTheory2026}.
 

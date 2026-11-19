@@ -40,6 +40,12 @@ class FiniteCurrentTests(unittest.TestCase):
         self.assertAlmostEqual(point["vector"], -.0374245, places=5)
         self.assertAlmostEqual(point["axial"], -.5053142, places=5)
 
+    def test_root_phase_compensator_preserves_equal_normalized_vertices(self):
+        point = fit(6, 2000., 6, include_phase=True)
+        self.assertAlmostEqual(point["qcd_axion_decay_constant"], 41.0045, places=3)
+        for species in ("electron", "up", "down"):
+            self.assertAlmostEqual(point[f"phase_{species}_yukawa_per_mass"], .00405823, places=7)
+
 
 if __name__ == "__main__":
     unittest.main()

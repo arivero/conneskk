@@ -3,6 +3,7 @@
 Use OPENBLAS_NUM_THREADS=1 python3 paper/finite_flux_currents.py --degree 10.
 Use --hold-out-fermi for the pole-input test and add --flux-coupling 1 for
 the saturated single-class example, which also predicts both neutrino contacts.
+Use --root-phase to calculate the fixed-period phase norm and its fermion vertices.
 Pole masses are in GeV. The quadrature uses Jacobi polynomials near roundness.
 """
 import argparse
@@ -121,7 +122,27 @@ def neutral_pencil(grid, g, gt, stiffness, circle_ratio, period, flux, root_bias
             currents[1:] - np.outer(overlap, currents[0]), photon)
 
 
-def evaluate(log_inputs, degree, compact_mass, period, root_bias=0.0):
+def phase_response(grid, g, gt, stiffness, ratio, period, root_bias, mass, currents, cv):
+    """Metric and fermion vertices of the root-product phase at fixed axion period."""
+    unlifted_mass, _, _, _ = neutral_pencil(grid, g, gt, stiffness, ratio, period, 0., root_bias)
+    # A constant Z has only matter mass terms in the unlifted form. Removing U=1
+    # put this basis vector at degree-1. Each root rotates through half the phase.
+    z_constant = g.shape[1] - 1
+    source = unlifted_mass[z_constant] / 2
+    compensator = solve(mass, source, assume_a="pos")
+    phase_norm = cv * (unlifted_mass[z_constant, z_constant] / 4 - source @ compensator)
+    if phase_norm <= 0:
+        raise ValueError("The broken phase requires a positive physical root-phase norm.")
+    radius = sqrt(phase_norm)
+    induced_vertex = currents.T @ compensator
+    # Making the mass real adds one half to the right-minus-left derivative vertex.
+    result = {"root_phase_radius": radius, "qcd_axion_decay_constant": radius / 3}
+    for label, left, right in (("electron", 1, 2), ("up", 4, 6), ("down", 5, 7)):
+        result[f"phase_{label}_yukawa_per_mass"] = (.5 + induced_vertex[right] - induced_vertex[left]) / radius
+    return result
+
+
+def evaluate(log_inputs, degree, compact_mass, period, root_bias=0.0, *, include_phase=False):
     epsilon, stiffness, ratio, flux, electric = np.exp(log_inputs)
     grid, basis, g, gt, meridian = radial_basis(-np.log(epsilon), degree)
     ch, ck, jc, _ = charged_pencil(grid, basis, stiffness=stiffness, circle_ratio=ratio,
@@ -167,6 +188,8 @@ def evaluate(log_inputs, degree, compact_mass, period, root_bias=0.0):
                dis_left_squared=sum(nc[0, 4:6]**2), dis_right_squared=sum(nc[0, 6:8]**2),
                cv=cv, a=a, photon_norm=1/electric,
                meridian=a * meridian)
+    if include_phase:
+        out.update(phase_response(grid, g, gt, stiffness, ratio, period, root_bias, nh, jn, cv))
     return out
 
 
@@ -188,7 +211,7 @@ def light_inverse(obs, compact_mass, period):
     return np.log([epsilon, stiffness, ratio, flux, electric])
 
 
-def fit(degree, compact_mass, period, hold_out_fermi=False, fixed_flux=None):
+def fit(degree, compact_mass, period, hold_out_fermi=False, fixed_flux=None, *, include_phase=False):
     if fixed_flux is not None and (not hold_out_fermi or not np.isfinite(fixed_flux) or fixed_flux <= 0):
         raise ValueError("A fixed positive flux uses the independent pole-input fit.")
     obs = Observations()
@@ -235,7 +258,7 @@ def fit(degree, compact_mass, period, hold_out_fermi=False, fixed_flux=None):
                              ftol=2e-12, xtol=2e-12, gtol=2e-11)
     if not solution.success or np.max(abs(residual(solution.x))) > 1e-6:
         raise RuntimeError(f"Finite-member fit did not converge: {solution.message}")
-    return evaluate(parameters(solution.x), degree, compact_mass, period)
+    return evaluate(parameters(solution.x), degree, compact_mass, period, include_phase=include_phase)
 
 
 def main():
@@ -247,12 +270,16 @@ def main():
                         help="use the leptonic pole width and angle to predict the Fermi contact")
     parser.add_argument("--flux-coupling", type=float,
                         help="hold gamma fixed and predict both neutrino contacts in the pole-input fit")
+    parser.add_argument("--root-phase", action="store_true",
+                        help="compute the root-product phase norm and its minimal fermion vertices")
     args = parser.parse_args()
     if args.degree < 3 or not np.isfinite(args.compact_mass) or args.compact_mass <= 0:
         parser.error("Use at least three basis functions and a positive finite compact mass.")
     if args.period <= 0 or args.period % 6:
         parser.error("k must be a positive multiple of six.")
-    for key, value in fit(args.degree, args.compact_mass, args.period, args.hold_out_fermi, args.flux_coupling).items():
+    point = fit(args.degree, args.compact_mass, args.period, args.hold_out_fermi, args.flux_coupling,
+                include_phase=args.root_phase)
+    for key, value in point.items():
         print(f"{key:30s} {value:.11g}")
 
 

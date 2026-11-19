@@ -13,3 +13,6 @@ part "S226 (particle identifications and mirror families)" results/72_particle_i
 part "S232 (weak poles, currents and the muon contact)" results/78_finite_weak_pole_and_current_match.md
 part "S236 (nucleon response to the weak roots)" results/82_opposite_root_response_of_the_nucleon.md
 part "S237 (two infrared coordinates)" results/83_two_infrared_coordinates_on_the_weak_family.md
+part "S239 (root phase and the QCD axion)" results/85_root_phase_and_the_qcd_axion.md
+part "S240 (wrapped string and weak roots)" results/86_wrapped_string_and_the_two_weak_roots.md
+part "S244 (tensor anomaly completion)" results/90_a_tensor_completion_without_light_mirrors.md

@@ -10,3 +10,8 @@ part 53 lemmas/53_flag_conic_and_monopole_window.md
 part "S208 (a chiral family over the round five-sphere and its two interval limits)" results/54_chiral_family_over_the_five_sphere.md
 part "S226 (particle identifications and mirror families)" results/72_particle_identifications_and_mirrors.md
 part "S238 (magnetic flux and the shared spin circle)" results/84_magnetic_origin_of_the_vortex_flux.md
+part "S240 (wrapped string and weak roots)" results/86_wrapped_string_and_the_two_weak_roots.md
+part "S241 (spin magnetic product and wrapped membranes)" results/87_spin_magnetic_product_and_wrapped_membranes.md
+part "S242 (K3 colour and instanton action)" results/88_k3_colour_hypercharge_and_instanton_action.md
+part "S243 (monopole charge and a chiral interval)" results/89_monopole_charge_and_a_chiral_interval.md
+part "S244 (tensor anomaly completion)" results/90_a_tensor_completion_without_light_mirrors.md

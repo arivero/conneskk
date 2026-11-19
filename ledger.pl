@@ -3105,6 +3105,194 @@ referee_pending(membrane_colour_instanton).
 addresses(t2, membrane_colour_instanton).
 addresses(t18, membrane_colour_instanton).
 
+claim(root_qcd_angle, proposition, proved, "Proposition 85.1", "With full-rank ordinary quark masses and a root-independent mirror threshold the colour angle is Theta0 + 3u - t v for integer t. At a QCD minimum of positive susceptibility the contribution to the two-phase Hessian has rank one.").
+source(root_qcd_angle, 'results/85_root_phase_and_the_qcd_axion.md', 'which-phase-qcd-measures').
+depends(root_qcd_angle, membrane_colour_instanton).
+depends(root_qcd_angle, vortex_root_domain).
+attempted_by(root_qcd_angle, gpt_6_2_astra_max).
+checked_by(root_qcd_angle, gpt_6_2_astra_max, by_hand).
+referee_pending(root_qcd_angle).
+addresses(t13, root_qcd_angle).
+addresses(t18, root_qcd_angle).
+
+claim(root_phase_kinetic, proposition, proved, "Proposition 85.2", "At equal root norms and leading near-round order, integrating out the vortex connection fixes the physical two-phase metric. With one charge-two axion or a pinned second phase the decay constant is v_F sqrt(1-d_v)/6 and the squared QCD mass is 36 sqrt(2) G_F chi/(1-d_v).").
+source(root_phase_kinetic, 'results/85_root_phase_and_the_qcd_axion.md', 'physical-kinetic-coefficient-and-fermion-vertex').
+depends(root_phase_kinetic, root_qcd_angle).
+depends(root_phase_kinetic, finite_weak_current_inverse).
+attempted_by(root_phase_kinetic, gpt_6_2_astra_max).
+checked_by(root_phase_kinetic, gpt_6_2_astra_max, by_hand).
+referee_pending(root_phase_kinetic).
+addresses(t4, root_phase_kinetic).
+addresses(t13, root_phase_kinetic).
+
+claim(root_phase_charm_test, claim, numerical, "Result 85, finite-current and charmonium calculations", "For the specified compact fit and one light QCD phase, finite phase projection and the supplied susceptibility give F_a about 41 GeV and mass about 139 keV. The connected-charm approximation alone gives a radiative branching ratio of about 3.0e-5. Extra amplitudes require their own matching.").
+source(root_phase_charm_test, 'results/85_root_phase_and_the_qcd_axion.md', 'qcd-scale-and-a-particle-test').
+depends(root_phase_charm_test, root_phase_kinetic).
+depends(root_phase_charm_test, finite_weak_current_inverse).
+attempted_by(root_phase_charm_test, gpt_6_2_astra_max).
+checked_by(root_phase_charm_test, gpt_6_2_astra_max, python).
+referee_pending(root_phase_charm_test).
+addresses(t13, root_phase_charm_test).
+addresses(t18, root_phase_charm_test).
+
+claim(wrapped_string_resultant, theorem, proved, "Theorem 86.1", "On the specified chiral worldsheet system, a genuine holomorphic degree-w weak-sphere cover has leading fermion insertion given by the resultant of the two pulled-back roots. The gauge-invariant insertion has phase w(alpha-theta2) and independent roots give a nonzero determinant.").
+source(wrapped_string_resultant, 'results/86_wrapped_string_and_the_two_weak_roots.md', 'worldsheet-anomaly-and-the-determinant').
+depends(wrapped_string_resultant, vortex_flux_axion).
+depends(wrapped_string_resultant, vortex_root_domain).
+attempted_by(wrapped_string_resultant, gpt_6_2_astra_max).
+checked_by(wrapped_string_resultant, gpt_6_2_astra_max, by_hand).
+referee_pending(wrapped_string_resultant).
+addresses(t11, wrapped_string_resultant).
+addresses(t18, wrapped_string_resultant).
+
+claim(wrapped_string_phase_potential, proposition, conditional, "Proposition 86.2", "Assuming a nonzero unit worldsheet vacuum harmonic and a full-rank QCD sector with positive susceptibility, the two-phase Hessian has determinant chi kappa2 t^2 at simultaneous minima. If the QCD minimum is unique modulo 2 pi and t is nonzero, there are |t| minima.").
+source(wrapped_string_phase_potential, 'results/86_wrapped_string_and_the_two_weak_roots.md', 'two-independent-contributions-to-the-phase-potential').
+depends(wrapped_string_phase_potential, root_qcd_angle).
+depends(wrapped_string_phase_potential, wrapped_string_resultant).
+attempted_by(wrapped_string_phase_potential, gpt_6_2_astra_max).
+checked_by(wrapped_string_phase_potential, gpt_6_2_astra_max, by_hand).
+referee_pending(wrapped_string_phase_potential).
+addresses(t13, wrapped_string_phase_potential).
+addresses(t18, wrapped_string_phase_potential).
+
+claim(full_harmonic_flux_mass, proposition, proved, "Proposition 87.1", "For a single two-form period on the weak surface the axion charge is I n and the massive direction is J inverse I n. Restricting all harmonic vectors to the flux line before computing the mass keeps the squared-mass fraction (n^T I n)^2/(n^T J n)^2.").
+source(full_harmonic_flux_mass, 'results/87_spin_magnetic_product_and_wrapped_membranes.md', 'keeping-all-harmonic-vectors').
+depends(full_harmonic_flux_mass, dual_four_cycle_flux).
+attempted_by(full_harmonic_flux_mass, gpt_6_2_astra_max).
+checked_by(full_harmonic_flux_mass, gpt_6_2_astra_max, by_hand).
+referee_pending(full_harmonic_flux_mass).
+addresses(t11, full_harmonic_flux_mass).
+addresses(t13, full_harmonic_flux_mass).
+addresses(t18, full_harmonic_flux_mass).
+
+claim(spin_magnetic_surface_products, proposition, proved, "Proposition 87.2", "The two-derivative source-free spin product with unit flux on each surface times the weak sphere has explicit radius and curvature relations for a sphere, torus or higher-genus second factor. The full massive harmonic vector has M^2=3/r^2.").
+source(spin_magnetic_surface_products, 'results/87_spin_magnetic_product_and_wrapped_membranes.md', 'solving-the-spin-product-einstein-equations').
+depends(spin_magnetic_surface_products, full_harmonic_flux_mass).
+depends(spin_magnetic_surface_products, projective_cjs_gauge_ratio).
+attempted_by(spin_magnetic_surface_products, gpt_6_2_astra_max).
+checked_by(spin_magnetic_surface_products, gpt_6_2_astra_max, by_hand).
+referee_pending(spin_magnetic_surface_products).
+addresses(t13, spin_magnetic_surface_products).
+addresses(t18, spin_magnetic_surface_products).
+
+claim(wrapped_m5_boundary_charge, proposition, proved, "Proposition 87.3", "On the product six-cycle with mixed class m h k the cohomological M5 worldvolume Bianchi identity requires net M2 boundary class m PD_X(h) times a point. Its charge is m^2 times the self-intersection of h. The product bare action obeys S5 f_theta=sqrt(C_ext).").
+source(wrapped_m5_boundary_charge, 'results/87_spin_magnetic_product_and_wrapped_membranes.md', 'the-wrapped-m5-needs-membrane-boundaries').
+depends(wrapped_m5_boundary_charge, dual_four_cycle_flux).
+depends(wrapped_m5_boundary_charge, full_harmonic_flux_mass).
+attempted_by(wrapped_m5_boundary_charge, gpt_6_2_astra_max).
+checked_by(wrapped_m5_boundary_charge, gpt_6_2_astra_max, by_hand).
+referee_pending(wrapped_m5_boundary_charge).
+addresses(t11, wrapped_m5_boundary_charge).
+addresses(t18, wrapped_m5_boundary_charge).
+
+claim(k3_ade_charge_embedding, proposition, proved, "Proposition 88.1", "Explicit lattice classes h and y have h^2=2, y^2=-30 and h dot y=0. The A6 root selection has a colour A2, the charge records of an ordinary family including the right neutrino, and two weak scalar links. External chirality and mass links require a mode domain and action.").
+source(k3_ade_charge_embedding, 'results/88_k3_colour_hypercharge_and_instanton_action.md', 'the-integral-charges-of-the-candidate-fields').
+depends(k3_ade_charge_embedding, full_harmonic_flux_mass).
+depends(k3_ade_charge_embedding, particle_lifts_table).
+attempted_by(k3_ade_charge_embedding, gpt_6_2_astra_max).
+checked_by(k3_ade_charge_embedding, gpt_6_2_astra_max, by_hand).
+referee_pending(k3_ade_charge_embedding).
+addresses(t11, k3_ade_charge_embedding).
+addresses(t17, k3_ade_charge_embedding).
+addresses(t18, k3_ade_charge_embedding).
+
+claim(k3_colour_instanton_action, proposition, proved, "Proposition 88.2", "At A2 enhancement the stated leading unwarped reduction gives I3=C V3/(2 T2^2). A membrane wrapping the remaining internal three-volume has bare action T2 V3=8 pi^2 I3. This fixes the tree colour matching input for that geometry.").
+source(k3_colour_instanton_action, 'results/88_k3_colour_hypercharge_and_instanton_action.md', 'the-gluon-coefficient-and-a-strong-coupling-scale').
+depends(k3_colour_instanton_action, k3_ade_charge_embedding).
+depends(k3_colour_instanton_action, hadronic_colour_current).
+attempted_by(k3_colour_instanton_action, gpt_6_2_astra_max).
+checked_by(k3_colour_instanton_action, gpt_6_2_astra_max, by_hand).
+referee_pending(k3_colour_instanton_action).
+addresses(t11, k3_colour_instanton_action).
+addresses(t13, k3_colour_instanton_action).
+addresses(t18, k3_colour_instanton_action).
+
+claim(k3_hypercharge_period_bound, proposition, proved, "Proposition 88.3", "At exact colour enhancement the tree hypercharge ratio is IY/I3=5/3+||y_plus||^2/9. The excess is bounded above by 2 I3/M4^2 times the squared sum of the two specified bare wrapped masses. Full A6 enhancement attains 5/3 in this reduction.").
+source(k3_hypercharge_period_bound, 'results/88_k3_colour_hypercharge_and_instanton_action.md', 'hypercharge-normalization-and-the-masses-of-its-carriers').
+depends(k3_hypercharge_period_bound, k3_ade_charge_embedding).
+depends(k3_hypercharge_period_bound, k3_colour_instanton_action).
+attempted_by(k3_hypercharge_period_bound, gpt_6_2_astra_max).
+checked_by(k3_hypercharge_period_bound, gpt_6_2_astra_max, by_hand).
+referee_pending(k3_hypercharge_period_bound).
+addresses(t13, k3_hypercharge_period_bound).
+addresses(t17, k3_hypercharge_period_bound).
+addresses(t18, k3_hypercharge_period_bound).
+
+claim(adjoint_monopole_gradient, proposition, proved, "Proposition 89.1", "In Yang-Mills theory on the prescribed S2 times line, a constant adjoint Higgs leaves a tangential-vector mass squared mu^2-q/r^2 for N=2q at least two. The Cartan Bogomolny gradient instead has nonnegative second variation for compactly supported physical perturbations and explicit weak-spin zero modes.").
+source(adjoint_monopole_gradient, 'results/89_monopole_charge_and_a_chiral_interval.md', 'the-charged-vector-and-the-bogomolny-background').
+depends(adjoint_monopole_gradient, k3_ade_charge_embedding).
+attempted_by(adjoint_monopole_gradient, gpt_6_2_astra_max).
+checked_by(adjoint_monopole_gradient, gpt_6_2_astra_max, by_hand).
+referee_pending(adjoint_monopole_gradient).
+addresses(t11, adjoint_monopole_gradient).
+addresses(t14, adjoint_monopole_gradient).
+addresses(t18, adjoint_monopole_gradient).
+
+claim(ade_interval_yukawa, proposition, proved, "Proposition 89.2", "On the prescribed sphere-interval background with the stated boundary projectors and scalar squares, normalized monopole and Gaussian modes give the ordinary chiral charge blocks. The explicit Yukawa overlap pairs equal-colour equal-charge quark modes at small expectation value.").
+source(ade_interval_yukawa, 'results/89_monopole_charge_and_a_chiral_interval.md', 'fermions-on-the-interval-and-their-yukawa-overlaps').
+depends(ade_interval_yukawa, k3_ade_charge_embedding).
+depends(ade_interval_yukawa, adjoint_monopole_gradient).
+depends(ade_interval_yukawa, vortex_root_domain).
+attempted_by(ade_interval_yukawa, gpt_6_2_astra_max).
+checked_by(ade_interval_yukawa, gpt_6_2_astra_max, by_hand).
+referee_pending(ade_interval_yukawa).
+addresses(t3, ade_interval_yukawa).
+addresses(t8, ade_interval_yukawa).
+addresses(t11, ade_interval_yukawa).
+addresses(t18, ade_interval_yukawa).
+
+claim(vortex_neutral_spectator_tensor, proposition, proved, "Proposition 90.1", "Three ordinary families in the six-dimensional spin theory admit vortex-neutral chiral spectators without weak-sphere zero modes. The specified integral factorization X Y matches the gauge part of the two-derivative K3 magnetic class and gives local Green-Schwarz cancellation with a nonchiral tensor.").
+source(vortex_neutral_spectator_tensor, 'results/90_a_tensor_completion_without_light_mirrors.md', 'vortex-neutral-spectators').
+depends(vortex_neutral_spectator_tensor, vortex_mirror_anomalies).
+depends(vortex_neutral_spectator_tensor, k3_ade_charge_embedding).
+depends(vortex_neutral_spectator_tensor, ade_interval_yukawa).
+attempted_by(vortex_neutral_spectator_tensor, gpt_6_2_astra_max).
+checked_by(vortex_neutral_spectator_tensor, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_neutral_spectator_tensor).
+addresses(t11, vortex_neutral_spectator_tensor).
+addresses(t18, vortex_neutral_spectator_tensor).
+
+claim(spectator_global_bordism, proposition, proved, "Result 90, global determinant check", "The spin bordism group Omega_7(B(U(3) times U(1)_v)) vanishes. For the specified complex-fermion and spin backgrounds the exponentiated determinant anomaly equals the differential cup-product functional of X and Y. A source-free two-form cancellation uses a geometric trivialization of X.").
+source(spectator_global_bordism, 'results/90_a_tensor_completion_without_light_mirrors.md', 'vortex-neutral-spectators').
+depends(spectator_global_bordism, vortex_neutral_spectator_tensor).
+attempted_by(spectator_global_bordism, gpt_6_2_astra_max).
+checked_by(spectator_global_bordism, gpt_6_2_astra_max, by_hand).
+referee_pending(spectator_global_bordism).
+addresses(t11, spectator_global_bordism).
+addresses(t18, spectator_global_bordism).
+
+claim(tensor_sphere_pushforward, proposition, proved, "Proposition 90.2", "Equivariant pushforward on the lifted weak sphere bundle gives the ordinary four-dimensional anomaly including the weak term. The two tensor-derived axion charges are 2 and 14. The minimal colour angle is Theta0 + 3u + v_m.").
+source(tensor_sphere_pushforward, 'results/90_a_tensor_completion_without_light_mirrors.md', 'the-same-descent-sees-the-geometric-weak-group').
+depends(tensor_sphere_pushforward, vortex_neutral_spectator_tensor).
+depends(tensor_sphere_pushforward, vortex_axion_four_anomaly).
+depends(tensor_sphere_pushforward, root_qcd_angle).
+attempted_by(tensor_sphere_pushforward, gpt_6_2_astra_max).
+checked_by(tensor_sphere_pushforward, gpt_6_2_astra_max, by_hand).
+referee_pending(tensor_sphere_pushforward).
+addresses(t11, tensor_sphere_pushforward).
+addresses(t18, tensor_sphere_pushforward).
+
+claim(dual_tensor_stiffness_bound, proposition, proved, "Result 90, electric-magnetic bound", "Keeping the harmonics of the minimal unwarped electrically and magnetically normalized tensor gives f_e f_m=1/(2 pi A) and v_A^2 at least 28/(pi A) for axion charges 2 and 14. The original fit can be compared to this lower bound at the same physical area.").
+source(dual_tensor_stiffness_bound, 'results/90_a_tensor_completion_without_light_mirrors.md', 'a-constraint-from-electricmagnetic-normalization').
+depends(dual_tensor_stiffness_bound, tensor_sphere_pushforward).
+depends(dual_tensor_stiffness_bound, finite_weak_current_inverse).
+attempted_by(dual_tensor_stiffness_bound, gpt_6_2_astra_max).
+checked_by(dual_tensor_stiffness_bound, gpt_6_2_astra_max, by_hand).
+referee_pending(dual_tensor_stiffness_bound).
+addresses(t4, dual_tensor_stiffness_bound).
+addresses(t13, dual_tensor_stiffness_bound).
+addresses(t18, dual_tensor_stiffness_bound).
+
+claim(projective_vortex_spectator_descent, proposition, proved, "Result 90, ten-dimensional local anomaly", "On the original spin-c projective family, opposite-chirality spectators of zero weak degree cancel the irreducible parent gravitational term while their sphere spinor kernels are empty. The remaining rational local polynomial factors as v^2 X8 + x^2 Y8. Quantization of the ten-dimensional eight-form coefficients requires additional data.").
+source(projective_vortex_spectator_descent, 'results/90_a_tensor_completion_without_light_mirrors.md', 'a-local-ten-dimensional-check-on-the-original-chiral-bundles').
+depends(projective_vortex_spectator_descent, vortex_mirror_anomalies).
+depends(projective_vortex_spectator_descent, vortex_neutral_spectator_tensor).
+attempted_by(projective_vortex_spectator_descent, gpt_6_2_astra_max).
+checked_by(projective_vortex_spectator_descent, gpt_6_2_astra_max, by_hand).
+referee_pending(projective_vortex_spectator_descent).
+addresses(t11, projective_vortex_spectator_descent).
+addresses(t18, projective_vortex_spectator_descent).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).

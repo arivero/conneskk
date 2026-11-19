@@ -2,7 +2,7 @@
 PAPERS = towerless_intervals chiral_limit_note boundary_condition_note joint_limit_note connes_kk_dictionary_note generations_note real_structure_note two_endpoint_limits seven_m_theory
 LECTURE = kk_strings_lecture
 LECTURE_PDFS = $(LECTURE).pdf $(LECTURE)_mobile.pdf
-LECTURE_PLOTS = $(addprefix plots/lecture-,worldsheet.pdf circle-spectrum.pdf interval-window.pdf fibre-winding.pdf m-circle.pdf)
+LECTURE_PLOTS = $(addprefix plots/lecture-,worldsheet.pdf circle-spectrum.pdf interval-window.pdf fibre-winding.pdf m-circle.pdf phase-torus.pdf)
 .PHONY: all lecture supplement supplements html docs clean
 all: $(PAPERS:%=%.pdf) $(PAPERS:%=%_mobile.pdf) $(LECTURE_PDFS)
 

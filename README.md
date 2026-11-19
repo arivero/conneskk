@@ -38,7 +38,9 @@ The live set, read by agents and by readers:
 
 The [integrated discussion](docs/index.html) links the shared themes to complete HTML editions of the papers, alongside their PDFs and supplements. From the repository root, `make -C paper html` regenerates the site from the LaTeX papers, bibliography, `paper/site_overview.md`, and the shared stylesheet. It needs Python 3 and Pandoc 3.1 or later; equations are rendered as MathML without a network dependency. Three SVG plots are generated from the formulas by `paper/figures.py`, with their assumptions and source links in the discussion. The build checks source sections, result headings, equations, citations, labels, local links and plot calculations. `make -C paper docs` also rebuilds the HTML when rebuilding the PDFs.
 
-The illustrated graduate lecture includes twelve solved exercises on the point-particle limit, toroidal winding and the five-, six- and seven-dimensional examples. From a checkout, `make -C paper lecture` builds the print and mobile handouts. The lecture illustrations use NumPy and Matplotlib. [Lecture](docs/kk_strings_lecture.html) · [Print](docs/kk_strings_lecture.pdf) · [Mobile](docs/kk_strings_lecture_mobile.pdf)
+The illustrated graduate lecture includes thirteen solved exercises on the point-particle limit, toroidal winding and the five-, six- and seven-dimensional examples. The final exercise computes a fermion determinant on a doubly wrapped weak sphere. From a checkout, `make -C paper lecture` builds the print and mobile handouts. The lecture illustrations use NumPy and Matplotlib. [Lecture](docs/kk_strings_lecture.html) · [Print](docs/kk_strings_lecture.pdf) · [Mobile](docs/kk_strings_lecture_mobile.pdf)
+
+The weak-root phase and wrapped-string determinant have a dedicated reading route. A second route follows the harmonic form reduction, the K3 charge table, the chiral interval and the spectator tensor completion. [Phase and ADE routes](results/README.md#reading-routes) · [Full supplement, Parts S239–S244](docs/supplemental.pdf)
 
 ## Removed sources
 

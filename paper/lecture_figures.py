@@ -160,9 +160,31 @@ def fibre_winding():
     return fig
 
 
+def phase_torus():
+    fig, ax = plt.subplots(figsize=(4.2, 3.55), layout="constrained")
+    # In the square, each segment solves 3u/(2 pi) + v_m/(2 pi) = integer.
+    for integer in range(1, 4):
+        ax.plot([(integer - 1) / 3, integer / 3], [1, 0],
+                color=BLUE, linewidth=2,
+                label="QCD minima" if integer == 1 else None)
+    u_min, v_min = 1 / 8, 5 / 8
+    ax.axvline(u_min, color=ORANGE, linestyle="--", linewidth=2,
+               label="Unit string minima")
+    ax.plot(u_min, v_min, "o", color=GREEN, markersize=6, zorder=3)
+    ax.set(xlim=(0, 1), ylim=(0, 1), aspect="equal",
+           xlabel=r"$u/(2\pi)$", ylabel=r"$v_m/(2\pi)$")
+    ax.set_xticks([0, u_min, 0.5, 1], ["0", "1/8", "1/2", "1"])
+    ax.set_yticks([0, 0.5, v_min, 1], ["0", "1/2", "5/8", "1"])
+    for spine in ax.spines.values():
+        spine.set_visible(True)
+    ax.legend(loc="lower center", bbox_to_anchor=(0.5, 1.02), ncol=2, frameon=False)
+    return fig
+
+
 DRAWINGS = {
     "worldsheet": worldsheet, "circle-spectrum": circle_spectrum,
     "interval-window": interval_window, "m-circle": m_circle, "fibre-winding": fibre_winding,
+    "phase-torus": phase_torus,
 }
 
 if __name__ == "__main__":

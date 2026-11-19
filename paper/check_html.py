@@ -15,6 +15,7 @@ LECTURE_PLOTS = {
     "plots/lecture-interval-window.svg",
     "plots/lecture-fibre-winding.svg",
     "plots/lecture-m-circle.svg",
+    "plots/lecture-phase-torus.svg",
 }
 
 
