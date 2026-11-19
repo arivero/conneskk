@@ -2320,7 +2320,6 @@ source(two_endpoint_current, 'paper/two_endpoint_limits.tex', '').
 depends(two_endpoint_current, gh1_winding_family).
 attempted_by(two_endpoint_current, gpt_6_2_astra_max).
 checked_by(two_endpoint_current, gpt_6_2_astra_max, by_hand).
-referee_pending(two_endpoint_current).
 addresses(t13, two_endpoint_current).
 addresses(t18, two_endpoint_current).
 
@@ -2353,7 +2352,6 @@ source(two_endpoint_face_current, 'paper/two_endpoint_limits.tex', '').
 depends(two_endpoint_face_current, two_endpoint_current).
 attempted_by(two_endpoint_face_current, gpt_6_2_astra_max).
 checked_by(two_endpoint_face_current, gpt_6_2_astra_max, by_hand).
-referee_pending(two_endpoint_face_current).
 addresses(t13, two_endpoint_face_current).
 
 claim(two_endpoint_scalar_count, proposition, conditional, "Two-endpoint paper, scalar representations and wall fields", "For complete Dirac generations, the symmetric diquark counts and the full neutral traceless meson count together force three families and two up and three down participating flavours. Equal orthogonal interval parities propagate the diquark Wilson scalars, while the meson generators have Dirichlet axial profiles.").
@@ -4309,6 +4307,8 @@ checked_by(vortex_root_magnetic_link, claude_opus_5_5, by_hand).
 checked_by(m111_membrane_charge, claude_opus_5_5, by_hand).
 checked_by(spectator_global_bordism, claude_opus_5_5, by_hand).
 checked_by(lecture_shared_circle_resolution, claude_opus_5_5, by_hand).
+checked_by(two_endpoint_current, claude_opus_5_5, by_hand).
+checked_by(two_endpoint_face_current, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
