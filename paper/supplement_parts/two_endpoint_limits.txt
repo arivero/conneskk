@@ -1,6 +1,11 @@
 # paper: From a finite KO-six geometry toward five and seven dimensions
 # name: two_endpoint_limits
 part 05 lemmas/05_deconstruction_interval.md
+part 14 lemmas/14_gauge_covariant_reduction.md
+part 17 lemmas/17_explicit_masses_chiral_limit.md
 part 21 lemmas/21_top_counting.md
 part 22 lemmas/22_dirac_operator_as_boundary_condition.md
+part 30 lemmas/30_massless_limit_as_a_joint_limit.md
+part 34 lemmas/34_colour_family_exchange.md
+part 38 lemmas/38_so30_fluctuations.md
 part "S208 (a chiral family over the round five-sphere and its two interval limits)" results/54_chiral_family_over_the_five_sphere.md

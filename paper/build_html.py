@@ -28,6 +28,7 @@ PAPERS = [
         "title": "Explicit masses and the chiral limit in odd reductions of almost-commutative geometries",
         "short": "Masses and the chiral limit",
         "supplement": "chiral_limit_note",
+        "citation": "chiralnote",
     },
     {
         "name": "boundary_condition_note",
@@ -48,6 +49,7 @@ PAPERS = [
         "title": "A dictionary between finite spectral triples and Kaluza-Klein data",
         "short": "The finite / Kaluza-Klein dictionary",
         "supplement": "connes_kk_dictionary_note",
+        "citation": "dictionarynote",
     },
     {
         "name": "generations_note",

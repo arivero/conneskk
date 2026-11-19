@@ -12,7 +12,7 @@ In the reduced representation, charged paired sectors can admit both factorizati
 
 ## The two-point space and the interval {#interval}
 
-On a five-sphere with two intervals, one flavour line at a wall gives three periodic families and a gapped fourth. The finite KO-six sector admits three-family weak mixing. A current on a face measures the aspect ratio left free by zero-mode matching. The same construction tests which proposed scalar partners can propagate as interval gauge fields. [From a finite KO-six geometry toward five and seven dimensions](two_endpoint_limits.html)
+On a five-sphere with two intervals, one flavour line at a wall gives three periodic families and a gapped fourth. On the three periodic families the compressed colour–flavour exchange has rank nine on twelve coefficients. A current on a face measures the aspect ratio left free by zero-mode matching. With bounded finite Yukawa masses, the diverging weak pole comes from the independent stiffness and kinetic coefficients in the product action. [From a finite KO-six geometry toward five and seven dimensions](two_endpoint_limits.html)
 
 For a massless Dirac operator on an interval of length $l$, with opposite chiral boundary conditions at its two ends, the lowest pair of modes compresses exactly to the Connes-Lott two-point operator $D=m\sigma_1$, with $m=\pi/(2l)$. The compressed algebra of functions is $\mathbb C\oplus\mathbb C$; the two states correspond to smeared measures on the interval. Higher modes form a tower, so the two-point model is a spectral window. The inherited real structure and first-order condition require separate attention.
 
@@ -93,7 +93,7 @@ For the five light quarks in three colours and their conjugates, the real-struct
 
 ## Completions, sources and status {#sources}
 
-Massless weak vectors arise from isometries on two Freund–Rubin candidates and from boundary gauge fields on a heterotic Calabi–Yau wall. The Reeb spin sectors on $M^{111}$, a relative-radius instability on $S^5\times S^2$, and nine matter multiplets with six conjugates on the wall give different tests of the route to five. [An M-theory test for the seven-dimensional weak endpoint](seven_m_theory.html)
+Massless weak vectors arise from isometries on two Freund–Rubin candidates and from boundary gauge fields on a heterotic Calabi–Yau wall. The Reeb spin sectors on $M^{111}$, a relative-radius instability on $S^5\times S^2$, and nine matter multiplets with six conjugates on the wall give different tests of the route to five. Matching a finite wall mass also requires checking its compressed gauge matrices. In the type I′ comparison the displaced D8-brane produces a varying dilaton and a Romans-mass chamber. [An M-theory test for the seven-dimensional weak endpoint](seven_m_theory.html)
 
 The [dictionary](connes_kk_dictionary_note.html) gathers the correspondence between finite data and interval or Kaluza-Klein data, with a status for each entry. Its [string-duality comparison](connes_kk_dictionary_note.html#what-the-string-dualities-give) identifies specific limitations of the proposed 15+1 configuration, including its angle-position map, T-dual length and Romans mass; it points toward other chambers and completions. These statements concern that dictionary and do not settle the broader completion question.
 

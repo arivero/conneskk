@@ -2354,10 +2354,37 @@ addresses(t13, two_endpoint_face_current).
 claim(two_endpoint_scalar_count, proposition, conditional, "Two-endpoint paper, scalar representations and wall fields", "For complete Dirac generations, the symmetric diquark counts and the full neutral traceless meson count together force three families and two up and three down participating flavours. Equal orthogonal interval parities propagate the diquark Wilson scalars, while the meson generators have Dirichlet axial profiles.").
 source(two_endpoint_scalar_count, 'paper/two_endpoint_limits.tex', '').
 depends(two_endpoint_scalar_count, l21_exotic).
+depends(two_endpoint_scalar_count, d11_so30_zero).
 attempted_by(two_endpoint_scalar_count, gpt_6_2_astra_max).
 checked_by(two_endpoint_scalar_count, gpt_6_2_astra_max, by_hand).
 referee_pending(two_endpoint_scalar_count).
 addresses(t14, two_endpoint_scalar_count).
+
+claim(two_endpoint_fixed_energy_count, proposition, proved, "Two-endpoint paper, counting at fixed probe energy", "At fixed sphere radius R and E > 0, two Neumann intervals of length t give t^2/(4 pi) times the sum of d_j (E^2 - Lambda_j) over sphere eigenvalues below E^2, with error O(1+tE) per real scalar at fixed R,E. This includes only the spherical constant below its first positive threshold.").
+source(two_endpoint_fixed_energy_count, 'paper/two_endpoint_limits.tex', '').
+depends(two_endpoint_fixed_energy_count, two_endpoint_current).
+attempted_by(two_endpoint_fixed_energy_count, gpt_6_2_astra_max).
+checked_by(two_endpoint_fixed_energy_count, gpt_6_2_astra_max, by_hand).
+referee_pending(two_endpoint_fixed_energy_count).
+addresses(t14, two_endpoint_fixed_energy_count).
+
+claim(two_endpoint_compressed_flip, proposition, proved, "Two-endpoint paper, colour-flavour exchange on the retained space", "For the four-slot unitary flip identifying the lepton line with the exceptional flavour line, its compression to the twelve retained colour-flavour coefficients squares to the rank-nine colour times light-flavour projector. Its kernel consists of the three lepton times light-flavour directions.").
+source(two_endpoint_compressed_flip, 'paper/two_endpoint_limits.tex', '').
+depends(two_endpoint_compressed_flip, two_endpoint_flavour_wall).
+depends(two_endpoint_compressed_flip, d11_flip).
+attempted_by(two_endpoint_compressed_flip, gpt_6_2_astra_max).
+checked_by(two_endpoint_compressed_flip, gpt_6_2_astra_max, by_hand).
+referee_pending(two_endpoint_compressed_flip).
+addresses(t14, two_endpoint_compressed_flip).
+
+claim(two_endpoint_trace_matching, corollary, conditional, "Two-endpoint paper, finite trace and product weak mass", "Matching the tree product weak pole to the leading finite commutator mass with its own positive trace kinetic norm requires H s^2/K <= 24 ||D_F||^2. The specified winding action has divergent H s^2/K while its retained harmonic Yukawa block stays bounded.").
+source(two_endpoint_trace_matching, 'paper/two_endpoint_limits.tex', '').
+depends(two_endpoint_trace_matching, two_endpoint_current).
+depends(two_endpoint_trace_matching, l14_nogo_collapse).
+attempted_by(two_endpoint_trace_matching, gpt_6_2_astra_max).
+checked_by(two_endpoint_trace_matching, gpt_6_2_astra_max, by_hand).
+referee_pending(two_endpoint_trace_matching).
+addresses(t13, two_endpoint_trace_matching).
 
 claim(m111_membrane_charge, proposition, proved, "M-theory endpoint paper, Betti vector and wrapped charge", "With an elementary electric M2 charge and leading Freund-Rubin flux normalization, the inverse squared Betti coupling on M111 is sqrt(N)/(36 sqrt(3) pi). A smooth representative of the primitive two-cycle exists and the classical mass of a unit-charge wrapped membrane times the AdS radius is at least 8 sqrt(N/3).").
 source(m111_membrane_charge, 'paper/seven_m_theory.tex', '').
@@ -2405,6 +2432,16 @@ attempted_by(heterotic_wall_three_index, gpt_6_2_astra_max).
 checked_by(heterotic_wall_three_index, gpt_6_2_astra_max, by_hand).
 referee_pending(heterotic_wall_three_index).
 addresses(t18, heterotic_wall_three_index).
+
+claim(heterotic_wall_pair_threshold, corollary, conditional, "M-theory endpoint paper, finite threshold for vectorlike pairs", "In the isolated nine 27 and six conjugate multiplicity spaces with canonical kinetics and only an E6-invariant supersymmetric quadratic pairing, a rank-r mass matrix leaves counts (9-r+k,6-r+k) at cutoff E, where k counts positive singular values at or below E. Exactly three 27s alone requires all six singular values above E. The mass matrix is an input.").
+source(heterotic_wall_pair_threshold, 'paper/seven_m_theory.tex', '').
+depends(heterotic_wall_pair_threshold, heterotic_wall_three_index).
+depends(heterotic_wall_pair_threshold, l12_towerless).
+attempted_by(heterotic_wall_pair_threshold, gpt_6_2_astra_max).
+checked_by(heterotic_wall_pair_threshold, gpt_6_2_astra_max, by_hand).
+referee_pending(heterotic_wall_pair_threshold).
+addresses(t14, heterotic_wall_pair_threshold).
+addresses(t18, heterotic_wall_pair_threshold).
 
 claim(gh1_berger_charge_kernel, proposition, proved, "Issue 1 section 4", "On round S5 the spin Dirac twisted by the dual spin bundle and the exterior Killing-spinor bundle has kernel exterior(4) and gap sqrt(5)/R. Under the rank-one stabilizer it is the colour and electric charge module of one all-left generation. A separately gauged projector masses six vector directions.").
 source(gh1_berger_charge_kernel, 'results/issues/01.md', '').
