@@ -4193,6 +4193,12 @@ attempted_by(gh1_monopole_anomaly, gpt_6_2_astra_max).
 checked_by(gh1_monopole_anomaly, terra_6_1, by_hand).
 addresses(t18, gh1_monopole_anomaly).
 
+claim(gh1_electromagnetic_index, proposition, proved, "Issue 1 colour and electromagnetic chirality index", "For one ordinary generation with a right-handed neutrino, restriction to colour and electromagnetism gives equal left and right particle representations, so their virtual difference is zero. Removing the right-handed neutrino leaves one neutral singlet in the difference.").
+source(gh1_electromagnetic_index, 'results/issues/01.md', 'colour-and-electromagnetic-chirality-index').
+attempted_by(gh1_electromagnetic_index, gpt_6_2_astra_max).
+checked_by(gh1_electromagnetic_index, codex_gpt_6, by_hand).
+addresses(t18, gh1_electromagnetic_index).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).

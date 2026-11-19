@@ -29,3 +29,19 @@ Eighteen issues have answers within their stated hypotheses. Issue 20 explicitly
 | [#18](https://github.com/arivero/conneskk/issues/18) | [The electromagnetic and strong scales on the one-coupling interval](18.md) | A residual length with fixed wall angle and kinetic normalization, and a matched pure-glue scale. |
 | [#19](https://github.com/arivero/conneskk/issues/19) | [Electromagnetic, hadronic and charged-lepton mass comparisons](19.md) | Three empirical comparisons and the edition history. The on-shell hypercharge comparison differs by 5.65 experimental standard deviations. |
 | [#20](https://github.com/arivero/conneskk/issues/20) | [The hypercharge projection at a stationary spectral vacuum](20.md) | At a fixed stationary polynomial vacuum, a free lepton determinant moves the one-loop electromagnetic benchmark. The exact flat trace gives a separate vacuum test. |
+
+## Archived branch tips
+
+The issue files above are the current calculations. The tags preserve the original working tips for comparison with their descendants and revisions. The table identifies which live calculation carries each line of work.
+
+| Former branch | Archived tip | Current calculation |
+|---|---|---|
+| `research/github-issues` | [`a52bbe3`](https://github.com/arivero/conneskk/tree/archive/branch-tips/github-issues) | The initial issue collection and the [restricted chirality index](01.md#colour-and-electromagnetic-chirality-index). |
+| `research/issue-solutions-20` | [`c7feece`](https://github.com/arivero/conneskk/tree/archive/branch-tips/issue-solutions-20) | Intermediate versions of the flavour and wall calculations. The [stationary spectral-vacuum calculation](20.md) develops the later electromagnetic test. |
+| `research/issue-results-839f3e7` | [`839f3e7`](https://github.com/arivero/conneskk/tree/archive/branch-tips/issue-results-839f3e7) | The critical monopole comparison in [#1](01.md) and the zero-energy disc transfer in [#10](10.md#a-zero-energy-formula-on-the-coupled-disc-bundle). |
+| `research/issue-results-e7b3972` and `research/tunnelling-action` | [`e7b3972`](https://github.com/arivero/conneskk/tree/archive/branch-tips/issue-results-e7b3972) | The [tunnelling rate away from exceptional masses](10.md#the-exponential-rate-away-from-exceptional-masses), retained alongside the later pointwise factor. |
+| `research/d0-radius` | [`82b78e9`](https://github.com/arivero/conneskk/tree/archive/branch-tips/d0-radius) | The finite-charge [matrix-radius estimate](16.md) and the [winding-selected five-sphere construction](../54_chiral_family_over_the_five_sphere.md). |
+| `archive/issue-results-6ce6b2b` | [`6ce6b2b`](https://github.com/arivero/conneskk/tree/archive/branch-tips/issue-results-6ce6b2b) | The [all-mass factor and inverse schedule](10.md#the-original-and-the-inverse-mass-schedules), with the split-collar scope retained in the current result. |
+| `archive/issue-results-74dda39` | [`74dda39`](https://github.com/arivero/conneskk/tree/archive/branch-tips/issue-results-74dda39) | The same tunnelling comparison and the earlier [D0 rotation-sector bounds](16.md). |
+| `archive/issue-results-a75efa4` | [`a75efa4`](https://github.com/arivero/conneskk/tree/archive/branch-tips/issue-results-a75efa4) | The current [pull-back prefactor and split examples](10.md#the-pull-back-prefactor-and-smooth-split-collars) and [squashed twistor window](13.md). |
+| `review/9d-results-errata` | [`5284053`](https://github.com/arivero/conneskk/tree/archive/branch-tips/9d-results-errata) | The errata and [flag-to-conic calculation](../53_conic_monopole_window.md), already inherited in the history of the default branch. |
