@@ -42,6 +42,8 @@ A quartic potential for the dynamical volume tensor gives a charged colour sexte
 
 The full coexact $j=2$ shell for the local connection reduces to finite transverse blocks after eliminating the exact coordinate shift. On the fitted shrink the first weak-constant coloured transverse vector is a triplet with charge magnitude $1/6$ and $B^2M^2$ tending to about $4.99246$. A full particle threshold requires the scalar spectrum too. [Local transverse shell and limiting vector](results/103_hopf_local_connection_transverse_shell.md)
 
+In the marked local action the scalar constraints give a positive mass comparison and an exact charged sextet tower. When $\mu B^2\ge55/3$, the remaining coloured spin-zero spectrum is bounded below by $5/B^2$ in squared mass. The limiting triplet is the first additional boson for $\kappa\ge5$, and the constant sextet is first on late shrink for $\kappa=9/2$. The first additional particle is the mirror quark for the stated heavier potentials and the sextet for the very light potential. [Local scalar constraints and first coloured levels](results/104_hopf_local_scalar_constraints_and_sextet.md)
+
 The graduate lecture derives the point-particle limit of a closed string and includes fourteen solved exercises. Exercise 13 computes the weak-root determinant on a degree-two sphere cover and shows how the unit string term and QCD can fix two phases. Exercise 14 tests the Hopf spin lift and its compensation by auxiliary gauge charge. [Illustrated lecture](docs/kk_strings_lecture.html) · [Lecture source](paper/kk_strings_lecture.tex) · [Original proposal](paper/kk_strings_lecture_proposal.md)
 
 What the numbers mean (spacetime plus internal metric dimension; KO-degree), and the regime table of hypothesis H.

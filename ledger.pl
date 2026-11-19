@@ -3812,6 +3812,68 @@ addresses(t4, hopf_local_transverse_vector_minimum).
 addresses(t14, hopf_local_transverse_vector_minimum).
 addresses(t18, hopf_local_transverse_vector_minimum).
 
+claim(hopf_local_scalar_constraint_positivity, proposition, proved, "Proposition 104.1", "At a finite weak member of the marked local Hopf action with the specified quotient roots, tensor and intrinsic stabilizers, the coloured spin-zero static form and reduced kinetic form are nonnegative. The kinetic proof eliminates the metric shift and temporal gauge constraints jointly. This gives nonnegative squared masses on the propagating positive-kinetic sector.").
+source(hopf_local_scalar_constraint_positivity, 'results/104_hopf_local_scalar_constraints_and_sextet.md', 'the-temporal-constraints-of-the-coloured-problem').
+depends(hopf_local_scalar_constraint_positivity, hopf_nonround_covariant_core).
+depends(hopf_local_scalar_constraint_positivity, hopf_full_maxwell_coexact_block).
+depends(hopf_local_scalar_constraint_positivity, hopf_local_exact_shift_blocks).
+attempted_by(hopf_local_scalar_constraint_positivity, gpt_6_2_sol_ultra).
+checked_by(hopf_local_scalar_constraint_positivity, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_local_scalar_constraint_positivity).
+addresses(t4, hopf_local_scalar_constraint_positivity).
+addresses(t14, hopf_local_scalar_constraint_positivity).
+addresses(t18, hopf_local_scalar_constraint_positivity).
+
+claim(hopf_local_vertical_orientation_bound, proposition, proved, "Proposition 104.2", "For the local augmented derivative on a round colour leaf, in divergence-free metric gauge the nonconstant orbit part perpendicular to the phase and gradient-generated orientations has vertical energy at least 5/B^2 times its own kinetic norm. Eliminating the exact external-coordinate shift projects the matching horizontal derivative off the full gradient image.").
+source(hopf_local_vertical_orientation_bound, 'results/104_hopf_local_scalar_constraints_and_sextet.md', 'the-vertical-orientation-bound-and-exact-shifts').
+depends(hopf_local_vertical_orientation_bound, hopf_local_scalar_constraint_positivity).
+depends(hopf_local_vertical_orientation_bound, hopf_local_exact_shift_blocks).
+attempted_by(hopf_local_vertical_orientation_bound, gpt_6_2_sol_ultra).
+checked_by(hopf_local_vertical_orientation_bound, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_local_vertical_orientation_bound).
+addresses(t4, hopf_local_vertical_orientation_bound).
+addresses(t14, hopf_local_vertical_orientation_bound).
+addresses(t18, hopf_local_vertical_orientation_bound).
+
+claim(hopf_local_normal_scalar_towers, proposition, proved, "Proposition 104.3", "For the marked local action the normal sextet and radial amplitudes decouple at quadratic order and have exact product towers from their colour scalar harmonics and weak scalar eigenvalues. The constant weak-singlet sextet of charge -2/3 has squared mass kappa/B^2, with its conjugate.").
+source(hopf_local_normal_scalar_towers, 'results/104_hopf_local_scalar_constraints_and_sextet.md', 'the-exact-normal-scalar-tower').
+depends(hopf_local_normal_scalar_towers, hopf_volume_tensor_rank_one_potential).
+depends(hopf_local_normal_scalar_towers, hopf_local_scalar_constraint_positivity).
+attempted_by(hopf_local_normal_scalar_towers, gpt_6_2_sol_ultra).
+checked_by(hopf_local_normal_scalar_towers, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_local_normal_scalar_towers).
+addresses(t4, hopf_local_normal_scalar_towers).
+addresses(t13, hopf_local_normal_scalar_towers).
+addresses(t14, hopf_local_normal_scalar_towers).
+addresses(t18, hopf_local_normal_scalar_towers).
+
+claim(hopf_local_calibrated_coloured_gap, proposition, proved, "Proposition 104.4", "On the fitted broken path of the marked local action the coloured boson bound off the gluons is B^2 M^2 at least min(g(s), 15-sqrt(120), kappa). With the calibrated horizontal fermion spectrum, kappa=9 and kappa=9/2 retain the mirror-first six-flavour window, while kappa=0.001 gives a first omitted sextet.").
+source(hopf_local_calibrated_coloured_gap, 'results/104_hopf_local_scalar_constraints_and_sextet.md', 'a-common-massive-bound-along-the-calibrated-path').
+depends(hopf_local_calibrated_coloured_gap, hopf_local_vertical_orientation_bound).
+depends(hopf_local_calibrated_coloured_gap, hopf_local_normal_scalar_towers).
+depends(hopf_local_calibrated_coloured_gap, hopf_full_maxwell_matched_threshold).
+depends(hopf_local_calibrated_coloured_gap, hopf_mirror_particle_threshold).
+attempted_by(hopf_local_calibrated_coloured_gap, gpt_6_2_sol_ultra).
+checked_by(hopf_local_calibrated_coloured_gap, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_local_calibrated_coloured_gap).
+addresses(t4, hopf_local_calibrated_coloured_gap).
+addresses(t13, hopf_local_calibrated_coloured_gap).
+addresses(t14, hopf_local_calibrated_coloured_gap).
+addresses(t18, hopf_local_calibrated_coloured_gap).
+
+claim(hopf_local_full_boson_ordering, proposition, proved, "Proposition 104.5", "In the stated local action, mu B^2>=55/3 gives a 5/B^2 spin-zero gap off the constant sextet and locates the spin-one minimum below that scale in the weak-constant blocks. For the fitted path with kappa>=5 the broken Killing vector is first on the finite leg and the three-vector comparison gives the first extra boson on shrink, eventually the triplet. For kappa=9/2 the constant sextet is first sufficiently late.").
+source(hopf_local_full_boson_ordering, 'results/104_hopf_local_scalar_constraints_and_sextet.md', 'sharp-ordering-after-the-weak-direction-gap-opens').
+depends(hopf_local_full_boson_ordering, hopf_local_calibrated_coloured_gap).
+depends(hopf_local_full_boson_ordering, hopf_local_transverse_vector_minimum).
+depends(hopf_local_full_boson_ordering, hopf_local_normal_scalar_towers).
+attempted_by(hopf_local_full_boson_ordering, gpt_6_2_sol_ultra).
+checked_by(hopf_local_full_boson_ordering, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_local_full_boson_ordering).
+addresses(t4, hopf_local_full_boson_ordering).
+addresses(t13, hopf_local_full_boson_ordering).
+addresses(t14, hopf_local_full_boson_ordering).
+addresses(t18, hopf_local_full_boson_ordering).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).
