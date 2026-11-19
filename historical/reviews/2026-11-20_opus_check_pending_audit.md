@@ -111,3 +111,4 @@ Also verified, pending flag kept: `two_endpoint_trace_matching`. The growth $M_W
 | `hopf_sextet_euclidean_photon_subtraction` (106.3) | results/106 | Electric weight $6(2/3)^2=8/3$. The integral at $q^2/M_6^2=2.0692$, by hand Simpson ($h=0.05$), is $0.060605$, giving $0.012861$ (stated $0.0128633$). $\delta I_C=-16\times0.00102363=-0.016378$; the colour version is $\times15/16=0.0120593$; the low-momentum term is $(8/3)q^2/(120\pi M_6^2)$. |
 
 This supersedes the fourth-batch remark that the 106 numbers were not recomputed.
+| `hopf_soft_tensor_pair_current_benchmark` (107.4), checked in full | results/107 | Expanding the bracket gives $g^2(u+u^2/4)+g(u-u^2/2)+(3-u+u^2/4)$. The $g^2$ coefficient, by hand Simpson ($h=0.5$) on $\int_4^9$, is $0.246049/(48\pi)=0.0016317$ (stated $0.00163116$). The minimum is $c-b^2/4a=0.00036454$ and the value at $g=1$ is $0.00083231$. Charge weight $3(1/6)^2=1/12$. |

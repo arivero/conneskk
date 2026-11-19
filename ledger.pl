@@ -3994,7 +3994,6 @@ depends(hopf_soft_tensor_pair_current_benchmark, positive_proca_current_comparis
 depends(hopf_soft_tensor_pair_current_benchmark, hopf_radial_tower_kinetic_matching_inputs).
 attempted_by(hopf_soft_tensor_pair_current_benchmark, gpt_6_2_sol_ultra).
 checked_by(hopf_soft_tensor_pair_current_benchmark, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_soft_tensor_pair_current_benchmark).
 addresses(t4, hopf_soft_tensor_pair_current_benchmark).
 addresses(t13, hopf_soft_tensor_pair_current_benchmark).
 addresses(t18, hopf_soft_tensor_pair_current_benchmark).
@@ -4307,6 +4306,8 @@ checked_by(hopf_sextet_colour_running_threshold, claude_opus_5_5, by_hand).
 checked_by(hopf_sextet_euclidean_photon_subtraction, claude_opus_5_5, by_hand).
 referee_report('results/101_hopf_threshold_with_the_full_vortex_maxwell_field.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 referee_report('results/106_hopf_tensor_scalar_gap_and_sextet_matching.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(hopf_soft_tensor_pair_current_benchmark, claude_opus_5_5, by_hand).
+referee_report('results/107_hopf_soft_tensor_mass_and_current.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
