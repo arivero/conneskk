@@ -1,0 +1,454 @@
+\ifdefined\mobile
+\documentclass[10pt]{article}
+\usepackage[paperwidth=270pt,paperheight=585pt,left=12pt,right=12pt,top=19pt,bottom=23pt,footskip=14pt]{geometry}
+\else
+\documentclass[11pt,letterpaper]{article}
+\usepackage[textwidth=6.1in,top=0.85in,bottom=0.85in]{geometry}
+\fi
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,graphicx,microtype}
+\usepackage[section]{placeins}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Connes and Kaluza-Klein geometry: graduate summer lectures}}
+\emergencystretch=1.5em
+\raggedbottom
+\renewcommand{\topfraction}{.88}
+\renewcommand{\textfraction}{.1}
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}
+\newtheorem{solution}{Solution}
+
+\begin{document}
+\title{Connes and Kaluza--Klein geometry\\[2pt]\large Graduate summer lectures}
+\author{ConnesKK project}
+\date{19 November 2026}
+\maketitle
+
+Consider the following experiment. A detector measures a light quark as an ordinary coloured Dirac particle. A second detector resolves weak doublets and the poles which couple to their currents. A third measures how many scalar modes fit below a moving energy threshold. In a compactification these detectors can give different answers about what is visible, even on the same metric. Our question is how much of their comparison can be calculated from a single action and a specified domain for its fields.
+
+These lectures use basic Riemannian geometry, spectral decompositions, classical gauge theory and one-loop running. The first three can be taught as a mathematical sequence. The next two follow one explicit compact fit and the consistency of its currents. The final three compare the particle and string descriptions, candidate eleven-dimensional parents and the infrared quantities a completed theory would have to reproduce. Every lecture has a solved calculation. The \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/results/README.md}{reading routes} lead to proofs and companion calculations beyond the lecture room.
+
+We use \(\hbar=c=1\) and call five, six and seven \emph{internal} dimensions. A four-dimensional external spacetime brings the total to nine, ten and eleven. The real spectral geometry has KO-degree six, a label for signs. A finite fermion window, a scalar spectral growth law and the dimension of a smooth manifold are three quantities to measure. Throughout, the coefficient of \(-F_{\mu\nu}F^{\mu\nu}/4\) for a charge connection is \(I=1/g^2\). The operator on which we impose a spectral cutoff, and the quantities held fixed when a radius moves, will always be specified.
+
+\tableofcontents
+
+\section{Internal lengths and what a probe resolves}
+
+Fix the round five-sphere of radius \(R\), vary the lengths \(\ell,d\) in
+\begin{equation}
+ K=S^5_R\times I_\ell\times I_d ,
+ \qquad
+ \lambda_{jnm}=\frac{j(j+4)}{R^2}
+              +\frac{n^2\pi^2}{\ell^2}+\frac{m^2\pi^2}{d^2}.
+ \label{eq:summer-interval}
+\end{equation}
+This is the scalar Neumann problem. At each fixed metric the eigenvalue formula counts four-dimensional scalar masses before interactions. The multiplicity of the spherical term is \(\binom{j+5}{5}-\binom{j+3}{5}\), obtained by subtracting the traces from homogeneous polynomials in six variables. Each interval factor has one copy of its constant and each positive cosine mode.
+
+With diffusion time \(\tau\), the heat trace is the product of the three traces. For an interval of length \(L\) it has the two estimates
+\begin{equation}
+ \begin{aligned}
+ Z_L(\tau)&=1+O(e^{-\pi^2\tau/L^2}) && (\tau\gg L^2),\\
+ Z_L(\tau)&=\frac{L}{2\sqrt{\pi\tau}}+\frac12
+              +O\!\left(\tau^{-1/2}L e^{-L^2/\tau}\right)
+                 && (\tau\ll L^2).
+ \end{aligned}
+ \label{eq:summer-weyl}
+\end{equation}
+The second estimate follows by summing the even extension of the Gaussian on the integer lattice. In a band \(R^{-1}\ll E\) with \(E\ell,E d\) small, the power of \(E\) seen in the scalar count is five. If \(\ell\) is much longer than \(d\), the band \(\pi/\ell\ll E\ll\pi/d\) gives six. Above both scales the leading power is seven. At finite \(E\ell\) the exact integer count is the appropriate observable. In particular a few visible levels give a crossover, and a restored weak symmetry does not by itself give an asymptotic power law.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{plots/summer-window.pdf}
+\caption{Scalar resolution across two separated interval thresholds. An interval contributes a further power only in a band that contains many of its modes.}
+\label{fig:summer-window}
+\end{figure}
+
+A current probes a different aspect of the same geometry. A zero-momentum exchange is an inverse mass form on the modes to which that current couples. A source constant along both intervals projects onto the constant sector. A source on a face can see the tower normal to the face. A source concentrated at a corner sees both towers; point localization in two dimensions requires a short-distance prescription even at zero external momentum.
+
+There is also a limit in which a finite fermion window persists while the tower opens. In the exact wall construction consider length \(L_\varepsilon=L_*\varepsilon^{-\alpha}\), a finite block of size \(m_\varepsilon=\varepsilon m_*\), and a moving probe energy \(E_\varepsilon=E_*\varepsilon^\beta\), with \(0<\alpha<\beta<1\). The first discarded scale is asymptotic to \(\pi\varepsilon^\alpha/L_*\). The inequality of exponents gives
+\begin{equation}
+ m_\varepsilon\ll E_\varepsilon\ll\Delta_\varepsilon,\qquad
+ \Delta_\varepsilon\longrightarrow0.
+\end{equation}
+The moving window sees the finite block. At any fixed \(E>0\), the number of axial levels instead grows as \(EL_\varepsilon/\pi\) per unsigned tower. This is a limit of a family of operators as well as a statement about detector resolution \cite{jointnote}.
+
+\begin{exercise}
+Let \(R^{-1}\) be the unit of energy, \(\ell=R/10\), and \(d=R/100\). At \(E=100/R\), count the interval pairs \((n,m)\) accessible to at least one scalar state. Then compute the zero-mode-subtracted static Green function seen by a source at \(x=0\) uniformly spread in the normalized \(I_d\) constant mode.
+\end{exercise}
+
+\begin{solution}
+The first \(I_d\) excitation costs \(100\pi/R\), so \(m=0\). The \(I_\ell\) pairs have \(n=0,1,2,3\), and each pair is already present at \(j=0\). Actual counts at \(j>0\) require the Euclidean mass sum in Eq.~\eqref{eq:summer-interval}. A normalized excited cosine has squared boundary value \(2/\ell\). The reduced inverse is therefore
+\begin{equation}
+ G'_{\rm face}(0)=\sum_{n\ge1}\frac{2/\ell}{(n\pi/\ell)^2}
+                  =\frac{\ell}{3}.
+ \label{eq:summer-face}
+\end{equation}
+The coefficient depends on the length normal to the face. Localizing also at \(y=0\) replaces the one-dimensional sum by a weighted double sum of reciprocals of \(n^2/\ell^2+m^2/d^2\). Comparison to annuli in that scaled lattice gives a logarithmic divergence.
+\end{solution}
+
+\paragraph{Reading.} The two-interval geometry includes a zero-stress winding branch that fixes the wall angle at given \(\ell d\) and leaves the aspect ratio free. Its scalar count, fermion boundary conditions and current probes are computed separately in the \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/paper/two_endpoint_limits.tex}{two-endpoint paper} \cite{TwoEndpoint2026}.
+
+\section{From an isolated Dirac window to finite geometry}
+
+Keep the spin five-sphere and its prescribed twist. Vary the interval wall angle and interval lengths. The quantity to compare is the actual low spectrum and domain of the Dirac operator. On the spherical harmonic kernel the internal particle coefficients transform as
+\begin{equation}
+ \mathbf3_{2/3}\oplus\mathbf3_{-1/3}\oplus
+ \mathbf1_{-1}\oplus\mathbf1_{0}.
+\end{equation}
+The indices in this formula are electric charges. The fibre construction twists the spin Dirac operator by the appropriate dual spin and exterior Killing-spinor bundles; it puts the first nonzero absolute tangential value at \(\sqrt5/R\). For the local wall comparison the two allowed boundary lines in each nonzero tangential block differ by \(\delta=\pi/2-\theta\). The mass bound on that block is \(\sqrt{\lambda^2+\delta^2/\ell^2}\). A second reflection in the \(d\) direction has its own gap. These estimates allow a finite set of prescribed, bounded Yukawa links to remain in a window with a margin to the other states.
+
+The action can supply \(\cos\theta=\min(1,\ell d/A_*)\), with \(A_*\) fixed by the two winding degrees and a scalar potential parameter. On the small-area branch, \(\delta/\ell\to0\) when both lengths shrink. If \(\ell\to0\) at fixed \(d=d_0\), then \(\delta/\ell\to d_0/A_*\). The nonzero tangential Dirac levels acquire the limiting bounded shift \((d_0/A_*)\operatorname{sgn}D_{\rm tan}\). The harmonic window retains its levels. This comparison keeps the product frame and the prescribed spectral walls. It gives a concrete reason to track the ratio of a rotation angle to a length in taking an endpoint.
+
+At a finite broken member the prescribed window realizes the signs
+\begin{equation}
+ J^2=1,\qquad JD=DJ,\qquad J\gamma=-\gamma J
+ \label{eq:summer-ko}
+\end{equation}
+and the one-generation module for \(\mathbb C\oplus\mathbb H\oplus M_3(\mathbb C)\). Conjugate copies implement the real structure. Counting both copies as independent chiral species would double a gauge anomaly or a family count. The order-zero condition tests commuting left and opposite actions, and order one tests \([[D,a],JbJ^{-1}]=0\). These are tests on the selected algebra and its representation, which go beyond finding a small number of eigenvalues. A fixed projection of an arbitrary gauge-transformed operator can fail gauge covariance. A spectral projector that is recomputed with the operator transforms by conjugation wherever its defining gap stays open.
+
+The matrix-valued boundary construction can work in the other direction. Fix a finite \(D_F\) with the real signs in Eq.~\eqref{eq:summer-ko}. On a length-\(\ell\) interval with the prescribed two graded walls, the eigenphases of their product are twice the signed wall angles. The axial equation therefore gives masses \(\theta_k/\ell\) on the window and signed towers \((n\pi\pm\theta_k)/\ell\). When \(\ell\|D_F\|<\pi/2\), the principal angles can realize precisely the finite matrix on the isolated lowest window. This boundary inverse takes the finite algebra and its coefficient representation as inputs \cite{boundarynote}.
+
+Here are two instructive ways the same spectral window can enter different calculations.
+
+\paragraph{A collapsing interval with two light states.} Under the tuned walls of the interval example the endpoints are separated by the metric length \(\ell\). The whole metric spectral geometry converges to a point with a two-dimensional Hilbert space and a finite massive Dirac operator. In the prescribed compressed description the two light states carry a two-point algebra. For \(a=\operatorname{diag}(a_1,a_2)\) and \(D=m\sigma_1\), the seminorm is \(\|[D,a]\|=|m||a_1-a_2|\). The two pure states of this representation are at distance \(1/|m|\) if \(m\ne0\). One seminorm is taken on the full interval algebra and the other on the chosen compressed observables. Their two distance statements are compatible \cite{towerlesspaper,boundarynote,jointnote}.
+
+\paragraph{A twistor test of continuity.} On \(\mathbb{CP}^3\) let \(Q\) compress a function to \(H^0(\mathcal O(1))\cong\mathbb C^4\). Average first over the twistor fibres of \(\mathbb{CP}^3\to S^4\) with the map \(E\). The real functions in \(QE\) compress to quaternionic-Hermitian operators, and generate \(M_2(\mathbb H)\) as a real algebra. The quaternionic line projectors span the Hermitian part. Without averaging, the complex line projectors span all complex Hermitian matrices. The map \(E+\varepsilon(1-E)\) is invertible for \(\varepsilon>0\), so \(Q(E+\varepsilon(1-E))\) generates \(M_4(\mathbb C)\) there. The maps converge in norm with bound \(2\varepsilon\) by contractivity. Thus continuity of the maps places no continuity requirement on the generated real algebras. This matters when inferring a gauge group from an operator limit \cite{dictionarynote}.
+
+\begin{exercise}
+Unfold two reflections on a length-\(d\) interval. Take four complete flavour channels and choose the same sign at both ends on three directions and opposite signs on a fourth line \(L_0\). Identify the four-dimensional colour-slot space, consisting of three colours and a lepton line, with flavour, sending the lepton line to \(L_0\). Compute the first excluded axial frequency and the rank of the compressed colour--flavour exchange.
+\end{exercise}
+
+\begin{solution}
+The doubled period is \(2d\). Translation acts as \(+1\) on the three retained directions, so they have constant modes. On \(L_0\) it acts as \(-1\), so the lowest absolute frequency is \(\pi/(2d)\). If the tangential mass links preserve the two blocks, three complete families survive below the omitted levels. Let \(P\) retain just the three light flavours and leave the colour slot intact. In the twelve-dimensional space \(P(\mathbb C^4\otimes\mathbb C^4)\), exchanging the two slots sends the three lepton coefficients into the excluded flavour line. On the nine colour coefficients it is the swap of two three-dimensional factors. Hence \(P F_{\rm ex}P\) has rank nine and a three-dimensional kernel. The count comes from a boundary domain on four input channels.
+\end{solution}
+
+\paragraph{Reading.} The exact comparison of distances is in the \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/results/15_gap_criterion.md}{gap criterion}. Follow the \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/results/28_counterexample_generation_discontinuous.md}{twistor counterexample} and the \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/paper/two_endpoint_limits.tex}{colour--flavour exchange proof} for other choices of observables.
+
+\section{Identifying quarks, leptons and gauge bosons}
+
+Fix the unbroken group and the microscopic field. For each claimed particle record its external spin, the admissible internal mode, the action of the charge generators, and a nonzero normalized current matrix element. Two modes of the same electric charge can have different spin or weak vertices. We now use a geometric colour factor and a weak monopole sector to make these tests explicit.
+
+\paragraph{A gluon.} A mixed metric fluctuation \(h_{\mu i}\) along an unbroken colour Killing field is a four-dimensional vector gauge connection. The eight colour fields transform in the adjoint because the Lie brackets of the eight Killing fields have the \(\mathfrak{su}_3\) structure constants. The norms of the fields and any compensating form fluctuations fix their kinetic matrix. Acting on an internal triplet kernel, a generator is \(T_a\) with \(\operatorname{tr}_{\mathbf3}(T_aT_b)=\delta_{ab}/2\). The minimally coupled Dirac current is then \(\bar q\gamma^\mu T_a q\) in charge-connection normalization. The vanishing mass on the unbroken continuous symmetry, the vector polarization and this colour current identify the gluons of the classical reduction.
+
+A typical omitted round-colour scalar harmonic, the first nonconstant degree, has \(\lambda_C=5/B^2\) and transforms by \(\mathbf3+\overline{\mathbf3}\) on \(S^5_B\subset \mathbb C^3\). Its representation can appear in several external-spin blocks. In a four-dimensional scalar field it gives a scalar triplet. A massive two-form component can give a spin-one triplet after duality. Both of these carry triplet currents. The six broken colour Killing directions in \(\mathfrak{so}(6)/\mathfrak u(3)\) have their own kinetic and mass operator.
+
+\paragraph{An ordinary Dirac quark.} On a weak sphere with a monopole line of degree \(N>0\), the spin line is \(\mathcal O(-1)\). The chiral kernel is \(H^0(\mathbb{CP}^1,\mathcal O(N-1))\), whose dimension is \(N\). This follows by writing a holomorphic section as a homogeneous polynomial of degree \(N-1\) in two coordinates. The degree-two kernel is a weak doublet and the degree-one kernel a weak singlet. Opposite flux supplies the opposite sphere chirality, and the higher-dimensional Weyl projection fixes the external chirality. At restoration, one physical ordinary family has the assignments
+\begin{equation}
+ \begin{aligned}
+ Q_L&:(\mathbf3,\mathbf2)_{1/6},&
+ L_L&:(\mathbf1,\mathbf2)_{-1/2},\\
+ u_R&:(\mathbf3,\mathbf1)_{2/3},&
+ d_R&:(\mathbf3,\mathbf1)_{-1/3},\\
+ \nu_R&:(\mathbf1,\mathbf1)_{0},&
+ e_R&:(\mathbf1,\mathbf1)_{-1}.
+ \end{aligned}
+ \label{eq:summer-family}
+\end{equation}
+Here the subscript is \(Y\), and the electroweak convention is \(Q_{\rm em}=T_3+Y\). In the broken theory a neutral root link pairs the upper component of \(Q_L\) with \(u_R\), and the lower one with \(d_R\). Each pair has equal colour and electric action on both chiralities. A nonzero projected link gives a four-dimensional Dirac mass between the two Weyl wavefunctions. The raising generator on the normalized degree-two kernel gives a \(W^+\) matrix element between the left members and zero on the singlet right members. A quark mass fit and a left-handed weak current are two checks of the identification. In family space the two diagonalizations of the up and down Yukawa maps need not agree, giving their relative unitary matrix in the charged current.
+
+On the spin Hopf branch the assigned \(Y\) acts as \((m+3C/2)/6\), where \(m\) is the Hopf weight and \(C\) an auxiliary charge. All three quark multiplets have \(m=5/2\). The doublet has \(C=-1\), and the two singlets \(C=1,-3\). A full Hopf turn has a spin sign compensated by the indicated auxiliary lift for odd \(C\). The light masses in this example use a prescribed \emph{horizontal} Dirac domain. At \(B^{-1}=5.496\ {\rm TeV}\) the corresponding free vertical scale \(|m|/B\) is about \(13.7\ {\rm TeV}\) for those quark modes. Reinstating a full vertical Dirac derivative is a different mass problem.
+
+\begin{exercise}
+Check the electric charges of both Dirac quarks and the vertex of the upper weak link. Then compute the weak multiplicities of a monopole field with \(|N|=2\) and its neutral spectator with \(N=0\). What information do these counts give about whether the model needs an anomaly-cancelling sector?
+\end{exercise}
+
+\begin{solution}
+On \(Q_L\) the values are \(1/2+1/6=2/3\) and \(-1/2+1/6=-1/3\). The singlets have the same values. The \(T_+\) generator in the normalized fundamental weak doublet sends its lower basis vector to the upper with coefficient one and vanishes on both right singlets. Multiplying the left current by the four-dimensional coupling after canonical normalization gives the pole vertex. On the charged line there are two weak states, in the sphere chirality selected by the sign of \(N\). For \(N=0\), \(\mathcal O(-1)\) has no holomorphic sections in either associated zero-mode calculation, so a neutral spectator adds no weak zero modes. Its higher-dimensional Weyl chirality still contributes to the higher-dimensional determinant anomaly. To determine that anomaly one uses the actual higher-dimensional representations before taking the sphere kernel.
+\end{solution}
+
+\paragraph{Why mirrors appear in one comparison.} An ordinary family in Eq.~\eqref{eq:summer-family} cancels its four-dimensional Standard Model gauge anomalies. With the additional gauged vortex symmetry the higher-dimensional anomaly is a different polynomial. One sufficient mechanism pairs each field with its opposite chirality in the same higher-dimensional representation. In that paired prescription P, separate mirror number forbids direct ordinary--mirror masses. The chosen mirror masses arise from the roots and vanish when the roots vanish. The restored spectrum then contains the six ordinary quark flavours and six mirrors. In prescription S the vortex-neutral spectator blocks change the determinant anomaly without adding mirror zero modes. A sourced two-period tensor supplies the required descent on the admissible locked spin and flux sector. Giving P the same sourced tensor defines a classical comparison. Its vanishing paired determinant would require additional descent data to define a quantum completion with that tensor. These are distinct matter prescriptions at the same reference bosonic geometry.
+
+\paragraph{Reading.} See \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/results/72_particle_identifications_and_mirrors.md}{particle identifications and anomalies}, the \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/results/94_spin_hopf_trajectory_and_its_charge_lift.md}{spin Hopf lift}, and the \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/results/108_hopf_global_flux_and_anomaly_domain.md}{locked spectator comparison}.
+
+\section{The common circle and the two infrared scales}
+
+Fix a four-dimensional frame and one supported compact action. The useful dimension labels are \(1,\ldots,4\) for spacetime, \(5,\ldots,9\) for the colour block with its circle, and \(9,10,11\) for that same circle with a weak two-dimensional block. These labels are a guide to the total rank \(4+5+2=11\). They need not be global coordinates. The circle can be the Hopf fibre in a five-sphere, with a nontrivial lift on spinors.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{plots/summer-shared-circle.pdf}
+\caption{The ninth direction occurs in the descriptions of both blocks. Below weak breaking the diagonal \(Q_{\rm em}\) survives. At restoration the commuting hypercharge and weak generators have separate kinetic norms.}
+\label{fig:summer-circle}
+\end{figure}
+
+A massless diagonal field follows from the null direction of the root mass form. Its generator \(T_3+Y\) vanishes on the chosen root vacuum. Restricting the neutral kinetic matrix to the same direction gives its inverse coupling. For diagonal inverse coefficients \(I_2,I_Y\) and the conventional normalization this reduction gives \(I_{\rm em}=I_2+I_Y\). Kinetic mixing requires the full quadratic form. Colour uses the orthogonal adjoint modes. Thus measuring the photon current and the colour coupling uses one geometry and different parts of its operator.
+
+\paragraph{A weak scale from an amplitude.} At external momentum close to zero a conserved charged current sees the inverse mass form of the charged vectors weighted by its overlaps. If one \(W\) with canonical coupling \(g_2\) saturates the amplitude in the Standard Model convention, \(G_F/\sqrt2=g_2^2/(8M_W^2)\). In the model, the complete tree comparison retains additional poles and the normalized probe profiles. Weak restoration is the limit in which the appropriate root vacuum and charged mass term vanish. Weak decoupling in the five-dimensional internal limit is diagnosed by exchange amplitudes and their normalizations. The two statements use different limits.
+
+For example, at the compact central fit with locking stiffness \(f_S=5\ {\rm TeV}\), three extra neutral poles near \(1.655,\ 6.683,\ 23.174\ {\rm TeV}\) have a right-neutrino vertex. They originate from the vortex, lock and form sectors of the finite pencil. The third needs the form profile at finite momentum. The muon lifetime enters this fit. Multiplying its \(G_F\) by the separate hadronic input \((0.312\ {\rm GeV})^2\) gives \(1.1354\times10^{-6}\). A fit which instead uses the neutral pole widths and angle and the neutrino scattering ratio can leave the muon lifetime free. At the same \(f_S\) it predicts \(G_F=1.161834\times10^{-5}\ {\rm GeV}^{-2}\) and a different \(B^{-1}\simeq9.30\ {\rm TeV}\). These are two Born comparisons with different inputs \cite{TwoEndpoint2026,SevenMTheory2026}.
+
+\paragraph{A strong scale from running and matching.} Use \(H_N^{\rm phys}=(m_p+m_n)/6\) as a hadronic reference, or \(m_N^{\rm iso}/3\) in an isospin-symmetric lattice convention. These quantities are baryon masses divided by three, while \(\Lambda_{\rm QCD}\) is a renormalization-scale parameter. Matching them needs the light-quark masses and strong dynamics. The five-sphere radius \(B\) fixes an internal geometric scale. Tree gauge reduction in the chosen supported spin Hopf model gives
+\begin{equation}
+ \begin{aligned}
+ I_3^{\rm geom}&=\frac{C_{\rm EH}VB^2}{3},&
+ M_4^2&=2C_{\rm EH}V,\\
+ M_4^2B^2&=6I_3^{\rm geom}.
+ \end{aligned}
+ \label{eq:summer-planck}
+\end{equation}
+Here \(C_{\rm EH}\) is the Einstein coefficient in the model's conventions and \(V\) the internal volume. An input \(I_3^{\rm geom}=0.76985\) and \(B^{-1}=5.496\ {\rm TeV}\) imply \(M_4=11.81\ {\rm TeV}\), far below the observed reduced Planck mass \(2.44\times10^{18}\ {\rm GeV}\) \cite{CODATA2022Adjustment}. It is a direct test of using the same coefficient for the external Einstein term and the colour action. A separate Einstein term would change that action and introduce a new parameter.
+
+One-loop running compares \(I(\mu)=1/[4\pi\alpha_s(\mu)]\) at a specified subtraction and thresholds, since
+\begin{equation}
+ \frac{dI}{d\log\mu}=\frac{b_0}{8\pi^2},\qquad
+ b_0=11-\frac23 n_f
+ \label{eq:summer-running}
+\end{equation}
+for an \(SU(3)\) gluon and \(n_f\) active Dirac fundamentals. The geometry enters through the masses and current representations that set the thresholds. At the central compact fit and fixed heavy anisotropic tensor action, the first extra coloured boson is the broken-Killing vector at \(M_g=3.961\ {\rm TeV}\). The compact curvature and holomorphic-link estimate gives the excited coloured fermions of S a gap above \(6.32\ {\rm TeV}\). The fermion statement concerns the specified minimal unmixed spectators and ordinary horizontal links. One way to see the scale is that \(K(h_b)\ge(1-e^{-b})^2/2\) in the unscaled weak metric, and the untwisted Dirac bound is \(\min K(h_b)/a^2\) in squared mass. Twisted modes of the opposite chirality to the holomorphic kernel have an additional positive curvature term. Positivity of the link squares then leaves only the original kernel channels below the bound. In P the six \(280\ {\rm GeV}\) mirrors cross first.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{plots/summer-running.pdf}
+\caption{Quark and gluon running in P and S. Above the common coloured boson the displayed continuation omits its contribution. Both curves start at the same renormalized input.}
+\label{fig:summer-running}
+\end{figure}
+
+\begin{exercise}
+Start both runs at \(\mu_0=250\ {\rm GeV}\) with \(I(\mu_0)=0.76985\). Match continuously at each stated threshold. Compute the two \(I\)'s just below \(M_g\), and the difference just below the subtraction \(U=B^{-1}=5.496\ {\rm TeV}\) if the bosonic logarithm is common.
+\end{exercise}
+
+\begin{solution}
+For S keep \(n_f=6\) throughout this range, so \(b_0=7\). For P the coefficient falls from 7 to 3 at \(280\ {\rm GeV}\). Thus
+\begin{equation}
+ \begin{aligned}
+ I_{\rm S}^{qg}(\mu)&=0.76985+\frac7{8\pi^2}\log\frac{\mu}{\mu_0},\\
+ I_{\rm P}^{qg}(\mu)&=I_{\rm S}^{qg}(\mu)
+          -\frac4{8\pi^2}\left[\log\frac{\mu}{280\ {\rm GeV}}\right]_+ .
+ \end{aligned}
+\end{equation}
+The superscript retains quark and gluon contributions, and \([x]_+=\max(x,0)\). At \(M_g^-\) the values are \(1.0148\) and \(0.8806\), respectively. At \(U\) the values are \(1.0438+\Delta_{\rm bos}\) and \(0.8930+\Delta_{\rm bos}\), giving \(I_{\rm S}-I_{\rm P}=0.1508\). Both the interacting coloured-boson logarithm \(\Delta_{\rm bos}\) and the finite conversion \(I(U)-I_3^{\rm geom}\) still require matching. The subtraction probes a running coefficient. The number \(0.76985\) used as a tree input in Eq.~\eqref{eq:summer-planck} was a separate choice.
+\end{solution}
+
+\begin{exercise}
+In the equal-root polar model, let \(j_f\) be the normalized vector source of a charged Dirac field. The computed combination \(2j_u+j_d+j_e\) is odd under the weak reflection. Both this source and the electron axial source annihilate the photon. Show that their static amplitude is unaffected by a derivative photon mixing at fixed mass form and vertices. If the odd light exchange adds \(3d_v/2\) to each charged-target \(C_{1f}\) in the parity-violating Fermi interaction, what is its weak-charge coefficient?
+\end{exercise}
+
+\begin{solution}
+The proton vector source has net valence weights \(2,1\), so the odd source is the proton plus electron combination. It kills the ordinary even neutral tower. Write the Euclidean inverse propagator as \(\mathcal H+s\mathcal K\), \(s=q_E^2>0\). In photon and massive blocks \(\mathcal H\) vanishes on the photon and is gapped on the massive quotient. The Schur correction to the massive block from the photon is
+\begin{equation}
+ -s\,\mathcal K_{m\gamma}\mathcal K_{\gamma\gamma}^{-1}
+                        \mathcal K_{\gamma m}.
+\end{equation}
+Both probes couple only to that massive block, and the correction vanishes at \(s=0\). The weak charges in the stated convention are \(-2(2C_{1u}+C_{1d})\) and \(-2C_{1e}\), so the sum receives \(-2(2+1+1)(3d_v/2)=-12d_v\). This isolates an odd-sector contribution, with the mass form and the current profiles held fixed. A change in a mass term or a vertex need not cancel.
+\end{solution}
+
+\paragraph{Reading.} The \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/results/108_hopf_global_flux_and_anomaly_domain.md#colour-thresholds-at-the-compact-weak-fit}{compact threshold comparison} gives the Dirac estimates and matching assumptions. The two scale observables are developed from the same trajectory in \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/paper/two_endpoint_limits.tex}{the endpoint paper}. A proposed infrared relation would concern dimensionless combinations such as \(G_F H_N^2\), after matching both quantities. Equation~\eqref{eq:summer-planck} illustrates why importing a high-scale unification boundary condition would require a separate argument.
+
+\section{Tensor periods, anomalies and a soft colour pole}
+
+Keep the compact action and matter domain specified. Vary the admissible gauge background first, and then the weak radius. These two experiments use the same tensor to answer different questions.
+
+\paragraph{Anomaly cancellation fixes more than a polynomial.}
+On the six-dimensional quotient, denote the integral four-classes of the sourced comparison by \(\mathcal X,\mathcal Y\). In the locked spectator construction the determinant anomaly factors as \(\mathcal X\mathcal Y\), with the compatible normalization of the two-form. In a source-free electric sector the two-form is a geometric trivialization of the electric class with a curving. The Bianchi equation measures it. An independent magnetic equation uses the dual period. A local cancellation of an infinitesimal variation is only one test. A closed gauge loop also probes the determinant phase and the existence of its bulk differential coupling.
+
+Consider the sphere bundle of the defining complex rank-three colour bundle \(W_c\) on a spin six-base \(Y_6\). Let \(\pi:Z\to Y_6\) have fibre \(S^5\). The stable tangent identity
+\begin{equation}
+ TZ\oplus\mathbb R=\pi^*(TY_6\oplus W_{c,\mathbb R})
+\end{equation}
+shows that ordinary spin requires \(c_1(W_c)\) even, since \(\pi^*\) is injective in degree two. A spin\(^{c}\) prescription using the determinant line has a different domain. The bulk five-form must also have a unit \emph{integral} period on the colour fibre. The relevant Gysin sequence is
+\begin{equation}
+ H^5(Z;\mathbb Z)\xrightarrow{\ \pi_!\ } H^0(Y_6;\mathbb Z)
+                \xrightarrow{\ \cup c_3(W_c)\ } H^6(Y_6;\mathbb Z).
+ \label{eq:summer-gysin}
+\end{equation}
+The Euler class of the real bundle is \(c_3(W_c)\) in complex orientation. A unit class exists exactly when that class vanishes integrally. For a gauge loop one applies the same criterion on its mapping torus. An individual chosen slice flux extends only if its cohomology class is preserved by the monodromy.
+
+\begin{exercise}
+Start with trivial \(W_c\) on each slice \((S^3\times S^2)\times S^1\). Along a gauge loop, clutch using the collapse \(S^3\times S^2\to S^5\) followed by a generator of \(\pi_5(SU(3))\). The associated complex bundle on \(S^6\) has \(c_3\)-number two up to orientation. Compare the spin and flux tests on the slices and on the gauge mapping torus.
+\end{exercise}
+
+\begin{solution}
+The clutching bundle on the mapping torus is a pullback from the suspended \(S^5\). Hence \(c_1=c_2=0\), both on slices and on the torus, so the spin test on the spin base is met. On \(S^3\times S^2\times S^1_{\rm loop}\) the top Chern number is \(\pm2\). A unit flux exists on each trivial slice, while Eq.~\eqref{eq:summer-gysin} precludes one on the full mapping torus. The requirement constrains which loops can be used for the fixed-flux holonomy argument. Its obstruction survives even if the separate electric Bianchi class vanishes. Similarly a QCD instanton on a closed product can obstruct a source-free trivialization of \(\mathcal X\). A comparison in such sectors must supply the magnetic source or boundary flux and match its global anomaly data.
+\end{solution}
+
+\paragraph{A dynamical use of the same periods.}
+Now freeze the nonround weak shape \(h\) and shrink its physical scale \(a\). Write \(\epsilon=a/B\), with \(I_3,Z_e,Z_m\) fixed and positive in the supported model. The last two coefficients multiply the electric and dual magnetic kinetic forms in compatible period units. In a colour scalar harmonic of eigenvalue \(\lambda_C=\nu/B^2\) let \(\mu_n=a^{-2}\widehat\mu_n\) be the weak eigenvalues and \(\lambda_n=\lambda_C+\mu_n\). Weak profiles \(u\) source coefficients \(b_{i,n}=a^{-1}\widehat b_{i,n}\). Their weak-constant parts are \(a^{-1}L_i(u)/\sqrt{A_h}\), where \(A_h\) is the unscaled area and \(L_i\) the corresponding period functional.
+
+Here is the reduction that produces the light pole for the \emph{isotropic local-curvature action}. Write \(Q,K\) for the static mass and kinetic forms. In \(Q-sK\) with \(s<\lambda_C\) minimize over the two tensor amplitudes. The electric mode couples through its exact Hodge projection of squared weight \(\mu_n/\lambda_n\). The magnetic mode completes a mass square \(Z_m|c_n-b_{m,n}|^2\) and carries kinetic weight \(Z_m/\lambda_n\). Eliminating these amplitudes gives the following form on the weak profiles, where \(Q_0,K_0\) are their old forms:
+\begin{equation}
+ \begin{aligned}
+ &Q_0-sK_0\\[-2pt]
+ &\quad+Z_e\sum_n \frac{\lambda_C-s}{\lambda_n-s}|b_{e,n}|^2\\
+ &\quad-Z_m s\sum_n\frac{|b_{m,n}|^2}{\lambda_n-s}.
+ \end{aligned}
+ \label{eq:summer-tensor}
+\end{equation}
+The difference between the two numerators matters. At \(s=d_s\epsilon^2/B^2\), multiply Eq.~\eqref{eq:summer-tensor} by \(B^2\). The constant electric term is \(Z_e\epsilon^{-2}|L_e|^2/A_h\). The constant magnetic term tends to \(-d_sZ_m|L_m|^2/(\nu A_h)\). On \(L_e=0\), the remaining positive weak energy tends to a coercive form \(\mathcal H_\nu\). Its two terms are the old weak energy \(3I_3H_w\) and the square of the coexact primitive of the electric source with coefficient \(Z_e\nu\). The primitive has a nonzero cost on the old axial null direction. The local nonconstant curvature in the magnetic source allows \(L_m\ne0\) on \(L_e=0\).
+
+The first loss of positivity, and hence the lowest pole in this block, is
+\begin{equation}
+ \begin{aligned}
+ M^2&\sim C_{\rm soft}\,\frac{a^2}{B^4},\\
+ C_{\rm soft}&=\frac{\nu A_h}{Z_m}
+      \inf_{\,L_e(u)=0,\ L_m(u)=1}\mathcal H_\nu[u].
+ \end{aligned}
+ \label{eq:summer-soft}
+\end{equation}
+The electric period is forced to zero, and the magnetic normalization fixes the scale of a nonzero trial direction. The latter is a Rayleigh-quotient normalization. It is not a boundary condition on all fluctuations. To verify that this is the first additional coloured boson in the stated action, use the \(B^{-2}\) gap on the subspace with zero constant magnetic amplitude, the monotonicity in \(\nu\) of the transverse comparison, and the separate scalar and other-spin gaps. The first scalar colour eigenspace has \(\nu=5\), with the triplet and its conjugate, while the soft tensor polarization is an external spin-one mode. These steps are all needed for the particle identification.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{plots/summer-soft-mode.pdf}
+\caption{The soft squared mass in units of \(B^{-2}\) goes to zero in the isotropic action. The reference gap illustrates a positive comoving bound. The coefficient of the soft branch is the numerical leading coefficient for one fixed shape.}
+\label{fig:summer-soft}
+\end{figure}
+
+For one fitted shape the numerical coefficient is about \(6598\), apart from the stated spline accuracy. It is the order \(\epsilon^2\), and the positive variational expression, that hold analytically on the branch. Changing the tensor kinetic weights can preserve a positive comoving gap. In particular the heavy anisotropic compact comparison in Lecture~4 and the isotropic shrinking comparison here refer to specified actions, so the appearance of the soft triplet is a test of that choice of dynamics.
+
+\paragraph{Reading.} Follow the \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/results/108_hopf_global_flux_and_anomaly_domain.md}{global flux and descent proof}, the \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/results/105_hopf_bulk_tensor_and_magnetic_colour_pole.md}{two tensor polarizations}, and the \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/results/107_hopf_soft_tensor_mass_and_current.md}{soft pole proof}. Interaction vertices, including the dipole coupling of the soft vector, can vary beyond the quadratic spectrum.
+
+\section{String resolution and point trajectories}
+
+Fix a smooth target patch and compare the observables of a point and of a resolved loop. For a point on a circle of radius \(R\) with metric \(g_{\mu\nu}dx^\mu dx^\nu+R^2(d\vartheta+A)^2\), the cyclic momentum \(n=R^2(\dot\vartheta+A_\mu\dot x^\mu)/e\) is integral upon quantization. Use the einbein \(e\) for the worldline parameter. Subtracting \(n\dot\vartheta\) before eliminating the cyclic velocity gives
+\begin{equation}
+ L_n=\frac{g_{\mu\nu}\dot x^\mu\dot x^\nu}{2e}
+       -\frac e2\left(m_0^2+\frac{n^2}{R^2}\right)
+       +n A_\mu\dot x^\mu .
+ \label{eq:summer-routh}
+\end{equation}
+Varying \(e\) gives the mass shell and varying \(x^\mu\) gives the Lorentz force with the corresponding charge. The same integer therefore determines both a charge assignment and a mass shift. With several compact coordinates, cyclic momenta are a lattice, and for a curved compact space the generators act by lifted Lie derivatives on the mode functions.
+
+For a string the configuration is a loop \(X(\tau,\sigma)\), and the history is a path in the loop space modulo worldsheet constraints. In a smooth patch one may expand
+\begin{equation}
+ X(\tau,\sigma)=f(\tau)+\xi(\tau,\sigma),\qquad
+ \langle \xi\rangle_\sigma=0 .
+\end{equation}
+Use a target time gauge to read \(f(t)\). For a wound compact coordinate take a lift and subtract the winding slope before using this centroid. At fixed \(\tau\), a soft probe of the scalar density has amplitude
+\begin{equation}
+ \left\langle e^{iq\cdot X}\right\rangle_\sigma
+ =e^{iq\cdot f}\left[1-\tfrac12
+          \left\langle(q\cdot\xi)^2\right\rangle_\sigma+\cdots\right].
+ \label{eq:summer-probe}
+\end{equation}
+When \(|q|\,|\xi|\ll1\) the observable follows \(f(t)\). The first correction measures its size, and tidal forces require the size to be small in curvature units as well. Spin and antisymmetric-tensor probes can also resolve internal moments. In flat target space the average of \(\ddot X-X''=0\) gives \(\ddot f=0\). For the exact constant-loop sector, keeping the auxiliary worldsheet metric in the Polyakov action gives \(S_0=\frac12\int e^{-1}G(\dot f,\dot f)d\tau\). Its own variation imposes the null constraint. It yields Eq.~\eqref{eq:summer-routh} with \(m_0=0\) for a compact momentum. The auxiliary metric is essential in this sector because the induced worldsheet metric of a constant loop is degenerate \cite{Polyakov1981Worldsheet,Polchinski1998String}.
+
+\begin{exercise}
+Compare a circular transverse string profile of radius \(\rho\) with its centre. Let the wavevector lie along one transverse coordinate, so \(q\cdot\xi=q\rho\cos\sigma\). What is the first relative form-factor correction? On a product of two flat circles, with no background two-form, write the charge contribution to squared mass for momenta \(n_i\) and winding numbers \(w_i\) at radii \(R_i\).
+\end{exercise}
+
+\begin{solution}
+The linear term averages to zero and \(\langle\cos^2\sigma\rangle=1/2\). The correction in Eq.~\eqref{eq:summer-probe} is \(-q^2\rho^2/4\) and the whole integral is \(J_0(q\rho)\). On the two-torus,
+\begin{equation}
+ \Delta M^2=\sum_{i=1}^2\left(\frac{n_i^2}{R_i^2}
+                    +\frac{w_i^2R_i^2}{\alpha'^2}\right).
+ \label{eq:summer-torus}
+\end{equation}
+Oscillator levels and level matching are additional conditions. Each exchange \(R_i\leftrightarrow\alpha'/R_i\), \(n_i\leftrightarrow w_i\) preserves this contribution. Momentum sources a metric connection, while winding sources the reduced two-form connection. The antiperiodic interval frequency \(\pi/(2d)\) in Lecture~2 is a boundary-condition momentum. A string circling a Hopf orbit of \(S^5\) can contract through the base, since \(\pi_1(S^5)=0\), so an independent conserved flat-circle winding label needs a new topological argument.
+\end{solution}
+
+There is a useful connection to the weak sphere. On a degree-\(w\) holomorphic wrapped sheet, the charge-one left fields have \(w\) zero modes each, and the charge-two conjugate modes have \(2w\). Multiplication by the two pulled-back weak roots \(P,Q\) gives the square Sylvester map
+\begin{equation}
+ \begin{aligned}
+ H^0(\mathcal O(w-1))^{\oplus2}
+       &\longrightarrow H^0(\mathcal O(2w-1)),\\
+ (s,t)&\longmapsto y_+Ps+y_-Qt .
+ \end{aligned}
+\end{equation}
+Its determinant is \((y_+y_-)^w\operatorname{Res}(P,Q)\) up to basis normalization. Independent roots and a genuine cover ensure nonvanishing. The root coefficient determinant enters to power \(w\). In the fixed phase convention the surface term makes the invariant phase \(w(\alpha-\theta_e)\). This identifies an available harmonic of the effective worldsheet action. It leaves the size and even the survival of the vacuum contribution dependent on the rest of the worldsheet fields, collective coordinates and anomaly data.
+
+\paragraph{Reading.} The \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/paper/kk_strings_lecture.tex}{companion KK-to-strings lecture} derives the constant-loop limit, several circle experiments and the doubly wrapped example. See also the \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/results/86_wrapped_string_and_the_two_weak_roots.md}{wrapped-sphere calculation}.
+
+\section{An opening M circle and candidate seven-manifolds}
+
+Vary the type-IIA coupling in the asymptotically flat dictionary with the eleven-dimensional Planck length \(\ell_p\) fixed. A charge-one D0 particle has mass \(1/(g_s\ell_s)\), giving \(R_{11}=g_s\ell_s\). A membrane of tension \(1/(4\pi^2\ell_p^3)\) wrapped around the orbit has string tension \(2\pi R_{11}/(4\pi^2\ell_p^3)\), giving
+\begin{equation}
+ \alpha'=\frac{\ell_p^3}{R_{11}},\qquad
+ R_{11}=\ell_p g_s^{2/3},\qquad
+ \ell_s=\ell_p g_s^{-1/3}.
+ \label{eq:summer-m-circle}
+\end{equation}
+At fixed \(E\ell_p\ll1\), \(ER_{11}\) grows and \(E\ell_s\) shrinks. The momentum levels can resolve a new dimension while string oscillators become more expensive. A wave packet at fixed retained charge can still follow \(f(t)\) in the external soft experiment. This is a Ramond--Ramond charged tower in the IIA description. Its one-particle interpretation uses the D0 threshold bound states and their polarizations \cite{DHIS1987,Witten1995Circle}. A periodic spin circle and this mass dictionary are assumptions in applying it to a different background.
+
+\paragraph{Charges in a twisted circle metric.}
+One geometrical model with the required Lie algebra acts on the circle bundle \(Y\) of \(\mathcal O(3,2)\) over \(\mathbb{CP}^2\times\mathbb{CP}^1\). At its Einstein ratios it is the regular \(M^{111}\). The base contributes colour and weak rotations. The fibre contributes a single commuting rotation. The integral Euler class \(3h+2k\) kills the pullback of the nonzero base \(w_2=h\bmod2\), giving a spin total space. With connection \(\eta\), physical fibre radius \(\rho\) and curvature \(d\eta=b_2\omega_2+b_1\omega_1\), a scalar of fibre momentum \(n\) is a section of \(\mathcal O(3n,2n)\) for the indicated orientation. Its horizontal covariant derivative has curvature \(-in\,d\eta\). On sections with \(n>0\) the K\"ahler identity gives
+\begin{equation}
+ \nabla_n^*\nabla_n
+       =2\bar\partial_n^*\bar\partial_n+n(2b_2+b_1).
+\end{equation}
+The holomorphic sections attain the minimum. For negative \(n\) use conjugates. Including the vertical energy gives
+\begin{equation}
+ M_{n,\min}^2=\frac{n^2}{\rho^2}+|n|(2b_2+b_1).
+ \label{eq:summer-twisted}
+\end{equation}
+
+\begin{exercise}
+At the Einstein radius \(L\), take \(\rho=L/4\), \(2b_2+b_1=24/L^2\). Weigh the lightest unit-charge scalar and identify its colour and weak representations from the monomials of \(\mathcal O(3,2)\). Then vary \(\rho\) at fixed base and say how many different charges can occur below a fixed energy \(E\).
+\end{exercise}
+
+\begin{solution}
+The energy squared is \(40/L^2\). The ten degree-three monomials in three colour coordinates give a symmetric cube of the fundamental up to conjugation. The three degree-two monomials in the weak pair give a weak triplet. Thus the thirty scalar states of either sign cannot be identified with a colour-fundamental weak doublet. Put \(\kappa=2b_2+b_1>0\). To count charges with a scalar at or below \(E\), solve the quadratic equation in \(|n|\) from Eq.~\eqref{eq:summer-twisted}. The cutoff is the integer part of
+\begin{equation}
+ \frac{\rho^2}{2}\left(\sqrt{\kappa^2+4E^2/\rho^2}-\kappa\right).
+\end{equation}
+The number of charges is twice this integer plus one, hence bounded by \(2\lfloor E^2/\kappa\rfloor+1\) as the circle grows. The horizontal covariant energy survives. In the alternative invariant quotient with Euler class \(h+k\) the six bidegree-\((1,1)\) coefficients can carry the scalar colour-triplet weak-doublet charges, while \(w_2\) survives on that total space. Adding a genuine chiral fermion and the correct current normalization entails further choices.
+\end{solution}
+
+\paragraph{The weak cap test.}
+A limit can shrink \(\ell_s\) and still make the target vary faster in string units. As an exercise with the projective product, keep the Einstein coefficient and both tree gauge norms fixed, let \(B\) be the projective colour radius and \(L_{\rm sh}\) the common circle radius. The colour coefficient fixes \(VB^2\). At fixed weak shape, positive photon norm fixes \(L_{\rm sh}/B\) to leading order on the compensating branch. Since \(V\propto B^4L_{\rm sh}a^2\), it follows that \(B,L_{\rm sh}\propto a^{-2/7}\). If the common circle is identified with the M circle at fixed \(\ell_p\), then
+\begin{equation}
+  L_{\rm sh}^{-1}\propto a^{2/7},\qquad
+  \ell_s^2 K_{\rm cap}\propto a^{-12/7}.
+\end{equation}
+The second result uses \(K_{\rm cap}\propto a^{-2}\). On a different branch, at fixed physical meridian length with dimensionless separation \(P_b\to\infty\), \(a\propto P_b^{-1}\) and the dimensionless area is proportional to \(P_b\). The same gauge norms give \(B,L_{\rm sh}\propto P_b^{1/7}\) and \(\ell_s^2K_{\rm cap}\propto P_b^{13/7}\) for the finite unscaled cap curvature. These tests compare the moving momentum gap, the external detector resolution and the local weak curvature length. Controlling one of them does not establish a low-curvature microscopic completion.
+
+\paragraph{Seven-dimensional parent tests.}
+Different constructions supply different parts of the proposed endpoint.
+
+\begin{itemize}
+\item \(M^{111}\) has the geometric weak vectors and a spin lift. At primitive degrees \((p,q)=(3,2)\) the weak centre acts on ordinary spinors by \((-1)^{p-3q/2}=+1\). The ordinary spinors therefore carry integer weak spin. A defect or changed gauge bundle must demonstrate its own doublet operator and couplings \cite{Witten1981,Fabbri1999,SevenMTheory2026}.
+\item The unwarped, electric Freund--Rubin \(S^5\times S^2\) product has a smooth collapse direction and a geometric weak group. Its relative-radius scalar gives \(m^2L_{\rm AdS}^2=-3\) against the scalar stability bound \(-9/4\). This excludes stability for that action and product. The supported Hopf model uses additional stress and tests its physical Hessian and tensor sectors separately \cite{FreundRubin1980,BF1982,SevenMTheory2026}.
+\item An ADE singularity on K3 can supply colour root states via wrapped two-cycles and their intersection form. Its gauge charges need a chosen lattice embedding and a kinetic match. Weak chirality, flux compatibility and the finite light domain still have to be supplied. See the \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/results/88_k3_colour_hypercharge_and_instanton_action.md}{K3 charge calculation}.
+\item A Ho\v{r}ava--Witten gauge wall can carry weak gauge fields independently of the metric's Killing action. In the cited heterotic example nine \(\mathbf{27}\) and six conjugates give three \emph{net} families before further breaking. Finding exactly three light families requires the mass map on the conjugate pairs and the Wilson-line projection. A supersymmetric scalar charge count also needs actual scalar zero modes and surviving interactions \cite{HW1996,CHSW1985,SevenMTheory2026}.
+\end{itemize}
+
+\paragraph{Reading.} The \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/paper/seven_m_theory.tex}{seven-dimensional parent comparison} traces the harmonic, stability and endpoint tests. The \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/paper/kk_strings_lecture.tex}{companion exercises} give the full fixed-base circle calculation and the two weak cap scalings.
+
+\section{A spectral bound, a weak limit and what remains to be matched}
+
+\subsection{Protection from a continuum in the relative two-D0 problem}
+
+The D0 momentum dictionary in Lecture~7 uses a BPS threshold sector. The relative two-D0 matrix Hamiltonian also has positive-energy spectral questions. In the fixed supersymmetric, relative \(SU(2)\) problem, the dimensionless Hamiltonian has kinetic energy \(-\Delta/2\) on the 27 matrix coordinates before the gauge constraint. Write \(E_P=(2\pi)^{2/3}/4\) in the repo's mass convention. A protected level is tested by a total rotation sector absent from the free two-particle channel, where the relative Hamiltonian has compact resolvent. A level embedded in an open scattering channel requires a separate test.
+
+Let \(V=\mathbf9\), \(S=\mathbf{16}\), and \(T=\mathbf{128}=\ker(V\otimes S\to S)\). A positive-energy supermultiplet with superspin \(\rho\) has total polarizations \(V_\rho\otimes(S_0^2 V\oplus\Lambda^3 V\oplus T)\). Exchange of the two D0 constituents selects even orbital degree in the bosonic slow sectors \(\mathbf{44},\mathbf{84}\) and odd degree in the spinorial one \(T\). The confined-sector estimates leave superspins \(\mathbf9,\mathbf{36},\mathbf{16}\) below the reference threshold as possible protected types. The even one-row superspins have an open-channel test of their own. In particular the \(\mathbf{36}\) exclusion in the earlier calculation used an incorrect highest weight. In the orthonormal \(B_4\) weight basis the true Cartan weight of \(\Lambda^2 V\otimes T\) is \((5/2,3/2,1/2,1/2)\), which occurs in the free odd degree-three channel. The confined estimate for the putative component cannot exclude the superspin. A separate integral Cartan component in \(\Lambda^2 V\otimes\Lambda^3 V\) is confined and remains available for future estimates.
+
+\begin{exercise}
+Show that the total vector sector tests all three remaining protected superspins. Use the exchange projection on the free channel. What further work would decide the existence of a protected level below \(E_P\)?
+\end{exercise}
+
+\begin{solution}
+Contracting a symmetric traceless two-tensor with a vector gives a nonzero map to \(V\). Contracting a two-form into a three-form also gives \(V\). Finally \(T\) is a summand of \(V\otimes S\), so reciprocity puts \(V\) in \(S\otimes T\). Thus every candidate contains a total vector. By reciprocity again, the only one-row harmonics in \(V\otimes S_0^2V\) have degree one or three. Neither survives the even orbital projection. There is no one-row type in \(V\otimes\Lambda^3V\), and \(V\otimes T\) is spinorial. These facts exclude a total vector from the physical free channel and from the positive-energy even one-row superspins. In the confined vector sector the bottom \(E_{\mathbf9}\) is a positive normalizable energy, since zero modes are rotational singlets. Hence a protected sub-Planck level exists exactly when \(E_{\mathbf9}<E_P\). The existence question now requires an accurate bound on that eigenvalue.
+\end{solution}
+
+\paragraph{Reading.} The \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/results/56_two_d0_mass_certificate.md}{mass certificates and common vector proof} separate confinement, energy and representation. The \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/results/58_two_d0_vector_spectrum.md}{vector sector and weight correction} gives the operator reduction and the current scope of the bound.
+
+\subsection{Taking an electroweak limit with a fixed observable}
+
+To compare a geometric weak limit and a finite spectral-action limit, fix the observable before varying masses or a cutoff. In the geometric problem look at the eigenvalues of the transverse pencil and its current residues. Integrating out a heavy field and scaling its coupling at the same time can leave a contact term. In the finite geometry, heat coefficients impose a hierarchy in masses and cutoff. At fixed cutoff a Taylor coefficient in momentum and the pole of the exact kernel are different measurements. Taking a top mass large in the Standard Model finite representation and taking a two-level mass large in a different matrix representation need not produce the same limiting spectrum.
+
+\begin{exercise}
+Consider a Euclidean heat spectral action in four dimensions with graded mass \(m\sigma_3\) and vector generator \(\sigma_1\). Put \(x=m^2/\Lambda^2>0\), \(y=q_E^2/\Lambda^2\). Up to a positive common factor the exact transverse kernel is
+\begin{equation}
+ e^{-x}\big[(2+4x+y)H(y)-2\big],\qquad
+ H(y)=\int_0^1 e^{-yu(1-u)}\,du .
+ \label{eq:summer-heat}
+\end{equation}
+Find where the two-derivative kinetic slope changes sign. Show that the exact positive real timelike pole still has positive residue and find a two-sided bound on its squared mass.
+\end{exercise}
+
+\begin{solution}
+Since \(H(0)=1\) and \(H'(0)=-1/6\), the slope is proportional to \(e^{-x}(2/3)(1-x)\). Set \(z=M^2/\Lambda^2\) and \(h(z)=H(-z)\). The pole equation becomes \(z-2+2/h(z)=4x\). For \(z\ge0\), \(h\ge1\) and \(0<h'/h\le1/4\). Therefore the left side grows from zero with derivative at least \(1/2\). There is one positive root. Since \(h(z)>1\) there, \(4x<z<4x+2\). The Euclidean slope at the root has the sign of \(h-2h'/h>0\), yielding positive residue. The negative slope at zero is a property of the truncated action. This example makes no statement about complex poles and uses the two-level representation in Eq.~\eqref{eq:summer-heat}.
+\end{solution}
+
+\subsection{Infrared observables and a research programme}
+
+The calculations in these lectures distinguish at least three tasks for running couplings. A threshold match specifies the effective theory at a subtraction point using its masses, vertices, and matching data. A perturbative renormalization-group calculation compares such coefficients within a stated regime and order. A construction of a continuum gauge theory also requires control of the removal of a regulator, existence of correlation functions or states in the limit, and the properties to be reconstructed from them. A scale inferred from a one-loop logarithm is not by itself a proof of the latter. Conversely, the expectation of an infrared mass relation gives no reason to omit running between probes.
+
+A useful next calculation would fix a heavy or light matter prescription and require the same model to match \(I_{\rm em}\), \(G_F\) and a strong scale defined by a physical hadronic observable. It would carry all three to specified subtractions and test a dimensionless relation against changes of the finite matching data. A second calculation would replace the horizontal matter prescription by a microscopic operator, rechecking the quark and lepton poles and their left and right residues. For the compact spin fit an independent gravitational normalization or a different supported background remains necessary. The finite geometry contributes an additional condition: after projecting onto the surviving modes, the algebra and reality must satisfy the stated order relations and act on the same normalized fields.
+
+A related direction is the comparison with colour--flavour and composite constructions in the companion \href{https://github.com/arivero/dualsm}{\texttt{dualsm} project}. The compressed exchange in Lecture~2, the scalar charge counts in the orthogonal example and the net index on a heterotic wall are separate computable constraints. To connect them, specify a map on chirality, gauge representations and light-sector Yukawa operators, and then test its current matrix elements. The charge count alone leaves the scalar masses and the lifting of conjugate pairs undetermined.
+
+\paragraph{Reading.} The \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/results/18_counterexample_wrong_sign_taylor.md}{heat-action counterexample} states the exact kernel and its scope. The \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/results/75_infrared_currents_and_continuum_limits.md}{infrared and continuum notes} separate finite currents, running and existence. The \href{https://github.com/arivero/conneskk/blob/research/two-endpoint-papers/STRATEGY.md}{strategy and reading routes} catalogue the claims beyond this sequence.
+
+\bibliographystyle{unsrt}
+\bibliography{towerless_intervals}
+\end{document}

@@ -1,8 +1,11 @@
 # Each paper in two forms: Phys Rev two-column, and one column of the same width for phones.
 PAPERS = towerless_intervals chiral_limit_note boundary_condition_note joint_limit_note connes_kk_dictionary_note generations_note real_structure_note two_endpoint_limits seven_m_theory
 LECTURE = kk_strings_lecture
-LECTURE_PDFS = $(LECTURE).pdf $(LECTURE)_mobile.pdf
+SUMMER_LECTURE = conneskk_summer_lectures
+LECTURES = $(LECTURE) $(SUMMER_LECTURE)
+LECTURE_PDFS = $(LECTURES:%=%.pdf) $(LECTURES:%=%_mobile.pdf)
 LECTURE_PLOTS = $(addprefix plots/lecture-,worldsheet.pdf circle-spectrum.pdf interval-window.pdf fibre-winding.pdf m-circle.pdf phase-torus.pdf)
+SUMMER_PLOTS = $(addprefix plots/summer-,window.pdf shared-circle.pdf running.pdf soft-mode.pdf)
 .PHONY: all lecture supplement supplements html docs clean
 all: $(PAPERS:%=%.pdf) $(PAPERS:%=%_mobile.pdf) $(LECTURE_PDFS)
 
@@ -19,10 +22,14 @@ endef
 %.pdf: %.tex towerless_intervals.bib
 	$(call build,$*,,$*)
 
-$(LECTURE_PDFS): $(LECTURE_PLOTS)
+$(LECTURE).pdf $(LECTURE)_mobile.pdf: $(LECTURE_PLOTS)
+$(SUMMER_LECTURE).pdf $(SUMMER_LECTURE)_mobile.pdf: $(SUMMER_PLOTS)
 
 $(LECTURE_PLOTS) &: lecture_figures.py
 	python3 lecture_figures.py --pdf-dir plots
+
+$(SUMMER_PLOTS) &: summer_lecture_figures.py
+	python3 summer_lecture_figures.py --pdf-dir plots
 
 lecture: $(LECTURE_PDFS)
 	cp $(LECTURE_PDFS) ../docs/

@@ -6,17 +6,27 @@ from html.parser import HTMLParser
 import re
 from urllib.parse import unquote, urlsplit
 
-from build_html import DOCS, EDITIONS, HERE, LECTURE
+from build_html import DOCS, EDITIONS, HERE, LECTURE, LECTURES, SUMMER_LECTURE
 from figures import FIGURES
 
-LECTURE_PLOTS = {
-    "plots/lecture-worldsheet.svg",
-    "plots/lecture-circle-spectrum.svg",
-    "plots/lecture-interval-window.svg",
-    "plots/lecture-fibre-winding.svg",
-    "plots/lecture-m-circle.svg",
-    "plots/lecture-phase-torus.svg",
+PLOTS_BY_LECTURE = {
+    LECTURE["name"]: {
+        "plots/lecture-worldsheet.svg",
+        "plots/lecture-circle-spectrum.svg",
+        "plots/lecture-interval-window.svg",
+        "plots/lecture-fibre-winding.svg",
+        "plots/lecture-m-circle.svg",
+        "plots/lecture-phase-torus.svg",
+    },
+    SUMMER_LECTURE["name"]: {
+        "plots/summer-window.svg",
+        "plots/summer-shared-circle.svg",
+        "plots/summer-running.svg",
+        "plots/summer-soft-mode.svg",
+    },
 }
+LECTURE_ENVIRONMENTS = {"example", "exercise", "solution"}
+FORMAL_ENVIRONMENTS = {"theorem", "proposition", "lemma", "corollary"} | LECTURE_ENVIRONMENTS
 
 
 class Document(HTMLParser):
@@ -48,6 +58,7 @@ class Document(HTMLParser):
         self.table_id = None
         self.formal_id = None
         self.formal_number_buffer = None
+        self.formal_environments = Counter()
         self.target_numbers = {}
         self.reference_buffer = None
         self.references = []
@@ -94,7 +105,8 @@ class Document(HTMLParser):
             self.figure_id = attrs.get("id")
         if tag == "strong" and self.caption_stack == ["strong"] and self.figure_id:
             self.figure_number_buffer = []
-        if tag == "div" and classes.intersection({"theorem", "proposition", "lemma", "corollary"}):
+        if tag == "div" and (environments := classes & FORMAL_ENVIRONMENTS):
+            self.formal_environments.update(environments)
             self.formal_id = attrs.get("id")
         if tag == "strong" and "table-number" in classes:
             self.table_number_buffer = []
@@ -137,7 +149,7 @@ class Document(HTMLParser):
         if tag == "figure":
             self.figure_id = None
         if tag == "strong" and self.formal_number_buffer is not None:
-            match = re.search(r"\d+", "".join(self.formal_number_buffer))
+            match = re.search(r"\d+(?:\.\d+)*", "".join(self.formal_number_buffer))
             if match:
                 self.target_numbers[self.formal_id] = match.group()
             self.formal_id = None
@@ -248,17 +260,26 @@ def main():
         text = " ".join(document.text)
         for result in re.findall(r"\\begin\{result\}\{([^{}]+)\}", source):
             check(result in text, f"{name}: missing result heading {result}", errors)
+        if paper is SUMMER_LECTURE:
+            for environment in sorted(LECTURE_ENVIRONMENTS):
+                expected = source.count(r"\begin{" + environment + "}")
+                actual = document.formal_environments[environment]
+                check(actual == expected, f"{name}: {actual}/{expected} {environment} blocks", errors)
 
     overview = documents.get("index.html")
     if overview:
         for name in FIGURES:
             check(overview.images[f"plots/{name}"] == 1, f"index.html: expected one plot {name}", errors)
+        for edition in LECTURES:
+            href = f'{edition["name"]}.html'
+            check(href in overview.links, f"index.html: missing lecture link {href}", errors)
 
-    lecture = documents.get(f'{LECTURE["name"]}.html')
-    if lecture:
-        check(lecture.images == Counter(LECTURE_PLOTS), "Lecture: inconsistent SVG plot coverage", errors)
-        figure_numbers = [str(number) for number in range(1, len(LECTURE_PLOTS) + 1)]
-        check(lecture.figure_numbers == figure_numbers, "Lecture: inconsistent figure numbering", errors)
+    for name, plots in PLOTS_BY_LECTURE.items():
+        lecture = documents.get(f"{name}.html")
+        if lecture:
+            check(lecture.images == Counter(plots), f"{name}: inconsistent SVG plot coverage", errors)
+            figure_numbers = [str(number) for number in range(1, len(plots) + 1)]
+            check(lecture.figure_numbers == figure_numbers, f"{name}: inconsistent figure numbering", errors)
 
     if errors:
         raise SystemExit("\n".join(errors))

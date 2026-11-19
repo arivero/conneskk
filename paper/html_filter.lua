@@ -7,10 +7,9 @@ local function format_lecture_figure(figure)
   local lecture_figure = false
   figure = figure:walk({
     Image = function(img)
-      local svg, count = img.src:gsub("^(plots/lecture%-[%w%-]+)%.pdf$", "%1.svg")
-      if count == 1 then
+      if img.src:match("^plots/lecture%-[%w%-]+%.pdf$") or img.src:match("^plots/summer%-[%w%-]+%.pdf$") then
         lecture_figure = true
-        img.src = svg
+        img.src = img.src:gsub("%.pdf$", ".svg")
         if #img.caption == 0 then
           img.caption = {pandoc.Str(caption)}
         end

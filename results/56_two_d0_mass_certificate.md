@@ -2,12 +2,12 @@
 
 Fix the undeformed gauge-invariant relative $SU(2)$ BFSS Hamiltonian with $g_{\rm YM}=1$, $T_a=\sigma_a/\sqrt2$, and kinetic term $-\Delta/2$. We vary the rotation representation and ask for a positive square-integrable energy below $E_P=(2\pi)^{2/3}/4=0.85125548\ldots$. The spacetime convention is $M\ell_p=2\sqrt E/(2\pi)^{1/3}$. The dimensionless matrix radius $R=|X|$ measures the relative transverse coordinates. The longitudinal circle used in the mass conversion is an independent input. [Hamiltonian, channel decomposition and mass conventions](issues/16.md)
 
-**Theorem.** A two-D0 multiplet with $0<E\le E_P$ must have one of the following three highest superspins by the intermediate bounds of this file, or belong to the even one-row family $(2m,0,0,0)$, $m\ge0$:
+**Theorem.** A two-D0 multiplet with $0<E\le E_P$ must have one of the following three highest superspins by the bounds of this file, or belong to the even one-row family $(2m,0,0,0)$, $m\ge0$:
 $$
 (1,0,0,0),\qquad (1,1,0,0),\qquad
 (\tfrac12,\tfrac12,\tfrac12,\tfrac12).
 $$
-The three share a single mass test. [Result 58](58_two_d0_vector_spectrum.md#two-protected-superspins) excludes $\boldsymbol{36}$, leaving only $\boldsymbol9$ and $\boldsymbol{16}$ as protected candidates. A positive protected sub-Planck level exists if and only if the lowest energy in the total vector representation $\mathbf9$ is below $E_P$. That sector has compact resolvent. A ground energy at or below $E_P$ changes by less than $3.81\times10^{-28}$ on imposing a Dirichlet boundary at $R=17$. Each total type *present* in the free two-particle channel has essential spectrum $[0,\infty)$. An embedded eigenstate in that continuum and an eigenstate in a confined component are distinct possibilities.
+The three protected candidates share a single mass test. A positive protected sub-Planck level exists if and only if the lowest energy in the total vector representation $\mathbf9$ is below $E_P$. That sector has compact resolvent. A ground energy at or below $E_P$ changes by less than $3.81\times10^{-28}$ on imposing a Dirichlet boundary at $R=17$. Each total type *present* in the free two-particle channel has essential spectrum $[0,\infty)$. An embedded eigenstate in that continuum and an eigenstate in a confined component are distinct possibilities. [Spinor mass floor and correction for superspin $\boldsymbol{36}$](58_two_d0_vector_spectrum.md#the-spinor-mass-floor)
 
 ## A form bound on the confined components
 
@@ -107,7 +107,7 @@ For superspin $\mathbf{128}$ take its confined total component $\lambda=(5/2,3/2
 $$
  E\ge\frac{11K}{184.5+K}=0.87860166\ldots>E_P
 $$
-when $E<11$. The other energies already exceed the threshold. This removes $\mathbf{128}$ from the four candidates of the first enclosure and leaves $\mathbf9,\mathbf{36},\mathbf{16}$ as intermediate candidates. [The stronger spinorial test](58_two_d0_vector_spectrum.md#two-protected-superspins) then excludes $\mathbf{36}$.
+when $E<11$. The other energies already exceed the threshold. This removes $\mathbf{128}$ from the four candidates of the first enclosure and leaves $\mathbf9,\mathbf{36},\mathbf{16}$ as protected candidates. [The spinor mass floor](58_two_d0_vector_spectrum.md#the-spinor-mass-floor) improves the lower bound for $\mathbf{16}$.
 
 ## The common vector component
 
@@ -120,7 +120,7 @@ Let $V=\mathbf9$, $S=\mathbf{16}$ and $T=\ker(\gamma:V\otimes S\to S)=\mathbf{12
 
 Conversely $V$ never occurs in an even one-row superspin tensored with these polarizations. The only one-row summands of $V\otimes S^2_0V$ are $V$ and the traceless symmetric cube. The contraction, alternating and remaining Young components of $V\otimes\Lambda^3V$ are $\Lambda^2V,\Lambda^4V$ and $(2,1,1,0)$. Finally $V\otimes T$ is spinorial. The same tests against the free even harmonics times $\mathbf{44}\oplus\mathbf{84}$ and the free odd harmonics times $\mathbf{128}$ show that the total vector is absent from $\mathcal G$. Its spectrum is discrete, with strictly positive energies by rotational singletness of the zero modes.
 
-To construct a physical vector state, use principal axes $X=rn v^T+Y$ with colour unit vector $n$, spatial unit vector $v$ and $Yv=0$. The tangent two-form $\beta_{ij}=\epsilon_{abc}n_aY_{bi}Y_{cj}$ and a slow polarization $A\in S^2_0V$ give the equivariant map $A\mapsto\beta(P_{v^\perp}Av)$. It is nonzero when the two transverse colour rows are independent and $P_{v^\perp}Av$ is chosen in their span. Replacing $(n,v)$ by $(-n,-v)$ reverses both factors. The neutral fast vacuum and the exchange-even slow $\mathbf{44}$ thus give a physical lift. Apply the adjoint map to a fixed vector, multiply by the fast Gaussian and an invariant smooth cutoff supported inside the tube, and extend by zero. Disjoint radial cutoffs give infinitely many independent copies of the vector. Compact resolvent gives infinitely many positive vector levels. Their lowest tests both remaining protected multiplets. An even one-row embedded level needs a separate test.
+To construct a physical vector state, use principal axes $X=rn v^T+Y$ with colour unit vector $n$, spatial unit vector $v$ and $Yv=0$. The tangent two-form $\beta_{ij}=\epsilon_{abc}n_aY_{bi}Y_{cj}$ and a slow polarization $A\in S^2_0V$ give the equivariant map $A\mapsto\beta(P_{v^\perp}Av)$. It is nonzero when the two transverse colour rows are independent and $P_{v^\perp}Av$ is chosen in their span. Replacing $(n,v)$ by $(-n,-v)$ reverses both factors. The neutral fast vacuum and the exchange-even slow $\mathbf{44}$ thus give a physical lift. Apply the adjoint map to a fixed vector, multiply by the fast Gaussian and an invariant smooth cutoff supported inside the tube, and extend by zero. Disjoint radial cutoffs give infinitely many independent copies of the vector. Compact resolvent gives infinitely many positive vector levels. Their lowest tests all three remaining protected superspins. An even one-row embedded level needs a separate test.
 
 ## The fermion potential in the vector sector
 

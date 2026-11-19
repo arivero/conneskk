@@ -85,8 +85,16 @@ LECTURE = {
     "name": "kk_strings_lecture",
     "title": "Kaluza–Klein trajectories and strings on compact spaces",
     "short": "Kaluza–Klein trajectories and strings on compact spaces",
+    "figures": "lecture_figures.py",
 }
-EDITIONS = [*PAPERS, LECTURE]
+SUMMER_LECTURE = {
+    "name": "conneskk_summer_lectures",
+    "title": "Connes and Kaluza–Klein geometry: graduate summer lectures",
+    "short": "Connes and Kaluza–Klein geometry",
+    "figures": "summer_lecture_figures.py",
+}
+LECTURES = [LECTURE, SUMMER_LECTURE]
+EDITIONS = [*PAPERS, *LECTURES]
 
 
 class Headings(HTMLParser):
@@ -245,7 +253,7 @@ def navigation(current, overview_headings, paper_headings):
                 parts.append("<li>" + item(f"index.html#{child_id}", child_title) + "</li>")
             parts.append("</ul>")
         parts.append("</li>")
-    for label, editions in (("Complete papers", PAPERS), ("Graduate lecture", [LECTURE])):
+    for label, editions in (("Complete papers", PAPERS), ("Graduate lectures", LECTURES)):
         parts.append(f'</ul><p class="nav-label">{label}</p><ul class="paper-list">')
         for edition in editions:
             name = edition["name"]
@@ -318,10 +326,11 @@ def paper_files(paper):
 def main():
     DOCS.mkdir(exist_ok=True)
     write_figures(DOCS / "plots")
-    subprocess.run(
-        ["python3", "lecture_figures.py", "--svg-dir", str(DOCS / "plots")],
-        cwd=HERE, check=True,
-    )
+    for lecture in LECTURES:
+        subprocess.run(
+            ["python3", lecture["figures"], "--svg-dir", str(DOCS / "plots")],
+            cwd=HERE, check=True,
+        )
     discussion = pandoc((HERE / "site_overview.md").read_text(encoding="utf-8"), "markdown")
     overview_headings = headings(discussion)
     bodies = {paper["name"]: paper_body(paper) for paper in EDITIONS}
@@ -340,7 +349,7 @@ def main():
             page(paper["title"], name, contents, overview_headings, paper_headings),
             encoding="utf-8",
         )
-    print(f"Built the integrated discussion, {len(PAPERS)} HTML papers and the lecture in {DOCS}.")
+    print(f"Built the integrated discussion, {len(PAPERS)} HTML papers and {len(LECTURES)} lectures in {DOCS}.")
 
 
 if __name__ == "__main__":

@@ -2103,7 +2103,7 @@ checked_by(gh16_planck_weights, gpt_6_1_terra, by_hand).
 checked_by(gh16_planck_weights, gpt_6_2_astra_max, by_hand).
 addresses(t14, gh16_planck_weights).
 
-claim(gh16_vector_planck, theorem, proved, "Issue 16, The common vector component", "A protected sub-Planck two-D0 level exists exactly when the first confined total-vector energy is below (2 pi)^(2/3)/4. The intermediate estimate leaves superspins 9, 36 and 16 as candidates below that threshold. All protected masses satisfy M l_p >= 0.6818988. The even one-row superspins need an embedded-eigenvalue test.").
+claim(gh16_vector_planck, theorem, proved, "Issue 16, The common vector component", "A protected sub-Planck two-D0 level exists exactly when the first confined total-vector energy is below (2 pi)^(2/3)/4. Superspins 9, 36 and 16 are the protected candidates at or below that threshold. All protected masses satisfy M l_p >= 0.6818988. The even one-row superspins need an embedded-eigenvalue test.").
 source(gh16_vector_planck, 'results/56_two_d0_mass_certificate.md', '').
 depends(gh16_vector_planck, gh16_planck_weights).
 depends(gh16_vector_planck, gh16_matrix_radius).
@@ -2129,14 +2129,13 @@ attempted_by(gh16_vector_domain, gpt_6_2_astra_max).
 checked_by(gh16_vector_domain, gpt_6_1_terra, by_hand).
 addresses(t14, gh16_vector_domain).
 
-claim(gh16_two_label_bound, theorem, proved, "Result 58, Two protected superspins", "Only superspins 9 and 16 remain possible in the protected charge-two BFSS spectrum at or below the Planck threshold. Superspin 36 has E >= 5781875/6397153 and superspin 16 has E >= 257149475/415597657. The first confined total-vector energy still decides the protected Planck question.").
-source(gh16_two_label_bound, 'results/58_two_d0_vector_spectrum.md', '').
-depends(gh16_two_label_bound, gh16_vector_planck).
-attempted_by(gh16_two_label_bound, gpt_6_1_terra).
-checked_by(gh16_two_label_bound, gpt_6_2_sol, by_hand).
-checked_by(gh16_two_label_bound, gpt_6_2_astra_max, by_hand).
-claim_amended(gh16_vector_planck, gh16_two_label_bound).
-addresses(t14, gh16_two_label_bound).
+claim(gh16_spinor_mass_floor, theorem, proved, "Result 58, The spinor mass floor", "A positive-energy charge-two BFSS multiplet of superspin 16 has E >= 257149475/415597657. Superspin candidates 9, 36 and 16 share the same confined total-vector test.").
+source(gh16_spinor_mass_floor, 'results/58_two_d0_vector_spectrum.md', 'the-spinor-mass-floor').
+depends(gh16_spinor_mass_floor, gh16_vector_planck).
+attempted_by(gh16_spinor_mass_floor, gpt_6_1_terra).
+checked_by(gh16_spinor_mass_floor, gpt_6_2_sol, by_hand).
+checked_by(gh16_spinor_mass_floor, gpt_6_2_astra_max, by_hand).
+addresses(t14, gh16_spinor_mass_floor).
 
 claim(gh16_vector_chamber, proposition, proved, "Result 58, The three singular values and the physical domain", "The physical total vector reduces unitarily to 9834 coupled channels on the three ordered singular values with the stated orbit Jacobian, angular generators and Friedrichs form domain. The radius-17 problem imposes a Dirichlet trace on the outer sphere.").
 source(gh16_vector_chamber, 'results/58_two_d0_vector_spectrum.md', '').

@@ -42,6 +42,8 @@ The illustrated graduate lecture includes fourteen solved exercises on the point
 
 The weak-root phase and wrapped-string determinant have a dedicated reading route. A second route follows the harmonic form reduction, the K3 charge table, the chiral interval and the spectator tensor completion. [Phase and ADE routes](results/README.md#reading-routes) · [Full supplement, Parts S239–S244](docs/supplemental.pdf)
 
+The graduate summer lectures bring the main calculations together in eight lectures with four figures and ten solved exercises. They start with scalar resolution and finite Dirac windows, then follow particle identification, infrared matching, tensor periods, string resolution and the M-theory circle. The last lecture gives the corrected two-D0 spectral test and an exact weak-sector pole calculation. The same `lecture` target builds both PDF editions. [Summer lectures](docs/conneskk_summer_lectures.html) · [Print](docs/conneskk_summer_lectures.pdf) · [Mobile](docs/conneskk_summer_lectures_mobile.pdf)
+
 ## Removed sources
 
 The folder holds text only, apart from the built PDFs in [docs/](docs/index.html), which GitHub Pages serves (`make docs` in `paper/`, run at milestones). Binaries, code and duplicated developments were removed after their content was written out (details and recovery commits in [historical/DUPLICATES.md](historical/DUPLICATES.md)):
