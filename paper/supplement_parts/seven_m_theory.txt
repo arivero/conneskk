@@ -8,3 +8,4 @@ part 36 lemmas/36_dilaton_spectral_and_so32.md
 part 37 lemmas/37_dilaton_and_second_scale.md
 part 53 lemmas/53_flag_conic_and_monopole_window.md
 part "S208 (a chiral family over the round five-sphere and its two interval limits)" results/54_chiral_family_over_the_five_sphere.md
+part "S226 (particle identifications and mirror families)" results/72_particle_identifications_and_mirrors.md

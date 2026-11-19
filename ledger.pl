@@ -2706,6 +2706,184 @@ addresses(t12, vortex_one_quark_mass).
 addresses(t14, vortex_one_quark_mass).
 addresses(t18, vortex_one_quark_mass).
 
+claim(round_flux_product_gap, theorem, proved, "Theorem 68.1", "The covariant round two-flux product has a positive five-dimensional coloured bosonic gap off the eight gluons, including mixed weak and projective harmonics.").
+source(round_flux_product_gap, 'results/68_round_coloured_boson_threshold.md', '').
+depends(round_flux_product_gap, projective_kahler_moduli).
+depends(round_flux_product_gap, projective_kahler_octet).
+attempted_by(round_flux_product_gap, gpt_6_2_astra_max).
+checked_by(round_flux_product_gap, gpt_6_2_astra_max, by_hand).
+referee_pending(round_flux_product_gap).
+addresses(t13, round_flux_product_gap).
+addresses(t18, round_flux_product_gap).
+
+claim(round_colour_threshold, corollary, proved, "Corollary 68.2", "With unit circle-curvature lifting and matched root colour kinetics the first positive four-dimensional coloured bosonic mass at canonical round matching is exactly the unit gluon circle momentum.").
+source(round_colour_threshold, 'results/68_round_coloured_boson_threshold.md', '').
+depends(round_colour_threshold, round_flux_product_gap).
+depends(round_colour_threshold, colour_wilson_lift).
+attempted_by(round_colour_threshold, gpt_6_2_astra_max).
+checked_by(round_colour_threshold, gpt_6_2_astra_max, by_hand).
+referee_pending(round_colour_threshold).
+addresses(t13, round_colour_threshold).
+addresses(t18, round_colour_threshold).
+
+claim(round_twelve_flavours, proposition, proved, "Proposition 68.3", "At the restored point with three ordinary and three mirror families there are twelve massless Dirac colour flavours. The next coloured fermion lies at sqrt(2)/r, above the first gluon circle harmonic.").
+source(round_twelve_flavours, 'results/68_round_coloured_boson_threshold.md', '').
+depends(round_twelve_flavours, round_colour_threshold).
+depends(round_twelve_flavours, vortex_root_domain).
+attempted_by(round_twelve_flavours, gpt_6_2_astra_max).
+checked_by(round_twelve_flavours, gpt_6_2_astra_max, by_hand).
+referee_pending(round_twelve_flavours).
+addresses(t12, round_twelve_flavours).
+addresses(t18, round_twelve_flavours).
+
+claim(vortex_constraint_squares, proposition, proved, "Proposition 69.1", "The physical weak scalar Hessian of the covariant Einstein vortex at every compact shape is its Bogomolny Hessian plus trace, momentum and Maxwell constraint squares. The transverse vector block is nonnegative as well.").
+source(vortex_constraint_squares, 'results/69_gravitating_vortex_colour_gap.md', '').
+depends(vortex_constraint_squares, shared_polar_solution).
+depends(vortex_constraint_squares, round_flux_product_gap).
+attempted_by(vortex_constraint_squares, gpt_6_2_astra_max).
+checked_by(vortex_constraint_squares, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_constraint_squares).
+addresses(t13, vortex_constraint_squares).
+addresses(t18, vortex_constraint_squares).
+
+claim(nonround_flux_colour_gap, theorem, proved, "Theorem 69.2", "On the full nonround covariant product all coloured five-dimensional modes off the gluons have a quantitative gap from the colour Casimir and weak Hodge gap. The lifted first coloured threshold is 1/L under the displayed inequality.").
+source(nonround_flux_colour_gap, 'results/69_gravitating_vortex_colour_gap.md', '').
+depends(nonround_flux_colour_gap, vortex_constraint_squares).
+depends(nonround_flux_colour_gap, round_flux_product_gap).
+depends(nonround_flux_colour_gap, colour_wilson_lift).
+attempted_by(nonround_flux_colour_gap, gpt_6_2_astra_max).
+checked_by(nonround_flux_colour_gap, gpt_6_2_astra_max, by_hand).
+referee_pending(nonround_flux_colour_gap).
+addresses(t13, nonround_flux_colour_gap).
+addresses(t18, nonround_flux_colour_gap).
+
+claim(rooted_colour_vectors, corollary, proved, "Corollary 69.3", "Adding the diagonal root fields preserves the 1/L first transverse coloured vector threshold under the covariant gap inequality. The positive root mass square annihilates colour Killing waves.").
+source(rooted_colour_vectors, 'results/69_gravitating_vortex_colour_gap.md', '').
+depends(rooted_colour_vectors, nonround_flux_colour_gap).
+depends(rooted_colour_vectors, vortex_root_vacua).
+attempted_by(rooted_colour_vectors, gpt_6_2_astra_max).
+checked_by(rooted_colour_vectors, gpt_6_2_astra_max, by_hand).
+referee_pending(rooted_colour_vectors).
+addresses(t4, rooted_colour_vectors).
+addresses(t18, rooted_colour_vectors).
+
+claim(root_wilson_operator, proposition, proved, "Proposition 70.1", "For bulk root scalars with isotropic colour and circle kinetic terms, the colour Wilson shear produces an explicit frequency-shift operator depending on the changed norm of the principal circle.").
+source(root_wilson_operator, 'results/70_wilson_winding_with_vortex_roots.md', '').
+depends(root_wilson_operator, colour_wilson_trial).
+depends(root_wilson_operator, vortex_root_vacua).
+attempted_by(root_wilson_operator, gpt_6_2_astra_max).
+checked_by(root_wilson_operator, gpt_6_2_astra_max, by_hand).
+referee_pending(root_wilson_operator).
+addresses(t13, root_wilson_operator).
+addresses(t18, root_wilson_operator).
+
+claim(root_wilson_winding, proposition, proved, "Proposition 70.2", "At canonical restoration the two periodic vortex roots increase the leading nonzero-winding Wilson mass squared by one forty-fifth of the pure Yang-Mills contribution in the large charge-period comparison. Local matching is independent.").
+source(root_wilson_winding, 'results/70_wilson_winding_with_vortex_roots.md', '').
+depends(root_wilson_winding, root_wilson_operator).
+depends(root_wilson_winding, round_flux_product_gap).
+attempted_by(root_wilson_winding, gpt_6_2_astra_max).
+checked_by(root_wilson_winding, gpt_6_2_astra_max, by_hand).
+referee_pending(root_wilson_winding).
+addresses(t13, root_wilson_winding).
+addresses(t18, root_wilson_winding).
+
+claim(rooted_colour_gap, theorem, proved, "Theorem 71.1", "With equal horizontal root coefficients and unit circle-curvature lift, the full rooted bosonic Hessian is nonnegative and the first extra four-dimensional coloured boson is 1/L under the colour gap inequality.").
+source(rooted_colour_gap, 'results/71_colour_gap_with_diagonal_roots.md', '').
+depends(rooted_colour_gap, nonround_flux_colour_gap).
+depends(rooted_colour_gap, round_flux_product_gap).
+depends(rooted_colour_gap, vortex_root_vacua).
+depends(rooted_colour_gap, colour_wilson_lift).
+attempted_by(rooted_colour_gap, gpt_6_2_astra_max).
+checked_by(rooted_colour_gap, gpt_6_2_astra_max, by_hand).
+referee_pending(rooted_colour_gap).
+addresses(t13, rooted_colour_gap).
+addresses(t18, rooted_colour_gap).
+
+claim(particle_lifts_table, proposition, proved, "Proposition 72.1", "The lifted projective Dirac kernels, weak monopole kernels and assigned circle characters identify the ordinary left and right quarks and leptons, their colour triality, charged and neutral vertices and vortex charges in the specified completion.").
+source(particle_lifts_table, 'results/72_particle_identifications_and_mirrors.md', '').
+depends(particle_lifts_table, vortex_root_domain).
+depends(particle_lifts_table, round_twelve_flavours).
+attempted_by(particle_lifts_table, gpt_6_2_astra_max).
+checked_by(particle_lifts_table, gpt_6_2_astra_max, by_hand).
+referee_pending(particle_lifts_table).
+addresses(t2, particle_lifts_table).
+addresses(t12, particle_lifts_table).
+addresses(t18, particle_lifts_table).
+
+claim(vortex_mirror_anomalies, proposition, proved, "Proposition 72.2", "One ordinary family cancels the four-dimensional Standard Model anomalies. The additional vortex U(1) has mixed colour and weak coefficients 1 and 4. The six rank-one parent Weyl fields have signed rank minus two. Mirroring the parent bundles cancels their local anomaly polynomials.").
+source(vortex_mirror_anomalies, 'results/72_particle_identifications_and_mirrors.md', '').
+depends(vortex_mirror_anomalies, particle_lifts_table).
+attempted_by(vortex_mirror_anomalies, gpt_6_2_astra_max).
+checked_by(vortex_mirror_anomalies, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_mirror_anomalies).
+addresses(t2, vortex_mirror_anomalies).
+addresses(t12, vortex_mirror_anomalies).
+addresses(t18, vortex_mirror_anomalies).
+
+claim(rooted_current_projection, proposition, proved, "Proposition 73.1", "The full mixed-metric fibration projects the root mass onto the complement of common internal gradients. The round charged poles, leading near-round masses and five-dimensional shape exchange persist for the conserved sources.").
+source(rooted_current_projection, 'results/73_projected_weak_current.md', '').
+depends(rooted_current_projection, rooted_colour_gap).
+depends(rooted_current_projection, vortex_root_lower_current).
+depends(rooted_current_projection, shared_neutral_poles).
+attempted_by(rooted_current_projection, gpt_6_2_astra_max).
+checked_by(rooted_current_projection, gpt_6_2_astra_max, by_hand).
+referee_pending(rooted_current_projection).
+addresses(t4, rooted_current_projection).
+addresses(t18, rooted_current_projection).
+
+claim(projected_current_floor, proposition, proved, "Proposition 73.2", "The solenoidal representative of an angular multiple of the unbroken photon has zero projected root cost and a nonzero lepton matrix element. At compact canonical restoration approached from the broken side it gives a lower trial bound 15/(2248 CV) uniform in the root stiffness.").
+source(projected_current_floor, 'results/73_projected_weak_current.md', '').
+depends(projected_current_floor, rooted_current_projection).
+depends(projected_current_floor, vortex_root_exchange_range).
+attempted_by(projected_current_floor, gpt_6_2_astra_max).
+checked_by(projected_current_floor, gpt_6_2_astra_max, by_hand).
+referee_pending(projected_current_floor).
+addresses(t4, projected_current_floor).
+addresses(t18, projected_current_floor).
+
+claim(matched_colour_trajectory, proposition, proved, "Proposition 74.1", "One fixed fibration admits a round member, a finite six-dimensional neck and a five-dimensional collapse with exact first extra bosonic colour threshold 1/L and an ordinary six-quark window on a broken segment. At canonical matching the boson threshold holds throughout for k equal to six.").
+source(matched_colour_trajectory, 'results/74_matched_hadronic_and_weak_scales.md', '').
+depends(matched_colour_trajectory, rooted_colour_gap).
+depends(matched_colour_trajectory, vortex_root_domain).
+depends(matched_colour_trajectory, shared_circle_density).
+attempted_by(matched_colour_trajectory, gpt_6_2_astra_max).
+checked_by(matched_colour_trajectory, gpt_6_2_astra_max, by_hand).
+referee_pending(matched_colour_trajectory).
+addresses(t12, matched_colour_trajectory).
+addresses(t13, matched_colour_trajectory).
+addresses(t18, matched_colour_trajectory).
+
+claim(hadronic_colour_current, corollary, proved, "Corollary 74.2", "In the compensated fixed-shape limit the leading leptonic Fermi strength times the squared first coloured boson mass is sqrt(2) S_b/(8 k^2 I_Q). An independent QCD conversion supplies hadronic units in the stated matching.").
+source(hadronic_colour_current, 'results/74_matched_hadronic_and_weak_scales.md', '').
+depends(hadronic_colour_current, matched_colour_trajectory).
+depends(hadronic_colour_current, rooted_current_projection).
+attempted_by(hadronic_colour_current, gpt_6_2_astra_max).
+checked_by(hadronic_colour_current, gpt_6_2_astra_max, by_hand).
+referee_pending(hadronic_colour_current).
+addresses(t13, hadronic_colour_current).
+addresses(t18, hadronic_colour_current).
+
+claim(vortex_ir_neutral_current, proposition, proved, "Proposition 75.1", "The equal-root near-round fibration gives gL=3/2+s_w^2 and gR=1+s_w^2 for the leading muon-neutrino/electron tree contact, due to the additional vortex pole and its identified chiral vertices.").
+source(vortex_ir_neutral_current, 'results/75_infrared_currents_and_continuum_limits.md', '').
+depends(vortex_ir_neutral_current, rooted_current_projection).
+depends(vortex_ir_neutral_current, shared_neutral_poles).
+depends(vortex_ir_neutral_current, particle_lifts_table).
+attempted_by(vortex_ir_neutral_current, gpt_6_2_astra_max).
+checked_by(vortex_ir_neutral_current, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_ir_neutral_current).
+addresses(t4, vortex_ir_neutral_current).
+addresses(t18, vortex_ir_neutral_current).
+
+claim(quadratic_ir_continuum, proposition, proved, "Proposition 75.2", "A smooth diagonal source with positive finite tree spectral measure has the four-dimensional Gaussian regulator limit at nonzero spacelike momentum, and contact convergence under inverse-mass integrability.").
+source(quadratic_ir_continuum, 'results/75_infrared_currents_and_continuum_limits.md', '').
+depends(quadratic_ir_continuum, rooted_colour_gap).
+attempted_by(quadratic_ir_continuum, gpt_6_2_astra_max).
+checked_by(quadratic_ir_continuum, gpt_6_2_astra_max, by_hand).
+referee_pending(quadratic_ir_continuum).
+addresses(t4, quadratic_ir_continuum).
+addresses(t14, quadratic_ir_continuum).
+addresses(t18, quadratic_ir_continuum).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).

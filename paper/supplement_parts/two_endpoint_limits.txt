@@ -9,3 +9,4 @@ part 30 lemmas/30_massless_limit_as_a_joint_limit.md
 part 34 lemmas/34_colour_family_exchange.md
 part 38 lemmas/38_so30_fluctuations.md
 part "S208 (a chiral family over the round five-sphere and its two interval limits)" results/54_chiral_family_over_the_five_sphere.md
+part "S226 (particle identifications and mirror families)" results/72_particle_identifications_and_mirrors.md
