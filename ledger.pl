@@ -3373,7 +3373,6 @@ depends(hopf_diagonal_hypercharge, vortex_root_domain).
 depends(hopf_diagonal_hypercharge, particle_lifts_table).
 attempted_by(hopf_diagonal_hypercharge, gpt_6_2_sol_ultra).
 checked_by(hopf_diagonal_hypercharge, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_diagonal_hypercharge).
 addresses(t11, hopf_diagonal_hypercharge).
 addresses(t17, hopf_diagonal_hypercharge).
 addresses(t18, hopf_diagonal_hypercharge).
@@ -3453,7 +3452,6 @@ depends(quotient_tensor_free_fermion_shells, quotient_tensor_colour_gap).
 depends(quotient_tensor_free_fermion_shells, matched_colour_trajectory).
 attempted_by(quotient_tensor_free_fermion_shells, gpt_6_2_sol_ultra).
 checked_by(quotient_tensor_free_fermion_shells, gpt_6_2_sol_ultra, by_hand).
-referee_pending(quotient_tensor_free_fermion_shells).
 addresses(t3, quotient_tensor_free_fermion_shells).
 addresses(t13, quotient_tensor_free_fermion_shells).
 addresses(t18, quotient_tensor_free_fermion_shells).
@@ -4013,7 +4011,6 @@ depends(hopf_global_locked_group_and_spin, hopf_volume_tensor_rank_one_potential
 depends(hopf_global_locked_group_and_spin, hopf_scalar_windows).
 attempted_by(hopf_global_locked_group_and_spin, gpt_6_2_sol_ultra).
 checked_by(hopf_global_locked_group_and_spin, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_global_locked_group_and_spin).
 addresses(t11, hopf_global_locked_group_and_spin).
 addresses(t14, hopf_global_locked_group_and_spin).
 addresses(t17, hopf_global_locked_group_and_spin).
@@ -4025,7 +4022,6 @@ depends(hopf_integral_euler_flux_domain, hopf_global_locked_group_and_spin).
 depends(hopf_integral_euler_flux_domain, hopf_bulk_two_form_pullback).
 attempted_by(hopf_integral_euler_flux_domain, gpt_6_2_sol_ultra).
 checked_by(hopf_integral_euler_flux_domain, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_integral_euler_flux_domain).
 addresses(t11, hopf_integral_euler_flux_domain).
 addresses(t14, hopf_integral_euler_flux_domain).
 addresses(t18, hopf_integral_euler_flux_domain).
@@ -4301,6 +4297,12 @@ checked_by(dual_four_cycle_flux, claude_opus_5_5, by_hand).
 checked_by(k3_ade_charge_embedding, claude_opus_5_5, by_hand).
 checked_by(vortex_neutral_spectator_tensor, claude_opus_5_5, by_hand).
 referee_report('results/88_k3_colour_hypercharge_and_instanton_action.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(quotient_tensor_free_fermion_shells, claude_opus_5_5, by_hand).
+checked_by(hopf_diagonal_hypercharge, claude_opus_5_5, by_hand).
+checked_by(hopf_integral_euler_flux_domain, claude_opus_5_5, by_hand).
+checked_by(hopf_global_locked_group_and_spin, claude_opus_5_5, by_hand).
+referee_report('results/108_hopf_global_flux_and_anomaly_domain.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/95_coloured_threshold_in_the_quotient_tensor_action.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).

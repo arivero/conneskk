@@ -78,3 +78,14 @@ Also verified, pending flag kept:
 
 - `projective_cjs_gauge_ratio` (84.2): $B^2=24r^2$ follows from the 11D Einstein equations with $G=g\,\omega_c\wedge\mathrm{vol}_w$ ($R_{\mathbb{CP}^2}=g^2/6$, $R_{S^2}=2g^2/3$, external $-g^2/3$). The $19/72$ kinetic ratio was not checked.
 - `k3_hypercharge_period_bound` (88.3): $5/3=\lvert Y\rvert^2/\lvert t\rvert^2=(5/6)/(1/2)$. The excess bound was not checked.
+
+## Fourth batch (checked in full)
+
+| Claim | Location | What was verified |
+|---|---|---|
+| `hopf_diagonal_hypercharge` (94.1) | results/94 | $6Y=P+3C/2$ reproduces the whole table ($1,4,-2,-3,-6,0$). The vacuum $S$ with $(P,C)=(3,-2)$ is invariant. The four links need $C$-shifts $-2$ ($S$, for up and $\nu$) and $+2$ ($\bar S$, for down and $e$) at zero Hopf weight. |
+| `quotient_tensor_free_fermion_shells` (95.2) | results/95 | Antiperiodic azimuthal momenta give $D_{\rm flat}^2\ge1/4$; with $f^2\le2$ the spectator bound is $1/(2\sqrt2a)$. For $N=2$ the potential bound is $\min(1/16,\ x_0^2(1-x_0^2)\vert_{\lvert x_0\rvert\in[1/4,3/4]})=15/256$, giving $\sqrt{15/512}/a$. The closing numerical comparison with $1/L$ ($a\le1.112\times10^{-4}$ GeV$^{-1}$) was taken from 95.1 without rechecking. |
+| `hopf_global_locked_group_and_spin` (108.1) | results/108 | The ray stabilizer $(L,(\det L)^{-1})\cong U(3)$; $L\mapsto wL$ has kernel $\{\pm I_3\}$. $TE\oplus\mathbb R=\pi^*(TY\oplus W_{\mathbb R})$ with injective $\pi^*$ in degree two gives spin iff $c_1(W_c)$ is even. |
+| `hopf_integral_euler_flux_domain` (108.2) | results/108 | Gysin $H^5(E)\to H^0(Y)\xrightarrow{\cup c_3}H^6(Y)$: a unit fibre class exists iff $c_3=0$ integrally, with periods in $N\mathbb Z$ for torsion of order $N$. The mapping-torus example uses $c_3(TS^6)=\chi(S^6)=2$. |
+
+Also verified, pending flag kept: 98.1's determinant $7x^2+16x-144=0$ with $D_0=6/7$ and $\nu=3\lambda$ gives $m^2B^2=4(29-4\sqrt{67})/7$, given the general fluctuation equations of 64.1. In 106 the sextet exponent $5/54=(T(\mathbf6)/3)/b_0^{(3)}$ and electric weight $6\cdot(2/3)^2=8/3$ check; their quoted numerical values were not recomputed.
