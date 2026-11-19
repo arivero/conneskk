@@ -112,3 +112,6 @@ Also verified, pending flag kept: `two_endpoint_trace_matching`. The growth $M_W
 
 This supersedes the fourth-batch remark that the 106 numbers were not recomputed.
 | `hopf_soft_tensor_pair_current_benchmark` (107.4), checked in full | results/107 | Expanding the bracket gives $g^2(u+u^2/4)+g(u-u^2/2)+(3-u+u^2/4)$. The $g^2$ coefficient, by hand Simpson ($h=0.5$) on $\int_4^9$, is $0.246049/(48\pi)=0.0016317$ (stated $0.00163116$). The minimum is $c-b^2/4a=0.00036454$ and the value at $g=1$ is $0.00083231$. Charge weight $3(1/6)^2=1/12$. |
+| `lecture_faithful_isometries` (Exercise 11), checked in full | `paper/kk_strings_lecture.tex` | $(U(3)\times U(2))/\{(\lambda,\lambda^{-1})\}\cong S(U(3)\times U(2))$: trivial kernel, surjective via $\lambda=1/(\det A\det B)$. The invariant products $z_iw_a$ form $(\mathbf3,\mathbf2)$ with $Y=-\tfrac13+\tfrac12=\tfrac16$. The Euler class $h+k\equiv(1,1)$ mod 2 equals neither $w_2(\mathbb{CP}^2\times\mathbb{CP}^1)=(1,0)$ nor $0$, so the pullback of $w_2$ is nonzero. |
+
+Also verified, pending flag kept: in `hopf_local_full_boson_ordering` (104.5) the threshold is exact. At $\nu=8$, $u_\Sigma=55/3$: $\nu+u/2-\sqrt{u^2/4+8\nu}=103/6-73/6=5$, increasing for $\nu\ge8$. The fixed-shape estimate $(B/B_n)^9\ge(55/3)/1.80$ gives $B^{-1}\le3.63$ TeV. The vector-ordering part of the claim was not checked.

@@ -4082,7 +4082,6 @@ claim(lecture_faithful_isometries, proposition, proved, "Compact spaces lecture,
 source(lecture_faithful_isometries, 'paper/kk_strings_lecture.tex', '').
 attempted_by(lecture_faithful_isometries, gpt_6_2_astra_max).
 checked_by(lecture_faithful_isometries, gpt_6_2_astra_max, by_hand).
-referee_pending(lecture_faithful_isometries).
 addresses(t18, lecture_faithful_isometries).
 
 claim(gh1_berger_charge_kernel, proposition, proved, "Issue 1 section 4", "On round S5 the spin Dirac twisted by the dual spin bundle and the exterior Killing-spinor bundle has kernel exterior(4) and gap sqrt(5)/R. Under the rank-one stabilizer it is the colour and electric charge module of one all-left generation. A separately gauged projector masses six vector directions.").
@@ -4308,6 +4307,7 @@ referee_report('results/101_hopf_threshold_with_the_full_vortex_maxwell_field.md
 referee_report('results/106_hopf_tensor_scalar_gap_and_sextet_matching.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(hopf_soft_tensor_pair_current_benchmark, claude_opus_5_5, by_hand).
 referee_report('results/107_hopf_soft_tensor_mass_and_current.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(lecture_faithful_isometries, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
