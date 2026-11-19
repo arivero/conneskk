@@ -2732,7 +2732,6 @@ depends(nonround_flux_colour_gap, round_flux_product_gap).
 depends(nonround_flux_colour_gap, colour_wilson_lift).
 attempted_by(nonround_flux_colour_gap, gpt_6_2_astra_max).
 checked_by(nonround_flux_colour_gap, gpt_6_2_astra_max, by_hand).
-referee_pending(nonround_flux_colour_gap).
 addresses(t13, nonround_flux_colour_gap).
 addresses(t18, nonround_flux_colour_gap).
 
@@ -4310,6 +4309,8 @@ checked_by(vortex_axion_four_anomaly, claude_opus_5_5, by_hand).
 referee_report('results/80_axion_and_a_confining_mirror_sector.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(root_qcd_angle, claude_opus_5_5, by_hand).
 checked_by(finite_electric_matching, claude_opus_5_5, by_hand).
+checked_by(nonround_flux_colour_gap, claude_opus_5_5, by_hand).
+referee_report('results/69_gravitating_vortex_colour_gap.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
