@@ -42,3 +42,11 @@ At the start of a research step, state what varies, what stays fixed and which o
 The live set is `README.md`, `AGENTS.md`, `STRATEGY.md`, `INDEX.md`, `ledger.pl` (with `ledger_11d.pl`), `lemmas/`, `results/`, `paper/` (the papers, the supplement build and the two literature records `paper/LITERATURE.md` and `paper/NCG_HISTORY.md`), `current_framework.md` and the steer note. Every PDF in `docs/` is built from `lemmas/`, `results/` and `paper/` alone.
 
 `historical/` is never read into context: it holds the corpus the project started from, the referee reports, the prompts, the transcripts and the unfinished eleven-dimensional plan. It is provenance, cited through the rows of the ledger and the headers of the lemmas. A statement needed from a report is written into a lemma or a results file; a report is not consulted for it. A referee report is historical as soon as it has been inspected and applied: its corrections and proofs go into the lemma, its new insights that are not yet results go into the lemma's direction paragraph or into the STRATEGY row they bear on, as leads with the referee named, and the report itself stays as provenance only.
+
+## Integration without pull requests
+
+Integrate finished work directly on the default branch (`main` or
+`master`). Fast-forward when the history allows it, otherwise merge
+locally, then push the default branch. Do not open pull requests. A side
+branch is for work in progress only; merge it back as soon as the work
+is complete and delete it afterwards. User instruction of 20 November 2026.
