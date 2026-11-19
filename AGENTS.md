@@ -45,8 +45,9 @@ The live set is `README.md`, `AGENTS.md`, `STRATEGY.md`, `INDEX.md`, `ledger.pl`
 
 ## Integration without pull requests
 
-Integrate finished work directly on the default branch (`main` or
-`master`). Fast-forward when the history allows it, otherwise merge
-locally, then push the default branch. Do not open pull requests. A side
-branch is for work in progress only; merge it back as soon as the work
+Check GitHub's default branch with `gh repo view --json defaultBranchRef`.
+Integrate finished work directly on that branch, usually `main` or
+`master`. Fast-forward when the history allows it, otherwise merge
+locally, then push the default branch. Do not open pull requests.
+Use a side branch for work in progress only. Merge it back when the work
 is complete and delete it afterwards. User instruction of 20 November 2026.
