@@ -3144,7 +3144,6 @@ depends(spin_magnetic_surface_products, full_harmonic_flux_mass).
 depends(spin_magnetic_surface_products, projective_cjs_gauge_ratio).
 attempted_by(spin_magnetic_surface_products, gpt_6_2_astra_max).
 checked_by(spin_magnetic_surface_products, gpt_6_2_astra_max, by_hand).
-referee_pending(spin_magnetic_surface_products).
 addresses(t13, spin_magnetic_surface_products).
 addresses(t18, spin_magnetic_surface_products).
 
@@ -4303,6 +4302,8 @@ checked_by(hopf_integral_euler_flux_domain, claude_opus_5_5, by_hand).
 checked_by(hopf_global_locked_group_and_spin, claude_opus_5_5, by_hand).
 referee_report('results/108_hopf_global_flux_and_anomaly_domain.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 referee_report('results/95_coloured_threshold_in_the_quotient_tensor_action.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(spin_magnetic_surface_products, claude_opus_5_5, by_hand).
+referee_report('results/87_spin_magnetic_product_and_wrapped_membranes.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).

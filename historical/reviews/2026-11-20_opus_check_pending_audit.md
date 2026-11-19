@@ -89,3 +89,11 @@ Also verified, pending flag kept:
 | `hopf_integral_euler_flux_domain` (108.2) | results/108 | Gysin $H^5(E)\to H^0(Y)\xrightarrow{\cup c_3}H^6(Y)$: a unit fibre class exists iff $c_3=0$ integrally, with periods in $N\mathbb Z$ for torsion of order $N$. The mapping-torus example uses $c_3(TS^6)=\chi(S^6)=2$. |
 
 Also verified, pending flag kept: 98.1's determinant $7x^2+16x-144=0$ with $D_0=6/7$ and $\nu=3\lambda$ gives $m^2B^2=4(29-4\sqrt{67})/7$, given the general fluctuation equations of 64.1. In 106 the sextet exponent $5/54=(T(\mathbf6)/3)/b_0^{(3)}$ and electric weight $6\cdot(2/3)^2=8/3$ check; their quoted numerical values were not recomputed.
+
+## Fifth batch
+
+| Claim | Location | What was verified |
+|---|---|---|
+| `spin_magnetic_surface_products` (87.2), checked in full | results/87 | The four-form stress gives $\lambda_w=S/3$, $\lambda_5=-S/6$, $\lambda_i=(2g_i^2-g_j^2)/6$. Genus $0$: $t^3+2t^2-2t-1=(t-1)(t^2+3t+1)$, so $t=1$. Genus $g\ge2$: $g-1=t(t^2-2)/(2t^2-1)$, with derivative numerator $2t^4+t^2+2$; $t=42.0357$ gives $21.000$ for $g=22$. $M^2=4\pi^2\cdot12r^2/(4\pi r^2)^2=3/r^2$. The K3 remark is sound: $\mathcal R_X=\lvert G\rvert^2/3\ge0$ against $\hat A(\mathrm{K3})=2$ by Lichnerowicz. |
+
+Also verified, pending flag kept: in `hopf_nonround_covariant_core` (99.1) the colour estimate holds given the displayed quadratic forms. At $z=3$, $A_z=43.96$, $\lvert B_z\rvert\le9.6$, $Q_{DD}/\lambda=31.4$; after the Young splits the remaining $D^2$ coefficient is $26.75$; $T_c\le10.2\dot H^2+\dot D^2$ (negative discriminant); hence $Q_c\ge2\lambda T_c$. The $j=1$ entries $0.288$ and $14.46$ also hold. The forms themselves and the light-cone split were read, not re-derived.
