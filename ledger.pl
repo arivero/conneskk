@@ -3705,6 +3705,43 @@ addresses(t4, hopf_thomson_auxiliary_calibration).
 addresses(t13, hopf_thomson_auxiliary_calibration).
 addresses(t18, hopf_thomson_auxiliary_calibration).
 
+claim(hopf_full_maxwell_coexact_block, proposition, proved, "Proposition 101.1", "On the supported spin Hopf product with the prescribed quotient roots, volume orbit and two-period tensor, restoration of the vortex Maxwell Killing one-forms changes only the colour-Killing four-dimensional scalar block. Its canonical coexact form couples the metric, five-form and Maxwell variables through the stated nonnegative weak vortex form and constant colour squares. The sourced transverse weak pencil stays fixed.").
+source(hopf_full_maxwell_coexact_block, 'results/101_hopf_threshold_with_the_full_vortex_maxwell_field.md', 'the-adjoint-metric-five-form-and-maxwell-block').
+depends(hopf_full_maxwell_coexact_block, hopf_nonround_covariant_core).
+depends(hopf_full_maxwell_coexact_block, hopf_projected_nonround_boson).
+depends(hopf_full_maxwell_coexact_block, hopf_transverse_current_pencil).
+depends(hopf_full_maxwell_coexact_block, vortex_constraint_squares).
+attempted_by(hopf_full_maxwell_coexact_block, gpt_6_2_sol_ultra).
+checked_by(hopf_full_maxwell_coexact_block, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_full_maxwell_coexact_block).
+addresses(t4, hopf_full_maxwell_coexact_block).
+addresses(t14, hopf_full_maxwell_coexact_block).
+addresses(t18, hopf_full_maxwell_coexact_block).
+
+claim(hopf_full_maxwell_matched_threshold, proposition, proved, "Proposition 101.2 and the axial scalar limit", "When the first positive weak scalar Laplacian eigenvalue is at least f_S^2/I3, restoring the full vortex Maxwell field preserves the first coloured boson, including the calibrated crossing to the j=2 level. With the same horizontal fermion domain and mass schedule the six-flavour interval below the mirror threshold persists. The lowest restored coexact scalar has B^2 M^2 tending to 8 on fixed-shape shrink.").
+source(hopf_full_maxwell_matched_threshold, 'results/101_hopf_threshold_with_the_full_vortex_maxwell_field.md', 'the-calibrated-nonround-path').
+depends(hopf_full_maxwell_matched_threshold, hopf_full_maxwell_coexact_block).
+depends(hopf_full_maxwell_matched_threshold, hopf_nonround_boson_crossing).
+depends(hopf_full_maxwell_matched_threshold, hopf_mirror_particle_threshold).
+attempted_by(hopf_full_maxwell_matched_threshold, gpt_6_2_sol_ultra).
+checked_by(hopf_full_maxwell_matched_threshold, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_full_maxwell_matched_threshold).
+addresses(t4, hopf_full_maxwell_matched_threshold).
+addresses(t13, hopf_full_maxwell_matched_threshold).
+addresses(t14, hopf_full_maxwell_matched_threshold).
+addresses(t18, hopf_full_maxwell_matched_threshold).
+
+claim(hopf_full_maxwell_round_scalar, proposition, proved, "Proposition 101.3", "At exact round weak restoration in the same supported Hopf action, the additional weak degree-one coloured scalar triplet has squared mass lambda+mu-sqrt(lambda^2+mu^2), where lambda=8/B^2 and mu=1/a^2. The first positive coloured boson is the minimum of this scalar, the lower broken-Killing level and the j=2 vector level. The scalar can be first at large weak radius.").
+source(hopf_full_maxwell_round_scalar, 'results/101_hopf_threshold_with_the_full_vortex_maxwell_field.md', 'exact-round-scalar-and-the-large-weak-radius-comparison').
+depends(hopf_full_maxwell_round_scalar, hopf_full_maxwell_coexact_block).
+depends(hopf_full_maxwell_round_scalar, hopf_projected_nonround_boson).
+attempted_by(hopf_full_maxwell_round_scalar, gpt_6_2_sol_ultra).
+checked_by(hopf_full_maxwell_round_scalar, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_full_maxwell_round_scalar).
+addresses(t4, hopf_full_maxwell_round_scalar).
+addresses(t14, hopf_full_maxwell_round_scalar).
+addresses(t18, hopf_full_maxwell_round_scalar).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).

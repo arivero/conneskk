@@ -22,3 +22,4 @@ part "S251 (transverse currents on the spin Hopf product)" results/97_hopf_trans
 part "S252 (Hopf colour scalar stability and thresholds)" results/98_hopf_colour_scalar_stability_and_thresholds.md
 part "S253 (Nonround Hopf colour gap and vector crossing)" results/99_nonround_hopf_colour_gap_and_level_crossing.md
 part "S254 (Hopf light fermion window and hadronic calibration)" results/100_hopf_light_fermion_window_and_hadronic_calibration.md
+part "S255 (Hopf colour threshold with the full vortex Maxwell field)" results/101_hopf_threshold_with_the_full_vortex_maxwell_field.md
