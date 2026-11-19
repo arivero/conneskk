@@ -2957,7 +2957,6 @@ depends(vortex_axion_four_anomaly, vortex_mirror_anomalies).
 depends(vortex_axion_four_anomaly, vortex_flux_axion).
 attempted_by(vortex_axion_four_anomaly, gpt_6_2_astra_max).
 checked_by(vortex_axion_four_anomaly, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_axion_four_anomaly).
 addresses(t2, vortex_axion_four_anomaly).
 addresses(t18, vortex_axion_four_anomaly).
 
@@ -4309,6 +4308,8 @@ checked_by(lecture_shared_circle_resolution, claude_opus_5_5, by_hand).
 checked_by(two_endpoint_current, claude_opus_5_5, by_hand).
 checked_by(two_endpoint_face_current, claude_opus_5_5, by_hand).
 checked_by(two_endpoint_flavour_current, claude_opus_5_5, by_hand).
+checked_by(vortex_axion_four_anomaly, claude_opus_5_5, by_hand).
+referee_report('results/80_axion_and_a_confining_mirror_sector.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
