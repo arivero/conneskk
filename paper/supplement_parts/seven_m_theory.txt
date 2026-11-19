@@ -17,3 +17,4 @@ part "S243 (monopole charge and a chiral interval)" results/89_monopole_charge_a
 part "S244 (tensor anomaly completion)" results/90_a_tensor_completion_without_light_mirrors.md
 part "S245 (full K3 charge of a wrapped surface)" results/91_full_k3_charge_of_a_wrapped_surface.md
 part "S246 (finite electric and magnetic tensor match)" results/92_finite_electric_and_magnetic_tensor_match.md
+part "S248 (a supported spin Hopf trajectory)" results/94_spin_hopf_trajectory_and_its_charge_lift.md

@@ -1,0 +1,128 @@
+# A supported spin Hopf trajectory with a diagonal hypercharge lift
+
+Replace the projective product circle by the Hopf fibration and keep the polar vortex, the weak monopole degrees, $k=6$ and the normalization of the triplet colour generators. The internal manifold is the smooth spin product $S^5\times S^2$. We ask which fields can retain the root vacuum and the original electric charges, which action supports this product, and which scalar windows result. A five-form, an auxiliary gauge field and a fibration fermion domain are specified below. Their field equations are distinct from those of source-free eleven-dimensional supergravity.
+
+## Global charge on the Hopf circle
+
+Let $K$ generate the Hopf rotation, with geometric period $2\pi$. Write $P$ for its active weight on fields. Use the projective-lines convention, in which $H^0(\mathbb{CP}^2,\mathcal O(1))$ carries $\bar{\mathbf3}$. Thus a holomorphic degree-one scalar on the total space has active $P$-weight $-1$. Ordinary spinors have weights $m\in\mathbb Z+1/2$: the lift of a full Hopf turn rotates three real two-planes through $2\pi$ and gives the spin sign $-1$. With the Chern connection the horizontal spin$^c$ spinor at active weight $m$ is the canonical spinor twisted by $\mathcal O(-m-3/2)$. This follows from the determinant class $-2m h$ and the canonical determinant $3h$. On the weak sphere a vortex charge $N$ gives the additional line $\mathcal O(N-1)$ in the horizontal spinor kernel. [Circle spin structures and horizontal sectors](https://arxiv.org/abs/math/9812116) · [Hopf winding and spin conventions](issues/01.md#circle-duality-between-the-projective-product-and-the-berger-endpoint)
+
+A colour-invariant scalar function on $S^5=SU(3)/SU(2)$ is constant. The two roots with nonzero charges $\pm3$ therefore need a different coefficient space if colour is to remain invariant. The Hopf two-plane bundle has a global unit tensor $\Omega$ of active weight $+3$ and its conjugate of weight $-3$. For example use the conjugate of the restriction of $\iota_z(dz^1\wedge dz^2\wedge dz^3)$ to the horizontal complex tangent. It is $SU(3)$-invariant. The horizontal covariant derivative projected to its complex volume line vanishes. One way to check this is to differentiate in a horizontal direction $\zeta$ and restrict $\iota_\zeta(dz^1\wedge dz^2\wedge dz^3)$ to two horizontal complex vectors. All three are in a complex two-plane.
+
+**Proposition 94.1.** Introduce a compact auxiliary gauge group with generator $C$ and a weak-neutral tensor field $S$ of $C$-charge $-2$. Assign odd $C$ charge to the fermions and even charge to all bosons. On the vacuum $S=s_0\Omega$, $s_0\ne0$, the unbroken hypercharge generator is
+$$
+               Y=\frac{P+\tfrac32 C}{6}.
+$$
+In the horizontally projected Dirac domain specified below, there is one ordinary family with the full charge table and a right neutrino. The two scalar links can be chosen globally with the original weak monopole degrees and with $Q=T_3+Y$ unbroken.
+
+**Proof.** The vacuum $S$ transforms as $(P,C)=(3,-2)$. Its invariance imposes the ratio of infinitesimal generators above. After a full turn of $P+\frac32 C$ the spin sign is compensated by $\exp(3\pi i C)$. The combined circle therefore acts with integral weights on the field bundles. In the common spin–gauge action the central sign of the spin group can be identified with the order-two element of $C$. This changes the actual lift. Attaching a genuine circle-equivariant tensor of integer $P$-weight alone would preserve the half-integer spinor shift.
+
+Take each matter species in the indicated isotypic domain of the Hopf spin lift. Use the horizontal Dirac operator induced by the Chern connection, and select its ten-dimensional chirality on the directions horizontal to the Hopf circle. This is a prescribed fibration Dirac domain on the spin total space. It leaves out the ordinary vertical Dirac mass $m/B$ and the extra curvature term of the full untwisted eleven-dimensional Dirac operator. The Weyl constraint is also part of this domain. Serre duality gives colour $\mathbf3$ from $H^2(\mathcal O(-4))$ and a singlet from $H^2(\mathcal O(-3))$. The weak kernel $H^0(\mathcal O(N-1))$ has spin $(N-1)/2$. Both projective groups occur in the same horizontal parity. The following assignments now follow from the charges, including the independent requirement of ordinary external chirality:
+
+| Field | External chirality | $P$ | $C$ | Vortex $N$ | Colour and weak representation | $6Y$ |
+|---|---|---:|---:|---:|---|---:|
+| $Q_L$ | left | $5/2$ | $-1$ | 2 | $(\mathbf3,\mathbf2)$ | 1 |
+| $u_R$ | right | $5/2$ | $1$ | 1 | $(\mathbf3,\mathbf1)$ | 4 |
+| $d_R$ | right | $5/2$ | $-3$ | 1 | $(\mathbf3,\mathbf1)$ | $-2$ |
+| $L_L$ | left | $3/2$ | $-3$ | 2 | $(\mathbf1,\mathbf2)$ | $-3$ |
+| $e_R$ | right | $3/2$ | $-5$ | 1 | $(\mathbf1,\mathbf1)$ | $-6$ |
+| $\nu_R$ | right | $3/2$ | $-1$ | 1 | $(\mathbf1,\mathbf1)$ | 0 |
+
+For example $\nu_R$ is a spinor, a colour and weak singlet and a zero-weight state of the combined circle. Its vortex charge is one. It can source the vortex pole without sourcing the photon. The centre of colour is the Hopf turn of angle $2\pi/3$ on the manifold. Its colour spin lift differs from that Hopf lift by the sign, since the former has order three. The same sign is supplied by the auxiliary action in the combined turn. Consequently the combined integer weight is the triality modulo three. The weak-lift centre is $(-1)^{N-1}$ on the spinor kernels. The table has its expected parity against $6Y$. This checks both centres independently.
+
+Use the two root tensors $H_+=\Omega r_-$ and $H_-=\bar\Omega r_+$ with vortex charge one, $C$-charge zero and the opposite weak weights of the two degree-one sections. Here $r_+r_-=\Phi$ up to its real normalization. The two solutions are neutral under $Q$. For a gauge-invariant up or neutrino link contract $SH_-$ using the invariant pairing of the volume lines. For the down or electron link use $\bar S H_+$. Each contraction has zero Hopf weight, shifts $C$ respectively by $-2,+2$, and has the indicated weak degree one. The projective overlap is the identity on its colour representation. On the weak kernel multiplication by the root is the same nonvanishing spinor map as in 63.2. Both members of a left doublet have the same normalized projective and auxiliary factors, so a weak raising current has the original normalized weak matrix element. A quark Dirac mass thus pairs opposite external chiralities with equal colour and electric charge. The conjugate representations are obtained by the real charge-conjugate doubling used for the finite kernel in 63.2. Three copies and conjugate-chirality mirror fields are compatible with these assignments. Eliminating the mirrors with an anomaly cancellation mechanism for the two gauge directions before locking would be an additional step. $\square$
+
+## A source-supported spin product in a fixed action
+
+**Proposition 94.2.** There is an eleven-dimensional fibration action admitting unwarped Minkowski products with the round $S^5_B$ and the polar weak metric $a^2h_b$. On this family the Hopf oscillator and the two roots realize the vacuum of 94.1. The homogeneous colour radius and its dilaton satisfy one stationary equation, leaving a scale modulus. The leading colour and locked hypercharge kinetic coefficients are
+$$
+ I_3=\frac{CV B^2}{3},\qquad
+ I_Y=\frac{6I_3+\tfrac94 I_C}{k^2},\qquad I_C=CV Z_C .
+$$
+In particular one can set the positive auxiliary coefficient to match $I_Y>6I_3/k^2$.
+
+**Proof.** For the colour factor use a closed, quantized five-form $F_5=Q_5\,\mathrm{vol}_{S^5,\,1}$, a scalar $\sigma$ with positive kinetic term and terms
+$$
+ -2U_0 e^{-2\sigma}
+ -\tfrac12 Z_0 e^{8\sigma}|F_5|^2
+$$
+inside the common Einstein action. This is a field of the specified effective model with an independent four-form potential. Choose $B_0>0$, $Z_0 Q_5^2=8 B_0^8$ and $U_0=8/B_0^2$. At $B=B_0e^\sigma$ write $f_5=Q_5/B^5$. Then $U_0 e^{-2\sigma}=Z_0e^{8\sigma} f_5^2$ and derivatives of the two terms cancel in the constant $\sigma$ equation. In eleven dimensions the trace-reversed contribution in directions transverse to a magnetic five-form is proportional to $2U-2Zf_5^2$, which vanishes. Inside the round factor the remaining Ricci coefficient is $Z f_5^2/2=4/B^2$. The five-form equation holds since its dual at fixed radii is a product of closed volume forms. Give the weak fields the two-dimensional vortex completion of 62.1. Its trace-reversed contribution is zero in the nine longitudinal directions and it supplies the polar weak curvature.
+
+The new bosonic fields can have positive external kinetic terms on the prescribed Hopf splitting and internal positive squares imposing their volume-line projection, the horizontal parallel derivative on the Hopf factor and their fixed Hopf Lie weights. On the weak factor impose the covariant holomorphic derivative for the roots, ordinary constancy for $S$, and the product constraint from 63 expressed with the dual-volume-line pairing. Add a positive potential with minimum $|S|=s_0$. The background just constructed has every added square zero. The auxiliary Maxwell field has zero background curvature. Thus their first variations, including metric variations of the internal squares, vanish on the background. This gives one fixed action with the asserted vacua. The specified projectors and the massless-plus-chiral fermion domain are fibration data. The construction does not assert stability of every nonhomogeneous polarization. As a homogeneous test the radius potential at fixed weak factors, before the common positive Weyl rescaling, is $4e^{-2\sigma}(t^5-5t+4)/B_0^2$ for $t=B_0^2 e^{2\sigma}/B^2$. It has a positive transverse Hessian at its zero minimum. This tests the colour breathing combination and exhibits the free scale direction.
+
+The connected isometries of the round factor preserving the volume tensor of $S$ up to its auxiliary gauge factor are $U(3)$. The tensor determines the real Hopf line as its kernel in the tangent space. A connected orthogonal transformation preserving that line commutes with the ambient complex structure. The auxiliary transformation then compensates the Hopf phase. If external derivatives include the action on the full tensor, the six rotation directions outside $\mathfrak u(3)$ vary this tensor by a component perpendicular to its phase. Their kinetic square gives a positive mass on these directions. The independent phase $3A_P-2A_C$ has a positive Higgs stiffness. This is the symmetry and mass test on the Killing sector.
+
+For a Killing field on round $S^5$ the Einstein inverse kinetic coefficients are $CVB^2/6$ for a fundamental-normalized colour generator and $CVB^2$ for the unit Hopf generator. To retain the five-form, solve the equation for a coexact three-form $d\beta_K=\iota_K F_5$. The Ricci eigenvalue $\lambda_5=4/B^2$ gives $\delta d K^\flat=2\lambda_5 K^\flat$. This yields $\|\beta_K\|^2=f_5^2\|K\|^2/(2\lambda_5)$. Since $Zf_5^2=2\lambda_5$, it doubles each norm. Restricting the remaining diagonal connection to $(A_P,A_C)=(1,\frac32)A_Y/k$ gives the formula for $I_Y$. $\square$
+
+## The scalar windows with a fixed photon input
+
+**Proposition 94.3.** Use the bosonic action of 94.2, and if desired retain the two-period weak tensor in the quotient-field prescription. Set its fixed coefficients as in 93. At each polar member where the available photon norm is positive, a flat auxiliary modulus can give the same tree photon norm as the sphere varies. After keeping a finite meridian segment, shrinking the weak sphere at fixed shape yields the charged scalar tower of $S^5$ with $Q$-unit $1/k$ at lowest nonzero momentum. With the weak sphere round the restored action has the weak rotations and the locked hypercharge.
+
+**Proof.** Give the auxiliary Maxwell coefficient the fixed dependence $Z_C=\zeta_C B_0^2 e^{2\sigma+\tau}$ with $\zeta_C>0$ and a scalar $\tau$ having positive kinetic term. The background auxiliary curvature is zero, so constant $\tau$ is arbitrary. Fix $I_3$ using $CV B^2=3I_3$, which fixes $B^7 a^2D_b$ and thereby $B(a,b)$ in the common action. In the broken sector the old scalar root invariance gives $Q=K_3+Y$. At zero external curvature the compensator for the weak sphere tensor is the same one as in 93. The five-form is confined to the colour factor. Hence the total inverse photon norm is
+$$
+ I_Q=\frac{6 I_3}{k^2}
+     +\frac{27 I_3\zeta_C e^\tau}{4k^2}
+     +CV a^2 J_b+ I_T(b).
+$$
+Set $I_T=0$ in the action without the quotient tensor. At each member with $I_Q-6I_3/k^2-CV a^2J_b-I_T>0$ there is a unique value of $\tau$ for the fibre-independent backgrounds with this tree input. Along a fixed-shape shrink $B\asymp a^{-2/7}$ and $CVa^2\to0$. The common generator on the pole spinors is independent of $\tau$. This is a choice along a flat family by matching, with no claim that the equations select its physical value.
+
+The product scalar Laplacian separates. In the Hopf sector of weight $n$, the spherical harmonics of total degree $j=|n|+2s$ are restrictions of harmonic polynomials of bidegree $(s,s+|n|)$ or its conjugate. Their squared masses are $j(j+4)/B^2$. Each weak-sphere eigenvalue contributes its squared mass independently. In the sphere-constant sector the lowest charge-one Hopf momentum has physical charge $\pm1/k$ and squared mass $5/B^2$. Its colour representation is a triplet or antitriplet, fixed by the sign of the Hopf weight and the colour centre. This differs from the colour singlet at the first product-circle level. The entire sphere-mean-zero scalar space has gap of order $1/a$ at fixed shape. At fixed physical meridian length the axial and azimuthal eigenvalues of the weak metric have the same separation as in 93 while the five-sphere levels vary with $B$. This gives a finite sixth-direction window before shrinking the whole weak sphere. At high energy a smooth finite member has seven resolved internal directions. The estimates concern scalar probes of the product metric. The first omitted coloured state of the full field theory also requires vector and matter spectral bounds. $\square$
+
+For a numerical geometric comparison start at $a=0.00011111$ GeV$^{-1}$ and $CV=7.063\times10^7$ GeV$^2$, the weak quantities of the lower $500$ GeV polar branch in 92. Take the reference $I_3=0.76985$. The Hopf radius is now $B^{-1}\simeq5.53$ TeV. Use a fixed meridian $d=0.00049363$ GeV$^{-1}$. At $b=0.001$, the same flux and Einstein action gives $B^{-1}\simeq4.73$ TeV. The first charged five-sphere scalar is at about $10.6$ TeV and the first three meridian modes are near $7.06,14.03,20.87$ TeV, while the weak azimuthal gap is at least $26.7$ TeV. The positive auxiliary coefficient required to maintain the same photon norm exists over this finite path and the subsequent uniform shrink. For example on the fixed-meridian segment $B^7 a^2D_b$ is fixed, $D_b\le\sqrt2 P_b$, and $B$ can fall relative to the initial fit by at most the factor $(D_{\rm fit}/(\sqrt2P_{\rm fit}))^{1/7}>0.93$. Then the weak term $CVa^2J_b$ stays below $4.1$, using $J_b\le4$. The tensor cost is at most $0.190$ there. The total tree input near $10.20$ leaves a positive margin for the auxiliary term. No weak-pole refit is assumed in these numbers. The heavy locking sector and the now nontrivial Hopf profile enter the finite transverse inverse, and the spectrum below its coloured threshold must be re-established. The reduced gravitational coefficient here satisfies $M_4^2B^2=6I_3$ and is still far below the measured gravity coefficient at the quoted radius.
+
+## The locking vector in the light neutral approximation
+
+**Proposition 94.4.** In the leading near-round light-vector reduction, keep the two Abelian connections of the locking mechanism before eliminating a massive combination. Let $f_S^2$ be the kinetic stiffness of its phase. At equal norms of the two weak roots and with the two-period tensor, the neutral inverse has positive solutions fitted to the same five central weak inputs as 92. The locking direction supplies an independent sterile pole and contributes $+6v_F^2/f_S^2$ to the tree sum of the proton and electron weak charges.
+
+**Proof.** Let $w,p,c,V$ be the connections along $T_3,P,C$ and the vortex. Use $A_Q=kp$, $z=w-kp$, $s_\ell=3p-2c$ as coordinates in the first three fields. Write $s=I_W/I_Q$ for the sine-squared parameter of the photon projection. Put $v_h^2$ for the root stiffness, $v_F^2-v_h^2$ for the axial vortex order parameter and $v_A^2$ for the sum of the two tensor contributions. The neutral mass diagonal off the photon is $(v_h^2/4,f_S^2,v_F^2+v_A^2)$ by the root charges of 94.1 and the two tensor periods. The weak charge raising channel gives $I_W=v_F^2/(4 M_C^2)$ at leading order. Set $I_P=6I_3$ and choose $I_C$ from $I_Y=I_W(1-s)/s$ as in 94.2. Projecting off the photon in its kinetic inner product gives the $(z,s_\ell)$ kinetic block
+$$
+ K=\begin{pmatrix}
+ I_W(1-s)& I_W\eta\\
+ I_W\eta & I_C/4-I_Q\eta^2
+ \end{pmatrix},
+ \qquad \eta=\frac{3I_C}{4kI_Q}.
+$$
+The vortex remains a separate constant mode. In the $s_\ell$ coordinate a fermion with auxiliary charge $q_C$ and electric charge $Q$ has source $-q_C/2+\eta Q$. For $\nu_L$ this is $3/2$. For $e_L,e_R$ the sources are $3/2-\eta$ and $5/2-\eta$. Thus, with $\rho=v_F^2/v_h^2$ and $d_v=v_F^2/(v_F^2+v_A^2)$,
+$$
+ \begin{aligned}
+ g_L&=\rho(-1/2+s)+2d_v+\frac{3v_F^2}{4f_S^2}(3/2-\eta),\\
+ g_R&=\rho s+d_v+\frac{3v_F^2}{4f_S^2}(5/2-\eta).
+ \end{aligned}
+$$
+For the combined weak charge, the summed left and right $C$-charges on $2u+d+e$ are $-12$. Their total electric charge vanishes, and the electron axial source difference along $s_\ell$ is $-1$. The standard normalization of 81 then gives $Q_W^p+Q_W^e=-12d_v+6v_F^2/f_S^2$.
+
+Fix the observed $M_Z$ by the determinant of $\operatorname{diag}(v_h^2/4,f_S^2)-M_Z^2K$. It sets $v_h^2/4=M_Z^2K_{zz}+M_Z^4K_{zs_\ell}^2/(f_S^2-M_Z^2K_{s_\ell s_\ell})$. The axial scattering coefficient then gives $d_v$, and the vector coefficient fixes $s$. At fixed $Z_6$ the reconstructed $v_A$ determines the round weak radius. The weak norm from 92 sets $CV$ and colour gives $B$. The sterility test follows directly from the sources. On $\nu_R$ both $T_3$ and $Q$ vanish, but its $s_\ell$ and vortex sources are $1/2$ and $1$. The heavy locking pole couples to it, and the light neutral pole has a small kinetic admixture. $\square$
+
+**Numerical calculation of the leading light matrix (Python, SciPy).** For $I_3=0.76985$, $Z_6=0.49604$ and $f_S=5000$ GeV this gives $I_C=124.19$, $r^{-1}=6.34$ TeV, $B^{-1}=5.51$ TeV, $e_*^2=0.097666$, and masses $M_{s_\ell}=7.045$ TeV and $M_v=1.660$ TeV. The $Z$ pole angle measured by its two lepton residues is $0.22999$. Its right-neutrino vertex has magnitude $0.00044$, which distinguishes it from the separate reflection-even pure vortex comparison. Varying the locking stiffness to $4377.59$ GeV while refitting the same five central observables gives a vanishing $Q_W^p+Q_W^e$ at Born order, with positive root stiffness and $M_{s_\ell}=6.170$ TeV. The latter value is a choice of a tree weak-charge target. A measurement includes loops and box terms. The oscillator is heavy relative to the weak poles, but the full Hopf radial inverse and its additional shells were not used in this fit. The numbers are leading-model inputs for that next calculation. [Light-matrix reproducer](../paper/hopf_charge_match.py)
+
+## Charged colour vectors from the broken round isometries
+
+**Proposition 94.5.** In the round restored weak sector, retain the transverse Killing vectors of the round five-sphere and the five-form polarizations with the stated minimal kinetic terms. The six generators of $\mathfrak{so}(6)/\mathfrak u(3)$ form $\bar{\mathbf3}_{1/3}+\mathbf3_{-1/3}$ under colour and the locked Abelian charge. With $\lambda_\beta=8/B^2$ their vector and coexact form block has squared-mass matrix
+$$
+ \begin{pmatrix}
+ \lambda_\beta+f_S^2/I_3&-\lambda_\beta\\
+ -\lambda_\beta&\lambda_\beta
+ \end{pmatrix}.
+$$
+This identifies an omitted colour-vector threshold in the stated transverse block. The entire coloured spectrum requires a comparison of the other blocks as well.
+
+**Proof.** The complexified broken generators have the two-form degree $\Lambda^2\mathbf3$ and its conjugate, hence active Hopf weights $\pm2$. The auxiliary charge of a metric vector is zero. A real generator in the broken space can be taken as $\delta z_1=\bar z_2,\ \delta z_2=-\bar z_1,\ \delta z_3=0$. Its mean squared Killing norm is $2B^2/3$ since its generator rotates two real two-planes with unit angular speed. The squared mean variation of the unit volume tensor is two. Indeed the ambient holomorphic three-form has two orthogonal terms of equal norm in its variation under this generator. Restriction of the radial contraction multiplies each ambient squared norm by $3/6$ on spherical averaging, including for the background itself. The variation is orthogonal to the phase of $S$. Hence it contributes the stiffness $2f_S^2$ in the original metric-vector basis.
+
+The relevant coexact form profile is the one in 94.2. Its internal squared eigenvalue is $2\lambda_5=\lambda_\beta$, and its canonical inverse kinetic coefficient equals the metric one, $2CVB^2/3=2I_3$. The gauge-invariant flux mass square is the difference of its coefficient and the metric coefficient, with prefactor $2I_3\,\lambda_\beta$. Canonical normalization and the $S$ term give the matrix. The two modes are closed within this transverse sector. For example under the $U(2)$ isotropy on $S^5=U(3)/U(2)$ the positive-charge broken representation restricts to $\det\oplus\mathbf2$, while the complex tangent restricts to $\mathbf1\oplus\mathbf2\oplus\bar{\mathbf2}$. The multiplicity in vector fields is one and that in scalar fields is zero. In degree three on the five-sphere its coexact multiplicity is one, since degree four is dual to the tangent multiplicity and this nontrivial representation has zero cohomology. The minimal five-form kinetic term separates exact tensor components from this coexact mode. The weak-singlet sector on the restored sphere restricts to its constant profiles in these fields. $\square$
+
+Inserting the radii and $f_S=5000$ GeV from the light weak comparison gives a lower pole near $4.0$ TeV, below the first charged scalar at about $12.3$ TeV. This is an estimate using the weak-fit geometry at nearby restoration, not an identification of the first coloured state at any deformation. If the fixed external coefficient of $S$ is chosen to scale as $e^{2\sigma}$, the matched product has fixed $f_S^2$ and the lower eigenvalue of this comparison matrix has scale $8/B^2$ when $B$ grows large. The associated metric overlap tends to zero, while its colour action as a form polarization remains. [Reproducer](../paper/hopf_charge_match.py)
+
+## The homogeneous source-free supergravity comparison
+
+**Proposition 94.6.** At weak restoration, take an unwarped $S^5_{B,L}\times S^2_r$ with standard $SU(3)$ transitive on the Berger five-sphere and the full geometric weak rotation group on the other factor. In two-derivative source-free eleven-dimensional supergravity with a maximally symmetric four-space, every invariant solution in this class has zero internal four-form. It is the electric Freund–Rubin round product. The additional five-form stress of 94.2 changes these equations.
+
+**Proof.** Use physical orthonormal forms $J,\omega$ for the horizontal projective Kähler form and the weak area form. Write $\eta$ for the unit Hopf one-form and $c=2L/B^2$, so $d\eta=cJ$. The weak-group invariant form degrees on the weak sphere are zero and two. The $SU(3)$ invariant horizontal two-forms on $S^5$ are $J,\operatorname{Re}\Omega,\operatorname{Im}\Omega$. Closure of the full four-form excludes the last two tensored with $\omega$, since their Hopf derivatives are nonzero and no other invariant mixed component cancels them. The invariant four-forms on $S^5$ are multiples of $J^2$. Therefore one can take
+$$
+ G_4=f\,\mathrm{vol}_4+g_1 J^2/2+g_2 J\wedge\omega .
+$$
+Here there is no warp factor varying on the invariant product. The internal equation $d*_7G_{\rm int}+fG_{\rm int}=0$, with a possible simultaneous change of orientation, is
+$$
+ f g_1+2c g_2=0,\qquad f g_2+c g_1=0 .
+$$
+A nonzero internal solution requires $f^2=2c^2$. Along the Hopf direction the internal form has no contraction. Its Einstein contribution to $\operatorname{Ric}_{55}$ is $(f^2-g_1^2-2g_2^2)/6$, which is at most $c^2/3$ on that branch. The actual Hopf Ricci coefficient is $c^2$, by the circle curvature formula. This rules out the nonzero internal branch. With $g_1=g_2=0$ the Einstein equations give a round five-sphere and $B=2r$. Its volume-preserving product breathing mode has $m^2 L_{\rm AdS}^2=-3$ as in the electric calculation in the M-theory paper. This proof covers the stated transitive and unwarped metric and the ordinary source-free Chern term. Warping or changing the geometry, adding sources and completing the dressed matter by a bulk gauge system require different equations. [Eleven-dimensional supergravity action](https://doi.org/10.1016/0370-2693(78)90894-8) $\square$
+
+**Provenance.** Fixed-action spin comparison, global charge lift, scalar spectra and homogeneous supergravity test by gpt-6.2-sol ultra. Independent scientific review is pending.

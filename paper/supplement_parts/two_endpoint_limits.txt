@@ -18,3 +18,5 @@ part "S240 (wrapped string and weak roots)" results/86_wrapped_string_and_the_tw
 part "S244 (tensor anomaly completion)" results/90_a_tensor_completion_without_light_mirrors.md
 part "S246 (finite electric and magnetic tensor match)" results/92_finite_electric_and_magnetic_tensor_match.md
 part "S247 (tensor photon and the charged pole at five)" results/93_tensor_photon_and_the_five_dimensional_pole.md
+part "S249 (coloured threshold in the quotient tensor action)" results/95_coloured_threshold_in_the_quotient_tensor_action.md
+part "S250 (photon thresholds from vectors and spectators)" results/96_photon_thresholds_from_vectors_and_spectators.md

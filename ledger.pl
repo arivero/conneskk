@@ -3396,6 +3396,152 @@ addresses(t13, dual_tensor_finite_neck).
 addresses(t14, dual_tensor_finite_neck).
 addresses(t18, dual_tensor_finite_neck).
 
+claim(hopf_diagonal_hypercharge, proposition, proved, "Proposition 94.1", "An auxiliary charge minus two tensor of Hopf weight three locks Y=(P+3 C/2)/6. On the specified horizontal isotypic Dirac domain the spin lift and weak monopole kernels furnish the ordinary family and right neutrino with neutral weak root links.").
+source(hopf_diagonal_hypercharge, 'results/94_spin_hopf_trajectory_and_its_charge_lift.md', 'global-charge-on-the-hopf-circle').
+depends(hopf_diagonal_hypercharge, vortex_root_domain).
+depends(hopf_diagonal_hypercharge, particle_lifts_table).
+attempted_by(hopf_diagonal_hypercharge, gpt_6_2_sol_ultra).
+checked_by(hopf_diagonal_hypercharge, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_diagonal_hypercharge).
+addresses(t11, hopf_diagonal_hypercharge).
+addresses(t17, hopf_diagonal_hypercharge).
+addresses(t18, hopf_diagonal_hypercharge).
+
+claim(hopf_supported_spin_product, proposition, proved, "Proposition 94.2", "The specified eleven-dimensional fibration action with an independent five-form, dilaton and auxiliary field admits unwarped Minkowski products on round S5 times a polar weak sphere. It has I3=CV B^2/3 and IY=(6 I3+9 IC/4)/k^2 and leaves a homogeneous scale modulus.").
+source(hopf_supported_spin_product, 'results/94_spin_hopf_trajectory_and_its_charge_lift.md', 'a-source-supported-spin-product-in-a-fixed-action').
+depends(hopf_supported_spin_product, hopf_diagonal_hypercharge).
+depends(hopf_supported_spin_product, shared_polar_solution).
+attempted_by(hopf_supported_spin_product, gpt_6_2_sol_ultra).
+checked_by(hopf_supported_spin_product, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_supported_spin_product).
+addresses(t11, hopf_supported_spin_product).
+addresses(t13, hopf_supported_spin_product).
+addresses(t18, hopf_supported_spin_product).
+
+claim(hopf_scalar_windows, proposition, proved, "Proposition 94.3", "In the supported spin action a flat auxiliary modulus matches any positive residual tree photon budget. At fixed shape the weak-metric shrink gives the charged round S5 scalar tower, with first Hopf momentum at absolute charge 1/k and squared mass 5/B^2. A finite six-direction scalar window and an upper round weak restoration occur along the matched family.").
+source(hopf_scalar_windows, 'results/94_spin_hopf_trajectory_and_its_charge_lift.md', 'the-scalar-windows-with-a-fixed-photon-input').
+depends(hopf_scalar_windows, hopf_supported_spin_product).
+depends(hopf_scalar_windows, dual_tensor_photon_cost).
+depends(hopf_scalar_windows, dual_tensor_finite_neck).
+attempted_by(hopf_scalar_windows, gpt_6_2_sol_ultra).
+checked_by(hopf_scalar_windows, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_scalar_windows).
+addresses(t13, hopf_scalar_windows).
+addresses(t14, hopf_scalar_windows).
+addresses(t18, hopf_scalar_windows).
+
+claim(hopf_locking_weak_charges, proposition, proved, "Proposition 94.4", "The specified leading near-round neutral pencil has positive branches fitting the five central weak inputs. Its locking direction adds an independent sterile pole and contributes +6 v_F^2/f_S^2 to the combined tree proton and electron weak charge. This uses the light reduction.").
+source(hopf_locking_weak_charges, 'results/94_spin_hopf_trajectory_and_its_charge_lift.md', 'the-locking-vector-in-the-light-neutral-approximation').
+depends(hopf_locking_weak_charges, hopf_diagonal_hypercharge).
+depends(hopf_locking_weak_charges, hopf_supported_spin_product).
+depends(hopf_locking_weak_charges, dual_tensor_round_poles).
+depends(hopf_locking_weak_charges, neutral_target_parity).
+attempted_by(hopf_locking_weak_charges, gpt_6_2_sol_ultra).
+checked_by(hopf_locking_weak_charges, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_locking_weak_charges).
+addresses(t4, hopf_locking_weak_charges).
+addresses(t13, hopf_locking_weak_charges).
+addresses(t18, hopf_locking_weak_charges).
+
+claim(hopf_broken_colour_vectors, proposition, proved, "Proposition 94.5", "At the round restored member the broken SO(6)/U(3) generators give charged triplet and antitriplet vectors. The two-mode transverse Killing and five-form block has diagonal entries 8/B^2+f_S^2/I3 and 8/B^2 with off-diagonal entry -8/B^2. The block identifies an omitted threshold candidate.").
+source(hopf_broken_colour_vectors, 'results/94_spin_hopf_trajectory_and_its_charge_lift.md', 'charged-colour-vectors-from-the-broken-round-isometries').
+depends(hopf_broken_colour_vectors, hopf_supported_spin_product).
+depends(hopf_broken_colour_vectors, hopf_locking_weak_charges).
+attempted_by(hopf_broken_colour_vectors, gpt_6_2_sol_ultra).
+checked_by(hopf_broken_colour_vectors, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_broken_colour_vectors).
+addresses(t4, hopf_broken_colour_vectors).
+addresses(t14, hopf_broken_colour_vectors).
+addresses(t18, hopf_broken_colour_vectors).
+
+claim(hopf_source_free_freund_rubin, proposition, proved, "Proposition 94.6", "At restored weak symmetry, for the stated invariant unwarped Berger-S5 times round-S2 class with a maximally symmetric external four-space, the two-derivative source-free eleven-dimensional supergravity equations require zero internal four-form and give the electric Freund-Rubin round product.").
+source(hopf_source_free_freund_rubin, 'results/94_spin_hopf_trajectory_and_its_charge_lift.md', 'the-homogeneous-source-free-supergravity-comparison').
+depends(hopf_source_free_freund_rubin, spin_seven_periods).
+attempted_by(hopf_source_free_freund_rubin, gpt_6_2_sol_ultra).
+checked_by(hopf_source_free_freund_rubin, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_source_free_freund_rubin).
+addresses(t11, hopf_source_free_freund_rubin).
+addresses(t18, hopf_source_free_freund_rubin).
+
+claim(quotient_tensor_colour_gap, proposition, proved, "Proposition 95.1", "A specified quotient tensor and fibre projection leave the prior coloured quadratic operator unchanged. The stated gap inequality holds uniformly along the calibrated finite neck and fixed-shape shrink, making the first extra coloured boson the gluon circle harmonic at 1/L in this quotient action.").
+source(quotient_tensor_colour_gap, 'results/95_coloured_threshold_in_the_quotient_tensor_action.md', 'exact-coloured-hessian-in-a-mixed-dimensional-action').
+depends(quotient_tensor_colour_gap, rooted_colour_gap).
+depends(quotient_tensor_colour_gap, dual_tensor_transverse_pencil).
+depends(quotient_tensor_colour_gap, dual_tensor_finite_neck).
+attempted_by(quotient_tensor_colour_gap, gpt_6_2_sol_ultra).
+checked_by(quotient_tensor_colour_gap, gpt_6_2_sol_ultra, by_hand).
+referee_pending(quotient_tensor_colour_gap).
+addresses(t4, quotient_tensor_colour_gap).
+addresses(t13, quotient_tensor_colour_gap).
+addresses(t14, quotient_tensor_colour_gap).
+addresses(t18, quotient_tensor_colour_gap).
+
+claim(quotient_tensor_free_fermion_shells, proposition, proved, "Proposition 95.2", "In the stated minimal Dirac actions without mass mixing, the vortex-neutral spectator has mass at least 1/(2 sqrt(2) a) and an excited degree-two spinor at least sqrt(15/512)/a. Together with the degree-one complement these free shells lie above the circle along the quotient path.").
+source(quotient_tensor_free_fermion_shells, 'results/95_coloured_threshold_in_the_quotient_tensor_action.md', 'fermion-excitations-in-this-prescription').
+depends(quotient_tensor_free_fermion_shells, vortex_neutral_spectator_tensor).
+depends(quotient_tensor_free_fermion_shells, quotient_tensor_colour_gap).
+depends(quotient_tensor_free_fermion_shells, matched_colour_trajectory).
+attempted_by(quotient_tensor_free_fermion_shells, gpt_6_2_sol_ultra).
+checked_by(quotient_tensor_free_fermion_shells, gpt_6_2_sol_ultra, by_hand).
+referee_pending(quotient_tensor_free_fermion_shells).
+addresses(t3, quotient_tensor_free_fermion_shells).
+addresses(t13, quotient_tensor_free_fermion_shells).
+addresses(t18, quotient_tensor_free_fermion_shells).
+
+claim(local_tensor_mixing_comparison, proposition, proved, "Result 95, local tensor countertest", "In the specified local transverse comparison a nonzero magnetic coupling to a massive two-form lowers one positive eigenvalue below the bare internal eigenvalue. The quotient proof alone gives no corresponding gap bound in an unrestricted higher-dimensional mode space.").
+source(local_tensor_mixing_comparison, 'results/95_coloured_threshold_in_the_quotient_tensor_action.md', 'a-local-tensor-countertest').
+depends(local_tensor_mixing_comparison, dual_tensor_transverse_pencil).
+depends(local_tensor_mixing_comparison, quotient_tensor_colour_gap).
+attempted_by(local_tensor_mixing_comparison, gpt_6_2_sol_ultra).
+checked_by(local_tensor_mixing_comparison, gpt_6_2_sol_ultra, by_hand).
+referee_pending(local_tensor_mixing_comparison).
+addresses(t4, local_tensor_mixing_comparison).
+addresses(t18, local_tensor_mixing_comparison).
+
+claim(background_weak_multiplet_threshold, proposition, proved, "Proposition 96.1", "In the minimal one-doublet comparison and quantum Feynman gauge, the Abelian background-field W, Goldstone and ghost shift has the equal-mass Feynman-parameter weight 8-3(1-2x)^2. This gives a finite scheme-specific benchmark between the spacelike matching points.").
+source(background_weak_multiplet_threshold, 'results/96_photon_thresholds_from_vectors_and_spectators.md', 'a-calculable-light-weak-gauge-contribution').
+depends(background_weak_multiplet_threshold, finite_electric_matching).
+depends(background_weak_multiplet_threshold, dual_tensor_finite_fit).
+attempted_by(background_weak_multiplet_threshold, gpt_6_2_sol_ultra).
+checked_by(background_weak_multiplet_threshold, gpt_6_2_sol_ultra, by_hand).
+referee_pending(background_weak_multiplet_threshold).
+addresses(t4, background_weak_multiplet_threshold).
+addresses(t13, background_weak_multiplet_threshold).
+addresses(t18, background_weak_multiplet_threshold).
+
+claim(positive_proca_current_comparison, proposition, proved, "Result 96, positive-current spin-one comparison", "In the stipulated pointlike on-shell Proca charge-plus-Pauli current, the finite pair window has distinct transverse, mixed and longitudinal contributions and a positive spectral density. The resulting window bound applies to that current and its chosen support.").
+source(positive_proca_current_comparison, 'results/96_photon_thresholds_from_vectors_and_spectators.md', 'a-positive-current-spin-one-comparison').
+depends(positive_proca_current_comparison, background_weak_multiplet_threshold).
+attempted_by(positive_proca_current_comparison, gpt_6_2_sol_ultra).
+checked_by(positive_proca_current_comparison, gpt_6_2_sol_ultra, by_hand).
+referee_pending(positive_proca_current_comparison).
+addresses(t4, positive_proca_current_comparison).
+addresses(t13, positive_proca_current_comparison).
+addresses(t18, positive_proca_current_comparison).
+
+claim(spectator_photon_subtraction_bound, proposition, proved, "Proposition 96.2", "For the round-sphere minimal neutral spectators in the quotient action, the nonlocal remainder after fixing local terms through squared spacelike t is absolutely convergent and is bounded by the stated constant times (Q r)^6. The finite local coefficients are independent data.").
+source(spectator_photon_subtraction_bound, 'results/96_photon_thresholds_from_vectors_and_spectators.md', 'the-vortex-neutral-spectator-shells').
+depends(spectator_photon_subtraction_bound, vortex_neutral_spectator_tensor).
+depends(spectator_photon_subtraction_bound, quotient_tensor_free_fermion_shells).
+attempted_by(spectator_photon_subtraction_bound, gpt_6_2_sol_ultra).
+checked_by(spectator_photon_subtraction_bound, gpt_6_2_sol_ultra, by_hand).
+referee_pending(spectator_photon_subtraction_bound).
+addresses(t4, spectator_photon_subtraction_bound).
+addresses(t13, spectator_photon_subtraction_bound).
+addresses(t18, spectator_photon_subtraction_bound).
+
+claim(thomson_radius_matching, proposition, conditional, "Result 96, matching the Thomson charge", "Given a specified small smooth threshold function in a common scheme and positive residual photon coefficient, the fixed-colour geometric derivative -14 I_chi-2 I_varphi provides a unique nearby physical-charge calibration of the two radii. Bounded threshold corrections leave the asymptotic long-neck obstruction in the stated action.").
+source(thomson_radius_matching, 'results/96_photon_thresholds_from_vectors_and_spectators.md', 'matching-the-thomson-charge-along-the-path').
+depends(thomson_radius_matching, dual_tensor_photon_cost).
+depends(thomson_radius_matching, quotient_tensor_colour_gap).
+depends(thomson_radius_matching, finite_electric_matching).
+attempted_by(thomson_radius_matching, gpt_6_2_sol_ultra).
+checked_by(thomson_radius_matching, gpt_6_2_sol_ultra, by_hand).
+referee_pending(thomson_radius_matching).
+addresses(t4, thomson_radius_matching).
+addresses(t13, thomson_radius_matching).
+addresses(t18, thomson_radius_matching).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).

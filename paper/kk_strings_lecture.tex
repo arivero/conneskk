@@ -414,6 +414,22 @@ Set $u=\alpha-\theta_e$ and $v_m=\theta_m-7\theta_e$. Each is an independent ang
 
 The determinant comes from a specified effective worldsheet action on a fixed background. A nonzero vacuum harmonic also requires the other fluctuation determinants and the measure over collective coordinates. A critical-string completion and the absolute coefficient of the harmonic remain open. \href{supplemental.pdf}{Parts S240 and S244 of the full supplement} give the worldsheet anomaly and the tensor reduction underlying the two angles.
 
+\section{Hypercharge on the spin Hopf circle}
+
+\subsection{Exercise 14. Compute the fermion lift and the first charged scalar}
+Take the spin product $S^5_B\times S^2$, with the Hopf action of Exercise 10 on the five-sphere of radius $B$. Let $P$ be the active Hopf weight and $C$ an auxiliary compact gauge charge. A weak-neutral tensor of weights $(P,C)=(3,-2)$ locks the two actions to $6Y=P+\tfrac32 C$. Put the fields $(Q_L,u_R,d_R,\nu_R)$ in the horizontal Dirac sectors of Hopf weights $(5/2,5/2,5/2,3/2)$ and give them auxiliary charges $(-1,1,-3,-1)$. Find their integer weights $n=6Y$. Explain why a full Hopf turn and the accompanying gauge transformation act trivially on the spinors. After shrinking the weak sphere, find the first charged level of an auxiliary-neutral scalar that is constant on the sphere. Give its electric charge, squared mass and colour representation for each sign.
+
+\noindent\textbf{Solution.}
+The tensor is invariant under $P+\tfrac32 C$ since $3+\tfrac32(-2)=0$. A $2\pi$ Hopf turn rotates three real two-planes once, so its spin lift gives $(-1)^3=-1$. For each odd $C$ the accompanying auxiliary phase is $e^{3\pi i C}=-1$. The two signs cancel. The weights in the given order are
+\begin{equation}
+ n=\left(\frac52-\frac32,\ \frac52+\frac32,\
+          \frac52-\frac92,\ \frac32-\frac32\right)
+   =(1,4,-2,0).
+\end{equation}
+In particular $\nu_R$ has zero hypercharge even though its Hopf weight is nonzero. This exercise takes both the auxiliary charges and the horizontal Dirac domain as inputs. The latter specifies the external chirality and uses the Chern-connection Dirac operator without the vertical Hopf mass.
+
+For the scalar, $C=0$ and the constant weak-sphere harmonic has $T_3=0$, so $Q=T_3+Y=P/6$. Shrinking the sphere at fixed shape removes its nonconstant modes from a fixed spectral window. On $S^5_B$ degree-$j$ harmonic polynomials have squared mass $j(j+4)/B^2$. The linear functions $z_i$ and $\bar z_i$ are harmonic and have $|P|=1$, while the degree-zero constant is uncharged. With the active pullback action $T_g f=f\circ g^{-1}$, the $z_i$ have $P=-1$ and span $\bar{\mathbf3}$, and the $\bar z_i$ have $P=+1$ and span $\mathbf3$. Indeed the colour centre is a Hopf turn of $2\pi/3$, so it acts here by $e^{2\pi iP/3}$. Thus the first charged levels are $\mathbf3_{+1/6}$ and $\bar{\mathbf3}_{-1/6}$, both with $M^2=5/B^2$. \href{supplemental.pdf}{Part S248 of the full supplement} gives the action and domain used in this comparison.
+
 \paragraph{Reading.}
 For the worldsheet derivation and the perturbative charge lattice see Polchinski, volume 1, chapter 8, and Tong, sections 1 and 8 \cite{Polchinski1998String,Tong2009String}. For the eleven-dimensional interpretation see Witten's strong-coupling argument and the wrapped membrane reduction \cite{Witten1995Circle,DHIS1987}. The interval operators, the weak-current calculation and the seven-dimensional compactifications used in the exercises are developed in the companion papers \cite{boundarynote,TwoEndpoint2026,SevenMTheory2026}.
 
