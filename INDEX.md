@@ -38,6 +38,8 @@ On the nonround spin Hopf path the covariant core splits into colour and weak ma
 
 Restoring the vortex Maxwell polarization adds a coexact coloured scalar block while keeping the quotient roots, volume orbit, two-period tensor and horizontal fermion domain. Its lower bound preserves the calibrated bosonic crossing and mirror-first threshold. At exact round weak restoration the new colour-octet weak triplet can be first at large weak radius. [Full vortex Maxwell comparison](results/101_hopf_threshold_with_the_full_vortex_maxwell_field.md)
 
+A quartic potential for the dynamical volume tensor gives a charged colour sextet with tunable mass. With all volume-tensor harmonics and the full auxiliary Maxwell field, the specified projected action takes the smaller of the previous bosonic threshold and the sextet mass. Replacing the projected derivative by a local Levi-Civita derivative changes one explicit $j=2$ mass-form direction. [Volume tensor, auxiliary tower and local connection](results/102_hopf_volume_tensor_amplitude_and_auxiliary_tower.md)
+
 The graduate lecture derives the point-particle limit of a closed string and includes fourteen solved exercises. Exercise 13 computes the weak-root determinant on a degree-two sphere cover and shows how the unit string term and QCD can fix two phases. Exercise 14 tests the Hopf spin lift and its compensation by auxiliary gauge charge. [Illustrated lecture](docs/kk_strings_lecture.html) · [Lecture source](paper/kk_strings_lecture.tex) · [Original proposal](paper/kk_strings_lecture_proposal.md)
 
 What the numbers mean (spacetime plus internal metric dimension; KO-degree), and the regime table of hypothesis H.

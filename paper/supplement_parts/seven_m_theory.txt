@@ -23,3 +23,4 @@ part "S252 (Hopf colour scalar stability and thresholds)" results/98_hopf_colour
 part "S253 (Nonround Hopf colour gap and vector crossing)" results/99_nonround_hopf_colour_gap_and_level_crossing.md
 part "S254 (Hopf light fermion window and hadronic calibration)" results/100_hopf_light_fermion_window_and_hadronic_calibration.md
 part "S255 (Hopf colour threshold with the full vortex Maxwell field)" results/101_hopf_threshold_with_the_full_vortex_maxwell_field.md
+part "S256 (Dynamical Hopf volume tensor and auxiliary Maxwell tower)" results/102_hopf_volume_tensor_amplitude_and_auxiliary_tower.md

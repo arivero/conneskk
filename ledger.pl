@@ -3742,6 +3742,41 @@ addresses(t4, hopf_full_maxwell_round_scalar).
 addresses(t14, hopf_full_maxwell_round_scalar).
 addresses(t18, hopf_full_maxwell_round_scalar).
 
+claim(hopf_volume_tensor_rank_one_potential, proposition, proved, "Proposition 102.1", "The specified invariant quartic for a charged ambient chiral three-form has a single rank-one vacuum orbit and a positive normal Hessian. The constant physical normal variables are a neutral radial scalar and a weak-singlet complex colour sextet of charge -2/3. Both normal masses are independently tunable at fixed locking stiffness.").
+source(hopf_volume_tensor_rank_one_potential, 'results/102_hopf_volume_tensor_amplitude_and_auxiliary_tower.md', 'polynomial-potential-and-the-colour-sextet').
+depends(hopf_volume_tensor_rank_one_potential, hopf_diagonal_hypercharge).
+depends(hopf_volume_tensor_rank_one_potential, hopf_broken_colour_vectors).
+attempted_by(hopf_volume_tensor_rank_one_potential, gpt_6_2_sol_ultra).
+checked_by(hopf_volume_tensor_rank_one_potential, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_volume_tensor_rank_one_potential).
+addresses(t4, hopf_volume_tensor_rank_one_potential).
+addresses(t14, hopf_volume_tensor_rank_one_potential).
+addresses(t18, hopf_volume_tensor_rank_one_potential).
+
+claim(hopf_full_auxiliary_coloured_minimum, proposition, proved, "Proposition 102.2", "The fixed fibration action with all colour harmonics of the volume tensor and the full auxiliary Maxwell field keeps the specified Killing projection, quotient couplings and horizontal fermion domain. On the calibrated path the first additional coloured bosonic squared mass is the minimum of the previous level and kappa/B^2, the constant sextet squared mass. For kappa above 15-sqrt(120) the calibrated crossing and six-flavour window persist. The sourced weak tree pencil is unchanged.").
+source(hopf_full_auxiliary_coloured_minimum, 'results/102_hopf_volume_tensor_amplitude_and_auxiliary_tower.md', 'fibre-harmonics-and-the-full-auxiliary-gauge-field').
+depends(hopf_full_auxiliary_coloured_minimum, hopf_volume_tensor_rank_one_potential).
+depends(hopf_full_auxiliary_coloured_minimum, hopf_full_maxwell_matched_threshold).
+depends(hopf_full_auxiliary_coloured_minimum, hopf_transverse_current_pencil).
+attempted_by(hopf_full_auxiliary_coloured_minimum, gpt_6_2_sol_ultra).
+checked_by(hopf_full_auxiliary_coloured_minimum, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_full_auxiliary_coloured_minimum).
+addresses(t4, hopf_full_auxiliary_coloured_minimum).
+addresses(t13, hopf_full_auxiliary_coloured_minimum).
+addresses(t14, hopf_full_auxiliary_coloured_minimum).
+addresses(t18, hopf_full_auxiliary_coloured_minimum).
+
+claim(hopf_local_volume_tensor_rayleigh_test, proposition, proved, "Proposition 102.3", "Replacing the projected connection in the volume-tensor kinetic term by the vertical Levi-Civita horizontal derivative adds a mass-form contribution on the exhibited transverse j=2 colour vector. Its part perpendicular to the auxiliary phase is 17 f_S^2/(60 I3) in the normalized metric slot. The calculation evaluates one Rayleigh direction in the local coupling.").
+source(hopf_local_volume_tensor_rayleigh_test, 'results/102_hopf_volume_tensor_amplitude_and_auxiliary_tower.md', 'a-local-metric-connection-test-at-the-first-vector-shell').
+depends(hopf_local_volume_tensor_rayleigh_test, hopf_volume_tensor_rank_one_potential).
+depends(hopf_local_volume_tensor_rayleigh_test, hopf_full_auxiliary_coloured_minimum).
+attempted_by(hopf_local_volume_tensor_rayleigh_test, gpt_6_2_sol_ultra).
+checked_by(hopf_local_volume_tensor_rayleigh_test, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_local_volume_tensor_rayleigh_test).
+addresses(t4, hopf_local_volume_tensor_rayleigh_test).
+addresses(t14, hopf_local_volume_tensor_rayleigh_test).
+addresses(t18, hopf_local_volume_tensor_rayleigh_test).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).
