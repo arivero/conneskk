@@ -29,3 +29,4 @@ part "S256 (Dynamical Hopf volume tensor and auxiliary Maxwell tower)" results/1
 part "S257 (Local Hopf connection and the first transverse vector shell)" results/103_hopf_local_connection_transverse_shell.md
 part "S258 (Coloured scalar constraints with the local Hopf connection)" results/104_hopf_local_scalar_constraints_and_sextet.md
 part "S259 (Bulk two-period tensor and light coloured magnetic pole)" results/105_hopf_bulk_tensor_and_magnetic_colour_pole.md
+part "S260 (Local tensor scalar gap and infrared sextet threshold)" results/106_hopf_tensor_scalar_gap_and_sextet_matching.md

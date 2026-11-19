@@ -3937,6 +3937,56 @@ addresses(t13, hopf_bulk_tensor_anisotropic_vector_order).
 addresses(t14, hopf_bulk_tensor_anisotropic_vector_order).
 addresses(t18, hopf_bulk_tensor_anisotropic_vector_order).
 
+claim(hopf_bulk_tensor_scalar_gauss_gap, proposition, proved, "Proposition 106.1", "With both specified local weak sources and zeta at least one, the scalar Gauss reduction of the bulk tensor preserves the marked Hopf scalar bounds. In the anisotropic action of 105.5 at sufficiently large fixed coefficient, the scalar and transverse estimates together give the full classical boson ordering. The calibrated first additional particles are mirrors for kappa=9 or 9/2 and the sextet for kappa=0.001. Global anomaly data remain separate.").
+source(hopf_bulk_tensor_scalar_gauss_gap, 'results/106_hopf_tensor_scalar_gap_and_sextet_matching.md', 'scalar-gauss-elimination-with-the-bulk-tensor').
+depends(hopf_bulk_tensor_scalar_gauss_gap, hopf_bulk_two_form_pullback).
+depends(hopf_bulk_tensor_scalar_gauss_gap, hopf_bulk_tensor_anisotropic_vector_order).
+depends(hopf_bulk_tensor_scalar_gauss_gap, hopf_local_full_boson_ordering).
+depends(hopf_bulk_tensor_scalar_gauss_gap, hopf_local_calibrated_coloured_gap).
+attempted_by(hopf_bulk_tensor_scalar_gauss_gap, gpt_6_2_sol_ultra).
+checked_by(hopf_bulk_tensor_scalar_gauss_gap, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_bulk_tensor_scalar_gauss_gap).
+addresses(t4, hopf_bulk_tensor_scalar_gauss_gap).
+addresses(t13, hopf_bulk_tensor_scalar_gauss_gap).
+addresses(t14, hopf_bulk_tensor_scalar_gauss_gap).
+addresses(t18, hopf_bulk_tensor_scalar_gauss_gap).
+
+claim(hopf_sextet_colour_running_threshold, proposition, proved, "Proposition 106.2", "At a fixed renormalized MS-bar input and fixed ordinary quark matching masses, the one-loop step threshold of the complex sextet changes the relative three-flavour strong scale by (M6/mu_*)^(5/54), about 0.96690. Changing the nucleon conversion by that same ratio requires further retuning of the light mass ratios.").
+source(hopf_sextet_colour_running_threshold, 'results/106_hopf_tensor_scalar_gap_and_sextet_matching.md', 'strong-running-through-the-light-sextet').
+depends(hopf_sextet_colour_running_threshold, hopf_bulk_tensor_scalar_gauss_gap).
+depends(hopf_sextet_colour_running_threshold, hopf_local_normal_scalar_towers).
+depends(hopf_sextet_colour_running_threshold, hopf_comoving_hadronic_benchmark).
+attempted_by(hopf_sextet_colour_running_threshold, gpt_6_2_sol_ultra).
+checked_by(hopf_sextet_colour_running_threshold, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_sextet_colour_running_threshold).
+addresses(t13, hopf_sextet_colour_running_threshold).
+addresses(t18, hopf_sextet_colour_running_threshold).
+
+claim(hopf_sextet_euclidean_photon_subtraction, proposition, proved, "Proposition 106.3", "The minimally coupled constant sextet contributes the stated finite one-loop Euclidean scalar logarithm, with electric weight 8/3. At the specified comoving subtraction point the inverse-alpha difference is 0.0128633. Holding that spacelike subtraction and other terms fixed makes the first-order scalar-only compensation delta I_C=-0.016378.").
+source(hopf_sextet_euclidean_photon_subtraction, 'results/106_hopf_tensor_scalar_gap_and_sextet_matching.md', 'finite-euclidean-photon-subtraction').
+depends(hopf_sextet_euclidean_photon_subtraction, hopf_local_normal_scalar_towers).
+depends(hopf_sextet_euclidean_photon_subtraction, hopf_thomson_auxiliary_calibration).
+depends(hopf_sextet_euclidean_photon_subtraction, spectator_photon_subtraction_bound).
+attempted_by(hopf_sextet_euclidean_photon_subtraction, gpt_6_2_sol_ultra).
+checked_by(hopf_sextet_euclidean_photon_subtraction, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_sextet_euclidean_photon_subtraction).
+addresses(t4, hopf_sextet_euclidean_photon_subtraction).
+addresses(t13, hopf_sextet_euclidean_photon_subtraction).
+addresses(t18, hopf_sextet_euclidean_photon_subtraction).
+
+claim(hopf_radial_tower_kinetic_matching_inputs, proposition, proved, "Proposition 106.4", "The formal one-loop once-subtracted photon sum over the minimal radial scalar tower at zero weak excitation diverges in its momentum-squared slope. Independent finite auxiliary Maxwell and quotient colour kinetic coefficients can change the photon and colour matches without changing the classical stationary backgrounds. A regulator and a full ultraviolet matching prescription are separate inputs.").
+source(hopf_radial_tower_kinetic_matching_inputs, 'results/106_hopf_tensor_scalar_gap_and_sextet_matching.md', 'the-infinite-tower-and-finite-local-matching-terms').
+depends(hopf_radial_tower_kinetic_matching_inputs, hopf_local_normal_scalar_towers).
+depends(hopf_radial_tower_kinetic_matching_inputs, hopf_sextet_euclidean_photon_subtraction).
+depends(hopf_radial_tower_kinetic_matching_inputs, finite_electric_matching).
+attempted_by(hopf_radial_tower_kinetic_matching_inputs, gpt_6_2_sol_ultra).
+checked_by(hopf_radial_tower_kinetic_matching_inputs, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_radial_tower_kinetic_matching_inputs).
+addresses(t4, hopf_radial_tower_kinetic_matching_inputs).
+addresses(t13, hopf_radial_tower_kinetic_matching_inputs).
+addresses(t14, hopf_radial_tower_kinetic_matching_inputs).
+addresses(t18, hopf_radial_tower_kinetic_matching_inputs).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).
