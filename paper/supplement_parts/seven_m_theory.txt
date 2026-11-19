@@ -20,3 +20,5 @@ part "S246 (finite electric and magnetic tensor match)" results/92_finite_electr
 part "S248 (a supported spin Hopf trajectory)" results/94_spin_hopf_trajectory_and_its_charge_lift.md
 part "S251 (transverse currents on the spin Hopf product)" results/97_hopf_transverse_spectrum_and_current_match.md
 part "S252 (Hopf colour scalar stability and thresholds)" results/98_hopf_colour_scalar_stability_and_thresholds.md
+part "S253 (Nonround Hopf colour gap and vector crossing)" results/99_nonround_hopf_colour_gap_and_level_crossing.md
+part "S254 (Hopf light fermion window and hadronic calibration)" results/100_hopf_light_fermion_window_and_hadronic_calibration.md

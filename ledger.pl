@@ -3615,6 +3615,96 @@ addresses(t13, hopf_projected_coloured_threshold).
 addresses(t14, hopf_projected_coloured_threshold).
 addresses(t18, hopf_projected_coloured_threshold).
 
+claim(hopf_nonround_covariant_core, proposition, proved, "Proposition 99.1", "For the covariant metric, five-form, dilaton and weak vortex core of the Hopf product, eliminating the light-cone constraints yields an additive colour and weak mass form. The specified unadjusted intrinsic colour-leaf squares preserve this split and give the nonconstant one-factor scalar-derived gap 8/B^2 at unit colour-dilaton kinetic coefficient.").
+source(hopf_nonround_covariant_core, 'results/99_nonround_hopf_colour_gap_and_level_crossing.md', 'the-nonround-constraint-split-with-a-magnetic-top-form').
+depends(hopf_nonround_covariant_core, hopf_supported_spin_product).
+depends(hopf_nonround_covariant_core, hopf_intrinsic_colour_stabilizers).
+depends(hopf_nonround_covariant_core, vortex_constraint_squares).
+attempted_by(hopf_nonround_covariant_core, gpt_6_2_sol_ultra).
+checked_by(hopf_nonround_covariant_core, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_nonround_covariant_core).
+addresses(t4, hopf_nonround_covariant_core).
+addresses(t11, hopf_nonround_covariant_core).
+addresses(t14, hopf_nonround_covariant_core).
+addresses(t18, hopf_nonround_covariant_core).
+
+claim(hopf_projected_nonround_boson, proposition, proved, "Proposition 99.2", "In the fixed projected bosonic action with quotient Higgs and tensor fields, the constrained weak Maxwell polarizations and the stated intrinsic stabilizers, the first positive coloured squared mass is the minimum of the first weak gluon excitation, the lower broken-Killing and form eigenvalue, and (15-sqrt(120))/B^2 from the j=2 colour vector. This claim concerns the prescribed projected fields.").
+source(hopf_projected_nonround_boson, 'results/99_nonround_hopf_colour_gap_and_level_crossing.md', 'a-quotient-higgs-action-retaining-the-broken-killing-pair').
+depends(hopf_projected_nonround_boson, hopf_nonround_covariant_core).
+depends(hopf_projected_nonround_boson, hopf_broken_colour_vectors).
+depends(hopf_projected_nonround_boson, hopf_projected_coloured_threshold).
+depends(hopf_projected_nonround_boson, quotient_tensor_colour_gap).
+attempted_by(hopf_projected_nonround_boson, gpt_6_2_sol_ultra).
+checked_by(hopf_projected_nonround_boson, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_projected_nonround_boson).
+addresses(t4, hopf_projected_nonround_boson).
+addresses(t13, hopf_projected_nonround_boson).
+addresses(t14, hopf_projected_nonround_boson).
+addresses(t18, hopf_projected_nonround_boson).
+
+claim(hopf_nonround_boson_crossing, proposition, proved, "Result 99, ordering on the matched path", "In the specified projected action the broken-Killing pole is first along the calibrated finite meridian. On the subsequent fixed-shape shrink it crosses the j=2 coloured shell once, at s=gamma_0(16-gamma_0)/(8-gamma_0) with gamma_0=15-sqrt(120). Thereafter the j=2 shell is first at sufficiently small a.").
+source(hopf_nonround_boson_crossing, 'results/99_nonround_hopf_colour_gap_and_level_crossing.md', 'ordering-on-the-matched-path').
+depends(hopf_nonround_boson_crossing, hopf_projected_nonround_boson).
+depends(hopf_nonround_boson_crossing, hopf_finite_current_fit).
+depends(hopf_nonround_boson_crossing, hopf_scalar_windows).
+attempted_by(hopf_nonround_boson_crossing, gpt_6_2_sol_ultra).
+checked_by(hopf_nonround_boson_crossing, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_nonround_boson_crossing).
+addresses(t13, hopf_nonround_boson_crossing).
+addresses(t14, hopf_nonround_boson_crossing).
+addresses(t18, hopf_nonround_boson_crossing).
+
+claim(hopf_uniform_light_mass_inverse, proposition, proved, "Proposition 100.1", "On the specified broken Hopf path, strictly positive target ordinary or mirror masses with m_i B=m_{i,*} B_* and m_{i,*}<=280 GeV admit smooth fixed scale-dilaton Yukawa functions in the stated horizontal holomorphic link domain. The proof controls orthogonal weak and projective shells and the small-mass inverse.").
+source(hopf_uniform_light_mass_inverse, 'results/100_hopf_light_fermion_window_and_hadronic_calibration.md', 'a-uniform-inverse-for-the-light-mass-links').
+depends(hopf_uniform_light_mass_inverse, hopf_diagonal_hypercharge).
+depends(hopf_uniform_light_mass_inverse, vortex_yukawa_half_interval).
+depends(hopf_uniform_light_mass_inverse, quotient_tensor_free_fermion_shells).
+depends(hopf_uniform_light_mass_inverse, hopf_finite_current_fit).
+attempted_by(hopf_uniform_light_mass_inverse, gpt_6_2_sol_ultra).
+checked_by(hopf_uniform_light_mass_inverse, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_uniform_light_mass_inverse).
+addresses(t3, hopf_uniform_light_mass_inverse).
+addresses(t8, hopf_uniform_light_mass_inverse).
+addresses(t13, hopf_uniform_light_mass_inverse).
+addresses(t18, hopf_uniform_light_mass_inverse).
+
+claim(hopf_mirror_particle_threshold, proposition, conditional, "Result 100, first omitted coloured particle", "With the stated ordinary calibration, six mirror-quark masses 280 B_*/B GeV and the assumptions on the horizontal spectrum, the first omitted coloured particle on the projected broken Hopf path is at the mirror threshold. The comoving subtraction point 250 B_*/B GeV admits six ordinary active quarks while all mirrors and extra bosons lie above it.").
+source(hopf_mirror_particle_threshold, 'results/100_hopf_light_fermion_window_and_hadronic_calibration.md', 'the-first-omitted-coloured-particle-and-the-subtraction-point').
+depends(hopf_mirror_particle_threshold, hopf_uniform_light_mass_inverse).
+depends(hopf_mirror_particle_threshold, hopf_projected_nonround_boson).
+depends(hopf_mirror_particle_threshold, hopf_nonround_boson_crossing).
+attempted_by(hopf_mirror_particle_threshold, gpt_6_2_sol_ultra).
+checked_by(hopf_mirror_particle_threshold, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_mirror_particle_threshold).
+addresses(t13, hopf_mirror_particle_threshold).
+addresses(t14, hopf_mirror_particle_threshold).
+addresses(t18, hopf_mirror_particle_threshold).
+
+claim(hopf_comoving_hadronic_benchmark, proposition, conditional, "Result 100, common hadronic calibration", "With the specified fixed comoving quark mass ratios, six-flavour subtraction convention and independently calibrated strong and nucleon inputs, Lambda_3 B and H_N B stay constant along the broken path. The stated Born current and gap ratios follow in the projected action. The finite microscopic colour matching terms and restored twelve-flavour hadron scale require separate determinations.").
+source(hopf_comoving_hadronic_benchmark, 'results/100_hopf_light_fermion_window_and_hadronic_calibration.md', 'the-first-omitted-coloured-particle-and-the-subtraction-point').
+depends(hopf_comoving_hadronic_benchmark, hopf_mirror_particle_threshold).
+depends(hopf_comoving_hadronic_benchmark, hopf_comoving_charged_limit).
+depends(hopf_comoving_hadronic_benchmark, hadronic_colour_current).
+depends(hopf_comoving_hadronic_benchmark, dual_tensor_finite_fit).
+attempted_by(hopf_comoving_hadronic_benchmark, gpt_6_2_sol_ultra).
+checked_by(hopf_comoving_hadronic_benchmark, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_comoving_hadronic_benchmark).
+addresses(t4, hopf_comoving_hadronic_benchmark).
+addresses(t13, hopf_comoving_hadronic_benchmark).
+addresses(t18, hopf_comoving_hadronic_benchmark).
+
+claim(hopf_thomson_auxiliary_calibration, proposition, conditional, "Result 100, auxiliary Thomson calibration", "For the fixed supported Hopf action away from exhaustion of its auxiliary photon norm, a specified small smooth full threshold function allows an implicit Thomson calibration by the flat auxiliary Maxwell modulus at fixed B and a. The required correction includes the mirror loops of the actual retained spectrum.").
+source(hopf_thomson_auxiliary_calibration, 'results/100_hopf_light_fermion_window_and_hadronic_calibration.md', 'the-first-omitted-coloured-particle-and-the-subtraction-point').
+depends(hopf_thomson_auxiliary_calibration, hopf_scalar_windows).
+depends(hopf_thomson_auxiliary_calibration, hopf_mirror_particle_threshold).
+depends(hopf_thomson_auxiliary_calibration, thomson_radius_matching).
+attempted_by(hopf_thomson_auxiliary_calibration, gpt_6_2_sol_ultra).
+checked_by(hopf_thomson_auxiliary_calibration, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_thomson_auxiliary_calibration).
+addresses(t4, hopf_thomson_auxiliary_calibration).
+addresses(t13, hopf_thomson_auxiliary_calibration).
+addresses(t18, hopf_thomson_auxiliary_calibration).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).

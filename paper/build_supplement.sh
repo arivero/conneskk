@@ -43,7 +43,7 @@ part "R1 (Counterexample R1 to Farsi-Latrémolière, Theorem 3.4)" results/R1_co
 # Part S204 is the unnumbered orientability result published after lemma 52.
 i=0
 for f in results/[0-4][0-9]_*.md results/5[0-2]_*.md results/[a-z]*.md \
-         results/5[3-9]_*.md results/[6-9][0-9]_*.md; do
+         results/5[3-9]_*.md results/[6-9][0-9]_*.md results/[1-9][0-9][0-9]_*.md; do
   [ -f "$f" ] || continue
   i=$((i+1))
   part "S$i ($(sed -n '1s/^# //p' "$f"))" "$f"
