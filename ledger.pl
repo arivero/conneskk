@@ -2308,6 +2308,13 @@ addresses(t18, gh1_winding_family).
 addresses(t14, gh1_winding_family).
 addresses(t13, gh1_winding_family).
 
+%% Claude Opus 5.5 reviewed the frozen endpoint manuscripts at
+%% 90e31b33a4d2066b335468dbc0c7d61563d78326, with supplements through S262.
+%% The authors' response is 4bcdb2e3d6c205381cffba0417143301520fbf72.
+%% The report records coverage of that snapshot. Revised claims retain their own review status.
+referee_report('paper/two_endpoint_limits.tex', 'historical/reviews/2026-11-19_opus_check_endpoint_papers_90e31b3.md').
+referee_report('paper/seven_m_theory.tex', 'historical/reviews/2026-11-19_opus_check_endpoint_papers_90e31b3.md').
+
 claim(two_endpoint_current, theorem, proved, "Two-endpoint paper, charged current", "On the two-interval winding vacuum a specified product Yang-Mills action gives an exact massive scalar-Laplacian tower for each transverse weak vector. Parallel harmonic currents see only its constant profile. Smooth winding-dependent kinetic coefficients give vanishing weak exchange and a finite matching charge at the five-dimensional end.").
 source(two_endpoint_current, 'paper/two_endpoint_limits.tex', '').
 depends(two_endpoint_current, gh1_winding_family).
