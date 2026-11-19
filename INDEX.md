@@ -40,6 +40,8 @@ Restoring the vortex Maxwell polarization adds a coexact coloured scalar block w
 
 A quartic potential for the dynamical volume tensor gives a charged colour sextet with tunable mass. With all volume-tensor harmonics and the full auxiliary Maxwell field, the specified projected action takes the smaller of the previous bosonic threshold and the sextet mass. Replacing the projected derivative by a local Levi-Civita derivative changes one explicit $j=2$ mass-form direction. [Volume tensor, auxiliary tower and local connection](results/102_hopf_volume_tensor_amplitude_and_auxiliary_tower.md)
 
+The full coexact $j=2$ shell for the local connection reduces to finite transverse blocks after eliminating the exact coordinate shift. On the fitted shrink the first weak-constant coloured transverse vector is a triplet with charge magnitude $1/6$ and $B^2M^2$ tending to about $4.99246$. A full particle threshold requires the scalar spectrum too. [Local transverse shell and limiting vector](results/103_hopf_local_connection_transverse_shell.md)
+
 The graduate lecture derives the point-particle limit of a closed string and includes fourteen solved exercises. Exercise 13 computes the weak-root determinant on a degree-two sphere cover and shows how the unit string term and QCD can fix two phases. Exercise 14 tests the Hopf spin lift and its compensation by auxiliary gauge charge. [Illustrated lecture](docs/kk_strings_lecture.html) · [Lecture source](paper/kk_strings_lecture.tex) · [Original proposal](paper/kk_strings_lecture_proposal.md)
 
 What the numbers mean (spacetime plus internal metric dimension; KO-degree), and the regime table of hypothesis H.

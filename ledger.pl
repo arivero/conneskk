@@ -3777,6 +3777,41 @@ addresses(t4, hopf_local_volume_tensor_rayleigh_test).
 addresses(t14, hopf_local_volume_tensor_rayleigh_test).
 addresses(t18, hopf_local_volume_tensor_rayleigh_test).
 
+claim(hopf_local_coexact_shell_closure, proposition, proved, "Proposition 103.1", "For the weak-constant transverse spin Hopf comparison with the local vertical Levi-Civita derivative, the entire coexact j=2 colour shell has the stated compressed perpendicular and phase stiffnesses. Its octet and sextet blocks close with their five-form partners. The triplet and fifteen-dimensional blocks also couple to the specified exact shifts and auxiliary Maxwell vectors, and the latter also has a coexact j=4 partner.").
+source(hopf_local_coexact_shell_closure, 'results/103_hopf_local_connection_transverse_shell.md', 'the-local-form-on-the-full-quadratic-harmonic-shell').
+depends(hopf_local_coexact_shell_closure, hopf_local_volume_tensor_rayleigh_test).
+depends(hopf_local_coexact_shell_closure, hopf_full_auxiliary_coloured_minimum).
+depends(hopf_local_coexact_shell_closure, hopf_full_maxwell_coexact_block).
+attempted_by(hopf_local_coexact_shell_closure, gpt_6_2_sol_ultra).
+checked_by(hopf_local_coexact_shell_closure, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_local_coexact_shell_closure).
+addresses(t4, hopf_local_coexact_shell_closure).
+addresses(t14, hopf_local_coexact_shell_closure).
+addresses(t18, hopf_local_coexact_shell_closure).
+
+claim(hopf_local_exact_shift_blocks, proposition, proved, "Proposition 103.2", "Minimizing over the exact external coordinate shift in the stated weak-constant transverse mass form yields the finite three-variable triplet matrix and five-variable fifteen-dimensional blocks. For positive locking stiffness and finite positive auxiliary inverse coupling, the lowest triplet squared mass in units of B^-2 lies strictly between 15-sqrt(120) and 5.").
+source(hopf_local_exact_shift_blocks, 'results/103_hopf_local_connection_transverse_shell.md', 'exact-gradient-shifts-and-the-auxiliary-vector').
+depends(hopf_local_exact_shift_blocks, hopf_local_coexact_shell_closure).
+depends(hopf_local_exact_shift_blocks, hopf_full_maxwell_coexact_block).
+attempted_by(hopf_local_exact_shift_blocks, gpt_6_2_sol_ultra).
+checked_by(hopf_local_exact_shift_blocks, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_local_exact_shift_blocks).
+addresses(t4, hopf_local_exact_shift_blocks).
+addresses(t14, hopf_local_exact_shift_blocks).
+addresses(t18, hopf_local_exact_shift_blocks).
+
+claim(hopf_local_transverse_vector_minimum, proposition, proved, "Proposition 103.3", "In the locally coupled weak-constant coloured transverse vector comparison, the first extra level is the minimum over the broken-Killing, triplet and fifteen-dimensional blocks. On the fitted fixed-shape shrink the charge-magnitude 1/6 triplet eventually minimizes, with B^2 times the squared mass tending to about 4.99246. The spin-zero constraints remain a separate problem.").
+source(hopf_local_transverse_vector_minimum, 'results/103_hopf_local_connection_transverse_shell.md', 'the-lowest-weak-constant-vector-on-shrink').
+depends(hopf_local_transverse_vector_minimum, hopf_local_exact_shift_blocks).
+depends(hopf_local_transverse_vector_minimum, hopf_broken_colour_vectors).
+depends(hopf_local_transverse_vector_minimum, hopf_comoving_charged_limit).
+attempted_by(hopf_local_transverse_vector_minimum, gpt_6_2_sol_ultra).
+checked_by(hopf_local_transverse_vector_minimum, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_local_transverse_vector_minimum).
+addresses(t4, hopf_local_transverse_vector_minimum).
+addresses(t14, hopf_local_transverse_vector_minimum).
+addresses(t18, hopf_local_transverse_vector_minimum).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).
