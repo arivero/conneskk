@@ -2394,7 +2394,6 @@ source(m111_membrane_charge, 'paper/seven_m_theory.tex', '').
 depends(m111_membrane_charge, d11_quotient).
 attempted_by(m111_membrane_charge, gpt_6_2_astra_max).
 checked_by(m111_membrane_charge, gpt_6_2_astra_max, by_hand).
-referee_pending(m111_membrane_charge).
 addresses(t18, m111_membrane_charge).
 
 claim(m111_circle_descent, proposition, proved, "M-theory endpoint paper, circle reduction", "For the order-j quotient of the regular Reeb fibre, the seven-manifold is spin precisely at odd j. Its unique spin structure then has a double-cover fibre lift, so neutral ordinary spinors do not descend. The bosonic reduction admits a small circle with a weakly curved base.").
@@ -3224,7 +3223,6 @@ source(spectator_global_bordism, 'results/90_a_tensor_completion_without_light_m
 depends(spectator_global_bordism, vortex_neutral_spectator_tensor).
 attempted_by(spectator_global_bordism, gpt_6_2_astra_max).
 checked_by(spectator_global_bordism, gpt_6_2_astra_max, by_hand).
-referee_pending(spectator_global_bordism).
 addresses(t11, spectator_global_bordism).
 addresses(t18, spectator_global_bordism).
 
@@ -4309,6 +4307,8 @@ referee_report('results/92_finite_electric_and_magnetic_tensor_match.md', 'histo
 checked_by(dual_tensor_stiffness_bound, claude_opus_5_5, by_hand).
 checked_by(vortex_root_upper_current, claude_opus_5_5, by_hand).
 checked_by(vortex_root_magnetic_link, claude_opus_5_5, by_hand).
+checked_by(m111_membrane_charge, claude_opus_5_5, by_hand).
+checked_by(spectator_global_bordism, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
