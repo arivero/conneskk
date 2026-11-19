@@ -4068,7 +4068,6 @@ depends(lecture_shared_circle_resolution, shared_polar_solution).
 depends(lecture_shared_circle_resolution, vortex_root_vacua).
 attempted_by(lecture_shared_circle_resolution, gpt_6_2_astra_max).
 checked_by(lecture_shared_circle_resolution, gpt_6_2_astra_max, by_hand).
-referee_pending(lecture_shared_circle_resolution).
 addresses(t14, lecture_shared_circle_resolution).
 addresses(t18, lecture_shared_circle_resolution).
 
@@ -4309,6 +4308,7 @@ checked_by(vortex_root_upper_current, claude_opus_5_5, by_hand).
 checked_by(vortex_root_magnetic_link, claude_opus_5_5, by_hand).
 checked_by(m111_membrane_charge, claude_opus_5_5, by_hand).
 checked_by(spectator_global_bordism, claude_opus_5_5, by_hand).
+checked_by(lecture_shared_circle_resolution, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
