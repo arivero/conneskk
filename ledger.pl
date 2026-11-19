@@ -3257,7 +3257,6 @@ depends(k3_electric_surface_charge, k3_ade_charge_embedding).
 depends(k3_electric_surface_charge, k3_hypercharge_period_bound).
 attempted_by(k3_electric_surface_charge, gpt_6_2_sol_ultra).
 checked_by(k3_electric_surface_charge, gpt_6_2_sol_ultra, by_hand).
-referee_pending(k3_electric_surface_charge).
 addresses(t11, k3_electric_surface_charge).
 addresses(t18, k3_electric_surface_charge).
 
@@ -3267,7 +3266,6 @@ depends(k3_electric_surface_action, k3_colour_instanton_action).
 depends(k3_electric_surface_action, k3_hypercharge_period_bound).
 attempted_by(k3_electric_surface_action, gpt_6_2_sol_ultra).
 checked_by(k3_electric_surface_action, gpt_6_2_sol_ultra, by_hand).
-referee_pending(k3_electric_surface_action).
 addresses(t13, k3_electric_surface_action).
 addresses(t18, k3_electric_surface_action).
 
@@ -4311,6 +4309,9 @@ checked_by(root_qcd_angle, claude_opus_5_5, by_hand).
 checked_by(finite_electric_matching, claude_opus_5_5, by_hand).
 checked_by(nonround_flux_colour_gap, claude_opus_5_5, by_hand).
 referee_report('results/69_gravitating_vortex_colour_gap.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(k3_electric_surface_charge, claude_opus_5_5, by_hand).
+checked_by(k3_electric_surface_action, claude_opus_5_5, by_hand).
+referee_report('results/91_full_k3_charge_of_a_wrapped_surface.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
