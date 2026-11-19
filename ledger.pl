@@ -3301,7 +3301,6 @@ depends(dual_tensor_round_poles, dual_tensor_transverse_pencil).
 depends(dual_tensor_round_poles, vortex_flux_mass_relation).
 attempted_by(dual_tensor_round_poles, gpt_6_2_sol_ultra).
 checked_by(dual_tensor_round_poles, gpt_6_2_sol_ultra, by_hand).
-referee_pending(dual_tensor_round_poles).
 addresses(t4, dual_tensor_round_poles).
 addresses(t13, dual_tensor_round_poles).
 addresses(t18, dual_tensor_round_poles).
@@ -4308,6 +4307,8 @@ referee_report('results/106_hopf_tensor_scalar_gap_and_sextet_matching.md', 'his
 checked_by(hopf_soft_tensor_pair_current_benchmark, claude_opus_5_5, by_hand).
 referee_report('results/107_hopf_soft_tensor_mass_and_current.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(lecture_faithful_isometries, claude_opus_5_5, by_hand).
+checked_by(dual_tensor_round_poles, claude_opus_5_5, by_hand).
+referee_report('results/92_finite_electric_and_magnetic_tensor_match.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
