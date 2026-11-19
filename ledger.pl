@@ -2914,6 +2914,39 @@ referee_pending(restored_finite_current_running).
 addresses(t13, restored_finite_current_running).
 addresses(t18, restored_finite_current_running).
 
+claim(vortex_flux_axion, theorem, proved, "Theorem 77.1", "A quantized Abelian Chern-Simons modification of a two-form gives axion charge 2p to the constant vortex vector while all round weak rotations and the broken diagonal electric lift have exact compensators. The supported metrics remain stationary.").
+source(vortex_flux_axion, 'results/77_flux_mass_for_the_vortex_vector.md', '').
+depends(vortex_flux_axion, rooted_colour_gap).
+depends(vortex_flux_axion, shared_neutral_poles).
+depends(vortex_flux_axion, vortex_ir_neutral_current).
+attempted_by(vortex_flux_axion, gpt_6_2_astra_max).
+checked_by(vortex_flux_axion, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_flux_axion).
+addresses(t4, vortex_flux_axion).
+addresses(t18, vortex_flux_axion).
+
+claim(vortex_flux_mass_relation, proposition, proved, "Proposition 77.2", "In the axion-lifted round theory the highest sourced angular vector squared mass minus twice the circle-harmonic squared mass equals the neutral vortex squared mass. The residues follow from a three-component normalized mass form.").
+source(vortex_flux_mass_relation, 'results/77_flux_mass_for_the_vortex_vector.md', '').
+depends(vortex_flux_mass_relation, vortex_flux_axion).
+depends(vortex_flux_mass_relation, vortex_root_upper_current).
+attempted_by(vortex_flux_mass_relation, gpt_6_2_astra_max).
+checked_by(vortex_flux_mass_relation, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_flux_mass_relation).
+addresses(t4, vortex_flux_mass_relation).
+addresses(t18, vortex_flux_mass_relation).
+
+claim(vortex_flux_ir_contact, corollary, proved, "Corollary 77.3", "The flux mass preserves the tree charged contact at fixed compact broken geometry, and suppresses the anomalously large neutral current near restoration. Keeping the same mirror fields still cancels the chiral anomalies.").
+source(vortex_flux_ir_contact, 'results/77_flux_mass_for_the_vortex_vector.md', '').
+depends(vortex_flux_ir_contact, vortex_flux_axion).
+depends(vortex_flux_ir_contact, vortex_flux_mass_relation).
+depends(vortex_flux_ir_contact, rooted_current_projection).
+depends(vortex_flux_ir_contact, vortex_mirror_anomalies).
+attempted_by(vortex_flux_ir_contact, gpt_6_2_astra_max).
+checked_by(vortex_flux_ir_contact, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_flux_ir_contact).
+addresses(t4, vortex_flux_ir_contact).
+addresses(t18, vortex_flux_ir_contact).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).
