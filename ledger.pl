@@ -2337,7 +2337,6 @@ source(two_endpoint_flavour_wall, 'paper/two_endpoint_limits.tex', '').
 depends(two_endpoint_flavour_wall, gh1_winding_family).
 attempted_by(two_endpoint_flavour_wall, gpt_6_2_astra_max).
 checked_by(two_endpoint_flavour_wall, gpt_6_2_astra_max, by_hand).
-referee_pending(two_endpoint_flavour_wall).
 addresses(t14, two_endpoint_flavour_wall).
 
 claim(two_endpoint_flavour_current, proposition, proved, "Two-endpoint paper, flavour and current", "General Dirac Yukawa maps realize the three-family commutator invariant on the isolated window. The exact parallel-current exchange is the zero-mode propagator times the product of the two appropriate flavour mixing entries.").
@@ -2371,7 +2370,6 @@ source(two_endpoint_fixed_energy_count, 'paper/two_endpoint_limits.tex', '').
 depends(two_endpoint_fixed_energy_count, two_endpoint_current).
 attempted_by(two_endpoint_fixed_energy_count, gpt_6_2_astra_max).
 checked_by(two_endpoint_fixed_energy_count, gpt_6_2_astra_max, by_hand).
-referee_pending(two_endpoint_fixed_energy_count).
 addresses(t14, two_endpoint_fixed_energy_count).
 
 claim(two_endpoint_compressed_flip, proposition, proved, "Two-endpoint paper, colour-flavour exchange on the retained space", "For the four-slot unitary flip identifying the lepton line with the exceptional flavour line, its compression to the twelve retained colour-flavour coefficients squares to the rank-nine colour times light-flavour projector. Its kernel consists of the three lepton times light-flavour directions.").
@@ -2405,7 +2403,6 @@ source(m111_circle_descent, 'paper/seven_m_theory.tex', '').
 depends(m111_circle_descent, d11_quotient).
 attempted_by(m111_circle_descent, gpt_6_2_astra_max).
 checked_by(m111_circle_descent, gpt_6_2_astra_max, by_hand).
-referee_pending(m111_circle_descent).
 addresses(t18, m111_circle_descent).
 
 claim(m111_membrane_saturation, proposition, proved, "M-theory endpoint paper, smooth membrane representatives", "A nonzero-charge smooth immersed closed surface cannot saturate the stated comass bound on M111. Equality would give an unbranched covering of the two-sphere of absolute degree 3 times the absolute integral charge. The infimum over singular limits is open.").
@@ -2413,7 +2410,6 @@ source(m111_membrane_saturation, 'paper/seven_m_theory.tex', '').
 depends(m111_membrane_saturation, m111_membrane_charge).
 attempted_by(m111_membrane_saturation, gpt_6_2_astra_max).
 checked_by(m111_membrane_saturation, gpt_6_2_astra_max, by_hand).
-referee_pending(m111_membrane_saturation).
 addresses(t18, m111_membrane_saturation).
 
 claim(m111_horizontal_modes, proposition, proved, "M-theory endpoint paper, Reeb sectors and a separate doublet", "For odd j the Reeb sectors give horizontal Dolbeault coefficients O(3n,2n), n=jr-1/2. Their kernels have integer weak isospin. The O(-4,1) quark-doublet twist pulls back to class -11u on the primitive total space.").
@@ -2422,21 +2418,18 @@ depends(m111_horizontal_modes, m111_circle_descent).
 depends(m111_horizontal_modes, l53_flag_multiplets).
 attempted_by(m111_horizontal_modes, gpt_6_2_astra_max).
 checked_by(m111_horizontal_modes, gpt_6_2_astra_max, by_hand).
-referee_pending(m111_horizontal_modes).
 addresses(t18, m111_horizontal_modes).
 
 claim(fr_product_relative_radius, proposition, proved, "M-theory endpoint paper, electric product", "The unwarped electric Freund-Rubin product with round S5 and S2 has radii in ratio two and geometric weak rotations. The volume-preserving relative-radius perturbation has mass squared times the AdS radius squared equal to -3, below the AdS4 stability bound.").
 source(fr_product_relative_radius, 'paper/seven_m_theory.tex', '').
 attempted_by(fr_product_relative_radius, gpt_6_2_astra_max).
 checked_by(fr_product_relative_radius, gpt_6_2_astra_max, by_hand).
-referee_pending(fr_product_relative_radius).
 addresses(t18, fr_product_relative_radius).
 
 claim(heterotic_wall_three_index, proposition, conditional, "M-theory endpoint paper, heterotic wall spectrum", "The explicit free order-three quotient of an anticanonical divisor in two cubic surfaces has Hodge numbers (6,9) and Euler number -6. The supersymmetric standard embedding with trivial Wilson line gives nine 27s and six conjugates before further breaking, three net families. Its Euler number excludes a smooth locally free circle action on this same threefold.").
 source(heterotic_wall_three_index, 'paper/seven_m_theory.tex', '').
 attempted_by(heterotic_wall_three_index, gpt_6_2_astra_max).
 checked_by(heterotic_wall_three_index, gpt_6_2_astra_max, by_hand).
-referee_pending(heterotic_wall_three_index).
 addresses(t18, heterotic_wall_three_index).
 
 claim(heterotic_wall_pair_threshold, corollary, conditional, "M-theory endpoint paper, finite threshold for vectorlike pairs", "In the isolated nine 27 and six conjugate multiplicity spaces with canonical kinetics and only an E6-invariant supersymmetric quadratic pairing, a rank-r mass matrix leaves counts (9-r+k,6-r+k) at cutoff E, where k counts positive singular values at or below E. Exactly three 27s alone requires all six singular values above E. The mass matrix is an input.").
@@ -2445,7 +2438,6 @@ depends(heterotic_wall_pair_threshold, heterotic_wall_three_index).
 depends(heterotic_wall_pair_threshold, l12_towerless).
 attempted_by(heterotic_wall_pair_threshold, gpt_6_2_astra_max).
 checked_by(heterotic_wall_pair_threshold, gpt_6_2_astra_max, by_hand).
-referee_pending(heterotic_wall_pair_threshold).
 addresses(t14, heterotic_wall_pair_threshold).
 addresses(t18, heterotic_wall_pair_threshold).
 
@@ -2454,7 +2446,6 @@ source(shared_circle_window, 'results/59_shared_circle_and_two_scales.md', '').
 depends(shared_circle_window, gh1_helix_geometry).
 attempted_by(shared_circle_window, gpt_6_2_astra_max).
 checked_by(shared_circle_window, gpt_6_2_astra_max, by_hand).
-referee_pending(shared_circle_window).
 addresses(t13, shared_circle_window).
 addresses(t14, shared_circle_window).
 addresses(t18, shared_circle_window).
@@ -2465,7 +2456,6 @@ depends(shared_circle_density, shared_circle_window).
 depends(shared_circle_density, gh1_helix_scalar).
 attempted_by(shared_circle_density, gpt_6_2_astra_max).
 checked_by(shared_circle_density, gpt_6_2_astra_max, by_hand).
-referee_pending(shared_circle_density).
 addresses(t13, shared_circle_density).
 addresses(t14, shared_circle_density).
 addresses(t18, shared_circle_density).
@@ -2486,7 +2476,6 @@ depends(helical_probe_charge, shared_circle_window).
 depends(helical_probe_charge, l53_flag_multiplets).
 attempted_by(helical_probe_charge, gpt_6_2_astra_max).
 checked_by(helical_probe_charge, gpt_6_2_astra_max, by_hand).
-referee_pending(helical_probe_charge).
 addresses(t2, helical_probe_charge).
 addresses(t18, helical_probe_charge).
 
@@ -2496,7 +2485,6 @@ depends(helical_probe_current, helical_probe_charge).
 depends(helical_probe_current, gh1_helix_vector).
 attempted_by(helical_probe_current, gpt_6_2_astra_max).
 checked_by(helical_probe_current, gpt_6_2_astra_max, by_hand).
-referee_pending(helical_probe_current).
 addresses(t4, helical_probe_current).
 addresses(t13, helical_probe_current).
 addresses(t18, helical_probe_current).
@@ -2506,7 +2494,6 @@ source(magnetic_single_pole_test, 'results/60_helical_fermion_currents.md', '').
 depends(magnetic_single_pole_test, helical_probe_current).
 attempted_by(magnetic_single_pole_test, gpt_6_2_astra_max).
 checked_by(magnetic_single_pole_test, gpt_6_2_astra_max, by_hand).
-referee_pending(magnetic_single_pole_test).
 addresses(t4, magnetic_single_pole_test).
 addresses(t13, magnetic_single_pole_test).
 
@@ -2535,7 +2522,6 @@ source(shared_polar_solution, 'results/62_supported_vortex_and_charged_caps.md',
 depends(shared_polar_solution, gh1_vortex_neck).
 attempted_by(shared_polar_solution, gpt_6_2_astra_max).
 checked_by(shared_polar_solution, gpt_6_2_astra_max, by_hand).
-referee_pending(shared_polar_solution).
 addresses(t13, shared_polar_solution).
 addresses(t18, shared_polar_solution).
 
@@ -2556,7 +2542,6 @@ depends(vortex_root_vacua, shared_polar_solution).
 depends(vortex_root_vacua, shared_circle_density).
 attempted_by(vortex_root_vacua, gpt_6_2_astra_max).
 checked_by(vortex_root_vacua, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_root_vacua).
 addresses(t13, vortex_root_vacua).
 addresses(t18, vortex_root_vacua).
 
@@ -2644,7 +2629,6 @@ source(colour_wilson_lift, 'results/65_colour_wilson_scalar.md', '').
 depends(colour_wilson_lift, colour_wilson_trial).
 attempted_by(colour_wilson_lift, gpt_6_2_astra_max).
 checked_by(colour_wilson_lift, gpt_6_2_astra_max, by_hand).
-referee_pending(colour_wilson_lift).
 addresses(t13, colour_wilson_lift).
 addresses(t18, colour_wilson_lift).
 
@@ -2654,7 +2638,6 @@ depends(shared_neutral_poles, vortex_root_upper_current).
 depends(shared_neutral_poles, vortex_root_domain).
 attempted_by(shared_neutral_poles, gpt_6_2_astra_max).
 checked_by(shared_neutral_poles, gpt_6_2_astra_max, by_hand).
-referee_pending(shared_neutral_poles).
 addresses(t4, shared_neutral_poles).
 addresses(t18, shared_neutral_poles).
 
@@ -2685,7 +2668,6 @@ depends(vortex_yukawa_half_interval, vortex_root_domain).
 depends(vortex_yukawa_half_interval, vortex_root_neck).
 attempted_by(vortex_yukawa_half_interval, gpt_6_2_astra_max).
 checked_by(vortex_yukawa_half_interval, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_yukawa_half_interval).
 addresses(t2, vortex_yukawa_half_interval).
 addresses(t14, vortex_yukawa_half_interval).
 addresses(t18, vortex_yukawa_half_interval).
@@ -2728,7 +2710,6 @@ depends(round_colour_threshold, round_flux_product_gap).
 depends(round_colour_threshold, colour_wilson_lift).
 attempted_by(round_colour_threshold, gpt_6_2_astra_max).
 checked_by(round_colour_threshold, gpt_6_2_astra_max, by_hand).
-referee_pending(round_colour_threshold).
 addresses(t13, round_colour_threshold).
 addresses(t18, round_colour_threshold).
 
@@ -2738,7 +2719,6 @@ depends(round_twelve_flavours, round_colour_threshold).
 depends(round_twelve_flavours, vortex_root_domain).
 attempted_by(round_twelve_flavours, gpt_6_2_astra_max).
 checked_by(round_twelve_flavours, gpt_6_2_astra_max, by_hand).
-referee_pending(round_twelve_flavours).
 addresses(t12, round_twelve_flavours).
 addresses(t18, round_twelve_flavours).
 
@@ -2789,7 +2769,6 @@ depends(root_wilson_winding, root_wilson_operator).
 depends(root_wilson_winding, round_flux_product_gap).
 attempted_by(root_wilson_winding, gpt_6_2_astra_max).
 checked_by(root_wilson_winding, gpt_6_2_astra_max, by_hand).
-referee_pending(root_wilson_winding).
 addresses(t13, root_wilson_winding).
 addresses(t18, root_wilson_winding).
 
@@ -2821,7 +2800,6 @@ source(vortex_mirror_anomalies, 'results/72_particle_identifications_and_mirrors
 depends(vortex_mirror_anomalies, particle_lifts_table).
 attempted_by(vortex_mirror_anomalies, gpt_6_2_astra_max).
 checked_by(vortex_mirror_anomalies, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_mirror_anomalies).
 addresses(t2, vortex_mirror_anomalies).
 addresses(t12, vortex_mirror_anomalies).
 addresses(t18, vortex_mirror_anomalies).
@@ -2916,7 +2894,6 @@ depends(restored_finite_current_running, round_twelve_flavours).
 depends(restored_finite_current_running, vortex_mirror_anomalies).
 attempted_by(restored_finite_current_running, gpt_6_2_astra_max).
 checked_by(restored_finite_current_running, gpt_6_2_astra_max, by_hand).
-referee_pending(restored_finite_current_running).
 addresses(t13, restored_finite_current_running).
 addresses(t18, restored_finite_current_running).
 
@@ -3086,7 +3063,6 @@ depends(spin_seven_periods, dual_four_cycle_flux).
 depends(spin_seven_periods, m111_membrane_charge).
 attempted_by(spin_seven_periods, gpt_6_2_astra_max).
 checked_by(spin_seven_periods, gpt_6_2_astra_max, by_hand).
-referee_pending(spin_seven_periods).
 addresses(t11, spin_seven_periods).
 addresses(t18, spin_seven_periods).
 
@@ -3137,7 +3113,6 @@ depends(root_phase_charm_test, root_phase_kinetic).
 depends(root_phase_charm_test, finite_weak_current_inverse).
 attempted_by(root_phase_charm_test, gpt_6_2_astra_max).
 checked_by(root_phase_charm_test, gpt_6_2_astra_max, python).
-referee_pending(root_phase_charm_test).
 addresses(t13, root_phase_charm_test).
 addresses(t18, root_phase_charm_test).
 
@@ -3465,7 +3440,6 @@ source(hopf_source_free_freund_rubin, 'results/94_spin_hopf_trajectory_and_its_c
 depends(hopf_source_free_freund_rubin, spin_seven_periods).
 attempted_by(hopf_source_free_freund_rubin, gpt_6_2_sol_ultra).
 checked_by(hopf_source_free_freund_rubin, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_source_free_freund_rubin).
 addresses(t11, hopf_source_free_freund_rubin).
 addresses(t18, hopf_source_free_freund_rubin).
 
@@ -4271,6 +4245,55 @@ show(C) :- claim(C, K, S, L, T), format("~w  [~w, ~w: ~w]~n  ~w~n", [C, K, S, L,
 
 %% known_in_literature(-C, -Ref): claims whose statement is already in print.
 known_in_literature(C, R) :- prior_work(C, known, R).
+
+%% Referee check by Claude Opus 5.5, 20 Nov 2026, snapshot 8ec19b0 (historical/reviews/2026-11-20_opus_check_pending_audit.md).
+checked_by(fr_product_relative_radius, claude_opus_5_5, by_hand).
+checked_by(heterotic_wall_three_index, claude_opus_5_5, by_hand).
+checked_by(heterotic_wall_pair_threshold, claude_opus_5_5, by_hand).
+checked_by(m111_circle_descent, claude_opus_5_5, by_hand).
+checked_by(m111_horizontal_modes, claude_opus_5_5, by_hand).
+checked_by(m111_membrane_saturation, claude_opus_5_5, by_hand).
+checked_by(two_endpoint_flavour_wall, claude_opus_5_5, by_hand).
+checked_by(two_endpoint_fixed_energy_count, claude_opus_5_5, by_hand).
+checked_by(hopf_source_free_freund_rubin, claude_opus_5_5, by_hand).
+checked_by(spin_seven_periods, claude_opus_5_5, by_hand).
+checked_by(vortex_yukawa_half_interval, claude_opus_5_5, by_hand).
+checked_by(restored_finite_current_running, claude_opus_5_5, by_hand).
+checked_by(helical_probe_charge, claude_opus_5_5, by_hand).
+checked_by(helical_probe_current, claude_opus_5_5, by_hand).
+checked_by(magnetic_single_pole_test, claude_opus_5_5, by_hand).
+checked_by(shared_circle_window, claude_opus_5_5, by_hand).
+checked_by(shared_circle_density, claude_opus_5_5, by_hand).
+checked_by(shared_polar_solution, claude_opus_5_5, by_hand).
+checked_by(vortex_root_vacua, claude_opus_5_5, by_hand).
+checked_by(colour_wilson_lift, claude_opus_5_5, by_hand).
+checked_by(round_colour_threshold, claude_opus_5_5, by_hand).
+checked_by(round_twelve_flavours, claude_opus_5_5, by_hand).
+checked_by(shared_neutral_poles, claude_opus_5_5, by_hand).
+checked_by(root_wilson_winding, claude_opus_5_5, by_hand).
+checked_by(vortex_mirror_anomalies, claude_opus_5_5, by_hand).
+checked_by(root_phase_charm_test, claude_opus_5_5, by_hand).
+referee_report('paper/seven_m_theory.tex', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('paper/two_endpoint_limits.tex', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/59_shared_circle_and_two_scales.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/60_helical_fermion_currents.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/62_supported_vortex_and_charged_caps.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/63_vortex_roots_and_diagonal_photon.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/64_projective_flux_and_colour_stability.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/65_colour_wilson_scalar.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/66_neutral_currents_and_hadronic_units.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/67_fermion_masses_on_the_long_neck.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/68_round_coloured_boson_threshold.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/70_wilson_winding_with_vortex_roots.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/72_particle_identifications_and_mirrors.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/76_charged_deformations_and_thomson_matching.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/79_mirror_thresholds_and_scalar_vertices.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/84_magnetic_origin_of_the_vortex_flux.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/85_root_phase_and_the_qcd_axion.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/90_a_tensor_completion_without_light_mirrors.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/94_spin_hopf_trajectory_and_its_charge_lift.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/96_photon_thresholds_from_vectors_and_spectators.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/98_hopf_colour_scalar_stability_and_thresholds.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).

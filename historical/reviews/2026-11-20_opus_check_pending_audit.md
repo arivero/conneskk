@@ -1,0 +1,53 @@
+# Referee check of pending claims, 20 November 2026
+
+Referee: Claude Opus 5.5 (`claude_opus_5_5`). Snapshot: `master` at `8ec19b0`.
+
+Method: hand derivation from the results files and papers. Prolog was used only for ledger queries. No other programming. The full review of the 18–19 November work, including process findings, is kept outside the repository (`~/reviewConneskk.md` on the working machine). This file records the claim-level verdicts that the ledger cites.
+
+No claim checked here was found wrong.
+
+## Checked in full (ledger: `checked_by(..., claude_opus_5_5, by_hand)`, pending flag removed)
+
+| Claim | Location | What was verified |
+|---|---|---|
+| `fr_product_relative_radius` | `paper/seven_m_theory.tex:56-65` | Radii $a^2=2L^2/3$, $b^2=L^2/6$, $L_{\rm AdS}=L/2$. For any Freund–Rubin AdS$_4\times M_1\times M_2$ the volume-preserving relative mode has $\Delta_L=0$, so $m^2=-2c$ with $cL_{\rm AdS}^2=3/2$, giving $m^2L_{\rm AdS}^2=-3<-9/4$. |
+| `heterotic_wall_three_index` | seven_m_theory | Tian–Yau $\mathbb Z_3$ quotient: $(h^{1,1},h^{2,1})=(6,9)$, $\chi=-6$. Standard embedding gives $9\cdot\mathbf{27}+6\cdot\overline{\mathbf{27}}$. $\chi\ne0$ excludes a locally free circle action. |
+| `heterotic_wall_pair_threshold` | seven_m_theory | Counts $(9-r+k,6-r+k)$. Exactly three $\mathbf{27}$s requires $r=6$, $k=0$. |
+| `m111_circle_descent` | seven_m_theory | Gysin: $w_2(\mathbb{CP}^2\times\mathbb{CP}^1)=(1,0)$, $e=j(3,2)$. Spin iff $j$ is odd. |
+| `m111_horizontal_modes` | seven_m_theory | $n=jr-\tfrac12$ is integral for odd $j$ and half-integral $r$. $\mathcal O(3n,2n)$ coefficients; $H^0(\mathcal O(2n))$ on $\mathbb{CP}^1$ has isospin $n$. $\mathcal O(-4,1)\mapsto-8u-3u=-11u$. |
+| `m111_membrane_saturation` | `seven_m_theory.tex:219-227` | Equality forces a horizontal $\beta$-calibrated surface; the projection to $\mathbb{CP}^1$ is a local diffeomorphism, hence a degree-1 covering, against $\lvert\int k_{\rm w}\rvert=3\lvert q\rvert$. |
+| `two_endpoint_flavour_wall` | two_endpoint_limits | Opposite outer reflections give $k=(n+\tfrac12)\pi/d$, gap $\pi/2d$. Periodic channels keep zero modes. |
+| `two_endpoint_fixed_energy_count` | two_endpoint_limits | Quarter-disk lattice count $t^2(E^2-\Lambda_j)/4\pi$ with perimeter error $O(1+tE)$. |
+| `hopf_source_free_freund_rubin` (94.6) | `results/94:116-126` | Invariant closed four-forms $g_1J^2/2+g_2J\wedge\omega$; closure removes $\operatorname{Re}\Omega\wedge\omega$, $\operatorname{Im}\Omega\wedge\omega$. The duals ${*}(J^2/2)=\eta\wedge\omega$, ${*}(J\wedge\omega)=J\wedge\eta$ give the displayed form equations, and a nonzero solution needs $f^2=2c^2$. Then $R_{55}=-G^2/144=(f^2-g_1^2-2g_2^2)/6\le c^2/3$, against $\tfrac14F_{ij}F^{ij}=c^2$. The round case gives $B=2r$. |
+| `spin_seven_periods` (84.3) | results/84 | A finite-kernel isometric action of the 12-dimensional group is transitive: any isotropy of dimension $\ge6$ contains a maximal torus (hence the central $U(1)$) or two commuting $SU(2)$s (hence $SU(2)_w$). The resulting $M^{pqr}$-type and $S^5\times S^2$-type spaces have $b_3=b_4=b_6=0$ by Gysin. |
+| `vortex_yukawa_half_interval` (67.1) | results/67 | The Koszul sequence $0\to\mathcal O(-1)\to\mathcal O^2\to\mathcal O(1)\to0$ and $H^*(\mathcal O(-1))=0$ give no zero modes. An N/D interval of length $d/2$ gives $(2j+1)\pi/d$. |
+| `restored_finite_current_running` (76.3) | results/76 | Per family $\sum Y^2=10/3$, $\sum YN=0$, $\sum N^2=8\cdot4+8=40$. Six copies plus two root doublets give $(2/3)\cdot20+1/3=41/3$ and $(2/3)\cdot240+4/3=484/3$. Weak $b_0=22/3-8-1/3=-1$. |
+| `helical_probe_charge` (60.1) | results/60 | $Q=T_3+n_s/k$ reproduces the table; sixteen particle coefficients. |
+| `helical_probe_current` (60.2) | results/60 | $PxP=\sigma/3$, the spin-½ Berezin compression. Residue ratios $4n_sn_{s'}/(5k^2)$ give $1/5$, $1/45$, $-1/15$. |
+| `magnetic_single_pole_test` (60.4) | results/60 | Two-momentum identity by mode-wise subtraction. |
+| `shared_circle_window` (59.1) | results/59 | $\mathbb{CP}^2$ levels $4j(j+2)$, multiplicity $(j+1)^3$, threshold $\sqrt{12}/B$, and every power of $a$ in the scaling table. |
+| `shared_circle_density` (59.2) | results/59 | $B^6L=8I_3/(D\gamma)$, $L=k\sqrt{cB^2-a^2J_3}$, $\gamma\sim1/P_b$, so $B,L\propto P_b^{1/7}$ and $L/B\to k\sqrt c$. |
+| `shared_polar_solution` (62.1) | results/62 | Trace-reversed balance $(2U-3Zf^2/2)/9=0$ outside $\mathbb{CP}^2$ and $+Zf^2/2=6/B^2$ inside, with $Z_0q^2=12B_0^6$, $U_0=9/B_0^2$. The dilaton equation coincides with the balance. The vortex stress is taken from result 55. |
+| `vortex_root_vacua` (63.1) | results/63 | $H_+H_-=\zeta_0e^{-2\sigma}\Phi$; all added squares and their first variations vanish. The invariance condition leaves only $Q=K_3+Y$. |
+| `colour_wilson_lift` (65.2) | results/65 | Mass matrix $\nu\begin{pmatrix}1+2c_\eta&-1\\-1&1\end{pmatrix}$, eigenvalues $\nu(1+c_\eta\pm\sqrt{1+c_\eta^2})$, with $\lVert dK^\flat\rVert^2=2\lambda_c\lVert K\rVert^2$ for a Killing field. |
+| `round_colour_threshold` (68.2) | results/68 | $\lambda_w=8\lambda_c/9$, $L^{-2}=2\lambda_c/(5k^2)$, Wilson pair $2\lambda_c(2\pm\sqrt2)$. Every gap lies above $1/L$. Conditional on 68.1, which is partly checked (below). |
+| `round_twelve_flavours` (68.3) | results/68 | Twisted Dirac levels $4n(n+j+2)/B^2$ on $\mathbb{CP}^2$ and $n(n+N)/r^2$ on the sphere give $\sqrt2/r$. $b_0=3$, $5/2$ with the Wilson adjoint, $b_1=-50$. |
+| `shared_neutral_poles` (66.1) | results/66 | $M_Z^2/M_C^2=1+g_Y^2/g_2^2=8/5$ with $I_W/I_Y=3/5$. $M_v^2/M_C^2=4I_W/I_v=2/3$ with $I_v=16CVa^2=6I_W$. |
+| `root_wilson_winding` (70.2) | results/70 | $k^2B^2/(4L^2)=3/5$ at canonical matching, which is $1/45$ of the gluon's 27. |
+| `vortex_mirror_anomalies` (72.2) | results/72 | SM traces cancel, cubic sum zero. $\mathcal A_{SU(3)^2v}=1$, $\mathcal A_{SU(2)^2v}=4$, $\sum N$ difference $8$, $\sum N^3$ difference $56$. Signed parent rank $2-4=-2$. |
+| `root_phase_charm_test` (85) | results/85 | $\mathcal B_c=44.3\,{\rm GeV}^2\,\lvert\tilde Fy_c\rvert^2=2.97\times10^{-5}$ at $y_c=4.06\times10^{-3}$. BESIII bound $y_c<6.23\times10^{-4}$, amplitude factor $0.154$. The results file states the minimal axion is excluded; the ledger statement omits that. |
+
+## Partly checked (pending flag kept)
+
+| Claim | Checked | Not checked |
+|---|---|---|
+| `m111_membrane_charge` | Mass bound: $\int_{(2,-3)}(J_1-J_2)=3\pi$ (Sasaki–Einstein base factors $3/4$, $1/8$); $mL_{\rm AdS}=8\sqrt{N/3}$ requires $\mathrm{Vol}(M^{111})=9\pi^4/128$, the known value. | $g_B^{-2}=\sqrt N/(36\sqrt3\pi)$ and the norm $\pi^2L^3/48$. |
+| `spectator_global_bordism` (90) | $\Omega_7^{\rm Spin}(B(U(3)\times U(1)))=0$ via the AHSS and $Sq^2$-homology $\mathbb Z_2[c_2^2]$. | The determinant-anomaly identification with the differential cup product. |
+| `projective_flux_octet`, `projective_kahler_octet`, `projective_kahler_moduli` (64.1–64.3) | Determinants $7x^2+18x-96$, $7x^2+34x+32$, $x[7cx^2+(34c+56)x+32c+168]$ and their roots, given the stated linear equations. | The linearized Einstein–Maxwell equations themselves. |
+| `round_flux_product_gap` (68.1) | The four principal minors at $t_0=16/3$ ($17/6$, $1819/240$, $4583/72$, $635303/540$) and the projection bound. | The full mass-form derivation. |
+| `background_weak_multiplet_threshold` (96) | $\int_0^1[8-3(1-2x)^2]dx=7$. | The Feynman-parameter integrand itself. |
+| `mirror_custodial_bound` (79) | $6\pi S=12$ for three degenerate mirror families. | The quadratic $T$ bound. |
+| `hopf_colour_octet_instability` (98) | $4(29-4\sqrt{67})/7\simeq-2.138$. | The fluctuation equations. |
+| `two_endpoint_face_current` | Neumann face Green function $\coth(q\ell)/q$; logarithmic corner divergence. | The aspect-ratio discrimination. |
+
+The remaining pending claims were not examined in this check.
