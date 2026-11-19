@@ -2378,7 +2378,6 @@ depends(two_endpoint_compressed_flip, two_endpoint_flavour_wall).
 depends(two_endpoint_compressed_flip, d11_flip).
 attempted_by(two_endpoint_compressed_flip, gpt_6_2_astra_max).
 checked_by(two_endpoint_compressed_flip, gpt_6_2_astra_max, by_hand).
-referee_pending(two_endpoint_compressed_flip).
 addresses(t14, two_endpoint_compressed_flip).
 
 claim(two_endpoint_trace_matching, corollary, conditional, "Two-endpoint paper, finite trace and product weak mass", "Matching the tree product weak pole to the leading finite commutator mass with its own positive trace kinetic norm requires H s^2/K <= 24 ||D_F||^2. The specified winding action has divergent H s^2/K while its retained harmonic Yukawa block stays bounded.").
@@ -4069,7 +4068,6 @@ source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).
 attempted_by(lecture_projective_circle_gap, gpt_6_2_astra_max).
 checked_by(lecture_projective_circle_gap, gpt_6_2_astra_max, by_hand).
-referee_pending(lecture_projective_circle_gap).
 addresses(t14, lecture_projective_circle_gap).
 addresses(t18, lecture_projective_circle_gap).
 
@@ -4304,6 +4302,9 @@ referee_report('results/108_hopf_global_flux_and_anomaly_domain.md', 'historical
 referee_report('results/95_coloured_threshold_in_the_quotient_tensor_action.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(spin_magnetic_surface_products, claude_opus_5_5, by_hand).
 referee_report('results/87_spin_magnetic_product_and_wrapped_membranes.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(two_endpoint_compressed_flip, claude_opus_5_5, by_hand).
+checked_by(lecture_projective_circle_gap, claude_opus_5_5, by_hand).
+referee_report('paper/kk_strings_lecture.tex', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
