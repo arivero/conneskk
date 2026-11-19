@@ -5,6 +5,7 @@ from scipy.linalg import eigvalsh, solve
 
 from dual_tensor_currents import WeakFit, fit_at_mass
 from finite_flux_currents import fit, neutral_pencil, radial_basis
+from hopf_transverse_currents import HopfModel, fit as fit_hopf
 from weak_current_spectrum import charged_pencil
 
 
@@ -64,6 +65,14 @@ class FiniteCurrentTests(unittest.TestCase):
         residual = np.array([[1., 1., 0., 0.], [0., e, 1., 0.], [2*m, 7*m, 0., 1.]])
         expected = np.sort(np.r_[0., 1., eigvalsh(residual @ residual.T)])
         np.testing.assert_allclose(eigvalsh(mass, kinetic), expected, atol=1e-8)
+
+    def test_finite_hopf_form_pole_is_distinct_from_the_locking_pole(self):
+        point = fit_hopf(WeakFit(degree=6), HopfModel())
+        self.assertAlmostEqual(point["neutral"], 91.15377253, places=4)
+        self.assertAlmostEqual(point["locking_mass"], 6682.78, delta=.1)
+        self.assertAlmostEqual(point["five_form_mass"], 23174.43, delta=.1)
+        self.assertGreater(point["neutral_heavy_probe_fraction"], .999)
+        self.assertAlmostEqual(point["e_star_squared"], .097661108, places=7)
 
 
 if __name__ == "__main__":

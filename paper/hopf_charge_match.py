@@ -10,8 +10,8 @@ from scipy.optimize import brentq
 from finite_flux_currents import Observations
 
 
-def neutral_parameters(sine, stiffness, observations, i3, period):
-    v2 = 1/(sqrt(2)*observations.fermi)
+def neutral_parameters(sine, stiffness, observations, i3, period, *, v_squared=None):
+    v2 = 1/(sqrt(2)*observations.fermi) if v_squared is None else v_squared
     iw = v2/(4*observations.charged**2)
     ip = 6*i3
     iy = iw*(1-sine)/sine
@@ -28,7 +28,7 @@ def neutral_parameters(sine, stiffness, observations, i3, period):
     exchange = v2/stiffness**2
     dv = observations.axial + rho/2 + 3*exchange/4
     vector = rho*(2*sine-.5)+3*dv+3*exchange*(4-2*overlap)/4
-    return dict(vector=vector, d_v=dv, rho=rho, i_w=iw, i_c=ic, i_q=iq,
+    return dict(vector=vector, d_v=dv, rho=rho, i_w=iw, i_c=ic, i_q=iq, overlap=overlap,
                 root_squared=root_squared, v_squared=v2, norm=norm,
                 hydrogen_weak_charge=-12*dv+6*exchange)
 
@@ -38,6 +38,10 @@ def fit(stiffness, tensor_coefficient=.49604141748, i3=.769851237589674, period=
     sine = brentq(lambda value: neutral_parameters(value, stiffness, observations, i3, period)["vector"]
                   - observations.vector, .21, .26, xtol=1e-14)
     fit_data = neutral_parameters(sine, stiffness, observations, i3, period)
+    return geometry(fit_data, sine, stiffness, tensor_coefficient, i3)
+
+
+def geometry(fit_data, sine, stiffness, tensor_coefficient, i3):
     v2, dv = fit_data["v_squared"], fit_data["d_v"]
     if not (0 < dv < 1 and fit_data["rho"] > 1):
         raise ValueError("These inputs require a negative vortex or root stiffness.")
@@ -54,10 +58,11 @@ def fit(stiffness, tensor_coefficient=.49604141748, i3=.769851237589674, period=
     flux_gap2 = 8/colour_radius**2
     broken_colour = eigh(np.array([[flux_gap2+stiffness**2/i3, -flux_gap2],
                                     [-flux_gap2, flux_gap2]]), eigvals_only=True)
-    overlap = 3*fit_data["i_c"]/(4*period*fit_data["i_q"])
+    overlap = fit_data["overlap"]
     left = np.array([sine-.5, 1.5-overlap]) @ eigenvectors[:, 0]
     right = np.array([sine, 2.5-overlap]) @ eigenvectors[:, 0]
     return dict(stiffness=stiffness, sine=sine, rho=fit_data["rho"], vortex_fraction=dv,
+                v_squared=v2,
                 e_squared=1/fit_data["i_q"], hydrogen_weak_charge=fit_data["hydrogen_weak_charge"],
                 auxiliary_inverse_norm=fit_data["i_c"], weak_inverse_radius=1/weak_radius,
                 hopf_inverse_radius=1/colour_radius, reduced_planck=sqrt(2*cv),

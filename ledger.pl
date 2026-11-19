@@ -3542,6 +3542,79 @@ addresses(t4, thomson_radius_matching).
 addresses(t13, thomson_radius_matching).
 addresses(t18, thomson_radius_matching).
 
+claim(hopf_transverse_current_pencil, proposition, proved, "Proposition 97.1", "In the stated sourced colour-singlet spin-one sectors Q=0,+/-1, the weak radial pencil couples to Hopf, auxiliary and coexact five-form profiles. The invariant form decomposition closes these sectors. The specified constant profiles give the exact photon and the lifted spinor charges.").
+source(hopf_transverse_current_pencil, 'results/97_hopf_transverse_spectrum_and_current_match.md', 'the-hopf-metric-and-its-five-form-profile').
+depends(hopf_transverse_current_pencil, hopf_diagonal_hypercharge).
+depends(hopf_transverse_current_pencil, hopf_supported_spin_product).
+depends(hopf_transverse_current_pencil, dual_tensor_transverse_pencil).
+depends(hopf_transverse_current_pencil, rooted_current_projection).
+attempted_by(hopf_transverse_current_pencil, gpt_6_2_sol_ultra).
+checked_by(hopf_transverse_current_pencil, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_transverse_current_pencil).
+addresses(t4, hopf_transverse_current_pencil).
+addresses(t11, hopf_transverse_current_pencil).
+addresses(t18, hopf_transverse_current_pencil).
+
+claim(hopf_finite_current_fit, claim, numerical, "Result 97, finite weak inverse", "The specified finite transverse inverse at f_S=5 TeV reproduces the central weak contacts and poles and resolves vortex, locking and five-form sterile poles. Holding muon decay out gives GF about 1.161834e-5 GeV^-2 in the stated pole and width convention, prior to radiative matching.").
+source(hopf_finite_current_fit, 'results/97_hopf_transverse_spectrum_and_current_match.md', 'the-finite-weak-inverse').
+depends(hopf_finite_current_fit, hopf_transverse_current_pencil).
+depends(hopf_finite_current_fit, hopf_locking_weak_charges).
+depends(hopf_finite_current_fit, dual_tensor_finite_fit).
+attempted_by(hopf_finite_current_fit, gpt_6_2_sol_ultra).
+checked_by(hopf_finite_current_fit, gpt_6_2_sol_ultra, python).
+referee_pending(hopf_finite_current_fit).
+addresses(t4, hopf_finite_current_fit).
+addresses(t13, hopf_finite_current_fit).
+addresses(t18, hopf_finite_current_fit).
+
+claim(hopf_comoving_charged_limit, proposition, conditional, "Result 97, finite meridian and charged limit", "Along the specified fixed-shape spin Hopf shrink the three Abelian charge-one blocks decouple while the charged electric and magnetic tensor primitives survive. Assuming a finite positive limiting B H_N in the required strong window, the normalized charged resolvent is that of 93.2 with sigma_H=h_N^2/(3 I3).").
+source(hopf_comoving_charged_limit, 'results/97_hopf_transverse_spectrum_and_current_match.md', 'finite-meridian-and-the-charged-limit').
+depends(hopf_comoving_charged_limit, hopf_transverse_current_pencil).
+depends(hopf_comoving_charged_limit, hopf_scalar_windows).
+depends(hopf_comoving_charged_limit, dual_tensor_hadronic_resolvent).
+attempted_by(hopf_comoving_charged_limit, gpt_6_2_sol_ultra).
+checked_by(hopf_comoving_charged_limit, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_comoving_charged_limit).
+addresses(t4, hopf_comoving_charged_limit).
+addresses(t13, hopf_comoving_charged_limit).
+addresses(t14, hopf_comoving_charged_limit).
+addresses(t18, hopf_comoving_charged_limit).
+
+claim(hopf_colour_octet_instability, proposition, proved, "Proposition 98.1", "For the supported round colour factor with zero volume-line penalties in the frozen weak and colour-dilaton restriction, the top-form colour octet has a physical negative second variation with m^2 B^2=4(29-4 sqrt(67))/7. The direction persists for sufficiently small stated spatial penalties.").
+source(hopf_colour_octet_instability, 'results/98_hopf_colour_scalar_stability_and_thresholds.md', 'a-nonhomogeneous-colour-instability-with-a-stable-homogeneous-radius').
+depends(hopf_colour_octet_instability, hopf_supported_spin_product).
+depends(hopf_colour_octet_instability, projective_flux_octet).
+attempted_by(hopf_colour_octet_instability, gpt_6_2_sol_ultra).
+checked_by(hopf_colour_octet_instability, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_colour_octet_instability).
+addresses(t11, hopf_colour_octet_instability).
+addresses(t14, hopf_colour_octet_instability).
+addresses(t18, hopf_colour_octet_instability).
+
+claim(hopf_intrinsic_colour_stabilizers, proposition, proved, "Proposition 98.2", "The stated positive intrinsic colour-leaf squares leave the backgrounds and the sourced transverse weak and Killing sectors unchanged. The scalar-derived colour sector has m^2 at least 8/B^2 off homogeneous modes in the frozen weak comparison for 0<c<=1, and for the round coupled weak-singlet comparison with the conformally adjusted action.").
+source(hopf_intrinsic_colour_stabilizers, 'results/98_hopf_colour_scalar_stability_and_thresholds.md', 'two-positive-intrinsic-colour-terms').
+depends(hopf_intrinsic_colour_stabilizers, hopf_colour_octet_instability).
+depends(hopf_intrinsic_colour_stabilizers, hopf_transverse_current_pencil).
+depends(hopf_intrinsic_colour_stabilizers, hopf_broken_colour_vectors).
+attempted_by(hopf_intrinsic_colour_stabilizers, gpt_6_2_sol_ultra).
+checked_by(hopf_intrinsic_colour_stabilizers, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_intrinsic_colour_stabilizers).
+addresses(t4, hopf_intrinsic_colour_stabilizers).
+addresses(t14, hopf_intrinsic_colour_stabilizers).
+addresses(t18, hopf_intrinsic_colour_stabilizers).
+
+claim(hopf_projected_coloured_threshold, proposition, proved, "Proposition 98.3", "In the stated round weak-singlet coloured projection with the intrinsic stabilizers and colour-invariant volume-line amplitudes, the lower broken-Killing pole is the first positive coloured boson near the fitted scales. In the specified broken-path comparison its M^2 B^2 tends to 8 and the degree-one spin-two harmonic has M^2 B^2=5. The full nonround threshold needs its own bounds.").
+source(hopf_projected_coloured_threshold, 'results/98_hopf_colour_scalar_stability_and_thresholds.md', 'the-projected-round-threshold-and-the-change-at-five').
+depends(hopf_projected_coloured_threshold, hopf_intrinsic_colour_stabilizers).
+depends(hopf_projected_coloured_threshold, hopf_broken_colour_vectors).
+depends(hopf_projected_coloured_threshold, hopf_finite_current_fit).
+attempted_by(hopf_projected_coloured_threshold, gpt_6_2_sol_ultra).
+checked_by(hopf_projected_coloured_threshold, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_projected_coloured_threshold).
+addresses(t13, hopf_projected_coloured_threshold).
+addresses(t14, hopf_projected_coloured_threshold).
+addresses(t18, hopf_projected_coloured_threshold).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).

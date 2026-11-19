@@ -73,7 +73,7 @@ def radial_basis(shape, degree):
 
 
 def neutral_pencil(grid, g, gt, stiffness, circle_ratio, period, flux, root_bias=0.0,
-                   *, magnetic_flux=0.0):
+                   *, magnetic_flux=0.0, hopf=None):
     """Project out the exact unit photon before taking the static inverse."""
     p, ut, f2, t = grid.p, grid.ut, grid.f2, grid.t
     avg = grid.average
@@ -84,53 +84,73 @@ def neutral_pencil(grid, g, gt, stiffness, circle_ratio, period, flux, root_bias
     zero = np.zeros_like(g)
     pform = f2[:, None] * g
     pform_t = f2[:, None] * (gt + 2 * fs[:, None] * g)
-    fields = 5 if magnetic_flux else 4
-    size = fields * g.shape[1]
+    fields = ["rotation", "vortex", "circle", "electric"]
+    if magnetic_flux:
+        fields.append("magnetic")
+    if hopf is not None:
+        fields.extend(("auxiliary", "five_form"))
+    size = len(fields) * g.shape[1]
     kinetic = np.zeros((size, size))
     mass = np.zeros_like(kinetic)
 
-    def square(matrix, weight, *blocks):
-        if len(blocks) < fields:
-            blocks = (*blocks, zero)
-        rows = np.sqrt(weight)[:, None] * np.hstack(blocks)
+    def row(**blocks):
+        return np.hstack([blocks.get(field, zero) for field in fields])
+
+    def square(matrix, weight, **blocks):
+        rows = np.sqrt(weight)[:, None] * row(**blocks)
         matrix += rows.T @ rows
 
     # Coordinates U, Z, W, P with physical z=mu U+Z, v=U/k+(a/L)W.
     inv_ratio = 1 / (period * circle_ratio)
-    square(kinetic, measure * f2, g, zero, zero, zero)
-    square(kinetic, 16 * measure, mu[:, None] * g, g, zero, zero)
-    square(kinetic, measure, inv_ratio * g, zero, g, zero)
-    square(kinetic, avg, -flux * pform, zero, zero, pform)
-    square(mass, measure, gt, zero, zero, zero)
-    square(mass, 16 * avg, mu[:, None] * gt, gt, zero, zero)
-    square(mass, avg, inv_ratio * gt, zero, gt, zero)
-    square(mass, 16 * measure * p, zero, g, zero, zero)
-    square(mass, avg / f2, -flux * f2[:, None] * gt,
-           -16 * flux * azimuth_flux[:, None] * g, zero, pform_t)
+    square(kinetic, measure * f2, rotation=g)
+    square(kinetic, 16 * measure, rotation=mu[:, None] * g, vortex=g)
+    square(kinetic, measure, rotation=inv_ratio * g, circle=g)
+    square(kinetic, avg, rotation=-flux * pform, electric=pform)
+    square(mass, measure, rotation=gt)
+    square(mass, 16 * avg, rotation=mu[:, None] * gt, vortex=gt)
+    square(mass, avg, rotation=inv_ratio * gt, circle=gt)
+    square(mass, 16 * measure * p, vortex=g)
+    square(mass, avg / f2, rotation=-flux * f2[:, None] * gt,
+           vortex=-16 * flux * azimuth_flux[:, None] * g, electric=pform_t)
+    if hopf is not None:
+        square(kinetic, hopf.auxiliary_norm * measure, rotation=1.5*inv_ratio*g, auxiliary=g)
+        square(kinetic, measure, rotation=inv_ratio*g, five_form=g)
+        square(mass, hopf.auxiliary_norm * avg, rotation=1.5*inv_ratio*gt, auxiliary=gt)
+        square(mass, avg, rotation=inv_ratio*gt, five_form=gt)
+        square(mass, 8*circle_ratio**2 * measure, circle=g, five_form=-g)
+        square(mass, hopf.locking*circle_ratio**2 * measure, circle=3*g, auxiliary=-2*g)
     if magnetic_flux:
         vertical_curvature = (p * ut**2 + (1 - p)**2 * f2) / 2
         primitive = -7 * f2 + 4 * (p * (2 - p) + (1 - p)**2 * f2 / 2)
-        square(kinetic, avg, magnetic_flux * primitive[:, None] * g, zero, zero, zero, pform)
-        square(mass, avg / f2, magnetic_flux * (primitive - 4 * vertical_curvature)[:, None] * gt,
-               -112 * magnetic_flux * azimuth_flux[:, None] * g, zero, zero, pform_t)
+        square(kinetic, avg, rotation=magnetic_flux * primitive[:, None] * g, magnetic=pform)
+        square(mass, avg / f2, rotation=magnetic_flux * (primitive - 4 * vertical_curvature)[:, None] * gt,
+               vortex=-112 * magnetic_flux * azimuth_flux[:, None] * g, magnetic=pform_t)
     for sign in (1, -1):
         weight = stiffness * measure * np.sqrt(p) * np.exp(sign * (2 * root_bias - t))
-        square(mass, weight, zero, g, sign * g / (2 * inv_ratio), zero)
+        square(mass, weight, vortex=g, circle=sign*g/(2*inv_ratio))
 
-    def source(n, spin_label, hypercharge):
+    def source(n, spin_label, hypercharge, momentum, auxiliary):
         charge = spin_label - n / 2 + hypercharge
         density = grid.weights * np.sqrt(f2) * np.exp((2 * spin_label - n) * t) * p**(n / 2)
-        rows = np.hstack((charge * g + gt / 4, n * g,
-                          period * circle_ratio * hypercharge * g, *((zero,) * (fields - 3))))
+        if hopf is None:
+            momentum, auxiliary = period * hypercharge, 0.
+        rows = row(rotation=charge * g + gt / 4, vortex=n*g,
+                   circle=momentum*circle_ratio*g, auxiliary=auxiliary*circle_ratio*g)
         return (density / np.sum(density)) @ rows
 
     # nuL, eL, eR, nuR, uL, dL, uR, dR. Colour multiplicity is external to the vertex.
-    currents = np.array([source(2, 1.5, -.5), source(2, .5, -.5),
-                         source(1, .5, -1.), source(1, .5, 0.),
-                         source(2, 1.5, 1/6), source(2, .5, 1/6),
-                         source(1, .5, 2/3), source(1, .5, -1/3)]).T
+    currents = [source(2, 1.5, -.5, 1.5, -3.), source(2, .5, -.5, 1.5, -3.),
+                source(1, .5, -1., 1.5, -5.), source(1, .5, 0., 1.5, -1.),
+                source(2, 1.5, 1/6, 2.5, -1.), source(2, .5, 1/6, 2.5, -1.),
+                source(1, .5, 2/3, 2.5, 1.), source(1, .5, -1/3, 2.5, -3.)]
     photon = kinetic[0, 0]
     charges = [0, -1, -1, 0, 2/3, -1/3, 2/3, -1/3]
+    if hopf is not None:
+        currents.extend([measure @ row(vortex=g),
+                         measure @ row(circle=3*circle_ratio*g, auxiliary=-2*circle_ratio*g),
+                         measure @ row(circle=circle_ratio*g, five_form=-circle_ratio*g)])
+        charges.extend([0, 0, 0])
+    currents = np.asarray(currents).T
     if np.linalg.norm(mass[0]) != 0 or not np.allclose(currents[0], charges, atol=1e-12):
         raise ArithmeticError("The exact electric generator was lost.")
     overlap = kinetic[0, 1:] / photon
@@ -158,24 +178,13 @@ def phase_response(grid, g, gt, stiffness, ratio, period, root_bias, mass, curre
     return result
 
 
-def evaluate(log_inputs, degree, compact_mass, period, root_bias=0.0, *,
-             include_phase=False, dual_tensor=False):
-    epsilon, stiffness, ratio, flux, last = np.exp(log_inputs)
-    magnetic_flux = last if dual_tensor else 0.0
-    grid, basis, g, gt, meridian = radial_basis(-np.log(epsilon), degree)
-    ch, ck, jc, _ = charged_pencil(grid, basis, stiffness=stiffness, circle_ratio=ratio,
-                                   period=period, flux=flux, root_bias=root_bias,
-                                   magnetic_flux=magnetic_flux)
-    nh, nk, jn, photon = neutral_pencil(grid, g, gt, stiffness, ratio, period, flux, root_bias,
-                                        magnetic_flux=magnetic_flux)
+def transverse_observables(charged_pencils, neutral_pencils, a, cv):
+    ch, ck, jc, _ = charged_pencils
+    nh, nk, jn, photon = neutral_pencils
     cvals, cvecs = eigh(ch, ck)
     nvals, nvecs = eigh(nh, nk)
     cstatic = 2 * jc[:, 0] @ solve(ch, jc[:, 0], assume_a="pos")
     nc = 2 * jn.T @ solve(nh, jn, assume_a="pos") / cstatic
-    a = ratio / compact_mass
-    area_factor = grid.weights @ grid.f2
-    electric = 256 * pi**2 * flux * magnetic_flux / (area_factor * photon) if dual_tensor else last
-    cv = 1 / (electric * a**2 * photon)
     cvertex = sqrt(2 / (cv * a**2)) * jc.T @ cvecs
     nvertex = jn.T @ nvecs / sqrt(cv * a**2)
     weak_mass = sqrt(cvals[0]) / a
@@ -185,15 +194,27 @@ def evaluate(log_inputs, degree, compact_mass, period, root_bias=0.0, *,
         raise ValueError("The lowest sourced neutral mode is outside the weak-pole branch of this fit.")
     # A mass degeneracy can distribute the singlet residue over more than one pole.
     sterile_order = np.argsort(nvertex[3, 1:]**2)[::-1] + 1
-    vortex, companion = sterile_order[:2]
+    if jn.shape[1] == 8:
+        vortex, companion = sterile_order[:2]
+        diagnostic = {}
+    else:
+        vortex = np.argmax(abs(nvertex[8]))
+        probes = nvertex[9:11]
+        participation = np.sum((probes/np.linalg.norm(probes, axis=1)[:, None])**2, axis=0)
+        companion, five_form = sorted(np.argsort(participation)[-2:])
+        diagnostic = dict(locking_mass=sqrt(nvals[companion])/a,
+                          locking_right_neutrino_vertex=abs(nvertex[3, companion]),
+                          five_form_mass=sqrt(nvals[five_form])/a,
+                          five_form_right_neutrino_vertex=abs(nvertex[3, five_form]),
+                          neutral_heavy_probe_fraction=(participation[companion]
+                                                       + participation[five_form])/2)
     total_sterile = nvertex[3] @ nvertex[3]
     axial_electron = nc[1] - nc[2]
     c1u = axial_electron[4] + axial_electron[6]
     c1d = axial_electron[5] + axial_electron[7]
     c1e = axial_electron[1] + axial_electron[2]
-    out = {"epsilon": epsilon, "stiffness": stiffness, "a/L": ratio, "gamma": flux,
-           "e_star_squared": electric}
-    out.update(fermi=sqrt(2) * cstatic / (8 * cv), charged=weak_mass, neutral=zmass,
+    electric = 1/(cv*a**2*photon)
+    return dict(fermi=sqrt(2) * cstatic / (8 * cv), charged=weak_mass, neutral=zmass,
                vector=nc[0, 1] + nc[0, 2], axial=nc[0, 1] - nc[0, 2],
                charged_residue=cvertex[0, 0]**2 / 8,
                charged_contact_fraction=cvertex[0, 0]**2 / (8 * weak_mass**2) / (cstatic / (8 * cv)),
@@ -208,8 +229,26 @@ def evaluate(log_inputs, degree, compact_mass, period, root_bias=0.0, *,
                proton_weak_charge=-2 * (2*c1u + c1d), neutron_weak_charge=-2 * (c1u + 2*c1d),
                electron_weak_charge=-2 * c1e, hydrogen_weak_charge=-2 * (2*c1u + c1d + c1e),
                dis_left_squared=sum(nc[0, 4:6]**2), dis_right_squared=sum(nc[0, 6:8]**2),
-               cv=cv, a=a, photon_norm=1/electric,
-               meridian=a * meridian)
+               cv=cv, a=a, photon_norm=1/electric, e_star_squared=electric, **diagnostic)
+
+
+def evaluate(log_inputs, degree, compact_mass, period, root_bias=0.0, *,
+             include_phase=False, dual_tensor=False):
+    epsilon, stiffness, ratio, flux, last = np.exp(log_inputs)
+    magnetic_flux = last if dual_tensor else 0.0
+    grid, basis, g, gt, meridian = radial_basis(-np.log(epsilon), degree)
+    charged = charged_pencil(grid, basis, stiffness=stiffness, circle_ratio=ratio,
+                             period=period, flux=flux, root_bias=root_bias,
+                             magnetic_flux=magnetic_flux)
+    neutral = neutral_pencil(grid, g, gt, stiffness, ratio, period, flux, root_bias,
+                             magnetic_flux=magnetic_flux)
+    nh, _, jn, photon = neutral
+    a = ratio / compact_mass
+    area_factor = grid.weights @ grid.f2
+    electric = 256 * pi**2 * flux * magnetic_flux / (area_factor * photon) if dual_tensor else last
+    cv = 1 / (electric * a**2 * photon)
+    out = dict(epsilon=epsilon, stiffness=stiffness, gamma=flux, meridian=a*meridian,
+               **{"a/L": ratio}, **transverse_observables(charged, neutral, a, cv))
     if dual_tensor:
         area = 2*pi*a**2*area_factor
         area_normalization = 8*sqrt(cv)/area_factor

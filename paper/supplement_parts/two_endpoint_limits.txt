@@ -20,3 +20,5 @@ part "S246 (finite electric and magnetic tensor match)" results/92_finite_electr
 part "S247 (tensor photon and the charged pole at five)" results/93_tensor_photon_and_the_five_dimensional_pole.md
 part "S249 (coloured threshold in the quotient tensor action)" results/95_coloured_threshold_in_the_quotient_tensor_action.md
 part "S250 (photon thresholds from vectors and spectators)" results/96_photon_thresholds_from_vectors_and_spectators.md
+part "S251 (transverse currents on the spin Hopf product)" results/97_hopf_transverse_spectrum_and_current_match.md
+part "S252 (Hopf colour scalar stability and thresholds)" results/98_hopf_colour_scalar_stability_and_thresholds.md

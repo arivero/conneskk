@@ -79,6 +79,18 @@ class StreamBasis:
     strain2: np.ndarray
 
 
+@dataclass(frozen=True)
+class HopfProfiles:
+    """Auxiliary norm relative to CV B² and phase stiffness relative to CV."""
+    auxiliary_norm: float
+    locking: float
+
+    @property
+    def norms(self):
+        # Hopf metric, auxiliary Maxwell, five-form.
+        return 1., self.auxiliary_norm, 1.
+
+
 def primitive_norm(grid, two_form):
     """Matrix of norms of charged coexact primitives in the sphere average."""
     weighted = grid.weights[:, None] * two_form
@@ -92,13 +104,15 @@ def primitive_norm(grid, two_form):
 
 
 def charged_pencil(grid, basis, *, stiffness, circle_ratio, period, flux=0.0,
-                   magnetic_flux=0.0, root_bias=0.0, collapsed_tensor=None):
+                   magnetic_flux=0.0, root_bias=0.0, collapsed_tensor=None, hopf=None):
     """Mass and kinetic forms, unit lepton/quark raising sources, and circle control."""
     if collapsed_tensor is not None and (
         collapsed_tensor <= 0 or not np.isfinite(collapsed_tensor)
-        or stiffness or circle_ratio or flux or magnetic_flux
+        or stiffness or circle_ratio or flux or magnetic_flux or hopf is not None
     ):
         raise ValueError("The collapsed pencil uses a positive tensor coefficient and no finite-radius terms.")
+    if hopf is not None and circle_ratio <= 0:
+        raise ValueError("The Hopf profiles require a positive a/B.")
     weights, p, ut, f2, t = grid.weights, grid.p, grid.ut, grid.f2, grid.t
     f, fs = np.sqrt(f2), (1 - p) * ut / 2
     magnetic, average = (1 - p) / 4, grid.average
@@ -143,22 +157,37 @@ def charged_pencil(grid, basis, *, stiffness, circle_ratio, period, flux=0.0,
         # The auxiliary external coordinate gradient uses a common scalar on both roots.
         # Its Schur complement implements the projection P of Proposition 73.1.
         circle_vertex = circle_ratio * ((weights * f * p) @ F) / (weights @ (f * p * np.exp(-t)))
-        source = np.column_stack((np.r_[source, -(period / 2) * circle_vertex],
-                                  np.r_[source, (period / 6) * circle_vertex]))
-        mass = block_diag(mass, circle_mass)
-        kinetic = block_diag(kinetic, circle_kinetic)
+        if hopf is None:
+            extra_norms = (1.,)
+            lepton_charges, quark_charges = (-period/2,), (period/6,)
+        else:
+            extra_norms = hopf.norms
+            lepton_charges, quark_charges = (1.5, -3., 0.), (2.5, -1., 0.)
+        source = np.column_stack((
+            np.concatenate([source, *(q * circle_vertex for q in lepton_charges)]),
+            np.concatenate([source, *(q * circle_vertex for q in quark_charges)])
+        ))
+        mass = block_diag(mass, *(norm * circle_mass for norm in extra_norms))
+        kinetic = block_diag(kinetic, *(norm * circle_kinetic for norm in extra_norms))
+        if hopf is not None:
+            flux_charge = np.array([1., 0., -1.])
+            lock_charge = np.array([3., -2., 0.])
+            stiffness_matrix = 8*np.outer(flux_charge, flux_charge)
+            stiffness_matrix += hopf.locking*np.outer(lock_charge, lock_charge)
+            mass[2*count:, 2*count:] += circle_ratio**2 * np.kron(stiffness_matrix, circle_kinetic)
         if stiffness > 0:
-            root_mass = np.zeros((4 * count, 4 * count))
-            root_scale = np.r_[scale, np.ones(2 * count)]
+            extra_zeros = (zeros,) * (len(extra_norms)-1)
+            split = (2+len(extra_norms)) * count
+            root_mass = np.zeros((split+count, split+count))
+            root_scale = np.r_[scale, np.ones((1+len(extra_norms))*count)]
             for sign in (1, -1):
                 slope = column((ut / 4 - sign / 2) / f2)
                 root_profile = np.sqrt(p) * np.exp(sign * (2 * root_bias - t))
                 measure = column(np.sqrt(stiffness * average * f2 * root_profile))
-                radial = np.hstack((slope * F, zeros, zeros, slope * Fp)) * root_scale * measure
+                radial = np.hstack((slope * F, zeros, zeros, *extra_zeros, slope * Fp)) * root_scale * measure
                 angular = np.hstack((-slope * Fp, F, sign * period * circle_ratio * F / 2,
-                                     -slope * F)) * root_scale * measure
+                                     *extra_zeros, -slope * F)) * root_scale * measure
                 root_mass += radial.T @ radial + angular.T @ angular
-            split = 3 * count
             aux = root_mass[split:, split:]
             coupling = root_mass[:split, split:]
             mass += root_mass[:split, :split] - coupling @ solve(aux, coupling.T, assume_a="pos")
