@@ -10,3 +10,6 @@ part 34 lemmas/34_colour_family_exchange.md
 part 38 lemmas/38_so30_fluctuations.md
 part "S208 (a chiral family over the round five-sphere and its two interval limits)" results/54_chiral_family_over_the_five_sphere.md
 part "S226 (particle identifications and mirror families)" results/72_particle_identifications_and_mirrors.md
+part "S232 (weak poles, currents and the muon contact)" results/78_finite_weak_pole_and_current_match.md
+part "S236 (nucleon response to the weak roots)" results/82_opposite_root_response_of_the_nucleon.md
+part "S237 (two infrared coordinates)" results/83_two_infrared_coordinates_on_the_weak_family.md

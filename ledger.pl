@@ -2947,6 +2947,154 @@ referee_pending(vortex_flux_ir_contact).
 addresses(t4, vortex_flux_ir_contact).
 addresses(t18, vortex_flux_ir_contact).
 
+claim(finite_weak_current_inverse, proposition, proved, "Proposition 78.1", "The leading flux-lifted charged and neutral currents admit a positive inverse from the Fermi strength, two poles and two neutrino/electron contacts in the stated open region. A finite member has an independently testable electric normalization and additional singlet-neutrino pole.").
+source(finite_weak_current_inverse, 'results/78_finite_weak_pole_and_current_match.md', '').
+depends(finite_weak_current_inverse, vortex_flux_ir_contact).
+depends(finite_weak_current_inverse, matched_colour_trajectory).
+depends(finite_weak_current_inverse, vortex_ir_neutral_current).
+attempted_by(finite_weak_current_inverse, gpt_6_2_astra_max).
+checked_by(finite_weak_current_inverse, gpt_6_2_astra_max, by_hand).
+referee_pending(finite_weak_current_inverse).
+addresses(t4, finite_weak_current_inverse).
+addresses(t13, finite_weak_current_inverse).
+addresses(t18, finite_weak_current_inverse).
+
+claim(mirror_custodial_bound, proposition, proved, "Proposition 79.1", "For three perturbative heavy mirror families, reducing their leading S contribution by weak-doublet mass splittings costs a positive one-loop T bounded below quadratically in 12 - 6 pi S.").
+source(mirror_custodial_bound, 'results/79_mirror_thresholds_and_scalar_vertices.md', '').
+depends(mirror_custodial_bound, vortex_mirror_anomalies).
+depends(mirror_custodial_bound, finite_weak_current_inverse).
+attempted_by(mirror_custodial_bound, gpt_6_2_astra_max).
+checked_by(mirror_custodial_bound, gpt_6_2_astra_max, by_hand).
+referee_pending(mirror_custodial_bound).
+addresses(t13, mirror_custodial_bound).
+addresses(t18, mirror_custodial_bound).
+
+claim(mirror_scalar_gluons, proposition, proved, "Proposition 79.2", "For a CP-even root fluctuation at equal norms, the six heavy root-mass mirror quarks contribute six times its nonderivative Z coupling modifier to the heavy fundamental gluon amplitude in the stated window.").
+source(mirror_scalar_gluons, 'results/79_mirror_thresholds_and_scalar_vertices.md', '').
+depends(mirror_scalar_gluons, particle_lifts_table).
+depends(mirror_scalar_gluons, vortex_mirror_anomalies).
+depends(mirror_scalar_gluons, finite_weak_current_inverse).
+attempted_by(mirror_scalar_gluons, gpt_6_2_astra_max).
+checked_by(mirror_scalar_gluons, gpt_6_2_astra_max, by_hand).
+referee_pending(mirror_scalar_gluons).
+addresses(t12, mirror_scalar_gluons).
+addresses(t18, mirror_scalar_gluons).
+
+claim(vortex_axion_four_anomaly, proposition, proved, "Proposition 80.1", "For three ordinary four-dimensional families the vortex anomaly is 2v times an integral spin characteristic class for the Standard Model quotient and the vortex line. A charge-two periodic axion admits the local anomaly descent.").
+source(vortex_axion_four_anomaly, 'results/80_axion_and_a_confining_mirror_sector.md', '').
+depends(vortex_axion_four_anomaly, vortex_mirror_anomalies).
+depends(vortex_axion_four_anomaly, vortex_flux_axion).
+attempted_by(vortex_axion_four_anomaly, gpt_6_2_astra_max).
+checked_by(vortex_axion_four_anomaly, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_axion_four_anomaly).
+addresses(t2, vortex_axion_four_anomaly).
+addresses(t18, vortex_axion_four_anomaly).
+
+claim(hidden_mirror_mass_map, proposition, proved, "Proposition 80.2", "An auxiliary four-dimensional s-confining Sp(1) sector admits integer axion dressings, the mirror anomaly traces and a full-rank spectator-symmetric meson mass map at fixed supersymmetric spurion. Three copies change the spectator colour coefficient to minus two above threshold.").
+source(hidden_mirror_mass_map, 'results/80_axion_and_a_confining_mirror_sector.md', '').
+depends(hidden_mirror_mass_map, vortex_axion_four_anomaly).
+depends(hidden_mirror_mass_map, mirror_scalar_gluons).
+attempted_by(hidden_mirror_mass_map, gpt_6_2_astra_max).
+checked_by(hidden_mirror_mass_map, gpt_6_2_astra_max, by_hand).
+referee_pending(hidden_mirror_mass_map).
+addresses(t2, hidden_mirror_mass_map).
+addresses(t12, hidden_mirror_mass_map).
+addresses(t18, hidden_mirror_mass_map).
+
+claim(neutral_target_parity, proposition, proved, "Proposition 81.1", "The proton plus electron vector source has odd reflection parity and zero electric charge on the stated light profiles. Its static axial-electron response cancels the even neutral sector and photon kinetic mixing, and gives minus twelve times the vortex fraction at leading order.").
+source(neutral_target_parity, 'results/81_weak_charges_and_mixed_polarization.md', '').
+depends(neutral_target_parity, rooted_current_projection).
+depends(neutral_target_parity, vortex_flux_ir_contact).
+depends(neutral_target_parity, finite_weak_current_inverse).
+attempted_by(neutral_target_parity, gpt_6_2_astra_max).
+checked_by(neutral_target_parity, gpt_6_2_astra_max, by_hand).
+referee_pending(neutral_target_parity).
+addresses(t4, neutral_target_parity).
+addresses(t18, neutral_target_parity).
+
+claim(vortex_hadronic_polarization, proposition, proved, "Proposition 81.2", "The subtracted quark electromagnetic-vortex polarization is eighteen times the difference of (one half minus the input weak angle squared) times the electromagnetic HVP and the normalized Z-photon HVP.").
+source(vortex_hadronic_polarization, 'results/81_weak_charges_and_mixed_polarization.md', '').
+depends(vortex_hadronic_polarization, particle_lifts_table).
+depends(vortex_hadronic_polarization, finite_electric_matching).
+attempted_by(vortex_hadronic_polarization, gpt_6_2_astra_max).
+checked_by(vortex_hadronic_polarization, gpt_6_2_astra_max, by_hand).
+referee_pending(vortex_hadronic_polarization).
+addresses(t4, vortex_hadronic_polarization).
+addresses(t18, vortex_hadronic_polarization).
+
+claim(hadron_root_slope, proposition, proved, "Proposition 82.1", "The physical nucleon slope under opposite root normalization is a signed sum of the six scalar quark contents at fixed mass-independent QCD input. The published correlated code gives an averaged central slope 0.000335 with total uncertainty about 0.0093.").
+source(hadron_root_slope, 'results/82_opposite_root_response_of_the_nucleon.md', '').
+depends(hadron_root_slope, vortex_root_domain).
+depends(hadron_root_slope, hadronic_colour_current).
+depends(hadron_root_slope, mirror_scalar_gluons).
+attempted_by(hadron_root_slope, gpt_6_2_astra_max).
+checked_by(hadron_root_slope, gpt_6_2_astra_max, by_hand).
+referee_pending(hadron_root_slope).
+addresses(t13, hadron_root_slope).
+addresses(t18, hadron_root_slope).
+
+claim(weak_root_curvature, proposition, proved, "Proposition 82.2", "At equal root norms the leading Fermi contact has zero first logarithmic derivative under opposite rescaling and curvature 4/(3 rho). The gradient projection removes a calculable part of the charged orbit norm at second order.").
+source(weak_root_curvature, 'results/82_opposite_root_response_of_the_nucleon.md', '').
+depends(weak_root_curvature, rooted_current_projection).
+depends(weak_root_curvature, finite_weak_current_inverse).
+attempted_by(weak_root_curvature, gpt_6_2_astra_max).
+checked_by(weak_root_curvature, gpt_6_2_astra_max, by_hand).
+referee_pending(weak_root_curvature).
+addresses(t4, weak_root_curvature).
+addresses(t18, weak_root_curvature).
+
+claim(ir_moduli_inverse, proposition, proved, "Proposition 83.1", "At leading near-round and heavy-threshold order the Fermi strength in nucleon units and the electron-to-nucleon mass ratio have an explicit two by two Jacobian with respect to shape and opposite root scaling. It is nonsingular for the two specified colour inputs.").
+source(ir_moduli_inverse, 'results/83_two_infrared_coordinates_on_the_weak_family.md', '').
+depends(ir_moduli_inverse, hadron_root_slope).
+depends(ir_moduli_inverse, weak_root_curvature).
+depends(ir_moduli_inverse, matched_colour_trajectory).
+attempted_by(ir_moduli_inverse, gpt_6_2_astra_max).
+checked_by(ir_moduli_inverse, gpt_6_2_astra_max, by_hand).
+referee_pending(ir_moduli_inverse).
+addresses(t13, ir_moduli_inverse).
+addresses(t18, ir_moduli_inverse).
+
+claim(dual_four_cycle_flux, proposition, proved, "Proposition 84.1", "Reducing the magnetic supergravity equation on an oriented four-manifold with one mixed flux produces half the squared membrane charge times the intersection as its Bianchi coefficient. Its dimensionless kinetic ratio is the absolute intersection divided by the Hodge norm.").
+source(dual_four_cycle_flux, 'results/84_magnetic_origin_of_the_vortex_flux.md', '').
+depends(dual_four_cycle_flux, vortex_flux_axion).
+attempted_by(dual_four_cycle_flux, gpt_6_2_astra_max).
+checked_by(dual_four_cycle_flux, gpt_6_2_astra_max, by_hand).
+referee_pending(dual_four_cycle_flux).
+addresses(t11, dual_four_cycle_flux).
+addresses(t18, dual_four_cycle_flux).
+
+claim(projective_cjs_gauge_ratio, proposition, proved, "Proposition 84.2", "For the classical mixed-only CP2 times sphere solution the squared radius ratio is 24 and the isometry vectors including their form compensators have five-dimensional inverse weak-to-colour kinetic ratio 19/72.").
+source(projective_cjs_gauge_ratio, 'results/84_magnetic_origin_of_the_vortex_flux.md', '').
+depends(projective_cjs_gauge_ratio, dual_four_cycle_flux).
+depends(projective_cjs_gauge_ratio, vortex_flux_mass_relation).
+attempted_by(projective_cjs_gauge_ratio, gpt_6_2_astra_max).
+checked_by(projective_cjs_gauge_ratio, gpt_6_2_astra_max, by_hand).
+referee_pending(projective_cjs_gauge_ratio).
+addresses(t13, projective_cjs_gauge_ratio).
+addresses(t18, projective_cjs_gauge_ratio).
+
+claim(spin_seven_periods, proposition, proved, "Proposition 84.3", "A closed connected spin seven-manifold with a finite-kernel isometric action of the full compact Standard Model group up to finite cover has vanishing third, fourth and sixth real cohomology. The harmonic four-cycle source of the projective product therefore needs a different realization.").
+source(spin_seven_periods, 'results/84_magnetic_origin_of_the_vortex_flux.md', '').
+depends(spin_seven_periods, d11_quotient).
+depends(spin_seven_periods, dual_four_cycle_flux).
+depends(spin_seven_periods, m111_membrane_charge).
+attempted_by(spin_seven_periods, gpt_6_2_astra_max).
+checked_by(spin_seven_periods, gpt_6_2_astra_max, by_hand).
+referee_pending(spin_seven_periods).
+addresses(t11, spin_seven_periods).
+addresses(t18, spin_seven_periods).
+
+claim(spin_tensor_reeb_current, corollary, proved, "Corollary 84.4", "For a minimal circle-momentum current on the electric M111 Freund-Rubin branch the universal massless and massive vector squared residues have ratio one to three. A unit Fourier scalar has squared mass in massless coupling times Planck units equal to two plus three divided by the fibre quotient order.").
+source(spin_tensor_reeb_current, 'results/84_magnetic_origin_of_the_vortex_flux.md', '').
+depends(spin_tensor_reeb_current, m111_circle_descent).
+depends(spin_tensor_reeb_current, lecture_projective_circle_gap).
+depends(spin_tensor_reeb_current, spin_seven_periods).
+attempted_by(spin_tensor_reeb_current, gpt_6_2_astra_max).
+checked_by(spin_tensor_reeb_current, gpt_6_2_astra_max, by_hand).
+referee_pending(spin_tensor_reeb_current).
+addresses(t4, spin_tensor_reeb_current).
+addresses(t18, spin_tensor_reeb_current).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).

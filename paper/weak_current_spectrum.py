@@ -4,6 +4,7 @@ Example: OPENBLAS_NUM_THREADS=1 python3 paper/weak_current_spectrum.py 0.2 0.001
 The meridian variable is conformal distance. The output is in unscaled vortex units.
 """
 import argparse
+from dataclasses import dataclass
 
 import numpy as np
 from scipy.integrate import solve_ivp
@@ -56,31 +57,41 @@ def spline_values(t, step, cap):
     return value, first, second
 
 
-def spectrum(b, step, end, *, stiffness=0.0, circle_ratio=0.0, period=6):
-    nodes, gauss = roots_legendre(12)
-    panels = int(np.ceil(2 * end / step))
-    width = 2 * end / panels
-    t = ((np.arange(panels)[:, None] + (nodes + 1) / 2) * width - end).ravel()
-    weights = np.tile(gauss * width / 2, panels)
-    p, ut, f2, cap = vortex(t, b, end)
-    f = np.sqrt(f2)
-    average = weights / (weights @ f2)
-    fs = (1 - p) * ut / 2
-    magnetic = (1 - p) / 4
-    y, sech = -np.tanh(t), 1 / np.cosh(t)
-    g, gp, gpp = spline_values(t, step, cap)
+@dataclass
+class WeakGrid:
+    weights: np.ndarray
+    p: np.ndarray
+    ut: np.ndarray
+    f2: np.ndarray
+    t: np.ndarray
+
+    @property
+    def average(self):
+        return self.weights / (self.weights @ self.f2)
+
+
+@dataclass
+class StreamBasis:
+    value: np.ndarray
+    derivative: np.ndarray
+    curl: np.ndarray
+    strain1: np.ndarray
+    strain2: np.ndarray
+
+
+def charged_pencil(grid, basis, *, stiffness, circle_ratio, period, flux=0.0, root_bias=0.0):
+    """Mass and kinetic forms, unit lepton/quark raising sources, and circle control."""
+    weights, p, ut, f2, t = grid.weights, grid.p, grid.ut, grid.f2, grid.t
+    f, fs = np.sqrt(f2), (1 - p) * ut / 2
+    magnetic, average = (1 - p) / 4, grid.average
+    F, Fp, curl = basis.value, basis.derivative, basis.curl
+    strain1, strain2 = basis.strain1, basis.strain2
 
     def column(values):
         return values[:, None]
 
-    # F and Z both use sech(t) times the spline. This imposes polar regularity.
-    F = column(sech) * g
-    Fp = column(sech) * (column(y) * g + gp)
-    curl = column(sech) * (column(2 * sech**2) * g - column(2 * y) * gp - gpp)
-    strain1 = column(sech) * (column(y - fs) * g + gp)
-    strain2 = column(sech) * (column(2 * y * (y - fs)) * g + column(2 * (y - fs)) * gp + gpp)
     zeros = np.zeros_like(F)
-    size = 2 * g.shape[1]
+    size = 2 * F.shape[1]
     mass = np.zeros((size, size))
     kinetic = np.zeros_like(mass)
 
@@ -105,6 +116,7 @@ def spectrum(b, step, end, *, stiffness=0.0, circle_ratio=0.0, period=6):
     mass *= scale[:, None] * scale
     kinetic *= scale[:, None] * scale
     source *= scale
+    count = F.shape[1]
     circle_mass = Fp.T @ (column(average) * Fp) + F.T @ (column(average) * F)
     circle_kinetic = F.T @ (column(average * f2) * F)
     circle = eigh(circle_mass, circle_kinetic, eigvals_only=True, subset_by_index=(0, 0))[0]
@@ -112,9 +124,9 @@ def spectrum(b, step, end, *, stiffness=0.0, circle_ratio=0.0, period=6):
     if circle_ratio > 0:
         # The auxiliary external coordinate gradient uses a common scalar on both roots.
         # Its Schur complement implements the projection P of Proposition 73.1.
-        count = F.shape[1]
-        source = np.r_[source, -(period / 2) * circle_ratio
-                       * ((weights * f * p) @ F) / (weights @ (f * p * np.exp(-t)))]
+        circle_vertex = circle_ratio * ((weights * f * p) @ F) / (weights @ (f * p * np.exp(-t)))
+        source = np.column_stack((np.r_[source, -(period / 2) * circle_vertex],
+                                  np.r_[source, (period / 6) * circle_vertex]))
         mass = block_diag(mass, circle_mass)
         kinetic = block_diag(kinetic, circle_kinetic)
         if stiffness > 0:
@@ -122,7 +134,8 @@ def spectrum(b, step, end, *, stiffness=0.0, circle_ratio=0.0, period=6):
             root_scale = np.r_[scale, np.ones(2 * count)]
             for sign in (1, -1):
                 slope = column((ut / 4 - sign / 2) / f2)
-                measure = column(np.sqrt(stiffness * average * f2 * np.sqrt(p) * np.exp(-sign * t)))
+                root_profile = np.sqrt(p) * np.exp(sign * (2 * root_bias - t))
+                measure = column(np.sqrt(stiffness * average * f2 * root_profile))
                 radial = np.hstack((slope * F, zeros, zeros, slope * Fp)) * root_scale * measure
                 angular = np.hstack((-slope * Fp, F, sign * period * circle_ratio * F / 2,
                                      -slope * F)) * root_scale * measure
@@ -131,11 +144,57 @@ def spectrum(b, step, end, *, stiffness=0.0, circle_ratio=0.0, period=6):
             aux = root_mass[split:, split:]
             coupling = root_mass[:split, split:]
             mass += root_mass[:split, :split] - coupling @ solve(aux, coupling.T, assume_a="pos")
-        # Equilibrate the full three-field pencil at finite circle-radius ratio.
+    else:
+        source = np.column_stack((source, source))
+
+    if flux:
+        # The coexact two-form vector is represented by *dh. Its canonical profile
+        # obeys (h_double_prime - h) = 16 gamma z F_{t,phi} at zero momentum.
+        old_size = mass.shape[0]
+        mass = block_diag(mass, np.zeros((count, count)))
+        kinetic = block_diag(kinetic, Fp.T @ (column(average) * Fp) + F.T @ (column(average) * F))
+        source = np.vstack((source, np.zeros((count, 2))))
+        residual = np.zeros((len(t), old_size + count))
+        residual[:, count:2 * count] = -column(16 * flux * magnetic * f2) * F * scale[count:]
+        residual[:, old_size:] = -curl
+        weighted = residual * np.sqrt(column(average / f2))
+        mass += weighted.T @ weighted
+
+    if circle_ratio > 0 or flux:
         full_scale = 1 / np.sqrt(np.diag(mass))
         mass *= full_scale[:, None] * full_scale
         kinetic *= full_scale[:, None] * full_scale
-        source *= full_scale
+        source *= full_scale[:, None]
+    return mass, kinetic, source, circle
+
+
+def spectrum(b, step, end, *, stiffness=0.0, circle_ratio=0.0, period=6):
+    nodes, gauss = roots_legendre(12)
+    panels = int(np.ceil(2 * end / step))
+    width = 2 * end / panels
+    t = ((np.arange(panels)[:, None] + (nodes + 1) / 2) * width - end).ravel()
+    weights = np.tile(gauss * width / 2, panels)
+    p, ut, f2, cap = vortex(t, b, end)
+    f = np.sqrt(f2)
+    fs = (1 - p) * ut / 2
+    y, sech = -np.tanh(t), 1 / np.cosh(t)
+    g, gp, gpp = spline_values(t, step, cap)
+
+    def column(values):
+        return values[:, None]
+
+    # F and Z both use sech(t) times the spline. This imposes polar regularity.
+    F = column(sech) * g
+    Fp = column(sech) * (column(y) * g + gp)
+    curl = column(sech) * (column(2 * sech**2) * g - column(2 * y) * gp - gpp)
+    strain1 = column(sech) * (column(y - fs) * g + gp)
+    strain2 = column(sech) * (column(2 * y * (y - fs)) * g + column(2 * (y - fs)) * gp + gpp)
+    grid = WeakGrid(weights, p, ut, f2, t)
+    basis = StreamBasis(F, Fp, curl, strain1, strain2)
+    mass, kinetic, sources, circle = charged_pencil(
+        grid, basis, stiffness=stiffness, circle_ratio=circle_ratio, period=period
+    )
+    source = sources[:, 0]
     total = 2 * source @ solve(mass, source, assume_a="pos")
     pole, vectors = eigh(mass, kinetic, subset_by_index=(0, 0))
     residue = 2 * (source @ vectors[:, 0]) ** 2
