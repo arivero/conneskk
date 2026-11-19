@@ -3095,6 +3095,16 @@ referee_pending(spin_tensor_reeb_current).
 addresses(t4, spin_tensor_reeb_current).
 addresses(t18, spin_tensor_reeb_current).
 
+claim(membrane_colour_instanton, proposition, proved, "Proposition 84.5", "At weak restoration the mixed colour anomaly of N net rooted families admits ordinary periodic-axion colour matching precisely when the gcd of the axion charges divides 2N. For three families a single charge-four axion from the unrefined projective embedding fails the unit-instanton test.").
+source(membrane_colour_instanton, 'results/84_magnetic_origin_of_the_vortex_flux.md', '').
+depends(membrane_colour_instanton, vortex_axion_four_anomaly).
+depends(membrane_colour_instanton, dual_four_cycle_flux).
+attempted_by(membrane_colour_instanton, gpt_6_2_astra_max).
+checked_by(membrane_colour_instanton, gpt_6_2_astra_max, by_hand).
+referee_pending(membrane_colour_instanton).
+addresses(t2, membrane_colour_instanton).
+addresses(t18, membrane_colour_instanton).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).
