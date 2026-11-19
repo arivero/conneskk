@@ -51,3 +51,17 @@ No claim checked here was found wrong.
 | `two_endpoint_face_current` | Neumann face Green function $\coth(q\ell)/q$; logarithmic corner divergence. | The aspect-ratio discrimination. |
 
 The remaining pending claims were not examined in this check.
+
+## Second batch (checked in full)
+
+| Claim | Location | What was verified |
+|---|---|---|
+| `projected_current_floor` (73.2) | results/73 | Trial mass norm $2/5+1/5+40/27=281/135$ (metric $4r^{-2}\cdot r^2/10$, Maxwell with $r=\sqrt2a$, circle $2L^2/(3k^2r^2)$ at $L^2/k^2=20r^2/9$). Lepton overlap $-2Y_\ell/3=1/3$. Bound $(1/3)^2/(8\cdot281/135)=15/2248$. |
+| `matched_colour_trajectory` (74.1) | results/74 | Canonical chain: $X^7\ge\sqrt{5/12}/(\sqrt{2/3}\,\pi/2)$ gives $X>0.906$, then $Y^2>2/3-0.463>1/5$ (tight), and $\delta_bL^2\ge(1-1/\sqrt2)\,3k^2/5\approx6.3>1$ at $\lvert k\rvert=6$. Zhong–Yang gives $\mu\ge1/r_\circ^2$. The $\Lambda_3$ formula matches piecewise one-loop decoupling with exponent $2/27$. |
+| `vortex_ir_neutral_current` (75.1) | results/75 | The vortex contact adds $N_\nu N_e/2=(2,1)$ to $(g_L,g_R)$, and $s_{\nu e}^2\to-(1+s_w^2)$. The CHARM II numbers reproduce ($s^2\simeq0.233$, $B_{\rm IR}\simeq42.6$ GeV, $R\simeq1.01$, $\Xi=1.14249\times10^{-6}$). |
+| `vortex_flux_mass_relation` (77.2) | results/77 | $M=\begin{pmatrix}1&1&0\\0&\gamma&1\end{pmatrix}$ has squared singular values $1$ and $2+\gamma^2$ and kernel $(1,-1,\gamma)$. $\gamma=p\sqrt{z_B}/(16\pi)$ follows from $I_b/I_E=z_B/4$. Both residue formulas follow from the eigenvectors $(-\gamma,0,1)$ and $(1,1+\gamma^2,\gamma)$. $M_{\rm high}^2-2M_D^2=2\gamma^2/r^2$. |
+| `vortex_flux_ir_contact` (77.3) | results/77 | The static minimization over $\eta$ removes the added mass; $g_V=-1/2+2s^2$ gives $-0.034$ at $0.233$ and $1/4$ at $3/8$. |
+| `neutral_target_parity` (81.1) | results/81 | Each $C_{1f}$ gets $+3d_v/2$, so $Q_W^p=\rho(1-4s)-9d_v$, $Q_W^n=-\rho-9d_v$, $Q_W^e=\rho(-1+4s)-3d_v$, and the sum is $-12d_v$. |
+| `vortex_hadronic_polarization` (81.2) | results/81 | $j^Z_V=(\tfrac12-s_0)j^\gamma-j_{\rm num}/12$ and $j^v_V=\tfrac32j_{\rm num}$ give the factor 18. Mainz inputs at $Q^2=1$ GeV$^2$ give $\bar\Pi_{Qv}=0.01354$ (stated $0.01353$). |
+
+Also verified, with the pending flag kept because the kinetic-metric derivation was not re-done: `root_phase_kinetic` (85). The values $F_a=v_F/6=41.04$ GeV and $m_a=6\chi/v_F=138.7$ keV follow from the stated formulas.

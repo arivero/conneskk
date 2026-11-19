@@ -2821,7 +2821,6 @@ depends(projected_current_floor, rooted_current_projection).
 depends(projected_current_floor, vortex_root_exchange_range).
 attempted_by(projected_current_floor, gpt_6_2_astra_max).
 checked_by(projected_current_floor, gpt_6_2_astra_max, by_hand).
-referee_pending(projected_current_floor).
 addresses(t4, projected_current_floor).
 addresses(t18, projected_current_floor).
 
@@ -2832,7 +2831,6 @@ depends(matched_colour_trajectory, vortex_root_domain).
 depends(matched_colour_trajectory, shared_circle_density).
 attempted_by(matched_colour_trajectory, gpt_6_2_astra_max).
 checked_by(matched_colour_trajectory, gpt_6_2_astra_max, by_hand).
-referee_pending(matched_colour_trajectory).
 addresses(t12, matched_colour_trajectory).
 addresses(t13, matched_colour_trajectory).
 addresses(t18, matched_colour_trajectory).
@@ -2854,7 +2852,6 @@ depends(vortex_ir_neutral_current, shared_neutral_poles).
 depends(vortex_ir_neutral_current, particle_lifts_table).
 attempted_by(vortex_ir_neutral_current, gpt_6_2_astra_max).
 checked_by(vortex_ir_neutral_current, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_ir_neutral_current).
 addresses(t4, vortex_ir_neutral_current).
 addresses(t18, vortex_ir_neutral_current).
 
@@ -2914,7 +2911,6 @@ depends(vortex_flux_mass_relation, vortex_flux_axion).
 depends(vortex_flux_mass_relation, vortex_root_upper_current).
 attempted_by(vortex_flux_mass_relation, gpt_6_2_astra_max).
 checked_by(vortex_flux_mass_relation, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_flux_mass_relation).
 addresses(t4, vortex_flux_mass_relation).
 addresses(t18, vortex_flux_mass_relation).
 
@@ -2926,7 +2922,6 @@ depends(vortex_flux_ir_contact, rooted_current_projection).
 depends(vortex_flux_ir_contact, vortex_mirror_anomalies).
 attempted_by(vortex_flux_ir_contact, gpt_6_2_astra_max).
 checked_by(vortex_flux_ir_contact, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_flux_ir_contact).
 addresses(t4, vortex_flux_ir_contact).
 addresses(t18, vortex_flux_ir_contact).
 
@@ -2991,7 +2986,6 @@ depends(neutral_target_parity, vortex_flux_ir_contact).
 depends(neutral_target_parity, finite_weak_current_inverse).
 attempted_by(neutral_target_parity, gpt_6_2_astra_max).
 checked_by(neutral_target_parity, gpt_6_2_astra_max, by_hand).
-referee_pending(neutral_target_parity).
 addresses(t4, neutral_target_parity).
 addresses(t18, neutral_target_parity).
 
@@ -3001,7 +2995,6 @@ depends(vortex_hadronic_polarization, particle_lifts_table).
 depends(vortex_hadronic_polarization, finite_electric_matching).
 attempted_by(vortex_hadronic_polarization, gpt_6_2_astra_max).
 checked_by(vortex_hadronic_polarization, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_hadronic_polarization).
 addresses(t4, vortex_hadronic_polarization).
 addresses(t18, vortex_hadronic_polarization).
 
@@ -4295,6 +4288,18 @@ referee_report('results/94_spin_hopf_trajectory_and_its_charge_lift.md', 'histor
 referee_report('results/96_photon_thresholds_from_vectors_and_spectators.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 referee_report('results/98_hopf_colour_scalar_stability_and_thresholds.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 
+checked_by(projected_current_floor, claude_opus_5_5, by_hand).
+checked_by(matched_colour_trajectory, claude_opus_5_5, by_hand).
+checked_by(vortex_ir_neutral_current, claude_opus_5_5, by_hand).
+checked_by(vortex_flux_mass_relation, claude_opus_5_5, by_hand).
+checked_by(vortex_flux_ir_contact, claude_opus_5_5, by_hand).
+checked_by(neutral_target_parity, claude_opus_5_5, by_hand).
+checked_by(vortex_hadronic_polarization, claude_opus_5_5, by_hand).
+referee_report('results/73_projected_weak_current.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/74_matched_hadronic_and_weak_scales.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/75_infrared_currents_and_continuum_limits.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/77_flux_mass_for_the_vortex_vector.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/81_weak_charges_and_mixed_polarization.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
