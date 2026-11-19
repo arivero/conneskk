@@ -2344,7 +2344,6 @@ depends(two_endpoint_flavour_current, two_endpoint_flavour_wall).
 depends(two_endpoint_flavour_current, two_endpoint_current).
 attempted_by(two_endpoint_flavour_current, gpt_6_2_astra_max).
 checked_by(two_endpoint_flavour_current, gpt_6_2_astra_max, by_hand).
-referee_pending(two_endpoint_flavour_current).
 addresses(t13, two_endpoint_flavour_current).
 
 claim(two_endpoint_face_current, proposition, proved, "Two-endpoint paper, sources on a face or a corner", "For a Neumann product gauge action a source on one face has response (g2 squared/2)(ell/q)coth(q ell) for q squared equal to p squared plus the weak mass squared. It distinguishes the aspect along a fixed-area matching curve. At a corner the absolute exchange diverges logarithmically and a momentum subtraction is finite.").
@@ -4309,6 +4308,7 @@ checked_by(spectator_global_bordism, claude_opus_5_5, by_hand).
 checked_by(lecture_shared_circle_resolution, claude_opus_5_5, by_hand).
 checked_by(two_endpoint_current, claude_opus_5_5, by_hand).
 checked_by(two_endpoint_face_current, claude_opus_5_5, by_hand).
+checked_by(two_endpoint_flavour_current, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
