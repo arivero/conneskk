@@ -2663,7 +2663,7 @@ addresses(t13, vortex_root_neck).
 addresses(t14, vortex_root_neck).
 addresses(t18, vortex_root_neck).
 
-claim(vortex_root_exchange_range, proposition, proved, "Proposition 66.3", "At fixed compact broken geometry and other tree inputs the positive root kinetic coefficient varies the sourced weak exchange strictly through the open interval between zero and the contact or spacelike response without the root term.").
+claim(vortex_root_exchange_range, proposition, proved, "Proposition 66.3", "In the unprojected reduced vector action at fixed compact broken geometry the positive root coefficient varies the sourced weak exchange down to zero. The full horizontal fibration has the distinct projected-current result in Proposition 73.2.").
 source(vortex_root_exchange_range, 'results/66_neutral_currents_and_hadronic_units.md', '').
 depends(vortex_root_exchange_range, vortex_root_lower_current).
 depends(vortex_root_exchange_range, vortex_root_upper_current).
@@ -2883,6 +2883,36 @@ referee_pending(quadratic_ir_continuum).
 addresses(t4, quadratic_ir_continuum).
 addresses(t14, quadratic_ir_continuum).
 addresses(t18, quadratic_ir_continuum).
+
+claim(charged_vortex_deformations, proposition, proved, "Proposition 76.1", "At a compact broken two-vortex member the charged angular linearized weak metric and vortex deformation vanishes modulo coordinates and gauge. The marked-circle root variations add no charged scalar zero of nonzero physical kinetic norm.").
+source(charged_vortex_deformations, 'results/76_charged_deformations_and_thomson_matching.md', '').
+depends(charged_vortex_deformations, vortex_constraint_squares).
+depends(charged_vortex_deformations, rooted_colour_gap).
+attempted_by(charged_vortex_deformations, gpt_6_2_astra_max).
+checked_by(charged_vortex_deformations, gpt_6_2_astra_max, by_hand).
+referee_pending(charged_vortex_deformations).
+addresses(t13, charged_vortex_deformations).
+addresses(t18, charged_vortex_deformations).
+
+claim(finite_electric_matching, proposition, proved, "Proposition 76.2", "A finite horizontal circle-curvature counterterm shifts the one-loop photon matching by hbar c_h CV L^2/k^2 at fixed classical support, gluon norm and charge lattice. The shift remains finite at the compensated lower endpoint.").
+source(finite_electric_matching, 'results/76_charged_deformations_and_thomson_matching.md', '').
+depends(finite_electric_matching, rooted_colour_gap).
+depends(finite_electric_matching, vortex_root_vacua).
+attempted_by(finite_electric_matching, gpt_6_2_astra_max).
+checked_by(finite_electric_matching, gpt_6_2_astra_max, by_hand).
+referee_pending(finite_electric_matching).
+addresses(t13, finite_electric_matching).
+addresses(t18, finite_electric_matching).
+
+claim(restored_finite_current_running, proposition, proved, "Proposition 76.3", "At restoration the stipulated massless families and two root doublets give diagonal one-loop screening coefficients 41/3 and 484/3 for hypercharge and vortex charge with vanishing mixed trace. The finite-momentum neutral current is a matrix.").
+source(restored_finite_current_running, 'results/76_charged_deformations_and_thomson_matching.md', '').
+depends(restored_finite_current_running, round_twelve_flavours).
+depends(restored_finite_current_running, vortex_mirror_anomalies).
+attempted_by(restored_finite_current_running, gpt_6_2_astra_max).
+checked_by(restored_finite_current_running, gpt_6_2_astra_max, by_hand).
+referee_pending(restored_finite_current_running).
+addresses(t13, restored_finite_current_running).
+addresses(t18, restored_finite_current_running).
 
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
