@@ -6,6 +6,8 @@ This directory, `lemmas/` and `paper/` are the sources of every PDF in `docs/`; 
 
 ## Reading routes
 
+For the shared ninth direction, begin with the helical photon and test its charged circle modes as the weak sphere shrinks. The next stages use the same geometry for the leptonic current, the colour matching scale and the dimensionless weak strength $G_FH_N^2$. [Research plan and first calculation](../STRATEGY.md#plan-for-the-shared-ninth-direction-and-the-two-scales)
+
 For five, six and seven internal dimensions, compare the constant current with a source on a face of the two-interval family. Its flavour wall gives three periodic channels and a gapped fourth. With the lepton line identified with that fourth channel, the four-slot exchange has rank nine on the twelve retained colour and flavour coefficients. Holding the sphere radius fixed reveals the individual spherical thresholds in the two-interval count. [Three-generation fermions and weak-current exchange](../paper/two_endpoint_limits.tex)
 
 For the upper candidates compare the Reeb spinor calculation on $M^{111}$, the relative-radius stability test on $S^5\times S^2$, and the separate particle and conjugate counts on a heterotic wall. The finite-wall comparison uses the averaged action of multipliers. The type I′ comparison uses the metric and dilaton of its D8 chamber. [Geometric and wall origins of the weak vectors](../paper/seven_m_theory.tex)
