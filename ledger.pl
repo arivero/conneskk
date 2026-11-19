@@ -3247,7 +3247,6 @@ depends(dual_tensor_stiffness_bound, tensor_sphere_pushforward).
 depends(dual_tensor_stiffness_bound, finite_weak_current_inverse).
 attempted_by(dual_tensor_stiffness_bound, gpt_6_2_astra_max).
 checked_by(dual_tensor_stiffness_bound, gpt_6_2_astra_max, by_hand).
-referee_pending(dual_tensor_stiffness_bound).
 addresses(t4, dual_tensor_stiffness_bound).
 addresses(t13, dual_tensor_stiffness_bound).
 addresses(t18, dual_tensor_stiffness_bound).
@@ -4309,6 +4308,7 @@ referee_report('results/107_hopf_soft_tensor_mass_and_current.md', 'historical/r
 checked_by(lecture_faithful_isometries, claude_opus_5_5, by_hand).
 checked_by(dual_tensor_round_poles, claude_opus_5_5, by_hand).
 referee_report('results/92_finite_electric_and_magnetic_tensor_match.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(dual_tensor_stiffness_bound, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
