@@ -30,3 +30,4 @@ part "S257 (Local Hopf connection and the first transverse vector shell)" result
 part "S258 (Coloured scalar constraints with the local Hopf connection)" results/104_hopf_local_scalar_constraints_and_sextet.md
 part "S259 (Bulk two-period tensor and light coloured magnetic pole)" results/105_hopf_bulk_tensor_and_magnetic_colour_pole.md
 part "S260 (Local tensor scalar gap and infrared sextet threshold)" results/106_hopf_tensor_scalar_gap_and_sextet_matching.md
+part "S261 (The light tensor pole and its photon current)" results/107_hopf_soft_tensor_mass_and_current.md

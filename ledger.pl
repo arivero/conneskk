@@ -3987,6 +3987,55 @@ addresses(t13, hopf_radial_tower_kinetic_matching_inputs).
 addresses(t14, hopf_radial_tower_kinetic_matching_inputs).
 addresses(t18, hopf_radial_tower_kinetic_matching_inputs).
 
+claim(hopf_isotropic_tensor_sharp_soft_mass, proposition, proved, "Proposition 107.1", "In the stated isotropic local-curvature action on sufficiently late fixed nonround shrink, the first additional coloured boson for any fixed positive sextet stiffness is a complex spin-one triplet and its conjugate. Its squared mass is asymptotic to C_soft a^2/B^4, with C_soft the stated electric-period-constrained weak infimum, about 6598 for b=0.001. The weak-constant magnetic dual vector carries kinetic fraction 1-O((a/B)^2).").
+source(hopf_isotropic_tensor_sharp_soft_mass, 'results/107_hopf_soft_tensor_mass_and_current.md', 'a-sharp-fixed-shape-mass-limit').
+depends(hopf_isotropic_tensor_sharp_soft_mass, hopf_bulk_tensor_independent_magnetic_pole).
+depends(hopf_isotropic_tensor_sharp_soft_mass, hopf_bulk_tensor_local_transverse_form).
+depends(hopf_isotropic_tensor_sharp_soft_mass, hopf_bulk_tensor_scalar_gauss_gap).
+attempted_by(hopf_isotropic_tensor_sharp_soft_mass, gpt_6_2_sol_ultra).
+checked_by(hopf_isotropic_tensor_sharp_soft_mass, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_isotropic_tensor_sharp_soft_mass).
+addresses(t4, hopf_isotropic_tensor_sharp_soft_mass).
+addresses(t13, hopf_isotropic_tensor_sharp_soft_mass).
+addresses(t14, hopf_isotropic_tensor_sharp_soft_mass).
+addresses(t18, hopf_isotropic_tensor_sharp_soft_mass).
+
+claim(hopf_soft_tensor_ward_and_covariant_term, proposition, proved, "Proposition 107.2", "The soft tensor triplet has exact Ward charge +/-1/6. The minimally covariant weak-harmonic reduction gives the enhanced massive two-form kinetic term with the stated period-constrained dual norm. Its isolated minimal vector dual has g=1. Independent photon-curvature terms of the cubic reduction are not determined by this comparison.").
+source(hopf_soft_tensor_ward_and_covariant_term, 'results/107_hopf_soft_tensor_mass_and_current.md', 'the-covariant-harmonic-operator-and-the-pauli-coefficient').
+depends(hopf_soft_tensor_ward_and_covariant_term, hopf_isotropic_tensor_sharp_soft_mass).
+depends(hopf_soft_tensor_ward_and_covariant_term, hopf_transverse_current_pencil).
+depends(hopf_soft_tensor_ward_and_covariant_term, positive_proca_current_comparison).
+attempted_by(hopf_soft_tensor_ward_and_covariant_term, gpt_6_2_sol_ultra).
+checked_by(hopf_soft_tensor_ward_and_covariant_term, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_soft_tensor_ward_and_covariant_term).
+addresses(t4, hopf_soft_tensor_ward_and_covariant_term).
+addresses(t13, hopf_soft_tensor_ward_and_covariant_term).
+addresses(t18, hopf_soft_tensor_ward_and_covariant_term).
+
+claim(hopf_soft_tensor_pauli_ambiguity, proposition, proved, "Proposition 107.3", "The stated gauge-invariant local cubic shifts the on-shell Pauli coefficient at every finite soft-branch member without changing the exact Ward charge, quadratic spectrum or two tensor periods. A specified dilaton-dependent coefficient can leave a finite shift as the weak sphere shrinks.").
+source(hopf_soft_tensor_pauli_ambiguity, 'results/107_hopf_soft_tensor_mass_and_current.md', 'the-covariant-harmonic-operator-and-the-pauli-coefficient').
+depends(hopf_soft_tensor_pauli_ambiguity, hopf_soft_tensor_ward_and_covariant_term).
+depends(hopf_soft_tensor_pauli_ambiguity, hopf_bulk_two_form_pullback).
+depends(hopf_soft_tensor_pauli_ambiguity, hopf_volume_tensor_rank_one_potential).
+attempted_by(hopf_soft_tensor_pauli_ambiguity, gpt_6_2_sol_ultra).
+checked_by(hopf_soft_tensor_pauli_ambiguity, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_soft_tensor_pauli_ambiguity).
+addresses(t4, hopf_soft_tensor_pauli_ambiguity).
+addresses(t13, hopf_soft_tensor_pauli_ambiguity).
+addresses(t18, hopf_soft_tensor_pauli_ambiguity).
+
+claim(hopf_soft_tensor_pair_current_benchmark, proposition, proved, "Proposition 107.4", "For the stipulated free pointlike charge-plus-Pauli triplet current on 4 M^2<=s<=9 M^2, the finite inverse-alpha difference is a quadratic in g with minimum about 0.00036454. Allowed local higher-derivative form factors preserve Ward charge while suppressing the pair amplitude on that window. The full colour and photon match requires strong dynamics and matched vertices.").
+source(hopf_soft_tensor_pair_current_benchmark, 'results/107_hopf_soft_tensor_mass_and_current.md', 'a-finite-physical-current-comparison').
+depends(hopf_soft_tensor_pair_current_benchmark, hopf_soft_tensor_pauli_ambiguity).
+depends(hopf_soft_tensor_pair_current_benchmark, positive_proca_current_comparison).
+depends(hopf_soft_tensor_pair_current_benchmark, hopf_radial_tower_kinetic_matching_inputs).
+attempted_by(hopf_soft_tensor_pair_current_benchmark, gpt_6_2_sol_ultra).
+checked_by(hopf_soft_tensor_pair_current_benchmark, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_soft_tensor_pair_current_benchmark).
+addresses(t4, hopf_soft_tensor_pair_current_benchmark).
+addresses(t13, hopf_soft_tensor_pair_current_benchmark).
+addresses(t18, hopf_soft_tensor_pair_current_benchmark).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).
