@@ -2561,7 +2561,6 @@ depends(vortex_root_upper_current, vortex_root_vacua).
 depends(vortex_root_upper_current, helical_probe_current).
 attempted_by(vortex_root_upper_current, gpt_6_2_astra_max).
 checked_by(vortex_root_upper_current, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_root_upper_current).
 addresses(t4, vortex_root_upper_current).
 addresses(t13, vortex_root_upper_current).
 
@@ -2581,7 +2580,6 @@ depends(vortex_root_magnetic_link, vortex_root_upper_current).
 depends(vortex_root_magnetic_link, magnetic_single_pole_test).
 attempted_by(vortex_root_magnetic_link, gpt_6_2_astra_max).
 checked_by(vortex_root_magnetic_link, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_root_magnetic_link).
 addresses(t4, vortex_root_magnetic_link).
 addresses(t18, vortex_root_magnetic_link).
 
@@ -4309,6 +4307,8 @@ checked_by(lecture_faithful_isometries, claude_opus_5_5, by_hand).
 checked_by(dual_tensor_round_poles, claude_opus_5_5, by_hand).
 referee_report('results/92_finite_electric_and_magnetic_tensor_match.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(dual_tensor_stiffness_bound, claude_opus_5_5, by_hand).
+checked_by(vortex_root_upper_current, claude_opus_5_5, by_hand).
+checked_by(vortex_root_magnetic_link, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
