@@ -16,3 +16,4 @@ part "S242 (K3 colour and instanton action)" results/88_k3_colour_hypercharge_an
 part "S243 (monopole charge and a chiral interval)" results/89_monopole_charge_and_a_chiral_interval.md
 part "S244 (tensor anomaly completion)" results/90_a_tensor_completion_without_light_mirrors.md
 part "S245 (full K3 charge of a wrapped surface)" results/91_full_k3_charge_of_a_wrapped_surface.md
+part "S246 (finite electric and magnetic tensor match)" results/92_finite_electric_and_magnetic_tensor_match.md

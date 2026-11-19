@@ -79,8 +79,26 @@ class StreamBasis:
     strain2: np.ndarray
 
 
-def charged_pencil(grid, basis, *, stiffness, circle_ratio, period, flux=0.0, root_bias=0.0):
+def primitive_norm(grid, two_form):
+    """Matrix of norms of charged coexact primitives in the sphere average."""
+    weighted = grid.weights[:, None] * two_form
+    forward = np.exp(grid.t)[:, None]
+    backward = np.exp(-grid.t)[:, None]
+    # Green kernel of -d_t^2+1 on the conformal line, the charge-one sector.
+    left = np.cumsum(forward * weighted, axis=0) * backward
+    right = np.cumsum((backward * weighted)[::-1], axis=0)[::-1] * forward
+    norm = weighted.T @ (left + right - weighted)
+    return (norm + norm.T) / (4 * (grid.weights @ grid.f2))
+
+
+def charged_pencil(grid, basis, *, stiffness, circle_ratio, period, flux=0.0,
+                   magnetic_flux=0.0, root_bias=0.0, collapsed_tensor=None):
     """Mass and kinetic forms, unit lepton/quark raising sources, and circle control."""
+    if collapsed_tensor is not None and (
+        collapsed_tensor <= 0 or not np.isfinite(collapsed_tensor)
+        or stiffness or circle_ratio or flux or magnetic_flux
+    ):
+        raise ValueError("The collapsed pencil uses a positive tensor coefficient and no finite-radius terms.")
     weights, p, ut, f2, t = grid.weights, grid.p, grid.ut, grid.f2, grid.t
     f, fs = np.sqrt(f2), (1 - p) * ut / 2
     magnetic, average = (1 - p) / 4, grid.average
@@ -147,20 +165,45 @@ def charged_pencil(grid, basis, *, stiffness, circle_ratio, period, flux=0.0, ro
     else:
         source = np.column_stack((source, source))
 
-    if flux:
-        # The coexact two-form vector is represented by *dh. Its canonical profile
-        # obeys (h_double_prime - h) = 16 gamma z F_{t,phi} at zero momentum.
+    def add_tensor(mass, kinetic, source, vortex_row, rotation_row):
+        # Each coexact tensor polarization is *dh. Its field-strength row
+        # is (h'' - h) minus the normalized internal transgression source.
         old_size = mass.shape[0]
         mass = block_diag(mass, np.zeros((count, count)))
         kinetic = block_diag(kinetic, Fp.T @ (column(average) * Fp) + F.T @ (column(average) * F))
         source = np.vstack((source, np.zeros((count, 2))))
         residual = np.zeros((len(t), old_size + count))
-        residual[:, count:2 * count] = -column(16 * flux * magnetic * f2) * F * scale[count:]
+        residual[:, :count] = rotation_row * scale[:count]
+        residual[:, count:2 * count] = vortex_row * scale[count:]
         residual[:, old_size:] = -curl
         weighted = residual * np.sqrt(column(average / f2))
         mass += weighted.T @ weighted
+        return mass, kinetic, source
 
-    if circle_ratio > 0 or flux:
+    if flux or magnetic_flux or collapsed_tensor is not None:
+        vortex_row = -column(16 * magnetic * f2) * F
+        # R is the curvature in dt ∧ dφ. The rotation moment is -curl/(2 f²).
+        curvature = (p * ut**2 + (1 - p)**2 * f2) / 2
+        rotation_row = -column(4 * curvature / f2) * curl
+        if collapsed_tensor is not None:
+            electric_z6 = collapsed_tensor
+            magnetic_z6 = 1 / ((2*np.pi)**2 * electric_z6)
+            electric_source = np.hstack((zeros, vortex_row)) * scale
+            magnetic_source = np.hstack((rotation_row, 7 * vortex_row)) * scale
+            area_factor = grid.weights @ f2
+            kinetic = area_factor/(128*np.pi) * (
+                electric_z6 * primitive_norm(grid, electric_source) +
+                magnetic_z6 * primitive_norm(grid, magnetic_source)
+            )
+            return mass, kinetic, source, circle
+        if flux:
+            mass, kinetic, source = add_tensor(mass, kinetic, source, flux * vortex_row, zeros)
+        if magnetic_flux:
+            mass, kinetic, source = add_tensor(
+                mass, kinetic, source, 7 * magnetic_flux * vortex_row, magnetic_flux * rotation_row
+            )
+
+    if circle_ratio > 0 or flux or magnetic_flux:
         full_scale = 1 / np.sqrt(np.diag(mass))
         mass *= full_scale[:, None] * full_scale
         kinetic *= full_scale[:, None] * full_scale
@@ -168,7 +211,7 @@ def charged_pencil(grid, basis, *, stiffness, circle_ratio, period, flux=0.0, ro
     return mass, kinetic, source, circle
 
 
-def spectrum(b, step, end, *, stiffness=0.0, circle_ratio=0.0, period=6):
+def spline_grid_basis(b, step, end):
     nodes, gauss = roots_legendre(12)
     panels = int(np.ceil(2 * end / step))
     width = 2 * end / panels
@@ -191,6 +234,11 @@ def spectrum(b, step, end, *, stiffness=0.0, circle_ratio=0.0, period=6):
     strain2 = column(sech) * (column(2 * y * (y - fs)) * g + column(2 * (y - fs)) * gp + gpp)
     grid = WeakGrid(weights, p, ut, f2, t)
     basis = StreamBasis(F, Fp, curl, strain1, strain2)
+    return grid, basis, g, gp
+
+
+def spectrum(b, step, end, *, stiffness=0.0, circle_ratio=0.0, period=6):
+    grid, basis, _, _ = spline_grid_basis(b, step, end)
     mass, kinetic, sources, circle = charged_pencil(
         grid, basis, stiffness=stiffness, circle_ratio=circle_ratio, period=period
     )
@@ -198,7 +246,7 @@ def spectrum(b, step, end, *, stiffness=0.0, circle_ratio=0.0, period=6):
     total = 2 * source @ solve(mass, source, assume_a="pos")
     pole, vectors = eigh(mass, kinetic, subset_by_index=(0, 0))
     residue = 2 * (source @ vectors[:, 0]) ** 2
-    return weights @ f, total, pole[0], residue, total - residue / pole[0], circle
+    return grid.weights @ np.sqrt(grid.f2), total, pole[0], residue, total - residue / pole[0], circle
 
 
 def main():

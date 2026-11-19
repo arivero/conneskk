@@ -28,6 +28,8 @@ An enhanced K3 colour sector gives an integral hypercharge embedding and relates
 
 Keeping all K3 form charges leaves an additional membrane insertion for the unit electric surface. The K3 periods bound the tension of its carriers. With product gauge kinetic terms the weak coupling also bounds the electric wrap action, whose upper bound is about $1.58$ at full $A_6$ enhancement for the illustrative tree ratios. [Full electric surface charge and action](results/91_full_k3_charge_of_a_wrapped_surface.md)
 
+On the polar projective fibration the electric and magnetic tensor polarizations preserve the exact photon and the static charged contact at a fixed geometry. Finite numerical branches with the same light calibration give different heavy neutral poles. The growing photon norm ends the fixed-coupling neck at finite length, while the fixed-shape collapse leaves charged poles at the scale $1/B$. [Dual tensor fit](results/92_finite_electric_and_magnetic_tensor_match.md) · [Photon cost and pole limit](results/93_tensor_photon_and_the_five_dimensional_pole.md)
+
 The graduate lecture derives the point-particle limit of a closed string and includes thirteen solved exercises. Exercise 13 computes the weak-root determinant on a degree-two sphere cover and shows how the unit string term and QCD can fix two phases. [Illustrated lecture](docs/kk_strings_lecture.html) · [Lecture source](paper/kk_strings_lecture.tex) · [Original proposal](paper/kk_strings_lecture_proposal.md)
 
 What the numbers mean (spacetime plus internal metric dimension; KO-degree), and the regime table of hypothesis H.

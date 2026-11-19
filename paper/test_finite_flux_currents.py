@@ -3,6 +3,7 @@ import unittest
 import numpy as np
 from scipy.linalg import eigvalsh, solve
 
+from dual_tensor_currents import WeakFit, fit_at_mass
 from finite_flux_currents import fit, neutral_pencil, radial_basis
 from weak_current_spectrum import charged_pencil
 
@@ -45,6 +46,24 @@ class FiniteCurrentTests(unittest.TestCase):
         self.assertAlmostEqual(point["qcd_axion_decay_constant"], 41.0045, places=3)
         for species in ("electron", "up", "down"):
             self.assertAlmostEqual(point[f"phase_{species}_yukawa_per_mass"], .00405823, places=7)
+
+    def test_two_period_fit_uses_one_tensor_coefficient(self):
+        branches = fit_at_mass(WeakFit(degree=6), 500.)
+        self.assertEqual(len(branches), 2)
+        for point in branches:
+            self.assertAlmostEqual(2*np.pi*point["weak_area"]*point["f_e"]*point["f_m"], 1., places=11)
+            self.assertAlmostEqual(point["fermi"], 1.1663785e-5, delta=1e-11)
+        self.assertLess(branches[0]["f_e"], 7*branches[0]["f_m"])
+        self.assertGreater(branches[1]["f_e"], 7*branches[1]["f_m"])
+
+    def test_round_charged_tensor_poles_include_both_polarizations(self):
+        grid, basis, _, _, _ = radial_basis(27., 1)
+        e, m = .11, .07
+        mass, kinetic, _, _ = charged_pencil(grid, basis, stiffness=0., circle_ratio=.05,
+                                              period=6, flux=e, magnetic_flux=m)
+        residual = np.array([[1., 1., 0., 0.], [0., e, 1., 0.], [2*m, 7*m, 0., 1.]])
+        expected = np.sort(np.r_[0., 1., eigvalsh(residual @ residual.T)])
+        np.testing.assert_allclose(eigvalsh(mass, kinetic), expected, atol=1e-8)
 
 
 if __name__ == "__main__":

@@ -3314,6 +3314,88 @@ referee_pending(k3_electric_surface_action).
 addresses(t13, k3_electric_surface_action).
 addresses(t18, k3_electric_surface_action).
 
+claim(dual_tensor_transverse_pencil, proposition, proved, "Proposition 92.1", "On the specified polar background and vertical tangent connection, the electric and magnetic polarizations of one nonchiral tensor give separate coexact pencils with dual kinetic coefficients. Their compensators preserve the exact photon and leave the static charged contact at fixed geometry unchanged.").
+source(dual_tensor_transverse_pencil, 'results/92_finite_electric_and_magnetic_tensor_match.md', 'the-electric-bianchi-identity-and-magnetic-field-equation').
+depends(dual_tensor_transverse_pencil, tensor_sphere_pushforward).
+depends(dual_tensor_transverse_pencil, dual_tensor_stiffness_bound).
+depends(dual_tensor_transverse_pencil, vortex_flux_ir_contact).
+attempted_by(dual_tensor_transverse_pencil, gpt_6_2_sol_ultra).
+checked_by(dual_tensor_transverse_pencil, gpt_6_2_sol_ultra, by_hand).
+referee_pending(dual_tensor_transverse_pencil).
+addresses(t4, dual_tensor_transverse_pencil).
+addresses(t11, dual_tensor_transverse_pencil).
+addresses(t18, dual_tensor_transverse_pencil).
+
+claim(dual_tensor_round_poles, proposition, proved, "Proposition 92.2", "The round triplet gives IW=2 CV r^2(2+gamma_e^2+25 gamma_m^2)/3 and the constant vortex gives Mv0^2=2(gamma_e^2+49 gamma_m^2)/r^2. If T and D are the sum and product of the three nonzero triplet squared masses in circle-pole units, Mv0^2/MD^2=(6T+D-26)/7.").
+source(dual_tensor_round_poles, 'results/92_finite_electric_and_magnetic_tensor_match.md', 'round-spectrum-and-the-two-inverse-branches').
+depends(dual_tensor_round_poles, dual_tensor_transverse_pencil).
+depends(dual_tensor_round_poles, vortex_flux_mass_relation).
+attempted_by(dual_tensor_round_poles, gpt_6_2_sol_ultra).
+checked_by(dual_tensor_round_poles, gpt_6_2_sol_ultra, by_hand).
+referee_pending(dual_tensor_round_poles).
+addresses(t4, dual_tensor_round_poles).
+addresses(t13, dual_tensor_round_poles).
+addresses(t18, dual_tensor_round_poles).
+
+claim(dual_tensor_finite_fit, claim, numerical, "Result 92, finite pole and contact fits", "With both tensor periods related by electric-magnetic normalization and the stated central Born inputs, two finite branches at 1/L=500 GeV have equal fitted light observables and different heavy neutral poles. Holding the muon contact out gives a finite branch at 800 GeV that predicts GF about 1.160934e-5 GeV^-2.").
+source(dual_tensor_finite_fit, 'results/92_finite_electric_and_magnetic_tensor_match.md', 'numerical-finite-solutions-and-threshold-placement').
+depends(dual_tensor_finite_fit, dual_tensor_round_poles).
+depends(dual_tensor_finite_fit, finite_weak_current_inverse).
+depends(dual_tensor_finite_fit, finite_electric_matching).
+attempted_by(dual_tensor_finite_fit, gpt_6_2_sol_ultra).
+checked_by(dual_tensor_finite_fit, gpt_6_2_sol_ultra, python).
+referee_pending(dual_tensor_finite_fit).
+addresses(t4, dual_tensor_finite_fit).
+addresses(t13, dual_tensor_finite_fit).
+addresses(t18, dual_tensor_finite_fit).
+
+claim(dual_tensor_photon_cost, proposition, proved, "Proposition 93.1", "For the fixed-action two-polarization tensor the exact photon has a radius-independent positive contribution at fixed shape. It grows strictly towards the long neck, asymptotically linearly in P_b. At positive residual norm the colour and photon matching equations have unique positive radii and a fixed-IQ neck stops at finite P_b.").
+source(dual_tensor_photon_cost, 'results/93_tensor_photon_and_the_five_dimensional_pole.md', 'the-photon-cost-along-the-neck').
+depends(dual_tensor_photon_cost, dual_tensor_transverse_pencil).
+depends(dual_tensor_photon_cost, shared_circle_density).
+depends(dual_tensor_photon_cost, matched_colour_trajectory).
+attempted_by(dual_tensor_photon_cost, gpt_6_2_sol_ultra).
+checked_by(dual_tensor_photon_cost, gpt_6_2_sol_ultra, by_hand).
+referee_pending(dual_tensor_photon_cost).
+addresses(t4, dual_tensor_photon_cost).
+addresses(t13, dual_tensor_photon_cost).
+addresses(t18, dual_tensor_photon_cost).
+
+claim(dual_tensor_comoving_pole, proposition, proved, "Proposition 93.2, pole limit", "At fixed broken shape with positive residual photon norm, the two tensor compensators leave a compact positive kinetic operator on the limiting charged mass-form domain. The projected lepton probes sourced poles with masses of order sqrt(CV), which is of order 1/B.").
+source(dual_tensor_comoving_pole, 'results/93_tensor_photon_and_the_five_dimensional_pole.md', 'the-new-charged-pole-scale-at-fixed-shape').
+depends(dual_tensor_comoving_pole, dual_tensor_photon_cost).
+depends(dual_tensor_comoving_pole, dual_tensor_transverse_pencil).
+depends(dual_tensor_comoving_pole, rooted_current_projection).
+attempted_by(dual_tensor_comoving_pole, gpt_6_2_sol_ultra).
+checked_by(dual_tensor_comoving_pole, gpt_6_2_sol_ultra, by_hand).
+referee_pending(dual_tensor_comoving_pole).
+addresses(t4, dual_tensor_comoving_pole).
+addresses(t14, dual_tensor_comoving_pole).
+addresses(t18, dual_tensor_comoving_pole).
+
+claim(dual_tensor_hadronic_resolvent, proposition, conditional, "Proposition 93.2, hadronic limit", "Assuming a positive finite limiting B H_N in the stated strong regime, the normalized charged spacelike contact is the resolvent of the original mass form plus the surviving tensor kinetic form. It decreases strictly away from zero momentum in the minimal pencil. If the circle harmonic is the first omitted coloured state, GF M_g^2 approaches sqrt(2) S_b/[8 k^2 (I_Q-I_T)].").
+source(dual_tensor_hadronic_resolvent, 'results/93_tensor_photon_and_the_five_dimensional_pole.md', 'the-new-charged-pole-scale-at-fixed-shape').
+depends(dual_tensor_hadronic_resolvent, dual_tensor_comoving_pole).
+depends(dual_tensor_hadronic_resolvent, hadronic_colour_current).
+attempted_by(dual_tensor_hadronic_resolvent, gpt_6_2_sol_ultra).
+checked_by(dual_tensor_hadronic_resolvent, gpt_6_2_sol_ultra, by_hand).
+referee_pending(dual_tensor_hadronic_resolvent).
+addresses(t4, dual_tensor_hadronic_resolvent).
+addresses(t13, dual_tensor_hadronic_resolvent).
+addresses(t18, dual_tensor_hadronic_resolvent).
+
+claim(dual_tensor_finite_neck, claim, numerical, "Result 93, finite-neck and fixed-shape examples", "On the specified lower 500 GeV branch at b=0.001, a 22 TeV scalar window resolves the four colour directions, shared circle and weak meridian with the weak azimuth above the window. At fixed shape the charged Galerkin limit has first sourced M_C^2/(CV) about 37.25. The hadronic comparisons depend on calibrated comoving mass ratios.").
+source(dual_tensor_finite_neck, 'results/93_tensor_photon_and_the_five_dimensional_pole.md', 'the-photon-cost-along-the-neck').
+depends(dual_tensor_finite_neck, dual_tensor_finite_fit).
+depends(dual_tensor_finite_neck, dual_tensor_photon_cost).
+depends(dual_tensor_finite_neck, dual_tensor_comoving_pole).
+attempted_by(dual_tensor_finite_neck, gpt_6_2_sol_ultra).
+checked_by(dual_tensor_finite_neck, gpt_6_2_sol_ultra, python).
+referee_pending(dual_tensor_finite_neck).
+addresses(t13, dual_tensor_finite_neck).
+addresses(t14, dual_tensor_finite_neck).
+addresses(t18, dual_tensor_finite_neck).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).

@@ -25,6 +25,12 @@ class Observations:
     neutral: float = 91.1879 / np.hypot(1, 2.4955 / 91.1879)
     vector: float = -0.035
     axial: float = -0.503
+    pole_angle: float = 0.23148
+    pole_width: float = 0.083984 / np.hypot(1, 2.4955 / 91.1879) / (1 + 3 / (4*pi*128))
+
+    @property
+    def scattering_angle(self):
+        return (self.vector - self.axial) / (-4 * self.axial)
 
 
 def jacobi_family(y, count, alpha, order):
@@ -66,7 +72,8 @@ def radial_basis(shape, degree):
     return grid, stream, scalar, derivative, meridian
 
 
-def neutral_pencil(grid, g, gt, stiffness, circle_ratio, period, flux, root_bias=0.0):
+def neutral_pencil(grid, g, gt, stiffness, circle_ratio, period, flux, root_bias=0.0,
+                   *, magnetic_flux=0.0):
     """Project out the exact unit photon before taking the static inverse."""
     p, ut, f2, t = grid.p, grid.ut, grid.f2, grid.t
     avg = grid.average
@@ -77,11 +84,14 @@ def neutral_pencil(grid, g, gt, stiffness, circle_ratio, period, flux, root_bias
     zero = np.zeros_like(g)
     pform = f2[:, None] * g
     pform_t = f2[:, None] * (gt + 2 * fs[:, None] * g)
-    size = 4 * g.shape[1]
+    fields = 5 if magnetic_flux else 4
+    size = fields * g.shape[1]
     kinetic = np.zeros((size, size))
     mass = np.zeros_like(kinetic)
 
     def square(matrix, weight, *blocks):
+        if len(blocks) < fields:
+            blocks = (*blocks, zero)
         rows = np.sqrt(weight)[:, None] * np.hstack(blocks)
         matrix += rows.T @ rows
 
@@ -97,6 +107,12 @@ def neutral_pencil(grid, g, gt, stiffness, circle_ratio, period, flux, root_bias
     square(mass, 16 * measure * p, zero, g, zero, zero)
     square(mass, avg / f2, -flux * f2[:, None] * gt,
            -16 * flux * azimuth_flux[:, None] * g, zero, pform_t)
+    if magnetic_flux:
+        vertical_curvature = (p * ut**2 + (1 - p)**2 * f2) / 2
+        primitive = -7 * f2 + 4 * (p * (2 - p) + (1 - p)**2 * f2 / 2)
+        square(kinetic, avg, magnetic_flux * primitive[:, None] * g, zero, zero, zero, pform)
+        square(mass, avg / f2, magnetic_flux * (primitive - 4 * vertical_curvature)[:, None] * gt,
+               -112 * magnetic_flux * azimuth_flux[:, None] * g, zero, zero, pform_t)
     for sign in (1, -1):
         weight = stiffness * measure * np.sqrt(p) * np.exp(sign * (2 * root_bias - t))
         square(mass, weight, zero, g, sign * g / (2 * inv_ratio), zero)
@@ -105,7 +121,7 @@ def neutral_pencil(grid, g, gt, stiffness, circle_ratio, period, flux, root_bias
         charge = spin_label - n / 2 + hypercharge
         density = grid.weights * np.sqrt(f2) * np.exp((2 * spin_label - n) * t) * p**(n / 2)
         rows = np.hstack((charge * g + gt / 4, n * g,
-                          period * circle_ratio * hypercharge * g, zero))
+                          period * circle_ratio * hypercharge * g, *((zero,) * (fields - 3))))
         return (density / np.sum(density)) @ rows
 
     # nuL, eL, eR, nuR, uL, dL, uR, dR. Colour multiplicity is external to the vertex.
@@ -142,17 +158,23 @@ def phase_response(grid, g, gt, stiffness, ratio, period, root_bias, mass, curre
     return result
 
 
-def evaluate(log_inputs, degree, compact_mass, period, root_bias=0.0, *, include_phase=False):
-    epsilon, stiffness, ratio, flux, electric = np.exp(log_inputs)
+def evaluate(log_inputs, degree, compact_mass, period, root_bias=0.0, *,
+             include_phase=False, dual_tensor=False):
+    epsilon, stiffness, ratio, flux, last = np.exp(log_inputs)
+    magnetic_flux = last if dual_tensor else 0.0
     grid, basis, g, gt, meridian = radial_basis(-np.log(epsilon), degree)
     ch, ck, jc, _ = charged_pencil(grid, basis, stiffness=stiffness, circle_ratio=ratio,
-                                   period=period, flux=flux, root_bias=root_bias)
-    nh, nk, jn, photon = neutral_pencil(grid, g, gt, stiffness, ratio, period, flux, root_bias)
+                                   period=period, flux=flux, root_bias=root_bias,
+                                   magnetic_flux=magnetic_flux)
+    nh, nk, jn, photon = neutral_pencil(grid, g, gt, stiffness, ratio, period, flux, root_bias,
+                                        magnetic_flux=magnetic_flux)
     cvals, cvecs = eigh(ch, ck)
     nvals, nvecs = eigh(nh, nk)
     cstatic = 2 * jc[:, 0] @ solve(ch, jc[:, 0], assume_a="pos")
     nc = 2 * jn.T @ solve(nh, jn, assume_a="pos") / cstatic
     a = ratio / compact_mass
+    area_factor = grid.weights @ grid.f2
+    electric = 256 * pi**2 * flux * magnetic_flux / (area_factor * photon) if dual_tensor else last
     cv = 1 / (electric * a**2 * photon)
     cvertex = sqrt(2 / (cv * a**2)) * jc.T @ cvecs
     nvertex = jn.T @ nvecs / sqrt(cv * a**2)
@@ -169,8 +191,8 @@ def evaluate(log_inputs, degree, compact_mass, period, root_bias=0.0, *, include
     c1u = axial_electron[4] + axial_electron[6]
     c1d = axial_electron[5] + axial_electron[7]
     c1e = axial_electron[1] + axial_electron[2]
-    labels = ("epsilon", "stiffness", "a/L", "gamma", "e_star_squared")
-    out = dict(zip(labels, np.exp(log_inputs)))
+    out = {"epsilon": epsilon, "stiffness": stiffness, "a/L": ratio, "gamma": flux,
+           "e_star_squared": electric}
     out.update(fermi=sqrt(2) * cstatic / (8 * cv), charged=weak_mass, neutral=zmass,
                vector=nc[0, 1] + nc[0, 2], axial=nc[0, 1] - nc[0, 2],
                charged_residue=cvertex[0, 0]**2 / 8,
@@ -188,12 +210,20 @@ def evaluate(log_inputs, degree, compact_mass, period, root_bias=0.0, *, include
                dis_left_squared=sum(nc[0, 4:6]**2), dis_right_squared=sum(nc[0, 6:8]**2),
                cv=cv, a=a, photon_norm=1/electric,
                meridian=a * meridian)
+    if dual_tensor:
+        area = 2*pi*a**2*area_factor
+        area_normalization = 8*sqrt(cv)/area_factor
+        out.update(magnetic_gamma=magnetic_flux, f_e=area_normalization*flux,
+                   f_m=area_normalization*magnetic_flux, weak_area=area, planck_mass=sqrt(2*cv),
+                   compact_mass=compact_mass, tensor_coefficient=flux/(2*pi*magnetic_flux))
+    if include_phase and dual_tensor:
+        raise ValueError("The fixed-period phase diagnostic is defined only for the electric model.")
     if include_phase:
         out.update(phase_response(grid, g, gt, stiffness, ratio, period, root_bias, nh, jn, cv))
     return out
 
 
-def light_inverse(obs, compact_mass, period):
+def light_parameters(obs):
     ratio_pole = (obs.charged / obs.neutral)**2
     neutral_combination = obs.vector - 3 * obs.axial
     sine = (neutral_combination - ratio_pole) / (neutral_combination + 2 * ratio_pole)
@@ -203,6 +233,11 @@ def light_inverse(obs, compact_mass, period):
         raise ValueError("Central targets lie outside the positive small-breaking branch.")
     v2 = 1 / (sqrt(2) * obs.fermi)
     electric = sine * 4 * obs.charged**2 / v2
+    return sine, rho, dv, v2, electric
+
+
+def light_inverse(obs, compact_mass, period):
+    sine, rho, dv, v2, electric = light_parameters(obs)
     cv = (1 - sine) / electric * period**2 * compact_mass**2
     flux = sqrt(v2 * (1/dv - 1) / (16 * cv))
     ratio = sqrt(3 * sine / (4 * (2 + flux**2) * (1-sine))) / period
@@ -215,15 +250,14 @@ def fit(degree, compact_mass, period, hold_out_fermi=False, fixed_flux=None, *, 
     if fixed_flux is not None and (not hold_out_fermi or not np.isfinite(fixed_flux) or fixed_flux <= 0):
         raise ValueError("A fixed positive flux uses the independent pole-input fit.")
     obs = Observations()
-    pole_angle = 0.23148
-    pole_width = 0.083984 / np.hypot(1, 2.4955 / 91.1879) / (1 + 3 / (4*pi*128))
+    pole_angle, pole_width = obs.pole_angle, obs.pole_width
     initial_obs = obs
     if hold_out_fermi:
         gz2 = pole_width * 24*pi / (obs.neutral * ((pole_angle-.5)**2 + pole_angle**2))
         gf0 = (1-pole_angle) * gz2 / (4*sqrt(2) * obs.charged**2)
         rho = (obs.charged / obs.neutral)**2 / (1-pole_angle)
         if fixed_flux is None:
-            scattering_angle = (obs.vector - obs.axial) / (-4 * obs.axial)
+            scattering_angle = obs.scattering_angle
             dv = rho * (scattering_angle-pole_angle) / (1+2*scattering_angle)
         else:
             electric = (1-pole_angle)*gz2*pole_angle
