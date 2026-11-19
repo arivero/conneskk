@@ -140,7 +140,7 @@ def trajectory(point, model, shape, step):
     middle = summarize_current(*charged[:3], 1/a, h/b, cv)
     stiffness = scalar_t.T @ (grid.weights[:, None]*scalar_t)
     norm = scalar.T @ ((grid.weights*grid.f2)[:, None]*scalar)
-    eigenvalues = eigh(stiffness, norm, subset_by_index=(1, 3), eigvals_only=True)
+    eigenvalues = eigh(stiffness, norm, subset_by_index=(1, 4), eigvals_only=True)
     middle.update(hopf_first_scalar=sqrt(5)/b, azimuthal_bound=1/(sqrt(2)*a),
                   auxiliary_inverse_norm=auxiliary, weak_area=area,
                   **{f"meridian_mass_{i}": sqrt(value)/a for i, value in enumerate(eigenvalues, 1)})

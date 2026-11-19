@@ -78,7 +78,7 @@ def calculate(shape, step, branch):
                                hadron_times_circle/neck["circle"], neck["cv"])
     scalar_mass = scalar_t.T @ (grid.weights[:, None] * scalar_t)
     scalar_norm = scalar.T @ ((grid.weights * grid.f2)[:, None] * scalar)
-    eigenvalues = eigh(scalar_mass, scalar_norm, eigvals_only=True, subset_by_index=(1, 3))
+    eigenvalues = eigh(scalar_mass, scalar_norm, eigvals_only=True, subset_by_index=(1, 4))
     middle.update({f"meridian_mass_{j}": sqrt(value)/neck["a"]
                    for j, value in enumerate(eigenvalues, start=1)})
     middle.update(neck)

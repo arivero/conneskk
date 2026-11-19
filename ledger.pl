@@ -4088,6 +4088,17 @@ addresses(t13, hopf_locked_chiral_anomaly_spectrum).
 addresses(t17, hopf_locked_chiral_anomaly_spectrum).
 addresses(t18, hopf_locked_chiral_anomaly_spectrum).
 
+claim(hopf_compact_spectator_threshold, proposition, conditional, "Proposition 108.5", "At the central compact Hopf fit with the horizontal holomorphic ordinary links, minimal unmixed spectator blocks and the heavy local anisotropic bosonic action of Result 106 at kappa=9, the first extra coloured state of the locked spectator spectrum is the 3.961 TeV broken-Killing vector. The first excited coloured fermions lie above the 5.496 TeV compactification scale by a curvature estimate. At that scale continuous one-loop quark and gluon running differs by 0.15081 in inverse squared coupling between the paired and spectator prescriptions, before their common bosonic step contribution and finite matching.").
+source(hopf_compact_spectator_threshold, 'results/108_hopf_global_flux_and_anomaly_domain.md', 'colour-thresholds-at-the-compact-weak-fit').
+depends(hopf_compact_spectator_threshold, hopf_locked_chiral_anomaly_spectrum).
+depends(hopf_compact_spectator_threshold, hopf_uniform_light_mass_inverse).
+depends(hopf_compact_spectator_threshold, hopf_finite_current_fit).
+attempted_by(hopf_compact_spectator_threshold, gpt_6_2_astra_max).
+checked_by(hopf_compact_spectator_threshold, gpt_6_2_astra_max, by_hand).
+referee_pending(hopf_compact_spectator_threshold).
+addresses(t13, hopf_compact_spectator_threshold).
+addresses(t18, hopf_compact_spectator_threshold).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).
