@@ -2874,7 +2874,6 @@ depends(finite_electric_matching, rooted_colour_gap).
 depends(finite_electric_matching, vortex_root_vacua).
 attempted_by(finite_electric_matching, gpt_6_2_astra_max).
 checked_by(finite_electric_matching, gpt_6_2_astra_max, by_hand).
-referee_pending(finite_electric_matching).
 addresses(t13, finite_electric_matching).
 addresses(t18, finite_electric_matching).
 
@@ -3077,7 +3076,6 @@ depends(root_qcd_angle, membrane_colour_instanton).
 depends(root_qcd_angle, vortex_root_domain).
 attempted_by(root_qcd_angle, gpt_6_2_astra_max).
 checked_by(root_qcd_angle, gpt_6_2_astra_max, by_hand).
-referee_pending(root_qcd_angle).
 addresses(t13, root_qcd_angle).
 addresses(t18, root_qcd_angle).
 
@@ -4310,6 +4308,8 @@ checked_by(two_endpoint_face_current, claude_opus_5_5, by_hand).
 checked_by(two_endpoint_flavour_current, claude_opus_5_5, by_hand).
 checked_by(vortex_axion_four_anomaly, claude_opus_5_5, by_hand).
 referee_report('results/80_axion_and_a_confining_mirror_sector.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(root_qcd_angle, claude_opus_5_5, by_hand).
+checked_by(finite_electric_matching, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
