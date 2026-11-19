@@ -3122,7 +3122,6 @@ source(full_harmonic_flux_mass, 'results/87_spin_magnetic_product_and_wrapped_me
 depends(full_harmonic_flux_mass, dual_four_cycle_flux).
 attempted_by(full_harmonic_flux_mass, gpt_6_2_astra_max).
 checked_by(full_harmonic_flux_mass, gpt_6_2_astra_max, by_hand).
-referee_pending(full_harmonic_flux_mass).
 addresses(t11, full_harmonic_flux_mass).
 addresses(t13, full_harmonic_flux_mass).
 addresses(t18, full_harmonic_flux_mass).
@@ -4312,6 +4311,7 @@ checked_by(k3_electric_surface_charge, claude_opus_5_5, by_hand).
 checked_by(k3_electric_surface_action, claude_opus_5_5, by_hand).
 referee_report('results/91_full_k3_charge_of_a_wrapped_surface.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(k3_colour_instanton_action, claude_opus_5_5, by_hand).
+checked_by(full_harmonic_flux_mass, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).

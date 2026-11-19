@@ -136,3 +136,6 @@ Also verified, pending flag kept: in `two_endpoint_scalar_count` the counting co
 | `k3_colour_instanton_action` (88.2), checked in full | results/88 | $I_3=CV_3/(2T_2^2)$ and $T_2V_3=8\pi^2I_3$ together require $T_2^3=4\pi^2C$, which holds: both sides equal $(2\pi)^{-6}\ell_p^{-9}$. |
 
 Also verified, pending flag kept: in `k3_hypercharge_period_bound` (88.3), $J(y,y)=30+2\lvert y_+\rvert^2$ gives $I_Y/I_3=(30+2\lvert y_+\rvert^2)/18=5/3+\lvert y_+\rvert^2/9$. The excess bound was not checked.
+| `full_harmonic_flux_mass` (87.1), checked in full | results/87 | With charge $q=In$ and kinetic form $J$, the full squared mass is $q^TJ^{-1}q$ along $J^{-1}In$, and restriction to the line $n$ gives $(n^TIn)^2/(n^TJn)$. On a four-manifold $J=IS$ with $S={*}$ an involution on $H^2$, so $IJ^{-1}I=J$ and the fraction is $(n^TIn)^2/(n^TJn)^2$. |
+
+Also verified, pending flag kept: in `wrapped_m5_boundary_charge` (87.3), $\mathrm{PD}_D(mh\wedge k)=m\,\mathrm{PD}_X(h)\times\mathrm{pt}$ and its pairing with the flux, $m^2\,h\cdot h$, hold. The relation $S_5f_\theta=\sqrt{C_{\rm ext}}$ was not checked.
