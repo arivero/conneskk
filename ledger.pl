@@ -3293,6 +3293,27 @@ referee_pending(projective_vortex_spectator_descent).
 addresses(t11, projective_vortex_spectator_descent).
 addresses(t18, projective_vortex_spectator_descent).
 
+claim(k3_electric_surface_charge, proposition, proved, "Proposition 91.1", "With all harmonic K3 charges retained, the two ADE roots leave a nonzero additional membrane charge required by the unit electric surface. At full A6 enhancement the bare tension of membranes carrying its net class is at least M4 sqrt(40/7)/sqrt(2 I3).").
+source(k3_electric_surface_charge, 'results/91_full_k3_charge_of_a_wrapped_surface.md', '').
+depends(k3_electric_surface_charge, wrapped_m5_boundary_charge).
+depends(k3_electric_surface_charge, k3_ade_charge_embedding).
+depends(k3_electric_surface_charge, k3_hypercharge_period_bound).
+attempted_by(k3_electric_surface_charge, gpt_6_2_sol_ultra).
+checked_by(k3_electric_surface_charge, gpt_6_2_sol_ultra, by_hand).
+referee_pending(k3_electric_surface_charge).
+addresses(t11, k3_electric_surface_charge).
+addresses(t18, k3_electric_surface_charge).
+
+claim(k3_electric_surface_action, proposition, proved, "Proposition 91.2", "For the round weak sphere with positive product Einstein and monopole kinetic terms, the bare electric M5 tension action equals (M4 r)^2/(2 I3). The weak kinetic term bounds it above by 3/2 times (IW/I3 - J(h,h)/6). At full A6 collapse, the stated illustrative tree ratios give an upper bound of about 1.58.").
+source(k3_electric_surface_action, 'results/91_full_k3_charge_of_a_wrapped_surface.md', '').
+depends(k3_electric_surface_action, k3_colour_instanton_action).
+depends(k3_electric_surface_action, k3_hypercharge_period_bound).
+attempted_by(k3_electric_surface_action, gpt_6_2_sol_ultra).
+checked_by(k3_electric_surface_action, gpt_6_2_sol_ultra, by_hand).
+referee_pending(k3_electric_surface_action).
+addresses(t13, k3_electric_surface_action).
+addresses(t18, k3_electric_surface_action).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).
