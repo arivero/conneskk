@@ -2715,6 +2715,17 @@ referee_pending(lecture_projective_circle_gap).
 addresses(t14, lecture_projective_circle_gap).
 addresses(t18, lecture_projective_circle_gap).
 
+claim(lecture_shared_circle_resolution, proposition, proved, "Compact spaces lecture, Exercise 12", "With the geometric circle identified conditionally with the M circle, fixed Planck length and both tree gauge norms, the momentum gap falls on the compensated five-dimensional and long six-dimensional paths. The cap curvature in string units grows as a^(-12/7) and P^(13/7), respectively.").
+source(lecture_shared_circle_resolution, 'paper/kk_strings_lecture.tex', '').
+depends(lecture_shared_circle_resolution, shared_circle_density).
+depends(lecture_shared_circle_resolution, shared_polar_solution).
+depends(lecture_shared_circle_resolution, vortex_root_vacua).
+attempted_by(lecture_shared_circle_resolution, gpt_6_2_astra_max).
+checked_by(lecture_shared_circle_resolution, gpt_6_2_astra_max, by_hand).
+referee_pending(lecture_shared_circle_resolution).
+addresses(t14, lecture_shared_circle_resolution).
+addresses(t18, lecture_shared_circle_resolution).
+
 claim(lecture_faithful_isometries, proposition, proved, "Compact spaces lecture, Exercise 11", "The quotient of S5 times S3 by phases (z,z inverse) has a faithful isometric S(U(3) times U(2)) action. The six conjugate bidegree (1,1) coordinate products transform as a colour triplet and weak doublet of hypercharge 1/6. Its Euler class h+k leaves the pullback of w2 nonzero. The construction is a bosonic charge example.").
 source(lecture_faithful_isometries, 'paper/kk_strings_lecture.tex', '').
 attempted_by(lecture_faithful_isometries, gpt_6_2_astra_max).
