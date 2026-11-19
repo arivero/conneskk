@@ -3703,7 +3703,6 @@ depends(hopf_full_maxwell_round_scalar, hopf_full_maxwell_coexact_block).
 depends(hopf_full_maxwell_round_scalar, hopf_projected_nonround_boson).
 attempted_by(hopf_full_maxwell_round_scalar, gpt_6_2_sol_ultra).
 checked_by(hopf_full_maxwell_round_scalar, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_full_maxwell_round_scalar).
 addresses(t4, hopf_full_maxwell_round_scalar).
 addresses(t14, hopf_full_maxwell_round_scalar).
 addresses(t18, hopf_full_maxwell_round_scalar).
@@ -3924,7 +3923,6 @@ depends(hopf_sextet_colour_running_threshold, hopf_local_normal_scalar_towers).
 depends(hopf_sextet_colour_running_threshold, hopf_comoving_hadronic_benchmark).
 attempted_by(hopf_sextet_colour_running_threshold, gpt_6_2_sol_ultra).
 checked_by(hopf_sextet_colour_running_threshold, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_sextet_colour_running_threshold).
 addresses(t13, hopf_sextet_colour_running_threshold).
 addresses(t18, hopf_sextet_colour_running_threshold).
 
@@ -3935,7 +3933,6 @@ depends(hopf_sextet_euclidean_photon_subtraction, hopf_thomson_auxiliary_calibra
 depends(hopf_sextet_euclidean_photon_subtraction, spectator_photon_subtraction_bound).
 attempted_by(hopf_sextet_euclidean_photon_subtraction, gpt_6_2_sol_ultra).
 checked_by(hopf_sextet_euclidean_photon_subtraction, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_sextet_euclidean_photon_subtraction).
 addresses(t4, hopf_sextet_euclidean_photon_subtraction).
 addresses(t13, hopf_sextet_euclidean_photon_subtraction).
 addresses(t18, hopf_sextet_euclidean_photon_subtraction).
@@ -4305,6 +4302,11 @@ referee_report('results/87_spin_magnetic_product_and_wrapped_membranes.md', 'his
 checked_by(two_endpoint_compressed_flip, claude_opus_5_5, by_hand).
 checked_by(lecture_projective_circle_gap, claude_opus_5_5, by_hand).
 referee_report('paper/kk_strings_lecture.tex', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(hopf_full_maxwell_round_scalar, claude_opus_5_5, by_hand).
+checked_by(hopf_sextet_colour_running_threshold, claude_opus_5_5, by_hand).
+checked_by(hopf_sextet_euclidean_photon_subtraction, claude_opus_5_5, by_hand).
+referee_report('results/101_hopf_threshold_with_the_full_vortex_maxwell_field.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+referee_report('results/106_hopf_tensor_scalar_gap_and_sextet_matching.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).

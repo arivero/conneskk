@@ -101,3 +101,13 @@ Also verified, pending flag kept: in `hopf_nonround_covariant_core` (99.1) the c
 | `lecture_projective_circle_gap` (Exercise 9), checked in full | `paper/kk_strings_lecture.tex` | At the Sasaki–Einstein point (base $\tfrac34g_{\rm FS}(\mathbb{CP}^2)+\tfrac18g_{S^2}$, Reeb radius $\rho=1/4$), the $\mathcal O(3)$ and $\mathcal O(2)$ lowest Landau levels are $16$ and $8$. So $1/\rho^2+24=40$ in units $L^{-2}$. This agrees with $\Delta=r(r+6)$ at Reeb weight $r=4$ for sections of $K^{-1}=\mathcal O(3,2)$, with multiplicity $h^0(\mathcal O(3,2))=30$. |
 
 Also verified, pending flag kept: `two_endpoint_trace_matching`. The growth $M_W^2=Hs^2/(4K)\propto A^{-1/2}$ against a bounded $\lVert D_F\rVert$ is consistent; the constant 24 was not derived.
+
+## Sixth batch (checked in full)
+
+| Claim | Location | What was verified |
+|---|---|---|
+| `hopf_full_maxwell_round_scalar` (101.3) | results/101 | The block is $(\lambda+\mu_j)I+N$ with $N_{12}=-\lambda$, $N_{13}=\sqrt{\mu\mu_j}$, so its eigenvalues are $\lambda+\mu_j$ and $\lambda+\mu_j\pm\sqrt{\lambda^2+\mu\mu_j}$. The lower branch has derivative $\ge\tfrac12$ in $\mu_j$; at $j=1$, $\mu_1=1/a^2=\mu$. The weak gluon excitation $\mu$ lies above the new entry. |
+| `hopf_sextet_colour_running_threshold` (106.2) | results/106 | $T(\mathbf6)=6C_2/8=5/2$, $b_0=37/6$, $\Lambda_3$ ratio $\exp(-2\pi\Delta\alpha^{-1}/9)=(M_6/\mu_*)^{5/54}$. With $M_6/\mu_*=173.799/250$ the ratio is $0.96690$, and its square is $0.93490$. Scalar-free coupling $0.1028573$, retuned coupling $0.1038878$, $\delta I_3=-0.0038372$. |
+| `hopf_sextet_euclidean_photon_subtraction` (106.3) | results/106 | Electric weight $6(2/3)^2=8/3$. The integral at $q^2/M_6^2=2.0692$, by hand Simpson ($h=0.05$), is $0.060605$, giving $0.012861$ (stated $0.0128633$). $\delta I_C=-16\times0.00102363=-0.016378$; the colour version is $\times15/16=0.0120593$; the low-momentum term is $(8/3)q^2/(120\pi M_6^2)$. |
+
+This supersedes the fourth-batch remark that the 106 numbers were not recomputed.
