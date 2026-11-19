@@ -4036,6 +4036,58 @@ addresses(t4, hopf_soft_tensor_pair_current_benchmark).
 addresses(t13, hopf_soft_tensor_pair_current_benchmark).
 addresses(t18, hopf_soft_tensor_pair_current_benchmark).
 
+claim(hopf_global_locked_group_and_spin, proposition, proved, "Proposition 108.1", "The faithful connected locked action is U(3) and the disconnected sign acts as fermion parity for the stated matter. The weak-singlet charge-1/6 triplet obstructs the extra electroweak centre quotient. Over a spin six-base the sphere bundle is ordinary spin exactly when its defining bundle has even c1; the joint Spin-c lift uses its determinant for general c1.").
+source(hopf_global_locked_group_and_spin, 'results/108_hopf_global_flux_and_anomaly_domain.md', 'the-locked-group-and-the-ordinary-spin-condition').
+depends(hopf_global_locked_group_and_spin, hopf_diagonal_hypercharge).
+depends(hopf_global_locked_group_and_spin, hopf_volume_tensor_rank_one_potential).
+depends(hopf_global_locked_group_and_spin, hopf_scalar_windows).
+attempted_by(hopf_global_locked_group_and_spin, gpt_6_2_sol_ultra).
+checked_by(hopf_global_locked_group_and_spin, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_global_locked_group_and_spin).
+addresses(t11, hopf_global_locked_group_and_spin).
+addresses(t14, hopf_global_locked_group_and_spin).
+addresses(t17, hopf_global_locked_group_and_spin).
+addresses(t18, hopf_global_locked_group_and_spin).
+
+claim(hopf_integral_euler_flux_domain, proposition, proved, "Proposition 108.2", "The integral Gysin sequence permits a closed unit fibre flux precisely when the defining U(3) bundle has c3=0 integrally, with torsion Euler order restricting the possible periods. This obstruction also applies on gauge mapping tori, and extension of a chosen slice class requires its preservation by the loop. The explicit clutching example has admissible spin slices and a nonadmissible torus.").
+source(hopf_integral_euler_flux_domain, 'results/108_hopf_global_flux_and_anomaly_domain.md', 'the-integral-five-form-and-its-gauge-loops').
+depends(hopf_integral_euler_flux_domain, hopf_global_locked_group_and_spin).
+depends(hopf_integral_euler_flux_domain, hopf_bulk_two_form_pullback).
+attempted_by(hopf_integral_euler_flux_domain, gpt_6_2_sol_ultra).
+checked_by(hopf_integral_euler_flux_domain, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_integral_euler_flux_domain).
+addresses(t11, hopf_integral_euler_flux_domain).
+addresses(t14, hopf_integral_euler_flux_domain).
+addresses(t18, hopf_integral_euler_flux_domain).
+
+claim(hopf_global_unit_flux_descent, proposition, proved, "Proposition 108.3", "On the stated ordinary-spin sector with extending integral unit flux and an electric geometric trivialization, differential bulk Green-Schwarz descent cancels the locked quotient determinant anomaly on admissible mapping tori. Relative local weak transgressions preserve that descent. The compact source-free magnetic equation has a separate real cohomological condition, and an integral dual trivialization requires integral vanishing.").
+source(hopf_global_unit_flux_descent, 'results/108_hopf_global_flux_and_anomaly_domain.md', 'global-descent-on-the-unit-flux-sector').
+depends(hopf_global_unit_flux_descent, hopf_integral_euler_flux_domain).
+depends(hopf_global_unit_flux_descent, hopf_bulk_two_form_pullback).
+depends(hopf_global_unit_flux_descent, spectator_global_bordism).
+attempted_by(hopf_global_unit_flux_descent, gpt_6_2_sol_ultra).
+checked_by(hopf_global_unit_flux_descent, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_global_unit_flux_descent).
+addresses(t4, hopf_global_unit_flux_descent).
+addresses(t11, hopf_global_unit_flux_descent).
+addresses(t17, hopf_global_unit_flux_descent).
+addresses(t18, hopf_global_unit_flux_descent).
+
+claim(hopf_locked_chiral_anomaly_spectrum, proposition, proved, "Proposition 108.4", "Fully paired mirror determinants cancel and require a separate descent sector in the presence of the nontrivial tensor coupling. On admissible locked spin unit-flux backgrounds, the alternative ordinary-plus-vortex-neutral quotient spectrum supplies the tensor descent and retains the calibrated six-flavour subtraction window with the heavier sextet and anisotropic tensor. On the nowhere-zero volume-field branch an opposite index-density transgression is one possible extra inflow for the fluctuating relative U(1).").
+source(hopf_locked_chiral_anomaly_spectrum, 'results/108_hopf_global_flux_and_anomaly_domain.md', 'which-fermions-supply-the-tensor-descent').
+depends(hopf_locked_chiral_anomaly_spectrum, hopf_global_unit_flux_descent).
+depends(hopf_locked_chiral_anomaly_spectrum, vortex_neutral_spectator_tensor).
+depends(hopf_locked_chiral_anomaly_spectrum, hopf_mirror_particle_threshold).
+depends(hopf_locked_chiral_anomaly_spectrum, quotient_tensor_free_fermion_shells).
+depends(hopf_locked_chiral_anomaly_spectrum, hopf_bulk_tensor_scalar_gauss_gap).
+attempted_by(hopf_locked_chiral_anomaly_spectrum, gpt_6_2_sol_ultra).
+checked_by(hopf_locked_chiral_anomaly_spectrum, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_locked_chiral_anomaly_spectrum).
+addresses(t11, hopf_locked_chiral_anomaly_spectrum).
+addresses(t13, hopf_locked_chiral_anomaly_spectrum).
+addresses(t17, hopf_locked_chiral_anomaly_spectrum).
+addresses(t18, hopf_locked_chiral_anomaly_spectrum).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).
