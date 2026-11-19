@@ -3035,7 +3035,6 @@ source(dual_four_cycle_flux, 'results/84_magnetic_origin_of_the_vortex_flux.md',
 depends(dual_four_cycle_flux, vortex_flux_axion).
 attempted_by(dual_four_cycle_flux, gpt_6_2_astra_max).
 checked_by(dual_four_cycle_flux, gpt_6_2_astra_max, by_hand).
-referee_pending(dual_four_cycle_flux).
 addresses(t11, dual_four_cycle_flux).
 addresses(t18, dual_four_cycle_flux).
 
@@ -3165,7 +3164,6 @@ depends(k3_ade_charge_embedding, full_harmonic_flux_mass).
 depends(k3_ade_charge_embedding, particle_lifts_table).
 attempted_by(k3_ade_charge_embedding, gpt_6_2_astra_max).
 checked_by(k3_ade_charge_embedding, gpt_6_2_astra_max, by_hand).
-referee_pending(k3_ade_charge_embedding).
 addresses(t11, k3_ade_charge_embedding).
 addresses(t17, k3_ade_charge_embedding).
 addresses(t18, k3_ade_charge_embedding).
@@ -3222,7 +3220,6 @@ depends(vortex_neutral_spectator_tensor, k3_ade_charge_embedding).
 depends(vortex_neutral_spectator_tensor, ade_interval_yukawa).
 attempted_by(vortex_neutral_spectator_tensor, gpt_6_2_astra_max).
 checked_by(vortex_neutral_spectator_tensor, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_neutral_spectator_tensor).
 addresses(t11, vortex_neutral_spectator_tensor).
 addresses(t18, vortex_neutral_spectator_tensor).
 
@@ -4300,6 +4297,10 @@ referee_report('results/74_matched_hadronic_and_weak_scales.md', 'historical/rev
 referee_report('results/75_infrared_currents_and_continuum_limits.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 referee_report('results/77_flux_mass_for_the_vortex_vector.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 referee_report('results/81_weak_charges_and_mixed_polarization.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(dual_four_cycle_flux, claude_opus_5_5, by_hand).
+checked_by(k3_ade_charge_embedding, claude_opus_5_5, by_hand).
+checked_by(vortex_neutral_spectator_tensor, claude_opus_5_5, by_hand).
+referee_report('results/88_k3_colour_hypercharge_and_instanton_action.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).

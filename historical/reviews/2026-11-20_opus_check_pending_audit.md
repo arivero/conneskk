@@ -65,3 +65,16 @@ The remaining pending claims were not examined in this check.
 | `vortex_hadronic_polarization` (81.2) | results/81 | $j^Z_V=(\tfrac12-s_0)j^\gamma-j_{\rm num}/12$ and $j^v_V=\tfrac32j_{\rm num}$ give the factor 18. Mainz inputs at $Q^2=1$ GeV$^2$ give $\bar\Pi_{Qv}=0.01354$ (stated $0.01353$). |
 
 Also verified, with the pending flag kept because the kinetic-metric derivation was not re-done: `root_phase_kinetic` (85). The values $F_a=v_F/6=41.04$ GeV and $m_a=6\chi/v_F=138.7$ keV follow from the stated formulas.
+
+## Third batch (checked in full)
+
+| Claim | Location | What was verified |
+|---|---|---|
+| `dual_four_cycle_flux` (84.1) | results/84 | $\lvert p_M\rvert\sqrt{Z_B}/(\pi Z_A)=(\lvert I\rvert/2\pi J)\,T_2^2/T_5=\lvert I\rvert/J$, using $T_2^2=2\pi T_5$. $\lvert I\rvert\le J$ with equality iff $h$ is (anti-)self-dual. |
+| `k3_ade_charge_embedding` (88.1) | results/88 | $n=(0,0,0,0,-2,-1,-1,0)$ and $y'=(1,1,1,-3,0,-3,3,0)$ lie in $E_8$ (integral, even sum), with $n^2=6$, $\lvert y'\rvert^2=30$, $n\cdot y'=0$, so $h^2=8-6=2$ and $h\cdot f=1$. Every row of the charge table follows from $N=n_i-n_j$ and $6Y=y'_i-y'_j$, including both weak links and $[E_{a6},E_{65}]=E_{a5}$. |
+| `vortex_neutral_spectator_tensor` (90.1) | results/90 | $\mathrm{ch}_1(\mathcal V)=0$, $\mathrm{ch}_2(P)=c_2(E)-2l^2=B$, $\mathrm{ch}_2(D)=9x^2$, $\mathrm{ch}_2(\mathcal R)=12B$, $\mathrm{ch}_4(\mathcal R)=B(-10B-81x^2)=B(C_0-7B)$. From the species list, per-family coefficients of $v^4$, $x^2v^2$, $Cv^2$, $p_1v^2$ are $7/3$, $-12$, $-1$, $-1/6$. Three families give $I_8^{(0)}=v^2(7v^2-3C-36x^2-\lambda)$. |
+
+Also verified, pending flag kept:
+
+- `projective_cjs_gauge_ratio` (84.2): $B^2=24r^2$ follows from the 11D Einstein equations with $G=g\,\omega_c\wedge\mathrm{vol}_w$ ($R_{\mathbb{CP}^2}=g^2/6$, $R_{S^2}=2g^2/3$, external $-g^2/3$). The $19/72$ kinetic ratio was not checked.
+- `k3_hypercharge_period_bound` (88.3): $5/3=\lvert Y\rvert^2/\lvert t\rvert^2=(5/6)/(1/2)$. The excess bound was not checked.
