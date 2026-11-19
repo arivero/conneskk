@@ -3162,7 +3162,6 @@ depends(k3_colour_instanton_action, k3_ade_charge_embedding).
 depends(k3_colour_instanton_action, hadronic_colour_current).
 attempted_by(k3_colour_instanton_action, gpt_6_2_astra_max).
 checked_by(k3_colour_instanton_action, gpt_6_2_astra_max, by_hand).
-referee_pending(k3_colour_instanton_action).
 addresses(t11, k3_colour_instanton_action).
 addresses(t13, k3_colour_instanton_action).
 addresses(t18, k3_colour_instanton_action).
@@ -4312,6 +4311,7 @@ referee_report('results/69_gravitating_vortex_colour_gap.md', 'historical/review
 checked_by(k3_electric_surface_charge, claude_opus_5_5, by_hand).
 checked_by(k3_electric_surface_action, claude_opus_5_5, by_hand).
 referee_report('results/91_full_k3_charge_of_a_wrapped_surface.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(k3_colour_instanton_action, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
