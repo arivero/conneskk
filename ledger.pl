@@ -3874,6 +3874,69 @@ addresses(t13, hopf_local_full_boson_ordering).
 addresses(t14, hopf_local_full_boson_ordering).
 addresses(t18, hopf_local_full_boson_ordering).
 
+claim(hopf_bulk_two_form_pullback, proposition, proved, "Proposition 105.1", "In the fixed Hopf product flux sector the normalized bulk two-form reduces to the original colour-constant electric Bianchi and magnetic field equation. Pulled-back sources leave the extra coloured tensor modes free with squared mass at least 5/B^2. Relative Chern–Weil transgressions preserve the existing pullback descent variation, with full anomaly completion a separate requirement.").
+source(hopf_bulk_two_form_pullback, 'results/105_hopf_bulk_tensor_and_magnetic_colour_pole.md', 'a-bulk-form-with-the-same-two-periods').
+depends(hopf_bulk_two_form_pullback, tensor_sphere_pushforward).
+depends(hopf_bulk_two_form_pullback, dual_tensor_transverse_pencil).
+depends(hopf_bulk_two_form_pullback, hopf_local_full_boson_ordering).
+attempted_by(hopf_bulk_two_form_pullback, gpt_6_2_sol_ultra).
+checked_by(hopf_bulk_two_form_pullback, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_bulk_two_form_pullback).
+addresses(t4, hopf_bulk_two_form_pullback).
+addresses(t11, hopf_bulk_two_form_pullback).
+addresses(t14, hopf_bulk_two_form_pullback).
+addresses(t18, hopf_bulk_two_form_pullback).
+
+claim(hopf_bulk_tensor_local_transverse_form, proposition, proved, "Proposition 105.2", "For each nonconstant colour scalar harmonic in the local sourced transverse tensor problem, product Hodge projection allocates electric source weights mu_n/(lambda_C+mu_n) and lambda_C/(lambda_C+mu_n). Massive two-form dualization gives the stated magnetic square and kinetic denominator lambda_C+mu_n.").
+source(hopf_bulk_tensor_local_transverse_form, 'results/105_hopf_bulk_tensor_and_magnetic_colour_pole.md', 'transverse-tensor-harmonics-with-local-sources').
+depends(hopf_bulk_tensor_local_transverse_form, hopf_bulk_two_form_pullback).
+depends(hopf_bulk_tensor_local_transverse_form, dual_tensor_transverse_pencil).
+attempted_by(hopf_bulk_tensor_local_transverse_form, gpt_6_2_sol_ultra).
+checked_by(hopf_bulk_tensor_local_transverse_form, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_bulk_tensor_local_transverse_form).
+addresses(t4, hopf_bulk_tensor_local_transverse_form).
+addresses(t14, hopf_bulk_tensor_local_transverse_form).
+addresses(t18, hopf_bulk_tensor_local_transverse_form).
+
+claim(hopf_bulk_tensor_aligned_transverse_gap, proposition, proved, "Proposition 105.3", "With both vortex sources localized and the weak tangent curvature term kept pulled back, the coloured transverse tensor form obeys Q_T at least c_T lambda_C K_T, with c_T=Z6/(Z6+49 Z_D). On the central fixed-shape shrink the first extra transverse vector has B^2 M^2 tending to 5 c_T, about 0.8272, above the mirrors. The full particle threshold still requires a scalar comparison.").
+source(hopf_bulk_tensor_aligned_transverse_gap, 'results/105_hopf_bulk_tensor_and_magnetic_colour_pole.md', 'transverse-tensor-harmonics-with-local-sources').
+depends(hopf_bulk_tensor_aligned_transverse_gap, hopf_bulk_tensor_local_transverse_form).
+depends(hopf_bulk_tensor_aligned_transverse_gap, hopf_local_calibrated_coloured_gap).
+depends(hopf_bulk_tensor_aligned_transverse_gap, hopf_mirror_particle_threshold).
+attempted_by(hopf_bulk_tensor_aligned_transverse_gap, gpt_6_2_sol_ultra).
+checked_by(hopf_bulk_tensor_aligned_transverse_gap, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_bulk_tensor_aligned_transverse_gap).
+addresses(t4, hopf_bulk_tensor_aligned_transverse_gap).
+addresses(t13, hopf_bulk_tensor_aligned_transverse_gap).
+addresses(t14, hopf_bulk_tensor_aligned_transverse_gap).
+addresses(t18, hopf_bulk_tensor_aligned_transverse_gap).
+
+claim(hopf_bulk_tensor_independent_magnetic_pole, proposition, proved, "Proposition 105.4", "With the weak tangent curvature contribution also localized, the nonround fixed-shape shrink has a charge-magnitude 1/6 coloured transverse pole with M^2=O(a^2/B^4). It eventually enters below the mirror threshold. For the central b=0.001 comparison the trial gives a sufficient crossing scale near B^-1=1.34 TeV.").
+source(hopf_bulk_tensor_independent_magnetic_pole, 'results/105_hopf_bulk_tensor_and_magnetic_colour_pole.md', 'the-local-weak-curvature-source-on-nonround-shrink').
+depends(hopf_bulk_tensor_independent_magnetic_pole, hopf_bulk_tensor_local_transverse_form).
+depends(hopf_bulk_tensor_independent_magnetic_pole, hopf_comoving_charged_limit).
+depends(hopf_bulk_tensor_independent_magnetic_pole, hopf_mirror_particle_threshold).
+attempted_by(hopf_bulk_tensor_independent_magnetic_pole, gpt_6_2_sol_ultra).
+checked_by(hopf_bulk_tensor_independent_magnetic_pole, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_bulk_tensor_independent_magnetic_pole).
+addresses(t4, hopf_bulk_tensor_independent_magnetic_pole).
+addresses(t13, hopf_bulk_tensor_independent_magnetic_pole).
+addresses(t14, hopf_bulk_tensor_independent_magnetic_pole).
+addresses(t18, hopf_bulk_tensor_independent_magnetic_pole).
+
+claim(hopf_bulk_tensor_anisotropic_vector_order, proposition, proved, "Proposition 105.5", "With all stated local weak sources, weighting the tensor norm by powers of the prescribed positive dilaton function zeta for its colour legs preserves the previous first transverse vector on the fitted broken path for sufficiently large coefficient. The colour-constant tensor action and finite-member bulk propagation are retained. The conclusion concerns transverse vectors in this anisotropic action.").
+source(hopf_bulk_tensor_anisotropic_vector_order, 'results/105_hopf_bulk_tensor_and_magnetic_colour_pole.md', 'a-fixed-tensor-kinetic-term-that-retains-the-transverse-ordering').
+depends(hopf_bulk_tensor_anisotropic_vector_order, hopf_bulk_tensor_independent_magnetic_pole).
+depends(hopf_bulk_tensor_anisotropic_vector_order, hopf_local_transverse_vector_minimum).
+depends(hopf_bulk_tensor_anisotropic_vector_order, hopf_nonround_covariant_core).
+attempted_by(hopf_bulk_tensor_anisotropic_vector_order, gpt_6_2_sol_ultra).
+checked_by(hopf_bulk_tensor_anisotropic_vector_order, gpt_6_2_sol_ultra, by_hand).
+referee_pending(hopf_bulk_tensor_anisotropic_vector_order).
+addresses(t4, hopf_bulk_tensor_anisotropic_vector_order).
+addresses(t13, hopf_bulk_tensor_anisotropic_vector_order).
+addresses(t14, hopf_bulk_tensor_anisotropic_vector_order).
+addresses(t18, hopf_bulk_tensor_anisotropic_vector_order).
+
 claim(lecture_projective_circle_gap, proposition, proved, "Compact spaces lecture, Exercise 9", "For the invariant connection metrics of fibre radius rho on the circle bundle of O(3,2) over CP2 times CP1 at fixed product base, the lowest scalar mass squared of integer charge n is n^2/rho^2 + abs(n)(2b2+b1). Holomorphic sections and their conjugates attain the bound. In Einstein units the first charged value is 40/L^2 with multiplicity 30 per sign.").
 source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).

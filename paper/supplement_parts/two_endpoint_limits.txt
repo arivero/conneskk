@@ -28,3 +28,4 @@ part "S255 (Hopf colour threshold with the full vortex Maxwell field)" results/1
 part "S256 (Dynamical Hopf volume tensor and auxiliary Maxwell tower)" results/102_hopf_volume_tensor_amplitude_and_auxiliary_tower.md
 part "S257 (Local Hopf connection and the first transverse vector shell)" results/103_hopf_local_connection_transverse_shell.md
 part "S258 (Coloured scalar constraints with the local Hopf connection)" results/104_hopf_local_scalar_constraints_and_sextet.md
+part "S259 (Bulk two-period tensor and light coloured magnetic pole)" results/105_hopf_bulk_tensor_and_magnetic_colour_pole.md
