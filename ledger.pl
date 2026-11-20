@@ -3816,7 +3816,6 @@ depends(hopf_bulk_tensor_independent_magnetic_pole, hopf_comoving_charged_limit)
 depends(hopf_bulk_tensor_independent_magnetic_pole, hopf_mirror_particle_threshold).
 attempted_by(hopf_bulk_tensor_independent_magnetic_pole, gpt_6_2_sol_ultra).
 checked_by(hopf_bulk_tensor_independent_magnetic_pole, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_bulk_tensor_independent_magnetic_pole).
 addresses(t4, hopf_bulk_tensor_independent_magnetic_pole).
 addresses(t13, hopf_bulk_tensor_independent_magnetic_pole).
 addresses(t14, hopf_bulk_tensor_independent_magnetic_pole).
@@ -4322,6 +4321,7 @@ checked_by(hopf_bulk_two_form_pullback, claude_opus_5_5, by_hand).
 referee_report('results/105_hopf_bulk_tensor_and_magnetic_colour_pole.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(hopf_bulk_tensor_local_transverse_form, claude_opus_5_5, by_hand).
 checked_by(hopf_bulk_tensor_aligned_transverse_gap, claude_opus_5_5, by_hand).
+checked_by(hopf_bulk_tensor_independent_magnetic_pole, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
