@@ -2895,7 +2895,6 @@ depends(finite_weak_current_inverse, matched_colour_trajectory).
 depends(finite_weak_current_inverse, vortex_ir_neutral_current).
 attempted_by(finite_weak_current_inverse, gpt_6_2_astra_max).
 checked_by(finite_weak_current_inverse, gpt_6_2_astra_max, by_hand).
-referee_pending(finite_weak_current_inverse).
 addresses(t4, finite_weak_current_inverse).
 addresses(t13, finite_weak_current_inverse).
 addresses(t18, finite_weak_current_inverse).
@@ -4325,6 +4324,8 @@ checked_by(round_flux_product_gap, claude_opus_5_5, by_hand).
 checked_by(projective_kahler_octet, claude_opus_5_5, by_hand).
 checked_by(projective_kahler_moduli, claude_opus_5_5, by_hand).
 checked_by(vortex_root_domain, claude_opus_5_5, by_hand).
+checked_by(finite_weak_current_inverse, claude_opus_5_5, by_hand).
+referee_report('results/78_finite_weak_pole_and_current_match.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
