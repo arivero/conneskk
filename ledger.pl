@@ -3518,7 +3518,6 @@ depends(hopf_projected_nonround_boson, hopf_projected_coloured_threshold).
 depends(hopf_projected_nonround_boson, quotient_tensor_colour_gap).
 attempted_by(hopf_projected_nonround_boson, gpt_6_2_sol_ultra).
 checked_by(hopf_projected_nonround_boson, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_projected_nonround_boson).
 addresses(t4, hopf_projected_nonround_boson).
 addresses(t13, hopf_projected_nonround_boson).
 addresses(t14, hopf_projected_nonround_boson).
@@ -4326,6 +4325,7 @@ checked_by(ade_interval_yukawa, claude_opus_5_5, by_hand).
 checked_by(dual_tensor_photon_cost, claude_opus_5_5, by_hand).
 checked_by(quotient_tensor_colour_gap, claude_opus_5_5, by_hand).
 checked_by(hopf_projected_coloured_threshold, claude_opus_5_5, by_hand).
+checked_by(hopf_projected_nonround_boson, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
