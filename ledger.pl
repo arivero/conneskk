@@ -3587,7 +3587,6 @@ depends(hopf_nonround_boson_crossing, hopf_finite_current_fit).
 depends(hopf_nonround_boson_crossing, hopf_scalar_windows).
 attempted_by(hopf_nonround_boson_crossing, gpt_6_2_sol_ultra).
 checked_by(hopf_nonround_boson_crossing, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_nonround_boson_crossing).
 addresses(t13, hopf_nonround_boson_crossing).
 addresses(t14, hopf_nonround_boson_crossing).
 addresses(t18, hopf_nonround_boson_crossing).
@@ -4315,6 +4314,8 @@ checked_by(weak_root_curvature, claude_opus_5_5, by_hand).
 referee_report('results/82_opposite_root_response_of_the_nucleon.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(projective_cjs_gauge_ratio, claude_opus_5_5, by_hand).
 checked_by(hadronic_colour_current, claude_opus_5_5, by_hand).
+checked_by(hopf_nonround_boson_crossing, claude_opus_5_5, by_hand).
+referee_report('results/99_nonround_hopf_colour_gap_and_level_crossing.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
