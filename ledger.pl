@@ -3389,7 +3389,6 @@ depends(hopf_broken_colour_vectors, hopf_supported_spin_product).
 depends(hopf_broken_colour_vectors, hopf_locking_weak_charges).
 attempted_by(hopf_broken_colour_vectors, gpt_6_2_sol_ultra).
 checked_by(hopf_broken_colour_vectors, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_broken_colour_vectors).
 addresses(t4, hopf_broken_colour_vectors).
 addresses(t14, hopf_broken_colour_vectors).
 addresses(t18, hopf_broken_colour_vectors).
@@ -4316,6 +4315,7 @@ checked_by(projective_cjs_gauge_ratio, claude_opus_5_5, by_hand).
 checked_by(hadronic_colour_current, claude_opus_5_5, by_hand).
 checked_by(hopf_nonround_boson_crossing, claude_opus_5_5, by_hand).
 referee_report('results/99_nonround_hopf_colour_gap_and_level_crossing.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(hopf_broken_colour_vectors, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
