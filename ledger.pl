@@ -3451,7 +3451,6 @@ source(positive_proca_current_comparison, 'results/96_photon_thresholds_from_vec
 depends(positive_proca_current_comparison, background_weak_multiplet_threshold).
 attempted_by(positive_proca_current_comparison, gpt_6_2_sol_ultra).
 checked_by(positive_proca_current_comparison, gpt_6_2_sol_ultra, by_hand).
-referee_pending(positive_proca_current_comparison).
 addresses(t4, positive_proca_current_comparison).
 addresses(t13, positive_proca_current_comparison).
 addresses(t18, positive_proca_current_comparison).
@@ -3462,7 +3461,6 @@ depends(spectator_photon_subtraction_bound, vortex_neutral_spectator_tensor).
 depends(spectator_photon_subtraction_bound, quotient_tensor_free_fermion_shells).
 attempted_by(spectator_photon_subtraction_bound, gpt_6_2_sol_ultra).
 checked_by(spectator_photon_subtraction_bound, gpt_6_2_sol_ultra, by_hand).
-referee_pending(spectator_photon_subtraction_bound).
 addresses(t4, spectator_photon_subtraction_bound).
 addresses(t13, spectator_photon_subtraction_bound).
 addresses(t18, spectator_photon_subtraction_bound).
@@ -4318,6 +4316,8 @@ checked_by(hopf_local_volume_tensor_rayleigh_test, claude_opus_5_5, by_hand).
 checked_by(hopf_uniform_light_mass_inverse, claude_opus_5_5, by_hand).
 referee_report('results/100_hopf_light_fermion_window_and_hadronic_calibration.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(thomson_radius_matching, claude_opus_5_5, by_hand).
+checked_by(positive_proca_current_comparison, claude_opus_5_5, by_hand).
+checked_by(spectator_photon_subtraction_bound, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
