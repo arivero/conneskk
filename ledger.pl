@@ -3245,7 +3245,6 @@ depends(dual_tensor_transverse_pencil, dual_tensor_stiffness_bound).
 depends(dual_tensor_transverse_pencil, vortex_flux_ir_contact).
 attempted_by(dual_tensor_transverse_pencil, gpt_6_2_sol_ultra).
 checked_by(dual_tensor_transverse_pencil, gpt_6_2_sol_ultra, by_hand).
-referee_pending(dual_tensor_transverse_pencil).
 addresses(t4, dual_tensor_transverse_pencil).
 addresses(t11, dual_tensor_transverse_pencil).
 addresses(t18, dual_tensor_transverse_pencil).
@@ -4321,6 +4320,7 @@ checked_by(rooted_current_projection, claude_opus_5_5, by_hand).
 checked_by(shared_cap_current, claude_opus_5_5, by_hand).
 checked_by(shared_winding_hadron, claude_opus_5_5, by_hand).
 checked_by(hopf_nonround_covariant_core, claude_opus_5_5, by_hand).
+checked_by(dual_tensor_transverse_pencil, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
