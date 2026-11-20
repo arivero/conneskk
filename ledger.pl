@@ -3090,7 +3090,6 @@ depends(wrapped_string_resultant, vortex_flux_axion).
 depends(wrapped_string_resultant, vortex_root_domain).
 attempted_by(wrapped_string_resultant, gpt_6_2_astra_max).
 checked_by(wrapped_string_resultant, gpt_6_2_astra_max, by_hand).
-referee_pending(wrapped_string_resultant).
 addresses(t11, wrapped_string_resultant).
 addresses(t18, wrapped_string_resultant).
 
@@ -3100,7 +3099,6 @@ depends(wrapped_string_phase_potential, root_qcd_angle).
 depends(wrapped_string_phase_potential, wrapped_string_resultant).
 attempted_by(wrapped_string_phase_potential, gpt_6_2_astra_max).
 checked_by(wrapped_string_phase_potential, gpt_6_2_astra_max, by_hand).
-referee_pending(wrapped_string_phase_potential).
 addresses(t13, wrapped_string_phase_potential).
 addresses(t18, wrapped_string_phase_potential).
 
@@ -4318,6 +4316,9 @@ checked_by(colour_wilson_trial, claude_opus_5_5, by_hand).
 checked_by(vortex_flux_axion, claude_opus_5_5, by_hand).
 checked_by(mirror_custodial_bound, claude_opus_5_5, by_hand).
 checked_by(mirror_scalar_gluons, claude_opus_5_5, by_hand).
+checked_by(wrapped_string_resultant, claude_opus_5_5, by_hand).
+checked_by(wrapped_string_phase_potential, claude_opus_5_5, by_hand).
+referee_report('results/86_wrapped_string_and_the_two_weak_roots.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
