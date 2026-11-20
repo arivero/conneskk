@@ -2727,7 +2727,6 @@ depends(rooted_colour_vectors, nonround_flux_colour_gap).
 depends(rooted_colour_vectors, vortex_root_vacua).
 attempted_by(rooted_colour_vectors, gpt_6_2_astra_max).
 checked_by(rooted_colour_vectors, gpt_6_2_astra_max, by_hand).
-referee_pending(rooted_colour_vectors).
 addresses(t4, rooted_colour_vectors).
 addresses(t18, rooted_colour_vectors).
 
@@ -3568,7 +3567,6 @@ depends(hopf_mirror_particle_threshold, hopf_projected_nonround_boson).
 depends(hopf_mirror_particle_threshold, hopf_nonround_boson_crossing).
 attempted_by(hopf_mirror_particle_threshold, gpt_6_2_sol_ultra).
 checked_by(hopf_mirror_particle_threshold, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_mirror_particle_threshold).
 addresses(t13, hopf_mirror_particle_threshold).
 addresses(t14, hopf_mirror_particle_threshold).
 addresses(t18, hopf_mirror_particle_threshold).
@@ -3581,7 +3579,6 @@ depends(hopf_comoving_hadronic_benchmark, hadronic_colour_current).
 depends(hopf_comoving_hadronic_benchmark, dual_tensor_finite_fit).
 attempted_by(hopf_comoving_hadronic_benchmark, gpt_6_2_sol_ultra).
 checked_by(hopf_comoving_hadronic_benchmark, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_comoving_hadronic_benchmark).
 addresses(t4, hopf_comoving_hadronic_benchmark).
 addresses(t13, hopf_comoving_hadronic_benchmark).
 addresses(t18, hopf_comoving_hadronic_benchmark).
@@ -3593,7 +3590,6 @@ depends(hopf_thomson_auxiliary_calibration, hopf_mirror_particle_threshold).
 depends(hopf_thomson_auxiliary_calibration, thomson_radius_matching).
 attempted_by(hopf_thomson_auxiliary_calibration, gpt_6_2_sol_ultra).
 checked_by(hopf_thomson_auxiliary_calibration, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_thomson_auxiliary_calibration).
 addresses(t4, hopf_thomson_auxiliary_calibration).
 addresses(t13, hopf_thomson_auxiliary_calibration).
 addresses(t18, hopf_thomson_auxiliary_calibration).
@@ -4324,6 +4320,10 @@ checked_by(wrapped_m5_boundary_charge, claude_opus_5_5, by_hand).
 checked_by(k3_hypercharge_period_bound, claude_opus_5_5, by_hand).
 checked_by(tensor_sphere_pushforward, claude_opus_5_5, by_hand).
 checked_by(projective_vortex_spectator_descent, claude_opus_5_5, by_hand).
+checked_by(rooted_colour_vectors, claude_opus_5_5, by_hand).
+checked_by(hopf_thomson_auxiliary_calibration, claude_opus_5_5, by_hand).
+checked_by(hopf_comoving_hadronic_benchmark, claude_opus_5_5, by_hand).
+checked_by(hopf_mirror_particle_threshold, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
