@@ -3417,7 +3417,6 @@ depends(background_weak_multiplet_threshold, finite_electric_matching).
 depends(background_weak_multiplet_threshold, dual_tensor_finite_fit).
 attempted_by(background_weak_multiplet_threshold, gpt_6_2_sol_ultra).
 checked_by(background_weak_multiplet_threshold, gpt_6_2_sol_ultra, by_hand).
-referee_pending(background_weak_multiplet_threshold).
 addresses(t4, background_weak_multiplet_threshold).
 addresses(t13, background_weak_multiplet_threshold).
 addresses(t18, background_weak_multiplet_threshold).
@@ -4322,6 +4321,7 @@ checked_by(hopf_isotropic_tensor_sharp_soft_mass, claude_opus_5_5, by_hand).
 checked_by(hopf_local_vertical_orientation_bound, claude_opus_5_5, by_hand).
 checked_by(hopf_colour_octet_instability, claude_opus_5_5, by_hand).
 checked_by(projective_flux_octet, claude_opus_5_5, by_hand).
+checked_by(background_weak_multiplet_threshold, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
