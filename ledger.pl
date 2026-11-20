@@ -2640,7 +2640,6 @@ depends(vortex_root_neck, vortex_root_lower_current).
 depends(vortex_root_neck, shared_cap_current).
 attempted_by(vortex_root_neck, gpt_6_2_astra_max).
 checked_by(vortex_root_neck, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_root_neck).
 addresses(t13, vortex_root_neck).
 addresses(t14, vortex_root_neck).
 addresses(t18, vortex_root_neck).
@@ -4313,6 +4312,7 @@ checked_by(membrane_colour_instanton, claude_opus_5_5, by_hand).
 checked_by(adjoint_monopole_gradient, claude_opus_5_5, by_hand).
 referee_report('results/89_monopole_charge_and_a_chiral_interval.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(spin_tensor_reeb_current, claude_opus_5_5, by_hand).
+checked_by(vortex_root_neck, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
