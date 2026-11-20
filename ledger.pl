@@ -3352,7 +3352,6 @@ depends(hopf_scalar_windows, dual_tensor_photon_cost).
 depends(hopf_scalar_windows, dual_tensor_finite_neck).
 attempted_by(hopf_scalar_windows, gpt_6_2_sol_ultra).
 checked_by(hopf_scalar_windows, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_scalar_windows).
 addresses(t13, hopf_scalar_windows).
 addresses(t14, hopf_scalar_windows).
 addresses(t18, hopf_scalar_windows).
@@ -4320,6 +4319,7 @@ checked_by(ir_moduli_inverse, claude_opus_5_5, by_hand).
 referee_report('results/83_two_infrared_coordinates_on_the_weak_family.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(root_phase_kinetic, claude_opus_5_5, by_hand).
 checked_by(hopf_locking_weak_charges, claude_opus_5_5, by_hand).
+checked_by(hopf_scalar_windows, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
