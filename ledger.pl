@@ -3598,7 +3598,6 @@ depends(hopf_uniform_light_mass_inverse, quotient_tensor_free_fermion_shells).
 depends(hopf_uniform_light_mass_inverse, hopf_finite_current_fit).
 attempted_by(hopf_uniform_light_mass_inverse, gpt_6_2_sol_ultra).
 checked_by(hopf_uniform_light_mass_inverse, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_uniform_light_mass_inverse).
 addresses(t3, hopf_uniform_light_mass_inverse).
 addresses(t8, hopf_uniform_light_mass_inverse).
 addresses(t13, hopf_uniform_light_mass_inverse).
@@ -4317,6 +4316,8 @@ checked_by(hopf_broken_colour_vectors, claude_opus_5_5, by_hand).
 checked_by(hopf_volume_tensor_rank_one_potential, claude_opus_5_5, by_hand).
 referee_report('results/102_hopf_volume_tensor_amplitude_and_auxiliary_tower.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(hopf_local_volume_tensor_rayleigh_test, claude_opus_5_5, by_hand).
+checked_by(hopf_uniform_light_mass_inverse, claude_opus_5_5, by_hand).
+referee_report('results/100_hopf_light_fermion_window_and_hadronic_calibration.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
