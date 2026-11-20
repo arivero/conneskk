@@ -3189,7 +3189,6 @@ depends(tensor_sphere_pushforward, vortex_axion_four_anomaly).
 depends(tensor_sphere_pushforward, root_qcd_angle).
 attempted_by(tensor_sphere_pushforward, gpt_6_2_astra_max).
 checked_by(tensor_sphere_pushforward, gpt_6_2_astra_max, by_hand).
-referee_pending(tensor_sphere_pushforward).
 addresses(t11, tensor_sphere_pushforward).
 addresses(t18, tensor_sphere_pushforward).
 
@@ -4324,6 +4323,7 @@ checked_by(two_endpoint_trace_matching, claude_opus_5_5, by_hand).
 checked_by(two_endpoint_scalar_count, claude_opus_5_5, by_hand).
 checked_by(wrapped_m5_boundary_charge, claude_opus_5_5, by_hand).
 checked_by(k3_hypercharge_period_bound, claude_opus_5_5, by_hand).
+checked_by(tensor_sphere_pushforward, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
