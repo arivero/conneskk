@@ -2646,7 +2646,6 @@ depends(vortex_root_exchange_range, vortex_root_lower_current).
 depends(vortex_root_exchange_range, vortex_root_upper_current).
 attempted_by(vortex_root_exchange_range, gpt_6_2_astra_max).
 checked_by(vortex_root_exchange_range, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_root_exchange_range).
 addresses(t13, vortex_root_exchange_range).
 addresses(t18, vortex_root_exchange_range).
 
@@ -4319,6 +4318,7 @@ checked_by(local_tensor_mixing_comparison, claude_opus_5_5, by_hand).
 checked_by(vortex_root_lower_current, claude_opus_5_5, by_hand).
 checked_by(vortex_five_quarks, claude_opus_5_5, by_hand).
 checked_by(vortex_one_quark_mass, claude_opus_5_5, by_hand).
+checked_by(vortex_root_exchange_range, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
