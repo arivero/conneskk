@@ -3706,7 +3706,6 @@ depends(hopf_local_volume_tensor_rayleigh_test, hopf_volume_tensor_rank_one_pote
 depends(hopf_local_volume_tensor_rayleigh_test, hopf_full_auxiliary_coloured_minimum).
 attempted_by(hopf_local_volume_tensor_rayleigh_test, gpt_6_2_sol_ultra).
 checked_by(hopf_local_volume_tensor_rayleigh_test, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_local_volume_tensor_rayleigh_test).
 addresses(t4, hopf_local_volume_tensor_rayleigh_test).
 addresses(t14, hopf_local_volume_tensor_rayleigh_test).
 addresses(t18, hopf_local_volume_tensor_rayleigh_test).
@@ -4317,6 +4316,7 @@ referee_report('results/99_nonround_hopf_colour_gap_and_level_crossing.md', 'his
 checked_by(hopf_broken_colour_vectors, claude_opus_5_5, by_hand).
 checked_by(hopf_volume_tensor_rank_one_potential, claude_opus_5_5, by_hand).
 referee_report('results/102_hopf_volume_tensor_amplitude_and_auxiliary_tower.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(hopf_local_volume_tensor_rayleigh_test, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
