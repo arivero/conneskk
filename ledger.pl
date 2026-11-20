@@ -3632,7 +3632,6 @@ depends(hopf_full_maxwell_matched_threshold, hopf_nonround_boson_crossing).
 depends(hopf_full_maxwell_matched_threshold, hopf_mirror_particle_threshold).
 attempted_by(hopf_full_maxwell_matched_threshold, gpt_6_2_sol_ultra).
 checked_by(hopf_full_maxwell_matched_threshold, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_full_maxwell_matched_threshold).
 addresses(t4, hopf_full_maxwell_matched_threshold).
 addresses(t13, hopf_full_maxwell_matched_threshold).
 addresses(t14, hopf_full_maxwell_matched_threshold).
@@ -4321,6 +4320,7 @@ checked_by(shared_cap_current, claude_opus_5_5, by_hand).
 checked_by(shared_winding_hadron, claude_opus_5_5, by_hand).
 checked_by(hopf_nonround_covariant_core, claude_opus_5_5, by_hand).
 checked_by(dual_tensor_transverse_pencil, claude_opus_5_5, by_hand).
+checked_by(hopf_full_maxwell_matched_threshold, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
