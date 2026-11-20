@@ -2539,7 +2539,6 @@ depends(vortex_root_domain, vortex_root_vacua).
 depends(vortex_root_domain, helical_probe_charge).
 attempted_by(vortex_root_domain, gpt_6_2_astra_max).
 checked_by(vortex_root_domain, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_root_domain).
 addresses(t2, vortex_root_domain).
 addresses(t14, vortex_root_domain).
 addresses(t18, vortex_root_domain).
@@ -4325,6 +4324,7 @@ referee_report('results/71_colour_gap_with_diagonal_roots.md', 'historical/revie
 checked_by(round_flux_product_gap, claude_opus_5_5, by_hand).
 checked_by(projective_kahler_octet, claude_opus_5_5, by_hand).
 checked_by(projective_kahler_moduli, claude_opus_5_5, by_hand).
+checked_by(vortex_root_domain, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
