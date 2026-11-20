@@ -3480,7 +3480,6 @@ depends(hopf_comoving_charged_limit, hopf_scalar_windows).
 depends(hopf_comoving_charged_limit, dual_tensor_hadronic_resolvent).
 attempted_by(hopf_comoving_charged_limit, gpt_6_2_sol_ultra).
 checked_by(hopf_comoving_charged_limit, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_comoving_charged_limit).
 addresses(t4, hopf_comoving_charged_limit).
 addresses(t13, hopf_comoving_charged_limit).
 addresses(t14, hopf_comoving_charged_limit).
@@ -4324,6 +4323,7 @@ referee_report('results/97_hopf_transverse_spectrum_and_current_match.md', 'hist
 checked_by(dual_tensor_comoving_pole, claude_opus_5_5, by_hand).
 checked_by(dual_tensor_hadronic_resolvent, claude_opus_5_5, by_hand).
 referee_report('results/93_tensor_photon_and_the_five_dimensional_pole.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(hopf_comoving_charged_limit, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
