@@ -2963,7 +2963,6 @@ depends(hadron_root_slope, hadronic_colour_current).
 depends(hadron_root_slope, mirror_scalar_gluons).
 attempted_by(hadron_root_slope, gpt_6_2_astra_max).
 checked_by(hadron_root_slope, gpt_6_2_astra_max, by_hand).
-referee_pending(hadron_root_slope).
 addresses(t13, hadron_root_slope).
 addresses(t18, hadron_root_slope).
 
@@ -4326,6 +4325,7 @@ checked_by(projective_kahler_moduli, claude_opus_5_5, by_hand).
 checked_by(vortex_root_domain, claude_opus_5_5, by_hand).
 checked_by(finite_weak_current_inverse, claude_opus_5_5, by_hand).
 referee_report('results/78_finite_weak_pole_and_current_match.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(hadron_root_slope, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
