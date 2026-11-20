@@ -3474,7 +3474,6 @@ depends(thomson_radius_matching, quotient_tensor_colour_gap).
 depends(thomson_radius_matching, finite_electric_matching).
 attempted_by(thomson_radius_matching, gpt_6_2_sol_ultra).
 checked_by(thomson_radius_matching, gpt_6_2_sol_ultra, by_hand).
-referee_pending(thomson_radius_matching).
 addresses(t4, thomson_radius_matching).
 addresses(t13, thomson_radius_matching).
 addresses(t18, thomson_radius_matching).
@@ -4318,6 +4317,7 @@ referee_report('results/102_hopf_volume_tensor_amplitude_and_auxiliary_tower.md'
 checked_by(hopf_local_volume_tensor_rayleigh_test, claude_opus_5_5, by_hand).
 checked_by(hopf_uniform_light_mass_inverse, claude_opus_5_5, by_hand).
 referee_report('results/100_hopf_light_fermion_window_and_hadronic_calibration.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(thomson_radius_matching, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
