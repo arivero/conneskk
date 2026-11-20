@@ -4,7 +4,7 @@ Fix the unit electric generator, $k=6$, the Kähler colour action and the flux l
 
 ## Inverting the light spectrum
 
-**Proposition 78.1.** Consider compact, weakly broken members with $M_C,M_Z,M_v\ll 1/a,1/L$ at fixed ratios of the light masses. Denote the charged pole by $M_C$, the pole coupling to the ordinary neutral weak current by $M_Z$, and the independent vortex pole by $M_v$. In addition to the two degree-one roots, retain the leading weak stiffness of the original vortex. There is a positive local inverse from $G_F,M_C,M_Z,g_V^{\nu e},g_A^{\nu e}$ to the light coefficients whenever the $s,\rho,d_v$ below satisfy $0<s<1$, $\rho>1$ and $0<d_v<1$. The implied electric coupling is an independent test.
+**Proposition 78.1.** Consider compact, weakly broken members with $M_C,M_Z,M_v\ll 1/a,1/L$ at fixed ratios of the light masses. Denote the charged pole by $M_C$, the pole coupling to the ordinary neutral weak current by $M_Z$, and the independent vortex pole by $M_v$. In addition to the two degree-one roots, retain the leading weak stiffness of the original vortex. The leading light coefficients have a positive local inverse from $G_F,M_C,M_Z,g_V^{\nu e},g_A^{\nu e}$ whenever the $s,\rho,d_v$ below satisfy $0<s<1$, $\rho>1$ and $0<d_v<1$. For each strict interior solution with simple selected sourced poles, a unique nearby positive finite-member inverse exists for every sufficiently small $L>0$. The compact-sphere reduction below establishes the required parameter regularity and complement estimate. The implied electric coupling is an independent test.
 
 **Proof.** Let $v_h^2$ be the sum of the two root-doublet stiffnesses in the convention of 73.1, and let $v_\Phi^2=16CV\langle|\Phi|^2\rangle$ be the charged stiffness of the original vortex. Write $v_A^2=(2p)^2 f_\theta^2$ for the axion stiffness of 77.1. The nearly dissolved vortex is a weak triplet of axial weight zero. Its action by a transverse unit rotation has squared norm $\langle|\Phi|^2\rangle$, whereas its axial weak vertex vanishes. Its charge under the separate unit vortex connection is two. Hence it contributes $v_\Phi^2/4$ to a charged weak connection and $v_\Phi^2$ to the constant vortex connection, before kinetic normalization. The root doublets give $v_h^2/4$ in the charged direction and the same coefficient on the neutral difference of the weak and hypercharge connections. Their common vortex charge gives $v_h^2$ there. Equal norms eliminate the leading weak–vortex neutral mixing. Thus to leading order
 $$
@@ -33,7 +33,67 @@ $$
  h_0=v_h^2/(2c_v\sqrt{\epsilon}).
  \end{aligned}
 $$
-Choose the integer flux $p=1$ and the corresponding positive $z_B$. The colour measurement fixes $B^2=4I_3/c_v$, and the internal volume then fixes the common Einstein coefficient. At fixed light inputs the scaled quantities $\epsilon/L^2$, $h_0/L$ and $\gamma/L$ have finite positive limits as $L$ decreases in this comparison of theories. The nonzero angular complement is uniformly gapped in sphere units. Elimination of that complement changes the light mass form only at higher order: use the exact lifted rotation of 77.2 before perturbing its kinetic and mass forms. The root gradient projection has the regular normalized Hopf limit proved in 73.1. The pole projectors and contact coefficients consequently extend smoothly in the scaled variables near their distinct limiting poles. The inverse function theorem then gives interior finite members at sufficiently small $L$. Once a member is chosen, holding its action fixed and taking the meridian input $d=aP_b$ places it on the matched path of 74.1 with the bounded electric coefficient of 77.1. The construction selects a member from input data; no minimization of a modulus or quantum unification condition was used. $\square$
+Choose the integer flux $p=1$ and the corresponding positive $z_B$. The colour measurement fixes $B^2=4I_3/c_v$, and the internal volume then fixes the common Einstein coefficient. At fixed light inputs put
+$$
+ \theta=(C,\Gamma,T,E,H)
+       =(c_vL^2,\gamma/L,\eta^2,\epsilon/L^2,h_0/L).
+$$
+Its limiting inverse is
+$$
+ C=k^2I_Y,\quad \Gamma^2=v_A^2/(16C),\quad
+ T=3I_W/(8C),\quad E=3v_\Phi^2/(32C),\quad
+ H=v_h^2/(2C\sqrt E).
+$$
+Every entry is positive on the stated interior and depends smoothly on the five inputs. The compact-sphere argument below gives a pole/contact map continuous in $L\ge0$, continuously differentiable in $\theta$, with its $\theta$ derivative continuous up to $L=0$. Its limiting derivative is invertible by the two explicit inverses above. The parameter-dependent inverse function theorem therefore gives the nearby finite solution and its local uniqueness for all sufficiently small positive $L$. Once a member is chosen, holding its action fixed and taking the meridian input $d=aP_b$ places it on the matched path of 74.1 with the bounded electric coefficient of 77.1. This selects a member from input data; dynamical selection of its moduli remains separate. $\square$
+
+### Compact-sphere regularity of the finite inverse
+
+The domain in this argument is the fixed smooth sphere with its magnetic line bundles, in the zero-relative-circle-frequency transverse spin-one sectors sourced by the leptons. The charged sector has azimuthal weight one; the neutral sector has weight zero and the exact photon removed. The field representatives are solenoidal weak metric vectors, the weak Maxwell and circle scalar profiles, and a weak coexact one-form for the two-form vector. Exact two-form gauge directions and the external-coordinate gradients are eliminated as in 73.1 and 77.2. No unitary gauge for the small Stückelberg coupling is used.
+
+**Profiles at the poles.** Put $v=-u-b$ for $t\ge0$, so $p=\epsilon e^{-v}$ and
+$$
+ q_\epsilon(v)=f^2/2=e^{-v+\epsilon(1-e^{-v})},\qquad
+ t_\epsilon(v)=\tfrac12\int_0^v(1-q_\epsilon(x))^{-1/2}dx.
+$$
+Near $v=0$, $(1-q_\epsilon(v))/v$ is analytic and has positive value $1-\epsilon$. Consequently $t_\epsilon(v)/\sqrt v$ is analytic in $(v,\epsilon)$, and inversion gives $v$ analytic in $(t^2,\epsilon)$ at the equator. Near infinity the convergent tail integral gives
+$$
+ t_\epsilon(v)=v/2+c(\epsilon)+R(e^{-v},\epsilon),
+ \qquad R(0,\epsilon)=0,
+$$
+where $c$ and $R$ are analytic for $\epsilon$ in a fixed neighbourhood of zero. For example, subtract $1$ from the integrand before taking the tail; it has a convergent power series in $e^{-v}$, uniformly for small $\epsilon$. With $r=e^{-v}$ and $\tau=e^{-2t}$,
+$\tau=r e^{-2c(\epsilon)-2R(r,\epsilon)}$ has a nonzero derivative in $r$ at zero. Thus $r/\tau$ is positive and analytic in $(\tau,\epsilon)$.
+
+Use the ordinary spherical height $y=\tanh t$, so $\tau=(1-y)/(1+y)$. The preceding statements prove that $f^2/(1-y^2)$ extends positively and analytically in $\epsilon$ as a smooth scalar at both poles. The same holds for the local regular-gauge connections. The Hermitian metrics on the fixed magnetic lines are therefore analytic in $\epsilon$ in every $C^j$ norm. After extracting their common amplitudes, write the vortex as $\Phi=\sqrt\epsilon\,\widehat\Phi_\epsilon$ and its two roots as $\epsilon^{1/4}R_{\pm,\epsilon}$, with the constant root normalization absorbed in $h_0$. These hatted sections and $R_\pm$ are analytic smooth sections in fixed regular bundle frames. At a pole the vanishing root contains the usual local holomorphic coordinate, while the other root has a positive analytic norm; the factor $r/\tau$ above verifies this assertion directly. The normalized fermion zero sections also vary analytically: their fixed holomorphic bases have analytic positive Gram matrices for these Hermitian metrics and the spin metric. Their normalization cancels the common powers of $\epsilon$. Hence all the current functionals are analytic; integration by parts puts their possible vector derivatives on smooth spinor bilinears.
+
+**The root projector.** Remove the common root amplitude and set
+$A_\epsilon f=((D_{\nabla f}R_{+,\epsilon}),(D_{\nabla f}R_{-,\epsilon}))$ on real mean-zero $H^1(S^2)$. At $\epsilon=0$ the complete normalized Hopf doublet gives $A_0^*A_0=c\Delta_0$, $c>0$. The pointwise gradient coefficient remains uniformly positive for small $\epsilon$ by the smooth convergence just proved. Poincaré's inequality makes $A_\epsilon^*A_\epsilon:H^1/\mathbb R\to(H^1/\mathbb R)^*$ uniformly invertible. Its inverse depends analytically on $\epsilon$ by the bounded-operator inverse formula. Therefore
+$$
+ P_\epsilon=1-A_\epsilon(A_\epsilon^*A_\epsilon)^{-1}A_\epsilon^*
+$$
+is analytic as an operator on the real root $L^2$ space after the smooth changes of density. This proves differentiable control of the full projected root form, beyond its value on the leading Killing modes. The power $\epsilon^{1/4}$ cancels from $P_\epsilon$ exactly.
+
+**Common form domain and complement.** Let $V$ be $H^1$ for the geometric vector and one-form representatives and for the Maxwell/circle scalar profiles, with the preceding coexact restrictions. Solenoidal vectors for the varying area form are identified by
+$\iota_{X_\epsilon}dV_\epsilon=\iota_{X_0}dV_0$; this is multiplication by a positive smooth scalar. The Hodge star on one-forms is conformally invariant on a surface, so the coexact one-form domain is fixed. The resulting mass forms are bounded forms $V\to V^*$ and the kinetic forms are uniformly positive, bounded $L^2$ forms in a neighbourhood of every positive $\theta$.
+
+At $L=0$ the dimensionless mass form $\mathscr H_0$ is the round covariant vector form with zero root, vortex and two-form coupling. Its leading derivative terms are the trace-free Lie derivative of the solenoidal metric vector and the ordinary exterior derivatives of the Maxwell/circle scalars and coexact one-form. They obey an elliptic Gårding estimate on these spaces. Its kernel consists of the rotations with magnetic compensators and the constant vortex and circle connections; a closed coexact one-form on $S^2$ is zero. This kernel is finite dimensional. The Gårding estimate and the compact embedding $H^1\hookrightarrow L^2$ imply coercivity on its $L^2$ orthogonal complement: otherwise a unit form-norm sequence with energy tending to zero would have a strong $L^2$ limit in both the kernel and its orthogonal complement. The Gårding estimate would then force its full form norm to tend to zero. This gives a bounded inverse from the complementary dual form space to the complementary form space. Small coefficient perturbations preserve that inverse uniformly. Thus the eliminated angular complement estimate is established on the whole sourced form domain, rather than at a fixed Galerkin degree.
+
+**Scaled Schur complement.** Canonically normalize the new two-form as in 77.2. Every coefficient of the resulting dimensionless forms is analytic in $\epsilon$, $\gamma$ and the positive parameter $T$, with the root mass coefficient $h_0\sqrt\epsilon$ times an analytic function of $\epsilon$. Under
+$$
+ \epsilon=L^2E,\quad \gamma=L\Gamma,\quad h_0=LH,
+ \quad c_v=C/L^2,\quad a^2=TL^2,
+$$
+these coefficients are analytic in $(L,\theta)$, since
+$h_0\sqrt\epsilon=L^2H\sqrt E$. This supplies an analytic signed extension of the reduced forms; no signed extension of the raw scalar root field is required. The exact photon and its kinetic orthogonal projector vary analytically and have a kinetic norm bounded away from zero, so removing it preserves these properties.
+
+Split the remaining form domain into the round light kernel $\mathcal L$ and its complement $\mathcal Q$. For a bounded physical squared mass $\lambda$, use the pencil $\mathscr H-TL^2\lambda\mathscr K$. Its complementary block has the uniformly invertible limit just established. Its mixed block is $O(L)$ and its light block is $O(L^2)$: the linear $\gamma$ term pairs a two-form profile with the background-flux source, while the light kernel has zero two-form profile; the other new mass coefficients begin at $L^2$. The background metric deformation is $O(\epsilon)$, and each covariant zero-mode residual vanishes at the round background. Hence no linear term appears in the light block. Eliminating $\mathcal Q$ gives
+$$
+ S(L,\theta,\lambda)=L^2\widehat S(L,\theta,\lambda)
+$$
+with $\widehat S$ analytic as a finite matrix. Its value at zero is the leading light pencil printed in 78.1. The two-form elimination leaves the harmonic constant-vortex obstruction of 77.1 and the exact lifted rotations of 77.2. The other leading terms are the root and vortex stiffnesses and the corresponding normalized lepton sources already evaluated above. Thus this limit uses the flux-compensated light vectors.
+
+Simple sourced roots of $\det\widehat S=0$ and their normalized residues depend analytically on $(L,\theta)$. The charged raising sector is treated as one complex polarization; its conjugate has the same pole. Simplicity for the selected neutral poles can be imposed within their reflection sectors, excluding an accidental degeneracy where needed. At zero momentum the photon-free light matrix is positive on the strict interior. The static block inverse has a potentially singular light part $L^{-2}\widehat S^{-1}$, whereas the physical contact includes the prefactor $c_v^{-1}=L^2/C$. The factors cancel. The complementary static exchange has an extra $L^2$ and vanishes continuously. The entire physical contact map and its $\theta$ derivative therefore extend to $L=0$. Pole masses remain positive, so taking their square roots preserves this regularity.
+
+Only continuity in $L$ and joint continuity of the $\theta$ derivative are needed for the parameter-dependent inverse theorem. An all-variable $C^1$ extension is stronger; the analytic form construction above provides it for these sourced sectors. A direct numerical finite inverse would supply neither this neighbourhood theorem nor a rigorous lower bound on the admissible size of $L$. In particular this proof gives no certified error or admissible-$L$ threshold for the numerical $2$ TeV example below.
 
 ## Finite calculation with the photon retained
 
@@ -103,4 +163,4 @@ At $1/L=2$ TeV and $k=6$, the finite charged and neutral pencils give $\epsilon=
 
 With the independently scale-set lattice value $m_N=0.936(25)(22)$ GeV, $H_N=m_N/3=0.312$ GeV gives $\Xi=G_FH_N^2=1.1301\times10^{-6}$. The observed muon and nucleon masses and lifetime give the reference $\Xi_{\rm phys}=1.1425\times10^{-6}$ using $H_N=(m_p+m_n)/6$. The lattice uncertainties alone amount to about seven per cent in the squared scale. Pole measurements calibrate the weak action, and physical quark masses and a hadronic scale-setting input calibrate QCD. The comparison consequently tests an infrared relation under these choices. Equation 83.1 measures how this ratio moves when the geometry is varied. With the additional restriction $\gamma=1$, the four pole inputs suffice to predict both scattering coefficients as well as the muon contact, as reported in 84.3. [Independent nucleon calculation, Table 1](https://arxiv.org/pdf/0906.3599#page=7) · [Physical input convention](issues/19.md) · [Finite solver with the Fermi strength held out](../paper/finite_flux_currents.py)
 
-**Provenance.** Derived by GPT-6.2-Astra max. Experimental values and their conventions are external inputs. Claude Opus 5.5 checked every ledger claim of this file on 20 November 2026 and found no error. Some of these checks took forms or numbers of this file as stated; the ledger `checked_by` rows record what each check covered.
+**Provenance.** Derived by GPT-6.2-Astra max. Experimental values and their conventions are external inputs. Claude Opus 5.5 checked every ledger claim of this file on 20 November 2026 and found no error. Some of these checks took forms or numbers of this file as stated; the ledger `checked_by` rows record what each check covered. GPT-6.1 Sol independently checked the light inverse and supplied the compact-sphere form-domain, projected-root and Schur-complement proof of the finite inverse on the same date.

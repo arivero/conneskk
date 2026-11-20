@@ -47,6 +47,25 @@ $$
 $$
 An overall sign change of both connection variables gives the same form. In two dimensions the trace-free symmetrized-derivative norm is $2\langle X,(\Delta_1-2K)X\rangle$, with $K$ the Gaussian curvature. The background Einstein equation gives $K|X|^2=(Z/2)|\iota_X F|^2+G|D_X\Phi|^2$. Expanding the last two squares therefore recovers the Hodge kinetic term for $X$, the Maxwell gradient and the linearized metric–matter couplings. In particular the longitudinal weak vector is included in the estimate. A zero field preserves the norm of $\Phi$, the magnetic field and the weak conformal structure. At a finite broken member the strictly varying vortex norm on each half of the sphere forces $X$ to be azimuthal. The conformal Killing equation then forces an axial rotation. The remaining spectator tensor and scalar components give ordinary weak gradient norms. A spectator Maxwell component which is a weak one-form has the weak Hodge norm. This proves positivity in all of these sectors. $\square$
 
+**Variations of the vortex action.** For an independent reduction, choose an oriented orthonormal frame on the background with $\delta e_A{}^i=-h_A{}^i/2$. The coefficient of the squared perturbation parameter in the completed internal action is
+$$
+ U_0^{(2)}=\|dS\|^2+2\|C\|^2+2\|M\|^2 ,
+$$
+where
+$$
+ \begin{aligned}
+ C={}&(D_1+iD_2)\varphi-i(a_1+ia_2)\Phi
+      -(h_1{}^j+i h_2{}^j)D_j\Phi/2,\\
+ M={}& e^s(*da-\mathcal B\tau/2+2\mathcal B S)
+          +e^{-s}\mathrm{Re}(\bar\Phi\varphi).
+ \end{aligned}
+$$
+In $M$, the two contributions to the $S$ term are equal by the background magnetic equation. In $C$, an infinitesimal frame rotation multiplies the vanishing background holomorphic derivative. The two omitted integrals are fixed by the line degree and the Euler characteristic.
+
+To recover the null constraints from the covariant action, write $g_{+-}=-1$. The $-i$ Ricci variation after imposing zero trace is $\partial_-(\mathrm{div}\,h_i-u_i)/2$ in the scalar sector. Matter contributes $\partial_-j_i/2$ from the Maxwell stress and the charged derivative. In $\nabla_M(Z F^{M+})+2G\mathrm{Re}[(i\Phi)^* D^+\Phi]=0$ the linear terms, divided by $Z$, are $\partial_-(-v+{\cal G})$. Dividing out the nonzero null Fourier momentum gives the two auxiliary equations above. The gravitational divergence term $-2\|\mathrm{div}\,h-u\|^2$ in four times the static quadratic action fixes the $u^2$ coefficient, and $F_{-+}F^{-+}=-v^2$ fixes the $v^2$ coefficient. Their linear sources are therefore fixed by these equations. Independently, the warped spectator curvature before integrating by parts is $R_g-2e\nabla^2 A-e(e+1)|dA|^2$. Multiplication by the spectator volume and integration by parts in $-R$ gives $-e(e-1)|dA|^2$. The linear density variation is $\mathrm{div}(d\tau-\mathrm{div}\,h+j)$, from the boundary variations of the Einstein, Maxwell and complex kinetic actions. With $eA=-\tau/2$ these terms give $ (1+1/e)\|d\tau\|^2-2\langle d\tau,D^0\rangle$ in four times the action. Substituting the two auxiliary equations completes the scalar mass form displayed in the proof.
+
+For a mixed metric vector the linear horizontal Maxwell strength and charged derivative are $-(dv_0+\iota_XF)$ and $-(D_X\Phi+iv_0\Phi)$ in the spectator direction. Their kinetic coefficients in four times the action are $2Z$ and $4G$. The curvature correction to the metric-vector gradient is $-4K|X|^2$, as follows by integrating the trace-free Lie derivative on the compact surface. Its cancellation against the two background matter norms uses the transverse Einstein equation pointwise. Thus the decomposition also covers weak profiles with nonconstant $K$.
+
 The compact surface, two derivatives, Bogomolny couplings and the flat longitudinal solution enter the identity. Moment-map existence results for gravitating vortices supply the background. The added constraint squares address the Lorentzian quadratic form. [Einstein–Bogomolny solutions on the sphere](https://arxiv.org/abs/1606.07699) · [Vortex profiles and limiting interval](55_gravitating_vortex_cylinder.md)
 
 ## The coloured tower on a broken product
@@ -73,4 +92,4 @@ For an arbitrary weak scalar profile times a projective Killing generator the co
 
 **The added root fields.** On the stationary rooted background the added spatial root, colour-curvature and product terms are sums of squares with zero background value. For time-symmetric initial data their first energy variation and their first contribution to the Hamiltonian constraint vanish. Their constrained second energy variation is nonnegative. This observation extends the absence of a negative *static energy direction on such data* whenever the common Einstein–matter constraints and positive external kinetic prescription apply. The uniform lower bound in Theorem 69.2 uses the covariant kinetic norm. The root fluctuations and the metric shifts in their horizontal derivatives contribute to the physical norm and to the momentum constraint on the rooted family. A bound on those degrees of freedom is needed to transfer the quantitative colour threshold. [Root action](63_vortex_roots_and_diagonal_photon.md) · [Circle-curvature lift](65_colour_wilson_scalar.md)
 
-**Provenance.** Derived by GPT-6.2-Astra max. Claude Opus 5.5 checked every ledger claim of this file on 20 November 2026 and found no error. Some of these checks took forms or numbers of this file as stated; the ledger `checked_by` rows record what each check covered.
+**Provenance.** Derived by GPT-6.2-Astra max. Claude Opus 5.5 checked every ledger claim of this file on 20 November 2026 and found no error. Some of these checks took forms or numbers of this file as stated; the ledger `checked_by` rows record what each check covered. In a separate session on the same date, GPT-6.2 Astra re-derived the internal vortex Hessian and null constraints of Proposition 69.1 from the specified action as detailed above. This is a second calculation by the author model family.

@@ -2,6 +2,8 @@
 
 Use the $A_6$ gauge algebra and the matter charge table of 88 on a seven-dimensional gauge sector. The internal gauge space is a weak two-sphere and one longitudinal coordinate. We fix its flux, identify the charged vector fluctuation that can destabilize this embedding, and vary an adjoint Higgs profile. The observables are a spinor zero mode, its chiral weak vertex, and its mass overlap on a finite interval. The calculation uses a prescribed metric. Incorporating its stress in a compact gravitational vacuum is a separate equation.
 
+For the monopole sphere and its chiral fermion spectrum, a six-dimensional Einstein–Maxwell precedent is the compactification of Randjbar-Daemi, Salam and Strathdee. The adjoint gradient and interval projectors below are extra inputs. [Nucl. Phys. B 214 (1983), 491](https://doi.org/10.1016/0550-3213(83)90247-X)
+
 ## The charged vector and the Bogomolny background
 
 **Proposition 89.1.** Take ordinary Yang–Mills theory with one Hermitian adjoint scalar $\varphi$ and positive energy $\int (|F|^2+|D\varphi|^2)$ on $S^2_r\times\mathbb R_y$. For a root of positive monopole degree $N$, let $q=N/2$. If $\varphi$ is constant with root mass $\mu$, a charged tangential vector has lowest squared mass $\mu^2-q/r^2$ for $N\ge2$. There is instead a Cartan Bogomolny solution

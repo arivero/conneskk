@@ -2890,12 +2890,13 @@ checked_by(vortex_flux_ir_contact, gpt_6_2_astra_max, by_hand).
 addresses(t4, vortex_flux_ir_contact).
 addresses(t18, vortex_flux_ir_contact).
 
-claim(finite_weak_current_inverse, proposition, proved, "Proposition 78.1", "The leading flux-lifted charged and neutral currents admit a positive inverse from the Fermi strength, two poles and two neutrino/electron contacts in the stated open region. A finite member has an independently testable electric normalization and additional singlet-neutrino pole.").
+claim(finite_weak_current_inverse, proposition, proved, "Proposition 78.1", "The leading flux-lifted charged and neutral currents admit a positive inverse from the Fermi strength, two poles and two neutrino/electron contacts in the stated open region. A fixed compact-sphere form domain, analytic normalized profiles and root projection, and a uniformly coercive angular complement give a regular scaled Schur pencil. For simple selected sourced poles this proves a unique nearby positive finite inverse for every sufficiently small circle radius, with an independently testable electric normalization and an additional singlet-neutrino pole. The proof gives no certified radius threshold for the numerical example.").
 source(finite_weak_current_inverse, 'results/78_finite_weak_pole_and_current_match.md', '').
 depends(finite_weak_current_inverse, vortex_flux_ir_contact).
 depends(finite_weak_current_inverse, matched_colour_trajectory).
 depends(finite_weak_current_inverse, vortex_ir_neutral_current).
 attempted_by(finite_weak_current_inverse, gpt_6_2_astra_max).
+attempted_by(finite_weak_current_inverse, gpt_6_1_sol).
 checked_by(finite_weak_current_inverse, gpt_6_2_astra_max, by_hand).
 addresses(t4, finite_weak_current_inverse).
 addresses(t13, finite_weak_current_inverse).
@@ -3051,7 +3052,7 @@ checked_by(root_phase_kinetic, gpt_6_2_astra_max, by_hand).
 addresses(t4, root_phase_kinetic).
 addresses(t13, root_phase_kinetic).
 
-claim(root_phase_charm_test, claim, numerical, "Result 85, finite-current and charmonium calculations", "For the specified compact fit and one light QCD phase, finite phase projection and the supplied susceptibility give F_a about 41 GeV and mass about 139 keV. The connected-charm approximation alone gives a radiative branching ratio of about 3.0e-5. Extra amplitudes require their own matching.").
+claim(root_phase_charm_test, claim, numerical, "Result 85, finite-current and charmonium calculations", "For the specified compact fit and one light QCD phase, finite phase projection and the supplied susceptibility give F_a about 41 GeV and mass about 139 keV. The connected-charm approximation alone gives a radiative branching ratio of about 3.0e-5. This is about 42 times the BESIII invisible limit at its stated efficiency; extra amplitudes require matching. TEXONO excludes the minimal equal-root visible axion, and its thermal history conflicts with standard BBN under the hypotheses of Result 85.").
 source(root_phase_charm_test, 'results/85_root_phase_and_the_qcd_axion.md', 'qcd-scale-and-a-particle-test').
 depends(root_phase_charm_test, root_phase_kinetic).
 depends(root_phase_charm_test, finite_weak_current_inverse).
@@ -3243,14 +3244,14 @@ addresses(t4, dual_tensor_round_poles).
 addresses(t13, dual_tensor_round_poles).
 addresses(t18, dual_tensor_round_poles).
 
-claim(dual_tensor_finite_fit, claim, numerical, "Result 92, finite pole and contact fits", "With both tensor periods related by electric-magnetic normalization and the stated central Born inputs, two finite branches at 1/L=500 GeV have equal fitted light observables and different heavy neutral poles. Holding the muon contact out gives a finite branch at 800 GeV that predicts GF about 1.160934e-5 GeV^-2.").
+claim(dual_tensor_finite_fit, claim, numerical, "Result 92, finite pole and contact fits", "With both tensor periods related by electric-magnetic normalization and the stated central Born inputs, two finite branches at 1/L=500 GeV have equal fitted light observables and different heavy neutral poles. Holding the muon contact out gives a finite branch at 800 GeV which yields GF about 1.160934e-5 GeV^-2, close to the single-doublet tree relation.").
 source(dual_tensor_finite_fit, 'results/92_finite_electric_and_magnetic_tensor_match.md', 'numerical-finite-solutions-and-threshold-placement').
 depends(dual_tensor_finite_fit, dual_tensor_round_poles).
 depends(dual_tensor_finite_fit, finite_weak_current_inverse).
 depends(dual_tensor_finite_fit, finite_electric_matching).
 attempted_by(dual_tensor_finite_fit, gpt_6_2_sol_ultra).
 checked_by(dual_tensor_finite_fit, gpt_6_2_sol_ultra, python).
-referee_pending(dual_tensor_finite_fit).
+checked_by(dual_tensor_finite_fit, gpt_6_1_terra, python).
 addresses(t4, dual_tensor_finite_fit).
 addresses(t13, dual_tensor_finite_fit).
 addresses(t18, dual_tensor_finite_fit).
@@ -3294,7 +3295,7 @@ depends(dual_tensor_finite_neck, dual_tensor_photon_cost).
 depends(dual_tensor_finite_neck, dual_tensor_comoving_pole).
 attempted_by(dual_tensor_finite_neck, gpt_6_2_sol_ultra).
 checked_by(dual_tensor_finite_neck, gpt_6_2_sol_ultra, python).
-referee_pending(dual_tensor_finite_neck).
+checked_by(dual_tensor_finite_neck, gpt_6_1_terra, python).
 addresses(t13, dual_tensor_finite_neck).
 addresses(t14, dual_tensor_finite_neck).
 addresses(t18, dual_tensor_finite_neck).
@@ -3444,14 +3445,14 @@ addresses(t4, hopf_transverse_current_pencil).
 addresses(t11, hopf_transverse_current_pencil).
 addresses(t18, hopf_transverse_current_pencil).
 
-claim(hopf_finite_current_fit, claim, numerical, "Result 97, finite weak inverse", "The specified finite transverse inverse at f_S=5 TeV reproduces the central weak contacts and poles and resolves vortex, locking and five-form sterile poles. Holding muon decay out gives GF about 1.161834e-5 GeV^-2 in the stated pole and width convention, prior to radiative matching.").
+claim(hopf_finite_current_fit, claim, numerical, "Result 97, finite weak inverse", "The specified finite transverse inverse at f_S=5 TeV reproduces the central weak contacts and poles and resolves vortex, locking and five-form sterile poles. Holding muon decay out gives GF about 1.161834e-5 GeV^-2, close to the single-doublet tree relation in the stated pole and width convention, prior to radiative matching.").
 source(hopf_finite_current_fit, 'results/97_hopf_transverse_spectrum_and_current_match.md', 'the-finite-weak-inverse').
 depends(hopf_finite_current_fit, hopf_transverse_current_pencil).
 depends(hopf_finite_current_fit, hopf_locking_weak_charges).
 depends(hopf_finite_current_fit, dual_tensor_finite_fit).
 attempted_by(hopf_finite_current_fit, gpt_6_2_sol_ultra).
 checked_by(hopf_finite_current_fit, gpt_6_2_sol_ultra, python).
-referee_pending(hopf_finite_current_fit).
+checked_by(hopf_finite_current_fit, gpt_6_1_terra, python).
 addresses(t4, hopf_finite_current_fit).
 addresses(t13, hopf_finite_current_fit).
 addresses(t18, hopf_finite_current_fit).
@@ -3478,7 +3479,7 @@ addresses(t11, hopf_colour_octet_instability).
 addresses(t14, hopf_colour_octet_instability).
 addresses(t18, hopf_colour_octet_instability).
 
-claim(hopf_intrinsic_colour_stabilizers, proposition, proved, "Proposition 98.2", "The stated positive intrinsic colour-leaf squares leave the backgrounds and the sourced transverse weak and Killing sectors unchanged. The scalar-derived colour sector has m^2 at least 8/B^2 off homogeneous modes in the frozen weak comparison for 0<c<=1, and for the round coupled weak-singlet comparison with the conformally adjusted action.").
+claim(hopf_intrinsic_colour_stabilizers, proposition, proved, "Proposition 98.2", "The stated positive intrinsic colour-leaf squares leave the backgrounds and the sourced transverse weak and Killing sectors unchanged. The scalar-derived colour sector has m^2 at least 8/B^2 off homogeneous modes in the frozen weak comparison for 0<c<=1, while in the coupled round weak-singlet core with conformally adjusted squares a degree-one weak-scale mode attains 5/B^2; the bound is 8/B^2 for degree at least two.").
 source(hopf_intrinsic_colour_stabilizers, 'results/98_hopf_colour_scalar_stability_and_thresholds.md', 'two-positive-intrinsic-colour-terms').
 depends(hopf_intrinsic_colour_stabilizers, hopf_colour_octet_instability).
 depends(hopf_intrinsic_colour_stabilizers, hopf_transverse_current_pencil).
@@ -4260,9 +4261,13 @@ checked_by(ir_moduli_inverse, claude_opus_5_5, by_hand).
 referee_report('results/83_two_infrared_coordinates_on_the_weak_family.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(root_phase_kinetic, claude_opus_5_5, by_hand).
 checked_by(hopf_locking_weak_charges, claude_opus_5_5, partial("charges and couplings re-derived; the fitted values 7.045 TeV and 4377.59 GeV taken as stated")).
+checked_by(hopf_locking_weak_charges, gpt_6_1_terra, partial("leading fit values recomputed in Python from the existing solver")).
 checked_by(hopf_scalar_windows, claude_opus_5_5, by_hand).
 checked_by(hopf_intrinsic_colour_stabilizers, claude_opus_5_5, partial("assembly and z=3 bounds re-derived; the component potentials taken as stated")).
+checked_by(hopf_intrinsic_colour_stabilizers, gpt_6_2_astra, by_hand). % Different model from gpt_6_2_sol_ultra.
+checked_by(hopf_intrinsic_colour_stabilizers, gpt_6_1_terra, partial("by hand: coupled round degree-one weak-scale mode, co-moving dilatons, kinetic weight, potential and adjusted-square decoupling")).
 checked_by(hopf_local_normal_scalar_towers, claude_opus_5_5, partial("spectra and numbers re-derived; the quadratic forms taken from results/104")).
+checked_by(hopf_local_normal_scalar_towers, gpt_6_2_astra, by_hand). % Different model from gpt_6_2_sol_ultra.
 referee_report('results/104_hopf_local_scalar_constraints_and_sextet.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(hopf_compact_spectator_threshold, claude_opus_5_5, by_hand).
 checked_by(hopf_locked_chiral_anomaly_spectrum, claude_opus_5_5, by_hand).
@@ -4284,8 +4289,11 @@ referee_report('results/105_hopf_bulk_tensor_and_magnetic_colour_pole.md', 'hist
 checked_by(hopf_bulk_tensor_local_transverse_form, claude_opus_5_5, by_hand).
 checked_by(hopf_bulk_tensor_aligned_transverse_gap, claude_opus_5_5, by_hand).
 checked_by(hopf_bulk_tensor_independent_magnetic_pole, claude_opus_5_5, partial("trial and scaling re-derived; the crossing scale B^-1=1.34 TeV not recomputed")).
+checked_by(hopf_bulk_tensor_independent_magnetic_pole, gpt_6_1_terra, partial("crossing scale recomputed from the printed trial bound in Python")).
 checked_by(hopf_isotropic_tensor_sharp_soft_mass, claude_opus_5_5, partial("minimization and scaling re-derived; C_soft about 6598 not recomputed")).
+checked_by(hopf_isotropic_tensor_sharp_soft_mass, gpt_6_1_terra, partial("variational number recomputed in Python from the stated quadratic form")).
 checked_by(hopf_local_vertical_orientation_bound, claude_opus_5_5, partial("orientation and spectral bound re-derived; the quadratic forms taken from results/104")).
+checked_by(hopf_local_vertical_orientation_bound, gpt_6_2_astra, by_hand). % Different model from gpt_6_2_sol_ultra.
 checked_by(hopf_colour_octet_instability, claude_opus_5_5, by_hand).
 checked_by(projective_flux_octet, claude_opus_5_5, by_hand).
 checked_by(background_weak_multiplet_threshold, claude_opus_5_5, by_hand).
@@ -4302,18 +4310,32 @@ checked_by(wrapped_m5_boundary_charge, claude_opus_5_5, by_hand).
 checked_by(k3_hypercharge_period_bound, claude_opus_5_5, by_hand).
 checked_by(tensor_sphere_pushforward, claude_opus_5_5, by_hand).
 checked_by(projective_vortex_spectator_descent, claude_opus_5_5, partial("factorization re-derived; the exact species sum taken as stated")).
+checked_by(vortex_neutral_spectator_tensor, gpt_6_1_terra, partial("six-dimensional integer spectator species sum recomputed in Python")).
+checked_by(projective_vortex_spectator_descent, gpt_6_1_terra, by_hand).
 checked_by(rooted_colour_vectors, claude_opus_5_5, by_hand).
 checked_by(hopf_thomson_auxiliary_calibration, claude_opus_5_5, by_hand).
 checked_by(hopf_comoving_hadronic_benchmark, claude_opus_5_5, partial("homogeneity argument re-derived; the table entries from the fit of 97 not recomputed")).
+checked_by(hopf_comoving_hadronic_benchmark, gpt_6_1_terra, python("homogeneity checked; current table from existing fit and trajectory code and boson column from result 99 minimum")).
 checked_by(hopf_mirror_particle_threshold, claude_opus_5_5, by_hand).
 checked_by(vortex_constraint_squares, claude_opus_5_5, partial("Bogomolny and constraint completions re-derived; the quadratic forms taken from results/69, their reduction from the action not re-derived")).
+checked_by(vortex_constraint_squares, gpt_6_2_astra, by_hand). % Fresh same-model derivation; not an independent model.
+checked_by(vortex_constraint_squares, gpt_6_1_terra, partial("linearized completed vortex squares and displayed scalar-square algebra checked; full null constraint reduction not independently established")).
+checked_by(vortex_constraint_squares, gpt_6_1_sol, partial("independent action-level derivation of null Einstein and Maxwell constraints, auxiliary coefficients, density boundary terms, spectator warp and nonround vector form; detailed hand check in paper/NUMERICAL_CHECKS.md; spectral gap consequences not separately re-audited")).
 checked_by(rooted_colour_gap, claude_opus_5_5, partial("cancellation and fibre positivity re-derived given equal external and projective Z_H; the quadratic forms taken from results/71")).
+checked_by(rooted_colour_gap, gpt_6_2_astra, by_hand). % Fresh same-model derivation; not an independent model.
+checked_by(rooted_colour_gap, gpt_6_1_terra, partial("horizontal variation and cancellation of the displayed mixed colour terms checked algebraically; full constrained reduction not independently established")).
+checked_by(rooted_colour_gap, gpt_6_1_sol, partial("independent action-level horizontal Hessian, null current sources and equal-coefficient cancellation, range-closure comparison and residual coordinate constraints established; detailed hand check in paper/NUMERICAL_CHECKS.md; quantitative projection bound not separately re-audited")).
 referee_report('results/71_colour_gap_with_diagonal_roots.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(round_flux_product_gap, claude_opus_5_5, partial("mixed block and leading minors re-derived; the fourth minors, the t=2 determinants and the reduction to the mass form taken from results/68")).
+checked_by(round_flux_product_gap, gpt_6_2_astra, by_hand). % Fresh same-model derivation; not an independent model.
+checked_by(round_flux_product_gap, gpt_6_1_terra, partial("fourth minors and exceptional determinants independently checked with Python/SymPy; action reduction not independently rederived")).
+checked_by(round_flux_product_gap, gpt_6_1_sol, partial("independent action-level null trace, divergence and Maxwell constraints, transverse kinetic norm, mixed operator and weighted adjoints established; detailed hand check in paper/NUMERICAL_CHECKS.md; spectral determinants not rerun")).
 checked_by(projective_kahler_octet, claude_opus_5_5, by_hand).
 checked_by(projective_kahler_moduli, claude_opus_5_5, by_hand).
 checked_by(vortex_root_domain, claude_opus_5_5, by_hand).
 checked_by(finite_weak_current_inverse, claude_opus_5_5, partial("current algebra and numbers re-derived; the remaining entries and the inverse-function step taken as stated")).
+checked_by(finite_weak_current_inverse, gpt_6_1_terra, partial("explicit light inverse and conditional parameter-dependent IFT; full operator C1 extension and uniform complement estimate remain assumptions")).
+checked_by(finite_weak_current_inverse, gpt_6_1_sol, partial("independent light inverse and compact-sphere regularity proof: analytic normalized profiles at regular poles, elliptic root projector, common form domain and uniform complement, scaled Schur factor and cancellation of contact singularity; full finite fit not recomputed")).
 referee_report('results/78_finite_weak_pole_and_current_match.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(hadron_root_slope, claude_fable_5_2, by_hand).  % second referee, 20 Nov 2026, from Table 1 of arXiv:2007.03319; the last digits of the program output lie inside the table rounding
 referee_report('results/82_opposite_root_response_of_the_nucleon.md', 'historical/reviews/2026-11-20_fable_second_referee.md').
@@ -4327,61 +4349,19 @@ checked_by(hopf_local_exact_shift_blocks, claude_opus_5_5, by_hand).
 checked_by(hopf_local_transverse_vector_minimum, claude_opus_5_5, by_hand).
 referee_report('results/103_hopf_local_connection_transverse_shell.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(hopf_local_scalar_constraint_positivity, claude_opus_5_5, partial("shift identity and bounds re-derived; the quadratic forms taken from results/104, their reduction from the action not re-derived")).
+checked_by(hopf_local_scalar_constraint_positivity, gpt_6_2_astra, by_hand). % Different model from gpt_6_2_sol_ultra.
 checked_by(hopf_local_calibrated_coloured_gap, claude_opus_5_5, partial("block bounds and numbers re-derived; the quadratic forms taken from results/104")).
+checked_by(hopf_local_calibrated_coloured_gap, gpt_6_2_astra, by_hand). % Different model from gpt_6_2_sol_ultra.
 checked_by(hopf_local_full_boson_ordering, claude_opus_5_5, partial("threshold and ordering re-derived; the quadratic forms taken from results/104 and the SciPy example not recomputed")).
+checked_by(hopf_local_full_boson_ordering, gpt_6_2_astra, by_hand). % Different model from gpt_6_2_sol_ultra.
 checked_by(hopf_bulk_tensor_anisotropic_vector_order, claude_opus_5_5, by_hand).
 checked_by(hopf_bulk_tensor_scalar_gauss_gap, claude_opus_5_5, by_hand).
 checked_by(hopf_global_unit_flux_descent, claude_opus_5_5, by_hand).
 checked_by(hopf_local_coexact_shell_closure, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- claims awaiting a pending claim (20 Nov 2026, second referee H2)
-%% Each claim below was checked, and rests on one of the numerical fits still referee pending. Listed by pending_dependent/2; the tests keep the two in step.
-awaits_pending(background_weak_multiplet_threshold).
-awaits_pending(hopf_bulk_tensor_aligned_transverse_gap).
-awaits_pending(hopf_bulk_tensor_anisotropic_vector_order).
-awaits_pending(hopf_bulk_tensor_independent_magnetic_pole).
-awaits_pending(hopf_bulk_tensor_local_transverse_form).
-awaits_pending(hopf_bulk_tensor_scalar_gauss_gap).
-awaits_pending(hopf_bulk_two_form_pullback).
-awaits_pending(hopf_comoving_charged_limit).
-awaits_pending(hopf_comoving_hadronic_benchmark).
-awaits_pending(hopf_compact_spectator_threshold).
-awaits_pending(hopf_full_auxiliary_coloured_minimum).
-awaits_pending(hopf_full_maxwell_coexact_block).
-awaits_pending(hopf_full_maxwell_matched_threshold).
-awaits_pending(hopf_full_maxwell_round_scalar).
-awaits_pending(hopf_global_locked_group_and_spin).
-awaits_pending(hopf_global_unit_flux_descent).
-awaits_pending(hopf_integral_euler_flux_domain).
-awaits_pending(hopf_isotropic_tensor_sharp_soft_mass).
-awaits_pending(hopf_local_calibrated_coloured_gap).
-awaits_pending(hopf_local_coexact_shell_closure).
-awaits_pending(hopf_local_exact_shift_blocks).
-awaits_pending(hopf_local_full_boson_ordering).
-awaits_pending(hopf_local_normal_scalar_towers).
-awaits_pending(hopf_local_scalar_constraint_positivity).
-awaits_pending(hopf_local_transverse_vector_minimum).
-awaits_pending(hopf_local_vertical_orientation_bound).
-awaits_pending(hopf_local_volume_tensor_rayleigh_test).
-awaits_pending(hopf_locked_chiral_anomaly_spectrum).
-awaits_pending(hopf_mirror_particle_threshold).
-awaits_pending(hopf_nonround_boson_crossing).
-awaits_pending(hopf_projected_coloured_threshold).
-awaits_pending(hopf_projected_nonround_boson).
-awaits_pending(hopf_radial_tower_kinetic_matching_inputs).
-awaits_pending(hopf_scalar_windows).
-awaits_pending(hopf_sextet_colour_running_threshold).
-awaits_pending(hopf_sextet_euclidean_photon_subtraction).
-awaits_pending(hopf_soft_tensor_pair_current_benchmark).
-awaits_pending(hopf_soft_tensor_pauli_ambiguity).
-awaits_pending(hopf_soft_tensor_ward_and_covariant_term).
-awaits_pending(hopf_thomson_auxiliary_calibration).
-awaits_pending(hopf_uniform_light_mass_inverse).
-awaits_pending(local_tensor_mixing_comparison).
-awaits_pending(positive_proca_current_comparison).
-awaits_pending(quotient_tensor_colour_gap).
-awaits_pending(quotient_tensor_free_fermion_shells).
-awaits_pending(spectator_photon_subtraction_bound).
-awaits_pending(thomson_radius_matching).
+%% The pending sets may be empty. Dynamic declarations keep the propagation
+%% tests meaningful as facts are added or removed.
+:- dynamic referee_pending/1, awaits_pending/1.
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
@@ -4390,6 +4370,10 @@ test(dependencies_resolve) :- forall(depends(_, D), (D = hyp(H) -> hypothesis(H,
 test(no_circular_dependency) :- \+ rests_on(C, C).
 test(pending_dependents_are_listed) :- forall(pending_dependent(C, _), awaits_pending(C)).
 test(listed_dependents_still_wait) :- forall(awaits_pending(C), pending_dependent(C, _)).
+test(pending_dependency_propagates,
+     [setup(assertz(user:referee_pending(dual_tensor_finite_fit))),
+      cleanup(retract(user:referee_pending(dual_tensor_finite_fit)))]) :-
+    pending_dependent(dual_tensor_finite_neck, dual_tensor_finite_fit).
 test(refutations_resolve) :- forall(refuted_by(C, B), (claim(C, _, refuted, _, _), claim(B, counterexample, _, _, _))).
 test(amendments_resolve) :- forall(claim_amended(C, B), (claim(C, _, _, _, _), claim(B, _, _, _, _))).
 test(prior_work_resolves) :- forall(prior_work(C, V, _), (claim(C, _, _, _, _), memberchk(V, [known, partial, not_found]))).

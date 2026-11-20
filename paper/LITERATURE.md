@@ -370,3 +370,17 @@ Read by Claude Opus 5.5 from PDFs supplied by the user (Banks-Casher, Dashen) an
 | G. Odd mod-two index on S^5 | KNOWN (topology and footnote attribution) | García-Etxebarria-Montero 2019 §3.1; Witten 1982; Wang-Wen-Witten 2019 |
 | H. Anomaly inflow | KNOWN (background) | Callan-Harvey 1985; Naculich 1988; Arkani-Hamed-Cohen-Georgi 2001 |
 | I. Current framework | reference list | Connes 2006; Barrett 2007; CCM 2007; Chamseddine-Connes 2007, 2008; CCvS 2013 (two papers); Devastato-Lizzi-Martinetti 2014; Krajewski 1998; Paschke-Sitarz 1998; van Suijlekom 2015 |
+
+## Comparisons for results 59–108
+
+The following groups distinguish known ingredients from the combinations derived in these results. No systematic priority search has been made for those combinations. The references in each result give the working equations and conventions.
+
+| Results | Established comparison | Contribution and assumptions in this project |
+|---|---|---|
+| 59–67 | Fourier towers on a circle, projective harmonics, vortex equations and Wilson-line potentials | Coupled radius scaling, charged caps, root and photon normalization and neck overlaps on the specified fibration. [Vortex backgrounds](https://arxiv.org/abs/1510.03810) · [Wilson mass](https://arxiv.org/pdf/0812.3129#page=11) |
+| 68–74 | Harmonic reduction, constraint projection, monopole zero modes | Round and vortex colour gaps and physical current projections depend on the action, equal horizontal coefficients in 71 and chosen matter domains. [Einstein–Bogomolny equations](https://arxiv.org/abs/1606.07699) · [Standard Laplace operator](https://arxiv.org/abs/1708.04775) |
+| 75–83 | Standard Born weak-current relations, oblique parameters, thresholds and lattice nucleon sigma terms | Fits and scale responses on a chosen polar geometry, with the electromagnetic and hadronic subtraction specified separately. [Qweak](https://doi.org/10.1038/s41586-018-0096-0) · [Nucleon matrix elements](https://arxiv.org/abs/2007.03319) |
+| 84–91 | Flux periods, monopole compactification, wrapped-brane charge and anomaly descent | Spin and charge tests on the selected products, chiral interval and spectator content. [Monopole sphere](https://doi.org/10.1016/0550-3213(83)90247-X) · [Betti vector](https://arxiv.org/abs/1004.0413) |
+| 92–97 | Electric/magnetic tensor normalization and spectral decomposition of currents | Python fits of finite poles and residues with fixed Born inputs. The six-dimensional tensor terms and Hopf lift are stipulated. [Tensor duality](https://arxiv.org/abs/hep-th/9601036) · [Circle spin structures](https://arxiv.org/abs/math/9812116) |
+| 98–104 | Flux-supported product spaces can have inhomogeneous shape instabilities | Octet instability, stabilizing operators and thresholds for frozen or coupled sectors. [Bousso, DeWolfe and Myers](https://arxiv.org/abs/hep-th/0205080) · [Brown and Dahlen](https://arxiv.org/abs/1310.6360) |
+| 105–108 | Tensor kinetic terms, variational eigenvalue bounds and topological anomaly cancellation | A light magnetic pole and a restored ordering for different kinetic choices, with global descent on specified bundles. [Six-dimensional Green–Schwarz conditions](https://arxiv.org/abs/1808.01334) · [Fibre integration](https://arxiv.org/abs/1303.6457) |

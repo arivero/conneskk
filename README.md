@@ -2,6 +2,10 @@
 
 The deep index of developments is [INDEX.md](INDEX.md). The machine-readable ledger of claims, dependencies, checks and contradictions is [ledger.pl](ledger.pl).
 
+## Results and review status
+
+The project combines established compactification, index and effective-field-theory calculations with explicit choices of action, matter domain and matching inputs. The resulting spectra, bounds and fits apply to those choices. Priority for the new combinations in results 59–108 remains undetermined. A ledger grade of `proved` describes the mathematical claim; a separate `checked_by` row identifies who examined it and how. Many claims have one AI referee beyond the author. A partial check accepts specified inputs, and a Python rerun checks numerical reproducibility. No human peer review is recorded. [Literature record](paper/LITERATURE.md) · [Ledger](ledger.pl) · [Fit checks](paper/NUMERICAL_CHECKS.md)
+
 ## Querying the ledger
 
 SWI-Prolog 9.2.9 (`swipl`; here a user-local install in `~/.local/opt/swipl`).
@@ -46,7 +50,7 @@ The graduate summer lectures bring the main calculations together in eight lectu
 
 ## Removed sources
 
-The folder holds text only, apart from the built PDFs in [docs/](docs/index.html), which GitHub Pages serves (`make docs` in `paper/`, run at milestones). Binaries, code and duplicated developments were removed after their content was written out (details and recovery commits in [historical/DUPLICATES.md](historical/DUPLICATES.md)):
+The live tree includes the Python spectrum and fit programs, website and document build scripts, and the PDFs served from [docs/](docs/index.html). The following items from the original corpus were retired after their content was written out (details and recovery commits in [historical/DUPLICATES.md](historical/DUPLICATES.md)):
 
 - zips: unpacked; zip A tree in commit 54445a4, zip B tree in `historical/corpus/`;
 - chat PDFs: `historical/transcripts/`, checked against the PDFs (see the header of each transcript);
