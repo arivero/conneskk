@@ -2382,7 +2382,6 @@ depends(two_endpoint_trace_matching, two_endpoint_current).
 depends(two_endpoint_trace_matching, l14_nogo_collapse).
 attempted_by(two_endpoint_trace_matching, gpt_6_2_astra_max).
 checked_by(two_endpoint_trace_matching, gpt_6_2_astra_max, by_hand).
-referee_pending(two_endpoint_trace_matching).
 addresses(t13, two_endpoint_trace_matching).
 
 claim(m111_membrane_charge, proposition, proved, "M-theory endpoint paper, Betti vector and wrapped charge", "With an elementary electric M2 charge and leading Freund-Rubin flux normalization, the inverse squared Betti coupling on M111 is sqrt(N)/(36 sqrt(3) pi). A smooth representative of the primitive two-cycle exists and the classical mass of a unit-charge wrapped membrane times the AdS radius is at least 8 sqrt(N/3).").
@@ -4324,6 +4323,7 @@ checked_by(dual_tensor_hadronic_resolvent, claude_opus_5_5, by_hand).
 referee_report('results/93_tensor_photon_and_the_five_dimensional_pole.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(hopf_comoving_charged_limit, claude_opus_5_5, by_hand).
 checked_by(two_endpoint_upper_matter, claude_opus_5_5, by_hand).
+checked_by(two_endpoint_trace_matching, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
