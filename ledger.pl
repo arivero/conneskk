@@ -3915,7 +3915,6 @@ depends(hopf_global_unit_flux_descent, hopf_bulk_two_form_pullback).
 depends(hopf_global_unit_flux_descent, spectator_global_bordism).
 attempted_by(hopf_global_unit_flux_descent, gpt_6_2_sol_ultra).
 checked_by(hopf_global_unit_flux_descent, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_global_unit_flux_descent).
 addresses(t4, hopf_global_unit_flux_descent).
 addresses(t11, hopf_global_unit_flux_descent).
 addresses(t17, hopf_global_unit_flux_descent).
@@ -4327,6 +4326,7 @@ checked_by(hopf_local_calibrated_coloured_gap, claude_opus_5_5, by_hand).
 checked_by(hopf_local_full_boson_ordering, claude_opus_5_5, by_hand).
 checked_by(hopf_bulk_tensor_anisotropic_vector_order, claude_opus_5_5, by_hand).
 checked_by(hopf_bulk_tensor_scalar_gauss_gap, claude_opus_5_5, by_hand).
+checked_by(hopf_global_unit_flux_descent, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
