@@ -2707,7 +2707,6 @@ depends(vortex_constraint_squares, shared_polar_solution).
 depends(vortex_constraint_squares, round_flux_product_gap).
 attempted_by(vortex_constraint_squares, gpt_6_2_astra_max).
 checked_by(vortex_constraint_squares, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_constraint_squares).
 addresses(t13, vortex_constraint_squares).
 addresses(t18, vortex_constraint_squares).
 
@@ -4324,6 +4323,7 @@ checked_by(rooted_colour_vectors, claude_opus_5_5, by_hand).
 checked_by(hopf_thomson_auxiliary_calibration, claude_opus_5_5, by_hand).
 checked_by(hopf_comoving_hadronic_benchmark, claude_opus_5_5, by_hand).
 checked_by(hopf_mirror_particle_threshold, claude_opus_5_5, by_hand).
+checked_by(vortex_constraint_squares, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
