@@ -2564,7 +2564,6 @@ depends(vortex_root_lower_current, vortex_root_domain).
 depends(vortex_root_lower_current, vortex_root_upper_current).
 attempted_by(vortex_root_lower_current, gpt_6_2_astra_max).
 checked_by(vortex_root_lower_current, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_root_lower_current).
 addresses(t13, vortex_root_lower_current).
 addresses(t18, vortex_root_lower_current).
 
@@ -4319,6 +4318,7 @@ checked_by(wrapped_string_phase_potential, claude_opus_5_5, by_hand).
 referee_report('results/86_wrapped_string_and_the_two_weak_roots.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(hidden_mirror_mass_map, claude_opus_5_5, by_hand).
 checked_by(local_tensor_mixing_comparison, claude_opus_5_5, by_hand).
+checked_by(vortex_root_lower_current, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
