@@ -2937,7 +2937,6 @@ depends(mirror_scalar_gluons, vortex_mirror_anomalies).
 depends(mirror_scalar_gluons, finite_weak_current_inverse).
 attempted_by(mirror_scalar_gluons, gpt_6_2_astra_max).
 checked_by(mirror_scalar_gluons, gpt_6_2_astra_max, by_hand).
-referee_pending(mirror_scalar_gluons).
 addresses(t12, mirror_scalar_gluons).
 addresses(t18, mirror_scalar_gluons).
 
@@ -4318,6 +4317,7 @@ checked_by(spectator_photon_subtraction_bound, claude_opus_5_5, by_hand).
 checked_by(colour_wilson_trial, claude_opus_5_5, by_hand).
 checked_by(vortex_flux_axion, claude_opus_5_5, by_hand).
 checked_by(mirror_custodial_bound, claude_opus_5_5, by_hand).
+checked_by(mirror_scalar_gluons, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
