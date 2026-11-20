@@ -3260,7 +3260,6 @@ depends(dual_tensor_photon_cost, shared_circle_density).
 depends(dual_tensor_photon_cost, matched_colour_trajectory).
 attempted_by(dual_tensor_photon_cost, gpt_6_2_sol_ultra).
 checked_by(dual_tensor_photon_cost, gpt_6_2_sol_ultra, by_hand).
-referee_pending(dual_tensor_photon_cost).
 addresses(t4, dual_tensor_photon_cost).
 addresses(t13, dual_tensor_photon_cost).
 addresses(t18, dual_tensor_photon_cost).
@@ -4326,6 +4325,7 @@ checked_by(finite_weak_current_inverse, claude_opus_5_5, by_hand).
 referee_report('results/78_finite_weak_pole_and_current_match.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 referee_pending(hadron_root_slope).
 checked_by(ade_interval_yukawa, claude_opus_5_5, by_hand).
+checked_by(dual_tensor_photon_cost, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
