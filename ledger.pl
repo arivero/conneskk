@@ -2585,7 +2585,6 @@ source(projective_kahler_octet, 'results/64_projective_flux_and_colour_stability
 depends(projective_kahler_octet, projective_flux_octet).
 attempted_by(projective_kahler_octet, gpt_6_2_astra_max).
 checked_by(projective_kahler_octet, gpt_6_2_astra_max, by_hand).
-referee_pending(projective_kahler_octet).
 addresses(t13, projective_kahler_octet).
 addresses(t18, projective_kahler_octet).
 
@@ -2594,7 +2593,6 @@ source(projective_kahler_moduli, 'results/64_projective_flux_and_colour_stabilit
 depends(projective_kahler_moduli, projective_kahler_octet).
 attempted_by(projective_kahler_moduli, gpt_6_2_astra_max).
 checked_by(projective_kahler_moduli, gpt_6_2_astra_max, by_hand).
-referee_pending(projective_kahler_moduli).
 addresses(t13, projective_kahler_moduli).
 addresses(t18, projective_kahler_moduli).
 
@@ -4325,6 +4323,8 @@ checked_by(vortex_constraint_squares, claude_opus_5_5, by_hand).
 checked_by(rooted_colour_gap, claude_opus_5_5, by_hand).
 referee_report('results/71_colour_gap_with_diagonal_roots.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(round_flux_product_gap, claude_opus_5_5, by_hand).
+checked_by(projective_kahler_octet, claude_opus_5_5, by_hand).
+checked_by(projective_kahler_moduli, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
