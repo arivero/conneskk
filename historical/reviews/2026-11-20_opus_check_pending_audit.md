@@ -248,7 +248,7 @@ Also verified, pending flag kept: `hopf_local_coexact_shell_closure` (103.1). Th
 
 **Audit closed at 01:58, 20 Nov 2026.** Of the 168 claims pending at the start, 164 are checked by hand and none was found wrong. The four still pending are numerical fits or examples whose content is the output of a computation: `dual_tensor_finite_fit`, `dual_tensor_finite_neck`, `hopf_finite_current_fit` and `hadron_root_slope`. They need an independent rerun of the stated code.
 
-## Regrade after the second referee (20 November 2026, 08:00)
+## Regrade after the second referee (20 November 2026, 19:35)
 
 The Claude Fable 5.2 second referee (`2026-11-20_fable_second_referee.md`) re-derived 24 claims of this audit and found all correct. It also found that several rows marked "checked in full" above took forms or numbers from the results files as stated. Those rows are consistency checks. The ledger now grades fifteen of them `partial(Description)`, each naming what was taken as stated:
 - 94.4, 98.2, 105.4, 107.1, 90, 100 (benchmark), 68.1 and 78.1, because of the items noted in their rows;
