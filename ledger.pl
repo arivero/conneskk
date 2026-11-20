@@ -2679,7 +2679,6 @@ depends(round_flux_product_gap, projective_kahler_moduli).
 depends(round_flux_product_gap, projective_kahler_octet).
 attempted_by(round_flux_product_gap, gpt_6_2_astra_max).
 checked_by(round_flux_product_gap, gpt_6_2_astra_max, by_hand).
-referee_pending(round_flux_product_gap).
 addresses(t13, round_flux_product_gap).
 addresses(t18, round_flux_product_gap).
 
@@ -4325,6 +4324,7 @@ checked_by(hopf_mirror_particle_threshold, claude_opus_5_5, by_hand).
 checked_by(vortex_constraint_squares, claude_opus_5_5, by_hand).
 checked_by(rooted_colour_gap, claude_opus_5_5, by_hand).
 referee_report('results/71_colour_gap_with_diagonal_roots.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(round_flux_product_gap, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
