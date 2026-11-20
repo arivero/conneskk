@@ -2793,7 +2793,6 @@ depends(rooted_current_projection, vortex_root_lower_current).
 depends(rooted_current_projection, shared_neutral_poles).
 attempted_by(rooted_current_projection, gpt_6_2_astra_max).
 checked_by(rooted_current_projection, gpt_6_2_astra_max, by_hand).
-referee_pending(rooted_current_projection).
 addresses(t4, rooted_current_projection).
 addresses(t18, rooted_current_projection).
 
@@ -2851,7 +2850,6 @@ depends(charged_vortex_deformations, vortex_constraint_squares).
 depends(charged_vortex_deformations, rooted_colour_gap).
 attempted_by(charged_vortex_deformations, gpt_6_2_astra_max).
 checked_by(charged_vortex_deformations, gpt_6_2_astra_max, by_hand).
-referee_pending(charged_vortex_deformations).
 addresses(t13, charged_vortex_deformations).
 addresses(t18, charged_vortex_deformations).
 
@@ -4321,6 +4319,8 @@ checked_by(hopf_soft_tensor_ward_and_covariant_term, claude_opus_5_5, by_hand).
 checked_by(hopf_soft_tensor_pauli_ambiguity, claude_opus_5_5, by_hand).
 checked_by(root_wilson_operator, claude_opus_5_5, by_hand).
 checked_by(quadratic_ir_continuum, claude_opus_5_5, by_hand).
+checked_by(charged_vortex_deformations, claude_opus_5_5, by_hand).
+checked_by(rooted_current_projection, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
