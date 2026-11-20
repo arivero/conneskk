@@ -2328,7 +2328,6 @@ source(two_endpoint_upper_matter, 'paper/two_endpoint_limits.tex', '').
 depends(two_endpoint_upper_matter, gh1_winding_family).
 attempted_by(two_endpoint_upper_matter, gpt_6_2_astra_max).
 checked_by(two_endpoint_upper_matter, gpt_6_2_astra_max, by_hand).
-referee_pending(two_endpoint_upper_matter).
 addresses(t18, two_endpoint_upper_matter).
 
 claim(two_endpoint_flavour_wall, theorem, proved, "Two-endpoint paper, three light families", "Among four complete flavour channels, opposite outer reflections on one complex flavour line give it half-integral frequencies and gap pi/(2d). The three orthogonal channels are periodic and give three complete families below the remaining gaps, for block-preserving Yukawa operators.").
@@ -4324,6 +4323,7 @@ checked_by(dual_tensor_comoving_pole, claude_opus_5_5, by_hand).
 checked_by(dual_tensor_hadronic_resolvent, claude_opus_5_5, by_hand).
 referee_report('results/93_tensor_photon_and_the_five_dimensional_pole.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(hopf_comoving_charged_limit, claude_opus_5_5, by_hand).
+checked_by(two_endpoint_upper_matter, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
