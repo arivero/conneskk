@@ -2841,7 +2841,6 @@ source(quadratic_ir_continuum, 'results/75_infrared_currents_and_continuum_limit
 depends(quadratic_ir_continuum, rooted_colour_gap).
 attempted_by(quadratic_ir_continuum, gpt_6_2_astra_max).
 checked_by(quadratic_ir_continuum, gpt_6_2_astra_max, by_hand).
-referee_pending(quadratic_ir_continuum).
 addresses(t4, quadratic_ir_continuum).
 addresses(t14, quadratic_ir_continuum).
 addresses(t18, quadratic_ir_continuum).
@@ -4321,6 +4320,7 @@ checked_by(hopf_radial_tower_kinetic_matching_inputs, claude_opus_5_5, by_hand).
 checked_by(hopf_soft_tensor_ward_and_covariant_term, claude_opus_5_5, by_hand).
 checked_by(hopf_soft_tensor_pauli_ambiguity, claude_opus_5_5, by_hand).
 checked_by(root_wilson_operator, claude_opus_5_5, by_hand).
+checked_by(quadratic_ir_continuum, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
