@@ -2955,7 +2955,6 @@ depends(hidden_mirror_mass_map, vortex_axion_four_anomaly).
 depends(hidden_mirror_mass_map, mirror_scalar_gluons).
 attempted_by(hidden_mirror_mass_map, gpt_6_2_astra_max).
 checked_by(hidden_mirror_mass_map, gpt_6_2_astra_max, by_hand).
-referee_pending(hidden_mirror_mass_map).
 addresses(t2, hidden_mirror_mass_map).
 addresses(t12, hidden_mirror_mass_map).
 addresses(t18, hidden_mirror_mass_map).
@@ -4319,6 +4318,7 @@ checked_by(mirror_scalar_gluons, claude_opus_5_5, by_hand).
 checked_by(wrapped_string_resultant, claude_opus_5_5, by_hand).
 checked_by(wrapped_string_phase_potential, claude_opus_5_5, by_hand).
 referee_report('results/86_wrapped_string_and_the_two_weak_roots.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(hidden_mirror_mass_map, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
