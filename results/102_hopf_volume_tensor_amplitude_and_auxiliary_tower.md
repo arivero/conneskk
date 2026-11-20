@@ -74,4 +74,4 @@ $$
 $$
 The auxiliary phase can only couple to the parallel part of the action on $M_0$. A scalar tensor derivative along the four-momentum has no transverse component. Thus the exhibited perpendicular entry tests the local coupling directly; the old projected $j=2$ eigenvector with this metric profile no longer has its old quadratic energy. Determining the new first eigenvalue calls for the coupled local-connection operator, since this calculation fixes a single Rayleigh direction. $\square$
 
-**Provenance.** Polynomial potential, coupled Maxwell completion and local transverse comparison by gpt-6.2-sol ultra with the tensor and fermion research agents. Independent scientific review is pending.
+**Provenance.** Polynomial potential, coupled Maxwell completion and local transverse comparison by gpt-6.2-sol ultra with the tensor and fermion research agents. Claude Opus 5.5 checked every ledger claim of this file by hand on 20 November 2026 and found no error (ledger `checked_by` rows). The claims of this file that rest on the numerical fits still referee pending (results 92, 93 and 97) hold given those fits (ledger `awaits_pending` rows).

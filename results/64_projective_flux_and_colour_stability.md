@@ -57,4 +57,4 @@ $$
 $$
 Their determinant is proportional to $x[7cx^2+(34c+56)x+32c+168]$. Both nonzero roots are real and negative for $c>0$, and $x=0$ gives $m^2=\nu$. Restoring the positive weak Hessian cannot lower the eigenvalues by the variational principle. At the nonround member, variations of the weak profiles can mix with these fields. This computation does not assign them the round gap. $\square$
 
-**Provenance.** Derived by GPT-6.2-Astra max. Independent checking of the fluctuation calculation is pending.
+**Provenance.** Derived by GPT-6.2-Astra max. Claude Opus 5.5 checked every ledger claim of this file by hand on 20 November 2026 and found no error (ledger `checked_by` rows).

@@ -247,3 +247,15 @@ Also verified, pending flag kept: `hopf_local_coexact_shell_closure` (103.1). Th
 | `hopf_local_coexact_shell_closure` (103.1), now checked in full | results/103 | Octet and sextet inputs, by hand in complex coordinates, with $\nabla z=2\partial_{\bar z}$, $J=-i$ on $(0,1)$, $T=iz\partial_z-i\bar z\partial_{\bar z}$. Octet $X=2z_1(z_2\partial_{\bar z_1}-z_1\partial_{\bar z_2})$: tangent and horizontal ($f_X=0$), with $[T,X]=3iX$ (Hopf weight 3), so $[T,X]-2JX=5iX$ gives $25$. $X^\flat=z_1(z_2dz_1-z_1dz_2)$ has $dX^\flat=-3z_1dz_1\wedge dz_2$ of type $(2,0)$. With $dz_1\wedge dz_2\vert_H=\bar z_3\,\mathrm{vol}_H$, $\lvert\mathrm{vol}_H\rvert^2=4$, $\langle\lvert z_i\rvert^4\rangle=1/6$ and $\langle\lvert z_i\rvert^2\lvert z_j\rvert^2\rangle=1/12$, the ratio is $36/12\div2(1/6+1/12)=6$. This matches $15-9$, the vertical part being $\lvert\iota_TdX^\flat\rvert^2=9\lvert X\rvert^2$. Sextet $X=2z_3(\bar z_2\partial_{z_1}-\bar z_1\partial_{z_2})$: $[T,X]=-iX$ and $JX=iX$, giving $9$. The $(0,2)$ part $-2z_3d\bar z_1\wedge d\bar z_2$ gives the ratio $16\langle\lvert z_3\rvert^4\rangle/(2\langle\lvert z_3\rvert^2(\lvert z_1\rvert^2+\lvert z_2\rvert^2)\rangle)=8$. |
 
 **Audit closed at 01:58, 20 Nov 2026.** Of the 168 claims pending at the start, 164 are checked by hand and none was found wrong. The four still pending are numerical fits or examples whose content is the output of a computation: `dual_tensor_finite_fit`, `dual_tensor_finite_neck`, `hopf_finite_current_fit` and `hadron_root_slope`. They need an independent rerun of the stated code.
+
+## Regrade after the second referee (20 November 2026, 08:00)
+
+The Claude Fable 5.2 second referee (`2026-11-20_fable_second_referee.md`) re-derived 24 claims of this audit and found all correct. It also found that several rows marked "checked in full" above took forms or numbers from the results files as stated. Those rows are consistency checks. The ledger now grades fifteen of them `partial(Description)`, each naming what was taken as stated:
+- 94.4, 98.2, 105.4, 107.1, 90, 100 (benchmark), 68.1 and 78.1, because of the items noted in their rows;
+- 69.1, 71.1 and 104.1–104.5, whose quadratic forms were taken from the results files.
+
+The "checked in full" wording of those rows stands corrected by this note.
+
+Two further changes follow the referee's report:
+- 82.1 (`hadron_root_slope`) is now checked, by the second referee from Table 1 of arXiv:2007.03319.
+- 47 checked claims rest on the three numerical fits still pending (92, 93, 97). The ledger lists them as `awaits_pending/1`, and two tests keep that list in step with the dependency graph.

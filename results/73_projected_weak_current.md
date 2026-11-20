@@ -37,4 +37,4 @@ Only the circle component contributes to the round doublet matrix element: the m
 
 At fixed finite $Z_H$ and sufficiently small breaking the light charged residue remains nonzero and $M_C^2=g_2^2 v_h^2/4+O(e^{-b})$, where $v_h^2=2CV Z_H\langle |H_+|^2+|H_-|^2\rangle$. The contact can therefore be varied at the same geometry and tree colour data. For general $Z_H$ the resolvent derivative in 66.3 is nonpositive with $P$ inserted in the root mass form; its large-$Z_H$ limit is the response surviving on that form's kernel. The new lower bound makes the difference between the two actions measurable. [Original solenoidal probe comparison](66_neutral_currents_and_hadronic_units.md#how-much-weak-exchange-the-same-metric-allows) · [Full horizontal action and constraints](71_colour_gap_with_diagonal_roots.md) · [Particle current assignments](72_particle_identifications_and_mirrors.md)
 
-**Provenance.** Derived by GPT-6.2-Astra max. Independent scientific review is pending.
+**Provenance.** Derived by GPT-6.2-Astra max. Claude Opus 5.5 checked every ledger claim of this file by hand on 20 November 2026 and found no error (ledger `checked_by` rows).

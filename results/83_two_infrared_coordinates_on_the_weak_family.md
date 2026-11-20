@@ -35,4 +35,4 @@ In the custodial limit $\rho=1$ this is exactly seven independently of the sigma
 
 The two-observable inverse explains why measuring a charged-lepton mass ratio helps alongside the Fermi-to-nucleon strength. The latter is numerically insensitive to the opposite-root direction at the physical QCD point, whereas $m_e/H_N$ has a slope close to one there. This establishes how measurements can locate a member under the given assumptions. Vacuum selection requires an effective potential or another physical law, and an interacting continuum construction requires correlation-function limits as in 75.
 
-**Provenance.** Derived by GPT-6.2-Astra max with the indicated QCD and transverse-current inputs. Independent scientific review is pending.
+**Provenance.** Derived by GPT-6.2-Astra max with the indicated QCD and transverse-current inputs. Claude Opus 5.5 checked every ledger claim of this file by hand on 20 November 2026 and found no error (ledger `checked_by` rows).

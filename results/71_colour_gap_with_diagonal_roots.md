@@ -58,4 +58,4 @@ The invariant subspaces and lower estimates are needed only for the projected co
 
 This result uses the equal external and projective root kinetic coefficients in a specific off-background fibration action. Arbitrarily changing those two coefficients separately would prevent the cancellation of the colour derivative in the constraint calculation. A local ultraviolet contribution to the Wilson curvature or a change in the charged matter can also change the physical threshold beyond tree level. The longitudinal hierarchy here is a spectral statement in the fixed fibration theory. Its interpretation as an eleven-dimensional spin or string compactification retains the additional conditions of the lecture.
 
-**Provenance.** Derived by GPT-6.2-Astra max. Independent scientific review of the rooted constraint calculation is pending.
+**Provenance.** Derived by GPT-6.2-Astra max. Claude Opus 5.5 checked every ledger claim of this file on 20 November 2026 and found no error. Some of these checks took forms or numbers of this file as stated; the ledger `checked_by` rows record what each check covered.

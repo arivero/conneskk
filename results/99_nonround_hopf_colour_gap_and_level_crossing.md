@@ -76,4 +76,4 @@ $$
 $$
 For $f_S=5000$ GeV and $I_3=0.76985$ this is $B^{-1}=1.630$ TeV, or $a\simeq6.52\times10^{-7}$ GeV$^{-1}$ for the fixed-shape continuation from the stated neck. Thus the first extra boson is exactly the $j=2$ shell at sufficiently small $a$. This changes the colour cutoff to $\sqrt{\gamma_0}/B$ relative to the round Killing comparison. It is a tree result for the specified spin fibration action. Fermionic thresholds and the renormalized strong scale need their own matching.
 
-**Provenance.** Nonround constraint comparison, projected action and threshold by gpt-6.2-sol ultra with the colour and tensor calculations. Independent scientific review is pending.
+**Provenance.** Nonround constraint comparison, projected action and threshold by gpt-6.2-sol ultra with the colour and tensor calculations. Claude Opus 5.5 checked every ledger claim of this file by hand on 20 November 2026 and found no error (ledger `checked_by` rows). The claims of this file that rest on the numerical fits still referee pending (results 92, 93 and 97) hold given those fits (ledger `awaits_pending` rows).

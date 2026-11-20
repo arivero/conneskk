@@ -58,4 +58,4 @@ For the last assertion fix each finite $b$ first. The entire charge-one colour-s
 
 For any bounded or polynomially co-moving $H_N$ this bound implies $\Xi\to0$ *if* the light probes have the requisite chiral charged coupling, ordinary nucleons exist, and the higher-energy matching and four-dimensional frame remain applicable. The polar action has an extra neutral massless vector. The nonpolar schedule has a single geometric weak-sector photon but its stress, absence of mirror matter and quantum thresholds remain to be supplied in that same vacuum.
 
-**Provenance.** Derived by GPT-6.2-Astra max. Independent review of these derivations is pending.
+**Provenance.** Derived by GPT-6.2-Astra max. Claude Opus 5.5 checked every ledger claim of this file by hand on 20 November 2026 and found no error (ledger `checked_by` rows).

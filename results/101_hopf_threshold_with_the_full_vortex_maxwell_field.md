@@ -78,4 +78,4 @@ The lower eigenvalue increases as a function of $\mu_j\ge\mu$, since its derivat
 
 For example take the round control $\mu=\lambda/10$ and $f_S^2/I_3=6/B^2$. With the projection the first additional level is $\mu$. With the adjoint Maxwell component it is $\lambda(1.1-\sqrt{1.01})$, about $0.9501\,\mu$ in squared mass. These values test the spectrum before imposing the physical photon matching condition. They show where dropping a Maxwell polarization can change the first level in the same action class.
 
-**Provenance.** Moving-frame reduction, nonround persistence and round scalar calculation by gpt-6.2-sol ultra with the tensor and fermion research agents. Independent scientific review is pending.
+**Provenance.** Moving-frame reduction, nonround persistence and round scalar calculation by gpt-6.2-sol ultra with the tensor and fermion research agents. Claude Opus 5.5 checked every ledger claim of this file by hand on 20 November 2026 and found no error (ledger `checked_by` rows). The claims of this file that rest on the numerical fits still referee pending (results 92, 93 and 97) hold given those fits (ledger `awaits_pending` rows).

@@ -11,13 +11,15 @@
 %% source(Id, File, Anchor)            Anchor: markdown heading anchor ('' for the file itself)
 %% depends(Id, Dep)                    Dep: a claim Id or hyp(Name)
 %% hypothesis(Name, Statement)
-%% attempted_by(Id, Agent)             Agent: astra6 | claude_opus_5_5 | terra | sol | chatgpt | corpus
-%% checked_by(Id, Agent, Method)       Method: by_hand | python(Description) | not_recorded(Description)
+%% attempted_by(Id, Agent)             Agent: astra6 | claude_opus_5_5 | claude_fable_5_2 | terra | sol | chatgpt | corpus
+%% checked_by(Id, Agent, Method)       Method: by_hand | partial(Description) | python(Description) | not_recorded(Description)
+%%    by_hand: the claim re-derived by hand in full. partial(Description): the structure and the steps named were re-derived by hand, and the forms or numbers named were taken from the results file; it is a consistency check (regrade of 20 Nov 2026 after the second referee, historical/reviews/2026-11-20_fable_second_referee.md).
 %%    Each checked_by row stands in the block of its claim, so that the block reads as the whole record.
-%% referee_report(File, Report)        the referee of File (by Terra 6.1, or by Claude Opus 5.5 from 4 Nov 2026) is in Report (the lemma table records it)
+%% referee_report(File, Report)        the referee of File (by Terra 6.1, by Claude Opus 5.5 from 4 Nov 2026, or by Claude Fable 5.2 from 20 Nov 2026) is in Report (the lemma table records it)
 %%    The test on these rows checks bookkeeping: a Terra checker, Terra authorship or an exception. It reads neither the statement nor the verdict of the report.
 %% outside_referee(Claim, Why)         a proved or conditional claim of a refereed File that its Report did not cover
 %% referee_pending(Claim)              a new claim checked only by its author, with a referee queued
+%% awaits_pending(Claim)               a checked claim that rests (transitively) on a claim still referee pending; its check holds given that claim
 %% overturn(Id, Text)                  what would overturn applicability (research-state ledger)
 %% strategy(T, Status, Text)           Status: settled | partial | open
 %% addresses(T, Id)                    strategy item T is addressed by claim Id
@@ -4042,6 +4044,9 @@ rests_on(C, D) :- depends(C, E), rests_on(E, D).
 %% falls_if_false(+Dep, -Claim): Claim rests (transitively) on Dep.
 falls_if_false(Dep, C) :- rests_on(C, Dep).
 
+%% pending_dependent(-C, -P): C is not itself pending and rests on the referee-pending claim P.
+pending_dependent(C, P) :- referee_pending(P), rests_on(C, P), \+ referee_pending(C).
+
 %% numerical_only(-C): no proof, only a numerical check.
 numerical_only(C) :- claim(C, _, numerical, _, _).
 
@@ -4254,10 +4259,10 @@ checked_by(vortex_root_exchange_range, claude_opus_5_5, by_hand).
 checked_by(ir_moduli_inverse, claude_opus_5_5, by_hand).
 referee_report('results/83_two_infrared_coordinates_on_the_weak_family.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(root_phase_kinetic, claude_opus_5_5, by_hand).
-checked_by(hopf_locking_weak_charges, claude_opus_5_5, by_hand).
+checked_by(hopf_locking_weak_charges, claude_opus_5_5, partial("charges and couplings re-derived; the fitted values 7.045 TeV and 4377.59 GeV taken as stated")).
 checked_by(hopf_scalar_windows, claude_opus_5_5, by_hand).
-checked_by(hopf_intrinsic_colour_stabilizers, claude_opus_5_5, by_hand).
-checked_by(hopf_local_normal_scalar_towers, claude_opus_5_5, by_hand).
+checked_by(hopf_intrinsic_colour_stabilizers, claude_opus_5_5, partial("assembly and z=3 bounds re-derived; the component potentials taken as stated")).
+checked_by(hopf_local_normal_scalar_towers, claude_opus_5_5, partial("spectra and numbers re-derived; the quadratic forms taken from results/104")).
 referee_report('results/104_hopf_local_scalar_constraints_and_sextet.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(hopf_compact_spectator_threshold, claude_opus_5_5, by_hand).
 checked_by(hopf_locked_chiral_anomaly_spectrum, claude_opus_5_5, by_hand).
@@ -4278,9 +4283,9 @@ checked_by(hopf_bulk_two_form_pullback, claude_opus_5_5, by_hand).
 referee_report('results/105_hopf_bulk_tensor_and_magnetic_colour_pole.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(hopf_bulk_tensor_local_transverse_form, claude_opus_5_5, by_hand).
 checked_by(hopf_bulk_tensor_aligned_transverse_gap, claude_opus_5_5, by_hand).
-checked_by(hopf_bulk_tensor_independent_magnetic_pole, claude_opus_5_5, by_hand).
-checked_by(hopf_isotropic_tensor_sharp_soft_mass, claude_opus_5_5, by_hand).
-checked_by(hopf_local_vertical_orientation_bound, claude_opus_5_5, by_hand).
+checked_by(hopf_bulk_tensor_independent_magnetic_pole, claude_opus_5_5, partial("trial and scaling re-derived; the crossing scale B^-1=1.34 TeV not recomputed")).
+checked_by(hopf_isotropic_tensor_sharp_soft_mass, claude_opus_5_5, partial("minimization and scaling re-derived; C_soft about 6598 not recomputed")).
+checked_by(hopf_local_vertical_orientation_bound, claude_opus_5_5, partial("orientation and spectral bound re-derived; the quadratic forms taken from results/104")).
 checked_by(hopf_colour_octet_instability, claude_opus_5_5, by_hand).
 checked_by(projective_flux_octet, claude_opus_5_5, by_hand).
 checked_by(background_weak_multiplet_threshold, claude_opus_5_5, by_hand).
@@ -4296,21 +4301,22 @@ checked_by(two_endpoint_scalar_count, claude_opus_5_5, by_hand).
 checked_by(wrapped_m5_boundary_charge, claude_opus_5_5, by_hand).
 checked_by(k3_hypercharge_period_bound, claude_opus_5_5, by_hand).
 checked_by(tensor_sphere_pushforward, claude_opus_5_5, by_hand).
-checked_by(projective_vortex_spectator_descent, claude_opus_5_5, by_hand).
+checked_by(projective_vortex_spectator_descent, claude_opus_5_5, partial("factorization re-derived; the exact species sum taken as stated")).
 checked_by(rooted_colour_vectors, claude_opus_5_5, by_hand).
 checked_by(hopf_thomson_auxiliary_calibration, claude_opus_5_5, by_hand).
-checked_by(hopf_comoving_hadronic_benchmark, claude_opus_5_5, by_hand).
+checked_by(hopf_comoving_hadronic_benchmark, claude_opus_5_5, partial("homogeneity argument re-derived; the table entries from the fit of 97 not recomputed")).
 checked_by(hopf_mirror_particle_threshold, claude_opus_5_5, by_hand).
-checked_by(vortex_constraint_squares, claude_opus_5_5, by_hand).
-checked_by(rooted_colour_gap, claude_opus_5_5, by_hand).
+checked_by(vortex_constraint_squares, claude_opus_5_5, partial("Bogomolny and constraint completions re-derived; the quadratic forms taken from results/69, their reduction from the action not re-derived")).
+checked_by(rooted_colour_gap, claude_opus_5_5, partial("cancellation and fibre positivity re-derived given equal external and projective Z_H; the quadratic forms taken from results/71")).
 referee_report('results/71_colour_gap_with_diagonal_roots.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
-checked_by(round_flux_product_gap, claude_opus_5_5, by_hand).
+checked_by(round_flux_product_gap, claude_opus_5_5, partial("mixed block and leading minors re-derived; the fourth minors, the t=2 determinants and the reduction to the mass form taken from results/68")).
 checked_by(projective_kahler_octet, claude_opus_5_5, by_hand).
 checked_by(projective_kahler_moduli, claude_opus_5_5, by_hand).
 checked_by(vortex_root_domain, claude_opus_5_5, by_hand).
-checked_by(finite_weak_current_inverse, claude_opus_5_5, by_hand).
+checked_by(finite_weak_current_inverse, claude_opus_5_5, partial("current algebra and numbers re-derived; the remaining entries and the inverse-function step taken as stated")).
 referee_report('results/78_finite_weak_pole_and_current_match.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
-referee_pending(hadron_root_slope).
+checked_by(hadron_root_slope, claude_fable_5_2, by_hand).  % second referee, 20 Nov 2026, from Table 1 of arXiv:2007.03319; the last digits of the program output lie inside the table rounding
+referee_report('results/82_opposite_root_response_of_the_nucleon.md', 'historical/reviews/2026-11-20_fable_second_referee.md').
 checked_by(ade_interval_yukawa, claude_opus_5_5, by_hand).
 checked_by(dual_tensor_photon_cost, claude_opus_5_5, by_hand).
 checked_by(quotient_tensor_colour_gap, claude_opus_5_5, by_hand).
@@ -4320,19 +4326,70 @@ checked_by(hopf_full_auxiliary_coloured_minimum, claude_opus_5_5, by_hand).
 checked_by(hopf_local_exact_shift_blocks, claude_opus_5_5, by_hand).
 checked_by(hopf_local_transverse_vector_minimum, claude_opus_5_5, by_hand).
 referee_report('results/103_hopf_local_connection_transverse_shell.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
-checked_by(hopf_local_scalar_constraint_positivity, claude_opus_5_5, by_hand).
-checked_by(hopf_local_calibrated_coloured_gap, claude_opus_5_5, by_hand).
-checked_by(hopf_local_full_boson_ordering, claude_opus_5_5, by_hand).
+checked_by(hopf_local_scalar_constraint_positivity, claude_opus_5_5, partial("shift identity and bounds re-derived; the quadratic forms taken from results/104, their reduction from the action not re-derived")).
+checked_by(hopf_local_calibrated_coloured_gap, claude_opus_5_5, partial("block bounds and numbers re-derived; the quadratic forms taken from results/104")).
+checked_by(hopf_local_full_boson_ordering, claude_opus_5_5, partial("threshold and ordering re-derived; the quadratic forms taken from results/104 and the SciPy example not recomputed")).
 checked_by(hopf_bulk_tensor_anisotropic_vector_order, claude_opus_5_5, by_hand).
 checked_by(hopf_bulk_tensor_scalar_gauss_gap, claude_opus_5_5, by_hand).
 checked_by(hopf_global_unit_flux_descent, claude_opus_5_5, by_hand).
 checked_by(hopf_local_coexact_shell_closure, claude_opus_5_5, by_hand).
+%% ---------------------------------------------------------------- claims awaiting a pending claim (20 Nov 2026, second referee H2)
+%% Each claim below was checked, and rests on one of the numerical fits still referee pending. Listed by pending_dependent/2; the tests keep the two in step.
+awaits_pending(background_weak_multiplet_threshold).
+awaits_pending(hopf_bulk_tensor_aligned_transverse_gap).
+awaits_pending(hopf_bulk_tensor_anisotropic_vector_order).
+awaits_pending(hopf_bulk_tensor_independent_magnetic_pole).
+awaits_pending(hopf_bulk_tensor_local_transverse_form).
+awaits_pending(hopf_bulk_tensor_scalar_gauss_gap).
+awaits_pending(hopf_bulk_two_form_pullback).
+awaits_pending(hopf_comoving_charged_limit).
+awaits_pending(hopf_comoving_hadronic_benchmark).
+awaits_pending(hopf_compact_spectator_threshold).
+awaits_pending(hopf_full_auxiliary_coloured_minimum).
+awaits_pending(hopf_full_maxwell_coexact_block).
+awaits_pending(hopf_full_maxwell_matched_threshold).
+awaits_pending(hopf_full_maxwell_round_scalar).
+awaits_pending(hopf_global_locked_group_and_spin).
+awaits_pending(hopf_global_unit_flux_descent).
+awaits_pending(hopf_integral_euler_flux_domain).
+awaits_pending(hopf_isotropic_tensor_sharp_soft_mass).
+awaits_pending(hopf_local_calibrated_coloured_gap).
+awaits_pending(hopf_local_coexact_shell_closure).
+awaits_pending(hopf_local_exact_shift_blocks).
+awaits_pending(hopf_local_full_boson_ordering).
+awaits_pending(hopf_local_normal_scalar_towers).
+awaits_pending(hopf_local_scalar_constraint_positivity).
+awaits_pending(hopf_local_transverse_vector_minimum).
+awaits_pending(hopf_local_vertical_orientation_bound).
+awaits_pending(hopf_local_volume_tensor_rayleigh_test).
+awaits_pending(hopf_locked_chiral_anomaly_spectrum).
+awaits_pending(hopf_mirror_particle_threshold).
+awaits_pending(hopf_nonround_boson_crossing).
+awaits_pending(hopf_projected_coloured_threshold).
+awaits_pending(hopf_projected_nonround_boson).
+awaits_pending(hopf_radial_tower_kinetic_matching_inputs).
+awaits_pending(hopf_scalar_windows).
+awaits_pending(hopf_sextet_colour_running_threshold).
+awaits_pending(hopf_sextet_euclidean_photon_subtraction).
+awaits_pending(hopf_soft_tensor_pair_current_benchmark).
+awaits_pending(hopf_soft_tensor_pauli_ambiguity).
+awaits_pending(hopf_soft_tensor_ward_and_covariant_term).
+awaits_pending(hopf_thomson_auxiliary_calibration).
+awaits_pending(hopf_uniform_light_mass_inverse).
+awaits_pending(local_tensor_mixing_comparison).
+awaits_pending(positive_proca_current_comparison).
+awaits_pending(quotient_tensor_colour_gap).
+awaits_pending(quotient_tensor_free_fermion_shells).
+awaits_pending(spectator_photon_subtraction_bound).
+awaits_pending(thomson_radius_matching).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
 test(sources_exist) :- forall(source(_, F, _), exists_file(F)).
 test(dependencies_resolve) :- forall(depends(_, D), (D = hyp(H) -> hypothesis(H, _) ; claim(D, _, _, _, _))).
 test(no_circular_dependency) :- \+ rests_on(C, C).
+test(pending_dependents_are_listed) :- forall(pending_dependent(C, _), awaits_pending(C)).
+test(listed_dependents_still_wait) :- forall(awaits_pending(C), pending_dependent(C, _)).
 test(refutations_resolve) :- forall(refuted_by(C, B), (claim(C, _, refuted, _, _), claim(B, counterexample, _, _, _))).
 test(amendments_resolve) :- forall(claim_amended(C, B), (claim(C, _, _, _, _), claim(B, _, _, _, _))).
 test(prior_work_resolves) :- forall(prior_work(C, V, _), (claim(C, _, _, _, _), memberchk(V, [known, partial, not_found]))).
@@ -4344,7 +4401,7 @@ test(draft_files_exist) :- forall(stated_in_draft(_, F), exists_file(F)).
 test(referee_reports_exist) :- forall(referee_report(F, R), (exists_file(F), exists_file(R))).
 test(refereed_claims_have_review_bookkeeping) :-
     forall(( referee_report(F, _), source(C, F, _), claim(C, _, S, _, _), memberchk(S, [proved, conditional]) ),
-           ( checked_by(C, terra_6_1, _) ; attempted_by(C, terra_6_1) ; checked_by(C, claude_opus_5_5, _) ; outside_referee(C, _) ; referee_pending(C) )).  % Terra 6.1 or Claude Opus 5.5 (from 4 Nov 2026) as referee; a row added to a refereed file after its report waits for its own referee
+           ( checked_by(C, terra_6_1, _) ; attempted_by(C, terra_6_1) ; checked_by(C, claude_opus_5_5, _) ; checked_by(C, claude_fable_5_2, _) ; outside_referee(C, _) ; referee_pending(C) )).  % Terra 6.1, Claude Opus 5.5 (from 4 Nov 2026) or Claude Fable 5.2 (from 20 Nov 2026) as referee; a row added to a refereed file after its report waits for its own referee
 test(claims_outside_the_corpus_have_a_checker) :-
     forall(( claim(C, _, S, _, _), memberchk(S, [proved, conditional]), \+ attempted_by(C, corpus) ), checked_by(C, _, _)).
 test(self_checks_are_corpus_only) :-

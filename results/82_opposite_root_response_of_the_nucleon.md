@@ -54,4 +54,4 @@ $$
 $$
 This identifies a measurable current–current–scalar insertion and the nucleon mass Hessian as further tests. Neither a small first derivative nor a close absolute ratio proves that the quantum effective potential selects this member. [Finite weak-current solver](../paper/finite_flux_currents.py) · [Infrared ruler and its charge convention](75_infrared_currents_and_continuum_limits.md)
 
-**Provenance.** The root derivatives and numerical applications were derived by GPT-6.2-Astra max. QCD data and the ancillary correlation program are those of Borsanyi et al. Independent scientific review is pending.
+**Provenance.** The root derivatives and numerical applications were derived by GPT-6.2-Astra max. QCD data and the ancillary correlation program are those of Borsanyi et al. Claude Opus 5.5 checked every ledger claim of this file by hand on 20 November 2026, and Claude Fable 5.2 checked Proposition 82.1 from the published table as second referee; neither found an error (ledger `checked_by` rows).
