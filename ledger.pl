@@ -2755,7 +2755,6 @@ depends(rooted_colour_gap, vortex_root_vacua).
 depends(rooted_colour_gap, colour_wilson_lift).
 attempted_by(rooted_colour_gap, gpt_6_2_astra_max).
 checked_by(rooted_colour_gap, gpt_6_2_astra_max, by_hand).
-referee_pending(rooted_colour_gap).
 addresses(t13, rooted_colour_gap).
 addresses(t18, rooted_colour_gap).
 
@@ -4324,6 +4323,8 @@ checked_by(hopf_thomson_auxiliary_calibration, claude_opus_5_5, by_hand).
 checked_by(hopf_comoving_hadronic_benchmark, claude_opus_5_5, by_hand).
 checked_by(hopf_mirror_particle_threshold, claude_opus_5_5, by_hand).
 checked_by(vortex_constraint_squares, claude_opus_5_5, by_hand).
+checked_by(rooted_colour_gap, claude_opus_5_5, by_hand).
+referee_report('results/71_colour_gap_with_diagonal_roots.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
