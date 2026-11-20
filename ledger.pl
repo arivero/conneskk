@@ -2525,7 +2525,6 @@ depends(shared_cap_current, shared_circle_density).
 depends(shared_cap_current, gh1_vortex_neck).
 attempted_by(shared_cap_current, gpt_6_2_astra_max).
 checked_by(shared_cap_current, gpt_6_2_astra_max, by_hand).
-referee_pending(shared_cap_current).
 addresses(t13, shared_cap_current).
 addresses(t18, shared_cap_current).
 
@@ -4321,6 +4320,7 @@ checked_by(root_wilson_operator, claude_opus_5_5, by_hand).
 checked_by(quadratic_ir_continuum, claude_opus_5_5, by_hand).
 checked_by(charged_vortex_deformations, claude_opus_5_5, by_hand).
 checked_by(rooted_current_projection, claude_opus_5_5, by_hand).
+checked_by(shared_cap_current, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
