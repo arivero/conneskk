@@ -2829,7 +2829,6 @@ depends(hadronic_colour_current, matched_colour_trajectory).
 depends(hadronic_colour_current, rooted_current_projection).
 attempted_by(hadronic_colour_current, gpt_6_2_astra_max).
 checked_by(hadronic_colour_current, gpt_6_2_astra_max, by_hand).
-referee_pending(hadronic_colour_current).
 addresses(t13, hadronic_colour_current).
 addresses(t18, hadronic_colour_current).
 
@@ -3029,7 +3028,6 @@ depends(projective_cjs_gauge_ratio, dual_four_cycle_flux).
 depends(projective_cjs_gauge_ratio, vortex_flux_mass_relation).
 attempted_by(projective_cjs_gauge_ratio, gpt_6_2_astra_max).
 checked_by(projective_cjs_gauge_ratio, gpt_6_2_astra_max, by_hand).
-referee_pending(projective_cjs_gauge_ratio).
 addresses(t13, projective_cjs_gauge_ratio).
 addresses(t18, projective_cjs_gauge_ratio).
 
@@ -4315,6 +4313,8 @@ referee_report('results/61_colour_thresholds_and_weak_current.md', 'historical/r
 checked_by(shared_circle_curvature, claude_opus_5_5, by_hand).
 checked_by(weak_root_curvature, claude_opus_5_5, by_hand).
 referee_report('results/82_opposite_root_response_of_the_nucleon.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(projective_cjs_gauge_ratio, claude_opus_5_5, by_hand).
+checked_by(hadronic_colour_current, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
