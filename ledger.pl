@@ -2508,7 +2508,6 @@ depends(shared_qcd_current, helical_probe_current).
 depends(shared_qcd_current, l17_condensate).
 attempted_by(shared_qcd_current, gpt_6_2_astra_max).
 checked_by(shared_qcd_current, gpt_6_2_astra_max, by_hand).
-referee_pending(shared_qcd_current).
 addresses(t13, shared_qcd_current).
 addresses(t18, shared_qcd_current).
 
@@ -4313,6 +4312,8 @@ checked_by(spin_tensor_reeb_current, claude_opus_5_5, by_hand).
 checked_by(vortex_root_neck, claude_opus_5_5, by_hand).
 checked_by(particle_lifts_table, claude_opus_5_5, by_hand).
 checked_by(hopf_supported_spin_product, claude_opus_5_5, by_hand).
+checked_by(shared_qcd_current, claude_opus_5_5, by_hand).
+referee_report('results/61_colour_thresholds_and_weak_current.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
