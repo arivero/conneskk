@@ -3753,7 +3753,6 @@ depends(hopf_local_normal_scalar_towers, hopf_volume_tensor_rank_one_potential).
 depends(hopf_local_normal_scalar_towers, hopf_local_scalar_constraint_positivity).
 attempted_by(hopf_local_normal_scalar_towers, gpt_6_2_sol_ultra).
 checked_by(hopf_local_normal_scalar_towers, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_local_normal_scalar_towers).
 addresses(t4, hopf_local_normal_scalar_towers).
 addresses(t13, hopf_local_normal_scalar_towers).
 addresses(t14, hopf_local_normal_scalar_towers).
@@ -4320,6 +4319,8 @@ checked_by(root_phase_kinetic, claude_opus_5_5, by_hand).
 checked_by(hopf_locking_weak_charges, claude_opus_5_5, by_hand).
 checked_by(hopf_scalar_windows, claude_opus_5_5, by_hand).
 checked_by(hopf_intrinsic_colour_stabilizers, claude_opus_5_5, by_hand).
+checked_by(hopf_local_normal_scalar_towers, claude_opus_5_5, by_hand).
+referee_report('results/104_hopf_local_scalar_constraints_and_sextet.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
