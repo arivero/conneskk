@@ -3289,7 +3289,6 @@ depends(dual_tensor_comoving_pole, dual_tensor_transverse_pencil).
 depends(dual_tensor_comoving_pole, rooted_current_projection).
 attempted_by(dual_tensor_comoving_pole, gpt_6_2_sol_ultra).
 checked_by(dual_tensor_comoving_pole, gpt_6_2_sol_ultra, by_hand).
-referee_pending(dual_tensor_comoving_pole).
 addresses(t4, dual_tensor_comoving_pole).
 addresses(t14, dual_tensor_comoving_pole).
 addresses(t18, dual_tensor_comoving_pole).
@@ -3300,7 +3299,6 @@ depends(dual_tensor_hadronic_resolvent, dual_tensor_comoving_pole).
 depends(dual_tensor_hadronic_resolvent, hadronic_colour_current).
 attempted_by(dual_tensor_hadronic_resolvent, gpt_6_2_sol_ultra).
 checked_by(dual_tensor_hadronic_resolvent, gpt_6_2_sol_ultra, by_hand).
-referee_pending(dual_tensor_hadronic_resolvent).
 addresses(t4, dual_tensor_hadronic_resolvent).
 addresses(t13, dual_tensor_hadronic_resolvent).
 addresses(t18, dual_tensor_hadronic_resolvent).
@@ -4323,6 +4321,9 @@ checked_by(projective_flux_octet, claude_opus_5_5, by_hand).
 checked_by(background_weak_multiplet_threshold, claude_opus_5_5, by_hand).
 checked_by(hopf_transverse_current_pencil, claude_opus_5_5, by_hand).
 referee_report('results/97_hopf_transverse_spectrum_and_current_match.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(dual_tensor_comoving_pole, claude_opus_5_5, by_hand).
+checked_by(dual_tensor_hadronic_resolvent, claude_opus_5_5, by_hand).
+referee_report('results/93_tensor_photon_and_the_five_dimensional_pole.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
