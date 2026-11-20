@@ -3533,7 +3533,6 @@ depends(hopf_nonround_covariant_core, hopf_intrinsic_colour_stabilizers).
 depends(hopf_nonround_covariant_core, vortex_constraint_squares).
 attempted_by(hopf_nonround_covariant_core, gpt_6_2_sol_ultra).
 checked_by(hopf_nonround_covariant_core, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_nonround_covariant_core).
 addresses(t4, hopf_nonround_covariant_core).
 addresses(t11, hopf_nonround_covariant_core).
 addresses(t14, hopf_nonround_covariant_core).
@@ -4321,6 +4320,7 @@ checked_by(charged_vortex_deformations, claude_opus_5_5, by_hand).
 checked_by(rooted_current_projection, claude_opus_5_5, by_hand).
 checked_by(shared_cap_current, claude_opus_5_5, by_hand).
 checked_by(shared_winding_hadron, claude_opus_5_5, by_hand).
+checked_by(hopf_nonround_covariant_core, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
