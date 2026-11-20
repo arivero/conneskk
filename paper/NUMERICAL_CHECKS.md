@@ -266,8 +266,10 @@ and integration by parts gives their opposites. Orthogonality of $P$
 justifies removing it from the pairing with $p$. Equal external and
 projective coefficients are exactly what makes the multipliers agree.
 
-The $--$ constraint remains the trace equation because all added
-squares have zero background value and first stress variation. The
+The $--$ constraint remains the trace equation: the background has zero
+horizontal root derivative, and the internal squares have no linear
+variation with respect to the null base inverse-metric component. The
+mixed metric stress does have the linear current $J$ derived above. The
 colour Maxwell constraint stays unchanged because the roots are
 neutral under that connection. The remaining internal coordinate
 variables enter the internal zero-background squares without base
