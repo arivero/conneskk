@@ -3149,7 +3149,6 @@ depends(ade_interval_yukawa, adjoint_monopole_gradient).
 depends(ade_interval_yukawa, vortex_root_domain).
 attempted_by(ade_interval_yukawa, gpt_6_2_astra_max).
 checked_by(ade_interval_yukawa, gpt_6_2_astra_max, by_hand).
-referee_pending(ade_interval_yukawa).
 addresses(t3, ade_interval_yukawa).
 addresses(t8, ade_interval_yukawa).
 addresses(t11, ade_interval_yukawa).
@@ -4326,6 +4325,7 @@ checked_by(vortex_root_domain, claude_opus_5_5, by_hand).
 checked_by(finite_weak_current_inverse, claude_opus_5_5, by_hand).
 referee_report('results/78_finite_weak_pole_and_current_match.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(hadron_root_slope, claude_opus_5_5, by_hand).
+checked_by(ade_interval_yukawa, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
