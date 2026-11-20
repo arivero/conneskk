@@ -3790,7 +3790,6 @@ depends(hopf_bulk_tensor_anisotropic_vector_order, hopf_local_transverse_vector_
 depends(hopf_bulk_tensor_anisotropic_vector_order, hopf_nonround_covariant_core).
 attempted_by(hopf_bulk_tensor_anisotropic_vector_order, gpt_6_2_sol_ultra).
 checked_by(hopf_bulk_tensor_anisotropic_vector_order, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_bulk_tensor_anisotropic_vector_order).
 addresses(t4, hopf_bulk_tensor_anisotropic_vector_order).
 addresses(t13, hopf_bulk_tensor_anisotropic_vector_order).
 addresses(t14, hopf_bulk_tensor_anisotropic_vector_order).
@@ -4327,6 +4326,7 @@ referee_report('results/103_hopf_local_connection_transverse_shell.md', 'histori
 checked_by(hopf_local_scalar_constraint_positivity, claude_opus_5_5, by_hand).
 checked_by(hopf_local_calibrated_coloured_gap, claude_opus_5_5, by_hand).
 checked_by(hopf_local_full_boson_ordering, claude_opus_5_5, by_hand).
+checked_by(hopf_bulk_tensor_anisotropic_vector_order, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
