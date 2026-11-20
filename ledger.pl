@@ -3208,7 +3208,6 @@ depends(projective_vortex_spectator_descent, vortex_mirror_anomalies).
 depends(projective_vortex_spectator_descent, vortex_neutral_spectator_tensor).
 attempted_by(projective_vortex_spectator_descent, gpt_6_2_astra_max).
 checked_by(projective_vortex_spectator_descent, gpt_6_2_astra_max, by_hand).
-referee_pending(projective_vortex_spectator_descent).
 addresses(t11, projective_vortex_spectator_descent).
 addresses(t18, projective_vortex_spectator_descent).
 
@@ -4324,6 +4323,7 @@ checked_by(two_endpoint_scalar_count, claude_opus_5_5, by_hand).
 checked_by(wrapped_m5_boundary_charge, claude_opus_5_5, by_hand).
 checked_by(k3_hypercharge_period_bound, claude_opus_5_5, by_hand).
 checked_by(tensor_sphere_pushforward, claude_opus_5_5, by_hand).
+checked_by(projective_vortex_spectator_descent, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
