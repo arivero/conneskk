@@ -2611,7 +2611,6 @@ depends(colour_wilson_trial, projective_kahler_octet).
 depends(colour_wilson_trial, vortex_root_domain).
 attempted_by(colour_wilson_trial, gpt_6_2_astra_max).
 checked_by(colour_wilson_trial, gpt_6_2_astra_max, by_hand).
-referee_pending(colour_wilson_trial).
 addresses(t13, colour_wilson_trial).
 addresses(t18, colour_wilson_trial).
 
@@ -4318,6 +4317,7 @@ referee_report('results/100_hopf_light_fermion_window_and_hadronic_calibration.m
 checked_by(thomson_radius_matching, claude_opus_5_5, by_hand).
 checked_by(positive_proca_current_comparison, claude_opus_5_5, by_hand).
 checked_by(spectator_photon_subtraction_bound, claude_opus_5_5, by_hand).
+checked_by(colour_wilson_trial, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
