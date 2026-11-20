@@ -3494,7 +3494,6 @@ depends(hopf_projected_coloured_threshold, hopf_broken_colour_vectors).
 depends(hopf_projected_coloured_threshold, hopf_finite_current_fit).
 attempted_by(hopf_projected_coloured_threshold, gpt_6_2_sol_ultra).
 checked_by(hopf_projected_coloured_threshold, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_projected_coloured_threshold).
 addresses(t13, hopf_projected_coloured_threshold).
 addresses(t14, hopf_projected_coloured_threshold).
 addresses(t18, hopf_projected_coloured_threshold).
@@ -4326,6 +4325,7 @@ referee_pending(hadron_root_slope).
 checked_by(ade_interval_yukawa, claude_opus_5_5, by_hand).
 checked_by(dual_tensor_photon_cost, claude_opus_5_5, by_hand).
 checked_by(quotient_tensor_colour_gap, claude_opus_5_5, by_hand).
+checked_by(hopf_projected_coloured_threshold, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
