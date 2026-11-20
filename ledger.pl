@@ -2743,7 +2743,6 @@ depends(root_wilson_operator, colour_wilson_trial).
 depends(root_wilson_operator, vortex_root_vacua).
 attempted_by(root_wilson_operator, gpt_6_2_astra_max).
 checked_by(root_wilson_operator, gpt_6_2_astra_max, by_hand).
-referee_pending(root_wilson_operator).
 addresses(t13, root_wilson_operator).
 addresses(t18, root_wilson_operator).
 
@@ -4321,6 +4320,7 @@ checked_by(hopf_locked_chiral_anomaly_spectrum, claude_opus_5_5, by_hand).
 checked_by(hopf_radial_tower_kinetic_matching_inputs, claude_opus_5_5, by_hand).
 checked_by(hopf_soft_tensor_ward_and_covariant_term, claude_opus_5_5, by_hand).
 checked_by(hopf_soft_tensor_pauli_ambiguity, claude_opus_5_5, by_hand).
+checked_by(root_wilson_operator, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
