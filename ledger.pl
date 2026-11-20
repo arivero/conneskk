@@ -3782,7 +3782,6 @@ depends(hopf_bulk_two_form_pullback, dual_tensor_transverse_pencil).
 depends(hopf_bulk_two_form_pullback, hopf_local_full_boson_ordering).
 attempted_by(hopf_bulk_two_form_pullback, gpt_6_2_sol_ultra).
 checked_by(hopf_bulk_two_form_pullback, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_bulk_two_form_pullback).
 addresses(t4, hopf_bulk_two_form_pullback).
 addresses(t11, hopf_bulk_two_form_pullback).
 addresses(t14, hopf_bulk_two_form_pullback).
@@ -4321,6 +4320,8 @@ checked_by(hopf_nonround_covariant_core, claude_opus_5_5, by_hand).
 checked_by(dual_tensor_transverse_pencil, claude_opus_5_5, by_hand).
 checked_by(hopf_full_maxwell_matched_threshold, claude_opus_5_5, by_hand).
 checked_by(hopf_full_maxwell_coexact_block, claude_opus_5_5, by_hand).
+checked_by(hopf_bulk_two_form_pullback, claude_opus_5_5, by_hand).
+referee_report('results/105_hopf_bulk_tensor_and_magnetic_colour_pole.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
