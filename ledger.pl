@@ -3459,7 +3459,6 @@ depends(hopf_transverse_current_pencil, dual_tensor_transverse_pencil).
 depends(hopf_transverse_current_pencil, rooted_current_projection).
 attempted_by(hopf_transverse_current_pencil, gpt_6_2_sol_ultra).
 checked_by(hopf_transverse_current_pencil, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_transverse_current_pencil).
 addresses(t4, hopf_transverse_current_pencil).
 addresses(t11, hopf_transverse_current_pencil).
 addresses(t18, hopf_transverse_current_pencil).
@@ -4322,6 +4321,8 @@ checked_by(hopf_local_vertical_orientation_bound, claude_opus_5_5, by_hand).
 checked_by(hopf_colour_octet_instability, claude_opus_5_5, by_hand).
 checked_by(projective_flux_octet, claude_opus_5_5, by_hand).
 checked_by(background_weak_multiplet_threshold, claude_opus_5_5, by_hand).
+checked_by(hopf_transverse_current_pencil, claude_opus_5_5, by_hand).
+referee_report('results/97_hopf_transverse_spectrum_and_current_match.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
