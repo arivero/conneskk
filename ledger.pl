@@ -3793,7 +3793,6 @@ depends(hopf_bulk_tensor_local_transverse_form, hopf_bulk_two_form_pullback).
 depends(hopf_bulk_tensor_local_transverse_form, dual_tensor_transverse_pencil).
 attempted_by(hopf_bulk_tensor_local_transverse_form, gpt_6_2_sol_ultra).
 checked_by(hopf_bulk_tensor_local_transverse_form, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_bulk_tensor_local_transverse_form).
 addresses(t4, hopf_bulk_tensor_local_transverse_form).
 addresses(t14, hopf_bulk_tensor_local_transverse_form).
 addresses(t18, hopf_bulk_tensor_local_transverse_form).
@@ -3805,7 +3804,6 @@ depends(hopf_bulk_tensor_aligned_transverse_gap, hopf_local_calibrated_coloured_
 depends(hopf_bulk_tensor_aligned_transverse_gap, hopf_mirror_particle_threshold).
 attempted_by(hopf_bulk_tensor_aligned_transverse_gap, gpt_6_2_sol_ultra).
 checked_by(hopf_bulk_tensor_aligned_transverse_gap, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_bulk_tensor_aligned_transverse_gap).
 addresses(t4, hopf_bulk_tensor_aligned_transverse_gap).
 addresses(t13, hopf_bulk_tensor_aligned_transverse_gap).
 addresses(t14, hopf_bulk_tensor_aligned_transverse_gap).
@@ -4322,6 +4320,8 @@ checked_by(hopf_full_maxwell_matched_threshold, claude_opus_5_5, by_hand).
 checked_by(hopf_full_maxwell_coexact_block, claude_opus_5_5, by_hand).
 checked_by(hopf_bulk_two_form_pullback, claude_opus_5_5, by_hand).
 referee_report('results/105_hopf_bulk_tensor_and_magnetic_colour_pole.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(hopf_bulk_tensor_local_transverse_form, claude_opus_5_5, by_hand).
+checked_by(hopf_bulk_tensor_aligned_transverse_gap, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
