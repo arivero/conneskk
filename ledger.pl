@@ -4261,7 +4261,7 @@ checked_by(ir_moduli_inverse, claude_opus_5_5, by_hand).
 referee_report('results/83_two_infrared_coordinates_on_the_weak_family.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(root_phase_kinetic, claude_opus_5_5, by_hand).
 checked_by(hopf_locking_weak_charges, claude_opus_5_5, partial("charges and couplings re-derived; the fitted values 7.045 TeV and 4377.59 GeV taken as stated")).
-checked_by(hopf_locking_weak_charges, gpt_6_1_terra, partial("leading fit values recomputed in Python from the existing solver")).
+checked_by(hopf_locking_weak_charges, gpt_6_1_terra, python("complete leading inverse, Schur matrix, charges and determinant checked by hand; SciPy fits to both input sets reproduced")).
 checked_by(hopf_scalar_windows, claude_opus_5_5, by_hand).
 checked_by(hopf_intrinsic_colour_stabilizers, claude_opus_5_5, partial("assembly and z=3 bounds re-derived; the component potentials taken as stated")).
 checked_by(hopf_intrinsic_colour_stabilizers, gpt_6_2_astra, by_hand). % Different model from gpt_6_2_sol_ultra.
@@ -4290,8 +4290,10 @@ checked_by(hopf_bulk_tensor_local_transverse_form, claude_opus_5_5, by_hand).
 checked_by(hopf_bulk_tensor_aligned_transverse_gap, claude_opus_5_5, by_hand).
 checked_by(hopf_bulk_tensor_independent_magnetic_pole, claude_opus_5_5, partial("trial and scaling re-derived; the crossing scale B^-1=1.34 TeV not recomputed")).
 checked_by(hopf_bulk_tensor_independent_magnetic_pole, gpt_6_1_terra, partial("crossing scale recomputed from the printed trial bound in Python")).
+checked_by(hopf_bulk_tensor_independent_magnetic_pole, gpt_6_2_astra, python("relative sources, Hodge reduction and variational bound derived by hand; independent SciPy vortex solve and quadrature give the sufficient crossing 1341.33 GeV")).
 checked_by(hopf_isotropic_tensor_sharp_soft_mass, claude_opus_5_5, partial("minimization and scaling re-derived; C_soft about 6598 not recomputed")).
 checked_by(hopf_isotropic_tensor_sharp_soft_mass, gpt_6_1_terra, partial("variational number recomputed in Python from the stated quadratic form")).
+checked_by(hopf_isotropic_tensor_sharp_soft_mass, gpt_6_2_astra, python("Schur limit, coercivity, polarization and ordering derived by hand; spline rerun 6598.2570 and independent finite-element solution 6598.2551")).
 checked_by(hopf_local_vertical_orientation_bound, claude_opus_5_5, partial("orientation and spectral bound re-derived; the quadratic forms taken from results/104")).
 checked_by(hopf_local_vertical_orientation_bound, gpt_6_2_astra, by_hand). % Different model from gpt_6_2_sol_ultra.
 checked_by(hopf_colour_octet_instability, claude_opus_5_5, by_hand).
@@ -4315,27 +4317,27 @@ checked_by(projective_vortex_spectator_descent, gpt_6_1_terra, by_hand).
 checked_by(rooted_colour_vectors, claude_opus_5_5, by_hand).
 checked_by(hopf_thomson_auxiliary_calibration, claude_opus_5_5, by_hand).
 checked_by(hopf_comoving_hadronic_benchmark, claude_opus_5_5, partial("homogeneity argument re-derived; the table entries from the fit of 97 not recomputed")).
-checked_by(hopf_comoving_hadronic_benchmark, gpt_6_1_terra, python("homogeneity checked; current table from existing fit and trajectory code and boson column from result 99 minimum")).
+checked_by(hopf_comoving_hadronic_benchmark, gpt_6_1_terra, python("complete conditional RG and scale argument checked by hand; SciPy current fit and projected colour minimum reproduce all entries of the table")).
 checked_by(hopf_mirror_particle_threshold, claude_opus_5_5, by_hand).
 checked_by(vortex_constraint_squares, claude_opus_5_5, partial("Bogomolny and constraint completions re-derived; the quadratic forms taken from results/69, their reduction from the action not re-derived")).
 checked_by(vortex_constraint_squares, gpt_6_2_astra, by_hand). % Fresh same-model derivation; not an independent model.
 checked_by(vortex_constraint_squares, gpt_6_1_terra, partial("linearized completed vortex squares and displayed scalar-square algebra checked; full null constraint reduction not independently established")).
-checked_by(vortex_constraint_squares, gpt_6_1_sol, partial("independent action-level derivation of null Einstein and Maxwell constraints, auxiliary coefficients, density boundary terms, spectator warp and nonround vector form; detailed hand check in paper/NUMERICAL_CHECKS.md; spectral gap consequences not separately re-audited")).
+checked_by(vortex_constraint_squares, gpt_6_1_sol, by_hand). % Full independent review of Proposition 69.1; action, constraints, scalar completion, every compact shape and vector/spectator blocks: paper/NUMERICAL_CHECKS.md.
 checked_by(rooted_colour_gap, claude_opus_5_5, partial("cancellation and fibre positivity re-derived given equal external and projective Z_H; the quadratic forms taken from results/71")).
 checked_by(rooted_colour_gap, gpt_6_2_astra, by_hand). % Fresh same-model derivation; not an independent model.
 checked_by(rooted_colour_gap, gpt_6_1_terra, partial("horizontal variation and cancellation of the displayed mixed colour terms checked algebraically; full constrained reduction not independently established")).
-checked_by(rooted_colour_gap, gpt_6_1_sol, partial("independent action-level horizontal Hessian, null current sources and equal-coefficient cancellation, range-closure comparison and residual coordinate constraints established; detailed hand check in paper/NUMERICAL_CHECKS.md; quantitative projection bound not separately re-audited")).
+checked_by(rooted_colour_gap, gpt_6_1_sol, by_hand). % Full independent review of Theorem 71.1; constrained projection, fibre positivity, invariant sectors, projection angle, all frequencies and exact threshold: paper/NUMERICAL_CHECKS.md.
 referee_report('results/71_colour_gap_with_diagonal_roots.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(round_flux_product_gap, claude_opus_5_5, partial("mixed block and leading minors re-derived; the fourth minors, the t=2 determinants and the reduction to the mass form taken from results/68")).
 checked_by(round_flux_product_gap, gpt_6_2_astra, by_hand). % Fresh same-model derivation; not an independent model.
 checked_by(round_flux_product_gap, gpt_6_1_terra, partial("fourth minors and exceptional determinants independently checked with Python/SymPy; action reduction not independently rederived")).
-checked_by(round_flux_product_gap, gpt_6_1_sol, partial("independent action-level null trace, divergence and Maxwell constraints, transverse kinetic norm, mixed operator and weighted adjoints established; detailed hand check in paper/NUMERICAL_CHECKS.md; spectral determinants not rerun")).
+checked_by(round_flux_product_gap, gpt_6_1_sol, by_hand). % Full independent review of Theorem 68.1; action, hand-expanded minors, exceptional harmonics, representation bounds and product projection angle: paper/NUMERICAL_CHECKS.md.
 checked_by(projective_kahler_octet, claude_opus_5_5, by_hand).
 checked_by(projective_kahler_moduli, claude_opus_5_5, by_hand).
 checked_by(vortex_root_domain, claude_opus_5_5, by_hand).
 checked_by(finite_weak_current_inverse, claude_opus_5_5, partial("current algebra and numbers re-derived; the remaining entries and the inverse-function step taken as stated")).
 checked_by(finite_weak_current_inverse, gpt_6_1_terra, partial("explicit light inverse and conditional parameter-dependent IFT; full operator C1 extension and uniform complement estimate remain assumptions")).
-checked_by(finite_weak_current_inverse, gpt_6_1_sol, partial("independent light inverse and compact-sphere regularity proof: analytic normalized profiles at regular poles, elliptic root projector, common form domain and uniform complement, scaled Schur factor and cancellation of contact singularity; full finite fit not recomputed")).
+checked_by(finite_weak_current_inverse, gpt_6_1_sol, by_hand). % Full independent hand review of Proposition 78.1 including compact-sphere analytic inputs and parameterized inverse; separate degree-12 illustration checks are numerical: paper/NUMERICAL_CHECKS.md.
 referee_report('results/78_finite_weak_pole_and_current_match.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(hadron_root_slope, claude_fable_5_2, by_hand).  % second referee, 20 Nov 2026, from Table 1 of arXiv:2007.03319; the last digits of the program output lie inside the table rounding
 referee_report('results/82_opposite_root_response_of_the_nucleon.md', 'historical/reviews/2026-11-20_fable_second_referee.md').
@@ -4354,6 +4356,7 @@ checked_by(hopf_local_calibrated_coloured_gap, claude_opus_5_5, partial("block b
 checked_by(hopf_local_calibrated_coloured_gap, gpt_6_2_astra, by_hand). % Different model from gpt_6_2_sol_ultra.
 checked_by(hopf_local_full_boson_ordering, claude_opus_5_5, partial("threshold and ordering re-derived; the quadratic forms taken from results/104 and the SciPy example not recomputed")).
 checked_by(hopf_local_full_boson_ordering, gpt_6_2_astra, by_hand). % Different model from gpt_6_2_sol_ultra.
+checked_by(hopf_local_full_boson_ordering, gpt_6_2_astra, python("separate finite sextet example in Result 104.5, independent SciPy diagonalization")).
 checked_by(hopf_bulk_tensor_anisotropic_vector_order, claude_opus_5_5, by_hand).
 checked_by(hopf_bulk_tensor_scalar_gauss_gap, claude_opus_5_5, by_hand).
 checked_by(hopf_global_unit_flux_descent, claude_opus_5_5, by_hand).

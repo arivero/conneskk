@@ -1,5 +1,21 @@
 # Referee checks of finite fits and constrained operators
 
+## Disposition of the fifteen November checks
+
+Each group below received an end-to-end check by a model different from the original author. The earlier partial checks remain attributed to their original referees. For claims containing computed fits, threshold estimates or an infimum evaluated on a mesh, the ledger records both the derivation and the numerical method. A numerical value reproduced with SciPy cannot be graded as a hand calculation.
+
+| Result | Independent checker | What was checked |
+|---|---|---|
+| 68.1, 69.1, 71.1 | GPT-6.1 Sol | From the specified actions through the constraints, determinant or projection bounds and final spectral statements. |
+| 78.1 | GPT-6.1 Sol | Both inverses and the compact-sphere regularity proof for sufficiently small circle radius. A separate degree-12 calculation checks the two finite illustrations. |
+| 90, ten-dimensional spectator descent | GPT-6.1 Terra | Signed species sum with the corrected projective twist and local factorization. |
+| 94.4, 100 | GPT-6.1 Terra | Analytic neutral-current and QCD normalization arguments, with the fitted values and complete hadronic table reproduced in Python/SciPy. |
+| 98.2 | GPT-6.2 Astra | Corrected the coupled degree-one bound to $5/B^2$. GPT-6.1 Terra separately checked the mode attaining it. |
+| 104.1–104.5 | GPT-6.2 Astra | Local constrained Hessian, bounds, towers and ordering. An independent SciPy diagonalization also verifies the 104.5 example. |
+| 105.4, 107.1 | GPT-6.2 Astra | Variational proofs, normalization and ordering, with the sufficient crossing and soft coefficient independently recomputed. [Finite-element check](soft_tensor_finite_elements.py) |
+
+The three formerly pending fits (92, 93 and 97) were reproduced by GPT-6.1 Terra. The comparison uses the supplied actions and Born inputs. A finite-element limit, a central fit and a physical measurement have different uncertainty budgets.
+
 ## Numerical reproduction of the weak fits
 
 Fix the actions, period conventions and central weak inputs of results 78, 92,
@@ -325,6 +341,32 @@ from $H^{0,2}(\mathcal O(-4))$, dual to $H^0(\mathcal O(1))$; the latter
 line is not the parent twist. This corrects the former six-dimensional sum
 attribution in the ledger and the line-class convention in result 90.
 
+## The locking charge and neutral poles in 94.4
+
+GPT-6.1 Terra checked the leading inverse by hand and reran the two
+finite-matrix fits in Python/SciPy. Write $A_Q=kp$, $z=w-kp$ and
+$l=3p-2c$. The coefficient of $A_Q^2$ in
+$I_Ww^2+6I_3p^2+I_Cc^2$ is $I_Q=I_W+(6I_3+9I_C/4)/k^2$.
+After orthogonal projection off the photon the remaining kinetic entries are
+$K_{zz}=I_W(1-s)$, $K_{zl}=I_W\eta$, $K_{ll}=I_C/4-I_Q\eta^2$,
+where $s=I_W/I_Q$ and $\eta=3I_C/(4kI_Q)$. The corresponding
+sources are $T_3-sQ$ and $-q_C/2+\eta Q$. The latter is $3/2$ for the
+left neutrino, $3/2-\eta$ and $5/2-\eta$ for the left and right electron,
+and $1/2$ for the right neutrino. In the proton-plus-electron vector sum
+the electric charges cancel and the vector $C$ charges sum to $-12$.
+The electron axial locking source is $-1$. With the weak-charge convention
+of 81.1 this gives the positive locking term $6v_F^2/f_S^2$ alongside
+the vortex term $-12d_v$.
+
+Eliminating the locking coordinate from the neutral mass determinant at
+$M_Z$ gives $v_h^2/4=M_Z^2K_{zz}+M_Z^4 K_{zl}^2/(f_S^2-M_Z^2K_{ll})$.
+The fitted branch requires a positive denominator and kinetic determinant,
+$\rho>1$ and $0<d_v<1$. In that branch the measured axial contact fixes
+$d_v$ for given $\rho$, and the vector contact fixes $s$. For the inputs
+of 94.4 the leading-matrix program above gives $M_{\rm lock}=7044.961$ GeV
+and $B^{-1}=5509.218$ GeV. With the zero-charge-sum input it gives
+$f_S=4377.589$ GeV. These are numerical solutions in that approximation.
+
 ## Hadronic ratios in result 100
 
 To check the remaining result 100 table columns, use the supplied input
@@ -344,3 +386,151 @@ The homogeneity comparison keeps the renormalized dimensionless coupling and
 all $m_i B$ fixed; dimensional transmutation and the calibrated hadron input
 then keep $\Lambda_3B$ and $H_NB$ fixed. The finite matching terms remain
 separate inputs, as stated in result 100.
+
+## Independent check of Proposition 105.4
+
+Fix the relative electric and magnetic representatives of 105.1 with the split weak tangent connection. The local minus pullback transgressions transform at both ends under the same gauge change. The term bearing the descent variation therefore retains its coefficient after integration over the unit colour period. In an external transverse slot the two linear transgressions have weak top-form coefficients $zF_A/\pi$ and $7zF_A/\pi-\ell R_\Sigma/(2\pi)$, since the derivative of a squared curvature contains two copies of the background curvature. The vertical skew connection gives $\ell=-*dX^\flat/2$. An exact weak shift contributes zero curl. Tensor gauge transformations remove the internal exact one-form polarization alongside its longitudinal partner; the remaining electric vector uses a coexact primitive. For a product scalar harmonic with $\lambda=\nu/B^2+\widehat\mu/a^2$, the weak area source has exact fraction $\widehat\mu/(a^2\lambda)$ by the product Hodge decomposition. Its coexact remainder remains in the static norm. The external massive two-form gives the magnetic dual vector with kinetic weight $Z_D/\lambda$, $Z_D=(4\pi^2 Z_6)^{-1}$. Colour derivative legs in the magnetic source vanish against the colour volume form. These facts give the two squares of 105.2 in this representative.
+
+In a first colour harmonic take $z=0$, $X=U\partial_\varphi$ and $c_n=b_{m,n}$. With $R_\Sigma=K_hf^2dt\wedge d\varphi$ the magnetic period is $\frac12\int K_h(f^2 U)'dt$, or $-\frac12\int f^2K_h'U\,dt$. The conformal scale cancels between the weak curl and its Hodge star. The fixed-flux backgrounds of 55 give $f^2=2\exp(u+b+e^{-b}-e^u)$ and $u_{tt}=(e^u-1)f^2$. Choosing $U=u_t$ yields a nonzero period on the nonround member. The harmonic tensor norm is at least $Z_D b_0^2/(2\pi a^2 D_b\lambda_C)$; the old static cost is $(3I_3/B^2)(Q_X+\lambda_Ca^2N_X)$. Their quotient gives the displayed bound and the $a^2/B^4$ scaling. At finite radii the old transverse mass controls the physical triplet profiles in $H^1$, and the two residual squares control the tensor amplitudes in $L^2$. The kinetic embedding of the latter is compact by the weights $1/\lambda_n\to0$. Zero energy forces each physical slot to vanish. Thus this trial bounds an actual positive eigenvalue. The neutral axial profile leaves the Hopf weight $\pm1$ as the sole charge numerator; the mirror calibration has $BM_{\rm mir}>0$.
+
+An independent DOP853 solve in Python/SciPy with $u(0)=-.001$, $u_t(0)=0$ and reflection at the equator gives $(D_b,b_0,Q_X,N_X)=(23.72213665,0.94991695,0.35478566,0.29337946)$. With $a_n=2.6649\times10^{-5}\,\mathrm{GeV}^{-1}$, $B_n^{-1}=4704\,\mathrm{GeV}$ and $BM_{\rm mir}=280/5496$, equating the single-trial bound to the mirror value gives $B^{-1}=1341.33\,\mathrm{GeV}$. This is sufficient on the smaller-$B^{-1}$ side. It determines neither the finite eigenfunction nor the exact crossing.
+
+## Independent check of Proposition 107.1
+
+Put $e=a/B$, $\lambda_C=\nu/B^2$, and test $m^2=d e^2/B^2$. Minimizing each strictly positive tensor diagonal in $Q-m^2K$ gives electric multiplier $Z_6(\lambda_C-m^2)/(\lambda_n-m^2)$ and magnetic multiplier $-Z_Dm^2/(\lambda_n-m^2)$. For the harmonics normalized on $h$, the physical source coefficients are $a^{-1}\widehat b_n$. After multiplication by $B^2$ the $n=0$ electric and magnetic contributions are respectively
+$$
+ Z_6 e^{-2}|L_e|^2/A_h,\qquad
+ -d Z_D |L_m|^2/[(\nu-d e^2)A_h].
+$$
+For $n>0$ the electric coefficient of $|\widehat b_{e,n}|^2$ is $Z_6(\nu-d e^2)/(\widehat\mu_n+\nu e^2-d e^4)$; the corresponding magnetic coefficient is $-Z_Dd e^2/(\widehat\mu_n+\nu e^2-d e^4)$. Since $\widehat\mu_1>0$, the errors from their limits are $O(e^2)\|u\|_{H^1}^2$ at fixed shape and $\nu$. On $L_e=0$ this yields exactly the positive weak form $\mathscr H_\nu$ minus one magnetic period square. The weak energy controls $H^1$ modulo the axial lift. The electric primitive of that lift is nonzero although its period vanishes. Compactness modulo the finite kernel thus gives coercivity of $\mathscr H_\nu$ on $\ker L_e$. The chosen metric trial gives $L_m\ne0$ there. A fixed complementary direction for $L_e$ has positive penalty of order $e^{-2}$; completing its square costs only $O(e^2)$ in the bounded residual form. The limiting sign change occurs at the infimum of 107.1.
+
+Azimuthal averaging preserves $L_m,L_e$ and decreases the invariant quadratic energy. In the surviving axial sector reflection retains odd $U$ and even $z$; the uncoupled parity contributes positive energy. The physical tangential gauge shift has already been removed in this quotient. On the codimension-one subspace $c_0=0$ the old and electric energy control $B^{-2}\|u\|_{H^1}^2$, including the lifted axial kernel. Nonconstant magnetic kinetic weights obey $\lambda_n^{-1}\le a^2/\widehat\mu_1$. The bound on the source and the magnetic square therefore control the full kinetic norm by $O(B^2)Q$ there. This leaves one soft polarization in each first harmonic. Comparing colour degrees at fixed $e_n/\sqrt{\lambda_n}$ and $c_n$ increases the electric and old energy and decreases the magnetic norm. Also $C_\nu\ge(\nu/5) C_5$ for $\nu\ge5$ from the positive electric primitive term and the prefactor in the infimum. The next scalar degree has $\nu=12$; monotonicity gives uniform separation above it. The scalar gap of 106.1 for fixed positive sextet stiffness and the other old coloured gaps complete the ordering. The $j=1$ real colour shell is a complex triplet and its conjugate. In a kinetic-unit soft eigenmode, $Q=O(e^2/B^2)$ implies $\|u\|_{H^1}=O(e)$. The old and electric norms are $O(e^2)$ since their energies dominate $\lambda_C$ times these norms. For $n>0$ the exact magnetic equation $c_n=b_{m,n}/(1-m^2/\lambda_n)$ and the weak gap give the same $O(e^2)$ bound. This puts $1-O(e^2)$ of the kinetic norm in the harmonic magnetic slot.
+
+The cubic-spline program gives $6598.2570$ at spacing $1/8$. A separate Python/SciPy calculation on $0\le t\le22$ used continuous affine fields $U,z,q$, $U(0)=q(0)=q(22)=0$, with one midpoint constraint $q'=A'z/\pi$ per element. This enforces the electric period and represents its primitive with energy $4\pi Z_6\nu\int q^2dt$ on the half-interval. The magnetic constraint is $-\int f^2 K'_hU\,dt=1$. The coefficient $16$ in the vortex gradient and local squares includes the charge-two coupling to the square-root connection. Spacings $0.025,0.0125,0.00625$ give $C_{\rm soft}=6598.2257,6598.2492,6598.2551$, respectively, with $Z_6=0.49604141748$ and $I_3=0.76985123759$. Both methods support the stated four significant figures as a numerical estimate.
+
+## Completed hand reviews of 68.1, 69.1, 71.1 and 78.1
+
+GPT-6.1 Sol completed the independent reviews of these four actual ledger
+statements on 20 November 2026. Fix each stated action and its compact
+background, vary all fields admitted by its physical domain, and test the
+claimed nonnegativity, gap or local inverse. This completes the preceding
+action-level checks with the following spectral and analytic checks. All
+four dispositions are **verified as stated**, with their explicit
+hypotheses. The four Sol ledger rows consequently use `by_hand`.
+
+For **68.1**, the co-closed metric--one-form block, after normalizing the
+one-form by a factor two, has diagonal $t-2,t+2$ and squared off-diagonal
+$2(t-2)$. Its lower eigenvalue is $t-\sqrt{2t}$. Longitudinal and co-closed
+images of the trace-free Lie derivative are orthogonal by polarization of
+the printed norm identity, so the completion also covers representations
+containing both. For the longitudinal four-dimensional matrix, the
+threshold data $(a,b,c,d,p^2,r^2,v^2,s^2,rvs)$ are
+$$
+ (17/6,107/40,82/3,154/3,48,16/3,16,1024/3,512/3)
+$$
+and
+$$
+ (7/2,127/28,30,38,32,24,16,384,384).
+$$
+Expanding $M_3=abc-bp^2-ar^2$ and
+$M_4=(ac-p^2)(bd-v^2)-ab s^2-ar^2d+2arvs$ by hand gives exactly the
+four minors printed for each factor. In particular the fourth-minor
+numerators over denominators $540$ and $14$ are respectively
+$1928935-1396992-418880+522240=635303$ and
+$159797-85344-44688+37632=67397$.
+The derivative Schur margins at the two thresholds are $115/48$ and
+$139/54$; every subtracted term decreases above threshold. At $t=2$ the
+same expansion gives $(4/5)x^2(9x^2+118x+264)$ and
+$(8/7)x^2(9x+68)$. Their remaining roots are negative, giving the stated
+$2\lambda$ scalar gap. The adjoint branching allows the Hermitian
+trace-free tensor and excludes the anti-Hermitian types; the sphere has
+no trace-free tensor at angular degree one. At $t=0$ the form is the
+printed modulus square. The centre-neutral $SU(3)$ weights have first
+nonadjoint nonzero Casimir $t=4$ (weights $(3,0),(0,3)$), sufficient for
+the half-unit bound; scalar weights start at $16/3$ above the adjoint.
+The mixed blocks have eigenvalues $t\pm\sqrt{2t}$ and equal-norm metric
+and Maxwell components in their $t=2$ kernel. Distinct-factor kernels
+share only their metric halves, hence $\|P_cP_w\|\le1/2$. This gives
+$\mathcal Q_c+\mathcal Q_w\ge\min(\lambda_c,\lambda_w)/4$ when both
+representations are nontrivial. With a trivial weak representation no
+weak invariant one-form exists, leaving exactly the external gluon
+polarizations. The coloured vortex and root scalar additions have
+nonnegative weak squares and projective cost at least $2\lambda_c$
+with the stated equal coefficient. These checks cover the full theorem,
+including its kernel and all higher harmonic representations.
+
+For **69.1**, the completed internal functional is an exact sum of
+squares plus $2\int F-\int R$, with both integrals fixed. Its second
+variation and the independently derived null auxiliaries give exactly
+$4U_0^{(2)}+2\|D^0-d\tau/2\|^2+(1/2+1/e)\|d\tau\|^2+
+2Z\|\mathcal G\|^2$. All coefficients stay positive at every compact
+shape and scale; no round harmonic estimate enters. The trace-free Lie
+derivative identity and the pointwise transverse Einstein equation give
+the vector squares with the printed $2Z,4G$ weights. Ordinary scalar
+gradients and the Hodge form give the remaining spectator blocks.
+Thus both the scalar identity and all asserted nonnegative sectors of
+the actual Proposition 69.1 have been checked. No claim about a
+shape-independent numerical weak gap is required by that proposition.
+
+For **71.1**, the projected horizontal action, its null sources and
+remaining coordinate equations are checked above. The common linear
+Hamiltonian constraint and positive added spatial squares give fibre
+positivity; time reversal and the positive propagating kinetic form
+transfer it to the physical mass form. The extra projected root
+component has colour Casimir at least $2\lambda_c$, so the colour
+comparison still has gap $\gamma_c$ away from its Killing/compensator
+kernel. In the sector containing that kernel, the fields close into the
+fibre vector and free colour Maxwell one-form blocks. At nonzero
+relative circle frequency the covariant lower bound is $n^2/L^2$, and
+the added vector squares stay nonnegative. At zero frequency,
+$H^1(\Sigma)=0$ gives the Hodge gap $\mu$ away from $d\chi$. The unit
+curl lift costs $4\lambda_c$ on the remaining uniform Killing metric
+component. Selecting the free Maxwell half on the nonharmonic part and
+the metric half on the uniform circle part gives
+$P_cRP_c=P_c/2$. Consequently
+$\|P_c(1-R)\|=1/\sqrt2$ and
+$1-P_c+R\ge1-1/\sqrt2$. This proves precisely the stated zero-frequency
+bound; $4\lambda_c>\gamma_c$ makes the curl coefficient harmless in
+its minimum. The flat-index external gluon and its $n=\pm1$ harmonics
+annihilate all root and curl squares, so the lower bound is attained at
+$1/L$ under the strict inequality. The stated round and asymptotic
+regions satisfy it: at round matching $L^{-2}/\lambda_c=2/(5k^2)$;
+on both matched limiting branches it tends to $1/(4k^2)$ while
+$\mu/\lambda_c\to\infty$. This verifies all components of the actual
+Theorem 71.1, including nonnegativity and the exact first threshold.
+
+For **78.1**, direct substitution gives
+$D=\rho(1+2s)$ and $R=\rho(1-s)$, proving the printed light inverse and
+its nonsingular Jacobian on the strict positive interior. The scaled
+microscopic inverse is positive and smooth there. The compact-sphere
+proof now written in result 78 was checked through both regular pole
+charts, the normalized holomorphic sections and fermion Gram matrices,
+the real elliptic root projector and its uniformly invertible
+mean-zero scalar operator. The common form domains and the round
+kernel give a uniform angular complement inverse by the elliptic
+estimate and compact embedding. The exact photon is removed by a
+smooth finite-rank kinetic projection. The linear flux term has zero
+light--light block, so the Schur matrix factors as
+$L^2\widehat S$ with analytic coefficients. Its limiting finite pencil
+contains the flux-compensated rotations and constant-vortex harmonic
+obstruction, as required by the displayed leading masses. Simple
+sourced poles and residues, and the contact after cancellation of its
+$L^{-2}$ factor by $1/(CV)$, have the required parameter derivatives.
+Thus the parameterized inverse theorem applies; it only needs
+continuity in $L$ with joint continuity of the microscopic derivative.
+The stronger analytic extension of the reduced forms supplies this.
+The theorem proves the local finite inverse for sufficiently small
+$L$ and supplies no certified threshold for the printed finite example.
+
+Separately, Python/SciPy runs of `paper/finite_flux_currents.py --degree 12`
+and the same command with `--hold-out-fermi`, with
+`OPENBLAS_NUM_THREADS=1`, reproduce both finite illustrations. The first
+gives $\epsilon=4.5499728922\times10^{-8}$, $h_0=0.12461445388$,
+$a/L=0.055803145564$, $\gamma=0.046256232529$,
+$e_*^2=0.098077379605$, $M_v=1659.1344409$ GeV and charged-contact
+fraction $0.9999992159$. The held-out run gives
+$G_F=1.1609294622\times10^{-5}$ GeV$^{-2}$,
+$M_v=2357.6915528$ GeV and $e_*^2=0.098105389455$.
+These are numerical reproduction checks of the supplied Galerkin
+implementation, recorded separately from the full hand review of the
+proposition's existence and uniqueness statement.
