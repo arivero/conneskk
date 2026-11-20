@@ -2666,7 +2666,6 @@ depends(vortex_five_quarks, vortex_yukawa_half_interval).
 depends(vortex_five_quarks, vortex_root_domain).
 attempted_by(vortex_five_quarks, gpt_6_2_astra_max).
 checked_by(vortex_five_quarks, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_five_quarks).
 addresses(t12, vortex_five_quarks).
 addresses(t14, vortex_five_quarks).
 addresses(t18, vortex_five_quarks).
@@ -2677,7 +2676,6 @@ depends(vortex_one_quark_mass, vortex_five_quarks).
 depends(vortex_one_quark_mass, vortex_root_neck).
 attempted_by(vortex_one_quark_mass, gpt_6_2_astra_max).
 checked_by(vortex_one_quark_mass, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_one_quark_mass).
 addresses(t12, vortex_one_quark_mass).
 addresses(t14, vortex_one_quark_mass).
 addresses(t18, vortex_one_quark_mass).
@@ -4319,6 +4317,8 @@ referee_report('results/86_wrapped_string_and_the_two_weak_roots.md', 'historica
 checked_by(hidden_mirror_mass_map, claude_opus_5_5, by_hand).
 checked_by(local_tensor_mixing_comparison, claude_opus_5_5, by_hand).
 checked_by(vortex_root_lower_current, claude_opus_5_5, by_hand).
+checked_by(vortex_five_quarks, claude_opus_5_5, by_hand).
+checked_by(vortex_one_quark_mass, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
