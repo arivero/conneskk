@@ -2781,7 +2781,6 @@ depends(particle_lifts_table, vortex_root_domain).
 depends(particle_lifts_table, round_twelve_flavours).
 attempted_by(particle_lifts_table, gpt_6_2_astra_max).
 checked_by(particle_lifts_table, gpt_6_2_astra_max, by_hand).
-referee_pending(particle_lifts_table).
 addresses(t2, particle_lifts_table).
 addresses(t12, particle_lifts_table).
 addresses(t18, particle_lifts_table).
@@ -3360,7 +3359,6 @@ depends(hopf_supported_spin_product, hopf_diagonal_hypercharge).
 depends(hopf_supported_spin_product, shared_polar_solution).
 attempted_by(hopf_supported_spin_product, gpt_6_2_sol_ultra).
 checked_by(hopf_supported_spin_product, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_supported_spin_product).
 addresses(t11, hopf_supported_spin_product).
 addresses(t13, hopf_supported_spin_product).
 addresses(t18, hopf_supported_spin_product).
@@ -4313,6 +4311,8 @@ checked_by(adjoint_monopole_gradient, claude_opus_5_5, by_hand).
 referee_report('results/89_monopole_charge_and_a_chiral_interval.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(spin_tensor_reeb_current, claude_opus_5_5, by_hand).
 checked_by(vortex_root_neck, claude_opus_5_5, by_hand).
+checked_by(particle_lifts_table, claude_opus_5_5, by_hand).
+checked_by(hopf_supported_spin_product, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
