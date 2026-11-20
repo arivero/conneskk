@@ -3065,7 +3065,6 @@ depends(root_phase_kinetic, root_qcd_angle).
 depends(root_phase_kinetic, finite_weak_current_inverse).
 attempted_by(root_phase_kinetic, gpt_6_2_astra_max).
 checked_by(root_phase_kinetic, gpt_6_2_astra_max, by_hand).
-referee_pending(root_phase_kinetic).
 addresses(t4, root_phase_kinetic).
 addresses(t13, root_phase_kinetic).
 
@@ -4320,6 +4319,7 @@ checked_by(vortex_one_quark_mass, claude_opus_5_5, by_hand).
 checked_by(vortex_root_exchange_range, claude_opus_5_5, by_hand).
 checked_by(ir_moduli_inverse, claude_opus_5_5, by_hand).
 referee_report('results/83_two_infrared_coordinates_on_the_weak_family.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(root_phase_kinetic, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
