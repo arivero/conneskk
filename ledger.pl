@@ -3915,7 +3915,6 @@ depends(hopf_soft_tensor_ward_and_covariant_term, hopf_transverse_current_pencil
 depends(hopf_soft_tensor_ward_and_covariant_term, positive_proca_current_comparison).
 attempted_by(hopf_soft_tensor_ward_and_covariant_term, gpt_6_2_sol_ultra).
 checked_by(hopf_soft_tensor_ward_and_covariant_term, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_soft_tensor_ward_and_covariant_term).
 addresses(t4, hopf_soft_tensor_ward_and_covariant_term).
 addresses(t13, hopf_soft_tensor_ward_and_covariant_term).
 addresses(t18, hopf_soft_tensor_ward_and_covariant_term).
@@ -3927,7 +3926,6 @@ depends(hopf_soft_tensor_pauli_ambiguity, hopf_bulk_two_form_pullback).
 depends(hopf_soft_tensor_pauli_ambiguity, hopf_volume_tensor_rank_one_potential).
 attempted_by(hopf_soft_tensor_pauli_ambiguity, gpt_6_2_sol_ultra).
 checked_by(hopf_soft_tensor_pauli_ambiguity, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_soft_tensor_pauli_ambiguity).
 addresses(t4, hopf_soft_tensor_pauli_ambiguity).
 addresses(t13, hopf_soft_tensor_pauli_ambiguity).
 addresses(t18, hopf_soft_tensor_pauli_ambiguity).
@@ -4321,6 +4319,8 @@ referee_report('results/104_hopf_local_scalar_constraints_and_sextet.md', 'histo
 checked_by(hopf_compact_spectator_threshold, claude_opus_5_5, by_hand).
 checked_by(hopf_locked_chiral_anomaly_spectrum, claude_opus_5_5, by_hand).
 checked_by(hopf_radial_tower_kinetic_matching_inputs, claude_opus_5_5, by_hand).
+checked_by(hopf_soft_tensor_ward_and_covariant_term, claude_opus_5_5, by_hand).
+checked_by(hopf_soft_tensor_pauli_ambiguity, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
