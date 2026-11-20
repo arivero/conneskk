@@ -140,3 +140,6 @@ Also verified, pending flag kept: in `k3_hypercharge_period_bound` (88.3), $J(y,
 
 Also verified, pending flag kept: in `wrapped_m5_boundary_charge` (87.3), $\mathrm{PD}_D(mh\wedge k)=m\,\mathrm{PD}_X(h)\times\mathrm{pt}$ and its pairing with the flux, $m^2\,h\cdot h$, hold. The relation $S_5f_\theta=\sqrt{C_{\rm ext}}$ was not checked.
 | `membrane_colour_instanton` (84.5), checked in full | results/84 | The colour term per family is $-2c_2^cv$ (80.1), so $N$ net families need integers $k_i$ with $\sum k_iq_i=2N$ for axions of charges $q_i$. This is solvable iff $\gcd(q_i)\mid2N$. A single charge-four axion fails for $N=3$ since $4\nmid6$. |
+| `adjoint_monopole_gradient` (89.1), checked in full | results/89 | A charged vector of monopole charge $q=N/2\ge1$ on $S^2_r$ has its lowest helicity-aligned harmonic at $j=q-1$ with $m^2=-q/r^2$ (the Randjbar-Daemi–Salam–Strathdee instability); the constant adjoint Higgs adds $\mu^2$. For $N=1$ no $j=q-1$ level exists, consistent with the stated range $N\ge2$. The Cartan Bogomolny gradient has nonnegative second variation by the BPS completion of squares. |
+
+Also verified, pending flag kept: in `tensor_sphere_pushforward` (90.2), the two axion charges $2$ and $14$ are the sphere pushforwards of $v^2$ and $7v^2$. The colour-angle term $\Theta_0+3u+v_m$ was not traced.

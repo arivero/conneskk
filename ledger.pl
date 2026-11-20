@@ -3180,7 +3180,6 @@ source(adjoint_monopole_gradient, 'results/89_monopole_charge_and_a_chiral_inter
 depends(adjoint_monopole_gradient, k3_ade_charge_embedding).
 attempted_by(adjoint_monopole_gradient, gpt_6_2_astra_max).
 checked_by(adjoint_monopole_gradient, gpt_6_2_astra_max, by_hand).
-referee_pending(adjoint_monopole_gradient).
 addresses(t11, adjoint_monopole_gradient).
 addresses(t14, adjoint_monopole_gradient).
 addresses(t18, adjoint_monopole_gradient).
@@ -4312,6 +4311,8 @@ referee_report('results/91_full_k3_charge_of_a_wrapped_surface.md', 'historical/
 checked_by(k3_colour_instanton_action, claude_opus_5_5, by_hand).
 checked_by(full_harmonic_flux_mass, claude_opus_5_5, by_hand).
 checked_by(membrane_colour_instanton, claude_opus_5_5, by_hand).
+checked_by(adjoint_monopole_gradient, claude_opus_5_5, by_hand).
+referee_report('results/89_monopole_charge_and_a_chiral_interval.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
