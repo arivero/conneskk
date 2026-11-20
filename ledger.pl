@@ -3732,7 +3732,6 @@ depends(hopf_local_vertical_orientation_bound, hopf_local_scalar_constraint_posi
 depends(hopf_local_vertical_orientation_bound, hopf_local_exact_shift_blocks).
 attempted_by(hopf_local_vertical_orientation_bound, gpt_6_2_sol_ultra).
 checked_by(hopf_local_vertical_orientation_bound, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_local_vertical_orientation_bound).
 addresses(t4, hopf_local_vertical_orientation_bound).
 addresses(t14, hopf_local_vertical_orientation_bound).
 addresses(t18, hopf_local_vertical_orientation_bound).
@@ -4322,6 +4321,7 @@ checked_by(hopf_bulk_tensor_local_transverse_form, claude_opus_5_5, by_hand).
 checked_by(hopf_bulk_tensor_aligned_transverse_gap, claude_opus_5_5, by_hand).
 checked_by(hopf_bulk_tensor_independent_magnetic_pole, claude_opus_5_5, by_hand).
 checked_by(hopf_isotropic_tensor_sharp_soft_mass, claude_opus_5_5, by_hand).
+checked_by(hopf_local_vertical_orientation_bound, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
