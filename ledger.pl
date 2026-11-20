@@ -3687,7 +3687,6 @@ depends(hopf_local_scalar_constraint_positivity, hopf_full_maxwell_coexact_block
 depends(hopf_local_scalar_constraint_positivity, hopf_local_exact_shift_blocks).
 attempted_by(hopf_local_scalar_constraint_positivity, gpt_6_2_sol_ultra).
 checked_by(hopf_local_scalar_constraint_positivity, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_local_scalar_constraint_positivity).
 addresses(t4, hopf_local_scalar_constraint_positivity).
 addresses(t14, hopf_local_scalar_constraint_positivity).
 addresses(t18, hopf_local_scalar_constraint_positivity).
@@ -4327,6 +4326,7 @@ checked_by(hopf_full_auxiliary_coloured_minimum, claude_opus_5_5, by_hand).
 checked_by(hopf_local_exact_shift_blocks, claude_opus_5_5, by_hand).
 checked_by(hopf_local_transverse_vector_minimum, claude_opus_5_5, by_hand).
 referee_report('results/103_hopf_local_connection_transverse_shell.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(hopf_local_scalar_constraint_positivity, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
