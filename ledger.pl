@@ -3424,7 +3424,6 @@ depends(local_tensor_mixing_comparison, dual_tensor_transverse_pencil).
 depends(local_tensor_mixing_comparison, quotient_tensor_colour_gap).
 attempted_by(local_tensor_mixing_comparison, gpt_6_2_sol_ultra).
 checked_by(local_tensor_mixing_comparison, gpt_6_2_sol_ultra, by_hand).
-referee_pending(local_tensor_mixing_comparison).
 addresses(t4, local_tensor_mixing_comparison).
 addresses(t18, local_tensor_mixing_comparison).
 
@@ -4319,6 +4318,7 @@ checked_by(wrapped_string_resultant, claude_opus_5_5, by_hand).
 checked_by(wrapped_string_phase_potential, claude_opus_5_5, by_hand).
 referee_report('results/86_wrapped_string_and_the_two_weak_roots.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(hidden_mirror_mass_map, claude_opus_5_5, by_hand).
+checked_by(local_tensor_mixing_comparison, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
