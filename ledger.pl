@@ -2886,7 +2886,6 @@ depends(vortex_flux_axion, shared_neutral_poles).
 depends(vortex_flux_axion, vortex_ir_neutral_current).
 attempted_by(vortex_flux_axion, gpt_6_2_astra_max).
 checked_by(vortex_flux_axion, gpt_6_2_astra_max, by_hand).
-referee_pending(vortex_flux_axion).
 addresses(t4, vortex_flux_axion).
 addresses(t18, vortex_flux_axion).
 
@@ -4318,6 +4317,7 @@ checked_by(thomson_radius_matching, claude_opus_5_5, by_hand).
 checked_by(positive_proca_current_comparison, claude_opus_5_5, by_hand).
 checked_by(spectator_photon_subtraction_bound, claude_opus_5_5, by_hand).
 checked_by(colour_wilson_trial, claude_opus_5_5, by_hand).
+checked_by(vortex_flux_axion, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
