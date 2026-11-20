@@ -3516,7 +3516,6 @@ depends(hopf_intrinsic_colour_stabilizers, hopf_transverse_current_pencil).
 depends(hopf_intrinsic_colour_stabilizers, hopf_broken_colour_vectors).
 attempted_by(hopf_intrinsic_colour_stabilizers, gpt_6_2_sol_ultra).
 checked_by(hopf_intrinsic_colour_stabilizers, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_intrinsic_colour_stabilizers).
 addresses(t4, hopf_intrinsic_colour_stabilizers).
 addresses(t14, hopf_intrinsic_colour_stabilizers).
 addresses(t18, hopf_intrinsic_colour_stabilizers).
@@ -4320,6 +4319,7 @@ referee_report('results/83_two_infrared_coordinates_on_the_weak_family.md', 'his
 checked_by(root_phase_kinetic, claude_opus_5_5, by_hand).
 checked_by(hopf_locking_weak_charges, claude_opus_5_5, by_hand).
 checked_by(hopf_scalar_windows, claude_opus_5_5, by_hand).
+checked_by(hopf_intrinsic_colour_stabilizers, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
