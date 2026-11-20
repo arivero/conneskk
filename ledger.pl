@@ -3890,7 +3890,6 @@ depends(hopf_radial_tower_kinetic_matching_inputs, hopf_sextet_euclidean_photon_
 depends(hopf_radial_tower_kinetic_matching_inputs, finite_electric_matching).
 attempted_by(hopf_radial_tower_kinetic_matching_inputs, gpt_6_2_sol_ultra).
 checked_by(hopf_radial_tower_kinetic_matching_inputs, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_radial_tower_kinetic_matching_inputs).
 addresses(t4, hopf_radial_tower_kinetic_matching_inputs).
 addresses(t13, hopf_radial_tower_kinetic_matching_inputs).
 addresses(t14, hopf_radial_tower_kinetic_matching_inputs).
@@ -4321,6 +4320,7 @@ checked_by(hopf_local_normal_scalar_towers, claude_opus_5_5, by_hand).
 referee_report('results/104_hopf_local_scalar_constraints_and_sextet.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(hopf_compact_spectator_threshold, claude_opus_5_5, by_hand).
 checked_by(hopf_locked_chiral_anomaly_spectrum, claude_opus_5_5, by_hand).
+checked_by(hopf_radial_tower_kinetic_matching_inputs, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
