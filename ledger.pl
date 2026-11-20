@@ -2580,7 +2580,6 @@ depends(projective_flux_octet, shared_polar_solution).
 depends(projective_flux_octet, vortex_root_vacua).
 attempted_by(projective_flux_octet, gpt_6_2_astra_max).
 checked_by(projective_flux_octet, gpt_6_2_astra_max, by_hand).
-referee_pending(projective_flux_octet).
 addresses(t13, projective_flux_octet).
 addresses(t18, projective_flux_octet).
 
@@ -3497,7 +3496,6 @@ depends(hopf_colour_octet_instability, hopf_supported_spin_product).
 depends(hopf_colour_octet_instability, projective_flux_octet).
 attempted_by(hopf_colour_octet_instability, gpt_6_2_sol_ultra).
 checked_by(hopf_colour_octet_instability, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_colour_octet_instability).
 addresses(t11, hopf_colour_octet_instability).
 addresses(t14, hopf_colour_octet_instability).
 addresses(t18, hopf_colour_octet_instability).
@@ -4322,6 +4320,8 @@ checked_by(hopf_bulk_tensor_aligned_transverse_gap, claude_opus_5_5, by_hand).
 checked_by(hopf_bulk_tensor_independent_magnetic_pole, claude_opus_5_5, by_hand).
 checked_by(hopf_isotropic_tensor_sharp_soft_mass, claude_opus_5_5, by_hand).
 checked_by(hopf_local_vertical_orientation_bound, claude_opus_5_5, by_hand).
+checked_by(hopf_colour_octet_instability, claude_opus_5_5, by_hand).
+checked_by(projective_flux_octet, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
