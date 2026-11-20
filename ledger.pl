@@ -2461,7 +2461,6 @@ depends(shared_circle_curvature, shared_circle_window).
 depends(shared_circle_curvature, gh1_helix_geometry).
 attempted_by(shared_circle_curvature, gpt_6_2_astra_max).
 checked_by(shared_circle_curvature, gpt_6_2_astra_max, by_hand).
-referee_pending(shared_circle_curvature).
 addresses(t13, shared_circle_curvature).
 addresses(t18, shared_circle_curvature).
 
@@ -4314,6 +4313,7 @@ checked_by(particle_lifts_table, claude_opus_5_5, by_hand).
 checked_by(hopf_supported_spin_product, claude_opus_5_5, by_hand).
 checked_by(shared_qcd_current, claude_opus_5_5, by_hand).
 referee_report('results/61_colour_thresholds_and_weak_current.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(shared_circle_curvature, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
