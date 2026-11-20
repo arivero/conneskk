@@ -3665,7 +3665,6 @@ depends(hopf_local_exact_shift_blocks, hopf_local_coexact_shell_closure).
 depends(hopf_local_exact_shift_blocks, hopf_full_maxwell_coexact_block).
 attempted_by(hopf_local_exact_shift_blocks, gpt_6_2_sol_ultra).
 checked_by(hopf_local_exact_shift_blocks, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_local_exact_shift_blocks).
 addresses(t4, hopf_local_exact_shift_blocks).
 addresses(t14, hopf_local_exact_shift_blocks).
 addresses(t18, hopf_local_exact_shift_blocks).
@@ -3677,7 +3676,6 @@ depends(hopf_local_transverse_vector_minimum, hopf_broken_colour_vectors).
 depends(hopf_local_transverse_vector_minimum, hopf_comoving_charged_limit).
 attempted_by(hopf_local_transverse_vector_minimum, gpt_6_2_sol_ultra).
 checked_by(hopf_local_transverse_vector_minimum, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_local_transverse_vector_minimum).
 addresses(t4, hopf_local_transverse_vector_minimum).
 addresses(t14, hopf_local_transverse_vector_minimum).
 addresses(t18, hopf_local_transverse_vector_minimum).
@@ -4326,6 +4324,9 @@ checked_by(quotient_tensor_colour_gap, claude_opus_5_5, by_hand).
 checked_by(hopf_projected_coloured_threshold, claude_opus_5_5, by_hand).
 checked_by(hopf_projected_nonround_boson, claude_opus_5_5, by_hand).
 checked_by(hopf_full_auxiliary_coloured_minimum, claude_opus_5_5, by_hand).
+checked_by(hopf_local_exact_shift_blocks, claude_opus_5_5, by_hand).
+checked_by(hopf_local_transverse_vector_minimum, claude_opus_5_5, by_hand).
+referee_report('results/103_hopf_local_connection_transverse_shell.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
