@@ -3055,7 +3055,6 @@ depends(spin_tensor_reeb_current, lecture_projective_circle_gap).
 depends(spin_tensor_reeb_current, spin_seven_periods).
 attempted_by(spin_tensor_reeb_current, gpt_6_2_astra_max).
 checked_by(spin_tensor_reeb_current, gpt_6_2_astra_max, by_hand).
-referee_pending(spin_tensor_reeb_current).
 addresses(t4, spin_tensor_reeb_current).
 addresses(t18, spin_tensor_reeb_current).
 
@@ -4313,6 +4312,7 @@ checked_by(full_harmonic_flux_mass, claude_opus_5_5, by_hand).
 checked_by(membrane_colour_instanton, claude_opus_5_5, by_hand).
 checked_by(adjoint_monopole_gradient, claude_opus_5_5, by_hand).
 referee_report('results/89_monopole_charge_and_a_chiral_interval.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
+checked_by(spin_tensor_reeb_current, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
