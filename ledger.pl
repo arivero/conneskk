@@ -2358,7 +2358,6 @@ depends(two_endpoint_scalar_count, l21_exotic).
 depends(two_endpoint_scalar_count, d11_so30_zero).
 attempted_by(two_endpoint_scalar_count, gpt_6_2_astra_max).
 checked_by(two_endpoint_scalar_count, gpt_6_2_astra_max, by_hand).
-referee_pending(two_endpoint_scalar_count).
 addresses(t14, two_endpoint_scalar_count).
 
 claim(two_endpoint_fixed_energy_count, proposition, proved, "Two-endpoint paper, counting at fixed probe energy", "At fixed sphere radius R and E > 0, two Neumann intervals of length t give t^2/(4 pi) times the sum of d_j (E^2 - Lambda_j) over sphere eigenvalues below E^2, with error O(1+tE) per real scalar at fixed R,E. This includes only the spherical constant below its first positive threshold.").
@@ -4324,6 +4323,7 @@ referee_report('results/93_tensor_photon_and_the_five_dimensional_pole.md', 'his
 checked_by(hopf_comoving_charged_limit, claude_opus_5_5, by_hand).
 checked_by(two_endpoint_upper_matter, claude_opus_5_5, by_hand).
 checked_by(two_endpoint_trace_matching, claude_opus_5_5, by_hand).
+checked_by(two_endpoint_scalar_count, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
