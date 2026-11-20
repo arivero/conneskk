@@ -3803,7 +3803,6 @@ depends(hopf_bulk_tensor_scalar_gauss_gap, hopf_local_full_boson_ordering).
 depends(hopf_bulk_tensor_scalar_gauss_gap, hopf_local_calibrated_coloured_gap).
 attempted_by(hopf_bulk_tensor_scalar_gauss_gap, gpt_6_2_sol_ultra).
 checked_by(hopf_bulk_tensor_scalar_gauss_gap, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_bulk_tensor_scalar_gauss_gap).
 addresses(t4, hopf_bulk_tensor_scalar_gauss_gap).
 addresses(t13, hopf_bulk_tensor_scalar_gauss_gap).
 addresses(t14, hopf_bulk_tensor_scalar_gauss_gap).
@@ -4327,6 +4326,7 @@ checked_by(hopf_local_scalar_constraint_positivity, claude_opus_5_5, by_hand).
 checked_by(hopf_local_calibrated_coloured_gap, claude_opus_5_5, by_hand).
 checked_by(hopf_local_full_boson_ordering, claude_opus_5_5, by_hand).
 checked_by(hopf_bulk_tensor_anisotropic_vector_order, claude_opus_5_5, by_hand).
+checked_by(hopf_bulk_tensor_scalar_gauss_gap, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
