@@ -3001,7 +3001,6 @@ depends(ir_moduli_inverse, weak_root_curvature).
 depends(ir_moduli_inverse, matched_colour_trajectory).
 attempted_by(ir_moduli_inverse, gpt_6_2_astra_max).
 checked_by(ir_moduli_inverse, gpt_6_2_astra_max, by_hand).
-referee_pending(ir_moduli_inverse).
 addresses(t13, ir_moduli_inverse).
 addresses(t18, ir_moduli_inverse).
 
@@ -4319,6 +4318,8 @@ checked_by(vortex_root_lower_current, claude_opus_5_5, by_hand).
 checked_by(vortex_five_quarks, claude_opus_5_5, by_hand).
 checked_by(vortex_one_quark_mass, claude_opus_5_5, by_hand).
 checked_by(vortex_root_exchange_range, claude_opus_5_5, by_hand).
+checked_by(ir_moduli_inverse, claude_opus_5_5, by_hand).
+referee_report('results/83_two_infrared_coordinates_on_the_weak_family.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
