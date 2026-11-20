@@ -3365,7 +3365,6 @@ depends(quotient_tensor_colour_gap, dual_tensor_transverse_pencil).
 depends(quotient_tensor_colour_gap, dual_tensor_finite_neck).
 attempted_by(quotient_tensor_colour_gap, gpt_6_2_sol_ultra).
 checked_by(quotient_tensor_colour_gap, gpt_6_2_sol_ultra, by_hand).
-referee_pending(quotient_tensor_colour_gap).
 addresses(t4, quotient_tensor_colour_gap).
 addresses(t13, quotient_tensor_colour_gap).
 addresses(t14, quotient_tensor_colour_gap).
@@ -4326,6 +4325,7 @@ referee_report('results/78_finite_weak_pole_and_current_match.md', 'historical/r
 referee_pending(hadron_root_slope).
 checked_by(ade_interval_yukawa, claude_opus_5_5, by_hand).
 checked_by(dual_tensor_photon_cost, claude_opus_5_5, by_hand).
+checked_by(quotient_tensor_colour_gap, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
