@@ -3632,7 +3632,6 @@ depends(hopf_full_auxiliary_coloured_minimum, hopf_full_maxwell_matched_threshol
 depends(hopf_full_auxiliary_coloured_minimum, hopf_transverse_current_pencil).
 attempted_by(hopf_full_auxiliary_coloured_minimum, gpt_6_2_sol_ultra).
 checked_by(hopf_full_auxiliary_coloured_minimum, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_full_auxiliary_coloured_minimum).
 addresses(t4, hopf_full_auxiliary_coloured_minimum).
 addresses(t13, hopf_full_auxiliary_coloured_minimum).
 addresses(t14, hopf_full_auxiliary_coloured_minimum).
@@ -4326,6 +4325,7 @@ checked_by(dual_tensor_photon_cost, claude_opus_5_5, by_hand).
 checked_by(quotient_tensor_colour_gap, claude_opus_5_5, by_hand).
 checked_by(hopf_projected_coloured_threshold, claude_opus_5_5, by_hand).
 checked_by(hopf_projected_nonround_boson, claude_opus_5_5, by_hand).
+checked_by(hopf_full_auxiliary_coloured_minimum, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
