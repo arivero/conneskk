@@ -3001,7 +3001,6 @@ depends(weak_root_curvature, rooted_current_projection).
 depends(weak_root_curvature, finite_weak_current_inverse).
 attempted_by(weak_root_curvature, gpt_6_2_astra_max).
 checked_by(weak_root_curvature, gpt_6_2_astra_max, by_hand).
-referee_pending(weak_root_curvature).
 addresses(t4, weak_root_curvature).
 addresses(t18, weak_root_curvature).
 
@@ -4314,6 +4313,8 @@ checked_by(hopf_supported_spin_product, claude_opus_5_5, by_hand).
 checked_by(shared_qcd_current, claude_opus_5_5, by_hand).
 referee_report('results/61_colour_thresholds_and_weak_current.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(shared_circle_curvature, claude_opus_5_5, by_hand).
+checked_by(weak_root_curvature, claude_opus_5_5, by_hand).
+referee_report('results/82_opposite_root_response_of_the_nucleon.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
