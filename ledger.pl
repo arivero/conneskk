@@ -3620,7 +3620,6 @@ depends(hopf_full_maxwell_coexact_block, hopf_transverse_current_pencil).
 depends(hopf_full_maxwell_coexact_block, vortex_constraint_squares).
 attempted_by(hopf_full_maxwell_coexact_block, gpt_6_2_sol_ultra).
 checked_by(hopf_full_maxwell_coexact_block, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_full_maxwell_coexact_block).
 addresses(t4, hopf_full_maxwell_coexact_block).
 addresses(t14, hopf_full_maxwell_coexact_block).
 addresses(t18, hopf_full_maxwell_coexact_block).
@@ -4321,6 +4320,7 @@ checked_by(shared_winding_hadron, claude_opus_5_5, by_hand).
 checked_by(hopf_nonround_covariant_core, claude_opus_5_5, by_hand).
 checked_by(dual_tensor_transverse_pencil, claude_opus_5_5, by_hand).
 checked_by(hopf_full_maxwell_matched_threshold, claude_opus_5_5, by_hand).
+checked_by(hopf_full_maxwell_coexact_block, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
