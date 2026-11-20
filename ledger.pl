@@ -3109,7 +3109,6 @@ depends(wrapped_m5_boundary_charge, dual_four_cycle_flux).
 depends(wrapped_m5_boundary_charge, full_harmonic_flux_mass).
 attempted_by(wrapped_m5_boundary_charge, gpt_6_2_astra_max).
 checked_by(wrapped_m5_boundary_charge, gpt_6_2_astra_max, by_hand).
-referee_pending(wrapped_m5_boundary_charge).
 addresses(t11, wrapped_m5_boundary_charge).
 addresses(t18, wrapped_m5_boundary_charge).
 
@@ -4324,6 +4323,7 @@ checked_by(hopf_comoving_charged_limit, claude_opus_5_5, by_hand).
 checked_by(two_endpoint_upper_matter, claude_opus_5_5, by_hand).
 checked_by(two_endpoint_trace_matching, claude_opus_5_5, by_hand).
 checked_by(two_endpoint_scalar_count, claude_opus_5_5, by_hand).
+checked_by(wrapped_m5_boundary_charge, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
