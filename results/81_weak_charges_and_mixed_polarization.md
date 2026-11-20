@@ -38,4 +38,4 @@ For numerical central values use the Mainz conventions $s_0=0.23857$, $\Delta\al
 
 These calculations show where the neutral-target cancellation helps. Photon mixing modifies the apparent coupling of a massive vector to a *charged* individual target. A neutral vector sum and an axial electron carry zero total electric charge at zero momentum, removing this specific subtraction ambiguity. Nonuniversal vertex corrections, electroweak boxes, asymmetric mass deformations and explicit charged-current matching still need to be included in an experimental inference.
 
-**Provenance.** Derived by GPT-6.2-Astra max. The finite current contractions use Python and the spacelike polarization calculation uses published QCD inputs. Independent scientific review is pending.
+**Provenance.** Derived by GPT-6.2-Astra max. The finite current contractions use Python and the spacelike polarization calculation uses published QCD inputs. Claude Opus 5.5 checked every ledger claim of this file by hand on 20 November 2026 and found no error (ledger `checked_by` rows).

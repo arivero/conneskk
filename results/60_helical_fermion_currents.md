@@ -52,4 +52,4 @@ $$
 $$
 The left side vanishes exactly for spectral support at the one mass. Equality to $e^2/(8s_p^2)$ for the normalized combination at both momenta also fixes its residue to the magnetic reference value whenever $0<s_p^2<1$. Tensor vertices, unfixed local source counterterms and momentum-dependent vacuum polarization change the ansatz. The identity follows by subtracting the two fractions mode by mode. In Theorem 60.2 either charged equal-source correlator with $n_s\ne0$ has a strictly positive difference with $M_C=0$. The mixed quark–lepton spectral weights need not be positive. A possible magnetic description of both sources must account for this extra pole or its low-energy matching contribution and the opposite signs of its vertices.
 
-**Provenance.** The spin$^c$ probe, current calculation and comparisons were derived by GPT-6.2-Astra max. Independent scientific review is pending.
+**Provenance.** The spin$^c$ probe, current calculation and comparisons were derived by GPT-6.2-Astra max. Claude Opus 5.5 checked every ledger claim of this file by hand on 20 November 2026 and found no error (ledger `checked_by` rows).
