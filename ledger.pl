@@ -3720,7 +3720,6 @@ depends(hopf_local_calibrated_coloured_gap, hopf_full_maxwell_matched_threshold)
 depends(hopf_local_calibrated_coloured_gap, hopf_mirror_particle_threshold).
 attempted_by(hopf_local_calibrated_coloured_gap, gpt_6_2_sol_ultra).
 checked_by(hopf_local_calibrated_coloured_gap, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_local_calibrated_coloured_gap).
 addresses(t4, hopf_local_calibrated_coloured_gap).
 addresses(t13, hopf_local_calibrated_coloured_gap).
 addresses(t14, hopf_local_calibrated_coloured_gap).
@@ -3733,7 +3732,6 @@ depends(hopf_local_full_boson_ordering, hopf_local_transverse_vector_minimum).
 depends(hopf_local_full_boson_ordering, hopf_local_normal_scalar_towers).
 attempted_by(hopf_local_full_boson_ordering, gpt_6_2_sol_ultra).
 checked_by(hopf_local_full_boson_ordering, gpt_6_2_sol_ultra, by_hand).
-referee_pending(hopf_local_full_boson_ordering).
 addresses(t4, hopf_local_full_boson_ordering).
 addresses(t13, hopf_local_full_boson_ordering).
 addresses(t14, hopf_local_full_boson_ordering).
@@ -4327,6 +4325,8 @@ checked_by(hopf_local_exact_shift_blocks, claude_opus_5_5, by_hand).
 checked_by(hopf_local_transverse_vector_minimum, claude_opus_5_5, by_hand).
 referee_report('results/103_hopf_local_connection_transverse_shell.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
 checked_by(hopf_local_scalar_constraint_positivity, claude_opus_5_5, by_hand).
+checked_by(hopf_local_calibrated_coloured_gap, claude_opus_5_5, by_hand).
+checked_by(hopf_local_full_boson_ordering, claude_opus_5_5, by_hand).
 %% ---------------------------------------------------------------- consistency tests
 :- begin_tests(ledger).
 test(every_claim_has_a_source, [nondet]) :- forall(claim(C, _, _, _, _), source(C, _, _)).
