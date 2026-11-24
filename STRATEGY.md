@@ -4,11 +4,11 @@
 
 | Test | Choice in the action or spectrum | Consequence |
 |---|---|---|
-| The neutral vector in 75 gives the wrong electron current | 77 adds a quantized Chern–Simons flux mass | The current changes and the heavy pole depends on the weak fit. |
+| Near restoration the minimal vector gives $g_V=5/2+2s_w^2+o(1)$ in the CHARM II normalization | Add the quantized Chern–Simons flux mass of 77 | The repaired current introduces a heavy pole. Its mass inherits the uncertainty of the small fitted vortex contact. [Failed current test](results/75_infrared_currents_and_continuum_limits.md) · [Flux lift](results/77_flux_mass_for_the_vortex_vector.md) |
 | The paired fermion construction in 68 and 79 needs opposite chiralities | Three complete mirror families | Their masses and electroweak oblique corrections enter the physical tests. |
 | The mixed colour constraint in 71.1 | Equal external and projective horizontal root coefficients $Z_H$ | The root terms cancel in the projected comparison. |
 | The unfixed Hopf shape in 98.1 has a tachyonic octet | Positive intrinsic flux-density-gradient and trace-free Ricci squares | Their coefficients stabilize the stated blocks. |
-| The six-flavour subtraction window in 100.1 | Prescribed Yukawa functions and a 280 GeV compact mirror benchmark | The calculated excited shells clear the chosen threshold. |
+| The six-flavour subtraction window in 100.1 | Prescribed Yukawa functions and a 280 GeV compact mirror cap | The calculated excited shells clear the chosen cap. Testing a stable mirror at a collider additionally needs the production and detector response for a Dirac colour triplet. [Window](results/100_hopf_light_fermion_window_and_hadronic_calibration.md) · [Triplet searches and oblique comparison](paper/two_endpoint_limits.tex) |
 | The bulk magnetic tensor in 105.4 becomes light | 105.5 and 106.1 prescribe a positive dilaton function, e.g. $\zeta_0[1+(B_\sigma/a_{\rm dil})^4]$ | The new kinetic coefficient restores the specified ordering. |
 
 The November review of the existing results reproduced the three finite fits and checked the constrained fluctuation operators. The weak inverse is local near the round limit. Its analytic neighbourhood has no certified numerical size at the fitted point. [Fit and operator checks](paper/NUMERICAL_CHECKS.md) · [Compact-sphere inverse](results/78_finite_weak_pole_and_current_match.md#compact-sphere-regularity-of-the-finite-inverse)

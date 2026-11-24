@@ -2390,6 +2390,7 @@ source(m111_membrane_charge, 'paper/seven_m_theory.tex', '').
 depends(m111_membrane_charge, d11_quotient).
 attempted_by(m111_membrane_charge, gpt_6_2_astra_max).
 checked_by(m111_membrane_charge, gpt_6_2_astra_max, by_hand).
+checked_by(m111_membrane_charge, claude_fable_5_2, partial("Joint report of 20 Nov: volume and mass normalization of the wrapped M2 charge in the elementary-electric convention")).
 addresses(t18, m111_membrane_charge).
 
 claim(m111_circle_descent, proposition, proved, "M-theory endpoint paper, circle reduction", "For the order-j quotient of the regular Reeb fibre, the seven-manifold is spin precisely at odd j. Its unique spin structure then has a double-cover fibre lift, so neutral ordinary spinors do not descend. The bosonic reduction admits a small circle with a weakly curved base.").
@@ -2404,6 +2405,7 @@ source(m111_membrane_saturation, 'paper/seven_m_theory.tex', '').
 depends(m111_membrane_saturation, m111_membrane_charge).
 attempted_by(m111_membrane_saturation, gpt_6_2_astra_max).
 checked_by(m111_membrane_saturation, gpt_6_2_astra_max, by_hand).
+checked_by(m111_membrane_saturation, claude_fable_5_2, partial("Joint report of 20 Nov: degree-one covering obstruction to comass saturation for a smooth immersed charged surface")).
 addresses(t18, m111_membrane_saturation).
 
 claim(m111_horizontal_modes, proposition, proved, "M-theory endpoint paper, Reeb sectors and a separate doublet", "For odd j the Reeb sectors give horizontal Dolbeault coefficients O(3n,2n), n=jr-1/2. Their kernels have integer weak isospin. The O(-4,1) quark-doublet twist pulls back to class -11u on the primitive total space.").
@@ -2418,12 +2420,14 @@ claim(fr_product_relative_radius, proposition, proved, "M-theory endpoint paper,
 source(fr_product_relative_radius, 'paper/seven_m_theory.tex', '').
 attempted_by(fr_product_relative_radius, gpt_6_2_astra_max).
 checked_by(fr_product_relative_radius, gpt_6_2_astra_max, by_hand).
+checked_by(fr_product_relative_radius, claude_fable_5_2, partial("Joint report of 20 Nov: relative-radius Lichnerowicz mode and BF comparison for the specified Freund--Rubin product")).
 addresses(t18, fr_product_relative_radius).
 
 claim(heterotic_wall_three_index, proposition, conditional, "M-theory endpoint paper, heterotic wall spectrum", "The explicit free order-three quotient of an anticanonical divisor in two cubic surfaces has Hodge numbers (6,9) and Euler number -6. The supersymmetric standard embedding with trivial Wilson line gives nine 27s and six conjugates before further breaking, three net families. Its Euler number excludes a smooth locally free circle action on this same threefold.").
 source(heterotic_wall_three_index, 'paper/seven_m_theory.tex', '').
 attempted_by(heterotic_wall_three_index, gpt_6_2_astra_max).
 checked_by(heterotic_wall_three_index, gpt_6_2_astra_max, by_hand).
+checked_by(heterotic_wall_three_index, claude_fable_5_2, partial("Joint report of 20 Nov: three net families and the Euler-characteristic obstruction to a locally free circle action on this quotient")).
 addresses(t18, heterotic_wall_three_index).
 
 claim(heterotic_wall_pair_threshold, corollary, conditional, "M-theory endpoint paper, finite threshold for vectorlike pairs", "In the isolated nine 27 and six conjugate multiplicity spaces with canonical kinetics and only an E6-invariant supersymmetric quadratic pairing, a rank-r mass matrix leaves counts (9-r+k,6-r+k) at cutoff E, where k counts positive singular values at or below E. Exactly three 27s alone requires all six singular values above E. The mass matrix is an input.").
@@ -2578,6 +2582,7 @@ depends(projective_flux_octet, shared_polar_solution).
 depends(projective_flux_octet, vortex_root_vacua).
 attempted_by(projective_flux_octet, gpt_6_2_astra_max).
 checked_by(projective_flux_octet, gpt_6_2_astra_max, by_hand).
+checked_by(projective_flux_octet, claude_fable_5_2, partial("Joint report of 20 Nov: negative determinant of the fixed-modulus colour-adjoint metric and top-form slice")).
 addresses(t13, projective_flux_octet).
 addresses(t18, projective_flux_octet).
 
@@ -2696,6 +2701,7 @@ depends(round_twelve_flavours, round_colour_threshold).
 depends(round_twelve_flavours, vortex_root_domain).
 attempted_by(round_twelve_flavours, gpt_6_2_astra_max).
 checked_by(round_twelve_flavours, gpt_6_2_astra_max, by_hand).
+checked_by(round_twelve_flavours, claude_fable_5_2, partial("Joint report of 20 Nov: the twelve-flavour colour coefficients b0=3 and b1=-50")).
 addresses(t12, round_twelve_flavours).
 addresses(t18, round_twelve_flavours).
 
@@ -2898,6 +2904,7 @@ depends(finite_weak_current_inverse, vortex_ir_neutral_current).
 attempted_by(finite_weak_current_inverse, gpt_6_2_astra_max).
 attempted_by(finite_weak_current_inverse, gpt_6_1_sol).
 checked_by(finite_weak_current_inverse, gpt_6_2_astra_max, by_hand).
+checked_by(finite_weak_current_inverse, claude_fable_5_2, partial("Joint report of 20 Nov: central light inverse s, rho, d_v and alpha; the compact-sphere implicit-function proof has a separate referee")).
 addresses(t4, finite_weak_current_inverse).
 addresses(t13, finite_weak_current_inverse).
 addresses(t18, finite_weak_current_inverse).
@@ -2975,6 +2982,7 @@ depends(weak_root_curvature, rooted_current_projection).
 depends(weak_root_curvature, finite_weak_current_inverse).
 attempted_by(weak_root_curvature, gpt_6_2_astra_max).
 checked_by(weak_root_curvature, gpt_6_2_astra_max, by_hand).
+checked_by(weak_root_curvature, claude_fable_5_2, partial("Joint report of 20 Nov: absolute and relative projected-stiffness corrections in Proposition 82.2")).
 addresses(t4, weak_root_curvature).
 addresses(t18, weak_root_curvature).
 
@@ -3002,6 +3010,7 @@ depends(projective_cjs_gauge_ratio, dual_four_cycle_flux).
 depends(projective_cjs_gauge_ratio, vortex_flux_mass_relation).
 attempted_by(projective_cjs_gauge_ratio, gpt_6_2_astra_max).
 checked_by(projective_cjs_gauge_ratio, gpt_6_2_astra_max, by_hand).
+checked_by(projective_cjs_gauge_ratio, claude_fable_5_2, partial("Joint report of 20 Nov: Maxwell and both Chern--Simons compensators give the weak/colour ratio 19/72")).
 addresses(t13, projective_cjs_gauge_ratio).
 addresses(t18, projective_cjs_gauge_ratio).
 
@@ -3012,6 +3021,7 @@ depends(spin_seven_periods, dual_four_cycle_flux).
 depends(spin_seven_periods, m111_membrane_charge).
 attempted_by(spin_seven_periods, gpt_6_2_astra_max).
 checked_by(spin_seven_periods, gpt_6_2_astra_max, by_hand).
+checked_by(spin_seven_periods, claude_fable_5_2, partial("Joint report of 20 Nov: transitive-action and Gysin obstruction for the finite-kernel spin-seven assumptions, including parity of j")).
 addresses(t11, spin_seven_periods).
 addresses(t18, spin_seven_periods).
 
@@ -3022,6 +3032,7 @@ depends(spin_tensor_reeb_current, lecture_projective_circle_gap).
 depends(spin_tensor_reeb_current, spin_seven_periods).
 attempted_by(spin_tensor_reeb_current, gpt_6_2_astra_max).
 checked_by(spin_tensor_reeb_current, gpt_6_2_astra_max, by_hand).
+checked_by(spin_tensor_reeb_current, claude_fable_5_2, partial("Joint report of 20 Nov: Reeb-current squared mass 8j^2/L^2 and AdS normalization 12")).
 addresses(t4, spin_tensor_reeb_current).
 addresses(t18, spin_tensor_reeb_current).
 
@@ -3052,7 +3063,7 @@ checked_by(root_phase_kinetic, gpt_6_2_astra_max, by_hand).
 addresses(t4, root_phase_kinetic).
 addresses(t13, root_phase_kinetic).
 
-claim(root_phase_charm_test, claim, numerical, "Result 85, finite-current and charmonium calculations", "For the specified compact fit and one light QCD phase, finite phase projection and the supplied susceptibility give F_a about 41 GeV and mass about 139 keV. The connected-charm approximation alone gives a radiative branching ratio of about 3.0e-5. This is about 42 times the BESIII invisible limit at its stated efficiency; extra amplitudes require matching. TEXONO excludes the minimal equal-root visible axion, and its thermal history conflicts with standard BBN under the hypotheses of Result 85.").
+claim(root_phase_charm_test, claim, numerical, "Result 85, finite-current and charmonium calculations", "For the specified compact fit and one light QCD phase, finite phase projection and the supplied susceptibility give F_a about 41 GeV and mass about 139 keV. The connected-charm approximation alone gives a radiative branching ratio of about 3.0e-5. This is about 42 times the BESIII missing-energy endpoint limit for a detector-stable particle. Other amplitudes can interfere with the connected term. TEXONO excludes the minimal equal-root visible axion, and its thermal history conflicts with standard BBN under the hypotheses of Result 85.").
 source(root_phase_charm_test, 'results/85_root_phase_and_the_qcd_axion.md', 'qcd-scale-and-a-particle-test').
 depends(root_phase_charm_test, root_phase_kinetic).
 depends(root_phase_charm_test, finite_weak_current_inverse).
@@ -3094,6 +3105,7 @@ depends(spin_magnetic_surface_products, full_harmonic_flux_mass).
 depends(spin_magnetic_surface_products, projective_cjs_gauge_ratio).
 attempted_by(spin_magnetic_surface_products, gpt_6_2_astra_max).
 checked_by(spin_magnetic_surface_products, gpt_6_2_astra_max, by_hand).
+checked_by(spin_magnetic_surface_products, claude_fable_5_2, partial("Joint report of 20 Nov: Proposition 87.2 listed in the hand-checked sample; check limited here to the product calculation")).
 addresses(t13, spin_magnetic_surface_products).
 addresses(t18, spin_magnetic_surface_products).
 
@@ -3112,6 +3124,7 @@ depends(k3_ade_charge_embedding, full_harmonic_flux_mass).
 depends(k3_ade_charge_embedding, particle_lifts_table).
 attempted_by(k3_ade_charge_embedding, gpt_6_2_astra_max).
 checked_by(k3_ade_charge_embedding, gpt_6_2_astra_max, by_hand).
+checked_by(k3_ade_charge_embedding, claude_fable_5_2, partial("Joint report of 20 Nov: charge table of Proposition 88.1")).
 addresses(t11, k3_ade_charge_embedding).
 addresses(t17, k3_ade_charge_embedding).
 addresses(t18, k3_ade_charge_embedding).
@@ -3172,6 +3185,7 @@ source(spectator_global_bordism, 'results/90_a_tensor_completion_without_light_m
 depends(spectator_global_bordism, vortex_neutral_spectator_tensor).
 attempted_by(spectator_global_bordism, gpt_6_2_astra_max).
 checked_by(spectator_global_bordism, gpt_6_2_astra_max, by_hand).
+checked_by(spectator_global_bordism, claude_fable_5_2, partial("Joint report of 20 Nov: degree-seven spin bordism for the stated U(3) times U(1) domain and the Sq2 step")).
 addresses(t11, spectator_global_bordism).
 addresses(t18, spectator_global_bordism).
 
@@ -3240,11 +3254,12 @@ depends(dual_tensor_round_poles, dual_tensor_transverse_pencil).
 depends(dual_tensor_round_poles, vortex_flux_mass_relation).
 attempted_by(dual_tensor_round_poles, gpt_6_2_sol_ultra).
 checked_by(dual_tensor_round_poles, gpt_6_2_sol_ultra, by_hand).
+checked_by(dual_tensor_round_poles, claude_fable_5_2, partial("Joint report of 20 Nov: round rotation triplet and tensor contribution in Proposition 92.2")).
 addresses(t4, dual_tensor_round_poles).
 addresses(t13, dual_tensor_round_poles).
 addresses(t18, dual_tensor_round_poles).
 
-claim(dual_tensor_finite_fit, claim, numerical, "Result 92, finite pole and contact fits", "With both tensor periods related by electric-magnetic normalization and the stated central Born inputs, two finite branches at 1/L=500 GeV have equal fitted light observables and different heavy neutral poles. Holding the muon contact out gives a finite branch at 800 GeV which yields GF about 1.160934e-5 GeV^-2, close to the single-doublet tree relation.").
+claim(dual_tensor_finite_fit, claim, numerical, "Result 92, finite pole and contact fits", "With both tensor periods related by electric-magnetic normalization and the stated central Born inputs, two finite branches at 1/L=500 GeV have equal fitted light observables and different heavy neutral poles. Holding the muon contact out gives a finite branch at 800 GeV which yields GF about 1.160934e-5 GeV^-2, about four parts per million above the single-doublet Born coupling relation evaluated with both measured pole masses, the stripped width and the pole angle.").
 source(dual_tensor_finite_fit, 'results/92_finite_electric_and_magnetic_tensor_match.md', 'numerical-finite-solutions-and-threshold-placement').
 depends(dual_tensor_finite_fit, dual_tensor_round_poles).
 depends(dual_tensor_finite_fit, finite_weak_current_inverse).
@@ -3316,6 +3331,7 @@ depends(hopf_supported_spin_product, hopf_diagonal_hypercharge).
 depends(hopf_supported_spin_product, shared_polar_solution).
 attempted_by(hopf_supported_spin_product, gpt_6_2_sol_ultra).
 checked_by(hopf_supported_spin_product, gpt_6_2_sol_ultra, by_hand).
+checked_by(hopf_supported_spin_product, claude_fable_5_2, partial("Joint report of 20 Nov: the supported product in Proposition 94.2 is listed in the hand-checked sample")).
 addresses(t11, hopf_supported_spin_product).
 addresses(t13, hopf_supported_spin_product).
 addresses(t18, hopf_supported_spin_product).
@@ -3349,6 +3365,7 @@ depends(hopf_broken_colour_vectors, hopf_supported_spin_product).
 depends(hopf_broken_colour_vectors, hopf_locking_weak_charges).
 attempted_by(hopf_broken_colour_vectors, gpt_6_2_sol_ultra).
 checked_by(hopf_broken_colour_vectors, gpt_6_2_sol_ultra, by_hand).
+checked_by(hopf_broken_colour_vectors, claude_fable_5_2, partial("Joint report of 20 Nov: broken-vector values and crossings compared with Result 99")).
 addresses(t4, hopf_broken_colour_vectors).
 addresses(t14, hopf_broken_colour_vectors).
 addresses(t18, hopf_broken_colour_vectors).
@@ -3358,6 +3375,7 @@ source(hopf_source_free_freund_rubin, 'results/94_spin_hopf_trajectory_and_its_c
 depends(hopf_source_free_freund_rubin, spin_seven_periods).
 attempted_by(hopf_source_free_freund_rubin, gpt_6_2_sol_ultra).
 checked_by(hopf_source_free_freund_rubin, gpt_6_2_sol_ultra, by_hand).
+checked_by(hopf_source_free_freund_rubin, claude_fable_5_2, partial("Joint report of 20 Nov: invariant source-free form equations and incompatible fibre Ricci inequality in the stated unwarped family")).
 addresses(t11, hopf_source_free_freund_rubin).
 addresses(t18, hopf_source_free_freund_rubin).
 
@@ -3445,7 +3463,7 @@ addresses(t4, hopf_transverse_current_pencil).
 addresses(t11, hopf_transverse_current_pencil).
 addresses(t18, hopf_transverse_current_pencil).
 
-claim(hopf_finite_current_fit, claim, numerical, "Result 97, finite weak inverse", "The specified finite transverse inverse at f_S=5 TeV reproduces the central weak contacts and poles and resolves vortex, locking and five-form sterile poles. Holding muon decay out gives GF about 1.161834e-5 GeV^-2, close to the single-doublet tree relation in the stated pole and width convention, prior to radiative matching.").
+claim(hopf_finite_current_fit, claim, numerical, "Result 97, finite weak inverse", "The specified finite transverse inverse at f_S=5 TeV reproduces the central weak contacts and poles and resolves vortex, locking and five-form sterile poles. Holding muon decay out gives GF about 1.161834e-5 GeV^-2, 0.078 percent above the single-doublet Born coupling relation from both measured pole masses, stripped leptonic width and pole angle, before radiative matching.").
 source(hopf_finite_current_fit, 'results/97_hopf_transverse_spectrum_and_current_match.md', 'the-finite-weak-inverse').
 depends(hopf_finite_current_fit, hopf_transverse_current_pencil).
 depends(hopf_finite_current_fit, hopf_locking_weak_charges).
@@ -3475,6 +3493,7 @@ depends(hopf_colour_octet_instability, hopf_supported_spin_product).
 depends(hopf_colour_octet_instability, projective_flux_octet).
 attempted_by(hopf_colour_octet_instability, gpt_6_2_sol_ultra).
 checked_by(hopf_colour_octet_instability, gpt_6_2_sol_ultra, by_hand).
+checked_by(hopf_colour_octet_instability, claude_fable_5_2, partial("Joint report of 20 Nov: four-longitudinal, frozen-weak and frozen-colour-dilaton octet eigenvalue")).
 addresses(t11, hopf_colour_octet_instability).
 addresses(t14, hopf_colour_octet_instability).
 addresses(t18, hopf_colour_octet_instability).
@@ -3497,11 +3516,12 @@ depends(hopf_projected_coloured_threshold, hopf_broken_colour_vectors).
 depends(hopf_projected_coloured_threshold, hopf_finite_current_fit).
 attempted_by(hopf_projected_coloured_threshold, gpt_6_2_sol_ultra).
 checked_by(hopf_projected_coloured_threshold, gpt_6_2_sol_ultra, by_hand).
+checked_by(hopf_projected_coloured_threshold, claude_fable_5_2, partial("Joint report of 20 Nov: round projected threshold values reported with the check of the broken-vector crossings")).
 addresses(t13, hopf_projected_coloured_threshold).
 addresses(t14, hopf_projected_coloured_threshold).
 addresses(t18, hopf_projected_coloured_threshold).
 
-claim(hopf_nonround_covariant_core, proposition, proved, "Proposition 99.1", "For the covariant metric, five-form, dilaton and weak vortex core of the Hopf product, eliminating the light-cone constraints yields an additive colour and weak mass form. The specified unadjusted intrinsic colour-leaf squares preserve this split and give the nonconstant one-factor scalar-derived gap 8/B^2 at unit colour-dilaton kinetic coefficient.").
+claim(hopf_nonround_covariant_core, proposition, proved, "Proposition 99.1", "For the covariant metric, five-form, dilaton and weak vortex core of the Hopf product, eliminating the light-cone constraints yields an additive colour and weak mass form. With the specified unadjusted intrinsic colour-leaf squares and unit colour-dilaton kinetic coefficient, 8/B^2 is a lower bound on squared masses in the nonconstant active one-factor scalar-derived block.").
 source(hopf_nonround_covariant_core, 'results/99_nonround_hopf_colour_gap_and_level_crossing.md', 'the-nonround-constraint-split-with-a-magnetic-top-form').
 depends(hopf_nonround_covariant_core, hopf_supported_spin_product).
 depends(hopf_nonround_covariant_core, hopf_intrinsic_colour_stabilizers).
@@ -3545,6 +3565,7 @@ depends(hopf_uniform_light_mass_inverse, quotient_tensor_free_fermion_shells).
 depends(hopf_uniform_light_mass_inverse, hopf_finite_current_fit).
 attempted_by(hopf_uniform_light_mass_inverse, gpt_6_2_sol_ultra).
 checked_by(hopf_uniform_light_mass_inverse, gpt_6_2_sol_ultra, by_hand).
+checked_by(hopf_uniform_light_mass_inverse, claude_fable_5_2, partial("Joint report of 20 Nov: the ratio below 63 and the 309 GeV comparison conditional on the chosen path")).
 addresses(t3, hopf_uniform_light_mass_inverse).
 addresses(t8, hopf_uniform_light_mass_inverse).
 addresses(t13, hopf_uniform_light_mass_inverse).
@@ -3646,6 +3667,7 @@ depends(hopf_local_volume_tensor_rayleigh_test, hopf_volume_tensor_rank_one_pote
 depends(hopf_local_volume_tensor_rayleigh_test, hopf_full_auxiliary_coloured_minimum).
 attempted_by(hopf_local_volume_tensor_rayleigh_test, gpt_6_2_sol_ultra).
 checked_by(hopf_local_volume_tensor_rayleigh_test, gpt_6_2_sol_ultra, by_hand).
+checked_by(hopf_local_volume_tensor_rayleigh_test, claude_fable_5_2, partial("Joint report of 20 Nov: the 17/240 trial coefficient")).
 addresses(t4, hopf_local_volume_tensor_rayleigh_test).
 addresses(t14, hopf_local_volume_tensor_rayleigh_test).
 addresses(t18, hopf_local_volume_tensor_rayleigh_test).
@@ -3746,6 +3768,7 @@ depends(hopf_bulk_two_form_pullback, dual_tensor_transverse_pencil).
 depends(hopf_bulk_two_form_pullback, hopf_local_full_boson_ordering).
 attempted_by(hopf_bulk_two_form_pullback, gpt_6_2_sol_ultra).
 checked_by(hopf_bulk_two_form_pullback, gpt_6_2_sol_ultra, by_hand).
+checked_by(hopf_bulk_two_form_pullback, claude_fable_5_2, partial("Joint report of 20 Nov: spectra of the pullback-source problem in Proposition 105.1")).
 addresses(t4, hopf_bulk_two_form_pullback).
 addresses(t11, hopf_bulk_two_form_pullback).
 addresses(t14, hopf_bulk_two_form_pullback).
@@ -3817,6 +3840,7 @@ depends(hopf_sextet_colour_running_threshold, hopf_local_normal_scalar_towers).
 depends(hopf_sextet_colour_running_threshold, hopf_comoving_hadronic_benchmark).
 attempted_by(hopf_sextet_colour_running_threshold, gpt_6_2_sol_ultra).
 checked_by(hopf_sextet_colour_running_threshold, gpt_6_2_sol_ultra, by_hand).
+checked_by(hopf_sextet_colour_running_threshold, claude_fable_5_2, partial("Joint report of 20 Nov: colour threshold comparison in Proposition 106.2")).
 addresses(t13, hopf_sextet_colour_running_threshold).
 addresses(t18, hopf_sextet_colour_running_threshold).
 
@@ -3895,6 +3919,7 @@ depends(hopf_global_locked_group_and_spin, hopf_volume_tensor_rank_one_potential
 depends(hopf_global_locked_group_and_spin, hopf_scalar_windows).
 attempted_by(hopf_global_locked_group_and_spin, gpt_6_2_sol_ultra).
 checked_by(hopf_global_locked_group_and_spin, gpt_6_2_sol_ultra, by_hand).
+checked_by(hopf_global_locked_group_and_spin, claude_fable_5_2, partial("Joint report of 20 Nov: locked-group and spin calculation in the 108.1--108.3 sample")).
 addresses(t11, hopf_global_locked_group_and_spin).
 addresses(t14, hopf_global_locked_group_and_spin).
 addresses(t17, hopf_global_locked_group_and_spin).
@@ -3906,6 +3931,7 @@ depends(hopf_integral_euler_flux_domain, hopf_global_locked_group_and_spin).
 depends(hopf_integral_euler_flux_domain, hopf_bulk_two_form_pullback).
 attempted_by(hopf_integral_euler_flux_domain, gpt_6_2_sol_ultra).
 checked_by(hopf_integral_euler_flux_domain, gpt_6_2_sol_ultra, by_hand).
+checked_by(hopf_integral_euler_flux_domain, claude_fable_5_2, partial("Joint report of 20 Nov: Euler class c3 and its unit fibre-period test")).
 addresses(t11, hopf_integral_euler_flux_domain).
 addresses(t14, hopf_integral_euler_flux_domain).
 addresses(t18, hopf_integral_euler_flux_domain).
@@ -3917,6 +3943,7 @@ depends(hopf_global_unit_flux_descent, hopf_bulk_two_form_pullback).
 depends(hopf_global_unit_flux_descent, spectator_global_bordism).
 attempted_by(hopf_global_unit_flux_descent, gpt_6_2_sol_ultra).
 checked_by(hopf_global_unit_flux_descent, gpt_6_2_sol_ultra, by_hand).
+checked_by(hopf_global_unit_flux_descent, claude_fable_5_2, partial("Joint report of 20 Nov: projection formula and degrees 3+4+5 in the descent")).
 addresses(t4, hopf_global_unit_flux_descent).
 addresses(t11, hopf_global_unit_flux_descent).
 addresses(t17, hopf_global_unit_flux_descent).
@@ -3943,6 +3970,7 @@ depends(hopf_compact_spectator_threshold, hopf_uniform_light_mass_inverse).
 depends(hopf_compact_spectator_threshold, hopf_finite_current_fit).
 attempted_by(hopf_compact_spectator_threshold, gpt_6_2_astra_max).
 checked_by(hopf_compact_spectator_threshold, gpt_6_2_astra_max, by_hand).
+checked_by(hopf_compact_spectator_threshold, claude_fable_5_2, partial("Joint report of 20 Nov: running values in Proposition 108.5 with the stated compact fit")).
 addresses(t13, hopf_compact_spectator_threshold).
 addresses(t18, hopf_compact_spectator_threshold).
 
@@ -3951,6 +3979,7 @@ source(lecture_projective_circle_gap, 'paper/kk_strings_lecture.tex', '').
 depends(lecture_projective_circle_gap, d11_quotient).
 attempted_by(lecture_projective_circle_gap, gpt_6_2_astra_max).
 checked_by(lecture_projective_circle_gap, gpt_6_2_astra_max, by_hand).
+checked_by(lecture_projective_circle_gap, claude_fable_5_2, partial("Joint report of 20 Nov: Exercise 9 charged scalar spectrum and multiplicity per sign")).
 addresses(t14, lecture_projective_circle_gap).
 addresses(t18, lecture_projective_circle_gap).
 
@@ -4054,11 +4083,31 @@ numerical_only(C) :- claim(C, _, numerical, _, _).
 %% language_not_recorded(-C): a computation whose language/tool the source does not name.
 language_not_recorded(C) :- checked_by(C, _, not_recorded(_)).
 
+%% Known aliases retain their original spellings in the provenance facts.
+reviewer_alias(gpt_6_2_astra_max, gpt_6_2_astra).
+reviewer_alias(gpt_6_2_sol_ultra, gpt_6_2_sol).
+reviewer_alias(terra_6_1, gpt_6_1_terra).
+reviewer_alias(codex_gpt6, codex_gpt_6).
+reviewer_model(Name, Model) :-
+    ( reviewer_alias(Name, Canonical) -> Model = Canonical ; Model = Name ).
+
+%% non_author_checkers(?C, -Models): distinct names with a recorded checked_by/3
+%% row, excluding authors of this claim and the corpus. The row gives its scope.
+non_author_checkers(C, Models) :-
+    claim(C, _, _, _, _),
+    findall(Model,
+            ( checked_by(C, Checker, _), Checker \== corpus,
+              reviewer_model(Checker, Model),
+              \+ (attempted_by(C, Author), reviewer_model(Author, Model)) ),
+            Checks),
+    sort(Checks, Models).
+
 %% self_checked_only(-C): every recorded checker is also an author of the claim (numerical claims included).
 self_checked_only(C) :-
     claim(C, _, S, _, _), memberchk(S, [proved, conditional, numerical]),
     findall(A, checked_by(C, A, _), Cs), Cs \== [],
-    forall(member(A, Cs), attempted_by(C, A)).
+    forall(member(A, Cs),
+           (reviewer_model(A, M), attempted_by(C, Author), reviewer_model(Author, M))).
 
 %% Draft use of the unchecked claims, 4 Nov 2026 (historical/reviews/2026-11-04_unchecked_claims_audit.md).
 stated_in_draft(paper_1_1, 'paper/towerless_intervals.tex').
@@ -4272,7 +4321,7 @@ referee_report('results/104_hopf_local_scalar_constraints_and_sextet.md', 'histo
 checked_by(hopf_compact_spectator_threshold, claude_opus_5_5, by_hand).
 checked_by(hopf_locked_chiral_anomaly_spectrum, claude_opus_5_5, by_hand).
 checked_by(hopf_radial_tower_kinetic_matching_inputs, claude_opus_5_5, by_hand).
-checked_by(hopf_soft_tensor_ward_and_covariant_term, claude_opus_5_5, by_hand).
+checked_by(hopf_soft_tensor_ward_and_covariant_term, claude_opus_5_5, partial("20 Nov review scope: Ward charge and covariant harmonic term checked for the reduced action; full parent operator not independently derived")).
 checked_by(hopf_soft_tensor_pauli_ambiguity, claude_opus_5_5, by_hand).
 checked_by(root_wilson_operator, claude_opus_5_5, by_hand).
 checked_by(quadratic_ir_continuum, claude_opus_5_5, by_hand).
@@ -4280,13 +4329,16 @@ checked_by(charged_vortex_deformations, claude_opus_5_5, by_hand).
 checked_by(rooted_current_projection, claude_opus_5_5, by_hand).
 checked_by(shared_cap_current, claude_opus_5_5, by_hand).
 checked_by(shared_winding_hadron, claude_opus_5_5, by_hand).
-checked_by(hopf_nonround_covariant_core, claude_opus_5_5, by_hand).
+checked_by(hopf_nonround_covariant_core, claude_opus_5_5, partial("20 Nov review scope: constraint algebra and bounds from the stated one-factor operators; full eleven-dimensional reduction not repeated")).
+checked_by(hopf_nonround_covariant_core, gpt_6_2_astra, partial("24 Nov: action variations for the colour scalar restriction and mixed current cancellation, lower-bound correction and frozen/active octet pencils; other product polarisations use the earlier reduction")).
+checked_by(hopf_nonround_covariant_core, gpt_6_1_terra, partial("24 Nov: independently derived both six-longitudinal octet determinants, their inertia and the one-factor scope from the printed constrained forms")).
 checked_by(dual_tensor_transverse_pencil, claude_opus_5_5, by_hand).
 checked_by(hopf_full_maxwell_matched_threshold, claude_opus_5_5, by_hand).
 checked_by(hopf_full_maxwell_coexact_block, claude_opus_5_5, by_hand).
-checked_by(hopf_bulk_two_form_pullback, claude_opus_5_5, by_hand).
+checked_by(hopf_bulk_two_form_pullback, claude_opus_5_5, partial("20 Nov review scope: periods and pullback-source spectrum checked with the specified two-form action; complete coupled operator not reconstructed")).
 referee_report('results/105_hopf_bulk_tensor_and_magnetic_colour_pole.md', 'historical/reviews/2026-11-20_opus_check_pending_audit.md').
-checked_by(hopf_bulk_tensor_local_transverse_form, claude_opus_5_5, by_hand).
+checked_by(hopf_bulk_tensor_local_transverse_form, claude_opus_5_5, partial("20 Nov review scope: transverse form and normalizations checked on the displayed tensor reduction; complete parent-action derivation not repeated")).
+checked_by(hopf_bulk_tensor_local_transverse_form, gpt_6_2_astra, partial("24 Nov: exact and coexact source fractions and the dual massive two-form companion from the specified tensor action")).
 checked_by(hopf_bulk_tensor_aligned_transverse_gap, claude_opus_5_5, by_hand).
 checked_by(hopf_bulk_tensor_independent_magnetic_pole, claude_opus_5_5, partial("trial and scaling re-derived; the crossing scale B^-1=1.34 TeV not recomputed")).
 checked_by(hopf_bulk_tensor_independent_magnetic_pole, gpt_6_1_terra, partial("crossing scale recomputed from the printed trial bound in Python")).
@@ -4358,9 +4410,17 @@ checked_by(hopf_local_full_boson_ordering, claude_opus_5_5, partial("threshold a
 checked_by(hopf_local_full_boson_ordering, gpt_6_2_astra, by_hand). % Different model from gpt_6_2_sol_ultra.
 checked_by(hopf_local_full_boson_ordering, gpt_6_2_astra, python("separate finite sextet example in Result 104.5, independent SciPy diagonalization")).
 checked_by(hopf_bulk_tensor_anisotropic_vector_order, claude_opus_5_5, by_hand).
-checked_by(hopf_bulk_tensor_scalar_gauss_gap, claude_opus_5_5, by_hand).
+checked_by(hopf_bulk_tensor_scalar_gauss_gap, claude_opus_5_5, partial("20 Nov review scope: scalar inequalities given the stated constrained operators; full coupled Gauss derivation not repeated")).
+checked_by(hopf_bulk_tensor_scalar_gauss_gap, gpt_6_2_astra, partial("24 Nov: normalized Maxwell Gauss source, completion and residual (2-1/zeta)nu for zeta>=1, conditional on the earlier scalar comparison")).
 checked_by(hopf_global_unit_flux_descent, claude_opus_5_5, by_hand).
-checked_by(hopf_local_coexact_shell_closure, claude_opus_5_5, by_hand).
+checked_by(hopf_local_coexact_shell_closure, claude_opus_5_5, partial("20 Nov review scope: shell stiffnesses evaluated from the stated local geometry operator; full parent-action reduction not repeated")).
+checked_by(hopf_local_coexact_shell_closure, gpt_6_2_astra, partial("24 Nov: local connection and coexact octet and sextet stiffnesses; triplet and fifteen entries are compressions before the exact-shift minimization")).
+%% Joint report on aa7316b. The live response and additional checks are in
+%% paper/NUMERICAL_CHECKS.md; the report itself remains verbatim.
+referee_report('paper/seven_m_theory.tex', 'historical/reviews/2026-11-20_conneskk_joint_review.md').
+referee_report('paper/two_endpoint_limits.tex', 'historical/reviews/2026-11-20_conneskk_joint_review.md').
+referee_report('paper/kk_strings_lecture.tex', 'historical/reviews/2026-11-20_conneskk_joint_review.md').
+
 %% ---------------------------------------------------------------- claims awaiting a pending claim (20 Nov 2026, second referee H2)
 %% The pending sets may be empty. Dynamic declarations keep the propagation
 %% tests meaningful as facts are added or removed.
@@ -4391,8 +4451,14 @@ test(refereed_claims_have_review_bookkeeping) :-
            ( checked_by(C, terra_6_1, _) ; attempted_by(C, terra_6_1) ; checked_by(C, claude_opus_5_5, _) ; checked_by(C, claude_fable_5_2, _) ; outside_referee(C, _) ; referee_pending(C) )).  % Terra 6.1, Claude Opus 5.5 (from 4 Nov 2026) or Claude Fable 5.2 (from 20 Nov 2026) as referee; a row added to a refereed file after its report waits for its own referee
 test(claims_outside_the_corpus_have_a_checker) :-
     forall(( claim(C, _, S, _, _), memberchk(S, [proved, conditional]), \+ attempted_by(C, corpus) ), checked_by(C, _, _)).
-test(self_checks_are_corpus_only) :-
-    forall(( self_checked_only(C), \+ claim(C, _, numerical, _, _), \+ referee_pending(C) ), attempted_by(C, corpus)).
+test(non_corpus_proof_grades_have_non_author_checks) :-
+    forall(( claim(C, _, S, _, _), memberchk(S, [proved, conditional]),
+             \+ attempted_by(C, corpus) ),
+           non_author_checkers(C, [_|_])).
+test(same_model_recheck_is_excluded_from_referee_count) :-
+    non_author_checkers(round_flux_product_gap, Models),
+    \+ memberchk(gpt_6_2_astra, Models),
+    memberchk(gpt_6_1_sol, Models).
 %% Checks only that each ledger number has a row in historical/DUPLICATES.md ending in its state.
 test(contradictions_match_duplicates) :-
     read_file_to_string('historical/DUPLICATES.md', Text, []),

@@ -8,7 +8,7 @@ Fix the flux, spin lift and stationary round colour factor of 94, with the trans
 $$
  m^2B^2=\frac{4(29-4\sqrt{67})}{7}\simeq-2.138.
 $$
-The homogeneous breathing stability of 94.2 does not exclude this direction.
+The homogeneous breathing stability of 94.2 allows this inhomogeneous direction. With six longitudinal dimensions the corresponding colour block has a different kinetic form. Its octet values with frozen and active colour dilaton are computed in [the one-factor comparison of 99.1](99_nonround_hopf_colour_gap_and_level_crossing.md#the-nonround-constraint-split-with-a-magnetic-top-form).
 
 **Proof.** The weak curvature and vortex stress cancel in the frozen weak slice. The resulting problem is $d=4$ flat external directions and a $q=5$ compact round factor supported by a top form and positive potential. At fixed colour dilaton let $\lambda=4/B^2$, normalized flux density $Z f_5^2/2=\lambda$ and scalar harmonic eigenvalue $\nu$. Use the scalar metric and form ansatz of 64.1, with $d=4,q=5$. The $j=2$ scalar harmonics on the five-sphere include the trace-free $z^\dagger T z$ of Hopf charge zero and colour adjoint. Their eigenvalue is $\nu=12/B^2=3\lambda$. The scalar traceless constraint is nondegenerate here. The determinant for $x=(\nu-m^2)/\lambda$ is $x^2+(qD_0-2)x-2(q-1)D_0\nu/\lambda$, with $D_0=2(d-1)/(d+q-2)=6/7$, by the internal Einstein trace and the form divergence. Thus $7x^2+16x-144=0$. This is a physical mode of the time-symmetric constrained problem. Its coordinate flux and metric amplitudes $t,H$ have $t-5H\ne0$, so it changes the local magnetic density.
 

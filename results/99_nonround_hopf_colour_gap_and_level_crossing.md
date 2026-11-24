@@ -9,7 +9,7 @@ $$
  \frac{\eta}{2}Z(\sigma)B_0^2e^{2\sigma}|\nabla_5(*_5F_5)|^2
  +\varrho B_0^2e^{2\sigma}|\operatorname{Ric}^{\rm TF}(g_5)|^2
 $$
-as intrinsic spatial energy on the physical colour leaves preserves this split in the coloured quadratic problem. With $\eta=5/2,\ \varrho=3/10$ and unit colour dilaton kinetic coefficient, the one-factor scalar-derived colour gap is $8/B^2$ on the nonconstant harmonic sector.
+as intrinsic spatial energy on the physical colour leaves preserves this split in the coloured quadratic problem. With $\eta=5/2,\ \varrho=3/10$ and unit colour dilaton kinetic coefficient, every nonconstant mode of the active one-factor scalar-derived colour block has squared mass at least $8/B^2$.
 
 **Proof of the split.** The two independent magnetic systems each supply a vacuum with flat directions tangent to the other system. In particular their potential densities including the corresponding curvature vanish at the background. Use $h_{-M}=0$ and set gauge-potential components with a minus index to zero. The minus-minus Einstein equation gives zero trace on the total transverse space. Write $V_I=\nabla^M h_{MI}$ there. The minus-transverse equations put $V_I=J_{c,I}+J_{w,I}$, with $J_c$ supported on the colour directions and $J_w$ on the weak directions. In the top-form convention of 98 the former is $Z\langle\iota_I F_5,c_4\rangle$ with the all-colour component of the potential variation. The latter has the Maxwell and vortex currents of 69.1. The squared constraint sources have no mutual term since their indices are disjoint.
 
@@ -38,6 +38,23 @@ $$
  \end{aligned}
 $$
 For $j\ge2$ one has $z\ge3$. At the chosen coefficients, $A_z\ge43.96$, $|B_z|\le9.6$ and the diagonal $D^2$ entry is at least $31$. Spend half each of the $H^2$ and $S^2$ coefficients on the cross terms; the remaining $D^2$ coefficient is greater than $26$. Young's inequality on the kinetic form gives $T_c\le10.2\dot H^2+\dot D^2+c\dot S^2$. Thus $Q_c\ge2\lambda T_c$. At $j=1$ the physical quotient of the conformal diffeomorphism has $z=5/4$ and the $H$ terms vanish. The $D,S$ submatrix gives the same bound, using $T_{DD}=0.288$ and $Q_{DD}/\lambda=14.46$ before bounding $16DS$. This is the nonconstant spectrum of the one-factor scalar-derived problem, so its mass estimate applies to the same physical block of the pointwise colour form. $\square$
+
+**The octet before stabilization.** Set $\eta=\varrho=0$, $c=1$ and take the $j=2$ harmonic, for which $z=3$. It has zero mean, so the variation preserves the magnetic period. The Hamiltonian constraint fixes $5A=t/3-4H$. In the remaining coordinates $(H,D,S)$, the potential in units of $\lambda$ and the kinetic matrix are
+
+$$
+ U=\begin{pmatrix}-7/5&-14/5&0\\-14/5&7/5&8\\0&8&43\end{pmatrix},
+ \qquad
+ T=\begin{pmatrix}329/45&28/45&0\\28/45&11/45&0\\0&0&1\end{pmatrix}.
+$$
+
+The leading minors of $T$ are $329/45,7/5,7/5$. Write $x=m^2/\lambda$. Freezing $S$ gives $\det(U_{HD}-xT_{HD})=7(9x^2-86x-63)/45$. Its lower root yields $m^2B^2=4(43-4\sqrt{151})/9$. The dilaton equation couples to $8D$, which is nonzero on this restricted eigenvector. Including $S$ gives
+
+$$
+ \det(U-xT)=(43-x)\det(U_{HD}-xT_{HD})-64(-7/5-329x/45)
+ =-\frac7{45}(x-3)(9x^2-446x-711).
+$$
+
+There is one negative squared mass, $m^2B^2=4(223-8\sqrt{877})/9\simeq-6.184$, in this unstabilized six-longitudinal-dimensional **one-factor** block. On the nonround product the weak quadratic energy and its domain also enter the mass. The four-longitudinal-dimensional, frozen-weak and frozen-dilaton comparison has its own constraint and octet value. [Proposition 98.1](98_hopf_colour_scalar_stability_and_thresholds.md#a-nonhomogeneous-colour-instability-with-a-stable-homogeneous-radius)
 
 ## A quotient Higgs action retaining the broken Killing pair
 
@@ -76,4 +93,4 @@ $$
 $$
 For $f_S=5000$ GeV and $I_3=0.76985$ this is $B^{-1}=1.630$ TeV, or $a\simeq6.52\times10^{-7}$ GeV$^{-1}$ for the fixed-shape continuation from the stated neck. Thus the first extra boson is exactly the $j=2$ shell at sufficiently small $a$. This changes the colour cutoff to $\sqrt{\gamma_0}/B$ relative to the round Killing comparison. It is a tree result for the specified spin fibration action. Fermionic thresholds and the renormalized strong scale need their own matching.
 
-**Provenance.** Nonround constraint comparison, projected action and threshold by gpt-6.2-sol ultra with the colour and tensor calculations. Claude Opus 5.5 checked every ledger claim of this file by hand on 20 November 2026 and found no error (ledger `checked_by` rows). The claims that use the fits of 92, 93 and 97 hold with those numerical inputs. GPT-6.1 Terra reproduced the fit outputs using the existing implementations; the review scope and input limitations are recorded in [the numerical check](../paper/NUMERICAL_CHECKS.md).
+**Provenance.** Nonround constraint comparison, projected action and threshold by gpt-6.2-sol ultra. Claude Opus 5.5 checked the ledger claims on 20 November 2026. On 24 November, GPT-6.2 Astra and GPT-6.1 Terra independently evaluated the frozen and active octet pencils. The revised 99.1 states the lower bound proved by the stabilized forms. The claims using the fits of 92, 93 and 97 depend on their numerical inputs. GPT-6.1 Terra reproduced the fits in Python/SciPy. [Scope of the checks](../paper/NUMERICAL_CHECKS.md)

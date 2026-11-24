@@ -19,7 +19,7 @@ $$
  {\displaystyle\int_0^{2.2}e^{-s/\sqrt2}
                  \sin(\sqrt{K_0}s)\,ds/\sqrt{K_0}}<63 .
 $$
-This also bounds the pointwise norm of the full two-column squared multiplication map when each coefficient squared is bounded by a common maximum.
+The numerator is $43.46184$ and the denominator is $0.69818645$, giving $62.2497$ as a conservative rounded upper bound. This also bounds the pointwise norm of the full two-column squared multiplication map when each coefficient squared is bounded by a common maximum.
 
 Write $q_\pm$ for the squared real coefficients, including the common background factor. On each face $q_i R_b=V_0$, where $V_0=G/[2(63+1)]$, the central state's expectation is $V_0$ and the potential norm is at most $63V_0$ for any value of the other coefficient below its face. The second eigenvalue is at least $G$. Temple's inequality therefore bounds the first eigenvalue from below by
 $$

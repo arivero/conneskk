@@ -4,7 +4,9 @@ The deep index of developments is [INDEX.md](INDEX.md). The machine-readable led
 
 ## Results and review status
 
-The project combines established compactification, index and effective-field-theory calculations with explicit choices of action, matter domain and matching inputs. The resulting spectra, bounds and fits apply to those choices. Priority for the new combinations in results 59–108 remains undetermined. A ledger grade of `proved` describes the mathematical claim; a separate `checked_by` row identifies who examined it and how. Many claims have one AI referee beyond the author. A partial check accepts specified inputs, and a Python rerun checks numerical reproducibility. No human peer review is recorded. [Literature record](paper/LITERATURE.md) · [Ledger](ledger.pl) · [Fit checks](paper/NUMERICAL_CHECKS.md)
+The project uses established monopole spectra, anomaly descent and flux compactification to test specified actions. Its finite tensor fit has two branches. A separate calculation gives the change in the colour-octet mass when the dilaton is released. The first result is numerical. The second follows from a constrained quadratic form for one colour factor. A full nonround product has additional weak energy. The literature record gives the precedent and the assumptions for each of results 59–108. Priority for these particular constructions remains open. [Result-by-result comparisons](paper/LITERATURE.md#comparisons-for-results-59108) · [Octet calculation](results/99_nonround_hopf_colour_gap_and_level_crossing.md)
+
+A ledger grade of `proved` or `conditional` describes the statement. Its `checked_by` rows give the scope of the review. On 24 November 2026, 347 of 569 such claims had exactly one named non-author checker in those rows, including 190 with Opus 5.5 alone. The count merges known aliases of the same model and includes explicitly partial checks. Each of the 168 claims originally awaiting review now has a named non-author check. The three fitted premises reproduce in Python/SciPy and 47 further claims still depend on them. Independent human review remains open. [Response to the eleven observations](paper/NUMERICAL_CHECKS.md#response-to-the-review-of-20-november) · [Ledger](ledger.pl)
 
 ## Querying the ledger
 
@@ -17,6 +19,7 @@ swipl ledger.pl
 ?- numerical_only(C).                            % claims backed only by a numerical check
 ?- language_not_recorded(C).                     % computations whose tool the source omits
 ?- self_checked_only(C).                         % every recorded checker is also an author
+?- non_author_checkers(C, [Model]).               % a single named non-author checker
 ?- unchecked(C).                                  % proved or conditional with no recorded checker
 ?- open_items(X).                                % conjectures, open strategy items, open contradictions, missing records
 ?- show(l12_towerless).                          % statement, status and location
