@@ -2283,12 +2283,14 @@ claim(gh1_smooth_sphere_bundles, proposition, proved, "Issue 1 section 7", "A sm
 source(gh1_smooth_sphere_bundles, 'results/issues/01.md', '').
 attempted_by(gh1_smooth_sphere_bundles, gpt_6_2_astra_max).
 checked_by(gh1_smooth_sphere_bundles, codex_gpt_6, by_hand).
+checked_by(gh1_smooth_sphere_bundles, claude_fable_5_2, by_hand).
 addresses(t18, gh1_smooth_sphere_bundles).
 
 claim(gh1_regular_stratum, proposition, proved, "Issue 1 section 7", "An infinitesimally effective compact group with the Standard Model Lie algebra acts transitively on a connected smooth seven-dimensional regular stratum dense in a Hausdorff space, so the stratum exhausts the space. A wedge of two seven-spheres realizes a faithful action with one fixed junction and two regular components.").
 source(gh1_regular_stratum, 'results/issues/01.md', '').
 attempted_by(gh1_regular_stratum, gpt_6_2_astra_max).
 checked_by(gh1_regular_stratum, codex_gpt_6, by_hand).
+checked_by(gh1_regular_stratum, claude_fable_5_2, by_hand).
 addresses(t18, gh1_regular_stratum).
 
 claim(gh1_wall_scaling, theorem, proved, "Issue 1 moving cylinder", "For the charged five-sphere the continuous family of spherical spectral and local cylinder domains has a fixed KO-six kernel. When the angular offset divided by length tends to a, the surviving signed operator is D_tan+a sign(D_tan); a diverging ratio removes all nonzero tangential levels.").
@@ -4020,6 +4022,7 @@ claim(gh1_berger_flux_radius, proposition, proved, "Issue 1 section 4", "On a Be
 source(gh1_berger_flux_radius, 'results/issues/01.md', '').
 attempted_by(gh1_berger_flux_radius, gpt_6_2_astra_max).
 checked_by(gh1_berger_flux_radius, codex_gpt_6, by_hand).
+checked_by(gh1_berger_flux_radius, claude_fable_5_2, partial("curvature, potential and both stationarity equations")).
 addresses(t13, gh1_berger_flux_radius).
 addresses(t18, gh1_berger_flux_radius).
 
@@ -4027,6 +4030,7 @@ claim(gh1_spin_cylinder, proposition, proved, "Issue 1", "On the product of a cl
 source(gh1_spin_cylinder, 'results/issues/01.md', '').
 attempted_by(gh1_spin_cylinder, gpt_6_2_astra_max).
 checked_by(gh1_spin_cylinder, terra_6_1, by_hand).
+checked_by(gh1_spin_cylinder, claude_fable_5_2, partial("KO signs of the cylinder operators")).
 addresses(t18, gh1_spin_cylinder).
 addresses(t11, gh1_spin_cylinder).
 addresses(t2, gh1_spin_cylinder).
@@ -4035,6 +4039,7 @@ claim(gh1_weak_centre, proposition, proved, "Issue 1", "For a primitive circle b
 source(gh1_weak_centre, 'results/issues/01.md', '').
 attempted_by(gh1_weak_centre, gpt_6_2_astra_max).
 checked_by(gh1_weak_centre, terra_6_1, by_hand).
+checked_by(gh1_weak_centre, claude_fable_5_2, partial("Gysin step, centre condition and winding sum")).
 addresses(t18, gh1_weak_centre).
 
 claim(gh1_monopole_inflow, proposition, proved, "Issue 1 sections 6 and 8", "For the faithful U(3) times U(1) monopole parents the seventh spin bordism group vanishes. The all-left anomaly is an integral product. The Higgs assignment adds eight virtual line Dirac phases to an integral product, giving a quantized inverse inflow on arbitrary spin gauge backgrounds. The source-free trivialization of the squared unit monopole class on a weak sphere bundle forces zero weak instanton number.").
@@ -4058,13 +4063,21 @@ claim(gh1_monopole_anomaly, proposition, proved, "Issue 1", "Adding opposite-chi
 source(gh1_monopole_anomaly, 'results/issues/01.md', '').
 attempted_by(gh1_monopole_anomaly, gpt_6_2_astra_max).
 checked_by(gh1_monopole_anomaly, terra_6_1, by_hand).
+checked_by(gh1_monopole_anomaly, claude_fable_5_2, by_hand).
 addresses(t18, gh1_monopole_anomaly).
 
 claim(gh1_electromagnetic_index, proposition, proved, "Issue 1 colour and electromagnetic chirality index", "For one ordinary generation with a right-handed neutrino, restriction to colour and electromagnetism gives equal left and right particle representations, so their virtual difference is zero. Removing the right-handed neutrino leaves one neutral singlet in the difference.").
 source(gh1_electromagnetic_index, 'results/issues/01.md', 'colour-and-electromagnetic-chirality-index').
 attempted_by(gh1_electromagnetic_index, gpt_6_2_astra_max).
 checked_by(gh1_electromagnetic_index, codex_gpt_6, by_hand).
+checked_by(gh1_electromagnetic_index, claude_fable_5_2, by_hand).
 addresses(t18, gh1_electromagnetic_index).
+
+claim(gh1_spectral_plateaus, theorem, reported, "Issue 1, spectral-dimension plateaus and crossings (proof written, second-model check pending)", "For d(t) = -2 dlog K/dlog t: a Neumann interval has d_I(s) < 1/(1+sqrt(s/pi)), within (40/s)exp(-pi^2/s) of it for s <= 1 and at most 2s exp(-s) for s >= log 2 (s = pi^2 t/l^2); the round S^5 has d_5 = 5 - 8 tau + 4 tau/(3-2 tau) + rho with |rho| <= 7(pi^2/tau)^3 exp(-pi^2/tau) and 0 < 5 - d_5 <= 20 tau/3 for tau <= 1/5. Hence M^4 x S^5_R x I_l x I_d with reflecting faces has explicit plateaus at 11, 10 and 9, the band at 10 having logarithmic width 2 log(l/d) + O(1). The football obeys |d - 1| <= tau/2 + 25 exp(-tau q^2/2) + 4.01(pi^2/tau)exp(-pi^2/tau) on 1/q^2 <= tau <= 1. A factor with fixed length ratios gives a crossing at fixed t/lambda^2.").
+source(gh1_spectral_plateaus, 'results/issues/01.md', '1-dimension-in-the-two-scale-reduction').
+attempted_by(gh1_spectral_plateaus, claude_opus_5_5).
+referee_pending(gh1_spectral_plateaus).
+addresses(t18, gh1_spectral_plateaus).
 
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.

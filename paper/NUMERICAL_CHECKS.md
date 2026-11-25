@@ -535,6 +535,12 @@ These are numerical reproduction checks of the supplied Galerkin
 implementation, recorded separately from the full hand review of the
 proposition's existence and uniqueness statement.
 
+## Spectral-dimension plateaus of issue 1
+
+Fix the shapes of the factors: a Neumann interval, the round $S^5$, the football and the products of results/issues/01.md, §1. Vary the probe time and the length ratios. The observable is $d(t)=-2\,d\log K/d\log t$. Claude Opus 5.5 wrote the check on 25 November 2026, in Python with mpmath and NumPy. Each heat trace is evaluated as a direct eigenvalue sum and in its Jacobi dual form; the two agree to $10^{-12}$ where both converge.
+
+From the repository root, `python3 -I paper/spectral_dimension_plateaus.py` reports 22 passed checks. It tests the three inequalities of Theorem 1.1(a) on 1200 points of $10^{-8}\le s\le200$, with the deviation in the second reaching $0.987$ of its bound, and part (b) on 2000 points of $10^{-6}\le\tau\le1/5$. It tests the three plateau inequalities of part (c) on 200000 random samples and part (d) on 400 points for each $q=1,3,10,30,100,300$. It reproduces the plateau table for $\ell=Rt_0$, $d=Rt_0^2$ and the football sums $6.999667$, $5.999824$, $5.995000$, $5.000908$ of the second comment of issue 1. For Proposition 1.3 it gives the round-sphere crossing $t/r^2=1.270258388262398$ and slope $-1.194134$, and the matched projective crossing $t/r^2=0.871571$ with terms $2.6376$ and $1.3624$. Monotonicity of these dimensions, and hence uniqueness of the crossings, is tested on logarithmic grids only. [Theorem and proofs](../results/issues/01.md#1-dimension-in-the-two-scale-reduction)
+
 ## Response to the review of 20 November
 
 On 24 November we compared the full joint review with the live proofs, the ledger and the published papers. The 19 November cohort contains 168 claims. At the reviewed commit, 149 had a full Opus check, fifteen had a partial Opus check, one had a Fable hand check as its recorded disposition and three still awaited a numerical rerun. The report also describes a targeted second-referee sample of 24, including checks of individual components. The ledger now records the explicitly attributed checks at that level of detail. [Joint review at the reviewed state](../historical/reviews/2026-11-20_conneskk_joint_review.md) · [Ledger](../ledger.pl)
