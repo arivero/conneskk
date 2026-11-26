@@ -145,6 +145,34 @@ def r_fun(s):
     return 41.0 * math.exp(-PI * PI / s) / s
 
 
+def check_transition_times():
+    sigma = mp.findroot(lambda s: dI_mp(s) - mp.mpf("0.5"), (1.8, 2.0))
+    slope = mp.diff(dI_mp, sigma)
+    kappa = float(3 * mp.pi ** mp.mpf("1.5") / (20 * mp.sqrt(sigma)))
+    eta = float(3 * mp.pi / 20 * (-mp.mpf(49) / 50 - 1 / (2 * sigma * slope)))
+    check("fixed-tolerance upper edge at half height", abs(float(sigma / mp.pi**2) - 0.19294073175) < 1e-10)
+    check("elementary edge falls outside the half-height band", abs(9 + dI(PI) - 9.26035675914) < 1e-10)
+
+    def crossing(function):
+        lo, hi = 0.8, 2.6
+        assert function(lo) > 0 > function(hi)
+        for _ in range(60):
+            middle = (lo + hi) / 2
+            if function(middle) > 0:
+                lo = middle
+            else:
+                hi = middle
+        return (lo + hi) / 2
+
+    errors = []
+    for u in (0.02, 0.01, 0.005):
+        w = kappa * u + eta * u**2
+        early = crossing(lambda s: 4 + dI(s) + dI(u*u*s) + d5(u*u*w*s/PI**2) - 10.5)
+        late = crossing(lambda s: 4 + dI(s) + dI(s/(u*u)) + d5(w*s/PI**2) - 9.5)
+        errors.append(abs(late / early - 1))
+    check("quadratic tuning leaves a cubic error", all(7.8 < a/b < 8.2 for a, b in zip(errors, errors[1:])))
+    check("finite hierarchy at u=0.01", abs(errors[1] - 4.47308e-6) < 1e-10)
+
 def main():
     print("=" * 72)
     print("Spectral-dimension plateaus and crossings (Python 3, mpmath, NumPy)")
@@ -236,6 +264,8 @@ def main():
                                   solver="bisect"))
         check(f"t0 = {t0:g}: band within 0.1 of 10 is {band[0]} to {band[1]} in t/d^2",
               f"{lo:.5g}" == f"{band[0]:.5g}" and f"{hi:.5g}" == f"{band[1]:.5g}", f"{lo:.5g} to {hi:.5g}")
+
+    check_transition_times()
 
     print("\n(d) Football")
     vals = [5 + dfb(x, 100) for x in (1e-7, 1e-3, 1e-2, 5.0)]

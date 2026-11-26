@@ -4079,6 +4079,18 @@ attempted_by(gh1_spectral_plateaus, claude_opus_5_5).
 referee_pending(gh1_spectral_plateaus).
 addresses(t18, gh1_spectral_plateaus).
 
+claim(gh1_transition_times, corollary, proved, "Issue 1, two transition times", "For the round product with two reflecting intervals, two suitable pairs of fixed-height crossings determine the two length ratios locally. The balanced half-height curve starts at 0.6052770883 u + 0.1847930571 u squared.").
+source(gh1_transition_times, 'results/issues/01.md', 'the-two-transition-times').
+attempted_by(gh1_transition_times, codex_gpt_6).
+checked_by(gh1_transition_times, terra_6_1, partial("Independently rederived the exact fixed-tolerance edge, both correction coefficients, the balanced curve and the inverse Jacobian; verified the numerical values in Python. The other heat-trace bounds retain their separate review status.")).
+addresses(t18, gh1_transition_times).
+
+claim(gh29_current_profile_difference, proposition, proved, "Issue 29, interval current profiles", "At zero momentum, the difference C_ll+C_qq-2C_lq in the mixed-wall kinetic model is the integral of the squared difference of cumulative source profiles divided by the positive kinetic coefficient.").
+source(gh29_current_profile_difference, 'results/issues/15.md', 'the-difference-between-two-normalized-current-profiles').
+attempted_by(gh29_current_profile_difference, codex_gpt_6).
+checked_by(gh29_current_profile_difference, terra_6_1, by_hand).
+addresses(t18, gh29_current_profile_difference).
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
