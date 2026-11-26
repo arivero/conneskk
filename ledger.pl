@@ -2015,6 +2015,51 @@ attempted_by(gh30_inverse_law_response, claude_opus_5_5).
 checked_by(gh30_inverse_law_response, claude_fable_5_2, by_hand).
 addresses(t13, gh30_inverse_law_response).
 
+claim(gh31_internal_weyl_chern, proposition, reported, "Proposition 31.1", "For the four-dimensional free overlap Weyl field tensored with a finite internal module graded with multiplicities n_+ and n_-, the Weyl field bundle has c_1 = 0 and C_2 = n_+ - n_-. If n_+ = n_- it is analytically trivial and the Lu-Shao topological obstruction is absent; if n_+ != n_- the Lu-Shao conditions (with or without the U(1) condition) admit no reflection.").
+source(gh31_internal_weyl_chern, 'results/issues/31.md', 'internal-modules-and-the-weyl-bundle').
+hypothesis(gh31_lushao_conditions, "Infinite lattice Z^4 at finite spacing, Luscher's projections with the overlap hat-gamma_5 tensored with a constant internal grading, and an antilinear invertible involution preserving the projections, covariant under reflected translations and exponentially local about the reflected point (Lu and Shao, arXiv:2611.20084, section 3.2).").
+depends(gh31_internal_weyl_chern, hyp(gh31_lushao_conditions)).
+attempted_by(gh31_internal_weyl_chern, claude_opus_5_5).
+referee_pending(gh31_internal_weyl_chern).
+addresses(t18, gh31_internal_weyl_chern).
+%% Part (a) of Proposition 31.1 extends the Lu-Shao no-go theorem to internal multiplicities. It receives a
+%% no_go row after an independent check by a second model (AGENTS.md).
+
+claim(gh31_vectorlike_wall_modules, proposition, reported, "Proposition 31.2", "The KO-six cylinder kernel of issue 1, the interval operator D(Gamma_0, Gamma_1) of Theorem 23.1 with equal eigenspace dimensions, and the ordinary families together with the three mirror families of 72 and 79 each have net chirality zero in every representation; their selecting projectors act on the finite internal factor and are constant in external momentum on a product operator.").
+source(gh31_vectorlike_wall_modules, 'results/issues/31.md', 'internal-modules-and-the-weyl-bundle').
+depends(gh31_vectorlike_wall_modules, l23_gradings).
+attempted_by(gh31_vectorlike_wall_modules, claude_opus_5_5).
+referee_pending(gh31_vectorlike_wall_modules).
+addresses(t18, gh31_vectorlike_wall_modules).
+
+claim(gh31_wall_mode_reflection, proposition, reported, "Proposition 31.3", "For a paired wall mode of mass theta/l > 0 with the free Euclidean Dirac action, gamma_0 S(t, p) = exp(-t E) P_pos(p) for t > 0 with P_pos the positive spectral projector of h = -i gamma_0 gamma.p + m gamma_0, and the reflection matrix of positive-time linear tests is a Gram matrix, hence positive semidefinite.").
+source(gh31_wall_mode_reflection, 'results/issues/31.md', 'internal-modules-and-the-weyl-bundle').
+attempted_by(gh31_wall_mode_reflection, claude_opus_5_5).
+referee_pending(gh31_wall_mode_reflection).
+addresses(t18, gh31_wall_mode_reflection).
+
+claim(gh31_mirror_charge_increment, proposition, reported, "Proposition 31.4", "With the weak fit of 78 fixed, three unmixed degenerate mirror families of Dirac mass M (charge trace 8) shift the on-shell-subtracted inverse charge at spacelike Q by a strictly negative amount that increases strictly with M and is bounded by (8/(15 pi)) Q^2/M^2; at Q = 1 TeV it is -0.9750 for M = 300 GeV and -0.0376 for M = 2.1 TeV, against zero for the matched construction without mirrors.").
+source(gh31_mirror_charge_increment, 'results/issues/31.md', 'a-mirror-sensitive-observable-in-results-7879').
+depends(gh31_mirror_charge_increment, mirror_custodial_bound).
+attempted_by(gh31_mirror_charge_increment, claude_opus_5_5).
+checked_by(gh31_mirror_charge_increment, claude_opus_5_5, python("Python 3 and SciPy, paper/mirror_charge_and_running.py: quadrature at both masses, monotone sample and decoupling bound.")).
+referee_pending(gh31_mirror_charge_increment).
+addresses(t13, gh31_mirror_charge_increment).
+
+claim(gh31_free_current_control, proposition, reported, "Proposition 31.5", "In a free charged Dirac field minimally coupled to a free Abelian gauge field, the connected current-gauge correlation at first order in the coupling is the one-loop polarization contracted with the gauge propagator, nonzero for charged matter; an interaction claim requires subtracting the free gauge-fermion value of the same correlator with identical insertions, smearings, normalization and subtraction.").
+source(gh31_free_current_control, 'results/issues/31.md', 'the-free-theory-control-for-an-interaction-claim').
+attempted_by(gh31_free_current_control, claude_opus_5_5).
+referee_pending(gh31_free_current_control).
+addresses(t13, gh31_free_current_control).
+
+claim(gh31_running_coefficients, proposition, reported, "Proposition 31.6", "For SU(5) with three left-handed 10 + 5bar families, T(10) = 3/2, T(5bar) = 1/2, the cubic anomaly cancels, b0 = 43/3 and b1 = 2156/15; colour gives b0 = 7 for six flavours and 3 for twelve, and the hypercharge index is 5/3. Simultaneous mirror decoupling at 300 GeV reproduces alpha_s(1 TeV) = 0.09634 with mirrors and 0.08879 without; sin^2 theta_W = 3/8 needs the common tree normalization of the matching action.").
+source(gh31_running_coefficients, 'results/issues/31.md', 'running-coefficients-group-theory-and-matching').
+attempted_by(gh31_running_coefficients, claude_opus_5_5).
+checked_by(gh31_running_coefficients, claude_opus_5_5, python("Python 3 with exact fractions and SciPy, paper/mirror_charge_and_running.py: group traces, Casimirs, both coefficients and three- and four-loop running.")).
+referee_pending(gh31_running_coefficients).
+addresses(t13, gh31_running_coefficients).
+addresses(t18, gh31_running_coefficients).
+
 claim(gh24_current_response, theorem, proved, "Issue 24, exact elimination", "For the mixed-wall vectorlike interval, curvature-dependent U(1) probe and fixed lattice and vertical cutoffs, every finite grouping of exact Gaussian band eliminations preserves the full one-loop current Hessian. The regulated Ward identity holds and the induced light two-current vertex contributes strictly to the subtracted transverse response on 1/4 < q <= 1/2 in the two-band example.").
 source(gh24_current_response, 'results/issues/24.md', 'exact-elimination-and-moving-window-derivatives').
 depends(gh24_current_response, l14_covariant).
