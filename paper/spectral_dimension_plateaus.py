@@ -3,8 +3,8 @@
 of results/issues/01.md, section 1.
 
 For a compact factor with scalar heat trace K(t) put d(t) = -2 dlog K/dlog t.
-The script checks, with exact series evaluated in two representations (the
-direct eigenvalue sum and its Poisson dual) that agree where both converge:
+The interval and round S^5 calculations compare direct and Poisson-dual
+series where both are evaluated. The checks cover:
 
   (a) Neumann interval, s = pi^2 t/l^2:
       d_I(s) < 1/(1+sqrt(s/pi)) for s > 0;
@@ -21,6 +21,9 @@ direct eigenvalue sum and its Poisson dual) that agree where both converge:
   (e) Crossings at fixed length ratios: the round S^2 and the matched
       projective product CP^2_b x S^2_r with b^2 = 16 r^2/3, with monotonicity
       tested on a logarithmic grid.
+
+Separate checks cover the fixed-tolerance Neumann edge, finite-separation
+transition times and the numerical estimates in the analytic proofs.
 
 Run from the repository root:  python3 -I paper/spectral_dimension_plateaus.py
 Exit status 0 when every check passes.
@@ -133,7 +136,7 @@ def d5_main(tau):
 
 # ---------------------------------------------------------------- football
 def dfb(tau, q):
-    """Scalar spectrum l(l+1)/R^2 with multiplicity 1 + 2 floor(l/q)."""
+    """Scalar spectrum for integer q, grouped with multiplicity 1 + 2 floor(l/q)."""
     L = int(math.sqrt(80.0 / tau)) + 10
     l = np.arange(L, dtype=np.longdouble)
     lam = l * (l + 1)
@@ -145,13 +148,93 @@ def r_fun(s):
     return 41.0 * math.exp(-PI * PI / s) / s
 
 
+def check_proof_constants():
+    print("\nEstimates in the analytic proofs")
+    z = mp.exp(-3 * mp.pi**2)
+    delta = (1 + z) / (1 - z)**3 - 1
+    overlap = mp.mpf(2) / 5
+    g_at_two = 4 * mp.exp(-2) * (1 + mp.sqrt(2 / mp.pi))
+    bilateral_mean = 2 * mp.exp(-mp.pi) / (1 - 4 * mp.exp(-3 * mp.pi))
+    check("interval comparison, geometric tail and monotonicity constants",
+          2 * overlap * (1 + mp.sqrt(overlap / mp.pi)) > 1
+          and g_at_two < mp.mpf("0.974") and 1 / (2 * mp.sqrt(2 * mp.pi)) < mp.mpf("0.5")
+          and delta < mp.mpf("1e-11") and (1 + delta) * (mp.mpf("0.5") + 4 * mp.pi**2) < 40
+          and bilateral_mean < mp.mpf("0.1"))
+
+    w = 5 * mp.pi**2
+    sphere_endpoint = w**5 * mp.exp(-w)
+    sphere_majorant = 49**5 * mp.exp(-49)
+    f0_floor = mp.mpf("0.65")
+    f1_ratio = mp.mpf("2.01") / f0_floor
+    check("S^5 proof constants, including the corrected w^5 exp(-w) estimate",
+          w > 49 and 1 / (5 * w) < mp.mpf(1) / 200
+          and f1_ratio < mp.mpf("3.1") and f1_ratio * mp.mpf("1.875") / f0_floor < 9
+          and 1 / (1 - 64 * mp.exp(-147)) < mp.mpf("1.0001")
+          and mp.mpf("3.1") * 49**2 * mp.exp(-49) / (1 - 16 * mp.exp(-147)) < mp.mpf("1e-3")
+          and 2 * (mp.mpf("3.1") + mp.mpf(9) / 49) * mp.mpf("1.0001") / mp.mpf("0.999") < 7
+          and mp.mpf(20) / 3 - mp.mpf(8) / 39 > mp.mpf("6.4")
+          and mp.nstr(sphere_endpoint, 11) == "1.0833657433e-13"
+          and sphere_endpoint < sphere_majorant < mp.mpf("2e-13") < 8 * mp.pi**4 / 63,
+          f"at tau = 1/5: {mp.nstr(sphere_endpoint, 11)}")
+
+    tau = mp.mpf(1) / 5
+
+    def sphere_weight(k):
+        return (k + 1) * (k + 2)**2 * (k + 3) * mp.exp(-tau * k * (k + 4)) / 12
+
+    trace = mp.nsum(sphere_weight, [0, mp.inf])
+    moment = mp.nsum(lambda k: k * (k + 4) * sphere_weight(k), [0, mp.inf])
+    rho = 2 * tau * moment / trace - d5_main(tau)
+    check("S^5 remainder at tau = 1/5 from the high-precision eigenvalue sum",
+          0 < abs(rho) <= 7 * w**3 * mp.exp(-w), mp.nstr(rho, 8))
+
+    axial_tail = 2 * mp.exp(-mp.pi**2) / (1 - z)
+    axial_derivative = 4 / (1 - 4 * z)
+    check("football axial and nonaxial constants",
+          axial_tail < mp.mpf("1.1e-4") and axial_derivative < mp.mpf("4.0001")
+          and mp.mpf("4.0001") / (1 - mp.mpf("1.1e-4")) < mp.mpf("4.01")
+          and 1 + mp.mpf("4.01") * mp.pi**2 * mp.exp(-mp.pi**2) < mp.mpf("1.003")
+          and (mp.sqrt(mp.pi) - 1) / 2 > mp.mpf("0.386")
+          and 2 / (1 - mp.exp(-3)) < mp.mpf("2.105")
+          and 1 / (1 - mp.exp(-mp.mpf("1.5"))) < mp.mpf("1.288")
+          and (8 / mp.e) * mp.mpf("1.288") * 2 / mp.mpf("0.386") < mp.mpf("19.7")
+          and mp.mpf("1.003") * mp.mpf("2.105") * mp.mpf("1.5") / mp.mpf("0.386") < mp.mpf("8.21")
+          and mp.mpf("8.21") * mp.exp(-mp.mpf("0.5")) < 5)
+
+    check("sufficient band bounds for the sphere and long interval",
+          5 / (24 * PI) < 0.25 and PI / 16 < 1 and r_fun(PI / 16) < 1e-19 <= 1e-12 / 4)
+
+
 def check_transition_times():
-    sigma = mp.findroot(lambda s: dI_mp(s) - mp.mpf("0.5"), (1.8, 2.0))
+    print("\nFixed-tolerance edge and transition times")
+    epsilon = mp.mpf("0.5")
+    sigma = mp.findroot(lambda s: dI_mp(s) - (1 - epsilon), (1.8, 2.0))
+    late_edge = sigma / mp.pi**2
+    elementary_s = mp.pi * (epsilon / (1 - epsilon))**2
+    elementary_edge = elementary_s / mp.pi**2
+    limiting_dimension = 9 + dI_mp(elementary_s)
+    check("fixed-tolerance upper edge at half height",
+          mp.nstr(sigma, 12) == "1.90424869527" and mp.nstr(late_edge, 11) == "0.19294073175",
+          f"s = {mp.nstr(sigma, 12)}, t/l^2 = {mp.nstr(late_edge, 11)}")
+    check("elementary edge falls outside the half-height band",
+          mp.nstr(elementary_edge, 10) == "0.3183098862"
+          and mp.nstr(limiting_dimension, 11) == "9.2603567591" and limiting_dimension < 10 - epsilon,
+          f"t/l^2 = {mp.nstr(elementary_edge, 10)}, d = {mp.nstr(limiting_dimension, 11)}")
+
+    epsilon = mp.mpf(1) / 3
+    elementary_s = mp.pi * (epsilon / (1 - epsilon))**2
+    root = mp.findroot(lambda s: dI_mp(s) - (1 - epsilon), elementary_s)
+    bound = 80 * mp.exp(-mp.pi**2 / elementary_s) / (epsilon * (1 - epsilon))
+    check("small-tolerance edge remainder at epsilon = 1/3", 0 < elementary_s - root <= bound)
+
     slope = mp.diff(dI_mp, sigma)
+    first_u = -1 / (slope * mp.sqrt(mp.pi * sigma))
+    first_w = 20 / (3 * mp.pi**2 * slope)
     kappa = float(3 * mp.pi ** mp.mpf("1.5") / (20 * mp.sqrt(sigma)))
     eta = float(3 * mp.pi / 20 * (-mp.mpf(49) / 50 - 1 / (2 * sigma * slope)))
-    check("fixed-tolerance upper edge at half height", abs(float(sigma / mp.pi**2) - 0.19294073175) < 1e-10)
-    check("elementary edge falls outside the half-height band", abs(9 + dI(PI) - 9.26035675914) < 1e-10)
+    check("half-height finite-separation coefficients",
+          tuple(f"{float(value):.8f}" for value in (first_u, first_w, kappa, eta))
+          == ("2.13656585", "-3.52989711", "0.60527709", "0.18479306"))
 
     def crossing(function):
         lo, hi = 0.8, 2.6
@@ -173,6 +256,7 @@ def check_transition_times():
     check("quadratic tuning leaves a cubic error", all(7.8 < a/b < 8.2 for a, b in zip(errors, errors[1:])))
     check("finite hierarchy at u=0.01", abs(errors[1] - 4.47308e-6) < 1e-10)
 
+
 def main():
     print("=" * 72)
     print("Spectral-dimension plateaus and crossings (Python 3, mpmath, NumPy)")
@@ -184,7 +268,7 @@ def main():
     small = np.exp(np.linspace(math.log(1e-8), 0.0, 600))
     ok1 = all(delta_I(s) < 0 for s in small[:-1])
     ok1 &= all(dI_mp(s) < 1 / (1 + mp.sqrt(mp.mpf(s) / mp.pi))
-               for s in np.exp(np.linspace(0.0, math.log(200.0), 600)))
+               for s in np.exp(np.linspace(0.0, math.log(200.0), 601)))
     check("d_I(s) < 1/(1+sqrt(s/pi)) on 1200 points, 1e-8 <= s <= 200 (mpmath)", ok1)
     agree = abs(delta_I(0.5) - (dI_mp(0.5) - 1 / (1 + mp.sqrt(mp.mpf(0.5) / mp.pi))))
     check("cancellation-free difference agrees with the direct difference at s = 1/2", agree < 1e-35,
@@ -265,8 +349,6 @@ def main():
         check(f"t0 = {t0:g}: band within 0.1 of 10 is {band[0]} to {band[1]} in t/d^2",
               f"{lo:.5g}" == f"{band[0]:.5g}" and f"{hi:.5g}" == f"{band[1]:.5g}", f"{lo:.5g} to {hi:.5g}")
 
-    check_transition_times()
-
     print("\n(d) Football")
     vals = [5 + dfb(x, 100) for x in (1e-7, 1e-3, 1e-2, 5.0)]
     check("5 + d_fb at q = 100, tau = 1e-7, 1e-3, 1e-2, 5: 6.999667, 5.999824, 5.995000, 5.000908",
@@ -315,7 +397,7 @@ def main():
     sl2 = mp.diff(lambda y: d_CP2(mp.e ** y, b2) + d_S2(mp.e ** y), mp.log(xc))
     check("CP^2 x S^2, b^2 = 16 r^2/3: sum = 4 at t/r^2 = 0.871571, terms 2.6376, 1.3624, slope -2.2104",
           mp.nstr(xc, 6) == "0.871571" and mp.nstr(a, 5) == "2.6376" and mp.nstr(c, 5) == "1.3624"
-          and mp.nstr(sl2, 5) == "-2.2104",
+          and mp.nstr(sl2, 5) == "-2.2104" and 12 / b2 == mp.mpf(9) / 4 > 2,
           f"{mp.nstr(xc, 6)}, {mp.nstr(a, 5)}, {mp.nstr(c, 5)}, {mp.nstr(sl2, 5)}")
     grid = [mp.e ** y for y in mp.linspace(mp.log(mp.mpf("1e-3")), mp.log(30), 120)]
     vc = [d_CP2(x, b2) for x in grid]
@@ -323,12 +405,15 @@ def main():
     check("d_CP2 and d_S2 strictly decreasing on 120 log-spaced points, 1e-3 <= t/r^2 <= 30",
           all(p > q for p, q in zip(vc, vc[1:])) and all(p > q for p, q in zip(vs, vs[1:])))
     m16 = min(max(4 - p, q) for p, q in zip(vc, vs))
-    check("max(4 - d_CP2, d_S2) >= 1.36 on the grid (minimum at the crossing)", m16 >= 1.36 and c > 1.36,
+    check("max(4 - d_CP2, d_S2) >= 1.36 on the grid", m16 >= 1.36,
           mp.nstr(m16, 5))
     b2 = mp.mpf(100)
     xc = mp.findroot(lambda x: d_CP2(x, b2) + d_S2(x) - 4, 0.1)
     v = 4 - d_CP2(xc, b2)
-    check("b^2/r^2 = 100: the same minimum falls to 0.20", mp.nstr(v, 2) == "0.2", mp.nstr(v, 5))
+    check("b^2/r^2 = 100: the value at the crossing falls to 0.20", mp.nstr(v, 2) == "0.2", mp.nstr(v, 5))
+
+    check_transition_times()
+    check_proof_constants()
 
     print()
     print("=" * 72)
