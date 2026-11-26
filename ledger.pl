@@ -1976,6 +1976,39 @@ checked_by(gh29_strong_matching_sensitivity, claude_opus_5_5, python("Python 3 a
 referee_pending(gh29_strong_matching_sensitivity).
 addresses(t13, gh29_strong_matching_sensitivity).
 
+claim(gh30_condensate_transfer, proposition, reported, "Proposition 30.1", "With QCD (N_f = 2+1) and the flavour-diagonal O_ledq operator in place of charged-lepton Yukawas, first order in the operator and leading-order chiral perturbation theory give m_i = c_i |<dd>|/(2 Lambda^2) with c_i <dd> renormalization-group invariant. The chiral normalization transferred is F^2 B_0, and C_l is proportional to one free coefficient combination. The relation C_l C_d = f_pi^2 is then equivalent to Lambda/sum sqrt(c_i) = 0.438 M_pi0.").
+source(gh30_condensate_transfer, 'results/issues/30.md', 'a-candidate-action-and-its-coefficients').
+hypothesis(gh30_condensate_action, "QCD with N_f = 2+1 light flavours at leading order in chiral perturbation theory, the electroweak theory without charged-lepton Yukawa couplings, and a gauge-invariant dimension-six four-fermion operator with real flavour-diagonal coefficients independent of quark masses and gauge couplings, at first order.").
+depends(gh30_condensate_transfer, hyp(gh30_condensate_action)).
+attempted_by(gh30_condensate_transfer, claude_opus_5_5).
+checked_by(gh30_condensate_transfer, claude_opus_5_5, python("Python 3, paper/chiral_scale_responses.py: transfer scales and the effective-scale form of the relation.")).
+referee_pending(gh30_condensate_transfer).
+addresses(t13, gh30_condensate_transfer).
+
+claim(gh30_chiral_response, proposition, reported, "Proposition 30.2", "At fixed m_u, m_s, m_b and strong input, d log C_d/d log m_d = w_d exactly, and the response of log(C_l C_d/f_pi^2) is w_d - 2 m_d/(m_u+m_d) kappa_f + kappa_l, scheme independent. In the condensate-transfer action it lies in [0.64, 0.82]; the hypercharge response of log(alpha(0) sqrt(M_Z^2 - M_W^2)) at fixed g and v is 2.450 while C_l responds by at most 0.08.").
+source(gh30_chiral_response, 'results/issues/30.md', 'responses-to-the-light-quark-masses-and-to-hypercharge').
+depends(gh30_chiral_response, gh30_condensate_transfer).
+attempted_by(gh30_chiral_response, claude_opus_5_5).
+checked_by(gh30_chiral_response, claude_opus_5_5, python("Python 3, paper/chiral_scale_responses.py: weights, NLO chiral slope, error range and hypercharge slopes.")).
+referee_pending(gh30_chiral_response).
+addresses(t13, gh30_chiral_response).
+
+claim(gh30_pion_amplitude, proposition, reported, "Proposition 30.3", "If a fraction x of a charged-lepton mass comes from the condensate-transfer operator, the same operator's charged-current partner gives a pseudoscalar-to-Standard-Model amplitude ratio x v^2/(V_ud F^2) = 8.3e6 x in pi -> l nu, independent of the lepton. Per-cent agreement of the pion rate limits x to about 1.4e-9.").
+source(gh30_pion_amplitude, 'results/issues/30.md', 'the-held-out-pion-decay-amplitude').
+depends(gh30_pion_amplitude, gh30_condensate_transfer).
+attempted_by(gh30_pion_amplitude, claude_opus_5_5).
+checked_by(gh30_pion_amplitude, claude_opus_5_5, python("Python 3, paper/chiral_scale_responses.py: amplitude ratio with F and with physical f_pi, and the dimension-eight scales.")).
+referee_pending(gh30_pion_amplitude).
+addresses(t13, gh30_pion_amplitude).
+%% No-go theorem 30.4 of results/issues/30.md (condensate transfer by a local dimension-six operator) has one
+%% author model so far. It receives a no_go row after an independent check by a second model (AGENTS.md).
+
+claim(gh30_inverse_law_response, proposition, reported, "Proposition 30.5", "A mechanism with C_l = M^2/C_d and M independent of m_d, such as the full-rank five-flavour SQCD inverse law with M^2 = lambda S, has zero response of C_l C_d/M^2 to m_d; the relation C_l C_d = f_pi^2 reduces to the single condition lambda S = f_pi^2 on its free coefficient.").
+source(gh30_inverse_law_response, 'results/issues/30.md', 'the-held-out-pion-decay-amplitude').
+attempted_by(gh30_inverse_law_response, claude_opus_5_5).
+referee_pending(gh30_inverse_law_response).
+addresses(t13, gh30_inverse_law_response).
+
 claim(gh24_current_response, theorem, proved, "Issue 24, exact elimination", "For the mixed-wall vectorlike interval, curvature-dependent U(1) probe and fixed lattice and vertical cutoffs, every finite grouping of exact Gaussian band eliminations preserves the full one-loop current Hessian. The regulated Ward identity holds and the induced light two-current vertex contributes strictly to the subtracted transverse response on 1/4 < q <= 1/2 in the two-band example.").
 source(gh24_current_response, 'results/issues/24.md', 'exact-elimination-and-moving-window-derivatives').
 depends(gh24_current_response, l14_covariant).
