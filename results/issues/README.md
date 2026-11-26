@@ -31,6 +31,7 @@ Issue 20 explicitly allowed a residual family. Its one-loop calculation varies t
 | [#20](https://github.com/arivero/conneskk/issues/20) | [The hypercharge projection at a stationary spectral vacuum](20.md) | At a fixed stationary polynomial vacuum, a free lepton determinant moves the one-loop electromagnetic benchmark. The exact flat trace gives a separate vacuum test. |
 | [#24](https://github.com/arivero/conneskk/issues/24) | [Gauge-covariant blocking of the interval current response](24.md) | The regulated transverse response agrees for direct and successive Schur elimination, with a nonzero induced two-current term. A covariant polynomial approximation to the heavy inverse controls the error at growing blocking depth and fixed horizontal spacing. |
 | [#25](https://github.com/arivero/conneskk/issues/25) | [Selection of the charged-lepton determinant](25.md) | The exact flat charged trace selects the largest determinant for a strictly decreasing cutoff and is constant on a flat sampled range. A kinetic wall triplet gives a stable positive determinant with adjustable tilt and a conditional Thomson match. |
+| [#26](https://github.com/arivero/conneskk/issues/26) | [The scalar photon response of the descending tower on plate 08](26.md) | The charged scalar cut grows after photon weighting at fixed energy and tends to zero in the many-mode moving window. The positive fixed-band spacelike term grows in that window. The full real response requires local matching data. |
 
 ## Archived branch tips
 

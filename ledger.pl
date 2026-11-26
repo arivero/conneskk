@@ -1888,6 +1888,25 @@ checked_by(gh25_conditional_thomson_match, gpt_6_2_astra, python("Independent le
 checked_by(gh25_conditional_thomson_match, codex_gpt_6, python("Three thresholds, log-ratio identity and estimates of omitted pure-lepton running and matching terms.")).
 addresses(t13, gh25_conditional_thomson_match).
 
+claim(gh26_scalar_photon_cut, theorem, proved, "Theorem 26.1 and its energy limits", "The zero-circle charge trace at level ell is ell(ell+2)(ell+1)^2/12 and the first charged pair opens at E=2 sqrt(3)/a. The exact scalar cut is the finite shell sum with threshold factor (1-4m^2/s)_+^(3/2). Its density is a^5 s^(5/2)/(3*2^19*pi) with relative error O(1/(a sqrt(s))), uniform on fixed positive bands. Tree photon weighting gives growth proportional to cos(theta_W)^(-3) at fixed energy and decay proportional to R^(3-5p) at E=E_0 R^(-p) for 3/5<p<1, with unbounded open charged species.").
+source(gh26_scalar_photon_cut, 'results/issues/26.md', 'the-finite-charged-harmonic-sum').
+hypothesis(gh26_plate08_probe, "Prescribed round product S^3(a) x S^1(b) x S^1(d) at fixed V, C9, g' and hypercharge circle generator. One canonical free massless complex scalar with minimal coupling and periodic circles. Q=T3+Y, with T3=sigma3/2 in the fundamental. Timelike energy below both nonzero-circle pair thresholds and a fixed microscopic cutoff. Photon weighting uses the tree gauge kinetic terms and leading e^2 insertion only.").
+depends(gh26_scalar_photon_cut, hyp(gh26_plate08_probe)).
+attempted_by(gh26_scalar_photon_cut, codex_gpt_6).
+checked_by(gh26_scalar_photon_cut, gpt_6_2_astra, by_hand).
+checked_by(gh26_scalar_photon_cut, codex_gpt_6, python("Symbolic charge trace, pair thresholds and cut normalization, integral coefficients and energy exponents. Finite sums and the remainder bound checked at sample thresholds.")).
+addresses(t14, gh26_scalar_photon_cut).
+
+claim(gh26_fixed_band_dispersion, proposition, proved, "Proposition 26.2", "A fixed positive timelike band of the plate 08 scalar cut contributes a positive magnitude to the once-charge-subtracted spacelike response, proportional to R^(3-2p) at q_E=q_0 R^(-p) for 3/5<p<1. Positive regulated spectral bands add to it. A local q_E^2 term changes the signed slope, and subtracting the band's own slope leaves a term proportional to R^(3-4p).").
+source(gh26_fixed_band_dispersion, 'results/issues/26.md', 'fixed-band-spacelike-dispersion').
+hypothesis(gh26_dispersion_band, "Fixed band of positive timelike energies below both circle-pair thresholds and the fixed microscopic cutoff, and a subtraction at zero. The comparison with other bands assumes a finite regulator with nonnegative spectral weight. The interacting photon needs independent matching of the slope and control of the remaining real terms.").
+depends(gh26_fixed_band_dispersion, gh26_scalar_photon_cut).
+depends(gh26_fixed_band_dispersion, hyp(gh26_dispersion_band)).
+attempted_by(gh26_fixed_band_dispersion, codex_gpt_6).
+checked_by(gh26_fixed_band_dispersion, gpt_6_2_astra, by_hand).
+checked_by(gh26_fixed_band_dispersion, codex_gpt_6, python("Symbolic band coefficient, slope-subtracted coefficient and scaling exponents. Fixed-band integration of the finite sum in both kernels.")).
+addresses(t14, gh26_fixed_band_dispersion).
+
 claim(gh24_current_response, theorem, proved, "Issue 24, exact elimination", "For the mixed-wall vectorlike interval, curvature-dependent U(1) probe and fixed lattice and vertical cutoffs, every finite grouping of exact Gaussian band eliminations preserves the full one-loop current Hessian. The regulated Ward identity holds and the induced light two-current vertex contributes strictly to the subtracted transverse response on 1/4 < q <= 1/2 in the two-band example.").
 source(gh24_current_response, 'results/issues/24.md', 'exact-elimination-and-moving-window-derivatives').
 depends(gh24_current_response, l14_covariant).
