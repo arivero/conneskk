@@ -1938,6 +1938,44 @@ checked_by(gh27_beta_thresholds, gpt_6_2_astra, by_hand).
 checked_by(gh27_beta_thresholds, gpt_6_2_sol, python("Python 3 symbolic endpoint integrals, hydrogen normalization and energy, and numerical asymptotic ratios and channel thresholds.")).
 addresses(t13, gh27_beta_thresholds).
 
+claim(gh29_shared_photon_charge, proposition, reported, "Proposition 29.1", "On the spin Hopf family with the lift of 94, invariance of the vortex, the two roots and the volume-tensor vacuum fixes the unbroken combination of K_3, P, C and the vortex generator uniquely as Q = K_3 + P/6 + C/4 = T_3 + Y. Its eigenvalue on every fermion of the table is the same on every member; the photon residue is a modulus held by the auxiliary norm along the path of 97.").
+source(gh29_shared_photon_charge, 'results/issues/29.md', 'the-photon-generator-on-both-restrictions').
+hypothesis(gh29_hopf_background_torus, "The background metric, five-form and vortex on each member are invariant under K_3 (with its magnetic compensator), the Hopf rotation, the auxiliary generator C and the vortex generator, with the condensate weights of 94 and 100.").
+depends(gh29_shared_photon_charge, hopf_diagonal_hypercharge).
+depends(gh29_shared_photon_charge, hopf_transverse_current_pencil).
+depends(gh29_shared_photon_charge, hyp(gh29_hopf_background_torus)).
+attempted_by(gh29_shared_photon_charge, claude_opus_5_5).
+checked_by(gh29_shared_photon_charge, claude_opus_5_5, python("Python 3: the exact-photon check of the Hopf neutral pencil on the compact fit and the auxiliary norm on the neck.")).
+referee_pending(gh29_shared_photon_charge).
+addresses(t13, gh29_shared_photon_charge).
+addresses(t18, gh29_shared_photon_charge).
+
+claim(gh29_fifth_end_product, proposition, reported, "Proposition 29.2", "A scalar of fibre momentum n on a circle bundle over CP^2 x S^2_r of weak degree d >= 1 has M_n^2 >= n^2/rho^2 + |n| d/(2 r^2), so every nonzero fibre momentum leaves a fixed window as r -> 0 at fixed rho. On the product S^5_B x S^2_r the constant weak harmonic keeps the full five-sphere tower with every Hopf weight. The spin Hopf family is the product case.").
+source(gh29_fifth_end_product, 'results/issues/29.md', 'the-five-dimensional-end-twisted-circle-against-product').
+depends(gh29_fifth_end_product, hopf_supported_spin_product).
+attempted_by(gh29_fifth_end_product, claude_opus_5_5).
+referee_pending(gh29_fifth_end_product).
+addresses(t14, gh29_fifth_end_product).
+
+claim(gh29_semileptonic_contact, proposition, reported, "Proposition 29.3", "In the charged raising pencil of 97 the left quark and left lepton doublet sources differ only on the three Abelian charge-one slots, by (1,2,0) times a nonzero overlap. The combination C_ll + C_qq - 2 C_lq is strictly positive at every Euclidean momentum on members with a/B > 0. Numerically the semileptonic-to-leptonic contact ratio is 1 + 4.33e-5 at the compact fit with f_S = 5 TeV (1 + 2.22e-5 with the muon lifetime held out), 1.112 at the finite neck and 1 on the collapsed pencil; over f_S = 5-40 TeV its deviation from one stays below 5e-5 and changes sign.").
+source(gh29_semileptonic_contact, 'results/issues/29.md', 'the-charged-current-propagator-between-lepton-and-quark-sources').
+depends(gh29_semileptonic_contact, hopf_transverse_current_pencil).
+depends(gh29_semileptonic_contact, hopf_finite_current_fit).
+depends(gh29_semileptonic_contact, hopf_comoving_charged_limit).
+attempted_by(gh29_semileptonic_contact, claude_opus_5_5).
+checked_by(gh29_semileptonic_contact, claude_opus_5_5, python("Python 3, NumPy and SciPy, paper/hopf_semileptonic_ratio.py: static and finite-momentum contacts at degrees 8 and 12, neck at spline steps 0.125 and 0.0625, locking-scale scan.")).
+referee_pending(gh29_semileptonic_contact).
+addresses(t13, gh29_semileptonic_contact).
+
+claim(gh29_strong_matching_sensitivity, proposition, reported, "Proposition 29.4", "At fixed G_F, threshold masses and c_N = H_N/Lambda_3, a constant shift delta of the strong matching coefficient above the thresholds gives d log Xi/d delta = -16 pi^2/9 at one loop with continuous decoupling; four-loop running from alpha_s^(6)(250 GeV) = 0.10337 gives -15.61. The two fermion threshold prescriptions of 108.5 differ by a factor 0.089 in Xi, and a vanishing matching coefficient at the compactification scale at fixed B leaves no perturbative three-flavour scale.").
+source(gh29_strong_matching_sensitivity, 'results/issues/29.md', 'the-colour-side-renormalized-coefficient-and-the-hadronic-unit').
+depends(gh29_strong_matching_sensitivity, hopf_compact_spectator_threshold).
+depends(gh29_strong_matching_sensitivity, hopf_comoving_hadronic_benchmark).
+attempted_by(gh29_strong_matching_sensitivity, claude_opus_5_5).
+checked_by(gh29_strong_matching_sensitivity, claude_opus_5_5, python("Python 3 and SciPy: one- to four-loop MSbar running with decoupling at m_t, m_b, m_c, reproducing Lambda_3 = 0.3405 GeV, and finite-difference slopes.")).
+referee_pending(gh29_strong_matching_sensitivity).
+addresses(t13, gh29_strong_matching_sensitivity).
+
 claim(gh24_current_response, theorem, proved, "Issue 24, exact elimination", "For the mixed-wall vectorlike interval, curvature-dependent U(1) probe and fixed lattice and vertical cutoffs, every finite grouping of exact Gaussian band eliminations preserves the full one-loop current Hessian. The regulated Ward identity holds and the induced light two-current vertex contributes strictly to the subtracted transverse response on 1/4 < q <= 1/2 in the two-band example.").
 source(gh24_current_response, 'results/issues/24.md', 'exact-elimination-and-moving-window-derivatives').
 depends(gh24_current_response, l14_covariant).
