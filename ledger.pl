@@ -2059,8 +2059,10 @@ claim(gh16_threshold_su2, theorem, reference, "Issue 16, A.1", "The relative SU(
 source(gh16_threshold_su2, 'results/issues/16.md', 'a1-positive-charge-threshold-count').
 addresses(t14, gh16_threshold_su2).
 
-claim(gh16_threshold_recovery, claim, open, "Issue 16, A.1", "The periodic positive-charge BPS count 256 floor(RE) uses the pinned threshold theorem at charges N >= 3. The massive index and the proper-partition graph-norm recovery through the local corrected lifts still need independent end-to-end verification.").
-source(gh16_threshold_recovery, 'results/issues/16.md', 'a1-positive-charge-threshold-count').
+claim(gh16_threshold_recovery, theorem, reference, "Issue 16, Massive index and recovery at higher charge", "At each finite N >= 3 the pinned preprint gives one even relative Spin(9) singlet. The massive index and simultaneous graph-norm recovery through the corrected proper-partition lifts have a source-level check. The count 256 floor(RE) uses the periodic spacelike circle and the BPS mass N/R.").
+source(gh16_threshold_recovery, 'results/issues/16.md', 'massive-index-and-recovery-at-higher-charge').
+checked_by(gh16_threshold_recovery, gpt_6_2_sol, by_hand).
+checked_by(gh16_threshold_recovery, gpt_6_2_sol, python("normal frequency sums, parity and cutoff exponents")).
 depends(gh16_threshold_recovery, gh16_threshold_su2).
 addresses(t14, gh16_threshold_recovery).
 
@@ -2180,16 +2182,45 @@ attempted_by(gh16_vector_trial, gpt_6_2_sol).
 checked_by(gh16_vector_trial, gpt_6_2_sol, python("exact Wick moments, polynomial derivatives and Rayleigh quotient")).
 addresses(t14, gh16_vector_trial).
 
-claim(gh16_vector_planck_decision, claim, open, "Issue 16, A.4", "The unit-coupling total-vector enclosure 720/1819 <= E_vector < 9249/500 straddles E_P = (2 pi)^(2/3)/4. The protected sub-Planck question for superspins 9, 36 and 16 requires a trial below E_P or a full physical radius-17 Dirichlet lower bound above E_P + 3.81e-28.").
+claim(gh16_vector_complement, proposition, proved, "Result 58, A high orbital degree gap on the radius-17 ball", "On the physical charge-two vector Dirichlet domain the form restriction to orbital l >= 59 has energy at least 59/50. The test at 213/250 reduces to a Schur form on l <= 58. The coupling enters only through orbital degrees 55 to 58.").
+source(gh16_vector_complement, 'results/58_two_d0_vector_spectrum.md', 'a-high-orbital-degree-gap-on-the-radius-17-ball').
+depends(gh16_vector_complement, gh16_vector_domain).
+depends(gh16_vector_complement, gh16_vector_fermions).
+attempted_by(gh16_vector_complement, gpt_6_2_sol).
+checked_by(gh16_vector_complement, gpt_6_1_terra, by_hand).
+checked_by(gh16_vector_complement, gpt_6_1_terra, python("independent rational gap and cutoff comparison")).
+addresses(t14, gh16_vector_complement).
+
+claim(gh16_vector_scalar_comparison, proposition, proved, "Result 58, A scalar chamber comparison", "On the radius-17 ball at unit coupling the scalar singular-value kinetic form with V and the pointwise vector fermion minimum has a Gaussian cutoff trial below 19/25 even after adding 13/R_X squared. Its ground infimum cannot certify the required vector lower bound.").
+source(gh16_vector_scalar_comparison, 'results/58_two_d0_vector_spectrum.md', 'a-scalar-chamber-comparison').
+depends(gh16_vector_scalar_comparison, gh16_vector_complement).
+attempted_by(gh16_vector_scalar_comparison, gpt_6_2_sol).
+checked_by(gh16_vector_scalar_comparison, gpt_6_1_terra, by_hand).
+checked_by(gh16_vector_scalar_comparison, gpt_6_1_terra, python("independent rational Gaussian and cutoff bounds")).
+addresses(t14, gh16_vector_scalar_comparison).
+
+claim(gh16_vector_planck_decision, claim, open, "Issue 16, A.4", "The unit-coupling total-vector enclosure 720/1819 <= E_vector < 9249/500 straddles E_P = (2 pi)^(2/3)/4. The protected question for superspins 9, 36 and 16 needs a trial below E_P or a certified lower bound above E_P + 3.81e-28. The high orbital complement is bounded, leaving the retained radius-17 Schur form to certify.").
 source(gh16_vector_planck_decision, 'results/issues/16.md', 'a4-invariant-mass-and-the-charge-two-point-spectrum').
 depends(gh16_vector_planck_decision, gh16_vector_planck).
 depends(gh16_vector_planck_decision, gh16_vector_domain).
 depends(gh16_vector_planck_decision, gh16_vector_trial).
+depends(gh16_vector_planck_decision, gh16_vector_complement).
+depends(gh16_vector_planck_decision, gh16_vector_scalar_comparison).
 addresses(t14, gh16_vector_planck_decision).
 
-claim(gh16_even_scattering_points, claim, open, "Issue 16, A.4", "Even one-row charge-two superspin admits scattering components with essential spectrum [0,infinity). Existence or absence of positive embedded eigenvalues in that family needs an infinite-domain point-spectrum argument.").
+claim(gh16_vector_embedded_128, theorem, proved, "Result 58, Positive eigenvalues in a scattering total type", "At charge two every confined total-vector energy has an embedded eigenstate in the fixed scattering total type 128. This supplies infinitely many distinct embedded energies with protected superspin.").
+source(gh16_vector_embedded_128, 'results/58_two_d0_vector_spectrum.md', 'positive-eigenvalues-in-a-scattering-total-type').
+depends(gh16_vector_embedded_128, gh16_vector_domain).
+depends(gh16_vector_embedded_128, gh16_vector_planck).
+attempted_by(gh16_vector_embedded_128, gpt_6_2_sol).
+checked_by(gh16_vector_embedded_128, gpt_6_1_terra, by_hand).
+checked_by(gh16_vector_embedded_128, gpt_6_1_terra, python("independent exact B4 Weyl character multiplicities")).
+addresses(t14, gh16_vector_embedded_128).
+
+claim(gh16_even_scattering_points, claim, open, "Issue 16, A.4", "Even one-row charge-two superspin admits scattering components with essential spectrum [0,infinity). Positive embedded states with this superspin need a separate infinite-domain test of the homogeneous open-channel amplitudes in the presence of the closed components.").
 source(gh16_even_scattering_points, 'results/issues/16.md', 'a4-invariant-mass-and-the-charge-two-point-spectrum').
 depends(gh16_even_scattering_points, gh16_vector_domain).
+depends(gh16_even_scattering_points, gh16_vector_embedded_128).
 addresses(t14, gh16_even_scattering_points).
 
 claim(gh16_d0_landau, proposition, proved, "Issue 16, C.9", "The degree-p Landau zero space has a p-dimensional magnetic-translation representation with specified central phases. The putative CDS projective class (1,p) at theta=1/p has trace zero.").

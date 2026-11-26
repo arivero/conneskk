@@ -197,8 +197,96 @@ $$
 $$
 Take $a=19/8$ and the trial coefficients $(1,-2/25,-2/25,1/100,-1/20)$. The Rayleigh quotient is $77724057835922261/4201920559840352<9249/500$ by exact rational arithmetic in Python. The variational principle on the whole physical sector gives the upper bound. The full-domain angular and radial estimate of Result 56 for protected multiplets gives the lower bound. To see the fraction, every such multiplet has a confined component with three-plane weight $j\ge4$, so $K_{\rm W}=j^2/(64(227/7200))\ge1800/227$. The inequality $E\ge13K_{\rm W}/(252.5+K_{\rm W})$ gives $720/1819$ for $E<13$. The vector sector occurs only in protected multiplets. The bound therefore applies to its lowest energy. $\square$ [Common vector and uniform mass floor](56_two_d0_mass_certificate.md#from-the-matrix-radius-to-an-invariant-mass)
 
-**Outstanding spectral questions.** The exact trial includes two of the previously omitted harmonics and gives an upper bound on the full operator. A trial at this energy leaves the existence test $E_{\boldsymbol9}<E_P$ open. In the opposite direction, the finite-ball estimate requires a certified lower bound on the entire 9,834-channel physical Dirichlet form at $R=17$ exceeding $E_P+3.81\times10^{-28}$. The coupled higher-degree complement must enter any lower enclosure. A comparison dropping the chamber angular kinetic would need an additional estimate to meet the threshold. The even one-row superspin family has scattering total types with essential spectrum $[0,\infty)$. A bound on the confined vector alone leaves positive embedded eigenvalues in those types open. [Radius-17 and continuum tests](56_two_d0_mass_certificate.md#a-finite-ball-and-the-scattering-continuum)
-
 The higher-degree trial and its rational calculation are by GPT-6.2 Sol. The arithmetic checks used Python. Independent review of this added trial is pending.
+
+## A high orbital degree gap on the radius-17 ball
+
+**Proposition.** Let $H^D$ be the physical total-vector Dirichlet operator on $R<17$. Let $P_{58}$ retain the orbital degrees $l\le58$ with all radial profiles and physical multiplicities, and put $Q_{58}=1-P_{58}$. The form restriction $H_Q^D$ to $Q_{58}$ obeys $H_Q^D\ge 59/50$. For $\tau=213/250>E_P+3.81\times10^{-28}$, the bound $H^D\ge\tau$ is equivalent to nonnegativity of the form
+$$
+ P_{58}(H^D-\tau)P_{58}-C^*(H_Q^D-\tau)^{-1}C,\qquad
+ C=Q_{58}(V+B)P_{58}.
+$$
+The off-diagonal operator $C$ uses incoming degrees $55,\ldots,58$ and outgoing degrees $59,\ldots,62$ only. [Full exterior estimate](56_two_d0_mass_certificate.md#a-form-bound-on-the-confined-components)
+
+**Proof.** In the vector fibre write $z=p/R$, with $p$ the positive eigenvalue of the three-by-three fermion matrix. The other two eigenvalues sum to $-p$ and their squared sum is $2R^2-p^2$. Thus $1\le z\le 2/\sqrt3$ and the smaller negative magnitude divided by $R$ is $(z-\sqrt{4-3z^2})/2$. The exact vector fermion minimum in Result 56 divided by $\sqrt2 R$ is the lesser of $-6z-2\sqrt{4-3z^2}$ and $-7z$. The first branch is increasing since $6z/\sqrt{4-3z^2}\ge6$. The second is decreasing. They meet at $z=4/\sqrt{13}$. Their endpoint minima and their common maximum give
+$$
+ -14\sqrt{2/3}\,R\ \le\ B_{\boldsymbol9,\min}(s)\
+ \le\ -28\sqrt{2/13}\,R .
+$$
+This bounds the physical multiplier below almost everywhere on the regular chamber. [Vector fermion minimum](56_two_d0_mass_certificate.md#the-fermion-potential-in-the-vector-sector)
+
+Use the full Cartesian radial-angular decomposition on the Dirichlet ball. The angular eigenvalue in degree $l$ is $l(l+25)$. The 27-dimensional radial Hardy inequality contributes $625/(8R^2)$ to the kinetic term after the factor $1/2$. For example, in radial half-density variables the density contributes $78/R^2$ and the half-line Hardy inequality contributes $1/(8R^2)$. Hence all $Q_{58}$ sections supported in $R\le6$ have form energy per norm at least
+$$
+ \frac{625/8+59(59+25)/2}{36}-6\cdot 14\sqrt{2/3}.
+$$
+Here we used $V\ge0$ and the monotonicity of the resulting lower multiplier in $R$. Sections supported in $R\ge5$ have form energy per norm at least $13-252/25$ by the full confined form estimate. Zero extension at $R=17$ lies in the physical form domain. Let the cosine and sine of a radial angle give a squared partition of unity, with angle zero for $R\le5$, linear with slope $\pi/2$ on $[5,6]$, and $\pi/2$ for $R\ge6$. Both cutoffs commute with $Q_{58}$ and with the gauge and rotation projections. The kinetic localization cost is bounded by $\pi^2/8$. The inner energy is greater than $87029/36000$ using $\sqrt{2/3}<8165/10000$. The outer energy is at least $73/25$. Exact rational arithmetic in Python checks
+$$
+ \min(87029/36000,\ 73/25)-121/98>59/50,\qquad
+ \big[4(\tau-3.81\times10^{-28})\big]^3>(44/7)^2,
+$$
+where $\pi<22/7$. The estimates apply first on the physical core and then to the radius-17 form closure.
+
+On the ball $V+B$ is bounded and the orbital projection preserves the Cartesian Dirichlet kinetic form domain. The kinetic term is block diagonal. A polynomial of angular degree at most $k$ has matrix elements only for $|l-l'|\le k$: its product with a harmonic of degree $l$ has degree at most $l+k$, and taking adjoints gives the lower restriction. Use $k=4$ for $V$ and $k=1$ for $B$. For $u\in P_{58}$ and $v\in Q_{58}$ in the respective form domains, let $D=H_Q^D-\tau$. The shifted form is
+$$
+ \langle u,P_{58}(H^D-\tau)P_{58}u\rangle
+ -\|D^{-1/2}Cu\|^2+\|D^{1/2}v+D^{-1/2}Cu\|^2 .
+$$
+Since $D\ge41/125$, the inverse is bounded and $v=-D^{-1}Cu$ is admissible in the high-degree form domain. Taking the infimum over $v$ gives the equivalence. In particular $0\le C^*D^{-1}C\le (125/41)C^*C$. $\square$
+
+## A scalar chamber comparison
+
+**Proposition.** Keep the chamber measure $J$ and the radius-17 Dirichlet trace. Consider the scalar form given by the singular-value derivatives, $V$ and the exact pointwise vector fermion minimum. Its bottom stays below $19/25$ even after adding the positive multiplier $13/R^2$. Thus dropping the orbit derivatives and replacing the matrix multiplier by its pointwise minimum cannot furnish the radius-17 lower bound. This comparison uses the scalar norm on each orbit and includes all chamber shapes.
+
+**Proof.** On physical chamber sections the scalar norm has singular-value derivatives bounded in magnitude by the corresponding section derivatives. The omitted orbit terms are sums of squares. This gives the scalar comparison without the added multiplier. Denote the scalar form with that multiplier by $q_s$. The upper bound on $B_{\boldsymbol9,\min}$ just proved gives $q_s$ bounded above by the same form with Yukawa multiplier $-b_*R$, $b_*=28\sqrt{2/13}$. For radial functions the singular-value derivatives are the Cartesian radial derivative, and $J$ is the orbit volume factor. Take the normalized radial Gaussian proportional to $e^{-aR^2/2}$ with $a=23/12$. Under its squared density the 27 Cartesian entries have variance $1/(2a)$. Consequently
+$$
+ \tfrac12\langle|\nabla\log e^{-aR^2/2}|^2\rangle=\tfrac{27a}{4},
+ \quad \langle V\rangle=\tfrac{54}{a^2},\quad
+ \langle R^{-2}\rangle=\tfrac{2a}{25},\quad
+ \langle R\rangle=\frac{\Gamma(14)}{\sqrt a\,\Gamma(27/2)}.
+$$
+The quartic expectation counts $\binom32\binom92$ squared minors, each with expectation $1/(2a^2)$. The other moments follow from the gamma density of $aR^2$ with shape $27/2$. Set $\eta=1$ for $R\le16$, $\eta=17-R$ for $16<R<17$, and $\eta=0$ for $R\ge17$. The Gaussian times $\eta$ has the required trace. The scalar form extends to this trial by the same capacity cutoff at the walls and by approximation of the radial Lipschitz cutoff.
+
+The cutoff can only decrease the nonnegative potential and the original kinetic terms. Expanding its square gradient adds at most $a\langle R\mathbf1_{R>16}\rangle+\Pr(R>16)/2$. The loss of negative potential costs at most $b_*\langle R\mathbf1_{R>16}\rangle$. Put
+$$
+ t=\frac{\prod_{j=0}^9(27/2+j)}{a^{10}16^{20}} .
+$$
+The twentieth moment gives $\Pr(R>16)\le t$ and $\langle R\mathbf1_{R>16}\rangle\le16t$. The retained squared norm is at least $1-t$. The half-integer gamma formula gives
+$$
+ b_*\langle R\rangle=\frac{28\cdot 4^{13}(13!)^2}{26!}
+       \sqrt{\frac{2}{13a\pi}}>\frac{144363}{5000}.
+$$
+Using $\pi<22/7$, the last inequality is a rational comparison after squaring. With $b_*<11$, exact arithmetic in Python verifies $t<10^{-12}$ and
+$$
+ \frac{(27/4+26/25)a+54/a^2-144363/5000+
+              (16(a+11)+1/2)t}{1-t}<\frac{19}{25}.
+$$
+The numerator bound is positive, so dividing by the retained norm is safe. The variational principle gives the stated scalar result, while $E_P>17/20$ follows by cubing and using $\pi>157/50$. The extra $13/R^2$ is the first Cartesian orbital centrifugal coefficient. The Gaussian trial belongs to the scalar comparison domain. A bound deciding the vector energy needs more information about the equivariant angular sections. $\square$
+
+## Positive eigenvalues in a scattering total type
+
+**Theorem.** Every positive eigenvalue in the confined total vector sector is also an embedded eigenvalue in the total $\mathbf{128}$ sector of the same relative $SU(2)$ operator. There are infinitely many such energies in that scattering total type. Their superspins are protected. The possible embedded spectrum with even one-row superspin is a separate question. [Free angular channels and superspin](https://arxiv.org/html/2611.17325v2#S4)
+
+**Proof.** Let $S=\mathbf{44}\oplus\mathbf{84}\oplus\mathbf{128}$. On the physical eigenspace at $E>0$, $Q_\alpha/\sqrt E$ preserve the eigenspace and generate the sixteen-generator Clifford algebra. Indeed each self-adjoint $Q_\alpha$ has square $H$ there and preserves its spectral subspaces. The cross anticommutators hold as form identities by closure and hence on the eigenspace. The rotation representation is a sum of $W\otimes S$ for irreducible superspins $W$. Since $S$ is self-dual, the multiplicity of the vector in $W\otimes S$ equals the multiplicity of $W$ in $\mathbf9\otimes S$.
+
+We compute that latter product and the occurrence of the total $\mathbf{128}$ in every product $W\otimes S$ as follows. Use doubled weights. For $\mathbf{44}$ sum unordered pairs with repetition of the vector weights $0,\pm2e_i$ and subtract one zero. For $\mathbf{84}$ sum triples of distinct vector weights. For $\mathbf{128}$ sum every vector weight plus every spinor weight $(\pm1,\pm1,\pm1,\pm1)$ and subtract the spinor multiset. To multiply a highest weight $2\lambda$ by this polarization character, for each doubled weight $w$ of $S$ form $2\lambda+w+(7,5,3,1)$. Discard shifts on a wall, which have a zero or repeated absolute coordinates. For the others, sort by decreasing absolute value, make the coordinates positive, and subtract $(7,5,3,1)$. Count with the sign of the sorting permutation times the product of the original signs. This rule follows by expanding the Weyl numerator of $\lambda$ times the Weyl-invariant character of $S$, then collecting alternating orbits. The calculation with Python integers gives the following list. Each listed $W$ occurs once in $\mathbf9\otimes S$.
+
+| $2\lambda_W$ | Copies of the total $\mathbf{128}$ in $W\otimes S$ |
+|---|---:|
+| $(1,1,1,1)$ | 2 |
+| $(2,0,0,0)$ | 1 |
+| $(2,2,0,0)$ | 2 |
+| $(2,2,2,2)$ | 2 |
+| $(3,1,1,1)$ | 3 |
+| $(3,3,1,1)$ | 3 |
+| $(4,2,0,0)$ | 2 |
+| $(4,2,2,0)$ | 2 |
+| $(5,1,1,1)$ | 2 |
+| $(6,0,0,0)$ | 1 |
+
+All entries have superspin outside the even one-row list. The total $\mathbf{128}$ is in the free channel $\mathcal H_1\otimes\mathbf{128}$. For example, Clifford multiplication on the spinor index compressed to gamma-traceless vector-spinors gives the nonzero equivariant map $\mathbf9\otimes\mathbf{128}\to\mathbf{128}$ used in Result 56. The essential spectrum of this total type is $[0,\infty)$. The vector sector has compact resolvent, infinite multiplicity space and strictly positive energies. Its unbounded sequence of eigenvalues therefore supplies an unbounded sequence of embedded eigenvalues in this fixed total type. $\square$ [Vector levels and essential spectrum](56_two_d0_mass_certificate.md#a-finite-ball-and-the-scattering-continuum)
+
+**Outstanding spectral questions.** The full vector enclosure remains $720/1819\le E_{\boldsymbol9}<9249/500$. The high-degree form gap controls the complement for the radius-17 test. A lower enclosure of the retained coupled Schur form, including its signed correction and every retained radial profile, is still needed for that test. The scalar comparison has a sub-threshold trial and cannot supply it. In the even one-row superspin family the free channel has the same superspin as a possible bound state. Existence or absence there requires an infinite-domain test of the coupled open and closed channels, in particular control of the homogeneous incoming and outgoing amplitudes of a candidate $L^2$ solution and its coupling to the decaying components. The essential spectrum and the protected partners in the theorem leave that point spectrum open. [Radius-17 and continuum tests](56_two_d0_mass_certificate.md#a-finite-ball-and-the-scattering-continuum)
+
+The high-degree and scalar comparisons and the fixed-type embedded-eigenvalue proof are by GPT-6.2 Sol. GPT-6.1 Terra independently checked the form inequalities, domain and Schur correction, and the representation argument using the cited essential-spectrum result. Both models checked the numerical constants and Weyl multiplicities in Python using exact rational and integer arithmetic.
 
 **Provenance.** GPT-6.1 Terra derived the superspin estimates, with checks by GPT-6.2 Sol and GPT-6.2 Astra Max. The spinor floor survives the correction to the two-form highest weight. GPT-6.2 Sol derived the stabilizer count and chamber domain. GPT-6.2 Astra Max derived the oscillator trace, variational bound and angular probability estimate. GPT-6.2 Sol independently reproduced the finite coefficients, moments and operator estimates. GPT-6.1 Terra also checked the variational sign and the weighted resolvent argument.
