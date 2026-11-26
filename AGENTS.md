@@ -31,6 +31,30 @@ An item here is a ranked item of STRATEGY.md (T1, T2 and so on). GitHub issues a
 
 Judge the purpose of each ticket and each closure plan. A negative result from a test that could have succeeded is research output. A ticket or plan written so that a cheap negative result completes it earns no progress on its STRATEGY item: record the result and state the positive target that remains.
 
+## What counts as progress
+
+The rules above guard against false claims. This section says what the work aims at. On 26 November 2026 the ledger held 469 proved claims, 14 no-go results and two conjectures, it had no kind for a prediction, and most tickets of that week closed on a check, a scoped negative result or a free coefficient. Careful work drifts towards what a strict referee accepts cheaply. The aim is discovery, and the following rules point the work at it.
+
+**Three outcomes move a STRATEGY item**, in this order of value.
+
+1. **An input is derived.** A quantity that the corpus puts in by hand (a coefficient, a scale, a charge assignment, a boundary condition, a matching constant) is computed from the parent structure, and one free choice disappears.
+2. **A prediction is made and tested.** A number or a structural statement with no adjusted input is written down with its precision before the comparison, and is then compared with a held-out observable. Agreement and disagreement both count.
+3. **A candidate is eliminated by a test it could have passed**, and the next candidate is named.
+
+Everything else is support: checks of earlier results, restatements, lemmas in a simplified setting, comparisons with the literature, and findings that a coefficient is free. Support work is needed and is recorded with the same care. It leaves the item where it was, and the text says so.
+
+**Inputs put in by hand.** STRATEGY.md lists, for each item, the inputs that the corpus supplies by hand. A finding that a quantity is free in a given action adds that quantity to the list, as a target. A research step starts by naming the input it tries to derive or the prediction it tries to make. In the ledger such inputs are `hypothesis/2` facts, and a result that uses one depends on it.
+
+**Work in the object of the proposal.** The questions are about the parent structure of the corpus: the 10 → 9 reduction, the Hopf family, the wall action. A lemma in an abstract setting, or a model whose inputs are chosen so that the answer comes out, is a scout. Its first sentence says that it is a scout, the text states what transfers to the parent, and the computation in the parent stays as the open step. One long computation in the parent, with checkpoints that have value on their own, is preferred to several short results around it.
+
+**Conjectures and predictions.** State a conjecture when the evidence suggests one: labelled Conjecture, with its evidence, the simplest test that would refute it and the consequence if it holds. The ledger kind is `conjecture` with status `open`. A conjecture sharp enough to be refuted is worth more to the project than a safe lemma, and a refuted one is recorded as a result. The wording rules apply unchanged, since the label says what the statement is. A prediction is registered in STRATEGY.md with its date, its inputs, its value, its precision and the held-out observable before the comparison is made.
+
+**After a negative result, build the escape.** The list of escapes of a no-go result is a work queue. The next step on that item constructs the most promising escape in the parent structure and tests it, or records which escape was tried and where it failed.
+
+**Existing machinery first.** Before deriving an input from first principles, search the literature for the theorem or computation that would supply it (index theorems, anomaly inflow, localization, published matching computations), and import it with its hypotheses.
+
+**Tickets and closure plans.** A plan names the input it aims to derive or the prediction it aims to test. When the ticket closes, the closing comment classifies the exit: *reached* (the input is derived or the prediction is tested), *narrowed* (a candidate is eliminated and the next one is named) or *blocked* (the decisive computation remains, and it is stated as the next target). A plan may allow a negative or inconclusive outcome, and that exit is narrowed or blocked. After three tickets in a row on one item without a reached exit, the next step is a review of the approach to that item in STRATEGY.md: whether the item asks the right question, and which single computation would decide it.
+
 ## Mathematical writing
 
 Use the standard mathematical "we" and "Let ...", in research documents and in prompts asking for proofs.

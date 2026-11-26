@@ -156,6 +156,27 @@ The GitHub issues below are closed because their finite calculations are recorde
 
 **The two-D0 vector level and the Planck comparison (T14, issue 16).** Nine of the ten questions of the issue have recorded answers. The vector level obeys $720/1819\le E_{\mathbf 9}<18.498$, an interval that contains $E_P\approx0.8513$. Deciding the side needs a certified lower bound on the retained Schur form at radius 17, and positive embedded eigenvalues with even one-row superspin need a coupled scattering analysis. The graded state map, the membrane charge assignment and the radius equation of the proposed physical identification also remain open. [Threshold count, frames and torus](results/issues/16.md) · [Vector enclosure](results/58_two_d0_vector_spectrum.md)
 
+### Inputs put in by hand
+
+Each row is a quantity that the corpus supplies by hand and a target for derivation (AGENTS.md, "What counts as progress"). A research step on an item starts from this list, and a finding that a further quantity is free adds a row.
+
+| Item | Input | Where it enters | What would derive it |
+|---|---|---|---|
+| T13 | Hadronic scale $H_N$, calibrated | $\Xi=G_FH_N^2$ in result 100 and [issue 29](results/issues/29.md) | The finite eleven-dimensional strong matching coefficient $\delta_{\rm match}(U)$ and the coloured-vector contribution between $M_g$ and $U$, to about $0.004$ |
+| T13 | Locking scale $f_S$ | Semileptonic-to-leptonic contact ratio of [issue 29](results/issues/29.md) | A dynamical selection of the locking scale |
+| T13 | Coefficient $\lambda S$ of the inverse law $C_\ell=M^2/C_d$ | Lepton scale of [issue 30](results/issues/30.md) | A mechanism in the inverse-law class, tested on the pion decay amplitude |
+| T13 | Wall coefficient $J$ | Selected charged-lepton determinant and Thomson matching of [issue 25](results/issues/25.md) | A microscopic wall or geometric action that fixes the determinant-dependent coefficients |
+| T12, T2 | Ultraviolet charge assignment and boundary subgroup of the charge-$4/3$ states | Dark reading of the label 9 in [issue 15](results/issues/15.md) | The group that carries the flavour-antisymmetric label of Lemma 21 in the 10 → 9 reduction, and the action of the $M_3(\mathbb C)$ of the window on those states |
+| T14 | Graded state map, membrane charge assignment and radius equation | Planck comparison of the two-D0 level in [issue 16](results/issues/16.md) | The identification of the finite fermion module with the D0 states, and a radion term for the radius |
+| T18, T13 | Common mirror mass $M$ | Mirror increment and oblique parameters of [issue 31](results/issues/31.md) and result 79 | A mass mechanism for the mirror families that passes the oblique and gluon-vertex tests |
+
+### Registered predictions
+
+A prediction enters this table before its comparison is made, with every input listed. The table is empty on 26 November 2026. The value of $G_F$ with the muon lifetime held out ([issue 29](results/issues/29.md)) is the first candidate, once its inputs are written out.
+
+| Date | Quantity | Inputs used | Predicted value and precision | Held-out observable | Outcome |
+|---|---|---|---|---|---|
+
 ## What the corpus already settles
 
 1. A finite factor F has heat dimension 0 for every v (canonical 2.1). Light finite modes never create a continuum dimension. Any emerging dimension therefore needs a parent with an infinite tower, and F must be its truncation.
