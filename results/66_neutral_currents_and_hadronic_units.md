@@ -58,6 +58,8 @@ $$
 $$
 Here $CV B^2=4I_3$ and a canonical $V-A$ source carries the factor $1/8$. The same expression uses the actual fermion overlap when Yukawa mixing is retained. A compact middle member with a six-dimensional scalar band need not have a weak pole inside that band.
 
+With a leptonic contact $G_F/\sqrt2$, the dimensionless weak strength is $\Xi=G_FH_N^2$. The direct neutron beta rate also depends on the semileptonic overlap, the flavour matrix element, matched nucleon form factors and phase space. The same normalized amplitude gives the fixed-hadron, comoving, isospectral flavour and threshold comparisons, including hydrogen $1s$. [Neutron beta decay on plates 16–19](issues/27.md#four-plate-limits)
+
 | Scalar regime on the supported route | Tree electric coefficient | First coupled charged mass in units of $H$ | $H^2 C_{\ell\ell}(x^2 H^2)$ |
 |---|---|---|---|
 | Five, fixed broken $b$, $a\downarrow0$, $BH\to h>0$ | $1/I_Q$ | Of order $B/(ah)$ at fixed shape | $h^2 S_b/(32I_3)$, also its contact value |

@@ -1907,6 +1907,37 @@ checked_by(gh26_fixed_band_dispersion, gpt_6_2_astra, by_hand).
 checked_by(gh26_fixed_band_dispersion, codex_gpt_6, python("Symbolic band coefficient, slope-subtracted coefficient and scaling exponents. Fixed-band integration of the finite sum in both kernels.")).
 addresses(t14, gh26_fixed_band_dispersion).
 
+claim(gh27_semileptonic_rate, proposition, conditional, "Proposition 27.1", "The normalized interval weak vertex factors into its cosine-pair overlap and V_ud. Tree charged-pole exchange at finite momentum matches the allowed continuum rate in hadronic units to the squared leptonic contact G_F H_N^2, squared relative semileptonic overlap, squared flavour coefficient, allowed nucleon spin factor and dimensionless phase-space integral.").
+source(gh27_semileptonic_rate, 'results/issues/27.md', 'normalized-semileptonic-amplitude').
+hypothesis(gh27_beta_inputs, "Strict finite Dirac interval window, flavour-blind charged profiles and the prescribed matched quadratic pole sector with a positive leptonic contact. Matched QCD+QED rest masses and pure-QCD current form factors at prescribed renormalized inputs. Massless antineutrino, one tree weak insertion, leading nucleon recoil, form-factor and charged-propagator orders for the rate, and the stated point-charge Coulomb prescription.").
+depends(gh27_semileptonic_rate, l22_window).
+depends(gh27_semileptonic_rate, l22_compression).
+depends(gh27_semileptonic_rate, hyp(gh27_beta_inputs)).
+attempted_by(gh27_semileptonic_rate, gpt_6_2_sol).
+checked_by(gh27_semileptonic_rate, gpt_6_2_astra, by_hand).
+checked_by(gh27_semileptonic_rate, gpt_6_2_sol, python("Python 3 and SymPy checks of mode and chiral normalization, propagator expansion, spin traces and continuum phase-space coefficient.")).
+addresses(t13, gh27_semileptonic_rate).
+
+claim(gh27_plate_limits, proposition, conditional, "Proposition 27.2", "In the specified weak-decoupling family the continuum rate in fixed hadronic units falls as G_F squared. Comoving scales preserve the dimensionless rate. Rotating the down wall preserves the fermionic KK spectrum and multiplies the direct rate by cos(phi) squared while a strange charged vertex survives. Varying the matched splitting through the electron mass closes the continuum at finite nonzero weak strength.").
+source(gh27_plate_limits, 'results/issues/27.md', 'four-plate-limits').
+hypothesis(gh27_plate_schedules, "A common growing charged-pole mass term and fixed low-energy inputs for plate 16. All masses, probes and matching thresholds comove at fixed dimensionless inputs for plate 17. The generator is fixed while the nondegenerate down block rotates in plate 18. The allowed prefactors have finite nonzero limits at the plate 19 endpoint.").
+depends(gh27_plate_limits, gh27_semileptonic_rate).
+depends(gh27_plate_limits, hyp(gh27_plate_schedules)).
+attempted_by(gh27_plate_limits, gpt_6_2_sol).
+checked_by(gh27_plate_limits, gpt_6_2_astra, by_hand).
+checked_by(gh27_plate_limits, gpt_6_2_sol, python("Python 3 symbolic rotation, threshold matching and plate 11 prefactors, and numerical pole sums and rescaled rates.")).
+addresses(t13, gh27_plate_limits).
+
+claim(gh27_beta_thresholds, proposition, conditional, "Proposition 27.3", "At the continuum threshold the allowed rate is asymptotic to a positive multiple of delta to the 7/2 without Coulomb distortion and delta cubed at fixed attractive alpha. In the leading point-Coulomb atom the ground-state rate is proportional to the probability density at the origin and the square of the positive part of delta plus the binding energy. Its open interval below continuum threshold extends to delta = 0.").
+source(gh27_beta_thresholds, 'results/issues/27.md', 'continuum-endpoint-and-hydrogen-1s').
+hypothesis(gh27_coulomb_endpoint, "Positive limiting electron and hadronic masses, smooth nonzero allowed prefactors, the static-proton Sommerfeld prescription in the continuum, and the leading nonrelativistic reduced-mass hydrogen atom with a local production operator.").
+depends(gh27_beta_thresholds, gh27_semileptonic_rate).
+depends(gh27_beta_thresholds, hyp(gh27_coulomb_endpoint)).
+attempted_by(gh27_beta_thresholds, gpt_6_2_sol).
+checked_by(gh27_beta_thresholds, gpt_6_2_astra, by_hand).
+checked_by(gh27_beta_thresholds, gpt_6_2_sol, python("Python 3 symbolic endpoint integrals, hydrogen normalization and energy, and numerical asymptotic ratios and channel thresholds.")).
+addresses(t13, gh27_beta_thresholds).
+
 claim(gh24_current_response, theorem, proved, "Issue 24, exact elimination", "For the mixed-wall vectorlike interval, curvature-dependent U(1) probe and fixed lattice and vertical cutoffs, every finite grouping of exact Gaussian band eliminations preserves the full one-loop current Hessian. The regulated Ward identity holds and the induced light two-current vertex contributes strictly to the subtracted transverse response on 1/4 < q <= 1/2 in the two-band example.").
 source(gh24_current_response, 'results/issues/24.md', 'exact-elimination-and-moving-window-derivatives').
 depends(gh24_current_response, l14_covariant).
