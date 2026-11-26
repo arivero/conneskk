@@ -1855,6 +1855,39 @@ addresses(t18, gh20_hypercharge_projection).
 depends(gh20_hypercharge_projection, l23_wz).
 depends(gh20_hypercharge_projection, l47_matching_radius).
 
+claim(gh25_fixed_moment_trace, proposition, proved, "Issue 25, determinant interval and exact charged trace", "At fixed positive charged-lepton moments of degrees two and four the ordered squared spectrum is parameterized by its determinant up to the possible zero-mass boundary. On a nonsingleton family the constant-Higgs flat charged trace for a strictly decreasing cutoff on the sampled interval minimizes the energy at the upper double-root endpoint. A cutoff flat across the branch gives constant energy.").
+source(gh25_fixed_moment_trace, 'results/issues/25.md', 'the-exact-charged-trace').
+hypothesis(gh25_charged_trace_domain, "Zero gauge fields in flat four-space, nonzero fixed Higgs norm, and a nonnegative C1 cutoff with finite first moment. The sign is that of the second divided difference and depends on the sampled range of the cutoff.").
+depends(gh25_fixed_moment_trace, hyp(gh25_charged_trace_domain)).
+attempted_by(gh25_fixed_moment_trace, codex_gpt_6).
+checked_by(gh25_fixed_moment_trace, gpt_6_2_astra, by_hand).
+checked_by(gh25_fixed_moment_trace, codex_gpt_6, python("Cubic invariants, exponential and flat-profile quadrature, and the exact and order-Lambda^-2 shape slopes for the worked spectrum.")).
+addresses(t13, gh25_fixed_moment_trace).
+
+claim(gh25_wall_minimum, proposition, proved, "Issue 25, wall triplet and Higgs minimum", "For the specified constrained kinetic wall triplet with prescribed radial and wall polynomials and the exact exponential charged trace, the joint minimum is interior with a positive constrained Hessian. Its determinant decreases continuously with the allowed linear wall coefficient.").
+source(gh25_wall_minimum, 'results/issues/25.md', 'the-wall-triplet-and-higgs-minimum').
+hypothesis(gh25_wall_action, "A local wall triplet with the two exact moment constraints, the displayed Higgs and triplet kinetic terms, the prescribed radial polynomial and determinant potential, and the declared interval of linear wall coefficients.").
+depends(gh25_wall_minimum, gh25_fixed_moment_trace).
+depends(gh25_wall_minimum, hyp(gh25_wall_action)).
+attempted_by(gh25_wall_minimum, codex_gpt_6).
+checked_by(gh25_wall_minimum, gpt_6_2_astra, by_hand).
+checked_by(gh25_wall_minimum, gpt_6_2_astra, python("Independent SciPy radial and shape solves at the three displayed tilts.")).
+checked_by(gh25_wall_minimum, codex_gpt_6, python("Power-sum derivative recurrence, positive Hessian and endpoint gaps, and three solutions by nested bisection.")).
+addresses(t14, gh25_wall_minimum).
+
+claim(gh25_conditional_thomson_match, proposition, conditional, "Issue 25, Thomson matching at the selected minimum", "At the central wall vacuum the three continuous one-loop Dirac thresholds and the stated common ultraviolet and hadronic inputs give a finite inverse Thomson charge. At fixed Higgs norm the difference from a reference spectrum equals the logarithm of its determinant ratio over three pi.").
+source(gh25_conditional_thomson_match, 'results/issues/25.md', 'thomson-matching-at-the-selected-minimum').
+hypothesis(gh25_thomson_inputs, "Tree lepton masses, a common matched QED charge above them, continuous one-loop decoupling at each positive threshold and a fixed additive hadronic vacuum polarization. The hypercharge projection comparison uses an independent nucleon mass.").
+depends(gh25_conditional_thomson_match, gh25_wall_minimum).
+depends(gh25_conditional_thomson_match, gh20_lepton_threshold_curve).
+depends(gh25_conditional_thomson_match, gh20_hypercharge_projection).
+depends(gh25_conditional_thomson_match, hyp(gh25_thomson_inputs)).
+attempted_by(gh25_conditional_thomson_match, codex_gpt_6).
+checked_by(gh25_conditional_thomson_match, gpt_6_2_astra, by_hand).
+checked_by(gh25_conditional_thomson_match, gpt_6_2_astra, python("Independent lepton masses, inverse charge and fixed-norm difference.")).
+checked_by(gh25_conditional_thomson_match, codex_gpt_6, python("Three thresholds, log-ratio identity and estimates of omitted pure-lepton running and matching terms.")).
+addresses(t13, gh25_conditional_thomson_match).
+
 claim(gh24_current_response, theorem, proved, "Issue 24, exact elimination", "For the mixed-wall vectorlike interval, curvature-dependent U(1) probe and fixed lattice and vertical cutoffs, every finite grouping of exact Gaussian band eliminations preserves the full one-loop current Hessian. The regulated Ward identity holds and the induced light two-current vertex contributes strictly to the subtracted transverse response on 1/4 < q <= 1/2 in the two-band example.").
 source(gh24_current_response, 'results/issues/24.md', 'exact-elimination-and-moving-window-derivatives').
 depends(gh24_current_response, l14_covariant).

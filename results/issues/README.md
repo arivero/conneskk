@@ -30,6 +30,7 @@ Issue 20 explicitly allowed a residual family. Its one-loop calculation varies t
 | [#19](https://github.com/arivero/conneskk/issues/19) | [Electromagnetic, hadronic and charged-lepton mass comparisons](19.md) | Three empirical comparisons and the edition history. The on-shell hypercharge comparison differs by 5.65 experimental standard deviations. |
 | [#20](https://github.com/arivero/conneskk/issues/20) | [The hypercharge projection at a stationary spectral vacuum](20.md) | At a fixed stationary polynomial vacuum, a free lepton determinant moves the one-loop electromagnetic benchmark. The exact flat trace gives a separate vacuum test. |
 | [#24](https://github.com/arivero/conneskk/issues/24) | [Gauge-covariant blocking of the interval current response](24.md) | The regulated transverse response agrees for direct and successive Schur elimination, with a nonzero induced two-current term. A covariant polynomial approximation to the heavy inverse controls the error at growing blocking depth and fixed horizontal spacing. |
+| [#25](https://github.com/arivero/conneskk/issues/25) | [Selection of the charged-lepton determinant](25.md) | The exact flat charged trace selects the largest determinant for a strictly decreasing cutoff and is constant on a flat sampled range. A kinetic wall triplet gives a stable positive determinant with adjustable tilt and a conditional Thomson match. |
 
 ## Archived branch tips
 
