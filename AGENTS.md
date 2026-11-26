@@ -27,6 +27,10 @@ A no-go result is a guide to where to go next, and it leaves the question open. 
 - Require consensus among multiple models before relying on one in general, with an independent check by a model other than its author as the minimum.
 - Say which direction the result points to. Close an item only with a positive theorem.
 
+An item here is a ranked item of STRATEGY.md (T1, T2 and so on). GitHub issues are working tickets, and they live outside the git repository. A ticket closes when its finite work is recorded, including a negative result in its exact scope. The closing comment and the repository text then state what research stays open, and the STRATEGY item carries that question. Closing a ticket closes no idea: the escape from a no-go result has often been found afterwards.
+
+Judge the purpose of each ticket and each closure plan. A negative result from a test that could have succeeded is research output. A ticket or plan written so that a cheap negative result completes it earns no progress on its STRATEGY item: record the result and state the positive target that remains.
+
 ## Mathematical writing
 
 Use the standard mathematical "we" and "Let ...", in research documents and in prompts asking for proofs.
