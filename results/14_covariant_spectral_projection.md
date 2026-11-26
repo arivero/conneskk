@@ -13,6 +13,8 @@
 
 *Scope (amendment).* The double-coset statement needs the endpoint transformations to act independently through H_0 and H_l, with extendability understood, and is a local pointwise classification unless the global topology is specified; periodic conditions require g(l) = g(0), and then the holonomy is classified by conjugation. If the gap closes, no fixed-rank smooth light bundle is asserted. The compression differs from eliminating the other fermions, which adds -P_A D_A P^perp [P^perp (D_A - z) P^perp]^{-1} P^perp D_A P_A.
 
+The regulated interval calculation evaluates the two-current vertex from Schur elimination and the source-dependent determinant of the omitted modes. The full one-loop response satisfies the Ward identity and agrees for direct and successive elimination. [Issue 24 current response](issues/24.md#exact-elimination-and-moving-window-derivatives)
+
 **Proof.** Lemma 14, Theorems 1 and 2; the proofs are there. Conjugation of the resolvent in the contour formula for P_A proves covariance, W^dagger D W removes the connection, and the frame computation gives the connection and curvature.
 
 **What it leaves open.** Covariance alone fixes neither the fluctuation image (14_link_fixed_singular_values.md) nor equality of the vector masses with the tower (14_matching_sum_rule.md).

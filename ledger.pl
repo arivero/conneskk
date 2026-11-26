@@ -1855,6 +1855,23 @@ addresses(t18, gh20_hypercharge_projection).
 depends(gh20_hypercharge_projection, l23_wz).
 depends(gh20_hypercharge_projection, l47_matching_radius).
 
+claim(gh24_current_response, theorem, proved, "Issue 24, exact elimination", "For the mixed-wall vectorlike interval, curvature-dependent U(1) probe and fixed lattice and vertical cutoffs, every finite grouping of exact Gaussian band eliminations preserves the full one-loop current Hessian. The regulated Ward identity holds and the induced light two-current vertex contributes strictly to the subtracted transverse response on 1/4 < q <= 1/2 in the two-band example.").
+source(gh24_current_response, 'results/issues/24.md', 'exact-elimination-and-moving-window-derivatives').
+depends(gh24_current_response, l14_covariant).
+attempted_by(gh24_current_response, gpt_6_2_sol).
+checked_by(gh24_current_response, gpt_6_1_terra, by_hand).
+checked_by(gh24_current_response, gpt_6_2_sol, python("transverse quadrature in both groupings, longitudinal Ward cancellation, and interval overlaps")).
+checked_by(gh24_current_response, gpt_6_1_terra, python("reproduced the supplied quadrature and compared with independent Sobol integration")).
+addresses(t4b, gh24_current_response).
+
+claim(gh24_repeated_blocking, theorem, proved, "Issue 24, repeated local blocking", "At fixed horizontal lattice spacing, using a covariant Neumann polynomial in the induced two-current vertex and retaining the determinant at quadratic order yields local defects with contractive subsequent maps. Degree equal to depth gives geometric convergence on the specified momentum range, uniformly in the vertical cutoff. A summable tower estimate also removes the vertical cutoff in this response.").
+source(gh24_repeated_blocking, 'results/issues/24.md', 'repeated-local-blocking').
+depends(gh24_repeated_blocking, gh24_current_response).
+attempted_by(gh24_repeated_blocking, gpt_6_2_sol).
+checked_by(gh24_repeated_blocking, gpt_6_1_terra, by_hand).
+checked_by(gh24_repeated_blocking, gpt_6_2_sol, python("propagator remainder on Euclidean Clifford matrices and exact telescoping sum")).
+addresses(t4b, gh24_repeated_blocking).
+
 claim(gh3_moving_kernel, proposition, proved, "Issue 3", "In the parallel identification of a smooth isolated kernel, the first variation of its Berry connection is P dot(nabla) P + S*B - B*S, where B is its second fundamental form and S=-R dot(D)P. The homogeneous wall line connection is unique after imposing line preservation.").
 source(gh3_moving_kernel, 'results/issues/03.md', '').
 attempted_by(gh3_moving_kernel, gpt_6_2_astra_max).
