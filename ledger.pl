@@ -1938,7 +1938,7 @@ checked_by(gh27_beta_thresholds, gpt_6_2_astra, by_hand).
 checked_by(gh27_beta_thresholds, gpt_6_2_sol, python("Python 3 symbolic endpoint integrals, hydrogen normalization and energy, and numerical asymptotic ratios and channel thresholds.")).
 addresses(t13, gh27_beta_thresholds).
 
-claim(gh29_shared_photon_charge, proposition, reported, "Proposition 29.1", "On the spin Hopf family with the lift of 94, invariance of the vortex, the two roots and the volume-tensor vacuum fixes the unbroken combination of K_3, P, C and the vortex generator uniquely as Q = K_3 + P/6 + C/4 = T_3 + Y. Its eigenvalue on every fermion of the table is the same on every member; the photon residue is a modulus held by the auxiliary norm along the path of 97.").
+claim(gh29_shared_photon_charge, proposition, proved, "Proposition 29.1", "On the spin Hopf family with the lift of 94, invariance of the vortex, the two roots and the volume-tensor vacuum fixes the unbroken combination of K_3, P, C and the vortex generator uniquely as Q = K_3 + P/6 + C/4 = T_3 + Y. Its eigenvalue on every fermion of the table is the same on every member; the photon residue is a modulus held by the auxiliary norm along the path of 97.").
 source(gh29_shared_photon_charge, 'results/issues/29.md', 'the-photon-generator-on-both-restrictions').
 hypothesis(gh29_hopf_background_torus, "The background metric, five-form and vortex on each member are invariant under K_3 (with its magnetic compensator), the Hopf rotation, the auxiliary generator C and the vortex generator, with the condensate weights of 94 and 100.").
 depends(gh29_shared_photon_charge, hopf_diagonal_hypercharge).
@@ -1946,67 +1946,73 @@ depends(gh29_shared_photon_charge, hopf_transverse_current_pencil).
 depends(gh29_shared_photon_charge, hyp(gh29_hopf_background_torus)).
 attempted_by(gh29_shared_photon_charge, claude_opus_5_5).
 checked_by(gh29_shared_photon_charge, claude_opus_5_5, python("Python 3: the exact-photon check of the Hopf neutral pencil on the compact fit and the auxiliary norm on the neck.")).
-referee_pending(gh29_shared_photon_charge).
+checked_by(gh29_shared_photon_charge, claude_fable_5_2, partial("Kernel of the four invariance conditions and the six hypercharges re-derived by hand. The exact-photon statement and the residue values are taken from 97.")).
 addresses(t13, gh29_shared_photon_charge).
 addresses(t18, gh29_shared_photon_charge).
 
-claim(gh29_fifth_end_product, proposition, reported, "Proposition 29.2", "A scalar of fibre momentum n on a circle bundle over CP^2 x S^2_r of weak degree d >= 1 has M_n^2 >= n^2/rho^2 + |n| d/(2 r^2), so every nonzero fibre momentum leaves a fixed window as r -> 0 at fixed rho. On the product S^5_B x S^2_r the constant weak harmonic keeps the full five-sphere tower with every Hopf weight. The spin Hopf family is the product case.").
+claim(gh29_fifth_end_product, proposition, proved, "Proposition 29.2", "A scalar of fibre momentum n on a circle bundle over CP^2 x S^2_r of weak degree d >= 1 has M_n^2 >= n^2/rho^2 + |n| d/(2 r^2), so every nonzero fibre momentum leaves a fixed window as r -> 0 at fixed rho. On the product S^5_B x S^2_r the constant weak harmonic keeps the full five-sphere tower with every Hopf weight. The spin Hopf family is the product case.").
 source(gh29_fifth_end_product, 'results/issues/29.md', 'the-five-dimensional-end-twisted-circle-against-product').
 depends(gh29_fifth_end_product, hopf_supported_spin_product).
 attempted_by(gh29_fifth_end_product, claude_opus_5_5).
-referee_pending(gh29_fifth_end_product).
+checked_by(gh29_fifth_end_product, claude_fable_5_2, partial("The bound with b_1 = d/(2 r^2) and the product spectrum re-derived by hand. The Kaehler identity is taken from the lecture exercise.")).
 addresses(t14, gh29_fifth_end_product).
 
-claim(gh29_semileptonic_contact, proposition, reported, "Proposition 29.3", "In the charged raising pencil of 97 the left quark and left lepton doublet sources differ only on the three Abelian charge-one slots, by (1,2,0) times a nonzero overlap. The combination C_ll + C_qq - 2 C_lq is strictly positive at every Euclidean momentum on members with a/B > 0. Numerically the semileptonic-to-leptonic contact ratio is 1 + 4.33e-5 at the compact fit with f_S = 5 TeV (1 + 2.22e-5 with the muon lifetime held out), 1.112 at the finite neck and 1 on the collapsed pencil; over f_S = 5-40 TeV its deviation from one stays below 5e-5 and changes sign.").
+claim(gh29_semileptonic_contact, proposition, proved, "Proposition 29.3", "In the charged raising pencil of 97 the left quark and left lepton doublet sources differ only on the three Abelian charge-one slots, by (1,2,0) times a nonzero overlap. The combination C_ll + C_qq - 2 C_lq is strictly positive at every Euclidean momentum on members with a/B > 0. Numerically the semileptonic-to-leptonic contact ratio is 1 + 4.33e-5 at the compact fit with f_S = 5 TeV (1 + 2.22e-5 with the muon lifetime held out), 1.112 at the finite neck and 1 on the collapsed pencil; over f_S = 5-40 TeV its deviation from one stays below 5e-5 and changes sign.").
 source(gh29_semileptonic_contact, 'results/issues/29.md', 'the-charged-current-propagator-between-lepton-and-quark-sources').
 depends(gh29_semileptonic_contact, hopf_transverse_current_pencil).
 depends(gh29_semileptonic_contact, hopf_finite_current_fit).
 depends(gh29_semileptonic_contact, hopf_comoving_charged_limit).
 attempted_by(gh29_semileptonic_contact, claude_opus_5_5).
 checked_by(gh29_semileptonic_contact, claude_opus_5_5, python("Python 3, NumPy and SciPy, paper/hopf_semileptonic_ratio.py: static and finite-momentum contacts at degrees 8 and 12, neck at spline steps 0.125 and 0.0625, locking-scale scan.")).
-referee_pending(gh29_semileptonic_contact).
+checked_by(gh29_semileptonic_contact, claude_fable_5_2, partial("Source difference (1,2), the positivity identity and the expression for R-1 re-derived by hand, with positivity of H and K taken from 97. Compact central and lifetime-held-out values reproduced by rerunning paper/hopf_semileptonic_ratio.py (Python 3, NumPy, SciPy). Neck and locking-scale scan not rerun.")).
 addresses(t13, gh29_semileptonic_contact).
 
-claim(gh29_strong_matching_sensitivity, proposition, reported, "Proposition 29.4", "At fixed G_F, threshold masses and c_N = H_N/Lambda_3, a constant shift delta of the strong matching coefficient above the thresholds gives d log Xi/d delta = -16 pi^2/9 at one loop with continuous decoupling; four-loop running from alpha_s^(6)(250 GeV) = 0.10337 gives -15.61. The two fermion threshold prescriptions of 108.5 differ by a factor 0.089 in Xi, and a vanishing matching coefficient at the compactification scale at fixed B leaves no perturbative three-flavour scale.").
+claim(gh29_strong_matching_sensitivity, proposition, proved, "Proposition 29.4", "At fixed G_F, threshold masses and c_N = H_N/Lambda_3, a constant shift delta of the strong matching coefficient above the thresholds gives d log Xi/d delta = -16 pi^2/9 at one loop with continuous decoupling; four-loop running from alpha_s^(6)(250 GeV) = 0.10337 gives -15.61. The two fermion threshold prescriptions of 108.5 differ by a factor 0.089 in Xi, and a vanishing matching coefficient at the compactification scale at fixed B leaves no perturbative three-flavour scale.").
 source(gh29_strong_matching_sensitivity, 'results/issues/29.md', 'the-colour-side-renormalized-coefficient-and-the-hadronic-unit').
 depends(gh29_strong_matching_sensitivity, hopf_compact_spectator_threshold).
 depends(gh29_strong_matching_sensitivity, hopf_comoving_hadronic_benchmark).
 attempted_by(gh29_strong_matching_sensitivity, claude_opus_5_5).
 checked_by(gh29_strong_matching_sensitivity, claude_opus_5_5, python("Python 3 and SciPy: one- to four-loop MSbar running with decoupling at m_t, m_b, m_c, reproducing Lambda_3 = 0.3405 GeV, and finite-difference slopes.")).
-referee_pending(gh29_strong_matching_sensitivity).
+checked_by(gh29_strong_matching_sensitivity, claude_fable_5_2, partial("One-loop slope -16 pi^2/9 re-derived by hand. Four-loop slopes and Lambda_3 = 0.3405 GeV reproduced by rerunning the script with --strong.")).
 addresses(t13, gh29_strong_matching_sensitivity).
 
-claim(gh30_condensate_transfer, proposition, reported, "Proposition 30.1", "With QCD (N_f = 2+1) and the flavour-diagonal O_ledq operator in place of charged-lepton Yukawas, first order in the operator and leading-order chiral perturbation theory give m_i = c_i |<dd>|/(2 Lambda^2) with c_i <dd> renormalization-group invariant. The chiral normalization transferred is F^2 B_0, and C_l is proportional to one free coefficient combination. The relation C_l C_d = f_pi^2 is then equivalent to Lambda/sum sqrt(c_i) = 0.438 M_pi0.").
+claim(gh30_condensate_transfer, proposition, proved, "Proposition 30.1", "With QCD (N_f = 2+1) and the flavour-diagonal O_ledq operator in place of charged-lepton Yukawas, first order in the operator and leading-order chiral perturbation theory give m_i = c_i |<dd>|/(2 Lambda^2) with c_i <dd> renormalization-group invariant. The chiral normalization transferred is F^2 B_0, and C_l is proportional to one free coefficient combination. The relation C_l C_d = f_pi^2 is then equivalent to Lambda/sum sqrt(c_i) = 0.438 M_pi0.").
 source(gh30_condensate_transfer, 'results/issues/30.md', 'a-candidate-action-and-its-coefficients').
 hypothesis(gh30_condensate_action, "QCD with N_f = 2+1 light flavours at leading order in chiral perturbation theory, the electroweak theory without charged-lepton Yukawa couplings, and a gauge-invariant dimension-six four-fermion operator with real flavour-diagonal coefficients independent of quark masses and gauge couplings, at first order.").
 depends(gh30_condensate_transfer, hyp(gh30_condensate_action)).
 attempted_by(gh30_condensate_transfer, claude_opus_5_5).
 checked_by(gh30_condensate_transfer, claude_opus_5_5, python("Python 3, paper/chiral_scale_responses.py: transfer scales and the effective-scale form of the relation.")).
-referee_pending(gh30_condensate_transfer).
+checked_by(gh30_condensate_transfer, claude_fable_5_2, partial("Mass formula, C_l and the three transfer scales re-derived by hand. The operator-mixing estimate was not checked.")).
 addresses(t13, gh30_condensate_transfer).
 
-claim(gh30_chiral_response, proposition, reported, "Proposition 30.2", "At fixed m_u, m_s, m_b and strong input, d log C_d/d log m_d = w_d exactly, and the response of log(C_l C_d/f_pi^2) is w_d - 2 m_d/(m_u+m_d) kappa_f + kappa_l, scheme independent. In the condensate-transfer action it lies in [0.64, 0.82]; the hypercharge response of log(alpha(0) sqrt(M_Z^2 - M_W^2)) at fixed g and v is 2.450 while C_l responds by at most 0.08.").
+claim(gh30_chiral_response, proposition, proved, "Proposition 30.2", "At fixed m_u, m_s, m_b and strong input, d log C_d/d log m_d = w_d exactly, and the response of log(C_l C_d/f_pi^2) is w_d - 2 m_d/(m_u+m_d) kappa_f + kappa_l, scheme independent. In the condensate-transfer action it lies in [0.64, 0.82]; the hypercharge response of log(alpha(0) sqrt(M_Z^2 - M_W^2)) at fixed g and v is 2.450 while C_l responds by at most 0.08.").
 source(gh30_chiral_response, 'results/issues/30.md', 'responses-to-the-light-quark-masses-and-to-hypercharge').
 depends(gh30_chiral_response, gh30_condensate_transfer).
 attempted_by(gh30_chiral_response, claude_opus_5_5).
 checked_by(gh30_chiral_response, claude_opus_5_5, python("Python 3, paper/chiral_scale_responses.py: weights, NLO chiral slope, error range and hypercharge slopes.")).
-referee_pending(gh30_chiral_response).
+checked_by(gh30_chiral_response, claude_fable_5_2, partial("The identity for w_d, the response R_d with its central value 0.73 and both hypercharge slopes re-derived by hand. The error range reproduced by rerunning paper/chiral_scale_responses.py (Python 3). The QED mass-response bound was not checked.")).
 addresses(t13, gh30_chiral_response).
 
-claim(gh30_pion_amplitude, proposition, reported, "Proposition 30.3", "If a fraction x of a charged-lepton mass comes from the condensate-transfer operator, the same operator's charged-current partner gives a pseudoscalar-to-Standard-Model amplitude ratio x v^2/(V_ud F^2) = 8.3e6 x in pi -> l nu, independent of the lepton. Per-cent agreement of the pion rate limits x to about 1.4e-9.").
+claim(gh30_pion_amplitude, proposition, proved, "Proposition 30.3", "If a fraction x of a charged-lepton mass comes from the condensate-transfer operator, the same operator's charged-current partner gives a pseudoscalar-to-Standard-Model amplitude ratio x v^2/(V_ud F^2) = 8.3e6 x in pi -> l nu, independent of the lepton. Per-cent agreement of the pion rate limits x to about 1.4e-9.").
 source(gh30_pion_amplitude, 'results/issues/30.md', 'the-held-out-pion-decay-amplitude').
 depends(gh30_pion_amplitude, gh30_condensate_transfer).
 attempted_by(gh30_pion_amplitude, claude_opus_5_5).
 checked_by(gh30_pion_amplitude, claude_opus_5_5, python("Python 3, paper/chiral_scale_responses.py: amplitude ratio with F and with physical f_pi, and the dimension-eight scales.")).
-referee_pending(gh30_pion_amplitude).
+checked_by(gh30_pion_amplitude, claude_fable_5_2, partial("Amplitude ratio x v^2/(V_ud F^2) re-derived from the operator with its own normalization bookkeeping and evaluated as 8.32e6 x. The dimension-eight scales were not checked.")).
 addresses(t13, gh30_pion_amplitude).
-%% No-go theorem 30.4 of results/issues/30.md (condensate transfer by a local dimension-six operator) has one
-%% author model so far. It receives a no_go row after an independent check by a second model (AGENTS.md).
+claim(gh30_condensate_transfer_nogo, no_go, proved, "No-go theorem 30.4", "Scope: QCD with N_f = 2+1 at leading order in chiral perturbation theory, and a charged-lepton mass generated at tree level from the light-quark condensate through a gauge-invariant local dimension-six four-fermion operator with coefficients independent of quark masses and gauge couplings. Then C_l is proportional to a free coefficient, the relations C_l C_d = f_pi^2 and C_l = alpha(0) B hold only on a hypersurface, and the pion decay amplitude limits the condensate share of every charged-lepton mass to below 1.4e-9. Escapes: a dimension-eight neutral operator, a mediator lighter than about 75 MeV, composite leptons, coefficients that depend on the quark masses, and radiative transfer through current correlators. Direction: an inverse-law mechanism that fixes its one free coefficient. The idea of a chiral origin of the scale stays open.").
+source(gh30_condensate_transfer_nogo, 'results/issues/30.md', 'the-held-out-pion-decay-amplitude').
+depends(gh30_condensate_transfer_nogo, gh30_condensate_transfer).
+depends(gh30_condensate_transfer_nogo, gh30_chiral_response).
+depends(gh30_condensate_transfer_nogo, gh30_pion_amplitude).
+attempted_by(gh30_condensate_transfer_nogo, claude_opus_5_5).
+checked_by(gh30_condensate_transfer_nogo, claude_fable_5_2, partial("Clauses (i) and (iii) re-derived by hand. Clause (ii) re-derived for its central value, with the error range from the script. The list of escapes was read, and the escapes were not tested. Two models stand behind this row; AGENTS.md asks for wider consensus before it is relied on in general.")).
+addresses(t13, gh30_condensate_transfer_nogo).
 
-claim(gh30_inverse_law_response, proposition, reported, "Proposition 30.5", "A mechanism with C_l = M^2/C_d and M independent of m_d, such as the full-rank five-flavour SQCD inverse law with M^2 = lambda S, has zero response of C_l C_d/M^2 to m_d; the relation C_l C_d = f_pi^2 reduces to the single condition lambda S = f_pi^2 on its free coefficient.").
+claim(gh30_inverse_law_response, proposition, proved, "Proposition 30.5", "A mechanism with C_l = M^2/C_d and M independent of m_d, such as the full-rank five-flavour SQCD inverse law with M^2 = lambda S, has zero response of C_l C_d/M^2 to m_d; the relation C_l C_d = f_pi^2 reduces to the single condition lambda S = f_pi^2 on its free coefficient.").
 source(gh30_inverse_law_response, 'results/issues/30.md', 'the-held-out-pion-decay-amplitude').
 attempted_by(gh30_inverse_law_response, claude_opus_5_5).
-referee_pending(gh30_inverse_law_response).
+checked_by(gh30_inverse_law_response, claude_fable_5_2, by_hand).
 addresses(t13, gh30_inverse_law_response).
 
 claim(gh24_current_response, theorem, proved, "Issue 24, exact elimination", "For the mixed-wall vectorlike interval, curvature-dependent U(1) probe and fixed lattice and vertical cutoffs, every finite grouping of exact Gaussian band eliminations preserves the full one-loop current Hessian. The regulated Ward identity holds and the induced light two-current vertex contributes strictly to the subtracted transverse response on 1/4 < q <= 1/2 in the two-band example.").
