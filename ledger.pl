@@ -2055,6 +2055,15 @@ addresses(t3, gh17_eta_circle).
 addresses(t10, gh17_eta_circle).
 addresses(t14, gh17_eta_circle).
 
+claim(gh16_threshold_su2, theorem, reference, "Issue 16, A.1", "The relative SU(2) BFSS kernel is one even Spin(9) singlet by the Sethi-Stern index 5/4 - 1/4 and the rotation theorem. With the periodic spacelike BPS circle dictionary this gives 256 single-particle threshold polarizations of mass 2/R.").
+source(gh16_threshold_su2, 'results/issues/16.md', 'a1-positive-charge-threshold-count').
+addresses(t14, gh16_threshold_su2).
+
+claim(gh16_threshold_recovery, claim, open, "Issue 16, A.1", "The periodic positive-charge BPS count 256 floor(RE) uses the pinned threshold theorem at charges N >= 3. The massive index and the proper-partition graph-norm recovery through the local corrected lifts still need independent end-to-end verification.").
+source(gh16_threshold_recovery, 'results/issues/16.md', 'a1-positive-charge-threshold-count').
+depends(gh16_threshold_recovery, gh16_threshold_su2).
+addresses(t14, gh16_threshold_recovery).
+
 claim(gh16_channel_compactness, theorem, proved, "Issue 16", "For the physical relative SU(2) BFSS Hamiltonian, each total Spin(9) type absent from the rank-one fast ground has compact resolvent and H >= (8/5) R_X - 425/R_X squared. Zero belongs to the essential spectrum in each type occurring in the physical angular ground.").
 source(gh16_channel_compactness, 'results/issues/16.md', '').
 attempted_by(gh16_channel_compactness, gpt_6_2_astra_max).
@@ -2124,7 +2133,7 @@ checked_by(gh16_vector_fermions, gpt_6_1_terra, by_hand).
 addresses(t14, gh16_vector_fermions).
 
 claim(gh16_vector_domain, proposition, proved, "Issue 16, A finite ball and the scattering continuum", "The physical two-D0 vector sector has infinitely many positive eigenvalues. If its ground energy lies at or below the stated Planck threshold, its Dirichlet energy at matrix radius 17 is higher by less than 3.81e-28. Every total rotation type in the free fast ground channel has essential spectrum [0,infinity).").
-source(gh16_vector_domain, 'results/56_two_d0_mass_certificate.md', '').
+source(gh16_vector_domain, 'results/56_two_d0_mass_certificate.md', 'a-finite-ball-and-the-scattering-continuum').
 depends(gh16_vector_domain, gh16_channel_compactness).
 depends(gh16_vector_domain, gh16_planck_weights).
 attempted_by(gh16_vector_domain, gpt_6_2_astra_max).
@@ -2163,8 +2172,28 @@ checked_by(gh16_vector_higher_harmonics, gpt_6_1_terra, by_hand).
 addresses(t4, gh16_vector_higher_harmonics).
 addresses(t14, gh16_vector_higher_harmonics).
 
-claim(gh16_d0_landau, proposition, proved, "Issue 16", "The degree-p Landau zero space has a p-dimensional magnetic-translation representation with specified central phases. The putative CDS projective class (1,p) at theta=1/p has trace zero.").
-source(gh16_d0_landau, 'results/issues/16.md', '').
+claim(gh16_vector_trial, proposition, numerical, "Result 58, Exact rational trial", "A physical SU(2) total-vector Gaussian trial with orbital degrees 1, 2, 3 and 5 gives E_vector < 9249/500 at unit matrix coupling. The Rayleigh quotient is certified in exact rational arithmetic. Independent review of this trial is pending.").
+source(gh16_vector_trial, 'results/58_two_d0_vector_spectrum.md', 'an-exact-trial-with-higher-orbital-degrees').
+depends(gh16_vector_trial, gh16_vector_chamber).
+depends(gh16_vector_trial, gh16_vector_oscillator).
+attempted_by(gh16_vector_trial, gpt_6_2_sol).
+checked_by(gh16_vector_trial, gpt_6_2_sol, python("exact Wick moments, polynomial derivatives and Rayleigh quotient")).
+addresses(t14, gh16_vector_trial).
+
+claim(gh16_vector_planck_decision, claim, open, "Issue 16, A.4", "The unit-coupling total-vector enclosure 720/1819 <= E_vector < 9249/500 straddles E_P = (2 pi)^(2/3)/4. The protected sub-Planck question for superspins 9, 36 and 16 requires a trial below E_P or a full physical radius-17 Dirichlet lower bound above E_P + 3.81e-28.").
+source(gh16_vector_planck_decision, 'results/issues/16.md', 'a4-invariant-mass-and-the-charge-two-point-spectrum').
+depends(gh16_vector_planck_decision, gh16_vector_planck).
+depends(gh16_vector_planck_decision, gh16_vector_domain).
+depends(gh16_vector_planck_decision, gh16_vector_trial).
+addresses(t14, gh16_vector_planck_decision).
+
+claim(gh16_even_scattering_points, claim, open, "Issue 16, A.4", "Even one-row charge-two superspin admits scattering components with essential spectrum [0,infinity). Existence or absence of positive embedded eigenvalues in that family needs an infinite-domain point-spectrum argument.").
+source(gh16_even_scattering_points, 'results/issues/16.md', 'a4-invariant-mass-and-the-charge-two-point-spectrum').
+depends(gh16_even_scattering_points, gh16_vector_domain).
+addresses(t14, gh16_even_scattering_points).
+
+claim(gh16_d0_landau, proposition, proved, "Issue 16, C.9", "The degree-p Landau zero space has a p-dimensional magnetic-translation representation with specified central phases. The putative CDS projective class (1,p) at theta=1/p has trace zero.").
+source(gh16_d0_landau, 'results/issues/16.md', 'c9-magnetic-translations-and-the-rational-morita-image').
 attempted_by(gh16_d0_landau, gpt_6_2_astra_max).
 checked_by(gh16_d0_landau, codex_gpt_6, by_hand).
 addresses(t14, gh16_d0_landau).

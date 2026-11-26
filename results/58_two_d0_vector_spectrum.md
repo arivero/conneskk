@@ -129,6 +129,76 @@ Indeed $w''/(4w)\le3/R^2$. After subtracting $w/2$ from the bracket and multiply
 
 The compressed potential minus $E$ is strictly positive, grows at both ends and hence has a positive lower bound. The radial differential operator is limit point at zero and infinity. More explicitly, the diagonal centrifugal and quartic terms give a self-adjoint scalar operator on each channel with compactly supported smooth radial functions as an operator core. The linear Yukawa matrix is infinitesimally bounded relative to this operator by its quartic form bound. Therefore $A$ is invertible and the weighted estimate extends from the core to give $\|wA^{-1}\|\le2$. Testing the full eigen-equation against compactly supported $P$ functions $v$ gives $\langle Av,P\psi\rangle=-\langle QWPv,Q\psi\rangle$. Density of $A$ applied to the core and $\|QWP A^{-1}\|\le2$ yield $\|P\psi\|\le2\|Q\psi\|$. Normalization proves the claim. $\square$
 
-The variational upper bound exceeds $E_P$. The one-fifth estimate specifies a necessary angular component of any light eigenvector. The lowest full-chamber vector energy and positive embedded levels of even one-row superspin remain open. [Finite-ball error and scattering continuum](56_two_d0_mass_certificate.md#a-finite-ball-and-the-scattering-continuum)
+## An exact trial with higher orbital degrees
+
+**Proposition.** In the physical relative total-vector sector,
+$$
+  \frac{720}{1819}\ \le\ E_{\boldsymbol9}\ <\ \frac{9249}{500}.
+$$
+The upper bound uses an admissible Cartesian trial with nonzero orbital degrees three and five. Its restriction to the singular-value chamber belongs to the full physical form domain. The lower bound applies to all orbital degrees. This enclosure straddles $E_P$.
+
+**Proof.** Write $X$ as the $9\times3$ coordinate matrix, $q=|X|^2$ and $G=X^TX$. In addition to the linear matrix polynomial $X$, use
+$$
+ P_3=XG-\tfrac{13}{29}qX,\qquad
+ P_5=VX+\tfrac{2}{33}qP_3-\tfrac{8}{29}q^2X .
+$$
+The three matrix polynomials transform in the same colour-adjoint spatial-vector type. Indeed $G$ is colour covariant, and $q,V$ are invariant. They are entrywise harmonic. The location of the cubic trace follows from $\Delta(XG)=26X$ and $\Delta(qX)=58X$. For the quintic, $\nabla V=2(qX-XG)$ and $\Delta V=32q$, so
+$$
+  \Delta(VX)=36qX-4XG,\qquad
+  \Delta(qP_3)=66P_3,\qquad \Delta(q^2X)=124qX.
+$$
+Insertion gives $\Delta P_5=0$ and the orthogonal angular decomposition $VX=P_5-\frac{2}{33}qP_3+\frac{8}{29}q^2X$.
+
+Use the fermion tensor of the degree-one vector, from the colour adjoint times the spatial two-form, to contract each of these three matrix polynomials. Write the resulting vector sections as $\phi_1,\phi_3,\phi_5$. Let $\phi_+$ and $\phi_-$ be the projections of $B\phi_1$ onto the harmonic quadratic orbital types $(2,\boldsymbol{44})$ and $(1,\boldsymbol{36})$. Write $B=\sum_w X_wB_w$ in real Cartesian coordinates. The trace of $B\phi_1$ is absent because there is no physical orbital scalar in the total vector sector. The sections are polynomial gauge singlets, with the free vector index carrying the total $\mathrm{Spin}(9)$ vector. Multiplying by the common Gaussian $e^{-a q/2}$ preserves the physical colour exchange and regularity across every chamber face. A smooth invariant cutoff at large radius approximates each section in form norm by the Cartesian core. The same chamber core and closure as above apply. No artificial boundary condition at a collision or rank face is used.
+
+Compute their forms with the Gaussian measure of independent coordinates of variance $1/(2a)$. Fix the common normalization of the linear tensor so its Gaussian norm is that of one entry $X_{11}$. For the scalar terms, invariance and irreducibility of the colour-adjoint spatial-vector type give the same normalized contraction on each entry of $X,P_3,P_5$. In particular cross terms of scalar operators can be computed using a single entry. At $a=1$ the required moments are as follows. Angle brackets denote expectation in the normalized Gaussian measure.
+
+| Quantity | Value |
+|---|---:|
+| $\langle X_{11}^2\rangle$ | $1/2$ |
+| $\langle (P_3)_{11}^2\rangle$ | $110/29$ |
+| $\langle (P_5)_{11}^2\rangle$ | $175/6$ |
+| $\langle V(P_3)_{11}^2\rangle/\langle (P_3)_{11}^2\rangle$ | $2156/29$ |
+| $\langle V(P_5)_{11}^2\rangle/\langle (P_5)_{11}^2\rangle$ | $442/5$ |
+| $\langle V X_{11}(P_3)_{11}\rangle$ | $-110/29$ |
+| $\langle V X_{11}(P_5)_{11}\rangle$ | $175/6$ |
+| $\langle V(P_3)_{11}(P_5)_{11}\rangle$ | $1540/87$ |
+
+For these exact rational calculations in Python, expand $V$ as the sum of squared two-by-two minors and use the displayed polynomials. Replace each degree-$2m$ power of a single coordinate by $(2m-1)!!/2^m$, each odd power by zero, and multiply over the 27 coordinates. Equivalently, for coefficient arrays $f_\alpha,g_\beta$ the entry is $\sum_{\alpha,\beta}f_\alpha g_\beta\prod_j \mathbb E[X_j^{\alpha_j+\beta_j}]$. For the two $V$-mixed moments with $X_{11}$ the angular decomposition also gives $-\frac{2}{33}\mathbb E[q(P_3)_{11}^2]=-\mathbb E[(P_3)_{11}^2]$ and $\mathbb E[(P_5)_{11}^2]$. At general $a$ a degree-$d$ moment acquires $a^{-d/2}$.
+
+The overlap of $B\phi_3$ with the two quadratic trial sections can be computed with no new fermion matrix elements. Let $Y=V-(8/29)q^2$. Then $(P_3)_v=-\partial_vY/2=\sum_{w,c,d}T_{vwcd}X_wX_cX_d$, with $T$ fully symmetric. For a quadratic $P$ let $\mathcal T P=-P(\partial)Y/6$, which contracts the polynomial's coefficient tensor against $T$. Since $\phi_3$ is harmonic, $\Delta(B\phi_3)=6\mathcal T(B\phi_1)$. The product $B\phi_3$ has only degrees four and two, and $\Delta(q P)=62P$ for harmonic quadratics. Its harmonic degree-two part at fixed radius is thus $(3/31)q\mathcal T(B\phi_1)$. On the two quadratic orbital types the invariant map $\mathcal T$ is scalar. Representatives are $P_\pm=X_{11}X_{22}\pm X_{12}X_{21}$. Differentiating the corresponding minor and $q^2$ gives $P_\pm(\partial)V=(2,6)_\pm P_\pm$ and $P_\pm(\partial)q^2=8P_\pm$. Hence the scalars are $u_+=1/29$, $u_-=-55/87$. In degree two the Gaussian expectation of $q$ is $31/(2a)$, so
+$$
+ \langle\phi_\pm,B\phi_3\rangle_a=\frac{3u_\pm}{2a}\|\phi_\pm\|_a^2 .
+$$
+Here and below the Gaussian factors in the inner products are implicit. The Yukawa term changes harmonic degree by one. It has no matrix element from degree five to any of the chosen even degrees. Quartic and kinetic terms preserve parity, and the kinetic term is angularly diagonal.
+
+In the basis $(\phi_1,\phi_+,\phi_-,\phi_3,\phi_5)e^{-aq/2}$ the norm matrix is diagonal with entries
+$$
+ n=\left(\frac{1}{2a},\frac{120}{a^2},\frac{22}{a^2},\frac{110}{29a^3},\frac{175}{6a^5}\right).
+$$
+The second and third entries use the earlier exact squared Yukawa norms. The Hamiltonian form matrix $K$ has diagonal $K_{jj}=n_j d_j$ with
+$$
+ d=\left(
+ \tfrac{29a}{4}+\tfrac{62}{a^2},
+ \tfrac{31a}{4}+\tfrac{141}{2a^2},
+ \tfrac{31a}{4}+\tfrac{143}{2a^2},
+ \tfrac{33a}{4}+\tfrac{2156}{29a^2},
+ \tfrac{37a}{4}+\tfrac{442}{5a^2}
+ \right).
+$$
+Label the rows by $1,+,-,3,5$. The nonzero upper triangular entries are
+$$
+\begin{aligned}
+ K_{1,+}&=n_+,& K_{1,-}&=n_-,&
+ K_{1,3}&=-\tfrac{110}{29a^4},& K_{1,5}&=n_5,\\
+ K_{+,3}&=\tfrac{3n_+}{58a},& K_{-,3}&=-\tfrac{55n_-}{58a},&
+ K_{3,5}&=\tfrac{1540}{87a^6}.
+\end{aligned}
+$$
+Take $a=19/8$ and the trial coefficients $(1,-2/25,-2/25,1/100,-1/20)$. The Rayleigh quotient is $77724057835922261/4201920559840352<9249/500$ by exact rational arithmetic in Python. The variational principle on the whole physical sector gives the upper bound. The full-domain angular and radial estimate of Result 56 for protected multiplets gives the lower bound. To see the fraction, every such multiplet has a confined component with three-plane weight $j\ge4$, so $K_{\rm W}=j^2/(64(227/7200))\ge1800/227$. The inequality $E\ge13K_{\rm W}/(252.5+K_{\rm W})$ gives $720/1819$ for $E<13$. The vector sector occurs only in protected multiplets. The bound therefore applies to its lowest energy. $\square$ [Common vector and uniform mass floor](56_two_d0_mass_certificate.md#from-the-matrix-radius-to-an-invariant-mass)
+
+**Outstanding spectral questions.** The exact trial includes two of the previously omitted harmonics and gives an upper bound on the full operator. A trial at this energy leaves the existence test $E_{\boldsymbol9}<E_P$ open. In the opposite direction, the finite-ball estimate requires a certified lower bound on the entire 9,834-channel physical Dirichlet form at $R=17$ exceeding $E_P+3.81\times10^{-28}$. The coupled higher-degree complement must enter any lower enclosure. A comparison dropping the chamber angular kinetic would need an additional estimate to meet the threshold. The even one-row superspin family has scattering total types with essential spectrum $[0,\infty)$. A bound on the confined vector alone leaves positive embedded eigenvalues in those types open. [Radius-17 and continuum tests](56_two_d0_mass_certificate.md#a-finite-ball-and-the-scattering-continuum)
+
+The higher-degree trial and its rational calculation are by GPT-6.2 Sol. The arithmetic checks used Python. Independent review of this added trial is pending.
 
 **Provenance.** GPT-6.1 Terra derived the superspin estimates, with checks by GPT-6.2 Sol and GPT-6.2 Astra Max. The spinor floor survives the correction to the two-form highest weight. GPT-6.2 Sol derived the stabilizer count and chamber domain. GPT-6.2 Astra Max derived the oscillator trace, variational bound and angular probability estimate. GPT-6.2 Sol independently reproduced the finite coefficients, moments and operator estimates. GPT-6.1 Terra also checked the variational sign and the weighted resolvent argument.
