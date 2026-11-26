@@ -1976,6 +1976,35 @@ checked_by(gh29_strong_matching_sensitivity, claude_opus_5_5, python("Python 3 a
 checked_by(gh29_strong_matching_sensitivity, claude_fable_5_2, partial("One-loop slope -16 pi^2/9 re-derived by hand. Four-loop slopes and Lambda_3 = 0.3405 GeV reproduced by rerunning the script with --strong.")).
 addresses(t13, gh29_strong_matching_sensitivity).
 
+hypothesis(gh29_static_down_source, "A nondynamical colour triplet with the unperturbed horizontal down-singlet density of 100, a minimal metric Wilson vertex and no direct five-form vertex. Resolve the unbroken colour Killing octet of 99.2 at Born order.").
+claim(gh29_static_octet_force, proposition, conditional, "Proposition 29.5", "For this source the metric and five-form octet on a weak scalar mode of mass squared mu have equal-residue poles at mu and mu+16/B^2. Their static forces are weighted by the squared singlet overlaps. At L=B the normalized projected force is 1.091578 at the compact point and in the shrink limit, and 1.093855 at the finite neck.").
+source(gh29_static_octet_force, 'results/issues/29_static_colour.md', 'colour-exchange-at-the-compactification-radius').
+depends(gh29_static_octet_force, hyp(gh29_static_down_source)).
+depends(gh29_static_octet_force, hopf_projected_nonround_boson).
+depends(gh29_static_octet_force, gh29_shared_photon_charge).
+attempted_by(gh29_static_octet_force, codex_gpt_6).
+checked_by(gh29_static_octet_force, codex_gpt_6, python("Normalized scalar pencils, singlet overlaps, Parseval variance and Born forces on the central fit and three neck spline steps in paper/hopf_static_colour.py.")).
+checked_by(gh29_static_octet_force, terra_6_1, partial("Re-derived the equal residues, Yukawa derivative, positivity and fixed-shape shrink given the two-field gauge block and minimal source. Reran the scalar pencils at spline steps 0.125 and 0.0625 and verified the tabulated forces and overlaps.")).
+addresses(t13, gh29_static_octet_force).
+
+hypothesis(gh29_static_matched_qcd, "Dimension-four isospin-symmetric QCD at theta=0, with the prescribed m_i B, coupling at common mu B, heavy-quark decoupling and nucleon calibration of 100. Electromagnetic and weak couplings are absent from the final static energy.").
+claim(gh29_static_qcd_transport, proposition, conditional, "Proposition 29.6", "For the same subtracted ground-state energy and static sources, V_sub/H_N and F/H_N^2 coincide at fixed L H_N along the broken path. A consistently fitted tension scales as B^-2 and the light and strange screening lengths scale as B. At fixed shape, length scales as a^(-2/7).").
+source(gh29_static_qcd_transport, 'results/issues/29_static_colour.md', 'string-tension-and-screening-in-hadronic-units').
+depends(gh29_static_qcd_transport, hyp(gh29_static_matched_qcd)).
+depends(gh29_static_qcd_transport, hopf_comoving_hadronic_benchmark).
+attempted_by(gh29_static_qcd_transport, codex_gpt_6).
+checked_by(gh29_static_qcd_transport, terra_6_1, partial("Re-derived the dimensional and running-coupling rescaling and radius powers under the stated common inputs, taking the geometric area relation and matching prescription as given.")).
+addresses(t13, gh29_static_qcd_transport).
+
+hypothesis(gh29_static_lattice_fit, "The Table 4 physical-mass extrapolation and covariance of Bulava et al., arXiv:2403.00754, with sqrt(t0)=0.1443 fm and the compact H_N=0.312 GeV. This is a single-spacing three-channel interpolation.").
+claim(gh29_static_force_comparison, claim, numerical, "Static-force interpolation and held-out comparison", "The imported lattice curve gives sqrt(sigma)/H_N=1.43 and crossings at L H_N=1.91 and 2.11. Its inner Sommer-radii ratio 1.4665(76), with fit statistics only, is 2.83 percent below the independent HotQCD continuum value 1.5092(39).").
+source(gh29_static_force_comparison, 'results/issues/29_static_colour.md', 'independent-test-of-the-force-curve').
+depends(gh29_static_force_comparison, hyp(gh29_static_lattice_fit)).
+depends(gh29_static_force_comparison, gh29_static_qcd_transport).
+attempted_by(gh29_static_force_comparison, codex_gpt_6).
+checked_by(gh29_static_force_comparison, terra_6_1, python("Checked Table 4, roots, eigenvalue derivative, normalization and covariance, ran the reconstruction, and verified the primary HotQCD comparison.")).
+addresses(t13, gh29_static_force_comparison).
+
 claim(gh30_condensate_transfer, proposition, proved, "Proposition 30.1", "With QCD (N_f = 2+1) and the flavour-diagonal O_ledq operator in place of charged-lepton Yukawas, first order in the operator and leading-order chiral perturbation theory give m_i = c_i |<dd>|/(2 Lambda^2) with c_i <dd> renormalization-group invariant. The chiral normalization transferred is F^2 B_0, and C_l is proportional to one free coefficient combination. The relation C_l C_d = f_pi^2 is then equivalent to Lambda/sum sqrt(c_i) = 0.438 M_pi0.").
 source(gh30_condensate_transfer, 'results/issues/30.md', 'a-candidate-action-and-its-coefficients').
 hypothesis(gh30_condensate_action, "QCD with N_f = 2+1 light flavours at leading order in chiral perturbation theory, the electroweak theory without charged-lepton Yukawa couplings, and a gauge-invariant dimension-six four-fermion operator with real flavour-diagonal coefficients independent of quark masses and gauge couplings, at first order.").
