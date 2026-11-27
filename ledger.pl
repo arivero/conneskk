@@ -3488,6 +3488,17 @@ addresses(t8, ade_interval_yukawa).
 addresses(t11, ade_interval_yukawa).
 addresses(t18, ade_interval_yukawa).
 
+hypothesis(ade_interval_two_species_sources, "The Dirac-neutrino branch of 89.2 with diagonal nonzero light overlaps, the stated interspecies Yukawa perturbation, a gapped heavy complement and canonical parent kinetic terms. Quantum matching also needs a common four-dimensional subtraction window and renormalized heavy thresholds.").
+claim(ade_interval_four_masses, proposition, conditional, "Proposition 89.3", "For the fixed sphere-interval probes the second-order chiral mass vanishes by the species and chirality gradings. The normalized cubic coefficient is V* R W_Q R V minus half the anticommutator of V* R^2 V with A. It gives the leading tree correction to the four-mass ratio. The finite quantum threshold remains an input.").
+source(ade_interval_four_masses, 'results/89_monopole_charge_and_a_chiral_interval.md', 'four-masses-at-a-common-matching-scale').
+depends(ade_interval_four_masses, ade_interval_yukawa).
+depends(ade_interval_four_masses, hyp(ade_interval_two_species_sources)).
+attempted_by(ade_interval_four_masses, gpt_6_2_astra).
+checked_by(ade_interval_four_masses, gpt_6_2_astra, by_hand).
+checked_by(ade_interval_four_masses, terra_6_1, by_hand). % Independent grading, Schur expansion, finite-wall ratio and QED charge check under the stated hypotheses.
+addresses(t8, ade_interval_four_masses).
+addresses(t10, ade_interval_four_masses).
+
 claim(vortex_neutral_spectator_tensor, proposition, proved, "Proposition 90.1", "Three ordinary families in the six-dimensional spin theory admit vortex-neutral chiral spectators without weak-sphere zero modes. The specified integral factorization X Y matches the gauge part of the two-derivative K3 magnetic class and gives local Green-Schwarz cancellation with a nonchiral tensor.").
 source(vortex_neutral_spectator_tensor, 'results/90_a_tensor_completion_without_light_mirrors.md', 'vortex-neutral-spectators').
 depends(vortex_neutral_spectator_tensor, vortex_mirror_anomalies).

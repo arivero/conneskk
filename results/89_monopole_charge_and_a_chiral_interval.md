@@ -60,4 +60,61 @@ Indeed the singlet–scalar separations are $(2h_j-h_i-h_5)/b$ for $i=c,\ell$ an
 
 The sphere may be replaced in this gauge-sector construction by an axially symmetric elongated metric with the same degree-one connection chosen at **constant magnetic density**. Then $F=*D\varphi$ with $b_N=2\pi N/\mathcal A_\Sigma$ still solves the internal gauge equations. The zero spinors remain holomorphic but their densities and broken currents must be recomputed. A long meridian can supply the sixth scalar direction in the probe window of 59, between an unresolved azimuthal orbit and the high-energy seven-dimensional count. The gauge equation differs from the gravitating vortex with a nonconstant density. Also a linear adjoint Higgs profile on an interval is not a periodic real Cartan scalar on a circle. The model supplies neither a translation-generated hypercharge nor an eleven-dimensional gravitational solution. Its boundary anomaly and the price of omitting mirrors are addressed in 90. Independent boundary choices, generation number and Yukawa matrices enter the result.
 
-**Provenance.** Gauge-sector calculation, charge-selecting interval and normalized overlap by GPT-6.2-Astra max. Claude Opus 5.5 checked every ledger claim of this file by hand on 20 November 2026 and found no error (ledger `checked_by` rows).
+**Provenance of 89.1–89.2.** Gauge-sector calculation, charge-selecting interval and normalized overlap by GPT-6.2-Astra max. Claude Opus 5.5 checked the corresponding ledger claims by hand on 20 November 2026 and found no error (ledger `checked_by` rows).
+
+## Four masses at a common matching scale
+
+Fix the round sphere, finite interval, boundary domain, flux, intercepts and two microscopic Yukawa couplings of 89.2. Retain its Dirac neutrino and one diagonal family. Vary the two neutral scalar expectations together by a real dimensionless multiplier $\epsilon$, holding their ratio fixed. We seek the first heavy-mode correction to the four-mass ratio without fitting a light mass.
+
+**Proposition 89.3 (quadratic fermion action).** Let $D_0$ be the self-adjoint doubled internal mass operator at zero scalar expectation, $P$ its kernel projection, $Q=1-P$, and $\Delta_F>0$ the distance of its other eigenvalues from zero. At the fixed background the scalar perturbation $\epsilon W$ is bounded. Use the two-species Yukawa of 89.2, with $|\epsilon|\|W\|<\Delta_F/4$. Put
+$$
+ A=PWP,\quad V=QWP,\quad W_Q=QWQ,\quad R=(QD_0Q|_{Q\mathcal H})^{-1}.
+$$
+Then the canonically normalized zero-momentum light mass matrix through cubic order is
+$$
+ M_{\rm can}=\epsilon A+\epsilon^3 C+O(\epsilon^5),\qquad
+ C=V^\dagger R W_Q R V-\tfrac12\{V^\dagger R^2 V,A\}.
+$$
+In particular $\|C\|\le 2\|W\|^3/\Delta_F^2$. All operators in this coefficient are specified by the finite interval and its mass profiles.
+
+*Proof.* Use the signed mass pencil $D_0+\epsilon W-z$ with canonically normalized parent kinetic term. At zero external sources, Gaussian elimination of the heavy fermions gives the light Schur complement
+$$
+ \epsilon A-zP-\epsilon^2 V^\dagger(QD_0Q+\epsilon W_Q-z)^{-1}V ,
+$$
+with the inverse taken on the heavy space. The coefficient of $-z$ is $Z=P+\epsilon^2V^\dagger(QD_0Q+\epsilon W_Q)^{-2}V$. Its quadratic form is the squared norm of a light vector together with its solved heavy component at $z=0$. Canonical normalization multiplies the mass by $Z^{-1/2}$ on both sides.
+
+The quadratic mass contribution $V^\dagger R V$ vanishes in this family. The doubled mass operator and $W$ reverse external chirality. Give the two parent probe species signs $+,-$. The unperturbed mass preserves species and $W$ exchanges them. On the light space the species sign equals the chirality sign up to a common convention, since all retained left modes come from the first probe and all right modes from the second. A term with two $W$ insertions and one $R$ preserves species and reverses chirality, so it has zero light matrix element. By the same parity count the zero-momentum mass is odd in $\epsilon$ and $Z$ is even. Expanding the convergent inverse and both kinetic factors gives $C$. The norm bound follows from $\|R\|\le1/\Delta_F$. Higher derivatives of the pencil in $z$ give higher-derivative operators in the light action. $\square$
+
+**Mass and current sources.** Transport the frames with the background, retaining the induced connection. Fixed projections across gauge-equivalent backgrounds can change a putative mass. Write $U,B,C_h,D_h$ for the four blocks of the regulated parent fermion kernel in these frames, allowing gauge, scalar-mass and current sources. Integration leaves $\det D_h$ and the light kernel $U-BD_h^{-1}C_h$. Its derivative in a source $j$ is
+$$
+ U_j-B_jD_h^{-1}C_h-BD_h^{-1}C_{h,j}
+       +BD_h^{-1}D_{h,j}D_h^{-1}C_h .
+$$
+Use the canonically normalized legs for that vertex and differentiate any source-dependent field redefinition as well. The heavy contribution to the effective gauge action is $-\log\det D_h$. Its second derivative in two external gluon variations $i,j$ is
+$$
+ \operatorname{Tr}\big(D_h^{-1}D_{h,i}D_h^{-1}D_{h,j}
+                   -D_h^{-1}D_{h,ij}\big).
+$$
+Its transverse low-momentum coefficient enters the gluon kinetic term together with the parent counterterm in the same regulator. For a finite list of minimally coupled heavy Dirac multiplets, a check on the logarithmic part of $g_{\rm low}^{-2}-g_{\rm full}^{-2}$ is $\sum_r[4T(r)/3]\log(\mu/M_r)/(8\pi^2)$ in the conventional colour normalization, with equality of the one-loop couplings at each mass up to finite matching. This follows from the change in the inverse-coupling slope at a Dirac threshold. A full tower needs a common ultraviolet prescription and the other charged sectors of the parent. [Gauge-covariant window](14_covariant_spectral_projection.md) · [Fixed-projection countertest](13_nogo_fixed_compression_not_covariant.md) · [November construction, §§97.4 and 98.3](https://github.com/yang-mills-group/OpenAI-informal-20261115/blob/6ca21d98b4022263fd7f2a3de5b5913b8495ee02/continuum-yang-mills-theory.pdf)
+
+**Cross-ratio.** Keep all lighter modes in the four-dimensional theory. Let $\Delta_{\rm omit}>0$ be its first omitted charged threshold on the chosen background, including bosons. Choose a common $\overline{\rm MS}$ scale $\mu_*=\Delta_{\rm omit}/2$ on a member where all four masses are below $\mu_*$ and matching is perturbative. An interacting interpretation requires this physical window. Write $a_f=\langle L_f,A R_f\rangle$, $c_f=\langle L_f,C R_f\rangle$ on the normalized chiral modes of each charge. Here $R_f$ is the light right mode. Take all $a_f\ne0$ and write $\mathcal L(X)=X_u+X_e-X_d-X_\nu$. Through the displayed tree order,
+$$
+\begin{aligned}
+ \log\frac{m_u(\mu_*)m_e(\mu_*)}{m_d(\mu_*)m_\nu(\mu_*)}
+  ={}&2r^2(h_6-h_7)(h_c-h_\ell)
+       +\log\frac{N_b(c_{c6})N_b(c_{\ell7})}
+                       {N_b(c_{c7})N_b(c_{\ell6})}\\
+    &+\epsilon^2\,\mathcal L\big(\operatorname{Re}(c_f/a_f)\big)
+       +\mathcal L(\delta^{\rm match})+O(\epsilon^4).
+\end{aligned}
+$$
+Define $\delta_f^{\rm match}=\log[m_f^{\overline{\rm MS}}(\mu_*)/m_f^{\rm can}]$ for positive masses, where $m_f^{\rm can}$ is the singular value of the canonically normalized chiral mass link at zero momentum. This keeps the finite correction explicit at the same $\epsilon$. Take the log modulus of each chiral entry in 89.3. The common up and down couplings and neutral expectation values cancel from the leading term. On the line the finite-wall normalization ratio is one. The expansion is at fixed nonzero overlaps and need not be uniform as an overlap tends to zero. At fixed $\epsilon$ the first quantum coefficient still required is $\delta_u^{(1)}+\delta_e^{(1)}-\delta_d^{(1)}-\delta_\nu^{(1)}$, from parent minus effective-theory two-point and source vertices in the same scheme. A numerical value requires the regulated spectra, vertices and renormalized parent couplings. A comparison with the lattice Ward scheme also requires the continuum contact action of the flavour current and the scalar mass-source conversion. The six-flavour release fixes a calibrated convention for its own theory. [Mass fit and continuum contact test](https://github.com/yang-mills-group/QCD/blob/9b2971888b9d525431bdb398ae2cb3ac33bf28e5/docs/mass-current-normalization.md)
+
+On a threshold-free interval where both quarks are active, mass-independent pure QCD multiplies $m_u,m_d$ by the same running factor, which cancels exactly. A further check uses a renormalizable low-energy window with QCD, QED and a neutral Dirac neutrino. At one loop,
+$$
+ 16\pi^2\,\frac{d}{d\log\mu}\log\frac{m_um_e}{m_dm_\nu}
+   =-6e^2(4/9+1-1/9)=-8e^2 .
+$$
+Additional active weak or scalar fields change the evolution. The unknown finite matching and the independent microscopic Yukawas remain inputs to an absolute mass prediction. [Charged-fermion mass RGEs, Eqs. (C.2)–(C.4)](https://arxiv.org/pdf/1711.05270#page=27)
+
+**Provenance of 89.3.** GPT-6.2 Astra, written derivation in the prescribed two-probe quadratic action.
