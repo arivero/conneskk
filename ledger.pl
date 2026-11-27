@@ -3508,6 +3508,17 @@ checked_by(interval_mass_green, terra_6_1, by_hand). % Independent angular, Robi
 addresses(t8, interval_mass_green).
 addresses(t10, interval_mass_green).
 
+hypothesis(interval_wall_sources, "Fixed nonderivative wall Yukawa coefficients and separately prescribed internal scalar source profiles. Same finite slab, metric, colour representation and subtraction scale at both geometries.").
+claim(interval_wall_stiffness_response, proposition, conditional, "Proposition 109.2 and colour stiffness", "Two bulk-null scalar profiles resolve the two wall mass vertices and predict their transport to a new crossing. The nonzero longitudinal colour towers over the sphere kernels have a convergent one-loop threshold difference given by a product of endpoint Gaussian factors.").
+source(interval_wall_stiffness_response, 'results/109_interval_mass_source_response.md', 'calibrating-the-wall-vertex-and-changing-the-geometry').
+depends(interval_wall_stiffness_response, interval_mass_green).
+depends(interval_wall_stiffness_response, hyp(interval_wall_sources)).
+attempted_by(interval_wall_stiffness_response, gpt_6_2_astra).
+checked_by(interval_wall_stiffness_response, gpt_6_2_astra, by_hand).
+checked_by(interval_wall_stiffness_response, terra_6_1, by_hand).
+addresses(t8, interval_wall_stiffness_response).
+addresses(t18, interval_wall_stiffness_response).
+
 claim(vortex_neutral_spectator_tensor, proposition, proved, "Proposition 90.1", "Three ordinary families in the six-dimensional spin theory admit vortex-neutral chiral spectators without weak-sphere zero modes. The specified integral factorization X Y matches the gauge part of the two-derivative K3 magnetic class and gives local Green-Schwarz cancellation with a nonchiral tensor.").
 source(vortex_neutral_spectator_tensor, 'results/90_a_tensor_completion_without_light_mirrors.md', 'vortex-neutral-spectators').
 depends(vortex_neutral_spectator_tensor, vortex_mirror_anomalies).

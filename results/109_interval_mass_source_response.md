@@ -49,3 +49,43 @@ $$
  =l_j g_{2b,c_{di}}(v)^2 .
 $$
 Consequently $(l_6-l_7)[g_{2b,c_{dc}}(v)^2-g_{2b,c_{d\ell}}(v)^2]$ survives the alternating combination. Each end can carry such a term and a less symmetric wall can also distinguish colour and lepton. This identifies a particular finite counterterm at the first quantum order if $l_j$ is of that order. The next visit uses independently shaped scalar insertions to determine its boundary coefficient, then varies $h_c-h_\ell$ with the coefficients fixed. The gauge determinant and the current contact keep their own normalizations throughout.
+
+## Calibrating the wall vertex and changing the geometry
+
+**Proposition 109.2.** Work to first order in independent nonderivative wall Yukawa coefficients $l_{ij,-},l_{ij,+}$ and at the tree orders of 109.1. The coefficients are held fixed in the parent. Use the same subtraction scale below the first omitted threshold on both geometries. Write $d_i(y)=g_{2b,c_{di}}(y)^2$ and $e_\pm=u,v$ for the ends. Give the scalar in link $ij$ the prescribed external variation $p(y)g_{b,c_{Hj}}(y)$. At zero root expectation, in units of its computed uniform tree link, the low chiral mass vertex is
+$$
+ V_{ij}[p]=\int_I d_i(y)p(y)\,dy+
+       \sum_{\pm}l_{ij,\pm} d_i(e_\pm)p(e_\pm).
+$$
+This follows from the exact product of the two Gaussians. At this order there is no heavy kinetic correction linear in the root expectation. The normalized external variation may excite massive modes of the parent. It is an insertion in the generating functional, with its profile specified by the source.
+
+To read this vertex in a flavour Ward convention, take at least two identical dynamical copies on both backgrounds and fix the off-diagonal conserved vector charge by its contact on an internal bilinear. An infinitesimal *difference* of their real mass-link sources at fixed colour reference couples the divergence to the corresponding off-diagonal shaped scalar. Divide the sum of divergence and spectator variation by the source difference and compare its separated insertion with the scalar of a specified mass scheme, choosing a probe with a nonzero denominator. In a low-energy matching calculation this compares the coefficient of that same scalar after separately subtracting higher-dimension operators. Fix the scalar units independently at the common scale. This uses replicas of equal colour and electric charge within each species. The six positive-mass QCD construction supplies the regulator identity and the contact-matching obligation. A continuum realization for this geometric family still requires these introduced sources and limits. [QCD mass-current comparison](https://github.com/yang-mills-group/QCD/blob/9b2971888b9d525431bdb398ae2cb3ac33bf28e5/docs/mass-current-normalization.md)
+
+At the calibration geometry take the linear hat functions $t_-=(v-y)/(v-u)$, $t_+=1-t_-$ and $b_I=t_-t_+$. For each $i$ use
+$$
+ p_{i,\pm}=t_\pm-b_I\,\frac{\int d_i t_\pm}{\int d_i b_I}.
+$$
+Their bulk linear mass vertices vanish and their endpoint values select opposite walls. Thus the two readings $B_{ij,\pm}=V_{ij}[p_{i,\pm}]$ determine $l_{ij,\pm}d_i(e_\pm)$ independently of the four uniform masses. At a second geometry the additive correction to the log cross-ratio is
+$$
+ \mathcal L\left(\sum_{\pm}\frac{d_i'(e_\pm)}{d_i(e_\pm)}B_{ij,\pm}\right),
+ \qquad
+ \mathcal L(X)=X_{c6}+X_{\ell7}-X_{c7}-X_{\ell6}.
+$$
+Here a prime denotes the new background. The two-by-two calibration is invertible on a finite slab because both Gaussian endpoint densities are positive. Exponentially small densities can limit precision. The displayed ratios propagate reading errors directly and avoid first dividing by a small density to quote a microscopic coupling. $\square$
+
+Change $(h_c,h_\ell)$ from $(0.2,-0.3)$ to $(0.25,-0.45)$ in the finite example, preserving $3h_c+h_\ell$ and every other input. The computed uniform log ratio on the second slab is $1.525772225+0.001662035\,\epsilon^2$ through cubic order in the mass. Add the wall term above with left/right multipliers $(1.458633,0.655406)$ for colour and $(0.269146,2.966848)$ for leptons. The change in the bulk tree log ratio is $0.434682438+0.000441152\,\epsilon^2$. No measured masses enter either number. Errors include $O(\epsilon^4)$ in the bulk log ratio, second order in the wall coefficients and mixed wall times $\epsilon^2$ terms.
+
+This prediction fixes the displayed boundary terms **conditional on the two independent readings per link**. Their values have yet to be obtained for an interacting family. Smooth finite vertex corrections can also respond to $p_{i,\pm}$. One extension separates an endpoint distribution from any integrable bulk density by taking sources equal to one at that end with support in a collar of width $\delta$; the bulk error is bounded by the integral of the absolute density over the collar. This demands locality, control of the source normalization at that resolution, and a regulator limit before $\delta\downarrow0$. Further wall operators involving derivatives or powers of the background require additional sources or geometries.
+
+## A finite contribution to the Wilson colour stiffness
+
+At zero neutral expectation the constant external gluon couples diagonally to each coloured internal eigenmode. Its tree inverse coupling in the unwarped product with fixed seven-dimensional gauge metric is proportional to $4\pi r^2(v-u)$ and stays fixed in this intercept variation. Define the one-loop fermion response by the transverse, momentum-squared coefficient of the two-background-gluon Hessian of the heavy determinant in 89.3, including its two-gluon contact. The Wilson construction similarly reads stiffness from transverse sine and cosine tests. Here we can sum exactly the change from the entire *nonzero longitudinal towers over the retained sphere kernels*. The light chiral zero modes are kept in the effective theory. [Wilson stiffness readout](https://github.com/yang-mills-group/OpenAI-QCD-20261104/blob/53f81cafe5cb9cd18cd0d5b49b8364cce50a0fe7/proof/YM/Massive/Target/Tower.lean) · [Accumulated determinant response, Lemma 98.3](https://github.com/yang-mills-group/OpenAI-informal-20261115/blob/6ca21d98b4022263fd7f2a3de5b5913b8495ee02/continuum-yang-mills-theory.pdf)
+
+For slope $b_0$ and crossing $c$, the nonzero squared masses of $d^\dagger d$ also form the spectrum of $dd^\dagger$ with Dirichlet ends, $d=\partial_y+b_0(y-c)$. In radius units let
+$$
+ Y(b_0,c)=\big[g_{b_0,c}(u)g_{b_0,c}(v)\big]^{-1}.
+$$
+The Dirichlet determinant ratio at two crossings is $Y(b_0,c')/Y(b_0,c)$. Indeed the zero-energy solution of $dd^\dagger z=0$ with initial data $(0,1)$ is
+$z(y)=[g(u)g(y)]^{-1}\int_u^y g(t)^2\,dt$. Its end value is $Y$, and the Dirichlet determinant ratio theorem applies to these positive scalar operators on the same compact interval. The high longitudinal relative logarithms are summable because the two bounded potentials differ by a bounded multiplication and the squared eigenvalues grow quadratically. [Dirichlet functional determinants](https://arxiv.org/abs/math-ph/0305010)
+
+For one family sum $\log(Y'/Y)$ with multiplicity two at $(2b,c_{dc})$ and one each at $(b,c_{s,c6})$ and $(b,c_{s,c7})$. Each nonzero longitudinal mode is a Dirac colour triplet with $T_F=1/2$. The difference in its one-loop matching term between geometries is $-T_F\log(Y'/Y)/(12\pi^2)$ per tower with the listed multiplicity. The finite example gives total log squared-mass ratio $0.1910232443$ and inverse-coupling shift $-0.0008064459$ per family. This is the change in the heavy Dirac decoupling correction at common scale and fixed high-side coupling. Other angular modes, charged bosons and local gauge counterterms enter the full stiffness. The next calculation can sum the remaining angular modes of these same fermions after isolating their local ultraviolet subtractions. [Two-geometry calculation](../paper/interval_mass_response.py)

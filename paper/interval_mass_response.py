@@ -84,3 +84,30 @@ if __name__ == "__main__":
             print(f"{label:2s}  a={linear:.9f}  c/a={relative:.9f}")
         print("log ratio %.9f, quadratic coefficient %.9f" %
               (alternating @ np.log(result[:, 0]), alternating @ result[:, 1]))
+
+
+def wall_densities(intercept):
+    cd = (H5 - intercept) / (2 * B)
+    return np.array([profile(2 * B, cd, end)**2 for end in (LEFT, RIGHT)])
+
+
+def kernel_tower_logdet(intercept):
+    """Relative use only. Two left sphere zero modes and two right ones."""
+    towers = [(2, 2*B, (H5-intercept)/(2*B))]
+    towers += [(1, B, (link-intercept)/B) for link in LINKS]
+    return -sum(mult * np.log(profile(rate, c, LEFT) * profile(rate, c, RIGHT))
+                for mult, rate, c in towers)
+
+
+if __name__ == "__main__":
+    h0, h1 = (0.2, -0.3), (0.25, -0.45)
+    signs = np.array([1, -1, -1, 1])
+    for hc, hl in (h0, h1):
+        vals = family(hc, hl)
+        print(f"h=({hc},{hl}): log ratio {signs @ np.log(vals[:, 0]):.10f}, "
+              f"cubic log correction {signs @ vals[:, 1]:.10f}")
+    for name, before, after in zip(("colour", "lepton"), h0, h1):
+        print(f"{name}: left/right wall transfer {wall_densities(after)/wall_densities(before)}")
+    log_change = kernel_tower_logdet(h1[0]) - kernel_tower_logdet(h0[0])
+    print(f"colour log squared-mass product change per family {log_change:.10f}, "
+          f"inverse-coupling shift {-log_change/(24*np.pi**2):.10f}")
