@@ -89,3 +89,44 @@ The Dirichlet determinant ratio at two crossings is $Y(b_0,c')/Y(b_0,c)$. Indeed
 $z(y)=[g(u)g(y)]^{-1}\int_u^y g(t)^2\,dt$. Its end value is $Y$, and the Dirichlet determinant ratio theorem applies to these positive scalar operators on the same compact interval. The high longitudinal relative logarithms are summable because the two bounded potentials differ by a bounded multiplication and the squared eigenvalues grow quadratically. [Dirichlet functional determinants](https://arxiv.org/abs/math-ph/0305010)
 
 For one family sum $\log(Y'/Y)$ with multiplicity two at $(2b,c_{dc})$ and one each at $(b,c_{s,c6})$ and $(b,c_{s,c7})$. Each nonzero longitudinal mode is a Dirac colour triplet with $T_F=1/2$. The difference in its one-loop matching term between geometries is $-T_F\log(Y'/Y)/(12\pi^2)$ per tower with the listed multiplicity. The finite example gives total log squared-mass ratio $0.1910232443$ and inverse-coupling shift $-0.0008064459$ per family. This is the change in the heavy Dirac decoupling correction at common scale and fixed high-side coupling. Other angular modes, charged bosons and local gauge counterterms enter the full stiffness. The next calculation can sum the remaining angular modes of these same fermions after isolating their local ultraviolet subtractions. [Two-geometry calculation](../paper/interval_mass_response.py)
+
+## All angular modes of the specified coloured probe roots
+
+Keep the same boundaries and work at zero root expectation. For each of the three retained colour-triplet roots write $N=2,1,1$ for its magnetic degree and $b_0=N/(2r^2)$. This calculation includes every angular and radial excitation of those roots. Other boundary bundles and bosonic determinants belong to the full parent matching.
+
+**Proposition 109.3.** Put $L=v-u$ and $V_c(y)=b_0^2(y-c)^2+b_0$. For $k=1,2,\ldots$ the positive angular Dirac eigenvalue is $\lambda_k=\sqrt{k(k+N)}/r$, with degeneracy $2k+N$. For each angular pair the squared longitudinal operators are $d^\dagger d+\lambda_k^2$ on the Robin component and $dd^\dagger+\lambda_k^2$ on the Dirichlet component as in 109.1. Their nonzero radial spectra agree, and the extra Robin kernel supplies the same $\lambda_k^2$ at both crossings. Hence the log squared-mass product change on this pair is $2F_k$, with
+$$
+ F_k=\log\frac{Y_{\lambda_k,c'}(v)}{Y_{\lambda_k,c}(v)},\qquad
+ Y''=(\lambda_k^2+V_c)Y,\quad Y(u)=0,\quad Y'(u)=1 .
+$$
+Each positive singular mass counts once as a four-dimensional Dirac field. The factor two here counts the two sphere components in the squared chiral mass operator.
+
+The local pieces of $F_k$ at order $\lambda^{-1}$ and $\lambda^{-2}$ are
+$$
+ L_k=\frac{\int_u^v\Delta V}{2\lambda_k}
+       -\frac{\Delta V(u)+\Delta V(v)}{4\lambda_k^2},\qquad
+ \Delta V=V_{c'}-V_c .
+$$
+*Proof.* Interpolate the two potentials linearly. The derivative of log determinant is $\operatorname{Tr}(G\Delta V)$ for the positive Dirichlet resolvent $G$ at this interpolation point. The free resolvent diagonal is
+$(1-e^{-2\lambda(y-u)})(1-e^{-2\lambda(v-y)})/[2\lambda(1-e^{-2\lambda L})]$.
+Integrating against $\Delta V$ gives the bulk term and a boundary layer at each end. Replacing the potential difference in each layer by its end value costs at most $\|\partial_y\Delta V\|_\infty/(4\lambda^3)$ in total, up to exponential endpoint errors. Since the interpolated potential is positive, $0\le G_0-G\le G_0 V G_0$. Also $\operatorname{Tr}G_0^2\le L/(4\lambda^3)$ by comparison of the Dirichlet mode sum with the half-line integral. For $\lambda L\ge1$ the combined error is bounded by
+$$
+ |F_k-L_k|\le \lambda_k^{-3}
+ \left[\frac{L V_{\max}\|\Delta V\|_\infty+\|\partial_y\Delta V\|_\infty}{4}
+       +\frac{\|\Delta V\|_\infty}{L}\right].
+$$
+In the last allowance the two exponential errors are at most $\|\Delta V\|_\infty e^{-2\lambda L}[1/(2\lambda^2)+L/(\lambda(1-e^{-2\lambda L}))]$. Multiplication by $2(2k+N)$ now gives a summable tail. $\square$
+
+Subtract $L_k$ at every nonzero angular level as one definite finite convention. Add the previously evaluated sphere-kernel part. For the change $h_c=0.20\to0.25$ at radius one, the subtracted log squared-mass change through $k=2048$ is $-2.48594$ and the absolute omitted log tail is bounded by $0.04686$. The corresponding one-loop inverse-colour-coupling shift is $+0.010495$ per family, with angular-tail allowance $0.000198$. In this two-background number the bulk and boundary subtraction convention matters. The determinant sums were evaluated by multiplying exact Dirichlet transfers of piecewise constant midpoint potentials. Doubling the 2,048 radial cells at fixed angular cutoff changed the log sum by about $10^{-7}$. This is a spatial discretization check, separate from the analytic angular-tail bound.
+
+**A comparison insensitive to both subtractions.** Fix $3h_c+h_\ell=0.3$ and take $h_c=0.20,0.35,0.50,0.65$ at otherwise identical inputs. Let $\Delta_t^3$ be the forward third difference with step $t=0.15$. For each root $V_c=(b_0 y+h_c-h_j)^2+b_0$ with $h_j=h_5,h_6,h_7$ respectively. Both subtraction terms are quadratic in $h_c$ before differencing. Their third differences vanish level by level. This also cancels any finite local contribution polynomial of degree at most two in this intercept on the chosen family.
+
+The angular tail can be bounded directly in this comparison. Write $M=\sup|2(b_0 y+h_c-h_j)|$ over the four-geometry interval and slab. The third derivative of the log determinant is $2\operatorname{Tr}(GV'GV'GV')-3\operatorname{Tr}(GV''GV')$ with $V''=2$, where primes now denote intercept derivatives. Schatten Hölder and the free Dirichlet bound give magnitude at most $L[2M^3/\lambda^5+6M/\lambda^3]/4$. Integrating three times over $[0,t]$ bounds the third difference by $t^3$ times this quantity. Summing with the angular multiplicities gives the following results per family in radius units.
+
+| Angular cutoff | Radial cells | Third difference of log squared-mass product | Bound on omitted log tail |
+|---:|---:|---:|---:|
+| 512 | 1,024 | −0.15202610 | 0.00650 |
+| 2,048 | 2,048 | −0.15277129 | 0.00163 |
+| 2,048 | 4,096 | −0.15277131 | 0.00163 |
+
+Thus the targeted fermion towers contribute $+0.00064496$ to the third difference in the one-loop decoupling part of $g_3^{-2}$, with angular-tail allowance $0.0000069$. No finite coefficient of the two subtractions was fitted. The Wilson release motivates isolating the local kinetic subtraction before comparing endpoint responses. The Green functions and coefficients here are those of the interval. A physical test of the full stiffness needs the remaining charged representations and bosons, a specified finite parent gauge action, and its independently normalized transverse response. Higher-degree local terms are a further input in a general effective parent. [Reproducible determinant and tail calculation](../paper/interval_colour_tower.py) · [Release subtraction diagnostic, §4](https://github.com/yang-mills-group/submissions/blob/923ac56b962c3981c9068f0b47ef47eb6ae3e9d7/reviews/openai-20261104/docs/matching/gluon-bubble-finite-identity.tex)

@@ -3519,6 +3519,14 @@ checked_by(interval_wall_stiffness_response, terra_6_1, by_hand).
 addresses(t8, interval_wall_stiffness_response).
 addresses(t18, interval_wall_stiffness_response).
 
+claim(interval_colour_angular_sum, proposition, conditional, "Proposition 109.3", "For the three targeted colour-triplet roots all nonzero angular pairs yield twice a Dirichlet determinant change per magnetic multiplicity. Bulk and wall terms exhaust the two nonsummable orders; a third intercept difference cancels both, with a summable angular tail.").
+source(interval_colour_angular_sum, 'results/109_interval_mass_source_response.md', 'all-angular-modes-of-the-specified-coloured-probe-roots').
+depends(interval_colour_angular_sum, interval_wall_stiffness_response).
+attempted_by(interval_colour_angular_sum, gpt_6_2_astra).
+checked_by(interval_colour_angular_sum, gpt_6_2_astra, by_hand).
+checked_by(interval_colour_angular_sum, terra_6_1, by_hand).
+addresses(t18, interval_colour_angular_sum).
+
 claim(vortex_neutral_spectator_tensor, proposition, proved, "Proposition 90.1", "Three ordinary families in the six-dimensional spin theory admit vortex-neutral chiral spectators without weak-sphere zero modes. The specified integral factorization X Y matches the gauge part of the two-derivative K3 magnetic class and gives local Green-Schwarz cancellation with a nonchiral tensor.").
 source(vortex_neutral_spectator_tensor, 'results/90_a_tensor_completion_without_light_mirrors.md', 'vortex-neutral-spectators').
 depends(vortex_neutral_spectator_tensor, vortex_mirror_anomalies).
