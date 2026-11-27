@@ -3499,6 +3499,15 @@ checked_by(ade_interval_four_masses, terra_6_1, by_hand). % Independent grading,
 addresses(t8, ade_interval_four_masses).
 addresses(t10, ade_interval_four_masses).
 
+claim(interval_mass_green, proposition, conditional, "Proposition 109.1", "For the two holomorphic interspecies links on the round interval, Q W kills each right light mode. The relative cubic correction is minus half the left inverse-square leakage, with only angular zero and one and explicit Robin Green functions. A boundary Yukawa produces an independently testable mass response.").
+source(interval_mass_green, 'results/109_interval_mass_source_response.md', 'a-green-function-for-each-cubic-mass').
+depends(interval_mass_green, ade_interval_four_masses).
+attempted_by(interval_mass_green, gpt_6_2_astra).
+checked_by(interval_mass_green, gpt_6_2_astra, by_hand).
+checked_by(interval_mass_green, terra_6_1, by_hand). % Independent angular, Robin, kinetic and wall calculation conditional on 89.2-3.
+addresses(t8, interval_mass_green).
+addresses(t10, interval_mass_green).
+
 claim(vortex_neutral_spectator_tensor, proposition, proved, "Proposition 90.1", "Three ordinary families in the six-dimensional spin theory admit vortex-neutral chiral spectators without weak-sphere zero modes. The specified integral factorization X Y matches the gauge part of the two-derivative K3 magnetic class and gives local Green-Schwarz cancellation with a nonchiral tensor.").
 source(vortex_neutral_spectator_tensor, 'results/90_a_tensor_completion_without_light_mirrors.md', 'vortex-neutral-spectators').
 depends(vortex_neutral_spectator_tensor, vortex_mirror_anomalies).
