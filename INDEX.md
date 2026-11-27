@@ -8,6 +8,8 @@ The paper states results with their labels; the appendices hold the derivations 
 
 ### 1.1 The counts 9, 10 and 11
 
+The unit Einstein–Hilbert coefficient occurs at ten for the curvature coupling of the spinning particle. A periodic circle example computes the change in the residue after dimensional reduction. [Supersymmetric curvature residue](docs/susy_curvature_residue.html)
+
 The interval calculation follows three generations, their weak currents and candidate scalar partners. [Two limits of the finite KO-six window](paper/two_endpoint_limits.tex)
 
 Two Freund–Rubin geometries and a heterotic gauge wall test three origins of the seven-dimensional weak sector. [The seven-dimensional weak endpoint in M-theory](paper/seven_m_theory.tex)

@@ -79,6 +79,11 @@ PAPERS = [
         "supplement": "seven_m_theory",
         "citation": "SevenMTheory2026",
     },
+    {
+        "name": "susy_curvature_residue",
+        "title": "Ten and twenty-six from volume-normalized curvature residues",
+        "short": "Critical dimensions of curvature residues",
+    },
 ]
 
 LECTURE = {
@@ -307,11 +312,13 @@ def page(title, current, contents, overview_headings, paper_headings):
 def paper_files(paper):
     name = paper["name"]
     supplement = paper.get("supplement")
-    kind = "Complete paper" if supplement else "Graduate lecture"
-    pdf_label = "Paper PDF" if supplement else "Lecture PDF"
-    edition_label = "Paper and supplement editions" if supplement else "Lecture editions"
+    is_lecture = paper in LECTURES
+    kind = "Graduate lecture" if is_lecture else "Complete paper"
+    pdf_label = "Lecture PDF" if is_lecture else "Paper PDF"
+    edition_label = "Lecture editions" if is_lecture else "Paper editions"
     supplement_links = ""
     if supplement:
+        edition_label = "Paper and supplement editions"
         supplement_links = f"""
 <a href="supplemental_{supplement}.pdf">Paper supplement</a>
 <a href="supplemental_{supplement}_mobile.pdf">Mobile supplement</a>"""

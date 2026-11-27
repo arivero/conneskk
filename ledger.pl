@@ -4447,6 +4447,34 @@ attempted_by(gh29_current_profile_difference, codex_gpt_6).
 checked_by(gh29_current_profile_difference, terra_6_1, by_hand).
 addresses(t18, gh29_current_profile_difference).
 
+%% Volume-normalized curvature residues on closed manifolds.
+hypothesis(curvature_volume_normalization, "Calibrate the residue at the leading pole to Riemannian volume per fibre rank. Use the same factor at the curvature pole.").
+hypothesis(curvature_kinetic_reference, "Subtract the residue of the Levi-Civita connection Laplacian on the same spinors, or compare the full form trace with degree zero on the de Rham particle.").
+hypothesis(curvature_unit_matching, "Impose equality of the negative spectral curvature density with the scalar curvature of small geodesic balls wherever curvature is detectable.").
+
+claim(spin_kinetic_residue, theorem, proved, "Theorem 1", "The Dirac supercharge and its covariant kinetic reference have equal volume terms. Their normalized curvature residues differ by -(d-2)/8 times the Einstein-Hilbert density.").
+source(spin_kinetic_residue, 'paper/susy_curvature_residue.tex', '').
+depends(spin_kinetic_residue, hyp(curvature_volume_normalization)).
+depends(spin_kinetic_residue, hyp(curvature_kinetic_reference)).
+attempted_by(spin_kinetic_residue, codex_gpt_6).
+checked_by(spin_kinetic_residue, terra_6_1, by_hand).
+prior_work(spin_kinetic_residue, partial, "Rivero 2004 gives the ordinary unit criterion. Chamseddine 1997, equations 50-53, computes the opposite curvature difference in ten-dimensional string zero modes.").
+
+claim(hodge_scalar_residue, proposition, proved, "Proposition 1", "The full form trace per fibre state and the degree-zero trace differ by -R/4 in their first curvature heat density. Positive factorized degree weights give -y R/(1+y)^2. The sphere times torus example has an exact heat trace difference.").
+source(hodge_scalar_residue, 'paper/susy_curvature_residue.tex', '').
+depends(hodge_scalar_residue, hyp(curvature_volume_normalization)).
+attempted_by(hodge_scalar_residue, codex_gpt_6).
+checked_by(hodge_scalar_residue, terra_6_1, by_hand).
+
+claim(geodesic_ball_unit_dimensions, theorem, conditional, "Theorem 2", "On any smooth closed Riemannian manifold with detectable scalar curvature the normalized full Hodge and full-minus-scalar residue densities reproduce minus the small-ball scalar curvature at d=26 and d=10 respectively. For a general Laplace-type operator the signed pair is equivalent to the mean endomorphism being R/4.").
+source(geodesic_ball_unit_dimensions, 'paper/susy_curvature_residue.tex', '').
+depends(geodesic_ball_unit_dimensions, hodge_scalar_residue).
+depends(geodesic_ball_unit_dimensions, hyp(curvature_unit_matching)).
+attempted_by(geodesic_ball_unit_dimensions, codex_gpt_6).
+checked_by(geodesic_ball_unit_dimensions, codex_gpt_6, by_hand).
+checked_by(geodesic_ball_unit_dimensions, terra_6_1, by_hand). % Area ratio, small-ball calibration, Hodge trace and both endomorphism tests.
+prior_work(geodesic_ball_unit_dimensions, partial, "Gray and Vanhecke 1979 give the small-ball scalar curvature. The normalized d=26 criterion is explicit in Rivero 2004.").
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).

@@ -1,5 +1,6 @@
 # Each paper in two forms: Phys Rev two-column, and one column of the same width for phones.
-PAPERS = towerless_intervals chiral_limit_note boundary_condition_note joint_limit_note connes_kk_dictionary_note generations_note real_structure_note two_endpoint_limits seven_m_theory
+SUPPLEMENTED_PAPERS = towerless_intervals chiral_limit_note boundary_condition_note joint_limit_note connes_kk_dictionary_note generations_note real_structure_note two_endpoint_limits seven_m_theory
+PAPERS = $(SUPPLEMENTED_PAPERS) susy_curvature_residue
 LECTURE = kk_strings_lecture
 SUMMER_LECTURE = conneskk_summer_lectures
 LECTURES = $(LECTURE) $(SUMMER_LECTURE)
@@ -41,7 +42,7 @@ supplement:
 # One Supplemental Material for each paper, in both forms, from the parts list supplement_parts/<name>.txt.
 # The output names are supplemental_<name>.pdf and supplemental_<name>_mobile.pdf, with <name> = towerless for the main paper.
 supplements:
-	cd .. && for t in $(PAPERS); do sh paper/build_supplement.sh $$t && sh paper/build_supplement.sh $$t mobile || exit 1; done
+	cd .. && for t in $(SUPPLEMENTED_PAPERS); do sh paper/build_supplement.sh $$t && sh paper/build_supplement.sh $$t mobile || exit 1; done
 
 # Build the HTML edition independently of the PDF toolchain.
 html:
@@ -55,7 +56,7 @@ docs: all
 	$(MAKE) supplement
 	$(MAKE) supplements
 	cp $(PAPERS:%=%.pdf) $(PAPERS:%=%_mobile.pdf) $(LECTURE_PDFS) supplemental.pdf supplemental_mobile.pdf ../docs/
-	for t in $(PAPERS); do n=$$t; [ $$t = towerless_intervals ] && n=towerless; cp supplemental_$$n.pdf supplemental_$${n}_mobile.pdf ../docs/; done
+	for t in $(SUPPLEMENTED_PAPERS); do n=$$t; [ $$t = towerless_intervals ] && n=towerless; cp supplemental_$$n.pdf supplemental_$${n}_mobile.pdf ../docs/; done
 	$(MAKE) html
 
 clean:

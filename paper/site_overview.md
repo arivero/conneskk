@@ -59,6 +59,8 @@ On the six-dimensional flag, explicit flux bundles carry chiral colour triplets,
 
 ## Gauge fields and the spectral action {#gauge}
 
+Small geodesic balls measure scalar curvature. On every closed Riemannian manifold of dimension $d>2$, the full Hodge residue measures $-(d-2)/24$ times that curvature. Subtracting the scalar-sector residue gives $-(d-2)/8$. Where curvature is detectable, unit matching picks out 26 and ten, respectively. The same pair occurs for a spin supercharge and its covariant kinetic energy. [Geometric theorem and compact families](susy_curvature_residue.html#sec:volume)
+
 In the flat interval Yang-Mills model with the specified wall connector and kinetic form, the light vector poles obey
 
 $$\sin^2(M_Wl)=\tfrac12\sin^2(2\theta),\qquad \sin^2(M_Zl)=\tfrac45\sin^2(2\theta).$$

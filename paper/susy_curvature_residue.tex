@@ -1,0 +1,472 @@
+% Print and mobile editions use the same source.
+\ifdefined\mobile
+\documentclass[aps,prd,reprint,onecolumn,nofootinbib,amsmath,amssymb]{revtex4-2}
+\usepackage[paperwidth=270pt,paperheight=585pt,textwidth=246pt,textheight=545pt,top=18pt,left=12pt,headsep=7pt]{geometry}
+\else
+\documentclass[aps,prd,reprint,nofootinbib,amsmath,amssymb]{revtex4-2}
+\fi
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsthm}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdfauthor={OpenAI Codex},pdftitle={Ten and twenty-six from volume-normalized curvature residues}}
+\ifdefined\mobile\makeatletter\def\frontmatter@abstractwidth{246\p@}\makeatother\fi
+\emergencystretch=1.5em
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Res}{\operatorname*{Res}}
+\newcommand{\dv}{\,d\mathrm{vol}_g}
+\begin{document}
+\title{Ten and twenty-six from volume-normalized curvature residues}
+\author{OpenAI Codex}
+\date{27 November 2026}
+\begin{abstract}
+We give a geometric characterization of the dimensions in a unit-curvature
+criterion proposed by Rivero and in its supersymmetric extension. On every
+closed Riemannian manifold of dimension \(d>2\), the volume-normalized residue
+of the Hodge Laplacian on all forms has curvature coefficient \(-(d-2)/24\).
+Subtracting the scalar-sector residue gives \(-(d-2)/8\). Equality in
+magnitude with the scalar curvature measured by small geodesic balls holds
+at \(d=26\) and \(d=10\), respectively, whenever curvature is detectable.
+On a spin manifold the same pair comes from the Dirac supercharge and its
+covariant kinetic energy. The ratio of two unit-sphere areas supplies
+\((d-2)/2\). We classify the remaining factor by the trace of the curvature
+endomorphism and give a conformal scalar operator for which neither
+denominator is universal. The geometric equalities require no worldsheet.
+Using either equality to select a physical dimension requires a matching
+postulate.
+\end{abstract}
+\maketitle
+
+\section{The coefficient fixed in 2004}
+
+How does spin change the propagation of a particle on a curved manifold?
+This question gives a way to vary the observable in the \(d=26\) proposal
+while keeping its unit of volume. The number to be matched is the local
+coefficient multiplying the scalar curvature in a specified residue.
+We vary the dimension \(d>2\), fix the metric normalization of the principal
+symbol, and use the same prescription in each dimension.
+
+Four dimensions give a familiar geometric example. For a massless scalar
+with conformal coupling, the operator is the positive scalar Laplacian
+plus \(\xi_d R\), where \(\xi_d=(d-2)/[4(d-1)]\). Its first local heat
+coefficient after the volume term is \cite{Physres1ScalarHeat}
+\begin{equation}
+ \left(\tfrac16-\xi_d\right)R
+      =\frac{4-d}{12(d-1)}\,R .
+ \label{eq:four}
+\end{equation}
+At \(d=4\) the geometric \(+R/6\) from the heat kernel and the
+\(-\xi_4 R=-R/6\) from the conformal coupling cancel at every point,
+even on a round sphere. The volume term survives, and higher coefficients
+can still detect curvature. Four is distinguished here by a zero. The
+two dimensions studied below are distinguished by equality with the
+scalar curvature measured by small geodesic balls.
+
+Let \(M^d\) be a closed Riemannian spin manifold. Write \(R\) for its scalar
+curvature, positive on a round sphere, and \(D\) for the self-adjoint Dirac
+operator of its Levi-Civita spin connection. On the classical triple
+\((C^\infty(M),L^2(M,S),D)\), the normalized residue of
+\(\lvert D\rvert^{2-d}\) gives the Einstein--Hilbert integral. The 2004 note
+proposes that its dimensionless coefficient, with the Euclidean minus sign
+taken out, equal one. The note also leaves open what quantization would
+enforce that condition \cite{Rivero2004Critical,KalauWalze1995}.
+
+Here is the normalization explicitly. Let \(P=\nabla^*\nabla+V\) be a
+nonnegative Laplace-type operator on a Hermitian bundle of complex rank
+\(r\), let \(f\) be a smooth test function, and put \(p=d/2-1\). Define
+\begin{equation}
+ \mathcal E_d(P;f)=
+ \frac{(4\pi)^{d/2}\Gamma(d/2)}{r}
+ \Res_{z=p}\Tr(fP^{-z}).
+ \label{eq:residue}
+\end{equation}
+Complex powers are zero on the kernel. The identical prefactor at the volume
+pole \(z=d/2\) gives \(\int_M f\dv\), for every \(P\) above. Equivalently,
+the residue in Eq.~\eqref{eq:residue} is one half the Wodzicki residue of
+\(fP^{-p}\), since \(P\) has order two. Inserting \(f\) tests the density
+even on metrics with zero total scalar curvature.
+
+Write \(Z_P(t;f)=(4\pi t)^{d/2}\Tr(f e^{-tP})/r\). The local heat
+expansion through its first curvature term gives \cite{McKeanSinger1967,KalauWalze1995}
+\begin{equation}
+ \begin{aligned}
+ Z_P(t;f)&=\int_M f\,[1+t b_P+O(t^2)]\dv ,\\
+ b_P&=R/6-\operatorname{tr}(V)/r .
+ \end{aligned}
+ \label{eq:heat}
+\end{equation}
+Taking the Mellin residue multiplies \(b_P\)
+by \(\Gamma(d/2)/\Gamma(p)=p\). For \(D^2\) the Lichnerowicz identity gives
+\(V=R/4\). The integrated result is
+\begin{equation}
+ \mathcal E_d(D^2;f)=-\frac{d-2}{24}\int_M fR\dv .
+ \label{eq:original}
+\end{equation}
+Unit matching gives \(d=26\). It fixes a dimension only when the coefficient
+is matched before introducing an adjustable gravitational coupling.
+
+\section{The spinning particle}
+
+Take the worldline supercharge \(Q=D\) and normalize its Hamiltonian by
+\(H=Q^2\), so the principal symbol is \(\lvert\xi\rvert^2\).
+In even dimension \(Q\) is odd under spinor chirality. For a graded
+realization in odd dimension one may double the spinors and put \(D\) in the
+two off-diagonal blocks. Division by the fibre rank gives the same local
+calculation. Set \(K=\nabla^{S*}\nabla^S\), the positive kinetic operator
+built from that same connection. The supersymmetry algebra and the
+Lichnerowicz identity give
+\begin{equation}
+ H=K+\tfrac14 R\,\mathbf 1_S .
+ \label{eq:square}
+\end{equation}
+We propose to measure the gravitational response of this spin coupling by
+subtracting the kinetic residue. This uses one bundle, one volume trace
+and one Laplace symbol. \(K\) is a reference Hamiltonian. A second physical
+particle with Hamiltonian \(K\) is unnecessary.
+
+\begin{theorem}\label{thm:relative}
+For the classical spin triple with the above connection and normalization,
+\begin{equation}
+ \mathcal E_d(H;f)-\mathcal E_d(K;f)
+ =-\frac{d-2}{8}\int_M fR\dv .
+ \label{eq:relative}
+\end{equation}
+If this relative coefficient must equal \(-1\) as an identity of local
+densities, its unique dimension is ten.
+\end{theorem}
+\begin{proof}
+The two heat traces have the same volume and the same \(R/6\) term.
+Equation~\eqref{eq:square} leaves \(-R/4\) in their difference.
+Multiplication by \(p\) gives Eq.~\eqref{eq:relative}.
+\end{proof}
+
+There is also a direct symbol calculation. The resolvent identity puts
+one insertion of \(R/4\) between the resolvents of \(K\) and \(H\).
+In the complex-power formula the leading symbol of the difference is
+therefore the derivative of \(x^{-p}\) at \(x=\lvert\xi\rvert^2\) times
+that insertion. Symbol derivatives and further insertions have lower order.
+Thus \(H^{-p}-K^{-p}\) has order at most \(-d\), with symbol of degree
+\(-d\) equal to \(-p R\lvert\xi\rvert^{-d}\mathbf 1_S/4\).
+Integration on the unit cosphere in the volume normalization gives the same
+answer for nonconstant \(R\).
+
+At \(d=10\) the spin and kinetic coefficients are \(-1/3\) and \(+2/3\).
+Their difference is \(-1\). At \(d=26\) they are \(-1\) and \(+2\).
+These values specify which observable distinguishes the two dimensions.
+If the reference is allowed its own curvature coupling
+\(K_\xi=K+\xi R\), its subtraction gives
+\(-p(1/4-\xi)\int fR\dv\). This follows locally from Eq.~\eqref{eq:heat}
+and also holds on a round sphere for the nonnegative examples
+\(\xi=0,1/6\). The latter choice returns the \(d=26\) coefficient.
+The proposed reference is fixed by using covariant kinetic energy alone.
+
+\section{Two traces of the de Rham particle}
+
+The supersymmetric quantum mechanics of differential forms gives another
+way to make the subtraction with a single Hamiltonian
+\cite{WittenMorse1982}. Its complex supercharges are the exterior
+derivative \(\mathrm d\) and its adjoint \(\mathrm d^*\).
+The real supercharge \(Q_{\mathrm H}=\mathrm d+\mathrm d^*\) squares to
+the Hodge Laplacian \(\Delta\). Form degree \(k\) counts occupied fermion
+modes. The degree-zero sector contains all scalar wavefunctions, including
+their excited eigenstates.
+
+\begin{proposition}\label{prop:forms}
+The heat trace of \(\Delta\) over all forms, divided by the fibre rank
+\(2^d\), minus the scalar heat trace has vanishing leading volume term
+and local curvature coefficient \(-R/4\). Its volume-normalized Mellin
+residue therefore gives Eq.~\eqref{eq:relative}.
+\end{proposition}
+\begin{proof}
+On \(k\)-forms write \(\Delta_k=\nabla^*\nabla+V_k\).
+The fibre trace of \(V_k\) is an orthogonal invariant linear in curvature,
+hence a multiple of \(R\). On a metric of constant sectional curvature
+\(\kappa\), the Weitzenböck endomorphism is \(k(d-k)\kappa\,\mathbf 1\).
+Each of the \(k\) indices pairs with \(d-k\) complementary directions in
+the curvature action. Since \(R=d(d-1)\kappa\), for every metric
+\begin{equation}
+ \frac{\operatorname{tr} V_k}{\binom{d}{k}}
+ =\frac{k(d-k)}{d(d-1)}\,R .
+ \label{eq:degree}
+\end{equation}
+Under the ordinary trace each of the \(2^d\) occupation states has equal
+weight. An ordered pair of distinct modes is occupied and empty,
+respectively, with probability \(1/4\). Hence the mean of \(k(d-k)\) is
+\(d(d-1)/4\). The all-form trace has coefficient \(R/6-R/4=-R/12\),
+whereas \(k=0\) has \(R/6\).
+\end{proof}
+
+The dependence on the choice of trace can be computed. Weight each state
+by \(y^k\), \(y>0\), and divide by \((1+y)^d\) to preserve the volume.
+Each mode is occupied with probability \(y/(1+y)\). After subtracting
+the scalar sector the magnitude of the curvature coefficient is
+\begin{equation}
+ C_d(y)=\frac{d-2}{2}\frac{y}{(1+y)^2}
+ \ \leq\ \frac{d-2}{8}.
+ \label{eq:fugacity}
+\end{equation}
+Within these positive factorized weights, invariance of the state weights
+under Hodge duality \(k\leftrightarrow d-k\) fixes \(y=1\). Ten is the
+lowest dimension in this family that can reach unit magnitude, and only
+the ordinary trace reaches it at ten.
+
+The supersymmetric index measures a different quantity. In the alternating
+trace \(\Tr((-1)^k e^{-t\Delta})\), \(Q_{\mathrm H}\) pairs the two
+parities at every positive eigenvalue. The global trace equals the Euler
+characteristic for all \(t\) \cite{WittenMorse1982}. It supplies no
+integrated curvature residue at \(p>0\). The degree-zero projector used in
+Proposition~\ref{prop:forms} commutes with \(\Delta\) and generally fails
+to commute with \(Q_{\mathrm H}\). The postulate specifies which spectral
+sectors the gravitational observable compares.
+
+\section{A volume comparison in every dimension}\label{sec:volume}
+
+Both factors in the calculation have a geometric meaning. Write
+\(\omega_d=\mathrm{Vol}(B^d_1)\) and \(s_j=\mathrm{Vol}(S^j_1)\)
+for the Euclidean unit ball and sphere volumes. The elementary recursion
+\(\omega_d=(2\pi/d)\omega_{d-2}\), or the Gaussian integral for \(s_j\),
+gives
+\begin{equation}
+ \pi\,\frac{s_{d-3}}{s_{d-1}}
+ =\frac{\Gamma(d/2)}{\Gamma((d-2)/2)}
+ =\frac{d-2}{2}.
+ \label{eq:areas}
+\end{equation}
+It is the ratio that converts the first curvature heat coefficient to a
+residue when the leading residue measures Riemannian volume. For the
+curvature itself there is a measurement using only distances and volumes.
+At any \(x\in M\) set
+\begin{equation}
+ R_{\rm ball}(x)=
+ \lim_{b\downarrow0}\frac{6(d+2)}{b^2}
+ \left(1-\frac{\mathrm{Vol}_g(B_g(x,b))}{\omega_d b^d}\right).
+ \label{eq:geodesic}
+\end{equation}
+This limit equals \(R(x)\) \cite{GrayVanhecke1979}. Indeed, in normal
+coordinates the volume density is
+\(1-\mathrm{Ric}_{ij}(x)u^iu^j/6+O(|u|^3)\).
+The average of \(u^iu^j\) on a Euclidean ball of radius \(b\) is
+\(\delta_{ij}b^2/(d+2)\). These two volume formulas fix the comparison
+without choosing a length scale.
+
+\begin{theorem}\label{thm:geometric}
+Let \(M^d\) be any smooth closed Riemannian manifold, \(d>2\).
+Let \(\Delta_{\rm all}\) be the Hodge Laplacian on the full complex
+exterior algebra and \(\Delta_0\) the scalar Laplacian. Use
+Eq.~\eqref{eq:residue} on each bundle with its own rank. As identities
+for every smooth \(f\),
+\begin{equation}
+ \begin{aligned}
+ \mathcal E_d(\Delta_{\rm all};f)
+    &=-\frac{d-2}{24}\int_M fR_{\rm ball}\dv ,\\
+ \mathcal E_d(\Delta_{\rm all};f)-\mathcal E_d(\Delta_0;f)
+    &=-\frac{d-2}{8}\int_M fR_{\rm ball}\dv .
+ \end{aligned}
+ \label{eq:ballidentities}
+\end{equation}
+If \(R\) is nonzero somewhere, equality of the negative of the first
+functional with \(\int fR_{\rm ball}\dv\) for all \(f\) holds exactly at
+\(d=26\). For the second functional it holds exactly at \(d=10\).
+The statements apply to nonorientable manifolds with the Riemannian
+volume density and the \(L^2\) adjoint of the exterior derivative.
+\end{theorem}
+\begin{proof}
+The orthogonal trace calculation in Proposition~\ref{prop:forms} is local
+and uses the exterior algebra of each tangent space. It gives \(-R/12\)
+and \(-R/4\) for the two heat densities. Multiply by the area ratio in
+Eq.~\eqref{eq:areas} and insert Eq.~\eqref{eq:geodesic}. A nonnegative
+test function supported where \(R\) has a strict sign then proves both
+necessity statements.
+\end{proof}
+
+This is one precise sense in which the dimensions are critical in pure
+geometry. The positive ratio of the negative spectral density to the
+ball curvature, wherever \(R\ne0\), crosses one with slope \(1/24\)
+or \(1/8\) in the two dimension formulas. At the crossing two independently
+defined curvature measurements agree pointwise. Scalar-flat metrics give
+zero in all three measurements, and a single integral with \(f=1\) may
+lose the signal through sign cancellation. The comparison concerns the
+usual scalar curvature and the residue calibrated at the volume pole.
+Allowing an arbitrary prefactor for either observable would move the
+crossing. In \(d=2\) the power \(P^0\) is the identity up to a smoothing
+projection and has zero Wodzicki residue. In \(d=1\) scalar curvature
+vanishes identically.
+
+\subsection{Which geometric operators have these denominators?}
+
+There is a necessary and sufficient local test. For any Laplace-type
+operator \(P=\nabla^*\nabla+V\) put \(v=\operatorname{tr}V/r\).
+Its ordinary residue density and its density relative to
+\(\nabla^*\nabla\), with respect to Riemannian volume, are
+\begin{equation}
+ e_{\rm ord}=p(R/6-v),\qquad e_{\rm rel}=-p\,v .
+ \label{eq:class}
+\end{equation}
+Equation~\eqref{eq:heat} proves both identities. If \(P\) is only bounded
+below, discarding its finitely many nonpositive eigenvalues leaves these
+positive-pole residues unchanged. For a specified positive \(k\), the
+ordinary density is \(-(d-2)R/k\) everywhere exactly when
+\(v=(1/6+2/k)R\). The relative density takes that value exactly when
+\(v=2R/k\). These tests include points where \(R=0\). If only magnitudes
+are compared, one takes the absolute values in Eq.~\eqref{eq:class}.
+In particular the signed pair \(k=24\) ordinary and \(k=8\) relative
+is equivalent to the single condition \(v=R/4\).
+
+Every full spin Dirac operator coupled to a unitary auxiliary connection
+by Clifford multiplication passes this test. In its square the additional
+endomorphism is a sum of \(c(e_i)c(e_j)\) times the auxiliary curvature
+for \(i<j\). Each Clifford product has zero spin trace, so the rank mean
+of the endomorphism remains \(R/4\). The same argument holds locally
+for the full spin\(^{c}\) Dirac operator with its determinant-line
+connection. It thus applies, for example, to the canonical spin\(^{c}\)
+operator \(\sqrt{2}(\bar\partial+\bar\partial^*)\) on complex projective
+space with its Kähler metric in every complex dimension \(m\), with
+\(d=2m\). The real dimensions ten and twenty-six correspond to \(m=5\)
+and \(m=13\). The all-form version of Theorem~\ref{thm:geometric}
+requires neither a spin nor a spin\(^{c}\) structure.
+
+Other canonical choices on the very same metric answer the family
+question differently. A minimal scalar has \(v=0\), ordinary coefficient
+\(+(d-2)/12\), and zero relative coefficient. The conformal scalar
+Laplacian has \(v=(d-2)R/[4(d-1)]\). Substitution gives
+\begin{equation}
+ \begin{aligned}
+ e_{\rm ord}^{\rm conf}
+  &= -\frac{(d-2)(d-4)}{24(d-1)}R ,\\
+ e_{\rm rel}^{\rm conf}
+  &= -\frac{(d-2)^2}{8(d-1)}R .
+ \end{aligned}
+ \label{eq:conformal}
+\end{equation}
+Neither is a dimension-independent \(1/8\) or \(1/24\) times
+\(-(d-2)R\). The ordinary expression carries the zero of Eq.~\eqref{eq:four}
+through volume normalization.
+Projection to a fixed form degree provides another geometric choice with
+\(v\) given by Eq.~\eqref{eq:degree}. Thus membership in a family of
+manifolds alone cannot decide which denominator a probe measures.
+
+\subsection{Families available in every real dimension}
+
+For round \(S^d_b\) and for a closed hyperbolic quotient of curvature
+\(-1/b^2\), the ball curvatures are \(+d(d-1)/b^2\) and
+\(-d(d-1)/b^2\), respectively. Closed hyperbolic examples exist in every
+dimension under consideration \cite{Millson1976}. The two signs give
+opposite measured densities and the same two ratios. Real projective
+\(\mathbb{RP}^d_b\), with the antipodal quotient metric, has the same
+local densities as the sphere and half its integrated residues. This
+also tests the bundle hypothesis. With \(a\) the degree-one mod-two
+generator, \(T\mathbb{RP}^d\oplus\mathbf 1=(d+1)\gamma\) for the
+tautological line \(\gamma\), so \(w(T)=(1+a)^{d+1}\). For \(d>2\)
+there are ordinary spinors only for \(d=3\bmod 4\). At both ten and
+twenty-six the form residues still realize the corresponding equalities.
+
+An algebraic group family holds curvature fixed as dimension varies.
+Take \(G_d=SU(2)\times T^{d-3}\) with the round bi-invariant metric of
+radius \(b\) on \(SU(2)\) and flat torus factors. Then
+\(R=6/b^2\) for every \(d\ge3\). More generally, multiplying any
+closed seed with detectable scalar curvature by flat circles leaves its
+pointwise ball curvature fixed. For tests pulled back from the seed,
+divide integrated quantities by the flat volume. Adding one circle
+increases the two dimensionless coefficients in magnitude by exactly
+\(1/24\) and \(1/8\). A family starting at seed dimension \(m\) realizes
+each crossing for which the corresponding dimension is at least \(m\).
+
+Flat tori give zero readings in all dimensions. One can keep the topology
+and vary the metric. For \(g=e^{2u}g_0\) on \(T^d\) with \(g_0\) flat,
+integration of the conformal scalar-curvature formula by parts gives
+\begin{equation}
+ \int_{T^d} R_g\dv
+ =(d-1)(d-2)\int_{T^d}e^{(d-2)u}
+           |\nabla_0 u|^2\,d\mathrm{vol}_0 .
+ \label{eq:torus}
+\end{equation}
+Every smooth nonconstant \(u\) makes this quantity positive and exposes
+both coefficients on the same torus. Nonflat scalar-flat examples also
+occur. A round two-sphere times a closed hyperbolic surface of the
+opposite sectional curvature, times \(T^{d-4}\), has \(R=0\) for all
+\(d\ge4\) although its sectional curvatures are nonzero. These metrics
+give a test of exactly what the first curvature residue detects.
+
+\section{Checks on curved products}
+
+An exact heat trace checks the sign and the normalization without using a
+local heat coefficient for forms. Take \(M=S^2_b\times T^{d-2}\) with a
+round sphere of radius \(b\) and a flat torus. Write \(Z_0^S(t)\) and
+\(Z_0^T(t)\) for their scalar heat traces including zero modes.
+Every nonconstant scalar spherical harmonic \(u\) gives the one-forms
+\(\mathrm du\) and \(*\mathrm du\) at the same eigenvalue. They span the
+one-form spectrum by Hodge decomposition and \(H^1(S^2)=0\).
+Hodge duality identifies the two-form and scalar spectra. The sum over
+sphere form degrees is consequently \(4Z_0^S-2\). Each torus form
+component has the scalar spectrum, so factorization gives, for every
+\(t>0\),
+\begin{equation}
+ 2^{-d}\Tr(e^{-t\Delta_M})-\Tr(e^{-t\Delta_{0,M}})
+ =-\tfrac12 Z_0^T(t).
+ \label{eq:sphere}
+\end{equation}
+The right side starts with \(-\mathrm{Vol}(T^{d-2})/
+[2(4\pi t)^{(d-2)/2}]\).
+Since \(\int_{S^2_b}R\dv=8\pi\), this is precisely the \(-R/4\) term
+in Eq.~\eqref{eq:heat}, independently of \(b\).
+
+For a ten-to-nine comparison take \(Y=T^4\times S^5_B\) and
+\(M=Y\times S^1_\rho\), where \(B\) and \(\rho\) are radii. This is a
+smooth circle version of the round-sphere and interval example in the
+Kaluza--Klein construction \cite{TwoEndpoint2026}. Use the periodic spin
+structure on the circle and a test function pulled back from \(Y\).
+Both \(H\) and \(K\) split into the corresponding operator on \(Y\) plus
+the circle Laplacian. The restriction of the ten-dimensional spin
+bundle consists of two copies of the nine-dimensional spinors, so division
+by the respective ranks gives the same circle factor for both traces,
+\begin{equation}
+ \Theta_\rho(t)=\sum_{m\in\mathbb Z}e^{-tm^2/\rho^2}.
+\end{equation}
+For fixed \(\rho>0\), Poisson summation gives
+\(\Theta_\rho(t)\sim 2\pi\rho/\sqrt{4\pi t}\) as \(t\to0\).
+The ten-dimensional relative residue has density \(-R\), with
+\(R=20/B^2\). Taking the circle zero mode first gives
+\(\Theta_\rho\to1\) as \(t/\rho^2\to\infty\). The resulting
+nine-dimensional operator has its own residue at \(p=7/2\), with density
+\(-7R/8\). Thus the unit condition applies to the resolved smooth parent
+in this example. Selecting a circle radius or a compactification path
+requires dynamics beyond the local coefficient.
+
+\section{Relation to the superstring}
+
+There is a published string calculation of the same local curvature
+difference. In the spectral action of Chamseddine, Eqs.~(50)--(52)
+give equal leading volume terms for the Neveu--Schwarz and Ramond zero-mode
+Hamiltonians. With three-form torsion set to zero, their next densities
+carry \(+R/6\) and \(-R/12\), in the common factor used there. Equation
+(53) combines them in the NS-minus-R orientation and obtains \(+R/4\)
+\cite{ChamseddineSuperstring1997}. That calculation has already set the
+target dimension to ten before the heat expansion. Theorem~\ref{thm:relative}
+starts with variable \(d\), uses the opposite orientation to retain the
+Euclidean sign of Eq.~\eqref{eq:original}, and applies the unit criterion.
+Agreement concerns the curvature term. The full string action also carries
+oscillator, projection and ghost contributions.
+
+For comparison the flat Ramond--Neveu--Schwarz string with no extra matter
+has, per chiral sector, one real scalar and one real Majorana fermion per
+target direction. Their central charges are \(1\) and \(1/2\). The
+reparametrization ghosts contribute \(-26\) and the commuting
+superconformal ghosts contribute \(+11\). Cancellation of the conformal
+anomaly therefore gives \cite{FriedanMartinecShenker1986}
+\begin{equation}
+ c_{\mathrm{tot}}=\tfrac32 d-26+11=0,\qquad d=10 .
+\end{equation}
+In the effective-string calculation the factor \((d-2)/24\) also occurs in
+the vacuum energy of transverse oscillators on a cylinder
+\cite{QCDStringCasimir}. That observable is an energy shift. In the
+critical string, anomaly cancellation supplies the selection rule. In the
+commutative spectral triple, supersymmetry fixes \(R/4\), volume calibration
+fixes the normalization of the residue, and unit matching for the
+\emph{relative} action supplies the remaining premise. A derivation from a
+quantized parent would have to fix the subtraction and its gravitational
+normalization independently. An allowed finite \(\int R\dv\) counterterm
+with an unfixed coefficient would leave that matching adjustable.
+
+\bibliography{towerless_intervals}
+\end{document}
