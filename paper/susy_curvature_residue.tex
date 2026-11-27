@@ -32,7 +32,9 @@ On a spin manifold the same pair comes from the Dirac supercharge and its
 covariant kinetic energy. The ratio of two unit-sphere areas supplies
 \((d-2)/2\). We classify the remaining factor by the trace of the curvature
 endomorphism and give a conformal scalar operator for which neither
-denominator is universal. The geometric equalities require no worldsheet.
+denominator is universal. With absolute boundary conditions the same
+coefficients multiply the sum of bulk scalar curvature and twice the
+boundary mean curvature. The geometric equalities require no worldsheet.
 Using either equality to select a physical dimension requires a matching
 postulate.
 \end{abstract}
@@ -387,6 +389,57 @@ occur. A round two-sphere times a closed hyperbolic surface of the
 opposite sectional curvature, times \(T^{d-4}\), has \(R=0\) for all
 \(d\ge4\) although its sectional curvatures are nonzero. These metrics
 give a test of exactly what the first curvature residue detects.
+
+\subsection{Compact domains and the volume of an inward collar}
+
+A smooth boundary contributes at the curvature pole itself. Let \(h\)
+be the sum of principal curvatures for the outward normal, positive on
+a Euclidean sphere. Write \(A(s)\) for the area of the hypersurface a
+distance \(s\) inward from the boundary. The normal Jacobian has derivative
+\(-h\) at zero, so \(A'(0)=-\int_{\partial M}h\,dA\). The quantity
+\begin{equation}
+ \mathcal R(M)=\int_M R_{\rm ball}\dv-2A'(0)
+ \label{eq:collar}
+\end{equation}
+is measurable by interior balls and collar volumes, since the area
+\(A(s)\) is the derivative of the collar volume. Use Eq.~\eqref{eq:residue}
+with \(f=1\) and the heat spectrum of the indicated boundary problem.
+
+\begin{proposition}\label{prop:boundary}
+On any compact smooth Riemannian \(d\)-manifold with smooth boundary,
+\(d>2\), give differential forms absolute boundary conditions and the
+degree-zero sector Neumann conditions. The ordinary all-form residue
+and its difference from the scalar residue are, respectively,
+\(-(d-2)\mathcal R(M)/24\) and \(-(d-2)\mathcal R(M)/8\).
+If \(\mathcal R(M)\ne0\), the same two unit crossings follow.
+\end{proposition}
+\begin{proof}
+For the full heat trace the normalized boundary part of the first
+curvature coefficient is \(h/3+2\operatorname{tr}(S)/r\), where
+\((\nabla_{\rm in}+S)\omega=0\) on the Robin block and \(S\) is
+extended by zero on the Dirichlet block. This is the mixed heat
+coefficient with constant smearing \cite{BransonMixed1999}.
+The absolute conditions are \(\iota_\nu\omega=\iota_\nu\mathrm d\omega=0\).
+Components containing the normal covector vanish at the boundary. On a
+tangential form with occupied principal directions \(I\), the second
+condition gives \(S=-\sum_{i\in I}\kappa_i\) with the inward derivative.
+Indeed, differentiating the normal covector in a principal tangent
+direction supplies that direction's principal curvature in the condition
+with the outward derivative. Of all \(2^d\) form components, one quarter
+have a given tangential mode occupied and the normal mode empty.
+Thus \(\operatorname{tr}(S)/2^d=-h/4\), and the full boundary density
+is \(-h/6\). The Neumann scalar has \(S=0\) and density \(h/3\).
+Together with the interior densities, the full and relative heat
+coefficients are \(-\mathcal R(M)/12\) and \(-\mathcal R(M)/4\), in the
+common heat factor. Equation~\eqref{eq:areas} finishes the proof.
+\end{proof}
+
+The Euclidean ball of radius \(b\) gives a family in every dimension
+with zero interior curvature and
+\(\mathcal R(M)=2(d-1)\mathrm{Area}(\partial M)/b\). Its entire signal
+comes from the collar. Other Robin data contribute through their trace.
+The bulk-to-boundary ratio two also occurs for the Dirac boundary
+problem of Chamseddine and Connes \cite{ChamseddineConnesBoundary2007}.
 
 \section{Checks on curved products}
 

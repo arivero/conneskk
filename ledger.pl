@@ -4475,6 +4475,14 @@ checked_by(geodesic_ball_unit_dimensions, codex_gpt_6, by_hand).
 checked_by(geodesic_ball_unit_dimensions, terra_6_1, by_hand). % Area ratio, small-ball calibration, Hodge trace and both endomorphism tests.
 prior_work(geodesic_ball_unit_dimensions, partial, "Gray and Vanhecke 1979 give the small-ball scalar curvature. The normalized d=26 criterion is explicit in Rivero 2004.").
 
+claim(hodge_boundary_unit_dimensions, proposition, proved, "Proposition 2", "For smooth boundary, absolute forms, Neumann scalars and constant smearing, both residues retain their coefficients on the integrated scalar curvature plus twice the outward trace of the second fundamental form. The Euclidean ball realizes both crossings through the boundary alone.").
+source(hodge_boundary_unit_dimensions, 'paper/susy_curvature_residue.tex', '').
+depends(hodge_boundary_unit_dimensions, hodge_scalar_residue).
+depends(hodge_boundary_unit_dimensions, hyp(curvature_volume_normalization)).
+attempted_by(hodge_boundary_unit_dimensions, codex_gpt_6).
+checked_by(hodge_boundary_unit_dimensions, terra_6_1, by_hand). % Mixed boundary trace and independent absolute disk times torus calculation.
+prior_work(hodge_boundary_unit_dimensions, partial, "Branson et al. (1999), Theorem 2.1, gives the mixed coefficient. Chamseddine and Connes (2007) derive the boundary term for a spin Dirac boundary problem.").
+
 %% ---------------------------------------------------------------- rules
 :- table rests_on/2.
 rests_on(C, D) :- depends(C, D).
